@@ -2938,6 +2938,15 @@ details-disclosure > details {
   background: rgb(var(--color-background));
   background: var(--gradient-background);
   background-attachment: fixed;
+
+}
+
+.texture {
+    background-color: var(--color-background);
+    background-image: url("background.jpg");
+    background-size: 300px auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
 }
 
 @media screen and (forced-colors: active) {
