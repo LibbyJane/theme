@@ -10,7 +10,6 @@
 }
 
 .card {
-    font-family: var(--font-display);
   text-decoration: none;
   text-align: var(--text-alignment);
 
