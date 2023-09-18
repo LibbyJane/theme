@@ -143,11 +143,7 @@
   endfor
 -%}
 
-{% comment %}
-<{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} {% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}"> {% endcomment %}
-
-
-<{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper {% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
+<{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} {% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   {%- liquid
     assign social_links = false
     assign localization_forms = false
@@ -173,7 +169,7 @@
 
     {%- if section.settings.logo_position != 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
-        <div class="header__heading">
+        <h1 class="header__heading">
       {%- endif -%}
           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
             {%- if settings.logo != blank -%}
@@ -197,7 +193,7 @@
             {%- endif -%}
           </a>
       {%- if request.page_type == 'index' -%}
-        </div>
+        </h1>
       {%- endif -%}
     {%- endif -%}
 
@@ -213,7 +209,7 @@
 
     {%- if section.settings.logo_position == 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
-        <div class="header__heading">
+        <h1 class="header__heading">
       {%- endif -%}
           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
             {%- if settings.logo != blank -%}
@@ -237,7 +233,7 @@
             {%- endif -%}
           </a>
       {%- if request.page_type == 'index' -%}
-        </div>
+        </h1>
       {%- endif -%}
     {%- endif -%}
 
@@ -584,12 +580,6 @@
       "label": "t:sections.header.settings.sticky_header_type.label"
     },
     {
-      "type": "checkbox",
-      "id": "show_line_separator",
-      "default": true,
-      "label": "t:sections.header.settings.show_line_separator.label"
-    },
-    {
       "type": "header",
       "content": "t:sections.header.settings.header__1.content"
     },
@@ -673,7 +663,7 @@
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
-      "default": 0
+      "default": 20
     },
     {
       "type": "range",
@@ -683,7 +673,7 @@
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
-      "default": 0
+      "default": 20
     }
   ],
   "blocks": [

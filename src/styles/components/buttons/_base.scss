@@ -1,102 +1,102 @@
 
-button[type="reset"],
-.btn[type="reset"] {
-    background: transparent;
-    color: var(--text);
-    font-weight: 400;
-}
+// button[type="reset"],
+// .btn[type="reset"] {
+//     background: transparent;
+//     color: var(--text);
+//     font-weight: 400;
+// }
 
-button[type="reset"]:hover {
-    background: transparent;
-    color: var(--danger);
-}
+// button[type="reset"]:hover {
+//     background: transparent;
+//     color: var(--danger);
+// }
 
-button:disabled {
-    filter: grayscale(0.75);
-    font-weight: 400;
-    opacity: 0.5;
-    pointer-events: none;
-}
-
-
-.btn {
-
-    color: var(--text);
-    cursor: pointer;
-    font-family: inherit;
-    font-weight: bold;
-    font-size: var(--p);
-    padding: var(--space);
-    position: relative;
-    white-space: nowrap;
-
-    &::before,
-    &::after {
-        background: {
-            image:  url("@/assets/images/drawn-circle.svg");
-            position: center;
-            repeat: no-repeat;
-            size: contain;
-        }
-        content: '';
-        height: 0;
-        padding-top: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto 0;
-        transition: all;
-        transform: scaleY(0.6) scaleX(1.2) translateY(0.3rem);
-    }
-
-            &::after {
-            background: {
-                image:  url("@/assets/images/drawn-circle-hover.svg");
-            }
-            opacity: 0;
-            transition: opacity var(--transition);
-        }
+// button:disabled {
+//     filter: grayscale(0.75);
+//     font-weight: 400;
+//     opacity: 0.5;
+//     pointer-events: none;
+// }
 
 
-    &:hover {
-        color: var(--heading);
+// .btn {
 
-        &::after {
-            opacity: 1;
-        }
-    }
+//     color: var(--text);
+//     cursor: pointer;
+//     font-family: inherit;
+//     font-weight: bold;
+//     font-size: var(--p);
+//     padding: var(--space);
+//     position: relative;
+//     white-space: nowrap;
 
-    &.is-text {
-        padding-inline: 0;
+//     &::before,
+//     &::after {
+//         background: {
+//             image:  url("@/assets/images/drawn-circle.svg");
+//             position: center;
+//             repeat: no-repeat;
+//             size: contain;
+//         }
+//         content: '';
+//         height: 0;
+//         padding-top: 100%;
+//         width: 100%;
+//         position: absolute;
+//         top: 0;
+//         right: 0;
+//         bottom: 0;
+//         left: 0;
+//         margin: auto 0;
+//         transition: all;
+//         transform: scaleY(0.6) scaleX(1.2) translateY(0.3rem);
+//     }
 
-        &:hover,
-        &:focus {
-            &::after {
-                transform: scaleX(1) translateY(var(--space-neg));
-            };
-        }
+//             &::after {
+//             background: {
+//                 image:  url("@/assets/images/drawn-circle-hover.svg");
+//             }
+//             opacity: 0;
+//             transition: opacity var(--transition);
+//         }
 
-        .is-success & {
-            color: var(--green);
-        }
 
-        &::before,
-        &::after {
-            background: transparent;
-        }
+//     &:hover {
+//         color: var(--heading);
 
-        &::after {
-            border-bottom: thin solid;
-            transition: all var(--transition);
-            transform: scaleX(0) translateY(var(--space-neg));
-        }
-    }
+//         &::after {
+//             opacity: 1;
+//         }
+//     }
 
-    &.is-small {
-        font-size: var(--p-sm);
-    }
-}
+//     &.is-text {
+//         padding-inline: 0;
+
+//         &:hover,
+//         &:focus {
+//             &::after {
+//                 transform: scaleX(1) translateY(var(--space-neg));
+//             };
+//         }
+
+//         .is-success & {
+//             color: var(--green);
+//         }
+
+//         &::before,
+//         &::after {
+//             background: transparent;
+//         }
+
+//         &::after {
+//             border-bottom: thin solid;
+//             transition: all var(--transition);
+//             transform: scaleX(0) translateY(var(--space-neg));
+//         }
+//     }
+
+//     &.is-small {
+//         font-size: var(--p-sm);
+//     }
+// }
 
