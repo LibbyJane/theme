@@ -139,7 +139,7 @@
       }
     },
     "logo": {
-      "name": "Logo",
+      "name": "Logo and Images",
       "settings": {
         "logo_image": {
           "label": "Logo"
@@ -151,6 +151,10 @@
         "favicon": {
           "label": "Favicon image",
           "info": "Will be scaled down to 32 x 32px"
+        },
+        "site_background": {
+            "label": "Website background",
+            "info": "Will be scaled to cover the background"
         }
       }
     },

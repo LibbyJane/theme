@@ -1,7 +1,9 @@
 .banner {
-  display: flex;
-  position: relative;
-  flex-direction: column;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+    display: flex;
+    margin-inline: 2rem;
+    position: relative;
+    flex-direction: column;
 }
 
 .banner__box {
@@ -92,7 +94,7 @@
   }
 
   .banner--large:not(.banner--adapt) {
-    min-height: 72rem;
+    min-height: 60rem;
   }
 
   .banner__content.banner__content--top-left {

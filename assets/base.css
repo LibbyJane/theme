@@ -1,8 +1,8 @@
-:root {
-  --alpha-button-background: 1;
-  --alpha-button-border: 1;
-  --alpha-link: 0.85;
-  --alpha-badge-border: 0.1;
+﻿:root {
+    --alpha-button-background: 1;
+    --alpha-button-border: 1;
+    --alpha-link: 0.85;
+    --alpha-badge-border: 0.1;
 }
 
 .product-card-wrapper .card,
@@ -99,7 +99,14 @@ html.no-js .no-js-hidden {
   padding: 0 1.5rem;
 }
 
+.site-outer {
+    background: var(--background-image);
+    background-size:  var(--background-size);
+    background-position: center;
+    background-attachment: fixed;
+}
 body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
+
   max-width: 100%;
 }
 
@@ -2118,6 +2125,9 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 /* utility-bar */
 .utility-bar {
+     background-blend-mode: multiply;
+    background-image: url('texture-paper.jpg');
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
   height: 100%;
 }
 
@@ -2451,7 +2461,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .header__heading-link {
   display: inline-block;
-  padding: 0.75rem;
+  /* padding: 0.75rem; */
   text-decoration: none;
   word-break: break-word;
 }
@@ -2468,12 +2478,21 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .header__heading-logo {
   height: auto;
   max-width: 100%;
+  /* TODO: make configurable */
+mix-blend-mode: multiply;
 }
 
 .header__heading-logo-wrapper {
+    background-image: url('texture-paper.jpg');
   width: 100%;
   display: inline-block;
   transition: width 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+   box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
+  /* background-image: url('postage-stamp.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 5px; */
 }
 
 @media screen and (max-width: 989px) {
@@ -3403,7 +3422,6 @@ details-disclosure > details {
     .card--shape.card--standard:not(.card--text)
     .card__inner
     .card__media:before {
-    background-image: var(--easter-egg);
     background-size: 250px 250px;
     mix-blend-mode: color-dodge;
     pointer-events: none;
@@ -3454,10 +3472,6 @@ details-disclosure > details {
     z-index: 2;
   }
 
-  :root {
-    --easter-egg: none;
-    --sparkle: url('./sparkle.gif');
-  }
 
   .animate--hover-vertical-lift .button:not(.button--tertiary),
   .animate--hover-vertical-lift .shopify-challenge__button,

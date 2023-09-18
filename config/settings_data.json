@@ -188,17 +188,18 @@
   },
   "presets": {
     "Default": {
-      "logo_width": 90,
+      "logo_width": 160,
+      "background_image": "background.jpg",
       "color_schemes": {
         "background-1": {
           "settings": {
-            "background": "#FFFFFF",
+            "background": "#3c1f05",
             "background_gradient": "",
-            "text": "#121212",
-            "button": "#121212",
+            "text": "#dfe7ed",
+            "button": "#2a2a2c",
             "button_label": "#FFFFFF",
-            "secondary_button_label": "#121212",
-            "shadow": "#121212"
+            "secondary_button_label": "#2a2a2c",
+            "shadow": "#000"
           }
         },
         "background-2": {
@@ -246,9 +247,9 @@
           }
         }
       },
-      "type_header_font": "assistant_n4",
+      "type_header_font": "kalam_n4",
       "heading_scale": 100,
-      "type_body_font": "assistant_n4",
+      "type_body_font": "questrial_n4",
       "body_scale": 100,
       "page_width": 1200,
       "spacing_sections": 0,
