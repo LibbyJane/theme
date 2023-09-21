@@ -1,0 +1,35 @@
+.header__brand {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+
+    position: relative;
+}
+
+.header__brand-image {
+    box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
+    rgba(var(--color-shadow), var(--media-shadow-opacity));
+    display: block;
+    max-width: 100%;
+    max-height: var(--header-height);
+    height: auto;
+    width: auto;
+    margin-bottom: -1rem;
+    transition: max-height var(--duration-long) ease;
+
+    .header--middle-left & {
+        margin-left: -1rem;
+    }
+
+    [data-sticky-type="reduce-logo-size"] & {
+        .scrolled-past-header & {
+            max-height: calc(var(--header-height) * 0.66) ;
+        }
+    }
+}
+
+.header__brand-text {
+    margin: auto;
+    padding: 0;
+    text-align: center;
+}

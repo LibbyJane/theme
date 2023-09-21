@@ -145,7 +145,7 @@
   --shadow-blur-radius: var(--product-card-shadow-blur-radius);
   --shadow-opacity: var(--product-card-shadow-opacity);
   --shadow-visible: var(--product-card-shadow-visible);
-  --image-padding: var(--product-card-image-padding);
+  --image-padding: var(--product-card-padding);
 }
 
 .collage-card .media {

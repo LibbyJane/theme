@@ -1,5 +1,7 @@
 .rich-text {
-  z-index: 1;
+    /* TODO */
+    margin-inline: 2rem;
+    z-index: 1;
 }
 
 .rich-text__wrapper {

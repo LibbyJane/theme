@@ -1,0 +1,47 @@
+.header__utility {
+    display: flex;
+    justify-self: end;
+    padding-right: 0.8rem;
+}
+
+.header__search {
+    display: inline-flex;
+    line-height: 0;
+}
+
+.header__icon {
+    color: rgb(var(--color-foreground));
+    display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    height: 4.4rem;
+    width: 4.4rem;
+    padding: 0;
+}
+
+.header__icon--cart {
+    position: relative;
+    margin-right: -1.2rem;
+}
+
+// .desktop-localization-wrapper {
+//     display: flex;
+//         flex-wrap: wrap;
+//         justify-content: flex-end;
+// }
+
+// .localisation-form {
+//     flex-direction: column;
+
+//     &:only-child {
+//         display: inline-flex;
+//             flex-wrap: wrap;
+//         margin: 0;
+//         padding: 0;
+
+//         @include breakpoint(medium) {
+//             justify-content: start;
+//             width: auto;
+//         }
+//     }
+// }
