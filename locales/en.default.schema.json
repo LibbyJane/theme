@@ -29,6 +29,9 @@
                 "image_padding": {
                     "label": "Image padding"
                 },
+                "padding": {
+                    "label": "Padding"
+                },
                 "text_alignment": {
                     "options__1": {
                         "label": "Left"

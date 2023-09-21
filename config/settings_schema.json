@@ -524,7 +524,7 @@
                 "max": 20,
                 "step": 2,
                 "unit": "px",
-                "label": "t:settings_schema.global.settings.all.spacing",
+                "label": "t:settings_schema.global.settings.padding.label",
                 "default": 10
             },
             {
