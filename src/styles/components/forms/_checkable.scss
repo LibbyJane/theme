@@ -1,4 +1,97 @@
-// .checkable,
+.checkable__highlight {
+    input {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+
+        &:checked {
+            ~.checkable__highlight-text {
+                &::before {
+                    transition: transform var(--duration-long) var(--transition-type);
+                    transform: rotate(-2deg) scaleX(1);
+                }
+            }
+        }
+    }
+}
+
+.checkable__highlight-text {
+    cursor: pointer;
+    padding: var(--space-xs) var(--space-sm);
+    position: relative;
+
+    &::before {
+        background: rgba(var(--highlight-color), var(--highlight-opacity));
+        border-radius: var(--button-border-radius);
+        content: '';
+        margin: -2px;
+        position: absolute;
+            inset: 0;
+        transform: rotate(-1deg) scaleX(0);
+        transform-origin: center left;
+        transition-delay: 100ms;
+        z-index: -1;
+    }
+}
+
+.checkable__tick {
+    --path-length: 19;
+    --icon-size: 2rem;
+    --icon-padding: 0.1rem;
+    --icon-container-size: calc(var(--icon-size) + var(--icon-padding) + var(--icon-padding));
+    cursor: pointer;
+    display: inline-flex;
+        align-items: center;
+        justify-content: start;
+    margin: 0 var(--space) var(--space) 0;
+    padding-left: calc(--icon-container-size + var(--space));
+    position: relative;
+
+    // &::before {
+    //     border-radius:  255px 250px 225px 250px/250px 225px 260px 255px;
+    //     border-width: var(--button-border-width);
+    //     border-color: currentColor;
+    //     border-style: solid;
+    //     color: currentColor;
+    //     content: '';
+    //     height: var(--icon-container-size);
+    //     width: var(--icon-container-size);
+    // }
+
+    input {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+
+        &:checked {
+            ~.icon {
+                .icon-tick-draw {
+                    opacity: 1;
+                    animation-name: draw;
+                }
+            }
+        }
+    }
+
+    .icon {
+        display: block;
+        height: var(--icon-size);
+        width: var(--icon-size);
+        margin-right: var(--space-sm);
+    }
+}
+
+.icon-tick-draw {
+    opacity: 0;
+
+   stroke-dashoffset: var(--path-length);
+    stroke-dasharray: var(--path-length);
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-duration: var(--duration-long);
+}
+
+    // .checkable,
 // .checkable-list label {
 //     cursor: pointer;
 //     color: var(--text);

@@ -1,0 +1,19 @@
+.product__info-wrapper {
+    background-blend-mode: multiply;
+    background-image: url('texture-paper.jpg');
+    padding: var(--space-lg);
+}
+
+.product__info-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.product__title {
+    line-height: 1.2;
+
+    >a {
+         display: none; // seo?
+    }
+}

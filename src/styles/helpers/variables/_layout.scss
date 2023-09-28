@@ -1,8 +1,10 @@
-// :root {
-//     --space: 1rem;
-//     --space-xs: 0.25rem;
-//     --space-sm: 0.5rem;
-//     --space-lg: 2rem;
+:root {
+    --space: 1rem;
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-med: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
 
 //     --zi-base: 10;
 //     --zi-header: 40;
@@ -47,8 +49,8 @@
 //     --sidebar-space-h: var(var(--space-md));
 
 
-// }
+}
 
-// // Shorthand
-// $hover: '&:hover, &:active, &:focus';
+// Shorthand
+$hover: '&:hover, &:focus';
 // $hover-hf: '&:hover, &:focus';

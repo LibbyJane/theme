@@ -104,12 +104,6 @@
                     "on_secondary_button": "secondary_button_label",
                     "secondary_button_border": "secondary_button_label"
                 }
-            },
-            {
-                "type": "checkbox",
-                "id": "background_outer_transparent",
-                "label": "t:settings_schema.colors.settings.background_outer_transparent.label",
-                "default": true
             }
         ]
     },
@@ -277,10 +271,10 @@
                 "id": "buttons_radius",
                 "min": 0,
                 "max": 40,
-                "step": 2,
+                "step": 1,
                 "unit": "px",
                 "label": "t:settings_schema.global.settings.corner_radius.label",
-                "default": 0
+                "default": 15
             },
             {
                 "type": "header",
@@ -430,7 +424,7 @@
                 "step": 1,
                 "unit": "px",
                 "label": "t:settings_schema.global.settings.thickness.label",
-                "default": 1
+                "default": 2
             },
             {
                 "type": "range",
@@ -447,10 +441,10 @@
                 "id": "inputs_radius",
                 "min": 0,
                 "max": 40,
-                "step": 2,
+                "step": 1,
                 "unit": "px",
                 "label": "t:settings_schema.global.settings.corner_radius.label",
-                "default": 0
+                "default": 15
             },
             {
                 "type": "header",
@@ -464,7 +458,7 @@
                 "step": 5,
                 "unit": "%",
                 "label": "t:settings_schema.global.settings.opacity.label",
-                "default": 0
+                "default": 10
             },
             {
                 "type": "range",
@@ -484,7 +478,7 @@
                 "step": 2,
                 "unit": "px",
                 "label": "t:settings_schema.global.settings.vertical_offset.label",
-                "default": 0
+                "default": 4
             },
             {
                 "type": "range",
@@ -494,7 +488,7 @@
                 "step": 5,
                 "unit": "px",
                 "label": "t:settings_schema.global.settings.blur.label",
-                "default": 0
+                "default": 5
             }
         ]
     },
@@ -520,12 +514,18 @@
             {
                 "type": "range",
                 "id": "card_padding",
-                "min": 0,
-                "max": 20,
+                "min": 4,
+                "max": 40,
                 "step": 2,
                 "unit": "px",
                 "label": "t:settings_schema.global.settings.padding.label",
-                "default": 10
+                "default": 16
+            },
+            {
+                "type": "checkbox",
+                "id": "card_image_full_width",
+                "default": false,
+                "label": "t:settings_schema.cards.settings.image_full_width.label"
             },
             {
                 "type": "select",
@@ -552,6 +552,18 @@
                 "id": "card_color_scheme",
                 "label": "t:sections.all.colors.label",
                 "default": "background-1"
+            },
+            {
+                "type": "checkbox",
+                "id": "card_highlight_price",
+                "default": false,
+                "label": "t:settings_schema.cards.settings.highlight_price.label"
+            },
+            {
+                "type": "color",
+                "id": "card_price_highlight_color",
+                "label": "t:settings_schema.colors.settings.highlight_color.label",
+                "default": "#FEC4BF"
             },
             {
                 "type": "header",

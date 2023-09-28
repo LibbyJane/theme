@@ -1,6 +1,7 @@
 @import "helpers/mixins"
         ,"helpers/variables/colors"
         ,"helpers/variables/breakpoints"
+        ,"helpers/variables/defaults"
         ,"helpers/variables/typography"
         ,"helpers/variables/layout"
         ,"helpers/variables/elements"
@@ -15,7 +16,6 @@
         ,"layout/site-header/brand"
         ,"layout/site-header/nav"
         ,"layout/site-header/utility"
-        ,"layout/pages/signup"
         ;
 
 @import
@@ -23,6 +23,7 @@
         ,"components/badges/card-badge"
         ,"components/badges/base"
         ,"components/forms/base"
+        ,"components/forms/fieldsets"
         ,"components/forms/checkable"
         ,"components/forms/fields"
         ,"components/icons"
@@ -1240,14 +1241,14 @@
 // .shopify-payment-button [role='button'],
 // .cart__dynamic-checkout-buttons [role='button'],
 // .cart__dynamic-checkout-buttons iframe {
-//   --shadow-horizontal-offset: var(--buttons-shadow-horizontal-offset);
-//   --shadow-vertical-offset: var(--buttons-shadow-vertical-offset);
-//   --shadow-blur-radius: var(--buttons-shadow-blur-radius);
-//   --shadow-opacity: var(--buttons-shadow-opacity);
-//   --shadow-visible: var(--buttons-shadow-visible);
-//   --border-offset: var(--buttons-border-offset); /* reduce radius edge artifacts */
-//   --border-opacity: calc(1 - var(--buttons-border-opacity));
-//   border-radius: var(--buttons-radius-outset);
+//   --shadow-horizontal-offset: var(--button-shadow-horizontal-offset);
+//   --shadow-vertical-offset: var(--button-shadow-vertical-offset);
+//   --shadow-blur-radius: var(--button-shadow-blur-radius);
+//   --shadow-opacity: var(--button-shadow-opacity);
+//   --shadow-visible: var(--button-shadow-visible);
+//   --border-offset: var(--button-border-offset); /* reduce radius edge artifacts */
+//   --border-opacity: calc(1 - var(--button-border-opacity));
+//   border-radius: var(--button-radius-outset);
 //   position: relative;
 // }
 
@@ -1255,8 +1256,8 @@
 // .shopify-challenge__button,
 // .customer button,
 // button.shopify-payment-button__button--unbranded {
-//   min-width: calc(12rem + var(--buttons-border-width) * 2);
-//   min-height: calc(4.5rem + var(--buttons-border-width) * 2);
+//   min-width: calc(12rem + var(--button-border-width) * 2);
+//   min-height: calc(4.5rem + var(--button-border-width) * 2);
 // }
 
 // .shopify-payment-button__button--branded {
@@ -1300,7 +1301,7 @@
 //   bottom: 0;
 //   left: 0;
 //   z-index: -1;
-//   border-radius: var(--buttons-radius-outset);
+//   border-radius: var(--button-radius-outset);
 //   box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
 //     rgba(var(--color-shadow), var(--shadow-opacity));
 // }
@@ -1311,15 +1312,15 @@
 // .shopify-payment-button__button--unbranded:after {
 //   content: '';
 //   position: absolute;
-//   top: var(--buttons-border-width);
-//   right: var(--buttons-border-width);
-//   bottom: var(--buttons-border-width);
-//   left: var(--buttons-border-width);
+//   top: var(--button-border-width);
+//   right: var(--button-border-width);
+//   bottom: var(--button-border-width);
+//   left: var(--button-border-width);
 //   z-index: 1;
-//   border-radius: var(--buttons-radius);
-//   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+//   border-radius: var(--button-radius);
+//   box-shadow: 0 0 0 calc(var(--button-border-width) + var(--border-offset))
 //       rgba(var(--color-button-text), var(--border-opacity)),
-//     0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+//     0 0 0 var(--button-border-width) rgba(var(--color-button), var(--alpha-button-background));
 //   transition: box-shadow var(--duration-short) ease;
 // }
 
@@ -1328,13 +1329,13 @@
 // .customer button:hover::after,
 // .shopify-payment-button__button--unbranded:hover::after {
 //   --border-offset: 1.3px;
-//   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+//   box-shadow: 0 0 0 calc(var(--button-border-width) + var(--border-offset))
 //       rgba(var(--color-button-text), var(--border-opacity)),
-//     0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+//     0 0 0 calc(var(--button-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
 // }
 
 // .button--secondary:after {
-//   --border-opacity: var(--buttons-border-opacity);
+//   --border-opacity: var(--button-border-opacity);
 // }
 
 // .button:focus-visible,
@@ -1373,8 +1374,8 @@
 // .button--tertiary {
 //   font-size: 1.2rem;
 //   padding: 1rem 1.5rem;
-//   min-width: calc(9rem + var(--buttons-border-width) * 2);
-//   min-height: calc(3.5rem + var(--buttons-border-width) * 2);
+//   min-width: calc(9rem + var(--button-border-width) * 2);
+//   min-height: calc(3.5rem + var(--button-border-width) * 2);
 // }
 
 // .button--small {
@@ -3543,9 +3544,9 @@
 //   .animate--hover-vertical-lift .customer button:not([disabled]):hover:after,
 //   .animate--hover-vertical-lift .shopify-payment-button__button:not([disabled]):hover:after {
 //     --border-offset: 0.3px; /* Default is 1.3px as defined above in this file. This removes 1px to prevent the border from growing on buttons when this effect is on.  */
-//     box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+//     box-shadow: 0 0 0 calc(var(--button-border-width) + var(--border-offset))
 //         rgba(var(--color-button-text), var(--border-opacity)),
-//       0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+//       0 0 0 var(--button-border-width) rgba(var(--color-button), var(--alpha-button-background));
 //   }
 
 //   .animate--hover-vertical-lift .button:not([disabled]).button--secondary:hover:after {

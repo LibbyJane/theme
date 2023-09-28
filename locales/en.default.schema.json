@@ -57,6 +57,12 @@
                         "label": "Card"
                     },
                     "label": "Style"
+                },
+                "image_full_width": {
+                    "label": "Image spans full width"
+                },
+                "highlight_price": {
+                    "label": "Highlight price"
                 }
             }
         },
@@ -138,6 +144,9 @@
                 },
                 "shadow": {
                     "label": "Shadow"
+                },
+                "highlight_color": {
+                    "label": "Highlight color"
                 }
             }
         },
@@ -1284,7 +1293,7 @@
                             "label": "First button link"
                         },
                         "button_style_secondary_1": {
-                            "label": "Use outline button style"
+                            "label": "Button style"
                         },
                         "button_label_2": {
                             "label": "Second button label",
@@ -1294,7 +1303,7 @@
                             "label": "Second button link"
                         },
                         "button_style_secondary_2": {
-                            "label": "Use outline button style"
+                            "label": "Button style"
                         }
                     }
                 }
@@ -1525,10 +1534,13 @@
                 },
                 "button_style": {
                     "options__1": {
-                        "label": "Solid button"
+                        "label": "Solid"
                     },
                     "options__2": {
-                        "label": "Outline button"
+                        "label": "Outline"
+                    },
+                    "options__3": {
+                        "label": "Solid with outline"
                     },
                     "label": "Button style"
                 },
@@ -2307,6 +2319,9 @@
                 },
                 "enable_sticky_info": {
                     "label": "Enable sticky content on desktop"
+                },
+                "highlight": {
+                    "label": "Highlight color"
                 },
                 "gallery_layout": {
                     "label": "Desktop layout",

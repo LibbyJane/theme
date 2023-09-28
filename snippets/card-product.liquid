@@ -34,6 +34,21 @@
         if ratio == 0 or ratio == null
             assign ratio = 1
         endif
+
+        assign showBadge = false
+        assign badgePosition = "bottom-left"
+        assign badgeClass = ''
+
+        if card_product.compare_at_price > card_product.price and card_product.available
+            assign showBadge = true
+            assign badgePosition = settings.badge_position | replace: " ", "-"
+        elsif card_product.available == false
+            assign showBadge = true
+        endif
+
+        if showBadge
+            assign badgeClass = 'card__badge--' | concat: badgePosition
+        endif
     -%}
 
     <div class="
@@ -45,6 +60,8 @@
         {% if extend_height %} card--extend-height{% endif %}
         {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
         {% if horizontal_class %} card--horizontal{% endif %}
+        {% if showBadge %} card--badge-{{badgePosition}}{% endif %}
+        {% if card_image_full_width %} card--full-width-image{% endif %}
         "
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
@@ -118,10 +135,10 @@
                         {{ card_product.title | escape }}
                     </a>
                 </h3>
-                    {%- if show_vendor -%}
-                      <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-                      <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
-                    {%- endif -%}
+                {%- if show_vendor -%}
+                    <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+                    <h5 class="card__subheading">{{ card_product.vendor }}</h5>
+                {%- endif -%}
 
                     <span class="caption-large light">{{ block.settings.description | escape }}</span>
 
@@ -169,15 +186,9 @@
                     {%- endif -%}
                   </div>
         </div>
-
-        {%- assign showBadge = false -%}
-
-        {%- if card_product.compare_at_price > card_product.price and card_product.available -%}
-            {%- assign showBadge = true -%}
-        {%- elsif card_product.available == false -%}
-            {%- assign showBadge = true -%}
+        {%- if show_quick_add -%}
+            {% render 'quick-add', card_product: card_product, horizontal_quick_add: horizontal_quick_add, section_id: section_id %}
         {%- endif -%}
-
         {% if showBadge %}
             <div class="card__badge
                 {% if card_product.available -%}

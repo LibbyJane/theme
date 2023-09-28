@@ -1,102 +1,505 @@
+:root {
+    --button-border-radius:  var(--button-radius-large) var(--button-radius) var(--button-radius-med) var(--button-radius)/var(--button-radius) var(--button-radius-med) var(--button-radius) var(--button-radius-large);
+}
 
-// button[type="reset"],
-// .btn[type="reset"] {
-//     background: transparent;
-//     color: var(--text);
-//     font-weight: 400;
+.button,
+.shopify-challenge__button,
+.shopify-payment-button__button,
+.shopify-payment-button__more-options
+// ,.customer button,
+// button.shopify-payment-button__button--unbranded,
+// .shopify-payment-button [role='button'],
+// .cart__dynamic-checkout-buttons [role='button'],
+// .cart__dynamic-checkout-buttons iframe
+{
+    --button-opacity: 1;
+    --button-foreground-color: rgba(var(--color-button-text), var(--button-opacity));
+    --button-background-color: rgba(var(--color-button), var(--button-opacity));
+
+// TODO: remove these?
+    --shadow-horizontal-offset: rgb(var(--button-shadow-horizontal-offset));
+      --shadow-vertical-offset: var(--button-shadow-vertical-offset);
+      --shadow-blur-radius: var(--button-shadow-blur-radius);
+      --shadow-opacity: var(--button-shadow-opacity);
+      --shadow-visible: var(--button-shadow-visible);
+      --border-offset: var(--button-border-offset); /* reduce radius edge artifacts */
+      --border-opacity: calc(1 - var(--button-border-opacity));
+
+    background-color:  var(--button-background-color);
+    border-style: solid;
+    border-width: var(--button-border-width);
+    border-color:  var(--button-background-color);
+    border-radius: var(--button-border-radius);
+    color: var(--button-foreground-color);
+    cursor: pointer;
+    font-family: var(--font-heading-family);
+    font-size: calc(var(--font-heading-scale) * 1.2rem);
+    font-weight: 600;
+    margin: 0 1rem auto;
+    padding: 1rem 2rem;
+    //opacity: 0.85;
+    position: relative;
+    text-decoration: none;
+    transition: all var(--duration-long) var(--transition-type);
+
+    &::before {
+        background-color: transparent;
+        border-style: solid;
+        border-width: var(--button-border-width);
+        border-color:  var(--button-background-color);
+        border-radius: var(--button-border-radius);
+        content: '';
+        opacity: 0;
+        margin: auto;
+        position: absolute;
+            inset: 0;
+        transform: rotate(-2deg);
+        transition: all var(--duration-long) var(--transition-type);
+        z-index: -1;
+    }
+}
+
+.button--primary {
+    &:hover, &:focus {
+        // opacity: 1;
+
+        &::before {
+            box-shadow: 0 0 0 var(--button-border-width) var(--button-background-color);
+
+            opacity: 1;
+            transform: rotate(0) scale(1.02);
+        }
+    }
+
+    &::before {
+        box-shadow: 0 0 0 calc(var(--button-border-width) * -1) var(--button-background-color);
+    }
+}
+
+.button--secondary {
+    --color-button: var(--color-secondary-button);
+    --color-button-text: var(--color-secondary-button-text);
+    background-color: transparent;
+    border-color:  var(--button-foreground-color);
+    color: var(--button-foreground-color);
+    opacity: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-color: var(--button-foreground-color);
+        opacity: 1;
+    }
+
+    &:hover, &:focus {
+        // box-shadow: 0 0 3px 1px rgba(var(--color-button-text), 0.75), 0 0 0 1px var(--button-foreground-color);
+        // opacity: 1;
+
+        &::before {
+            transform: rotate(1deg) scale(1.02);
+        }
+    }
+//   @include marching-ants-v2-init(20px, 2px,1s,1);
+
+//   @include marching-ants-v2-color(#fff,#000);
+
+}
+
+.button--tertiary,
+.shopify-challenge__button.shopify-challenge__button,
+.shopify-payment-button__button.shopify-payment-button__button {
+    border-color:  var(--button-foreground-color);
+
+    &:hover, &:focus {
+        background-color:  var(--button-background-color);
+    }
+}
+
+
+// @mixin marching-ants-v2-init($ant-size,$ant-width,$speed,$id){
+//     padding: 5px + $ant-width;
+//     margin: 20px;
+//     background-size:
+//       $ant-size $ant-width,
+//       $ant-size $ant-width,
+//       $ant-width $ant-size,
+//       $ant-width $ant-size;
+//     background-position:
+//       0 0,
+//       0 100%,
+//       0 0,
+//       100% 0;
+//     background-repeat:
+//       repeat-x,
+//       repeat-x,
+//       repeat-y,
+//       repeat-y;
+//     animation: marching-ants-#{$id} $speed;
+//     animation-timing-function: linear;
+//     animation-iteration-count: infinite;
+//     animation-play-state: paused;
+//   &:hover, &.marching {
+//     animation-play-state: running;
+//   }
+//   &.reverse {
+//     animation-direction: reverse;
+//   }
+// };
+// @mixin marching-ants-v2-color($a, $b){
+//     background-image:
+//       linear-gradient(to right, $a 50%, $b 50%),
+//       linear-gradient(to right, $a 50%, $b 50%),
+//       linear-gradient(to bottom, $a 50%, $b 50%),
+//       linear-gradient(to bottom, $a 50%, $b 50%);
+// };
+
+// @mixin marching-ants-v2-animation($ant-size, $id){
+//   @keyframes marching-ants-#{$id} {
+//     0% {
+//       background-position:
+//         0 0,
+//         0 100%,
+//         0 0,
+//         100% 0;
+//     }
+//     100% {
+//       background-position:
+//         2*$ant-size 0,
+//         -2*$ant-size 100%,
+//         0 -2*$ant-size,
+//         100% 2*$ant-size;
+//     }
+//   }
 // }
 
-// button[type="reset"]:hover {
-//     background: transparent;
-//     color: var(--danger);
+// .marching-ants {
+//   @include marching-ants-v2-init(20px, 2px,1s,1);
+
+//   &.bnw {
+//     @include marching-ants-v2-color(#fff,#000);
+
+//   }
+//   &.headline {
+//     @include marching-ants-v2-color(#fff,#444);
+//     color: #fff;
+//   }
+//   &.info {
+//     @include marching-ants-v2-color(#dd2,transparent);
+//     background-color: #ffa;
+//     color: #dd2;
+//   }
+//   &.warning {
+//     @include marching-ants-v2-init(40px, 4px,2s,2);
+//     @include marching-ants-v2-color(#f00,#fff);
+//     color: #a00;
+//     background-color: #faa;
+//   }
 // }
 
-// button:disabled {
-//     filter: grayscale(0.75);
-//     font-weight: 400;
-//     opacity: 0.5;
-//     pointer-events: none;
+
+
+
+
+
+
+// @include marching-ants-v2-animation(20px, 1);
+// @include marching-ants-v2-animation(20px, 2);
+// @include marching-ants-v2-animation(20px, 3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .button,
+// .shopify-challenge__button,
+// .customer button,
+// button.shopify-payment-button__button--unbranded {
+//   min-width: calc(12rem + var(--button-border-width) * 2);
+//   min-height: calc(4.5rem + var(--button-border-width) * 2);
+// }
+
+// .shopify-payment-button__button--branded {
+//   z-index: auto;
+// }
+
+// .cart__dynamic-checkout-buttons iframe {
+//   box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
+//     rgba(var(--color-shadow), var(--shadow-opacity));
 // }
 
 
-// .btn {
 
-//     color: var(--text);
-//     cursor: pointer;
-//     font-family: inherit;
-//     font-weight: bold;
-//     font-size: var(--p);
-//     padding: var(--space);
-//     position: relative;
-//     white-space: nowrap;
-
-//     &::before,
-//     &::after {
-//         background: {
-//             image:  url("@/assets/images/drawn-circle.svg");
-//             position: center;
-//             repeat: no-repeat;
-//             size: contain;
-//         }
-//         content: '';
-//         height: 0;
-//         padding-top: 100%;
-//         width: 100%;
-//         position: absolute;
-//         top: 0;
-//         right: 0;
-//         bottom: 0;
-//         left: 0;
-//         margin: auto 0;
-//         transition: all;
-//         transform: scaleY(0.6) scaleX(1.2) translateY(0.3rem);
-//     }
-
-//             &::after {
-//             background: {
-//                 image:  url("@/assets/images/drawn-circle-hover.svg");
-//             }
-//             opacity: 0;
-//             transition: opacity var(--transition);
-//         }
-
-
-//     &:hover {
-//         color: var(--heading);
-
-//         &::after {
-//             opacity: 1;
-//         }
-//     }
-
-//     &.is-text {
-//         padding-inline: 0;
-
-//         &:hover,
-//         &:focus {
-//             &::after {
-//                 transform: scaleX(1) translateY(var(--space-neg));
-//             };
-//         }
-
-//         .is-success & {
-//             color: var(--green);
-//         }
-
-//         &::before,
-//         &::after {
-//             background: transparent;
-//         }
-
-//         &::after {
-//             border-bottom: thin solid;
-//             transition: all var(--transition);
-//             transform: scaleX(0) translateY(var(--space-neg));
-//         }
-//     }
-
-//     &.is-small {
-//         font-size: var(--p-sm);
-//     }
+// .button:before,
+// .shopify-challenge__button:before,
+// .customer button:before,
+// .shopify-payment-button__button--unbranded:before,
+// .shopify-payment-button [role='button']:before,
+// .cart__dynamic-checkout-buttons [role='button']:before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   z-index: -1;
+//   border-radius: var(--button-radius-outset);
+//   box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
+//     rgba(var(--color-shadow), var(--shadow-opacity));
 // }
 
+// .button:after,
+// .shopify-challenge__button:after,
+// .customer button:after,
+// .shopify-payment-button__button--unbranded:after {
+//   content: '';
+//   position: absolute;
+//   top: var(--button-border-width);
+//   right: var(--button-border-width);
+//   bottom: var(--button-border-width);
+//   left: var(--button-border-width);
+//   z-index: 1;
+//   border-radius: var(--button-radius);
+//   box-shadow: 0 0 0 calc(var(--button-border-width) + var(--border-offset))
+//       rgba(var(--color-button-text), var(--border-opacity)),
+//     0 0 0 var(--button-border-width) rgba(var(--color-button), var(--alpha-button-background));
+//   transition: box-shadow var(--duration-short) ease;
+// }
+
+// .button:not([disabled]):hover::after,
+// .shopify-challenge__button:hover::after,
+// .customer button:hover::after,
+// .shopify-payment-button__button--unbranded:hover::after {
+//   --border-offset: 1.3px;
+//   box-shadow: 0 0 0 calc(var(--button-border-width) + var(--border-offset))
+//       rgba(var(--color-button-text), var(--border-opacity)),
+//     0 0 0 calc(var(--button-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+// }
+
+// .button--secondary:after {
+//   --border-opacity: var(--button-border-opacity);
+// }
+
+// .button:focus-visible,
+// .button:focus,
+// .button.focused,
+// .shopify-payment-button__button--unbranded:focus-visible,
+// .shopify-payment-button [role='button']:focus-visible,
+// .shopify-payment-button__button--unbranded:focus,
+// .shopify-payment-button [role='button']:focus {
+//   outline: 0;
+//   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.5rem rgba(var(--color-foreground), 0.5),
+//     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+// }
+
+// .button:focus:not(:focus-visible):not(.focused),
+// .shopify-payment-button__button--unbranded:focus:not(:focus-visible):not(.focused),
+// .shopify-payment-button [role='button']:focus:not(:focus-visible):not(.focused) {
+//   box-shadow: inherit;
+// }
+
+// .button::selection,
+// .shopify-challenge__button::selection,
+// .customer button::selection {
+//   background-color: rgba(var(--color-button-text), 0.3);
+// }
+
+// .button,
+// .button-label,
+// .shopify-challenge__button,
+// .customer button {
+//   font-size: 1.5rem;
+//   letter-spacing: 0.1rem;
+//   line-height: calc(1 + 0.2 / var(--font-body-scale));
+// }
+
+// .button--tertiary {
+//   font-size: 1.2rem;
+//   padding: 1rem 1.5rem;
+//   min-width: calc(9rem + var(--button-border-width) * 2);
+//   min-height: calc(3.5rem + var(--button-border-width) * 2);
+// }
+
+// .button--small {
+//   padding: 1.2rem 2.6rem;
+// }
+
+// /* Button - other */
+
+// .button:disabled,
+// .button[aria-disabled='true'],
+// .button.disabled,
+// .customer button:disabled,
+// .customer button[aria-disabled='true'],
+// .customer button.disabled,
+// .quantity__button.disabled {
+//   cursor: not-allowed;
+//   opacity: 0.5;
+// }
+
+// .button--full-width {
+//   display: flex;
+//   width: 100%;
+// }
+
+// .button.loading {
+//   color: transparent;
+//   position: relative;
+// }
+
+// @media screen and (forced-colors: active) {
+//   .button.loading {
+//     color: rgb(var(--color-foreground));
+//   }
+// }
+
+// .button.loading > .loading-overlay__spinner {
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   position: absolute;
+//   height: 100%;
+//   display: flex;
+//   align-items: center;
+// }
+
+// .button.loading > .loading-overlay__spinner .spinner {
+//   width: fit-content;
+// }
+
+// .button.loading > .loading-overlay__spinner .path {
+//   stroke: rgb(var(--color-button-text));
+// }
+
+
+
+
+
+// // button[type="reset"],
+// // .btn[type="reset"] {
+// //     background: transparent;
+// //     color: var(--text);
+// //     font-weight: 400;
+// // }
+
+// // button[type="reset"]:hover {
+// //     background: transparent;
+// //     color: var(--danger);
+// // }
+
+// // button:disabled {
+// //     filter: grayscale(0.75);
+// //     font-weight: 400;
+// //     opacity: 0.5;
+// //     pointer-events: none;
+// // }
+
+
+// // .btn {
+
+// //     color: var(--text);
+// //     cursor: pointer;
+// //     font-family: inherit;
+// //     font-weight: bold;
+// //     font-size: var(--p);
+// //     padding: var(--space);
+// //     position: relative;
+// //     white-space: nowrap;
+
+// //     &::before,
+// //     &::after {
+// //         background: {
+// //             image:  url("@/assets/images/drawn-circle.svg");
+// //             position: center;
+// //             repeat: no-repeat;
+// //             size: contain;
+// //         }
+// //         content: '';
+// //         height: 0;
+// //         padding-top: 100%;
+// //         width: 100%;
+// //         position: absolute;
+// //         top: 0;
+// //         right: 0;
+// //         bottom: 0;
+// //         left: 0;
+// //         margin: auto 0;
+// //         transition: all;
+// //         transform: scaleY(0.6) scaleX(1.2) translateY(0.3rem);
+// //     }
+
+// //             &::after {
+// //             background: {
+// //                 image:  url("@/assets/images/drawn-circle-hover.svg");
+// //             }
+// //             opacity: 0;
+// //             transition: opacity var(--transition);
+// //         }
+
+
+// //     &:hover {
+// //         color: var(--heading);
+
+// //         &::after {
+// //             opacity: 1;
+// //         }
+// //     }
+
+// //     &.is-text {
+// //         padding-inline: 0;
+
+// //         &:hover,
+// //         &:focus {
+// //             &::after {
+// //                 transform: scaleX(1) translateY(var(--space-neg));
+// //             };
+// //         }
+
+// //         .is-success & {
+// //             color: var(--green);
+// //         }
+
+// //         &::before,
+// //         &::after {
+// //             background: transparent;
+// //         }
+
+// //         &::after {
+// //             border-bottom: thin solid;
+// //             transition: all var(--transition);
+// //             transform: scaleX(0) translateY(var(--space-neg));
+// //         }
+// //     }
+
+// //     &.is-small {
+// //         font-size: var(--p-sm);
+// //     }
+// // }
+
+
+/* outline and border styling for Windows High Contrast Mode */
+// @media (forced-colors: active) {
+//     .button,
+//     .shopify-challenge__button,
+//     .customer button {
+//       border: transparent solid 1px;
+//     }
+
+//     .button:focus-visible,
+//     .button:focus,
+//     .button.focused,
+//     .shopify-payment-button__button--unbranded:focus-visible,
+//     .shopify-payment-button [role='button']:focus-visible,
+//     .shopify-payment-button__button--unbranded:focus,
+//     .shopify-payment-button [role='button']:focus {
+//       outline: solid transparent 1px;
+//     }
