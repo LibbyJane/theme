@@ -1932,6 +1932,11 @@
         },
         "main-product": {
             "name": "Product information",
+            "options": {
+                "group_checkout": {
+                    "label": "Group checkout blocks"
+                }
+            },
             "blocks": {
                 "text": {
                     "name": "Text",

@@ -1,0 +1,44 @@
+{% comment %}
+    Renders the product rating
+
+    Accepts:
+    - rating_data: {Object} Rating data from the product liquid object
+
+    Usage:
+    {% render 'rating', rating_data: product.metafields.reviews %}
+{% endcomment %}
+{%- if rating_data.rating.value != blank -%}
+{% liquid
+assign rating_decimal = 0
+assign decimal = rating_data.rating.value.rating | modulo: 1
+if decimal >= 0.3 and decimal <= 0.7
+    assign rating_decimal = 0.5
+elsif decimal > 0.7
+    assign rating_decimal = 1
+endif
+%}
+<div
+class="rating"
+role="img"
+aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: rating_data.rating.value, rating_max: rating_data.rating.value.scale_max }}"
+>
+<span
+    aria-hidden="true"
+    class="rating-star"
+    style="--rating: {{ rating_data.rating.value.rating | floor }}; --rating-max: {{ rating_data.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
+></span>
+</div>
+<p class="rating-text caption">
+<span aria-hidden="true">
+    {{- rating_data.rating.value }} /
+    {{ rating_data.rating.value.scale_max -}}
+</span>
+</p>
+<p class="rating-count caption">
+<span aria-hidden="true">({{ rating_data.rating_count }})</span>
+<span class="visually-hidden">
+    {{- rating_data.rating_count }}
+    {{ 'accessibility.total_reviews' | t -}}
+</span>
+</p>
+{%- endif -%}

@@ -39,9 +39,7 @@
     endif
 -%}
 
-<div
-    class="
-        price
+<div class="price
         {%- if price_class %} {{ price_class }}{% endif -%}
         {%- if available == false %} price--sold-out{% endif -%}
         {%- if compare_at_price > price and product.quantity_price_breaks_configured? != true %} price--on-sale{% endif -%}
@@ -121,18 +119,29 @@
         </small>
         <div class="product__tax caption rte">
             {%- if taxes_included -%}
-            {{ taxes_included_message }}
                 {{ taxes_included_message }}
             {%- endif -%}
         </div>
     </div>
     {%- if show_badges -%}
-    <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
-        {{ 'products.product.on_sale' | t }}
-    </span>
+        <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
+            {{ 'products.product.on_sale' | t }}
+        </span>
 
-    <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
-        {{ 'products.product.sold_out' | t }}
-    </span>
+        <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
+            {{ 'products.product.sold_out' | t }}
+        </span>
     {%- endif -%}
-    </div>
+</div>
+
+{%- if product.quantity_price_breaks_configured? -%}
+<div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
+    <span>{{ 'products.product.volume_pricing.note' | t }}</span>
+</div>
+{%- endif -%}
+
+{%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
+{%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
+    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+{{ form | payment_terms }}
+{%- endform -%}

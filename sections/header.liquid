@@ -351,6 +351,8 @@
 
         closeSearchModal() {
             this.searchModal = this.searchModal || this.header.querySelector('details-modal');
+            if (!this.searchModal?.close) return;
+            console.dir('?search modal', this.searchModal);
             this.searchModal.close(false);
         }
     }
