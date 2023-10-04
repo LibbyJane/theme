@@ -123,12 +123,8 @@
             --product-card-shadow-blur-radius: {{ settings.card_shadow_blur | divided_by: 10.0 }}rem;
 
             --card-image-offset: {% if settings.card_image_full_width  %}{{ settings.card_padding | divided_by: -10.0 }}rem;{% else %}0{% endif %};
-            --card-price-highlight-color-opacity: {% if settings.card_highlight_price  %}1{% else %}0{% endif %};
-            --card-price-highlight-color: {{ settings.card_price_highlight_color.red }},{{ settings.card_price_highlight_color.green }},{{ settings.card_price_highlight_color.blue }};
-
-
-            --product-highlight-color-opacity: {% if settings.card_highlight_price  %}1{% else %}0{% endif %};
-            --product-highlight-color: {{ settings.card_price_highlight_color.red }},{{ settings.card_price_highlight_color.green }},{{ settings.card_price_highlight_color.blue }};
+            --highlight-color-opacity: {% if settings.card_highlight_price  %}1{% else %}0{% endif %};
+            --highlight-color: {{ settings.card_price_highlight_color.red }},{{ settings.card_price_highlight_color.green }},{{ settings.card_price_highlight_color.blue }};
 
             --collection-card-image-padding: {{ settings.collection_card_image_padding | divided_by: 10.0 }}rem;
             --collection-card-corner-radius: {{ settings.collection_card_corner_radius | divided_by: 10.0 }}rem;
@@ -161,6 +157,8 @@
             --popup-shadow-horizontal-offset: {{ settings.popup_shadow_horizontal_offset }}px;
             --popup-shadow-vertical-offset: {{ settings.popup_shadow_vertical_offset }}px;
             --popup-shadow-blur-radius: {{ settings.popup_shadow_blur }}px;
+
+            --overlay-color: rgba(var(--color-foreground), 0.5);
 
             --drawer-border-width: {{ settings.drawer_border_thickness }}px;
             --drawer-border-opacity: {{ settings.drawer_border_opacity | divided_by: 100.0 }};
@@ -296,6 +294,7 @@
     </head>
 
     <body class="site-outer {% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+        {% render 'texture-torn' %}
         <a class="skip-to-content-link button visually-hidden" href="#MainContent">
             {{ 'accessibility.skip_to_text' | t }}
         </a>

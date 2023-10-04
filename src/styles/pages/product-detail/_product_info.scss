@@ -1,6 +1,4 @@
 .product__info-wrapper {
-    background-blend-mode: multiply;
-    background-image: url('texture-paper.jpg');
     padding: var(--space-lg);
 }
 
@@ -19,6 +17,10 @@
         opacity: 0.8;
     }
 }
+
+// .product__lead-in {
+
+// }
 
 
 // .product__lead-in,
@@ -39,13 +41,28 @@
     }
 }
 
+.product__price {
+    .subtitle {
+        .price-item {
+            font-family: var(--font-heading-family);
+            font-style: var(--font-heading-style);
+            font-weight: var(--font-heading-weight);
+        }
+    }
+
+    .price-item {
+        font-size: calc(var(--price-font-scale) * 100%);
+        line-height: 1;
+    }
+}
+
 .product-form__buttons {
     display: flex;
     flex-direction: column;
 
     .button {
         flex: 0 0 auto;
-        margin: 2.2rem 0 var(--space-sm);
+        margin: 0 0 var(--space);
     }
 
     .shopify-payment-button {

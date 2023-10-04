@@ -1,4 +1,6 @@
 .checkable__highlight {
+    display: inline-flex;
+    align-items: center;
     input {
         opacity: 0;
         position: absolute;

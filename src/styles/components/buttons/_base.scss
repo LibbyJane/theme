@@ -5,13 +5,11 @@
 .button,
 .shopify-challenge__button,
 .shopify-payment-button__button,
-.shopify-payment-button__button--unbranded,
-.shopify-payment-button__more-options
-// ,.customer button,
-// button.shopify-payment-button__button--unbranded,
-// .shopify-payment-button [role='button'],
-// .cart__dynamic-checkout-buttons [role='button'],
-// .cart__dynamic-checkout-buttons iframe
+.customer button,
+button.shopify-payment-button__button--unbranded,
+.shopify-payment-button [role='button'],
+.cart__dynamic-checkout-buttons [role='button'],
+.cart__dynamic-checkout-buttons iframe
 {
     --button-opacity: 1;
     --button-foreground-color: rgba(var(--color-button-text), var(--button-opacity));
@@ -58,6 +56,22 @@
         transition: all var(--duration-long) var(--transition-type);
         z-index: -1;
     }
+
+    .loading-overlay__spinner {
+        background-color: var(--overlay-color);
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .spinner {
+        max-height: 80%;
+    }
+}
+
+.shopify-payment-button__button.shopify-payment-button__button {
+    margin: 0 auto;
 }
 
 .button--primary {

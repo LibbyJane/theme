@@ -18,10 +18,13 @@
         ,"layout/site-header/utility"
         ;
 
+@import "theme/textures";
+
 @import
         "components/buttons/base"
         ,"components/badges/card-badge"
         ,"components/badges/base"
+        ,"components/highlight"
         ,"components/icons/base"
         ,"components/icons/with-text"
         ,"components/forms/base"

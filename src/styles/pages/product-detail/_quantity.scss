@@ -3,12 +3,13 @@
 }
 /* component-quantity */
 .quantity {
-    color: rgba(var(--color-foreground));
+    color: rgba(var(--color-foreground), 1);
     position: relative;
     // width: calc(14rem / var(--font-heading-scale) + var(--inputs-border-width) * 2);
     display: flex;
     min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
     transition: transform var(--duration-short) var(--transition-type);
+    width: 100%;
 
     &:hover {
         &::before {
@@ -18,7 +19,7 @@
     }
 
     &::before {
-        background: rgb(var(--color-background));
+        background: rgba(var(--color-background), 0.5);
         pointer-events: none;
         content: '';
         position: absolute;
@@ -86,7 +87,7 @@
     flex-shrink: 0;
     font-size: 1.8rem;
     border: 0;
-    background-color: transparent;
+    background-color: rgba(var(--color-background), 0.5);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -94,16 +95,28 @@
     color: rgb(var(--color-foreground));
     padding: 0;
 
+    @media screen and (min-width: 990px) {
+        width: calc(6rem / var(--font-heading-scale));
+    }
+
+
     &:hover, &:focus {
+        background-color: rgba(var(--color-background), 1);
         .quantity__button-text {
             transform: scale(1.2);
         }
     }
 
+    &:disabled,
+    &.disabled {
+        filter: saturate(0);
+        pointer-events: none;
+    }
+
     &:first-child {
         border-right: var(--inputs-border-width) dashed rgba(var(--color-foreground), calc(var(--inputs-border-opacity)/4));
         margin-left: calc(var(--inputs-border-width));
-      }
+    }
 
     &:last-child {
         border-left: var(--inputs-border-width) dashed rgba(var(--color-foreground), calc(var(--inputs-border-opacity)/4));
@@ -113,7 +126,7 @@
 
 .quantity__button-text {
     border-radius: 50%;
-    background-color: rgba(var(--highlight-color), 0.2);
+    background-color: rgba(var(--highlight-color), var(--highlight-opacity));
     font-family: var(--font-heading-family);
     padding: var(--space-sm);
     display: inline-block;
@@ -123,6 +136,18 @@
     pointer-events: none;
     transition: transform var(--duration-short) var(--transition-type);
 
+}
+
+.quantity-cart {
+    position: relative;
+
+    &::before {
+        background-color: rgba(var(--highlight-color), 0.2);
+        content: '';
+        position: absolute;
+        margin: -1;
+        transform: rotate(0.5deg);
+    }
 }
 
   .quantity__button:focus-visible,

@@ -103,6 +103,7 @@
             "settings": {
                 "enable_sticky_info": true,
                 "use_highlight_color": true,
+                "highlight_price": true,
                 "highlight_color": "#FEC4BF",
                 "gallery_layout": "stacked",
                 "media_size": "large",

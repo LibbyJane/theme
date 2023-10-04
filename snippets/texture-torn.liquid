@@ -1,0 +1,12 @@
+<svg height="0" width="0">
+    <defs>
+        <filter id="tornPaper" >
+            <feTurbulence baseFrequency="0.05" type="fractalNoise" numOctaves="7" seed="1" result="noise" />
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha"/>
+            <feMorphology  operator="erode" radius="7" />
+            <feDisplacementMap scale="7" in2="noise" result="frame"/>
+            <feComposite in="SourceGraphic" in2="frame" operator="atop"/>
+            <feDropShadow dx="1" dy="1" stdDeviation="1"/>
+        </filter>
+    </defs>
+</svg>

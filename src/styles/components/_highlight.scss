@@ -1,0 +1,18 @@
+.highlight {
+    position: relative;
+
+    &::before {
+        background-color: rgba(var(--highlight-color), var(--highlight-opacity));
+        content: '';
+        // animation: scaleX100 var(--duration-long) ease;
+        // animation-delay: var(--duration-medium);
+        margin: -1px;
+
+        position: absolute;
+
+        inset: 0;
+        // transform-origin: center left;
+        z-index: -1;
+        pointer-events: none;
+    }
+}

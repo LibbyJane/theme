@@ -126,9 +126,15 @@
                 "background": {
                     "label": "Background"
                 },
+                "background_transparent": {
+                    "label": "Background transparent"
+                },
                 "background_gradient": {
                     "label": "Background gradient",
                     "info": "Background gradient replaces background where possible."
+                },
+                "background_texture": {
+                    "label": "Apply texture to the background color"
                 },
                 "text": {
                     "label": "Text"
@@ -147,6 +153,9 @@
                 },
                 "highlight_color": {
                     "label": "Highlight color"
+                },
+                "use_highlight_color": {
+                    "label": "Highlight"
                 }
             }
         },

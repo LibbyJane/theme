@@ -21,6 +21,10 @@
             --highlight-color: {{ section.settings.highlight_color.red }},{{ section.settings.highlight_color.green }},{{ section.settings.highlight_color.blue }};
         }
 
+        .quantity {
+            --highlight-opacity: {% if section.settings.use_highlight_color  %}0.2{% else %}0{% endif %};
+        }
+
         .section-{{ section.id }}-padding {
             padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
             padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -76,12 +80,14 @@
                 product--mobile-{{ section.settings.mobile_thumbnails }}
                 grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}
     ">
-        <div class="grid__item product__media-wrapper">
+        <div class="grid__item product__media-wrapper color-{{ section.settings.color_scheme }}">
             {% render 'product-media-gallery', variant_images: variant_images %}
         </div>
 
         <div class="product__info-wrapper
                     grid__item
+                    color-{{ section.settings.color_scheme }}
+                    {% if section.settings.background_texture != blank %}texture-{{section.settings.background_texture}}{% endif %}
                     {% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}
                     {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
         ">
@@ -100,7 +106,7 @@
                             {% render block %}
 
                         {%- when 'text' -%}
-                            <h5 class="product__lead-in {% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                            <h5 class="product__lead-in {% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'body' %} text-body{% else %} {{block.settings.text_style}}{% endif %}"
                                 {{ block.shopify_attributes }}
                             >
                                 {{- block.settings.text -}}
@@ -119,11 +125,14 @@
                         {%- when 'price' -%}
                             <div class="product__price no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                                 {% assign taxes_included_message = 'products.product.include_taxes' | t %}
+
                                 {%- render 'price',
                                     product: product,
                                     use_variant: true,
                                     show_badges: true,
-                                    price_class: 'price--large',
+                                    price_class: block.settings.text_style,
+                                    price_font_scale: block.settings.price_font_scale,
+                                    use_highlight_color: block.settings.use_price_highlight_color,
                                     taxes_included: cart.taxes_included,
                                     taxes_included_message: taxes_included_message
                                 -%}
@@ -420,7 +429,41 @@
         {
             "type": "price",
             "name": "t:sections.main-product.blocks.price.name",
-            "limit": 1
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "select",
+                    "id": "text_style",
+                    "options": [
+                        {
+                            "value": "body",
+                            "label": "t:sections.main-product.blocks.sku.settings.text_style.options__1.label"
+                        },
+                        {
+                            "value": "subtitle",
+                            "label": "t:sections.main-product.blocks.sku.settings.text_style.options__2.label"
+                        }
+                    ],
+                    "default": "body",
+                    "label": "t:sections.main-product.blocks.sku.settings.text_style.label"
+                },
+                {
+                    "type": "range",
+                    "id": "price_font_scale",
+                    "min": 100,
+                    "max": 200,
+                    "step": 5,
+                    "unit": "%",
+                    "label": "t:settings_schema.typography.settings.body_scale.label",
+                    "default": 120
+                },
+                {
+                    "type": "checkbox",
+                    "id": "use_price_highlight_color",
+                    "default": false,
+                    "label": "t:settings_schema.colors.settings.highlight_color.label"
+                }
+            ]
         },
         {
             "type": "sku",
@@ -1710,16 +1753,47 @@
             "label": "t:sections.main-product.settings.enable_sticky_info.label"
         },
         {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "background-1"
+        },
+        {
+            "type": "select",
+            "id": "background_texture",
+            "options": [
+                {
+                    "value": "",
+                    "label": "none"
+                },
+                {
+                    "value": "paper",
+                    "label": "paper"
+                },
+                {
+                    "value": "torn",
+                    "label": "torn"
+                },
+                {
+                    "value": "lined",
+                    "label": "lined"
+                }
+            ],
+            "default": "",
+            "label": "apply a texture to the content areas",
+            "info": "additional info?"
+        },
+        {
             "type": "checkbox",
             "id": "use_highlight_color",
             "default": false,
-            "label": "t:settings_schema.main-product.settings.highlight.label"
+            "label": "t:settings_schema.colors.settings.highlight_color.label"
         },
         {
             "type": "color",
             "id": "highlight_color",
             "label": "t:settings_schema.colors.settings.highlight_color.label",
-            "default": "#A0F266"
+            "default": "#FEC4BF"
         },
         {
             "type": "header",
@@ -1790,7 +1864,7 @@
                     "label": "t:sections.main-product.settings.gallery_layout.options__4.label"
                 }
             ],
-            "default": "stacked",
+            "default": "thumbnail",
             "label": "t:sections.main-product.settings.gallery_layout.label"
         },
         {

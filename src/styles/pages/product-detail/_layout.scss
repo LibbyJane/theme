@@ -1,12 +1,10 @@
 .product {
     margin: 0;
 
-    &.grid {
-        gap: 0;
-    }
 }
 
 .product__media-wrapper {
+    flex: 1;
     order: 0;
 
     .product--gallery-right & {
@@ -16,6 +14,18 @@
 
 .product__info-wrapper {
     order: 1;
+
+
+    @media screen and (min-width: 990px) {
+        max-width: 55%;
+
+        .product--small & {
+            max-width: 45%;
+        }
+        .product--large & {
+            max-width: 35%;
+        }
+    }
 }
 
 .product--no-media {
@@ -31,7 +41,6 @@
         z-index: 2;
     }
 }
-
 
 .product__media-wrapper {
     padding-left: 0;
