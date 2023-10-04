@@ -327,12 +327,12 @@
                                 data-index="{{ item.index | plus: 1 }}"
                               >
                                 <button
-                                  type="button"
-                                  class="button button--tertiary cart-remove-button"
-                                  aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
-                                  data-variant-id="{{ item.variant.id }}"
+                                    type="button"
+                                    class="cart-remove__button"
+                                    aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
+                                    data-variant-id="{{ item.variant.id }}"
                                 >
-                                  {% render 'icon-remove' %}
+                                    {% render 'icon-remove' %}
                                 </button>
                               </cart-remove-button>
                             </div>

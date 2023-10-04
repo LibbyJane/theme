@@ -4,12 +4,13 @@
 /* component-quantity */
 .quantity {
     color: rgba(var(--color-foreground), 1);
-    position: relative;
     // width: calc(14rem / var(--font-heading-scale) + var(--inputs-border-width) * 2);
     display: flex;
     min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
-    transition: transform var(--duration-short) var(--transition-type);
     width: 100%;
+    position: relative;
+    transition: transform var(--duration-short) var(--transition-type);
+    z-index: 1;
 
     &:hover {
         &::before {

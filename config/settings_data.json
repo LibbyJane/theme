@@ -11,7 +11,7 @@
         "spacing_sections": 0,
         "spacing_grid_horizontal": 8,
         "spacing_grid_vertical": 8,
-        "buttons_border_thickness": 1,
+        "buttons_border_thickness": 2,
         "buttons_border_opacity": 100,
         "buttons_radius": 15,
         "buttons_shadow_opacity": 0,
@@ -144,13 +144,13 @@
             },
             "background-2": {
                 "settings": {
-                    "background": "#ECE3E3",
+                    "background": "#fcf6ea",
                     "background_gradient": "",
-                    "text": "#242833",
-                    "button": "#242833",
-                    "button_label": "#ECE3E3",
-                    "secondary_button_label": "#242833",
-                    "shadow": "#242833"
+                    "text": "#3f2b00",
+                    "button": "#3f2b00",
+                    "button_label": "#fcf6ea",
+                    "secondary_button_label": "#3f2b00",
+                    "shadow": "#3f2b00"
                 }
             },
             "inverse": {
@@ -170,20 +170,20 @@
                     "background_gradient": "",
                     "text": "#ffffff",
                     "button": "#ffffff",
-                    "button_label": "#242833",
+                    "button_label": "#820030",
                     "secondary_button_label": "#ffffff",
                     "shadow": "#000000"
                 }
             },
             "accent-2": {
                 "settings": {
-                    "background": "#034055",
+                    "background": "#EAF7FA",
                     "background_gradient": "",
-                    "text": "#B0EC0B",
-                    "button": "#ffffff",
-                    "button_label": "#034055",
-                    "secondary_button_label": "#ffffff",
-                    "shadow": "#242833"
+                    "text": "#23455C",
+                    "button": "#CEC2D8",
+                    "button_label": "#ffffff",
+                    "secondary_button_label": "#23455C",
+                    "shadow": "#1A2227"
                 }
             }
         }
@@ -195,57 +195,57 @@
             "color_schemes": {
                 "background-1": {
                     "settings": {
-                        "background": "#3c1f05",
+                        "background": "#ffffff",
                         "background_gradient": "",
-                        "text": "#dfe7ed",
-                        "button": "#2a2a2c",
-                        "button_label": "#FFFFFF",
-                        "secondary_button_label": "#2a2a2c",
-                        "shadow": "#000"
+                        "text": "#242833",
+                        "button": "#242833",
+                        "button_label": "#ffffff",
+                        "secondary_button_label": "#242833",
+                        "shadow": "#242833"
                     }
                 },
                 "background-2": {
                     "settings": {
-                        "background": "#ECE3E3",
+                        "background": "#fcf6ea",
                         "background_gradient": "",
-                        "text": "#242833",
-                        "button": "#242833",
-                        "button_label": "#ECE3E3",
-                        "secondary_button_label": "#242833",
-                        "shadow": "#242833"
+                        "text": "#3f2b00",
+                        "button": "#3f2b00",
+                        "button_label": "#fcf6ea",
+                        "secondary_button_label": "#3f2b00",
+                        "shadow": "#3f2b00"
                     }
                 },
                 "inverse": {
                     "settings": {
                         "background": "#242833",
                         "background_gradient": "",
-                        "text": "#FFFFFF",
-                        "button": "#FFFFFF",
-                        "button_label": "#000000",
-                        "secondary_button_label": "#FFFFFF",
-                        "shadow": "#242833"
+                        "text": "#ffffff",
+                        "button": "#ffffff",
+                        "button_label": "#242833",
+                        "secondary_button_label": "#ffffff",
+                        "shadow": "#000000"
                     }
                 },
                 "accent-1": {
                     "settings": {
-                        "background": "#242833",
+                        "background": "#820030",
                         "background_gradient": "",
-                        "text": "#FFFFFF",
-                        "button": "#FFFFFF",
-                        "button_label": "#242833",
-                        "secondary_button_label": "#FFFFFF",
-                        "shadow": "#242833"
+                        "text": "#ffffff",
+                        "button": "#ffffff",
+                        "button_label": "#820030",
+                        "secondary_button_label": "#ffffff",
+                        "shadow": "#000000"
                     }
                 },
                 "accent-2": {
                     "settings": {
-                        "background": "#034055",
+                        "background": "#EAF7FA",
                         "background_gradient": "",
-                        "text": "#FFFFFF",
-                        "button": "#FFFFFF",
-                        "button_label": "#034055",
-                        "secondary_button_label": "#FFFFFF",
-                        "shadow": "#242833"
+                        "text": "#23455C",
+                        "button": "#CEC2D8",
+                        "button_label": "#ffffff",
+                        "secondary_button_label": "#23455C",
+                        "shadow": "#1A2227"
                     }
                 }
             },
@@ -257,7 +257,7 @@
             "spacing_sections": 0,
             "spacing_grid_horizontal": 8,
             "spacing_grid_vertical": 8,
-            "buttons_border_thickness": 1,
+            "buttons_border_thickness": 2,
             "buttons_border_opacity": 100,
             "buttons_radius": 15,
             "buttons_shadow_opacity": 0,

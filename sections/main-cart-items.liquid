@@ -21,12 +21,12 @@
 {%- endstyle -%}
 
 {%- unless settings.cart_type == 'drawer' -%}
-  <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 {%- endunless -%}
 
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 
-<cart-items class="page-width{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
+<cart-items class="page-width texture-paper color-{{ section.settings.color_scheme }}{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %} " >
   <div class="title-wrapper-with-link">
     <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
     <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
@@ -56,20 +56,17 @@
             </caption>
             <thead>
               <tr>
-                <th class="caption-with-letter-spacing" colspan="2" scope="col">
+                <th colspan="2" scope="col">
                   {{ 'sections.cart.headings.product' | t }}
                 </th>
-                <th class="medium-hide large-up-hide right caption-with-letter-spacing" colspan="1" scope="col">
-                  {{ 'sections.cart.headings.total' | t }}
-                </th>
                 <th
-                  class="cart-items__heading--wide cart-items__heading--quantity small-hide caption-with-letter-spacing"
+                  class="small-hide"
                   colspan="1"
                   scope="col"
                 >
                   {{ 'sections.cart.headings.quantity' | t }}
                 </th>
-                <th class="small-hide right caption-with-letter-spacing" colspan="1" scope="col">
+                <th class="right" colspan="1" scope="col">
                   {{ 'sections.cart.headings.total' | t }}
                 </th>
               </tr>
@@ -97,7 +94,7 @@
 
                   <td class="cart-item__details">
                     {%- if settings.show_vendor -%}
-                      <p class="caption-with-letter-spacing">{{ item.product.vendor }}</p>
+                      <p class="cart-item__details-vendor">{{ item.product.vendor }}</p>
                     {%- endif -%}
 
                     <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }}</a>
@@ -228,60 +225,63 @@
                   -%}
                   <td class="cart-item__quantity{% if has_qty_rules or has_vol_pricing %} cart-item__quantity--info{% endif %}">
                     <quantity-popover>
-                      <div class="cart-item__quantity-wrapper quantity-popover-wrapper">
-                        <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
-                          {{ 'products.product.quantity.label' | t }}
-                        </label>
-                        <div class="quantity-popover-container{% if has_qty_rules or has_vol_pricing %} quantity-popover-container--hover{% endif %}">
-                          {%- if has_qty_rules or has_vol_pricing -%}
-                            <button
-                              type="button"
-                              aria-expanded="false"
-                              class="quantity-popover__info-button quantity-popover__info-button--icon-only button button--tertiary small-hide no-js-hidden"
-                            >
-                              {% render 'icon-info' %}
-                            </button>
-                          {%- endif -%}
-                          <quantity-input class="quantity cart-quantity">
-                            <button class="quantity__button no-js-hidden" name="minus" type="button">
-                              <span class="visually-hidden">
-                                {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
-                              </span>
-                              {% render 'icon-minus' %}
-                            </button>
-                            <input
-                              class="quantity__input"
-                              data-quantity-variant-id="{{ item.variant.id }}"
-                              type="number"
-                              name="updates[]"
-                              value="{{ item.quantity }}"
-                              {% # theme-check-disable %}
-                              data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
-                              min="{{ item.variant.quantity_rule.min }}"
-                              {% if item.variant.quantity_rule.max != null %}
-                                max="{{ item.variant.quantity_rule.max }}"
-                              {% endif %}
-                              step="{{ item.variant.quantity_rule.increment }}"
-                              {% # theme-check-enable %}
-                              aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
-                              id="Quantity-{{ item.index | plus: 1 }}"
-                              data-index="{{ item.index | plus: 1 }}"
-                            >
-                            <button class="quantity__button no-js-hidden" name="plus" type="button">
-                              <span class="visually-hidden">
-                                {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}
-                              </span>
-                              {% render 'icon-plus' %}
-                            </button>
-                          </quantity-input>
-                        </div>
+                        <div class="cart-item__quantity-wrapper quantity-popover-wrapper">
+                            <label class="visually-hidden" for="Quantity-{{ item.index | plus: 1 }}">
+                                {{ 'products.product.quantity.label' | t }}
+                            </label>
+                            <div class="quantity-popover-container{% if has_qty_rules or has_vol_pricing %} quantity-popover-container--hover{% endif %}">
+                                {%- if has_qty_rules or has_vol_pricing -%}
+                                    <button
+                                        type="button"
+                                        aria-expanded="false"
+                                        class="quantity-popover__info-button quantity-popover__info-button--icon-only button button--tertiary small-hide no-js-hidden"
+                                    >
+                                        {% render 'icon-info' %}
+                                    </button>
+                                {%- endif -%}
+
+                                <quantity-input class="quantity cart-quantity">
+                                    <button class="quantity__button no-js-hidden" name="minus" type="button">
+                                        <span class="visually-hidden">
+                                            {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
+                                        </span>
+                                        <span class="quantity__button-text">-</span>
+                                    </button>
+                                    <input
+                                        class="quantity__input"
+                                        type="number"
+                                        data-quantity-variant-id="{{ item.variant.id }}"
+                                        data-index="{{ item.index | plus: 1 }}"
+                                        value="{{ item.quantity }}"
+
+                                        {% # theme-check-disable %}
+                                            data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
+                                            min="{{ item.variant.quantity_rule.min }}"
+                                            {% if item.variant.quantity_rule.max != null %}
+                                                max="{{ item.variant.quantity_rule.max }}"
+                                            {% endif %}
+                                            step="{{ item.variant.quantity_rule.increment }}"
+                                        {% # theme-check-enable %}
+
+                                        aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
+                                        name="updates[]"
+                                        id="Quantity-{{ item.index | plus: 1 }}"
+                                    >
+                                    <button class="quantity__button no-js-hidden" name="plus" type="button">
+                                        <span class="visually-hidden">
+                                            {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}
+                                        </span>
+                                        <span class="quantity__button-text">+</span>
+                                    </button>
+                                </quantity-input>
+                            </div>
                         <cart-remove-button
                           id="Remove-{{ item.index | plus: 1 }}"
                           data-index="{{ item.index | plus: 1 }}"
                         >
                           <a
                             href="{{ item.url_to_remove }}"
-                            class="button button--tertiary"
+                            class="cart-remove__button"
                             aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
                           >
                             {% render 'icon-remove' %}
@@ -458,6 +458,12 @@
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
     },
+    {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "background-1"
+      },
     {
       "type": "range",
       "id": "padding_top",

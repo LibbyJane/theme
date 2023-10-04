@@ -316,13 +316,13 @@ h1,
 .h1 {
   font-size: calc(var(--font-heading-scale) * 3rem);
 }
-
+/*
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
     font-size: calc(var(--font-heading-scale) * 4rem);
   }
-}
+} */
 
 h2,
 .h2 {
@@ -352,7 +352,7 @@ h4,
 .h4 {
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
-  font-size: calc(var(--font-heading-scale) * 1.5rem);
+  font-size: calc(var(--font-heading-scale) * 1.4rem);
 }
 
 h5,
@@ -785,7 +785,7 @@ summary::-webkit-details-marker {
   box-shadow: none;
 }
 
-/* component-title */
+/* component-title
 .title,
 .title-wrapper-with-link {
   margin: 3rem 0 2rem;
@@ -892,7 +892,7 @@ summary::-webkit-details-marker {
 .subtitle--medium {
   font-size: 1.6rem;
   letter-spacing: 0.08rem;
-}
+} */
 
 /* component-grid */
 .grid {
@@ -2396,7 +2396,7 @@ details-disclosure > details {
   overflow: visible !important;
   background-color: rgb(var(--color-background));
 }
-
+/*
 .global-media-settings:after {
   content: '';
   position: absolute;
@@ -2409,7 +2409,7 @@ details-disclosure > details {
     rgba(var(--color-shadow), var(--media-shadow-opacity));
   z-index: -1;
   pointer-events: none;
-}
+} */
 
 .global-media-settings--no-shadow {
   overflow: hidden !important;
