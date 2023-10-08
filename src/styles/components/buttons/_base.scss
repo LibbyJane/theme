@@ -31,15 +31,26 @@ button.shopify-payment-button__button--unbranded,
     border-radius: var(--button-border-radius);
     color: var(--button-foreground-color);
     cursor: pointer;
+    display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space);
     font-family: var(--font-heading-family);
     font-size: calc(var(--font-heading-scale) * 1.2rem);
     font-weight: 600;
-    margin: 0 1rem auto;
-    padding: 1rem 2rem;
+    margin: 0;
+    padding: var(--space) var(--space-lg);
     //opacity: 0.85;
     position: relative;
     text-decoration: none;
-    transition: all var(--duration-long) var(--transition-type);
+    transition: all var(--duration-med) var(--transition-type);
+
+    &:hover, &:focus {
+        &::before {
+            opacity: 1;
+            transform: rotate(-1deg) scaleY(1.1) scaleX(1.05)
+        }
+    }
 
     &::before {
         background-color: transparent;
@@ -52,7 +63,7 @@ button.shopify-payment-button__button--unbranded,
         margin: auto;
         position: absolute;
             inset: 0;
-        transform: rotate(-2deg);
+        transform: rotate(-2deg) scaleX(0.9) scaleY(0.9);
         transition: all var(--duration-long) var(--transition-type);
         z-index: -1;
     }
@@ -72,6 +83,10 @@ button.shopify-payment-button__button--unbranded,
 
 .shopify-payment-button__button.shopify-payment-button__button {
     margin: 0 auto;
+
+    &:hover, &:focus {
+        transform: rotate(0.5deg);
+    }
 }
 
 .button--primary {
@@ -105,6 +120,7 @@ button.shopify-payment-button__button--unbranded,
         inset: 0;
         border-color: var(--button-foreground-color);
         opacity: 1;
+        transform: rotate(-2deg);
     }
 
     &:hover, &:focus {
@@ -115,10 +131,6 @@ button.shopify-payment-button__button--unbranded,
             transform: rotate(1deg) scale(1.02);
         }
     }
-//   @include marching-ants-v2-init(20px, 2px,1s,1);
-
-//   @include marching-ants-v2-color(#fff,#000);
-
 }
 
 .button--tertiary,
@@ -130,99 +142,6 @@ button.shopify-payment-button__button--unbranded,
         background-color:  var(--button-background-color);
     }
 }
-
-
-// @mixin marching-ants-v2-init($ant-size,$ant-width,$speed,$id){
-//     padding: 5px + $ant-width;
-//     margin: 20px;
-//     background-size:
-//       $ant-size $ant-width,
-//       $ant-size $ant-width,
-//       $ant-width $ant-size,
-//       $ant-width $ant-size;
-//     background-position:
-//       0 0,
-//       0 100%,
-//       0 0,
-//       100% 0;
-//     background-repeat:
-//       repeat-x,
-//       repeat-x,
-//       repeat-y,
-//       repeat-y;
-//     animation: marching-ants-#{$id} $speed;
-//     animation-timing-function: linear;
-//     animation-iteration-count: infinite;
-//     animation-play-state: paused;
-//   &:hover, &.marching {
-//     animation-play-state: running;
-//   }
-//   &.reverse {
-//     animation-direction: reverse;
-//   }
-// };
-// @mixin marching-ants-v2-color($a, $b){
-//     background-image:
-//       linear-gradient(to right, $a 50%, $b 50%),
-//       linear-gradient(to right, $a 50%, $b 50%),
-//       linear-gradient(to bottom, $a 50%, $b 50%),
-//       linear-gradient(to bottom, $a 50%, $b 50%);
-// };
-
-// @mixin marching-ants-v2-animation($ant-size, $id){
-//   @keyframes marching-ants-#{$id} {
-//     0% {
-//       background-position:
-//         0 0,
-//         0 100%,
-//         0 0,
-//         100% 0;
-//     }
-//     100% {
-//       background-position:
-//         2*$ant-size 0,
-//         -2*$ant-size 100%,
-//         0 -2*$ant-size,
-//         100% 2*$ant-size;
-//     }
-//   }
-// }
-
-// .marching-ants {
-//   @include marching-ants-v2-init(20px, 2px,1s,1);
-
-//   &.bnw {
-//     @include marching-ants-v2-color(#fff,#000);
-
-//   }
-//   &.headline {
-//     @include marching-ants-v2-color(#fff,#444);
-//     color: #fff;
-//   }
-//   &.info {
-//     @include marching-ants-v2-color(#dd2,transparent);
-//     background-color: #ffa;
-//     color: #dd2;
-//   }
-//   &.warning {
-//     @include marching-ants-v2-init(40px, 4px,2s,2);
-//     @include marching-ants-v2-color(#f00,#fff);
-//     color: #a00;
-//     background-color: #faa;
-//   }
-// }
-
-
-
-
-
-
-
-// @include marching-ants-v2-animation(20px, 1);
-// @include marching-ants-v2-animation(20px, 2);
-// @include marching-ants-v2-animation(20px, 3);
-
-
 
 
 

@@ -3,25 +3,26 @@
         ,"helpers/variables/breakpoints"
         ,"helpers/variables/defaults"
         ,"helpers/variables/typography"
-        ,"helpers/variables/layout"
+        ,"helpers/variables/core"
         ,"helpers/variables/elements"
         ,"helpers/functions"
         ,"helpers/animations"
         ;
 
-@import "layout/reset"
-        ,"layout/typography"
-        ,"layout/site-layout"
-        ,"layout/site-header/base"
-        ,"layout/site-header/brand"
-        ,"layout/site-header/nav"
-        ,"layout/site-header/utility"
+@import "core/reset"
+        ,"core/typography"
+        ,"core/site-layout"
+        ,"core/site-header/base"
+        ,"core/site-header/brand"
+        ,"core/site-header/nav"
+        ,"core/site-header/utility"
         ;
 
 @import "theme/textures";
 
 @import
         "components/buttons/base"
+        ,"components/buttons/cart"
         ,"components/badges/card-badge"
         ,"components/badges/base"
         ,"components/highlight"
@@ -466,7 +467,7 @@
 // }
 
 // table:not([class]) {
-//   table-layout: fixed;
+//   table-core: fixed;
 //   border-collapse: collapse;
 //   font-size: 1.4rem;
 //   border-style: hidden;
@@ -2399,7 +2400,7 @@
 //   z-index: initial;
 // }
 
-// // /* Main Header Layout */
+// // /* Main Header core */
 // // .header-wrapper {
 // //   display: block;
 // //   position: relative;
@@ -3206,7 +3207,7 @@
 // }
 
 // .rte table {
-//   table-layout: fixed;
+//   table-core: fixed;
 // }
 
 // @media screen and (min-width: 750px) {

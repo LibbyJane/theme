@@ -16,11 +16,6 @@
     {%- endif -%}
 
     {%- style -%}
-        .product {
-            --highlight-opacity: {% if section.settings.use_highlight_color  %}0.9{% else %}0{% endif %};
-            --highlight-color: {{ section.settings.highlight_color.red }},{{ section.settings.highlight_color.green }},{{ section.settings.highlight_color.blue }};
-        }
-
         .quantity {
             --highlight-opacity: {% if section.settings.use_highlight_color  %}0.2{% else %}0{% endif %};
         }
@@ -1779,7 +1774,7 @@
                     "label": "lined"
                 }
             ],
-            "default": "",
+            "default": "paper",
             "label": "apply a texture to the content areas",
             "info": "additional info?"
         },
@@ -1788,12 +1783,6 @@
             "id": "use_highlight_color",
             "default": false,
             "label": "t:settings_schema.colors.settings.highlight_color.label"
-        },
-        {
-            "type": "color",
-            "id": "highlight_color",
-            "label": "t:settings_schema.colors.settings.highlight_color.label",
-            "default": "#FEC4BF"
         },
         {
             "type": "header",

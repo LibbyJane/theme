@@ -104,6 +104,25 @@
                     "on_secondary_button": "secondary_button_label",
                     "secondary_button_border": "secondary_button_label"
                 }
+            },
+            {
+                "type": "color",
+                "id": "highlight_color",
+                "label": "t:settings_schema.colors.settings.highlight_color.label",
+                "default": "#FEC4BF"
+            },
+            {
+                "type": "color",
+                "id": "ecommerce_color",
+                "label": "t:settings_schema.colors.settings.ecommerce_color.label",
+                "info": "t:settings_schema.colors.settings.ecommerce_color.info",
+                "default": "#248656"
+            },
+            {
+                "type": "color",
+                "id": "ecommerce_contrast_color",
+                "label": "t:settings_schema.colors.settings.ecommerce_contrast_color.label",
+                "default": "#ffffff"
             }
         ]
     },
@@ -558,12 +577,6 @@
                 "id": "card_highlight_price",
                 "default": false,
                 "label": "t:settings_schema.cards.settings.highlight_price.label"
-            },
-            {
-                "type": "color",
-                "id": "card_price_highlight_color",
-                "label": "t:settings_schema.colors.settings.highlight_color.label",
-                "default": "#FEC4BF"
             },
             {
                 "type": "header",
@@ -1134,7 +1147,7 @@
                 "step": 5,
                 "unit": "%",
                 "label": "t:settings_schema.global.settings.opacity.label",
-                "default": 0
+                "default": 20
             },
             {
                 "type": "range",

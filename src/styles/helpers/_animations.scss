@@ -64,6 +64,27 @@
     }
 }
 
+@keyframes scaleOutX100 {
+    0% {
+        transform: scaleX(100%);
+    }
+
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+
+@keyframes scaleX100Angled {
+    0% {
+        transform: scaleX(0) rotate(0.5deg);
+    }
+
+    100% {
+        transform: scaleX(100%) rotate(0.5deg);
+    }
+}
+
 // @keyframes bounce {
 //     0% {
 //         transform: translateY(-0.125rem);

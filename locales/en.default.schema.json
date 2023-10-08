@@ -156,6 +156,14 @@
                 },
                 "use_highlight_color": {
                     "label": "Highlight"
+                },
+                "ecommerce_color": {
+                    "label": "eCommerce color",
+                    "info": "Used for add to cart buttons and highlighting eCommerce functionality"
+                },
+                "ecommerce_contrast_color": {
+                    "label": "eCommerce contrast color",
+                    "info": "Used button text etc"
                 }
             }
         },

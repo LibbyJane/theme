@@ -123,8 +123,10 @@
             --product-card-shadow-blur-radius: {{ settings.card_shadow_blur | divided_by: 10.0 }}rem;
 
             --card-image-offset: {% if settings.card_image_full_width  %}{{ settings.card_padding | divided_by: -10.0 }}rem;{% else %}0{% endif %};
-            --highlight-color-opacity: {% if settings.card_highlight_price  %}1{% else %}0{% endif %};
-            --highlight-color: {{ settings.card_price_highlight_color.red }},{{ settings.card_price_highlight_color.green }},{{ settings.card_price_highlight_color.blue }};
+            --highlight-color-opacity: {% if settings.card_highlight_price  %}0.9{% else %}0{% endif %};
+            --highlight-color: {{ settings.highlight_color.red }},{{ settings.highlight_color.green }},{{ settings.highlight_color.blue }};
+            --ecommerce-color: {{ settings.ecommerce_color.red }},{{ settings.ecommerce_color.green }},{{ settings.ecommerce_color.blue }};
+            --ecommerce-contrast-color: {{ settings.ecommerce_contrast_color.red }},{{ settings.ecommerce_contrast_color.green }},{{ settings.ecommerce_contrast_color.blue }};
 
             --collection-card-image-padding: {{ settings.collection_card_image_padding | divided_by: 10.0 }}rem;
             --collection-card-corner-radius: {{ settings.collection_card_corner_radius | divided_by: 10.0 }}rem;
@@ -226,6 +228,8 @@
             --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
 
             --header-height: {{ settings.logo_width | divided_by: settings.logo.aspect_ratio }}px;
+
+            --icon-stroke-size: 1px;
         }
 
         *,
@@ -295,6 +299,7 @@
 
     <body class="site-outer {% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
         {% render 'texture-torn' %}
+
         <a class="skip-to-content-link button visually-hidden" href="#MainContent">
             {{ 'accessibility.skip_to_text' | t }}
         </a>

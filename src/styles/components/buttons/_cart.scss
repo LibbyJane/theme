@@ -1,0 +1,29 @@
+.cart__checkout-button {
+    --button-background-color: rgba(var(--ecommerce-color), 1);
+    --button-foreground-color: rgba(var(--ecommerce-contrast-color), 1);
+    outline: 2px dashed transparent;
+
+    transition: all var(--duration-long) var(--transition-type);
+    width: 100%;
+
+    &:hover,
+    &:focus {
+        outline-color: var(--button-background-color);
+        outline-offset: 3px;
+
+        .icon {
+            &:last-child {
+                transform: translateX(var(--space-xs));
+            }
+        }
+    }
+
+    &::before {
+        content: none;
+    }
+
+    .icon {
+        stroke-width: 2px;
+        transition: transform var(--duration-medium) var(--transition-type);
+    }
+}

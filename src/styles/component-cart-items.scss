@@ -5,12 +5,26 @@
 
     @media screen and (min-width: 750px) {
         display: table;
-        margin-right: calc(var(--space) *-1);
-        margin-left: calc(var(--space) *-1);
         width: 100%;
     }
 
+    thead {
+        display: block;
+        width: 100%;
+
+        @media screen and (min-width: 750px) {
+            display: table-header-group;
+        }
+    }
+
     tbody {
+        display: block;
+        width: 100%;
+
+        @media screen and (min-width: 750px) {
+            display: table-row-group;
+        }
+
         tr {
             display: grid;
             grid-template-areas: "cart-item-media cart-item-details cart-item-totals"
@@ -27,6 +41,7 @@
             }
         }
     }
+
     tr {
         border-bottom: var(--inputs-border-width) dashed rgba(var(--color-foreground), 0.25);
         display: flex;
@@ -35,6 +50,13 @@
         @media screen and (min-width: 750px) {
             border: 0;
             display: table-row;
+        }
+
+        &:last-child {
+            td {
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
         }
     }
 
@@ -47,6 +69,14 @@
         @media screen and (min-width: 750px) {
             border-bottom: var(--inputs-border-width) dashed rgba(var(--color-foreground), 0.25);
             padding: var(--space);
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
         }
 
         &.right {
@@ -55,10 +85,14 @@
     }
 
     th {
+        font-size: var(--font-size-small);
         font-weight: normal;
-        padding-top: 0;
         text-align: left;
         text-transform: none;
+
+        @media screen and (min-width: 750px) {
+            padding-top: 0;
+        }
     }
 
     td {
@@ -69,6 +103,7 @@
 // product images
 .cart-item__media {
     grid-area: cart-item-media;
+    max-width: 10rem;
 }
 
 .cart-item__link {
@@ -118,7 +153,7 @@
 .cart-item__image {
     height: auto;
     width: 20vw;
-    max-width: 10rem;
+    max-width: 100%;
 }
 
 .cart-item__details {
@@ -165,7 +200,7 @@
     }
 }
 .cart-item__old-price {
-    opacity: 0.7;
+    opacity: var(--opacity-light);
 }
 .cart-item__final-price {
     font-weight: 400;
