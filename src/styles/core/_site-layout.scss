@@ -6,6 +6,14 @@
     }
 }
 
+.site-outer {
+    @include scrollbars;
+    background: var(--background-image);
+    background-size:  var(--background-size);
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .page-width {
     max-width: var(--page-width);
     margin: 0 auto;
@@ -21,8 +29,6 @@
         }
     }
 }
-
-
 
 .page-width--narrow {
     @media screen and (min-width: 750px) {

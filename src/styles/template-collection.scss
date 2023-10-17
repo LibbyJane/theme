@@ -49,32 +49,32 @@
   }
 
 
-  .collection__title.title-wrapper {
-    margin-bottom: 2.5rem;
-  }
+//   .collection__title.title-wrapper {
+//     margin-bottom: 2.5rem;
+//   }
 
-  .collection__title .title:not(:only-child) {
-    margin-bottom: 1rem;
-  }
+//   .collection__title .title:not(:only-child) {
+//     margin-bottom: 1rem;
+//   }
 
-  @media screen and (min-width: 990px) {
-    .collection__title--desktop-slider .title {
-      margin-bottom: 2.5rem;
-    }
+//   @media screen and (min-width: 990px) {
+//     .collection__title--desktop-slider .title {
+//       margin-bottom: 2.5rem;
+//     }
 
-    .collection__title.title-wrapper--self-padded-tablet-down {
-      padding: 0 5rem;
-    }
+//     .collection__title.title-wrapper--self-padded-tablet-down {
+//       padding: 0 5rem;
+//     }
 
-    .collection slider-component:not(.page-width-desktop) {
-      padding: 0;
-    }
+//     .collection slider-component:not(.page-width-desktop) {
+//       padding: 0;
+//     }
 
-    .collection--full-width slider-component:not(.slider-component-desktop) {
-      padding: 0 1.5rem;
-      max-width: none;
-    }
-  }
+//     .collection--full-width slider-component:not(.slider-component-desktop) {
+//       padding: 0 1.5rem;
+//       max-width: none;
+//     }
+//   }
 
   .collection__view-all a:not(.link) {
     margin-top: 1rem;

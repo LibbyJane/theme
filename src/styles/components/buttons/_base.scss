@@ -81,6 +81,53 @@ button.shopify-payment-button__button--unbranded,
     }
 }
 
+button {
+    &:hover,
+    &:focus {
+        .icon {
+            path {
+                stroke-dasharray: var(--path-length);
+                animation: draw var(--duration-medium) backwards;
+
+                &:nth-child(2) {
+                    animation-delay: var(--duration-short);
+                }
+            }
+
+        }
+    }
+
+    .icon {
+        --path-length: 30;
+        stroke-width: 1.5px;
+    }
+
+
+    .icon-arrow {
+        --path-length: 24;
+    }
+
+    .icon-checkmark {
+        --path-length: 32;
+    }
+
+    .icon-reset {
+        --path-length: 46.1;
+    }
+
+    .icon-share {
+        --path-length: 59;
+    }
+
+    .icon-search {
+        --path-length: 40.3;
+    }
+
+    .icon-loading {
+        --path-length: 215;
+    }
+}
+
 .shopify-payment-button__button.shopify-payment-button__button {
     margin: 0 auto;
 
@@ -107,18 +154,16 @@ button.shopify-payment-button__button--unbranded,
 }
 
 .button--secondary {
-    --color-button: var(--color-secondary-button);
-    --color-button-text: var(--color-secondary-button-text);
     background-color: transparent;
-    border-color:  var(--button-foreground-color);
-    color: var(--button-foreground-color);
+    border-color:  var(--foreground-color);
+    color: var(--foreground-color);
     opacity: 1;
 
     &::before {
         content: '';
         position: absolute;
         inset: 0;
-        border-color: var(--button-foreground-color);
+        border-color: var(--foreground-color);
         opacity: 1;
         transform: rotate(-2deg);
     }
@@ -144,7 +189,15 @@ button.shopify-payment-button__button--unbranded,
 }
 
 
-
+.button--link {
+    background-color: transparent;
+    border-color:  var(--button-background-color);
+    border-width: 0 0 var(--button-border-width);
+    color: var(--button-background-color);
+    opacity: 1;
+    padding-left: 0;
+    padding-right: 0;
+}
 
 
 

@@ -16,6 +16,7 @@
         ,"core/site-header/brand"
         ,"core/site-header/nav"
         ,"core/site-header/utility"
+        ,"core/utility-bar/announcement-bar"
         ;
 
 @import "theme/textures";
@@ -32,6 +33,9 @@
         ,"components/forms/fieldsets"
         ,"components/forms/checkable"
         ,"components/forms/fields"
+        ,"components/modals/base"
+        ,"components/modals/search"
+        ,"components/titles/base"
         ;
 
 //         :root {

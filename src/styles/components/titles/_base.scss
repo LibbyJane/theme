@@ -1,0 +1,33 @@
+.title-wrapper {
+    margin-bottom: calc(var(--space-lg) * -1);
+}
+
+.title {
+    --corner-size: 20px;
+    --shadow-size: calc(var(--corner-size)/4);
+
+    background-blend-mode: multiply;
+    background-image:
+        url('texture-paper-white.jpg'),
+        linear-gradient(to bottom, rgba(var(--color-shadow), 0) 70%, rgba(var(--color-shadow), 0.2) 100%);
+    background-position: top center, bottom center;
+    background-repeat: repeat;
+    background-size: 100px auto, cover;
+    clip-path: polygon(95% 0, 100% var(--corner-size), 100% 100%, 0 100%, 0 0);
+    display: inline-flex;
+    margin: 0 auto 0 var(--space-sm);
+    padding: var(--space-med) var(--space-lg) var(--space);
+    transform: rotate(-1deg);
+
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: var(--corner-size);
+        width: var(--corner-size);
+        box-shadow: var(--shadow-size) 0 var(--shadow-size) rgba(var(--color-shadow, 0.1));
+    }
+}

@@ -22,7 +22,8 @@
         background-blend-mode: multiply;
         content: '';
         display: inline-block;
-        opacity: 1;
+        opacity: 0.1;
+        mix-blend-mode: multiply;
         width: calc(var(--card-badge-padding)*2);
     }
 

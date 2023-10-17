@@ -8,7 +8,7 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Questrial&display=swap" rel="stylesheet">
 
     {%- if settings.favicon != blank -%}
     <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -82,6 +82,7 @@
             background-color: rgba(var(--color-background),var(--background-opacity));
         }
 
+
         :root {
             --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
             --font-body-style: {{ settings.type_body_font.style }};
@@ -123,8 +124,9 @@
             --product-card-shadow-blur-radius: {{ settings.card_shadow_blur | divided_by: 10.0 }}rem;
 
             --card-image-offset: {% if settings.card_image_full_width  %}{{ settings.card_padding | divided_by: -10.0 }}rem;{% else %}0{% endif %};
-            --highlight-color-opacity: {% if settings.card_highlight_price  %}0.9{% else %}0{% endif %};
+            --highlight-opacity: 0.9;
             --highlight-color: {{ settings.highlight_color.red }},{{ settings.highlight_color.green }},{{ settings.highlight_color.blue }};
+
             --ecommerce-color: {{ settings.ecommerce_color.red }},{{ settings.ecommerce_color.green }},{{ settings.ecommerce_color.blue }};
             --ecommerce-contrast-color: {{ settings.ecommerce_contrast_color.red }},{{ settings.ecommerce_contrast_color.green }},{{ settings.ecommerce_contrast_color.blue }};
 
@@ -232,6 +234,11 @@
             --icon-stroke-size: 1px;
         }
 
+
+        .card {
+            --highlight-color: {% if settings.card_highlight_price  %}0.9{% else %}0{% endif %};
+        }
+
         *,
         *::before,
         *::after {
@@ -298,7 +305,7 @@
     </head>
 
     <body class="site-outer {% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-        {% render 'texture-torn' %}
+        {% render 'svg-defs' %}
 
         <a class="skip-to-content-link button visually-hidden" href="#MainContent">
             {{ 'accessibility.skip_to_text' | t }}

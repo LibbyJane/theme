@@ -42,7 +42,7 @@
 
 {%- style -%}
     .product {
-       --price-font-scale: {{ price_font_scale | divided_by: 100.0 }};
+       --price-font-scale: {%- if price_font_scale > 0 %} {{ price_font_scale | divided_by: 100.0 }} {% else %} 1.6{% endif -%};
     }
 {%- endstyle -%}
 

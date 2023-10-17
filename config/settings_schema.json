@@ -7,7 +7,7 @@
         "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
         "theme_support_url": "https://support.shopify.com/"
     },
-    
+
     {
         "name": "t:settings_schema.logo.name",
         "settings": [
@@ -62,7 +62,7 @@
                         "type": "color",
                         "id": "text",
                         "label": "t:settings_schema.colors.settings.text.label",
-                        "default": "#122212"
+                        "default": "#121212"
                     },
                     {
                         "type": "color",

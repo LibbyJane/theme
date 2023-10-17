@@ -523,24 +523,163 @@
     }
 }
 
-@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
-    // For Google Chrome
-    ::-webkit-scrollbar {
-        width:  $size;
-        height: $size;
+@mixin folded-corner() {
+    position: relative;
+
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: -2em;
+    //     left: 0;
+    //     right: 2em;
+    //     border-width: 1em;
+    //     border-style: solid;
+    //     border-color: red;
+    //  }
+    //  &::before {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: -2em;
+    //     right: 0;
+    //     border-width: 2em 2em 0 0;
+    //     border-style: solid;
+    //     border-color: orangered;
+    //  }
+}
+
+@mixin hover-highlight($z-index: 1) {
+    --rotation: -1deg;
+
+    &:nth-child(2n) {
+        --rotation: -2deg;
     }
 
-    ::-webkit-scrollbar-thumb {
-        background: $foreground-color;
+    &:nth-child(3n) {
+        --rotation: 1deg;
     }
 
-    ::-webkit-scrollbar-track {
-        background: $background-color;
+    position: relative;
+    z-index: $z-index;
+
+    &:hover,
+    &:focus {
+        &::before {
+            transition: transform var(--duration-long) var(--transition-type);
+            transform: rotate(var( --rotation)) scaleX(1);
+        }
     }
 
-    // For Internet Explorer
-    body {
-        scrollbar-face-color: $foreground-color;
-        scrollbar-track-color: $background-color;
+    &::before {
+        background: rgba(var(--highlight-color), var(--highlight-opacity));
+        border-radius: var(--button-border-radius);
+        content: '';
+        margin: -2px;
+        position: absolute;
+            inset: 0;
+        transform: rotate(-1deg) scaleX(0);
+        transform-origin: center left;
+        transition-delay: 100ms;
+        z-index: -1;
+    }
+}
+
+@mixin hover-underline() {
+    position: relative;
+
+    &:hover,
+    &:focus {
+        &::after {
+            animation: scaleX100 var(--duration-medium) var(--transition-type) forwards;
+            transform-origin: bottom left;
+        }
+    }
+
+    &::after {
+        animation: scaleOutX100 var(--duration-medium) var(--transition-type) reverse;
+        mask-image: url(mask-underline.svg);
+        mask-size: cover;
+        mask-repeat: no-repeat;
+        mask-position: bottom left;
+        background-color: rgba(var(--color-link), var(--alpha-link));
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        z-index: -1;
+        transform-origin: bottom right;
+      }
+}
+
+@mixin underline-on-hover() {
+    position: relative;
+    z-index: 1;
+
+    &:hover,
+    &:focus {
+        &::after {
+            animation: scaleX100 var(--duration-medium) var(--transition-type) forwards;
+            transform-origin: bottom left;
+        }
+    }
+
+    &::after {
+        animation: scaleOutX100 var(--duration-medium) var(--transition-type) reverse;
+        mask-image: url(mask-underline.svg);
+        mask-size: cover;
+        mask-repeat: no-repeat;
+        mask-position: bottom left;
+        background-color: rgba(var(--color-link), var(--alpha-link));
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+    }
+}
+
+// @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+//     // For Google Chrome
+//     ::-webkit-scrollbar {
+//         width:  $size;
+//         height: $size;
+//     }
+
+//     ::-webkit-scrollbar-thumb {
+//         background: $foreground-color;
+//     }
+
+//     ::-webkit-scrollbar-track {
+//         background: $background-color;
+//     }
+// }
+
+
+@mixin scrollbars() {
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: auto;
+    scrollbar-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
+
+    /* Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+        width: 12px;
+        scrollbar-width: thin;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent url('bg-scrollbar.png?v=2') repeat-y !important;
+        background-size: contain;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(var(--color-foreground), 0.2);
+        border-radius: 8px;
+        border: 2px solid rgba(var(--color-background), 1);
     }
 }

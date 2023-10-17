@@ -1,9 +1,30 @@
 .texture-paper,
 .default-content-style {
     background-blend-mode: multiply;
-    background-image: url('texture-paper.jpg?v=2');
+    background-image: url('texture-paper-light.jpg');
     background-position: top center;
     background-repeat: repeat;
+    background-size: 100px auto;
+}
+
+.texture-paper-craft {
+    background-blend-mode: multiply;
+    background-image: url('texture-paper-white.jpg');
+    background-position: top center;
+    background-repeat: repeat;
+    background-size: 100px auto;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            filter: url(#tornPaper);
+            height: 4rem;
+    }
+
 }
 
 .texture-lined {
