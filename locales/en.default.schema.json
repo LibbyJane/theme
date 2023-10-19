@@ -43,6 +43,38 @@
                         "label": "Right"
                     },
                     "label": "Text alignment"
+                },
+                "alignment": {
+                    "options__1": {
+                        "label": "Left"
+                    },
+                    "options__2": {
+                        "label": "Center"
+                    },
+                    "options__3": {
+                        "label": "Right"
+                    },
+                    "label": "Alignment"
+                }
+            }
+        },
+        "titles": {
+            "name": "Titles",
+            "settings": {
+                "style": {
+                    "options__1": {
+                        "label": "Folded"
+                    },
+                    "options__2": {
+                        "label": "Torn"
+                    },
+                    "options__3": {
+                        "label": "Transparent"
+                    },
+                    "label": "Style"
+                },
+                "space_bottom": {
+                    "label": "Space between title and content"
                 }
             }
         },
@@ -431,8 +463,12 @@
             "spacing": "Spacing",
             "colors": {
                 "label": "Color scheme",
-                "has_cards_info": "To change the card color scheme, update your theme settings.",
-                "container_background_transparent": "Make the background transparent."
+                "has_cards_info": "To change the card color scheme, update your theme settings."
+            },
+            "color_boundary": {
+                "label": "Color scheme target",
+                "container": "Apply to container",
+                "contents": "Apply to contents"
             },
             "heading_size": {
                 "label": "Heading size",

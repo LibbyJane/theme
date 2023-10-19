@@ -1,5 +1,5 @@
 .rich-text {
-  z-index: 1;
+    z-index: 1;
 }
 
 .rich-text__wrapper {
@@ -21,21 +21,26 @@
   .rich-text__wrapper {
     width: 100%;
   }
+
   .rich-text__wrapper--left {
     justify-content: flex-start;
   }
+
   .rich-text__wrapper--right {
     justify-content: flex-end;
   }
+
   .rich-text__blocks {
     max-width: 50rem;
   }
 }
+
 @media screen and (min-width: 990px) {
   .rich-text__blocks {
     max-width: 78rem;
   }
 }
+
 .rich-text__blocks * {
   overflow-wrap: break-word;
 }
@@ -79,4 +84,3 @@
 .rich-text__blocks.right .rich-text__buttons {
   justify-content: flex-end;
 }
-/*# sourceMappingURL=section-rich-text.css.map */

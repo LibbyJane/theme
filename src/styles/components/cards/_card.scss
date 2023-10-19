@@ -1,0 +1,70 @@
+// --border-radius: var(--collection-card-corner-radius);
+// --border-width: var(--collection-card-border-width);
+// --border-opacity: var(--collection-card-border-opacity);
+// --shadow-horizontal-offset: var(--collection-card-shadow-horizontal-offset);
+// --shadow-vertical-offset: var(--collection-card-shadow-vertical-offset);
+// --shadow-blur-radius: var(--collection-card-shadow-blur-radius);
+// --shadow-opacity: var(--collection-card-shadow-opacity);
+// --shadow-visible: var(--collection-card-shadow-visible);
+// --image-padding: var(--collection-card-image-padding);
+// --text-alignment: var(--collection-card-text-alignment);
+
+.card {
+    border-radius: var(--card-corner-radius);
+    box-shadow: var(--card-shadow-horizontal-offset) var(--card-shadow-vertical-offset) var(--card-shadow-blur-radius) rgba(var(--color-shadow), var(--card-shadow-opacity));
+    background-color: rgba(var(--color-background),1);
+    border: var(--card-border-width) solid rgba(var(--color-foreground),var(--card-border-opacity));
+    color: rgb(var(--color-foreground));
+    display: flex;
+        flex-direction: column;
+        height: 100%;
+    margin-bottom: var(--space-lg);
+    padding: var(--card-padding);
+    position: relative;
+    text-decoration: none;
+    text-align: var(--card-text-alignment);
+    transition: all var(--duration-medium) var(--transition-type);
+    transform: rotate(-0.5deg);
+    will-change: transform;
+    transform-style: preserve-3d;
+    z-index: 1;
+
+    &.card {
+        .grid__item & {
+            &:hover,
+            &:focus {
+                transform: rotate(0) translateY(-3px) translateX(0);
+
+                .card__media-hover-image {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+
+    &.ratio {
+        flex-direction: row;
+        height: auto;
+    }
+
+    &--badge-bottom-left {
+        padding-bottom: calc(var(--card-padding) + var(--space-xl));
+    }
+
+    .grid__item:nth-child(2) & {
+        transform: rotate(-1deg) translateX(-2px);
+    }
+
+    .grid__item:nth-child(3) & {
+        transform: rotate(1deg) translateY(-2px);
+    }
+
+    .grid__item:nth-child(6) & {
+        transform: rotate(0.25deg) translateY(2px);
+    }
+
+    .price-item--actual {
+        position: relative;
+    }
+}

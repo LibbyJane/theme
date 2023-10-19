@@ -5,55 +5,48 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 
 {% if section.settings.image_shape == 'blob' %}
-  {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
+    {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
 
 
 {%- style -%}
-{%- if section.settings.container_background_transparent -%}
-    .section-{{ section.id }} {
-        --background-opacity: 0;
-    }
-{%- endif -%}
-
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
-  }
+
+    @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
 {%- endstyle -%}
 
 {%- liquid
-  assign products_to_display = section.settings.collection.all_products_count
+    assign products_to_display = section.settings.collection.all_products_count
 
-  if section.settings.collection.all_products_count > section.settings.products_to_show
-    assign products_to_display = section.settings.products_to_show
-    assign more_in_collection = true
-  endif
+    if section.settings.collection.all_products_count > section.settings.products_to_show
+        assign products_to_display = section.settings.products_to_show
+        assign more_in_collection = true
+    endif
 
-  assign columns_mobile_int = section.settings.columns_mobile | plus: 0
-  assign show_mobile_slider = false
-  if section.settings.swipe_on_mobile and products_to_display > columns_mobile_int
-    assign show_mobile_slider = true
-  endif
+    assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+    assign show_mobile_slider = false
+    if section.settings.swipe_on_mobile and products_to_display > columns_mobile_int
+        assign show_mobile_slider = true
+    endif
 
-  assign show_desktop_slider = false
-  if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop
-    assign show_desktop_slider = true
-  endif
+    assign show_desktop_slider = false
+    if section.settings.enable_desktop_slider and products_to_display > section.settings.columns_desktop
+        assign show_desktop_slider = true
+    endif
 -%}
-{% comment %} <div class="color-{{ section.settings.color_scheme }} isolate "> {% endcomment %}
 
-<div class="color-{{ section.settings.color_scheme }} isolate collection section-{{ section.id }} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
-    <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
+<div class="{% if section.settings.color_boundary == 'container' %} color-{{ section.settings.color_scheme }}{% endif %} isolate collection section-{{ section.id }} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
+    <div class="collection__title title-wrapper align-{{settings.title_alignment}} title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
         {%- if section.settings.title != blank -%}
-            <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            <h2 class="title inline-richtext texture-{{ settings.title_style }} {% if section.settings.color_boundary != 'container' %} color-{{ section.settings.color_scheme }}{% endif %} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 {{ section.settings.title }}
             </h2>
         {%- endif -%}
@@ -180,18 +173,18 @@
         "type": "select",
         "id": "heading_size",
         "options": [
-        {
-            "value": "h2",
-            "label": "t:sections.all.heading_size.options__1.label"
-        },
-        {
-            "value": "h1",
-            "label": "t:sections.all.heading_size.options__2.label"
-        },
-        {
-            "value": "h0",
-            "label": "t:sections.all.heading_size.options__3.label"
-        }
+            {
+                "value": "h2",
+                "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+                "value": "h1",
+                "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+                "value": "h0",
+                "label": "t:sections.all.heading_size.options__3.label"
+            }
         ],
         "default": "h1",
         "label": "t:sections.all.heading_size.label"
@@ -296,10 +289,20 @@
         "default": "inverse"
     },
     {
-        "type": "checkbox",
-        "id": "container_background_transparent",
-        "label": "t:sections.all.colors.container_background_transparent",
-        "default": true
+        "type": "select",
+        "id": "color_boundary",
+        "options": [
+            {
+                "value": "container",
+                "label": "t:sections.all.color_boundary.container"
+            },
+            {
+                "value": "content",
+                "label": "t:sections.all.color_boundary.contents"
+            }
+        ],
+        "default": "content",
+        "label": "t:sections.all.color_boundary.label"
     },
     {
         "type": "header",

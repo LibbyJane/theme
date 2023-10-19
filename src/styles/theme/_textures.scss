@@ -1,18 +1,20 @@
 .texture-paper,
 .default-content-style {
+    background-color: rgb(var(--color-background));
     background-blend-mode: multiply;
-    background-image: url('texture-paper-light.jpg');
-    background-position: top center;
+    background-image: url('texture-paper-light.jpg'), var(--background-image);
+    background-position: top center, center;
     background-repeat: repeat;
-    background-size: 100px auto;
+    background-size: 100px auto, cover;
 }
 
 .texture-paper-craft {
+    background-color: rgb(var(--color-background));
     background-blend-mode: multiply;
-    background-image: url('texture-paper-white.jpg');
-    background-position: top center;
+    background-image: url('texture-paper-white.jpg'), var(--background-image);
+    background-position: top center, center;
     background-repeat: repeat;
-    background-size: 100px auto;
+    background-size: 100px auto, cover;
     position: relative;
 
     &::after {
@@ -24,7 +26,6 @@
             filter: url(#tornPaper);
             height: 4rem;
     }
-
 }
 
 .texture-lined {
@@ -32,13 +33,13 @@
 
     $vertical-line-offset: 10px;
     $vertical-line-offset2: $vertical-line-offset + 3px;
-    background-size: 100% 2.4rem;
+    background-color: rgb(var(--color-background));
+    background-size: 100% 2.4rem, 100% 2.4rem, cover;
     background-blend-mode: multiply;
-    background-image: linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2)
-    $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
-    linear-gradient(#eee .1rem, transparent .1rem);
-
-
+    background-image:
+    linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
+    linear-gradient(#eee .1rem, transparent .1rem),
+    var(--background-image);
     position: relative;
     padding-left: $border-size;
 
@@ -75,12 +76,43 @@
 // }
 
 .texture-torn {
+    background-color: rgb(var(--color-background));
     background-blend-mode: multiply;
-    background-image: url('texture-paper.jpg?v=2');
-    background-position: top center;
-    background-repeat: repeat;
-    // clip-path: polygon(3% 0, 7% 1%, 11% 0%, 16% 2%, 20% 0, 23% 2%, 28% 2%, 32% 1%, 35% 1%, 39% 3%, 41% 1%, 45% 0%, 47% 2%, 50% 2%, 53% 0, 58% 2%, 60% 2%, 63% 1%, 65% 0%, 67% 2%, 69% 2%, 73% 1%, 76% 1%, 79% 0, 82% 1%, 85% 0, 87% 1%, 89% 0, 92% 1%, 96% 0, 98% 3%, 99% 3%, 99% 6%, 100% 11%, 98% 15%, 100% 21%, 99% 28%, 100% 32%, 99% 35%, 99% 40%, 100% 43%, 99% 48%, 100% 53%, 100% 57%, 99% 60%, 100% 64%, 100% 68%, 99% 72%, 100% 75%, 100% 79%, 99% 83%, 100% 86%, 100% 90%, 99% 94%, 99% 98%, 95% 99%, 92% 99%, 89% 100%, 86% 99%, 83% 100%, 77% 99%, 72% 100%, 66% 98%, 62% 100%, 59% 99%, 54% 99%, 49% 100%, 46% 98%, 43% 100%, 40% 98%, 38% 100%, 35% 99%, 31% 100%, 28% 99%, 25% 99%, 22% 100%, 19% 99%, 16% 100%, 13% 99%, 10% 99%, 7% 100%, 4% 99%, 2% 97%, 1% 97%, 0% 94%, 1% 89%, 0% 84%, 1% 81%, 0 76%, 0 71%, 1% 66%, 0% 64%, 0% 61%, 0% 59%, 1% 54%, 0% 49%, 1% 45%, 0% 40%, 1% 37%, 0% 34%, 1% 29%, 0% 23%, 2% 20%, 1% 17%, 1% 13%, 0 10%, 1% 6%, 1% 3%);
-      box-shadow: 0 0 130px #331f0b inset;
+    background-image: url('texture-paper.jpg?v=2'), var(--background-image);
+    background-position: top center, center;
+    background-repeat: repeat, cover;
+    box-shadow: 0 0 9rem rgba(var(--color-shadow), 0.05) inset;
 
     filter: url(#tornPaper);
+}
+
+.texture-folded {
+    --corner-size: 20px;
+    --shadow-size: calc(var(--corner-size)/4);
+
+    background-blend-mode: multiply;
+    background-color: rgb(var(--color-background));
+    background-image:
+        url('texture-paper-white.jpg'),
+        linear-gradient(to bottom, rgba(var(--color-shadow), 0) 70%, rgba(var(--color-shadow), 0.15) 100%),
+        var(--background-image);
+    background-position: top center, bottom center, center;
+    background-repeat: repeat;
+    background-size: 100px auto, cover, cover;
+    clip-path: polygon(95% 0, 100% var(--corner-size), 100% 100%, 0 100%, 0 0);
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: var(--corner-size);
+        width: var(--corner-size);
+        box-shadow: var(--shadow-size) 0 var(--shadow-size) rgba(var(--color-shadow, 0.1));
+    }
+}
+
+.texture-transparent.texture-transparent {
+    background-color: transparent;
+    background-image: none;
 }

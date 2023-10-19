@@ -1,0 +1,34 @@
+.card-wrapper {
+    color: inherit;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+
+    .media.media--hover-effect {
+        >img {
+            &:only-child {
+                transition: transform var(--duration-long) ease;
+            }
+        }
+    }
+    &:hover,
+    &:focus {
+        .media.media--hover-effect {
+            >img {
+                &:first-child {
+                    &:only-child {
+                        transform: scale(1.03);
+                    }
+                    &:not(:only-child) {
+                        opacity: 0;
+                    }
+                }
+            }
+            >img+img {
+                opacity: 1;
+                transition: transform var(--duration-long) ease;
+                transform: scale(1.03);
+            }
+        }
+    }
+}

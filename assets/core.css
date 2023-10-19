@@ -23,6 +23,56 @@
   --zi-blocker: 100;
 }
 
+:root {
+  --alpha-button-background: 1;
+  --alpha-button-border: 1;
+  --alpha-link: 0.85;
+  --alpha-badge-border: 0.1;
+  --card-padding: var(--product-card-padding);
+  --card-corner-radius: var(--product-card-corner-radius);
+  --card-text-alignment: var(--product-card-text-alignment);
+  --card-border-width: var(--product-card-border-width);
+  --card-border-opacity: var(--product-card-border-opacity);
+  --card-shadow-opacity:var(--product-card-shadow-opacity);
+  --card-shadow-visible: var(--product-card-shadow-visible);
+  --card-shadow-horizontal-offset: var(--product-card-shadow-horizontal-offset);
+  --card-shadow-vertical-offset: var(--product-card-shadow-vertical-offset);
+  --card-shadow-blur-radius: var(--product-card-shadow-blur-radius);
+  --card-media-box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
+  rgba(var(--color-shadow), var(--media-shadow-opacity));
+  --card-image-padding: var(--product-card-padding);
+}
+
+.collection-card-wrapper .card,
+.contains-card--collection {
+  --card-padding: var(--collection-card-image-padding);
+  --card-corner-radius: var(--collection-card-corner-radius);
+  --card-text-alignment: var(--collection-card-text-alignment);
+  --card-border-width: var(--collection-card-border-width);
+  --card-border-opacity: var(--collection-card-border-opacity);
+  --card-shadow-opacity:var(--collection-card-shadow-opacity);
+  --card-shadow-visible: var(--collection-card-shadow-visible);
+  --card-shadow-horizontal-offset: var(--collection-card-shadow-horizontal-offset);
+  --card-shadow-vertical-offset: var(--collection-card-shadow-vertical-offset);
+  --card-shadow-blur-radius: var(--collection-card-shadow-blur-radius);
+  --card-image-padding: var(--collection-card-image-padding);
+}
+
+.article-card-wrapper .card,
+.contains-card--article {
+  --card-padding: var(--blog-card-image-padding);
+  --card-corner-radius: var(--blog-card-corner-radius);
+  --card-text-alignment: var(--blog-card-text-alignment);
+  --card-border-width: var(--blog-card-border-width);
+  --card-border-opacity: var(--blog-card-border-opacity);
+  --card-shadow-opacity:var(--blog-card-shadow-opacity);
+  --card-shadow-visible: var(--blog-card-shadow-visible);
+  --card-shadow-horizontal-offset: var(--blog-card-shadow-horizontal-offset);
+  --card-shadow-vertical-offset: var(--blog-card-shadow-vertical-offset);
+  --card-shadow-blur-radius: var(--blog-card-shadow-blur-radius);
+  --card-image-padding: var(--blog-card-image-padding);
+}
+
 @keyframes draw {
   from {
     stroke-dashoffset: var(--path-length);
@@ -682,7 +732,7 @@ drawer-menu {
   --header-icon-alpha: 0.025;
   display: flex;
   justify-self: end;
-  padding: 0 var(--space-med);
+  padding: 0;
   position: relative;
   z-index: 1;
 }
@@ -733,16 +783,8 @@ drawer-menu {
   width: 4.6rem;
   mix-blend-mode: multiply;
   padding: var(--space-lg) var(--space);
-  transition: all var(--duration-short) var(--transition-type);
-}
-
-.header__icon--cart {
   position: relative;
-  margin-right: calc(-1 * var(--space));
-}
-.header__icon--cart svg {
-  width: 100%;
-  height: auto;
+  transition: all var(--duration-short) var(--transition-type);
 }
 
 .cart-count-bubble {
@@ -764,6 +806,10 @@ drawer-menu {
 }
 .cart-count-bubble:empty {
   display: none;
+}
+
+.localisation-form {
+  margin: 0 var(--space);
 }
 
 .announcement-bar,
@@ -919,19 +965,21 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 
 .texture-paper,
 .default-content-style {
+  background-color: rgb(var(--color-background));
   background-blend-mode: multiply;
-  background-image: url("texture-paper-light.jpg");
-  background-position: top center;
+  background-image: url("texture-paper-light.jpg"), var(--background-image);
+  background-position: top center, center;
   background-repeat: repeat;
-  background-size: 100px auto;
+  background-size: 100px auto, cover;
 }
 
 .texture-paper-craft {
+  background-color: rgb(var(--color-background));
   background-blend-mode: multiply;
-  background-image: url("texture-paper-white.jpg");
-  background-position: top center;
+  background-image: url("texture-paper-white.jpg"), var(--background-image);
+  background-position: top center, center;
   background-repeat: repeat;
-  background-size: 100px auto;
+  background-size: 100px auto, cover;
   position: relative;
 }
 .texture-paper-craft::after {
@@ -945,9 +993,10 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 .texture-lined {
-  background-size: 100% 2.4rem;
+  background-color: rgb(var(--color-background));
+  background-size: 100% 2.4rem, 100% 2.4rem, cover;
   background-blend-mode: multiply;
-  background-image: linear-gradient(90deg, transparent 10px, rgba(171, 206, 212, 0.2) 10px, rgba(171, 206, 212, 0.2) 13px, transparent 13px), linear-gradient(#eee 0.1rem, transparent 0.1rem);
+  background-image: linear-gradient(90deg, transparent 10px, rgba(171, 206, 212, 0.2) 10px, rgba(171, 206, 212, 0.2) 13px, transparent 13px), linear-gradient(#eee 0.1rem, transparent 0.1rem), var(--background-image);
   position: relative;
   padding-left: 30px;
 }
@@ -964,12 +1013,40 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 .texture-torn {
+  background-color: rgb(var(--color-background));
   background-blend-mode: multiply;
-  background-image: url("texture-paper.jpg?v=2");
-  background-position: top center;
-  background-repeat: repeat;
-  box-shadow: 0 0 130px #331f0b inset;
+  background-image: url("texture-paper.jpg?v=2"), var(--background-image);
+  background-position: top center, center;
+  background-repeat: repeat, cover;
+  box-shadow: 0 0 9rem rgba(var(--color-shadow), 0.05) inset;
   filter: url(#tornPaper);
+}
+
+.texture-folded {
+  --corner-size: 20px;
+  --shadow-size: calc(var(--corner-size)/4);
+  background-blend-mode: multiply;
+  background-color: rgb(var(--color-background));
+  background-image: url("texture-paper-white.jpg"), linear-gradient(to bottom, rgba(var(--color-shadow), 0) 70%, rgba(var(--color-shadow), 0.15) 100%), var(--background-image);
+  background-position: top center, bottom center, center;
+  background-repeat: repeat;
+  background-size: 100px auto, cover, cover;
+  -webkit-clip-path: polygon(95% 0, 100% var(--corner-size), 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(95% 0, 100% var(--corner-size), 100% 100%, 0 100%, 0 0);
+}
+.texture-folded::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: var(--corner-size);
+  width: var(--corner-size);
+  box-shadow: var(--shadow-size) 0 var(--shadow-size) rgba(var(--color-shadow, 0.1));
+}
+
+.texture-transparent.texture-transparent {
+  background-color: transparent;
+  background-image: none;
 }
 
 :root {
@@ -1816,32 +1893,32 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 }
 
 .title-wrapper {
-  margin-bottom: calc(var(--space-lg) * -1);
+  display: flex;
+  margin-bottom: var(--title-margin-bottom);
+}
+.title-wrapper.align-center {
+  justify-content: center;
+}
+.title-wrapper.align-right {
+  justify-content: flex-end;
 }
 
 .title {
-  --corner-size: 20px;
-  --shadow-size: calc(var(--corner-size)/4);
-  background-blend-mode: multiply;
-  background-image: url("texture-paper-white.jpg"), linear-gradient(to bottom, rgba(var(--color-shadow), 0) 70%, rgba(var(--color-shadow), 0.2) 100%);
-  background-position: top center, bottom center;
-  background-repeat: repeat;
-  background-size: 100px auto, cover;
-  -webkit-clip-path: polygon(95% 0, 100% var(--corner-size), 100% 100%, 0 100%, 0 0);
-          clip-path: polygon(95% 0, 100% var(--corner-size), 100% 100%, 0 100%, 0 0);
   display: inline-flex;
-  margin: 0 auto 0 var(--space-sm);
+  margin: 0 auto;
   padding: var(--space-med) var(--space-lg) var(--space);
   transform: rotate(-1deg);
 }
-.title::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: var(--corner-size);
-  width: var(--corner-size);
-  box-shadow: var(--shadow-size) 0 var(--shadow-size) rgba(var(--color-shadow, 0.1));
+.align-left .title {
+  margin-left: var(--space-sm);
+}
+.align-right .title {
+  margin-right: var(--space-sm);
+}
+.title.texture-transparent {
+  --title-shadow-opacity: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .visually-hidden {

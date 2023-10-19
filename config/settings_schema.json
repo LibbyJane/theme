@@ -512,6 +512,67 @@
         ]
     },
     {
+        "name": "t:settings_schema.titles.name",
+        "settings": [
+            {
+                "type": "select",
+                "id": "title_style",
+                "options": [
+                    {
+                        "value": "folded",
+                        "label": "t:settings_schema.titles.settings.style.options__1.label"
+                    },
+                    {
+                        "value": "torn",
+                        "label": "t:settings_schema.titles.settings.style.options__2.label"
+                    },
+                    {
+                        "value": "transparent",
+                        "label": "t:settings_schema.titles.settings.style.options__3.label"
+                    }
+                ],
+                "default": "folded",
+                "label": "t:settings_schema.titles.settings.style.label"
+            },
+            {
+                "type": "range",
+                "id": "title_bottom_margin",
+                "min": -40,
+                "max": 40,
+                "step": 2,
+                "unit": "px",
+                "label": "t:settings_schema.titles.settings.space_bottom.label",
+                "default": -20
+            },
+            {
+                "type": "select",
+                "id": "title_alignment",
+                "options": [
+                    {
+                        "value": "left",
+                        "label": "t:settings_schema.global.settings.alignment.options__1.label"
+                    },
+                    {
+                        "value": "center",
+                        "label": "t:settings_schema.global.settings.alignment.options__2.label"
+                    },
+                    {
+                        "value": "right",
+                        "label": "t:settings_schema.global.settings.alignment.options__3.label"
+                    }
+                ],
+                "default": "left",
+                "label": "t:settings_schema.global.settings.alignment.label"
+            },
+            {
+                "type": "color_scheme",
+                "id": "title_color_scheme",
+                "label": "t:sections.all.colors.label",
+                "default": "background-1"
+            }
+        ]
+    },
+    {
         "name": "t:settings_schema.cards.name",
         "settings": [
             {
@@ -533,7 +594,7 @@
             {
                 "type": "range",
                 "id": "card_padding",
-                "min": 4,
+                "min": 6,
                 "max": 40,
                 "step": 2,
                 "unit": "px",

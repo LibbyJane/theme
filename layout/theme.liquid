@@ -60,9 +60,9 @@
         :root,
         {%- endif %}
         .color-{{ scheme.id }} {
-
             --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
             --background-opacity: 1;
+            --background-image: {% if scheme.settings.background_gradient != blank %}{{ scheme.settings.background_gradient }}{% else %}linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)){% endif %};
             --color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
             --color-shadow: {{ scheme.settings.shadow.red }},{{ scheme.settings.shadow.green }},{{ scheme.settings.shadow.blue }};
             --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
@@ -80,8 +80,8 @@
         {{ scheme_classes | prepend: 'body' }} {
             color: rgba(var(--color-foreground), 1);
             background-color: rgba(var(--color-background),var(--background-opacity));
+            background-image: var(--background-image);
         }
-
 
         :root {
             --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
@@ -122,6 +122,14 @@
             --product-card-shadow-horizontal-offset: {{ settings.card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
             --product-card-shadow-vertical-offset: {{ settings.card_shadow_vertical_offset | divided_by: 10.0 }}rem;
             --product-card-shadow-blur-radius: {{ settings.card_shadow_blur | divided_by: 10.0 }}rem;
+
+
+            --title-margin-bottom: {{ settings.title_bottom_margin | divided_by: 10.0 }}rem;
+            --title-alignment: {{ settings.title_alignment }};
+            --title-shadow-opacity: {{ settings.card_shadow_opacity | divided_by: 100.0 }};
+            --title-shadow-horizontal-offset: {{ settings.card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
+            --title-shadow-vertical-offset: {{ settings.card_shadow_vertical_offset | divided_by: 10.0 }}rem;
+            --title-shadow-blur-radius: {{ settings.card_shadow_blur | divided_by: 10.0 }}rem;
 
             --card-image-offset: {% if settings.card_image_full_width  %}{{ settings.card_padding | divided_by: -10.0 }}rem;{% else %}0{% endif %};
             --highlight-opacity: 0.9;

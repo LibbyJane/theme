@@ -1,0 +1,12 @@
+// .card--shape.card--standard {
+//     &:not(.card--text) {
+//         .card__inner {
+//             border: 0;
+//             background-color: $background-color_1;
+//             filter: drop-shadow(var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity)));
+//             &:after {
+//                 display: none;
+//             }
+//         }
+//     }
+// }
