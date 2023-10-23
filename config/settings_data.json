@@ -115,6 +115,12 @@
     "cart_drawer_collection": "",
     "checkout_header_image": "shopify:\/\/shop_images\/wooden-table-texture.jpg",
     "checkout_logo_image": "shopify:\/\/shop_images\/logo.png",
+    "checkout_logo_position": "center",
+    "checkout_body_background_image": "shopify:\/\/shop_images\/texture-paper-craft.jpg",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_color": "#ffffff",
+    "checkout_accent_color": "#820030",
+    "checkout_button_color": "#820030",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
