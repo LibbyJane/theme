@@ -1,9 +1,10 @@
 .cart__footer-wrapper {
     display: inline-grid;
     position: sticky;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    pointer-events: none;
     z-index: 2;
 }
 
@@ -19,6 +20,8 @@
     rgba(var(--color-shadow), var(--popup-shadow-opacity)), 0 -2px 4px rgba(var(--color-shadow), 0.06);
     padding-left: var(--inline-padding);
     padding-right: var(--inline-padding);
+    position: relative;
+    pointer-events: all;
     width: 100%;
 
     @media screen and (min-width: 750px) {

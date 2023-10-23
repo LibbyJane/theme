@@ -109,6 +109,9 @@
                         "label": "Card"
                     },
                     "label": "Style"
+                },
+                "image_full_width": {
+                    "label": "Image spans full width"
                 }
             }
         },
@@ -123,6 +126,9 @@
                         "label": "Card"
                     },
                     "label": "Style"
+                },
+                "image_full_width": {
+                    "label": "Image spans full width"
                 }
             }
         },
@@ -159,7 +165,8 @@
                     "label": "Background"
                 },
                 "background_transparent": {
-                    "label": "Background transparent"
+                    "label": "Background transparent",
+                    "info": "The scheme scheme color won't be used and the container background will show."
                 },
                 "background_gradient": {
                     "label": "Background gradient",
@@ -196,6 +203,27 @@
                 "ecommerce_contrast_color": {
                     "label": "eCommerce contrast color",
                     "info": "Used button text etc"
+                }
+            }
+        },
+        "textures": {
+            "name": "Textures",
+            "settings": {
+                "background_texture": {
+                    "options__1": {
+                        "label": "None"
+                    },
+                    "options__2": {
+                        "label": "Paper"
+                    },
+                    "options__3": {
+                        "label": "Torn"
+                    },
+                    "options__4": {
+                        "label": "Lined"
+                    },
+                    "label": "Apply a texture to the background area",
+                    "info-container": "The texture is only visible if the container is set to show."
                 }
             }
         },
@@ -1638,8 +1666,14 @@
                     "label": "Desktop image placement",
                     "info": "Placement is automatically optimized for mobile."
                 },
+                "container": {
+                    "content": "Container"
+                },
                 "container_color_scheme": {
                     "label": "Container color scheme"
+                },
+                "container_spacing": {
+                    "label": "Space between containers"
                 },
                 "mobile_content_alignment": {
                     "options__1": {

@@ -52,7 +52,7 @@
     <div class="image-with-text__text-item grid__item">
       <div
         id="ImageWithText--{{ section.id }}"
-        class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }}  color-{{ section.settings.color_scheme }} content-container"
+        class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }}  color-{{ section.settings.color_scheme }} {% if section.settings.background_texture != blank %}texture-{{section.settings.background_texture}}{% endif %} content-container"
       >
         {%- for block in section.blocks -%}
           {% case block.type %}
@@ -82,7 +82,7 @@
                   {% else %}
                     href="{{ block.settings.button_link }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                  class="button button--{{ block.settings.button_style_secondary }}"
                   {{ block.shopify_attributes }}
                 >
                   {{ block.settings.button_label | escape }}
@@ -223,7 +223,7 @@
           "label": "t:sections.image-with-text.settings.content_layout.options__2.label"
         }
       ],
-      "default": "no-overlap",
+      "default": "overlap",
       "label": "t:sections.image-with-text.settings.content_layout.label"
     },
     {
@@ -231,6 +231,30 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "background-1"
+    },
+    {
+        "type": "select",
+        "id": "background_texture",
+        "options": [
+            {
+                "value": "",
+                "label": "t:settings_schema.textures.settings.background_texture.options__1.label"
+            },
+            {
+                "value": "paper",
+                "label": "t:settings_schema.textures.settings.background_texture.options__2.label"
+            },
+            {
+                "value": "torn",
+                "label": "t:settings_schema.textures.settings.background_texture.options__3.label"
+            },
+            {
+                "value": "lined",
+                "label": "t:settings_schema.textures.settings.background_texture.options__4.label"
+            }
+        ],
+        "default": "lined",
+        "label": "t:settings_schema.textures.settings.background_texture.label"
     },
     {
       "type": "header",
@@ -435,10 +459,20 @@
           "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
         },
         {
-          "type": "checkbox",
-          "id": "button_style_secondary",
-          "default": false,
-          "label": "t:sections.image-with-text.blocks.button.settings.outline_button.label"
+            "type": "select",
+            "id": "button_style_secondary",
+            "options": [
+                {
+                    "value": "primary",
+                    "label": "t:sections.multirow.settings.button_style.options__1.label"
+                },
+                {
+                    "value": "secondary",
+                    "label": "t:sections.multirow.settings.button_style.options__2.label"
+                }
+            ],
+            "default": "secondary",
+            "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
         }
       ]
     }

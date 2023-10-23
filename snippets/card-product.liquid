@@ -61,7 +61,6 @@
         {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
         {% if horizontal_class %} card--horizontal{% endif %}
         {% if showBadge %} card--badge-{{badgePosition}}{% endif %}
-        {% if card_image_full_width %} card--full-width-image{% endif %}
         "
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >

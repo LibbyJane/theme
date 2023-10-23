@@ -35,6 +35,7 @@
         ,"components/forms/fields"
         ,"components/modals/base"
         ,"components/modals/search"
+        ,"components/rte/base"
         ,"components/titles/base"
         ;
 
@@ -249,15 +250,15 @@
 //   margin: 0 auto 2rem;
 // }
 
-// .list-unstyled {
-//   margin: 0;
-//   padding: 0;
-//   list-style: none;
-// }
+.list-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
-// .hidden {
-//   display: none !important;
-// }
+.hidden {
+  display: none !important;
+}
 
 .visually-hidden {
     position: absolute !important;
@@ -3196,74 +3197,6 @@
 //   }
 // }
 
-// .rte:after {
-//   clear: both;
-//   content: '';
-//   display: block;
-// }
-
-// .rte > *:first-child {
-//   margin-top: 0;
-// }
-
-// .rte > *:last-child {
-//   margin-bottom: 0;
-// }
-
-// .rte table {
-//   table-core: fixed;
-// }
-
-// @media screen and (min-width: 750px) {
-//   .rte table td {
-//     padding-left: 1.2rem;
-//     padding-right: 1.2rem;
-//   }
-// }
-
-// .rte img {
-//   height: auto;
-//   max-width: 100%;
-//   border: var(--media-border-width) solid rgba(var(--color-foreground), var(--media-border-opacity));
-//   border-radius: var(--media-radius);
-//   box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
-//     rgba(var(--color-shadow), var(--media-shadow-opacity));
-//   margin-bottom: var(--media-shadow-vertical-offset);
-// }
-
-// .rte ul,
-// .rte ol {
-//   list-style-position: inside;
-//   padding-left: 2rem;
-// }
-
-// .rte li {
-//   list-style: inherit;
-// }
-
-// .rte li:last-child {
-//   margin-bottom: 0;
-// }
-
-// .rte a {
-//   color: rgba(var(--color-link), var(--alpha-link));
-//   text-underline-offset: 0.3rem;
-//   text-decoration-thickness: 0.1rem;
-//   transition: text-decoration-thickness var(--duration-short) ease;
-// }
-
-// .rte a:hover {
-//   color: rgb(var(--color-link));
-//   text-decoration-thickness: 0.2rem;
-// }
-
-// .rte blockquote {
-//   display: inline-flex;
-// }
-
-// .rte blockquote > * {
-//   margin: -0.5rem 0 -0.5rem 0;
-// }
 
 // /* Image mask global styles */
 

@@ -12,10 +12,10 @@
 }
 
 .title {
-    display: inline-flex;
+    display: block;
     margin: 0 auto;
-    padding: var(--space-med) var(--space-lg) var(--space);
-    transform: rotate(-1deg);
+    padding: var(--space-med) var(--space-lg) var(--space-lg);
+    transform: rotate(-0.5deg);
 
     .align-left & {
         margin-left: var(--space-sm);

@@ -17,20 +17,20 @@
         }
     }
 {%- endstyle -%}
+<div class="{% if section.settings.color_boundary == 'container' %} color-{{ section.settings.color_scheme }}{% endif %} section-{{ section.id }}-padding isolate">
 
-<div class="{% if section.settings.color_boundary == 'container' %} color-{{ section.settings.color_scheme }}{% endif %} isolate page-width section-{{ section.id }}-padding">
-    <div class="page-width title-wrapper ">
-        {%- if section.settings.heading != blank -%}
-            <h2 class="title inline-richtext texture-{{ settings.title_style }} {% if section.settings.color_boundary != 'container' %} color-{{ section.settings.color_scheme }}{% endif %} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {%- if section.settings.heading != blank -%}
+        <div class="page-width title-wrapper align-{{settings.title_alignment}}">
+            <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{% if section.settings.color_boundary == 'container' %}{{ settings.title_color_scheme }}{% else %}{{ section.settings.color_scheme }}{% endif %} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 {{ section.settings.heading }}
             </h2>
-        {%- endif -%}
-    </div>
+        </div>
+    {%- endif -%}
 
-    <div class="collage{% if section.settings.mobile_layout == 'collage' %} collage--mobile{% endif %}">
+    <div class="page-width collage{% if section.settings.mobile_layout == 'collage' %} collage--mobile{% endif %}">
         {%- for block in section.blocks -%}
             <div
-                class="collage__item collage__item--{{ block.type }} collage__item--{{ section.settings.desktop_layout }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="collage__item collage__item--{{ block.type }} collage__item--{{ section.settings.desktop_layout }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ settings.card_color_scheme }}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                     data-cascade
@@ -40,7 +40,7 @@
             {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
             {%- case block.type -%}
                 {%- when 'image' -%}
-                    <div class="collage-card {% if section.settings.card_styles == 'none' %}global-media-settings{% else %}card-wrapper {{ section.settings.card_styles }} color-{{ settings.card_color_scheme }} {% endif %}">
+                    <div class="collage-card {% if section.settings.card_styles == 'none' %}global-media-settings{% else %}card-wrapper {{ section.settings.card_styles }} {% endif %}">
                         <div
                         class="media media--transparent ratio"
                         {% if block.settings.image != blank %}
@@ -114,7 +114,7 @@
                         placeholder_image: placeholder_image
                     %}
                 {%- when 'video' -%}
-                    <div class="collage-card {% if section.settings.card_styles == 'none' %}global-media-settings{% else %}{{ section.settings.card_styles }} color-{{ settings.card_color_scheme }} {% endif %}">
+                    <div class="collage-card {% if section.settings.card_styles == 'none' %}global-media-settings{% else %}{{ section.settings.card_styles }} {% endif %}">
                         <noscript>
                         <a
                             href="{{ block.settings.video_url }}"

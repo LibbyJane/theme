@@ -1,17 +1,19 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+        --grid-mobile-vertical-spacing: {{ section.settings.row_gap | times: 0.75 | round: 0 }}px;
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
-  }
+
+    @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+            --grid-desktop-vertical-spacing: {{ section.settings.row_gap }}px;
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
 {%- endstyle -%}
 
 {%- liquid
@@ -42,7 +44,7 @@
   endunless
 -%}
 
-<div class="multirow section-{{ section.id }}-padding  color-{{ section.settings.section_color_scheme }}">
+<div class="multirow section-{{ section.id }}-padding  {% if section.settings.background_transparent != true %}color-{{ section.settings.section_color_scheme }}{% endif %}">
   <div class="multirow__inner page-width">
     {%- for block in section.blocks -%}
       <div
@@ -73,7 +75,7 @@
             </div>
           </div>
           <div class="image-with-text__text-item grid__item">
-            <div class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.image_height }} content-container{% unless no_content_background and no_content_styles %}  color-{{ section.settings.row_color_scheme }}{% endunless %}">
+            <div class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.image_height }} content-container{% unless no_content_background and no_content_styles %}  color-{{ section.settings.row_color_scheme }}{% endunless %}  texture-{{section.settings.background_texture}} ">
               {%- if block.settings.caption -%}
                 <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium">
                   {{ block.settings.caption | escape }}
@@ -279,17 +281,62 @@
       "info": "t:sections.multirow.settings.image_layout.info"
     },
     {
+        "type": "checkbox",
+        "id": "background_transparent",
+        "default": true,
+        "label": "t:settings_schema.colors.settings.background_transparent.label",
+        "info": "t:settings_schema.colors.settings.background_transparent.info"
+    },
+    {
       "type": "color_scheme",
       "id": "section_color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "background-1"
     },
     {
+        "type": "header",
+        "content": "t:sections.multirow.settings.container.content"
+      },
+    {
       "type": "color_scheme",
       "id": "row_color_scheme",
       "label": "t:sections.multirow.settings.container_color_scheme.label",
       "default": "background-1"
     },
+    {
+        "type": "select",
+        "id": "background_texture",
+        "options": [
+            {
+                "value": "",
+                "label": "t:settings_schema.textures.settings.background_texture.options__1.label"
+            },
+            {
+                "value": "paper",
+                "label": "t:settings_schema.textures.settings.background_texture.options__2.label"
+            },
+            {
+                "value": "torn",
+                "label": "t:settings_schema.textures.settings.background_texture.options__3.label"
+            },
+            {
+                "value": "lined",
+                "label": "t:settings_schema.textures.settings.background_texture.options__4.label"
+            }
+        ],
+        "default": "paper",
+        "label": "t:settings_schema.textures.settings.background_texture.label"
+    },
+    {
+        "type": "range",
+        "id": "row_gap",
+        "min": 0,
+        "max": 40,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.multirow.settings.container_spacing.label",
+        "default": 8
+      },
     {
       "type": "header",
       "content": "t:sections.multirow.settings.header_mobile.content"

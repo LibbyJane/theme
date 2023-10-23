@@ -28,6 +28,8 @@
     will-change: transform;
     transform-style: preserve-3d;
     z-index: 1;
+    outline: 1px solid transparent;
+    backface-visibility: hidden;
 
     &.card {
         .grid__item & {
@@ -43,7 +45,8 @@
         }
     }
 
-    &.ratio {
+    &.ratio,
+    .ratio {
         flex-direction: row;
         height: auto;
     }

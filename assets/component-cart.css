@@ -4,6 +4,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  pointer-events: none;
   z-index: 2;
 }
 
@@ -18,6 +19,8 @@
   box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity)), 0 -2px 4px rgba(var(--color-shadow), 0.06);
   padding-left: var(--inline-padding);
   padding-right: var(--inline-padding);
+  position: relative;
+  pointer-events: all;
   width: 100%;
 }
 @media screen and (min-width: 750px) {

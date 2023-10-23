@@ -154,7 +154,7 @@
           {%- endif -%}
         </div>
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
-          <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }}  slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
+          <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} {% if block.settings.background_texture != blank %}texture-{{block.settings.background_texture}}{% endif %} slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             {%- if block.settings.heading != blank -%}
               <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
                 {{ block.settings.heading }}
@@ -173,7 +173,7 @@
                   {% else %}
                     role="link" aria-disabled="true"
                   {% endif %}
-                  class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
+                  class="button button--{{ block.settings.button_style_secondary }}"
                 >
                   {{- block.settings.button_label | escape -}}
                 </a>
@@ -402,6 +402,16 @@
           "label": "t:sections.slideshow.blocks.slide.settings.image.label"
         },
         {
+            "type": "range",
+            "id": "image_overlay_opacity",
+            "min": 0,
+            "max": 100,
+            "step": 10,
+            "unit": "%",
+            "label": "t:sections.slideshow.blocks.slide.settings.image_overlay_opacity.label",
+            "default": 0
+          },
+        {
           "type": "inline_richtext",
           "id": "heading",
           "default": "Image slide",
@@ -446,10 +456,20 @@
           "label": "t:sections.slideshow.blocks.slide.settings.link.label"
         },
         {
-          "type": "checkbox",
-          "id": "button_style_secondary",
-          "label": "t:sections.slideshow.blocks.slide.settings.secondary_style.label",
-          "default": false
+            "type": "select",
+            "id": "button_style_secondary",
+            "options": [
+                {
+                    "value": "primary",
+                    "label": "t:sections.multirow.settings.button_style.options__1.label"
+                },
+                {
+                    "value": "secondary",
+                    "label": "t:sections.multirow.settings.button_style.options__2.label"
+                }
+            ],
+            "default": "primary",
+            "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
         },
         {
           "type": "select",
@@ -497,12 +517,6 @@
           "info": "t:sections.slideshow.blocks.slide.settings.box_align.info"
         },
         {
-          "type": "checkbox",
-          "id": "show_text_box",
-          "label": "t:sections.slideshow.blocks.slide.settings.show_text_box.label",
-          "default": true
-        },
-        {
           "type": "select",
           "id": "text_alignment",
           "options": [
@@ -523,20 +537,40 @@
           "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.label"
         },
         {
-          "type": "range",
-          "id": "image_overlay_opacity",
-          "min": 0,
-          "max": 100,
-          "step": 10,
-          "unit": "%",
-          "label": "t:sections.slideshow.blocks.slide.settings.image_overlay_opacity.label",
-          "default": 0
-        },
+            "type": "checkbox",
+            "id": "show_text_box",
+            "label": "t:sections.slideshow.blocks.slide.settings.show_text_box.label",
+            "default": true
+          },
         {
           "type": "color_scheme",
           "id": "color_scheme",
           "label": "t:sections.all.colors.label",
           "default": "background-1"
+        },
+        {
+            "type": "select",
+            "id": "background_texture",
+            "options": [
+                {
+                    "value": "",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__1.label"
+                },
+                {
+                    "value": "paper",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__2.label"
+                },
+                {
+                    "value": "torn",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__3.label"
+                },
+                {
+                    "value": "lined",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__4.label"
+                }
+            ],
+            "default": "paper",
+            "label": "t:settings_schema.textures.settings.background_texture.label"
         },
         {
           "type": "header",
