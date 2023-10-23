@@ -36,6 +36,11 @@
             "use_price_highlight_color": false
           }
         },
+        "2fb6f458-5da1-4e83-a150-83bca55c5817": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -46,11 +51,6 @@
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
-          }
-        },
-        "2fb6f458-5da1-4e83-a150-83bca55c5817": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
           }
         },
         "description": {
@@ -107,9 +107,9 @@
         "caption",
         "variant_picker",
         "price",
+        "2fb6f458-5da1-4e83-a150-83bca55c5817",
         "quantity_selector",
         "buy_buttons",
-        "2fb6f458-5da1-4e83-a150-83bca55c5817",
         "description",
         "collapsible-row-0",
         "collapsible-row-1",
