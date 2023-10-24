@@ -112,7 +112,7 @@
         </div>
     {%- endif -%}
     <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-        <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} {% if section.settings.background_texture != blank and section.settings.show_text_box == true %}texture-{{section.settings.background_texture}}{% endif %}">
+        <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} {% if section.settings.background_texture != blank and section.settings.show_text_box == true %} texture-{{section.settings.background_texture}}{% endif %}">
         {%- for block in section.blocks -%}
             {%- case block.type -%}
             {%- when 'heading' -%}
@@ -315,7 +315,7 @@
             ],
             "default": "paper",
             "label": "t:settings_schema.textures.settings.background_texture.label",
-            "info": "t:settings_schema.textures.settings.background_texture.info-container"
+            "info": "t:settings_schema.textures.settings.background_texture.info"
         },
         {
         "type": "header",

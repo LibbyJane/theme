@@ -7,7 +7,7 @@
       "login_form_password_placeholder": "Votre mot de passe",
       "login_form_error": "Mot de passe incorrect !",
       "login_form_submit": "Saisir",
-      "admin_link_html": "La boutique vous appartient-elle ? <a href=\"/admin\" class=\"link underlined-link\">Se connecter ici</a>",
+      "admin_link_html": "La boutique vous appartient-elle ? <a href=\"/admin\" >Se connecter ici</a>",
       "powered_by_shopify_html": "Cette boutique sera propulsée par {{ shopify }}"
     },
     "social": {
@@ -301,7 +301,7 @@
       "update": "Mettre à jour",
       "login": {
         "title": "Vous possédez un compte ?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Connectez-vous</a> pour payer plus vite."
+        "paragraph_html": "<a href=\"{{ link }}\" >Connectez-vous</a> pour payer plus vite."
       },
       "estimated_total": "Total estimé",
       "new_estimated_total": "Nouveau total estimé"

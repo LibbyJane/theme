@@ -64,7 +64,7 @@
             ],
             "default": "paper",
             "label": "t:settings_schema.textures.settings.background_texture.label",
-            "info-container": "t:settings_schema.textures.settings.background_texture.info"
+            "info": "t:settings_schema.textures.settings.background_texture.info"
         }]
     },
     {

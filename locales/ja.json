@@ -7,7 +7,7 @@
       "login_form_password_placeholder": "あなたのパスワード",
       "login_form_error": "パスワードが正しくありません。",
       "login_form_submit": "ストアに入る",
-      "admin_link_html": "あなたはストアオーナーですか？<a href=\"/admin\" class=\"link underlined-link\">こちらからログインする</a>",
+      "admin_link_html": "あなたはストアオーナーですか？<a href=\"/admin\" >こちらからログインする</a>",
       "powered_by_shopify_html": "このショップでは{{ shopify }}を使用する予定です"
     },
     "social": {
@@ -291,7 +291,7 @@
       "update": "アップデート",
       "login": {
         "title": "アカウントをお持ちですか?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">ログイン</a>することで、チェックアウトがスピーディーに行えます。"
+        "paragraph_html": "<a href=\"{{ link }}\" >ログイン</a>することで、チェックアウトがスピーディーに行えます。"
       },
       "estimated_total": "見積もり合計",
       "new_estimated_total": "新たな推定総額"

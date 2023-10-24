@@ -7,7 +7,7 @@
       "login_form_password_placeholder": "Vaše geslo",
       "login_form_error": "Geslo ni pravilno!",
       "login_form_submit": "Vstop",
-      "admin_link_html": "Ali ste lastnik te trgovine? <a href=\"/admin\" class=\"link underlined-link\">Prijavite se tukaj</a>",
+      "admin_link_html": "Ali ste lastnik te trgovine? <a href=\"/admin\" >Prijavite se tukaj</a>",
       "powered_by_shopify_html": "To trgovino bo omogočala platforma {{ shopify }}"
     },
     "social": {
@@ -311,7 +311,7 @@
       },
       "login": {
         "title": "Ali imate račun?",
-        "paragraph_html": "Za hitrejši zaključek nakupa <a href=\"{{ link }}\" class=\"link underlined-link\">se prijavite</a>."
+        "paragraph_html": "Za hitrejši zaključek nakupa <a href=\"{{ link }}\" >se prijavite</a>."
       },
       "estimated_total": "Predvideni skupni znesek",
       "new_estimated_total": "Nov predvideni skupni znesek"

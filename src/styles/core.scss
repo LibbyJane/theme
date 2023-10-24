@@ -1,13 +1,4 @@
-@import "helpers/mixins"
-        ,"helpers/variables/colors"
-        ,"helpers/variables/breakpoints"
-        ,"helpers/variables/defaults"
-        ,"helpers/variables/typography"
-        ,"helpers/variables/core"
-        ,"helpers/variables/elements"
-        ,"helpers/functions"
-        ,"helpers/animations"
-        ;
+@import "helpers/helpers";
 
 @import "core/reset"
         ,"core/typography"

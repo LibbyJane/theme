@@ -7,7 +7,7 @@
       "login_form_password_placeholder": "Parola dvs.",
       "login_form_error": "Parolă incorectă!",
       "login_form_submit": "Accesați",
-      "admin_link_html": "Sunteți proprietarul magazinului? <a href=\"/admin\" class=\"link underlined-link\">Conectați-vă aici</a>",
+      "admin_link_html": "Sunteți proprietarul magazinului? <a href=\"/admin\" >Conectați-vă aici</a>",
       "powered_by_shopify_html": "Acest magazin va fi pe platforma {{ shopify }}"
     },
     "social": {
@@ -301,7 +301,7 @@
       },
       "login": {
         "title": "Ai un cont?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Conectează-te</a> pentru a finaliza comanda mai rapid."
+        "paragraph_html": "<a href=\"{{ link }}\" >Conectează-te</a> pentru a finaliza comanda mai rapid."
       },
       "estimated_total": "Total estimat",
       "new_estimated_total": "Noul total estimat"

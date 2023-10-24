@@ -7,7 +7,7 @@
       "login_form_password_placeholder": "Saját jelszó",
       "login_form_error": "Téves jelszót írtál be.",
       "login_form_submit": "Belépés",
-      "admin_link_html": "Te vagy a webáruház tulajdonosa? <a href=\"/admin\" class=\"link underlined-link\">Itt tudsz bejelentkezni</a>",
+      "admin_link_html": "Te vagy a webáruház tulajdonosa? <a href=\"/admin\" >Itt tudsz bejelentkezni</a>",
       "powered_by_shopify_html": "A bolt szolgáltatója a {{ shopify }}"
     },
     "social": {
@@ -291,7 +291,7 @@
       "update": "Frissítés",
       "login": {
         "title": "Már van fiókod?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Jelentkezz be</a> a gyorsabb fizetéshez."
+        "paragraph_html": "<a href=\"{{ link }}\" >Jelentkezz be</a> a gyorsabb fizetéshez."
       },
       "estimated_total": "Becsült végösszeg",
       "new_estimated_total": "Új becsült végösszeg"

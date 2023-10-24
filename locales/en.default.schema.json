@@ -223,7 +223,7 @@
                         "label": "Lined"
                     },
                     "label": "Apply a texture to the background area",
-                    "info-container": "The texture is only visible if the container is set to show."
+                    "info": "The texture is only visible if the container is set to show."
                 }
             }
         },

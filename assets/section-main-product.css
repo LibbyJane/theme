@@ -18,7 +18,7 @@
   .product__info-wrapper {
     max-width: 55%;
   }
-  .product--small .product__info-wrapper {
+  .product--medium .product__info-wrapper {
     max-width: 45%;
   }
   .product--large .product__info-wrapper {

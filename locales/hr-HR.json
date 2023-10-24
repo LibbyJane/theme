@@ -7,7 +7,7 @@
       "login_form_password_placeholder": "Vaša lozinka",
       "login_form_error": "Pogrešna lozinka!",
       "login_form_submit": "Unesi",
-      "admin_link_html": "Jeste li vlasnik/vlasnica trgovine? <a href=\"/admin\" class=\"link underlined-link\">Prijavite se ovdje</a>",
+      "admin_link_html": "Jeste li vlasnik/vlasnica trgovine? <a href=\"/admin\" >Prijavite se ovdje</a>",
       "powered_by_shopify_html": "Ovu trgovinu pokreće {{ shopify }}"
     },
     "social": {
@@ -301,7 +301,7 @@
       },
       "login": {
         "title": "Imate li račun?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Prijavite se</a> za bržu provjeru."
+        "paragraph_html": "<a href=\"{{ link }}\" >Prijavite se</a> za bržu provjeru."
       },
       "estimated_total": "Procijenjen ukupni iznos",
       "new_estimated_total": "Novi procijenjeni ukupni iznos"

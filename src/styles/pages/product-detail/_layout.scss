@@ -15,11 +15,10 @@
 .product__info-wrapper {
     order: 1;
 
-
     @media screen and (min-width: 990px) {
         max-width: 55%;
 
-        .product--small & {
+        .product--medium & {
             max-width: 45%;
         }
         .product--large & {

@@ -7,20 +7,28 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .field {
     --field-height: 4rem;
-
-    display: grid;
-        grid-template-areas: 'field-input field-reset field-button';
-        grid-template-columns: 1fr max-content max-content;
-        gap: var(--space-sm);
-
-    border-bottom: var(--inputs-border-width) dashed rgba(var(--color-foreground), var(--inputs-border-opacity));
     // border-radius: var(--inputs-border-radius);
     // border-bottom-left-radius: 0;
+    display: grid;
+    grid-template-areas: 'field-input';
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+    border-bottom: var(--inputs-border-width) dashed rgba(var(--color-foreground), var(--inputs-border-opacity));
     padding-top: var(--space-med);
     margin: 0 0 var(--space-med);
     width: 100%;
     position: relative;
     z-index: 1;
+}
+
+.field--single-line {
+    grid-template-areas: 'field-input field-button';
+    grid-template-columns: 1fr auto;
+}
+
+.field--search {
+    grid-template-areas: 'field-input field-reset field-button';
+    grid-template-columns: 1fr max-content max-content;
 }
 
 .field__label {
@@ -40,7 +48,16 @@ input[type="search"]::-webkit-search-results-decoration {
     line-height: 1;
     min-height: var(--field-height);
     outline: 2px solid transparent;
-    padding: var(--space-med) 0 var(--space-sm);
+    padding: 0 0 var(--space-sm);
+    width: 100%;
+
+    .field--search & {
+        padding-top: var(--space-med);
+    }
+
+    &[textarea] {
+        line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
+    }
 
     @include placeholder {
         opacity: 0;

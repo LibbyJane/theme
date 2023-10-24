@@ -29,9 +29,7 @@
                     class="cart-notification__close modal__close-button link link--text focus-inset"
                     aria-label="{{ 'accessibility.close' | t }}"
                 >
-                    <svg class="icon icon-close" aria-hidden="true" focusable="false">
-                        <use href="#icon-close">
-                    </svg>
+                    {%- render 'icon-close' -%}
                 </button>
             </header>
             <div id="cart-notification-product" class="cart-notification-product"></div>
@@ -48,8 +46,8 @@
                         {{ 'sections.cart.checkout' | t }}
                     </button>
                 </form>
-                <button type="button" class="link button-label">
-                    {{ 'general.continue_shopping' | t }}
+                <button type="button" class="cart-notification__links-continue-shopping underline-on-hover">
+                    {{ 'general.continue_shopping' | t }} {% render 'icon-arrow' %}
                 </button>
             </footer>
         </div>

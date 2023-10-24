@@ -31,6 +31,7 @@
   transition: transform var(--duration-short) ease, visibility 0s var(--duration-short) ease;
 }
 .cart-notification.active {
+  display: block;
   transform: translateY(0);
   transition: transform var(--duration-default) ease, visibility 0s;
   visibility: visible;
@@ -77,16 +78,17 @@
 .cart-notification__links .button,
 .cart-notification__links form {
   flex: 0 0 auto;
+  margin: 0 var(--space-sm) var(--space);
 }
-.cart-notification__links .link {
-  width: 100%;
+.cart-notification__links .cart-notification__links-continue-shopping {
+  margin: 0 auto 0;
 }
 
 .cart-notification-product {
-  align-items: flex-start;
   display: flex;
-  padding-bottom: 3rem;
-  padding-top: 2rem;
+  align-items: center;
+  padding-bottom: var(--space-xl);
+  padding-top: var(--space-lg);
 }
 .cart-notification-product dl {
   margin-bottom: 0;
@@ -96,7 +98,6 @@
 .cart-notification-product__image {
   display: inline-flex;
   margin-right: 1.5rem;
-  margin-top: 0.5rem;
 }
 .cart-notification-product__image:after {
   content: none;

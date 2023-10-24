@@ -44,6 +44,7 @@ button.shopify-payment-button__button--unbranded,
     position: relative;
     text-decoration: none;
     transition: all var(--duration-med) var(--transition-type);
+    z-index: 1;
 
     &:hover, &:focus {
         &::before {

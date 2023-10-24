@@ -7,7 +7,7 @@
       "login_form_password_placeholder": "Vaše heslo",
       "login_form_error": "Heslo není správné!",
       "login_form_submit": "Zadat",
-      "admin_link_html": "Jste majitelem obchodu? <a href=\"/admin\" class=\"link underlined-link\">Přihlaste se zde</a>",
+      "admin_link_html": "Jste majitelem obchodu? <a href=\"/admin\" >Přihlaste se zde</a>",
       "powered_by_shopify_html": "Obchod bude využívat platformu {{ shopify }}"
     },
     "social": {
@@ -311,7 +311,7 @@
       },
       "login": {
         "title": "Máte účet?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Přihlaste se</a>, abyste si urychlili proces pokladny."
+        "paragraph_html": "<a href=\"{{ link }}\" >Přihlaste se</a>, abyste si urychlili proces pokladny."
       },
       "estimated_total": "Odhadovaný součet",
       "new_estimated_total": "Nový odhadovaný součet"
