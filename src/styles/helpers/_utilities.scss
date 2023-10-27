@@ -1,0 +1,28 @@
+.margin-bottom {
+    margin-bottom: var(--space) !important;
+}
+
+.margin-bottom--med {
+    margin-bottom: var(--space-med) !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.content-padding-inline {
+    padding-inline: var(--content-padding-inline);
+}
+
+.content-padding {
+    padding: var(--content-padding);
+}
+
+.page-margin {
+    margin: var(--page-margin);
+}
+
+.center {
+    text-align: center;
+    margin-inline: auto;
+}

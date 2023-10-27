@@ -4,6 +4,14 @@
 
 :root {
   --transition-type: ease-in-out;
+  --page-margin: var(--space-xxxl) auto;
+  --content-padding-inline: var(--space-lg);
+  --content-padding: var(--space-med) var(--content-padding-inline) var(--space-sm);
+  --border-width: 2px;
+  --border-style: dashed;
+  --border-color: currentColor;
+  --border-color-light: rgba(var(--color-foreground), 0.25);
+  --border: var(--border-width) var(--border-style) var(--border-color);
 }
 
 :root {
@@ -14,7 +22,9 @@
   --space-lg: 2rem;
   --space-xl: 3rem;
   --space-xxl: 5rem;
+  --space-xxxl: 7rem;
   --icon-size-default: 1.5rem;
+  --icon-size-lg: 2rem;
   --opacity-full: 1;
   --opacity-partial: 0.85;
   --opacity-light: 0.7;
@@ -112,6 +122,35 @@
     transform: scaleX(100%) rotate(0.5deg);
   }
 }
+.margin-bottom {
+  margin-bottom: var(--space) !important;
+}
+
+.margin-bottom--med {
+  margin-bottom: var(--space-med) !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.content-padding-inline {
+  padding-inline: var(--content-padding-inline);
+}
+
+.content-padding {
+  padding: var(--content-padding);
+}
+
+.page-margin {
+  margin: var(--page-margin);
+}
+
+.center {
+  text-align: center;
+  margin-inline: auto;
+}
+
 .drawer {
   background-color: rgba(var(--color-foreground), 0.5);
   display: flex;

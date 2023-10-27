@@ -1,3 +1,14 @@
 :root {
     --transition-type: ease-in-out;
+
+    --page-margin: var(--space-xxxl) auto;
+    --content-padding-inline: var(--space-lg);
+    --content-padding: var(--space-med) var(--content-padding-inline) var(--space-sm);
+
+    --border-width: 2px;
+    --border-style: dashed;
+    --border-color: currentColor;
+    --border-color-light: rgba(var(--color-foreground), 0.25);
+
+    --border: var(--border-width) var(--border-style) var(--border-color);
 }

@@ -54,8 +54,9 @@ gulp.task('sprites', function () {
 
 gulp.task('watch', function () {
     gulp.watch('src/styles/**/*.scss', gulp.series('styles'));
-    // gulp.watch('src/styles/component-card.scss', gulp.series('styles'));
-    gulp.watch('src/icons/*.svg', gulp.series('sprites'));
+    // gulp.watch('src/icons/*.svg', gulp.series('sprites'));
+    // gulp.watch('src/styles/component-facets.scss', gulp.series('styles'));
+
 });
 
 

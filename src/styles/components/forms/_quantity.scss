@@ -114,12 +114,16 @@
     }
 
     &:first-child {
-        border-right: var(--inputs-border-width) dashed rgba(var(--color-foreground), calc(var(--inputs-border-opacity)/4));
+        --border-width: var(--inputs-border-width);
+        --border-color: rgba(var(--color-foreground), calc(var(--inputs-border-opacity)/4));
+        border-right: var(--border);
         margin-left: calc(var(--inputs-border-width));
     }
 
     &:last-child {
-        border-left: var(--inputs-border-width) dashed rgba(var(--color-foreground), calc(var(--inputs-border-opacity)/4));
+        --border-width: var(--inputs-border-width);
+        --border-color: rgba(var(--color-foreground), calc(var(--inputs-border-opacity)/4));
+        border-left: var(--border);
         margin-right: calc(var(--inputs-border-width));
     }
 }

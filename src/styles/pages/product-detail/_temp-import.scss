@@ -111,7 +111,7 @@
   .shopify-payment-button__button--unbranded {
     background-color: rgba(var(--color-button), var(--alpha-button-background));
     color: rgb(var(--color-button-text));
-    font-size: 1.4rem;
+    font-size: var(--font-size-smaller);
     line-height: calc(1 + 0.2 / var(--font-body-scale));
     letter-spacing: 0.07rem;
   }
@@ -203,7 +203,7 @@
     display: inline-block;
     margin: 0.7rem 0.5rem 0.2rem 0;
     padding: 1rem 2rem;
-    font-size: 1.4rem;
+    font-size: var(--font-size-smaller);
     letter-spacing: 0.1rem;
     line-height: 1;
     text-align: center;
@@ -365,9 +365,9 @@
     padding: 0 1rem;
   }
 
-  .product .price .badge {
-    margin-bottom: 0.5rem;
-  }
+//   .product .price .badge {
+//     margin-bottom: 0.5rem;
+//   }
 
 //   .product .price__container {
 //     margin-bottom: 0.5rem;

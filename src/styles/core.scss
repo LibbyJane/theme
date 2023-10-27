@@ -17,6 +17,8 @@
         ,"components/buttons/cart"
         ,"components/badges/card-badge"
         ,"components/badges/base"
+        ,"components/disclosure/details"
+        ,"components/disclosure/summary"
         ,"components/highlight"
         ,"components/icons/base"
         ,"components/icons/with-text"
@@ -24,9 +26,11 @@
         ,"components/forms/fieldsets"
         ,"components/forms/checkable"
         ,"components/forms/fields"
+
         ,"components/modals/base"
         ,"components/modals/search"
         ,"components/rte/base"
+        ,"components/shopify/challenge"
         ,"components/titles/base"
         ;
 
@@ -443,7 +447,7 @@
 // }
 
 // .caption-with-letter-spacing--large {
-//   font-size: 1.4rem;
+//   font-size: var(--font-size-smaller);
 //   letter-spacing: 0.18rem;
 // }
 
@@ -465,7 +469,7 @@
 // table:not([class]) {
 //   table-core: fixed;
 //   border-collapse: collapse;
-//   font-size: 1.4rem;
+//   font-size: var(--font-size-smaller);
 //   border-style: hidden;
 //   box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2);
 //   /* draws the table border  */
@@ -541,7 +545,7 @@
 //   text-underline-offset: 0.3rem;
 //   color: rgb(var(--color-link));
 //   background-color: transparent;
-//   font-size: 1.4rem;
+//   font-size: var(--font-size-smaller);
 //   font-family: inherit;
 // }
 
@@ -555,7 +559,7 @@
 
 // .link-with-icon {
 //   display: inline-flex;
-//   font-size: 1.4rem;
+//   font-size: var(--font-size-smaller);
 //   font-weight: 600;
 //   letter-spacing: 0.1rem;
 //   text-decoration: none;
@@ -916,7 +920,7 @@
 // }
 
 // .subtitle--small {
-//   font-size: 1.4rem;
+//   font-size: var(--font-size-smaller);
 //   letter-spacing: 0.1rem;
 // }
 
@@ -1442,7 +1446,7 @@
 // }
 
 // .share-button__button {
-//   font-size: 1.4rem;
+//   font-size: var(--font-size-smaller);
 //   display: flex;
 //   align-items: center;
 //   color: rgb(var(--color-link));
@@ -1871,7 +1875,7 @@
 // .form__message {
 //   align-items: center;
 //   display: flex;
-//   font-size: 1.4rem;
+//   font-size: var(--font-size-smaller);
 //   line-height: 1;
 //   margin-top: 1rem;
 // }
@@ -1881,7 +1885,7 @@
 // }
 
 // .customer .field .form__message {
-//   font-size: 1.4rem;
+//   font-size: var(--font-size-smaller);
 //   text-align: left;
 // }
 

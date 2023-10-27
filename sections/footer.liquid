@@ -27,15 +27,15 @@
   }
 {%- endstyle -%}
 
-<footer class="footer color-{{ section.settings.color_scheme }}  section-{{ section.id }}-padding">
+<footer class="footer color-{{ section.settings.color_scheme }} default-content-style section-{{ section.id }}-padding">
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
-      assign has_social_icons = false
+        assign has_social_icons = false
     endif
 
     if settings.brand_image == blank and settings.brand_headline == blank and settings.brand_description == blank
-      assign brand_empty = true
+        assign brand_empty = true
     endif
 
     if section.blocks.size == 1 and section.blocks[0].type == 'brand_information' and brand_empty and has_social_icons == false and section.settings.newsletter_enable == false and section.settings.enable_follow_on_shop == false
@@ -75,7 +75,7 @@
                 {% endif %}
               >
                 {%- if block.settings.heading != blank -%}
-                  <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
+                  <h5 class="inline-richtext">{{- block.settings.heading -}}</h5>
                 {%- endif -%}
 
                 {%- case block.type -%}
@@ -87,12 +87,12 @@
                     </div>
                   {%- when 'link_list' -%}
                     {%- if block.settings.menu != blank -%}
-                      <ul class="footer-block__details-content list-unstyled">
+                      <ul class="footer-block__details-content rte">
                         {%- for link in block.settings.menu.links -%}
                           <li>
                             <a
                               href="{{ link.url }}"
-                              class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                              class="list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
                             >
                               {{ link.title }}
                             </a>
@@ -122,7 +122,7 @@
                         </div>
                       {%- endif -%}
                       {%- if settings.brand_headline != blank -%}
-                        <h2 class="footer-block__heading rte">{{ settings.brand_headline }}</h2>
+                        <h5 class="rte">{{ settings.brand_headline }}</h5>
                       {%- endif -%}
                       {%- if settings.brand_description != blank -%}
                         <div class="rte">{{ settings.brand_description }}</div>
@@ -167,12 +167,12 @@
           {%- if section.settings.newsletter_enable -%}
             <div class="footer-block__newsletter">
               {%- if section.settings.newsletter_heading != blank -%}
-                <h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
+                <h5 class="inline-richtext">{{ section.settings.newsletter_heading }}</h5>
               {%- endif -%}
               {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
                 <div class="newsletter-form__field-wrapper">
-                  <div class="field">
+                  <div class="field field--single-line">
                     <input
                       id="NewsletterForm--{{ section.id }}"
                       type="email"

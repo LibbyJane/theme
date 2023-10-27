@@ -7,13 +7,16 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .field {
     --field-height: 4rem;
+    --border-width: var(--inputs-border-width);
+    --border-color: rgba(var(--color-foreground), var(--inputs-border-opacity));
+
     // border-radius: var(--inputs-border-radius);
     // border-bottom-left-radius: 0;
     display: grid;
     grid-template-areas: 'field-input';
     grid-template-columns: 1fr;
     gap: var(--space-sm);
-    border-bottom: var(--inputs-border-width) dashed rgba(var(--color-foreground), var(--inputs-border-opacity));
+    border-bottom: var(--border);
     padding-top: var(--space-med);
     margin: 0 0 var(--space-med);
     width: 100%;
@@ -33,6 +36,13 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .field__label {
     grid-area: field-input;
+    text-align: left;
+}
+
+.field__required {
+    color: rgba(var(--color-highlight));
+    cursor: help;
+    text-decoration: none;
 }
 
 .field__input {
@@ -44,11 +54,13 @@ input[type="search"]::-webkit-search-results-decoration {
     box-shadow: none;
     font-family: var(--font-heading-family);
     font-style: var(--font-heading-style);
-    font-size: calc(var(--font-heading-scale) * 1.4rem);
+    font-size: calc(var(--font-heading-scale) * 1.2rem);
     line-height: 1;
     min-height: var(--field-height);
     outline: 2px solid transparent;
     padding: 0 0 var(--space-sm);
+    text-align: left;
+    text-indent: 1px;
     width: 100%;
 
     .field--search & {
@@ -106,7 +118,9 @@ input[type="search"]::-webkit-search-results-decoration {
     }
 }
 
-
+textarea {
+    @include scrollbars;
+}
 
 
 // // eg search form
@@ -392,7 +406,7 @@ input[type="search"]::-webkit-search-results-decoration {
 // .form__message {
 //   align-items: center;
 //   display: flex;
-//   font-size: 1.4rem;
+//   font-size: var(--font-size-smaller);
 //   line-height: 1;
 //   margin-top: 1rem;
 // }
@@ -402,7 +416,7 @@ input[type="search"]::-webkit-search-results-decoration {
 // }
 
 // .customer .field .form__message {
-//   font-size: 1.4rem;
+//   font-size: var(--font-size-smaller);
 //   text-align: left;
 // }
 

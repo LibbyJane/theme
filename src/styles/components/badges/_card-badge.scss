@@ -1,4 +1,4 @@
-.card__badge {
+:root {
     --card-badge-offset: -3px;
     --card-shadow: 00,00,00;
     --card-badge-surface-shadow-left: linear-gradient(90deg,rgba(var(--card-shadow),0.8) 0%, rgba(var(--card-shadow),0.4) 100%);
@@ -8,7 +8,9 @@
     --card-badge-drop-shadow-transform-right: skewY(3deg) rotate(2deg) scaleX(90%) scaleY(75%) translateY(-4%);
     --card-badge-drop-shadow-right: 3px 5px 4px 1px rgba(var(--color-shadow),1);
     --card-badge-padding: 1rem;
+}
 
+.badge {
     border-radius: 0;
     display: flex;
         align-items: stretch;
@@ -39,7 +41,7 @@
     }
 }
 
-.card__badge-inner {
+.badge-inner {
     display: inline-block;
     font-family: inherit;
     font-size: inherit;
@@ -49,19 +51,19 @@
     text-transform: uppercase;
     transform: translateY(2px);
 
-    .card__badge--top-right &,
-    .card__badge--bottom-right & {
+    .badge--top-right &,
+    .badge--bottom-right & {
         padding-left: calc(var(--card-badge-padding)*2);
     }
 
-    .card__badge--top-left &,
-    .card__badge--bottom-left & {
+    .badge--top-left &,
+    .badge--bottom-left & {
         padding-right: calc(var(--card-badge-padding)*2);
     }
 }
 
-.card__badge--top-right,
-.card__badge--bottom-right {
+.badge--top-right,
+.badge--bottom-right {
     right: var(--card-badge-offset);
 
     &::before {
@@ -75,22 +77,22 @@
     }
 }
 
-.card__badge--top-left {
+.badge--top-left {
     top: calc(var(--card-badge-padding)/2);
     left: var(--card-badge-offset);
 }
 
-.card__badge--top-right {
+.badge--top-right {
     top: calc(var(--card-badge-padding)/2);
     right: var(--card-badge-offset);
 }
 
-.card__badge--bottom-left {
+.badge--bottom-left {
     bottom: calc(var(--card-badge-padding)/2);
     left: var(--card-badge-offset);
 }
 
-.card__badge--bottom-right {
+.badge--bottom-right {
     bottom: calc(var(--card-badge-padding)/2);
     right: var(--card-badge-offset);
 }

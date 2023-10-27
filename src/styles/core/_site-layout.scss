@@ -1,5 +1,6 @@
 :root {
     --inline-padding: var(--space-med);
+    --content-padding: var(--space-med) var(--inline-padding) var(--space-sm);
 
     @media screen and (min-width: 750px) {
         --inline-padding: var(--space-xxl);

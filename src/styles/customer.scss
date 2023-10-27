@@ -1,3 +1,6 @@
+@import "helpers/helpers";
+@import "components/buttons/button-bar";
+
 // .customer:not(.account):not(.order) {
 //   margin: 0 auto;
 //   max-width: 33.4rem;
@@ -7,7 +10,8 @@
 // }
 
 .customer__page-content {
-    padding: var(--space-med) var(--space-lg) var(--space-sm);
+    margin: 0 auto;
+    padding: var(--content-padding);
     position: relative;
     z-index: 1;
 }
@@ -22,6 +26,12 @@
         button[type="submit"] {
             width: 100%;
         }
+    }
+}
+
+.customer {
+    a {
+        @include underlined-link;
     }
 }
 
@@ -378,18 +388,18 @@
 
     &:target {
         display: block;
-    }
 
-    ~ #login {
-      display: none;
+        ~ #login {
+            display: none;
+          }
     }
 }
 
 
-#recover:target ~ #login,
-#recover:target ~ #login + div {
-    display: none;
-}
+// #recover:target ~ #login,
+// #recover:target ~ #login + div {
+//     display: none;
+// }
 
 #recover,
 #login {

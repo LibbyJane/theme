@@ -1,5 +1,6 @@
 .highlight {
     position: relative;
+    z-index: 1;
 
     &::before {
         background-color: rgba(var(--highlight-color), var(--highlight-opacity));

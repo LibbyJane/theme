@@ -42,6 +42,9 @@
 }
 
 .product__price {
+    position: relative;
+    z-index: var(--zi-base);
+
     .subtitle {
         .price-item {
             font-family: var(--font-heading-family);
@@ -53,6 +56,10 @@
     .price-item {
         font-size: calc(var(--price-font-scale) * 100%);
         line-height: 1;
+    }
+
+    .badge {
+        margin-left: calc((-1 * var(--space-lg)) - 2px);
     }
 }
 

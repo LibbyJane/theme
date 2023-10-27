@@ -177,7 +177,7 @@
 .disclosure__list {
     position: relative;
     overflow-y: auto;
-    font-size: 1.4rem;
+    font-size: var(--font-size-smaller);
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
     scroll-padding: 0.5rem 0;
@@ -221,7 +221,7 @@
 }
 
 .header-localization .disclosure .localization-form__select {
-  font-size: 1.4rem;
+  font-size: var(--font-size-smaller);
   letter-spacing: 0.06rem;
   height: auto;
   min-height: initial;

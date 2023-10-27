@@ -193,7 +193,7 @@
                 >
                 <label class="field__label" for="CommentForm-author">
                   {{- 'blogs.article.name' | t }}
-                  <span aria-hidden="true">*</span></label
+                  <abbr class="field__required" title="Required">*</abbr></label
                 >
                 {%- if form.errors contains 'author' -%}
                   <small id="CommentForm-author-error">
@@ -225,7 +225,7 @@
                 >
                 <label class="field__label" for="CommentForm-email">
                   {{- 'blogs.article.email' | t }}
-                  <span aria-hidden="true">*</span></label
+                  <abbr class="field__required" title="Required">*</abbr></label
                 >
                 {%- if form.errors contains 'email' -%}
                   <small id="CommentForm-email-error">
@@ -254,7 +254,7 @@
               >{{ form.body }}</textarea>
               <label class="form__label field__label" for="CommentForm-body">
                 {{- 'blogs.article.message' | t }}
-                <span aria-hidden="true">*</span></label
+                <abbr class="field__required" title="Required">*</abbr></label
               >
             </div>
             {%- if form.errors contains 'body' -%}

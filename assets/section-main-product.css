@@ -70,7 +70,7 @@
 .shopify-payment-button__button--unbranded {
   background-color: rgba(var(--color-button), var(--alpha-button-background));
   color: rgb(var(--color-button-text));
-  font-size: 1.4rem;
+  font-size: var(--font-size-smaller);
   line-height: calc(1 + 0.2 / var(--font-body-scale));
   letter-spacing: 0.07rem;
 }
@@ -165,7 +165,7 @@ fieldset.product-form__input .form__label {
   display: inline-block;
   margin: 0.7rem 0.5rem 0.2rem 0;
   padding: 1rem 2rem;
-  font-size: 1.4rem;
+  font-size: var(--font-size-smaller);
   letter-spacing: 0.1rem;
   line-height: 1;
   text-align: center;
@@ -290,10 +290,6 @@ a.product__text {
 
 .product__accordion .accordion__content {
   padding: 0 1rem;
-}
-
-.product .price .badge {
-  margin-bottom: 0.5rem;
 }
 
 .product .price dl {
@@ -1403,6 +1399,10 @@ a.product__text {
   display: none;
 }
 
+.product__price {
+  position: relative;
+  z-index: var(--zi-base);
+}
 .product__price .subtitle .price-item {
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
@@ -1411,6 +1411,9 @@ a.product__text {
 .product__price .price-item {
   font-size: calc(var(--price-font-scale) * 100%);
   line-height: 1;
+}
+.product__price .badge {
+  margin-left: calc(-1 * var(--space-lg) - 2px);
 }
 
 .product-form__buttons {
@@ -1851,11 +1854,15 @@ slider-component {
   pointer-events: none;
 }
 .quantity__button:first-child {
-  border-right: var(--inputs-border-width) dashed rgba(var(--color-foreground), calc(var(--inputs-border-opacity) / 4));
+  --border-width: var(--inputs-border-width);
+  --border-color: rgba(var(--color-foreground), calc(var(--inputs-border-opacity)/4));
+  border-right: var(--border);
   margin-left: calc(var(--inputs-border-width));
 }
 .quantity__button:last-child {
-  border-left: var(--inputs-border-width) dashed rgba(var(--color-foreground), calc(var(--inputs-border-opacity) / 4));
+  --border-width: var(--inputs-border-width);
+  --border-color: rgba(var(--color-foreground), calc(var(--inputs-border-opacity)/4));
+  border-left: var(--border);
   margin-right: calc(var(--inputs-border-width));
 }
 

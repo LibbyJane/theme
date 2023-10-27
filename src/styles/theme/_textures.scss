@@ -1,17 +1,22 @@
-.texture-paper,
-.default-content-style {
+@mixin default-texture() {
     background-color: rgb(var(--color-background));
-    background-blend-mode: color-burn;
-    background-image: url('texture-paper.jpg?v=3'), var(--background-image);
+    background-blend-mode: multiply;
+    background-image: url('texture-paper.jpg?v=3'), var(--background-gradient);
     background-position: top center, center;
     background-repeat: repeat;
     background-size: 200px auto, cover;
 }
 
+.texture-paper,
+.default-content-style,
+.shopify-challenge__container {
+   @include default-texture;
+}
+
 .texture-paper-craft {
     background-color: rgb(var(--color-background));
     background-blend-mode: multiply;
-    background-image: url('texture-paper-white.jpg'), var(--background-image);
+    background-image: url('texture-paper-white.jpg'), var(--background-gradient);
     background-position: top center, center;
     background-repeat: repeat;
     background-size: 100px auto, cover;
@@ -39,7 +44,7 @@
     background-image:
     linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
     linear-gradient(#eee .1rem, transparent .1rem),
-    var(--background-image);
+    var(--background-gradient);
     position: relative;
     padding-left: $border-size;
 
@@ -78,7 +83,7 @@
 .texture-torn {
     background-color: rgb(var(--color-background));
     background-blend-mode: multiply;
-    background-image: url('texture-paper.jpg?v=2'), var(--background-image);
+    background-image: url('texture-paper.jpg?v=2'), var(--background-gradient);
     background-position: top center, center;
     background-repeat: repeat, cover;
     box-shadow: 0 0 9rem rgba(var(--color-shadow), 0.05) inset;
@@ -95,7 +100,7 @@
     background-image:
         url('texture-paper-white.jpg'),
         linear-gradient(to bottom, rgba(var(--color-shadow), 0) 70%, rgba(var(--color-shadow), 0.15) 100%),
-        var(--background-image);
+        var(--background-gradient);
     background-position: top center, bottom center, center;
     background-repeat: repeat;
     background-size: 100px auto, cover, cover;
