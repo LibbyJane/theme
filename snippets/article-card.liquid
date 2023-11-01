@@ -23,8 +23,8 @@
         assign ratio = media_aspect_ratio
         endif
     -%}
-    <div class="article-card-wrapper card-wrapper underline-links-hover">
-        <article
+    <div class="article-card-wrapper card-wrapper">
+        <a href="{{ article.url }}"
             class="
                 card article-card
                 card--{{ settings.blog_card_style }}
@@ -78,9 +78,7 @@
             <div class="card__content">
                 <div class="card__information">
                     <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
-                        <a href="{{ article.url }}" class="full-unstyled-link">
                         {{ article.title | truncate: 50 | escape }}
-                        </a>
                     </h3>
                     <div class="article-card__info caption-with-letter-spacing h5">
                         {%- if show_date -%}
@@ -108,11 +106,11 @@
                 {%- endif -%}
                 </div>
                 {%- if show_badge -%}
-                <div class="card__badge {{ settings.badge_position }}">
-                    <span class="badge color-{{ settings.color_schemes | first }}">{{ 'blogs.article.blog' | t }}</span>
-                </div>
+                    <div class="card-badge card-badge--article card-badge--{{ settings.badge_position | replace: " ", "-" }} color-{{ settings.color_schemes | first }}">
+                        <span class="card-badge__inner">{{ 'blogs.article.blog' | t }}</span>
+                    </div>
                 {%- endif -%}
             </div>
-        </article>
+        </a>
     </div>
 {%- endif -%}

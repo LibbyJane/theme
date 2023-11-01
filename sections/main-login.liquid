@@ -91,7 +91,7 @@
             {%- endif -%}
             {%- form 'customer_login', novalidate: 'novalidate' -%}
                 {%- if form.errors -%}
-                    <h2 class="form__message" tabindex="-1" autofocus>
+                    <h2 class="form__message color--danger" tabindex="-1" autofocus>
                         <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
                         {%- render 'icon-alert' -%}
                         {{ 'templates.contact.form.error_heading' | t }}

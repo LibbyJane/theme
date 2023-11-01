@@ -74,6 +74,17 @@
     }
 }
 
+@keyframes scaleOutX40 {
+    0% {
+        transform: scaleX(100%);
+    }
+
+    100% {
+        transform: scaleX(40%);
+    }
+}
+
+
 
 @keyframes scaleX100Angled {
     0% {

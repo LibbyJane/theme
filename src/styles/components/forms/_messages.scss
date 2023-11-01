@@ -403,17 +403,18 @@ textarea {
 //   margin-bottom: 0.6rem;
 // }
 
-// .form__message {
-//   align-items: center;
-//   display: flex;
-//   font-size: var(--font-size-smaller);
-//   line-height: 1;
-//   margin-top: 1rem;
-// }
+.form__message {
+    display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: var(--space);
+    font-size: var(--font-size-h5);
+    line-height: 1;
+}
 
-// .form__message--large {
-//   font-size: 1.6rem;
-// }
+.form__message--large {
+  font-size: 1.6rem;
+}
 
 // .customer .field .form__message {
 //   font-size: var(--font-size-smaller);

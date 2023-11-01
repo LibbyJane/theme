@@ -2,7 +2,8 @@
 
 @import "core/reset"
         ,"core/typography"
-        ,"core/site-layout"
+        ,"core/site-layout/base"
+        ,"core/site-layout/grid"
         ,"core/site-header/base"
         ,"core/site-header/brand"
         ,"core/site-header/nav"
@@ -15,8 +16,8 @@
 @import
         "components/buttons/base"
         ,"components/buttons/cart"
-        ,"components/badges/card-badge"
         ,"components/badges/base"
+        ,"components/badges/card-badge"
         ,"components/disclosure/details"
         ,"components/disclosure/summary"
         ,"components/highlight"
@@ -26,7 +27,8 @@
         ,"components/forms/fieldsets"
         ,"components/forms/checkable"
         ,"components/forms/fields"
-
+        ,"components/forms/messages"
+        ,"components/forms/errors"
         ,"components/modals/base"
         ,"components/modals/search"
         ,"components/rte/base"
@@ -617,30 +619,6 @@
 
 // .break {
 //   word-break: break-word;
-// }
-
-// .visibility-hidden {
-//   visibility: hidden;
-// }
-
-// @media (prefers-reduced-motion) {
-//   .motion-reduce {
-//     transition: none !important;
-//     animation: none !important;
-//   }
-// }
-
-// :root {
-//   --duration-short: 100ms;
-//   --duration-default: 200ms;
-//   --duration-announcement-bar: 250ms;
-//   --duration-medium: 300ms;
-//   --duration-long: 500ms;
-//   --duration-extra-long: 600ms;
-//   --duration-extended: 3s;
-//   --ease-out-slow: cubic-bezier(0, 0, 0.3, 1);
-//   --animation-slide-in: slideIn var(--duration-extra-long) var(--ease-out-slow) forwards;
-//   --animation-fade-in: fadeIn var(--duration-extra-long) var(--ease-out-slow);
 // }
 
 // .underlined-link,

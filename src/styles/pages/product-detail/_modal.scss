@@ -175,7 +175,7 @@
   }
 
   .product-media-modal__toggle:hover {
-    color: rgba(var(--color-foreground), 0.75);
+    color: rgba(var(--color-foreground), var(--opacity-light));
   }
 
   .product-media-modal__toggle .icon {
@@ -328,7 +328,7 @@
   }
 
   .product-popup-modal__toggle:hover {
-    color: rgba(var(--color-foreground), 0.75);
+    color: rgba(var(--color-foreground), var(--opacity-light));
   }
 
   .product-popup-modal__toggle .icon {

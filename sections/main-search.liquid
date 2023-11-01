@@ -64,7 +64,7 @@
 {%- endstyle -%}
 
 {% paginate search.results by 24 %}
-    <section class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding page-width">
+    <section class="template-search template-search--{{section.settings.filter_type}} {% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding page-width">
         <header class="title-wrapper align-{{settings.title_alignment}}">
             <h1 class="h2 title inline-richtext texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
                 {%- if search.performed -%}
@@ -144,8 +144,8 @@
         </div>
         {%- if search.performed -%}
             {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' and search.filters != empty -%}
-                <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
-                    <form class="facets-vertical-form" id="FacetSortForm">
+                <facet-filters-form class="facets facets-vertical-sort small-hide no-js-hidden default-content-style">
+                    <form class="facets__form facets__form--vertical" id="FacetSortForm">
                         <div class="facet-filters sorting caption">
                             <div class="facet-filters__field">
                                 <h5 class="facet-filters__label text-body">
@@ -167,17 +167,17 @@
                         </div>
 
                         <div class="product-count-vertical light" role="status">
-                            <h2 class="product-count__text text-body">
+                            <p class="product-count__text">
                                 <span id="ProductCountDesktop">
-                                {%- if search.results_count -%}
-                                    {{ 'templates.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
-                                {%- elsif search.products_count == search.all_products_count -%}
-                                    {{ 'products.facets.product_count_simple' | t: count: search.products_count }}
-                                {%- else -%}
-                                    {{ 'products.facets.product_count' | t: product_count: search.products_count, count: search.all_products_count }}
-                                {%- endif -%}
+                                    {%- if search.results_count -%}
+                                        {{ 'templates.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
+                                    {%- elsif search.products_count == search.all_products_count -%}
+                                        {{ 'products.facets.product_count_simple' | t: count: search.products_count }}
+                                    {%- else -%}
+                                        {{ 'products.facets.product_count' | t: product_count: search.products_count, count: search.all_products_count }}
+                                    {%- endif -%}
                                 </span>
-                            </h2>
+                            </p>
                             <div class="loading-overlay__spinner">
                                 {% render 'icon-loading' %}
                             </div>
@@ -186,17 +186,17 @@
                 </facet-filters-form>
             {%- endif -%}
 
-            <div{% if section.settings.filter_type == 'vertical' %} class="facets-vertical page-width"{% endif %}>
+            <div class="facets-{{section.settings.filter_type}}">
                 {%- if search.filters != empty -%}
                     {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-                        <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %} default-content-style" id="main-search-filters" data-id="{{ section.id }}">
+                        <aside aria-labelledby="verticalTitle" class="facets-wrapper facets-wrapper--{{section.settings.filter_type}} {% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %} default-content-style" id="main-search-filters" data-id="{{ section.id }}">
                             {% render 'facets', results: search, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: section.settings.filter_type, paginate: paginate %}
                         </aside>
                     {%- endif -%}
                 {%- endif -%}
                 <div class="product-grid-container" id="ProductGridContainer">
                     {%- if search.results.size == 0 and search.filters != empty -%}
-                        <div class="template-search__results collection collection--empty{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}" id="product-grid" data-id="{{ section.id }}">
+                        <div class="template-search__results collection collection--empty" id="product-grid" data-id="{{ section.id }}">
                             <div class="loading-overlay "></div>
                             <div class="title-wrapper center">
                                 <h2 class="title title--primary">
@@ -252,7 +252,7 @@
                                                 </a>
                                                 </h3>
                                             </div>
-                                            <div class="card__badge {{ settings.badge_position }}">
+                                            <div class="card-badge {{ settings.badge_position }}">
                                                 <span class="badge color-{{ settings.color_schemes | first }}">{{ 'templates.search.page' | t }}</span>
                                             </div>
                                             </div>

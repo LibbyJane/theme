@@ -96,7 +96,7 @@ a,
 
                 @for $i from 1 through 10 {
                     &:nth-child(#{$i}) {
-                        animation-delay: calc(var(--duration-short)  * #{$i});
+                        animation-delay: calc(var(--duration-short) * #{$i});
                     }
                 }
             }
@@ -135,6 +135,14 @@ a,
 
     .icon-filter {
         --path-length: 46;
+    }
+
+    .icon-funnel {
+        --path-length: 42;
+    }
+
+    .icon-funnel-clear {
+        --path-length: 45;
     }
 }
 

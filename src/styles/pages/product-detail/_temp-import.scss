@@ -333,7 +333,7 @@
   a.product__text {
     display: block;
     text-decoration: none;
-    color: rgba(var(--color-foreground), 0.75);
+    color: rgba(var(--color-foreground), var(--opacity-light));
   }
 
   .product__text.caption-with-letter-spacing {
@@ -856,7 +856,7 @@
   }
 
   .product-media-modal__toggle:hover {
-    color: rgba(var(--color-foreground), 0.75);
+    color: rgba(var(--color-foreground), var(--opacity-light));
   }
 
   .product-media-modal__toggle .icon {
@@ -1009,7 +1009,7 @@
   }
 
   .product-popup-modal__toggle:hover {
-    color: rgba(var(--color-foreground), 0.75);
+    color: rgba(var(--color-foreground), var(--opacity-light));
   }
 
   .product-popup-modal__toggle .icon {
@@ -1179,7 +1179,7 @@
 
   .product__modal-opener .path {
     stroke: rgb(var(--color-button));
-    opacity: 0.75;
+    opacity: var(--opacity-light);
   }
 
   @media (hover: hover) {

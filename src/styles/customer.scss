@@ -32,6 +32,8 @@
 .customer {
     a {
         @include underlined-link;
+        display: inline-flex;
+        flex-direction: column;
     }
 }
 

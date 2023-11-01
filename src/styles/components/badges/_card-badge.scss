@@ -1,31 +1,34 @@
 :root {
-    --card-badge-offset: -3px;
+    --card-badge-offset: -4px;
     --card-shadow: 00,00,00;
-    --card-badge-surface-shadow-left: linear-gradient(90deg,rgba(var(--card-shadow),0.8) 0%, rgba(var(--card-shadow),0.4) 100%);
-    --card-badge-drop-shadow-transform-left: skewY(-1deg) scaleY(96%) translateX(2%) translateY(-5%)
-    --card-badge-drop-shadow-left:  3px 3px 4px 1px rgba(var(--color-shadow),1);
-    --card-badge-surface-shadow-right:  linear-gradient(90deg, rgba(var(--card-shadow),0.4) 0%, rgba(var(--card-shadow),0.8) 100%);
+    --card-badge-surface-shadow-left: linear-gradient(-90deg,rgba(var(--card-shadow), 0.06) 0%, rgba(var(--card-shadow), 0.05) 50%, rgba(var(--card-shadow), 0) 100%);
+    --card-badge-drop-shadow-transform-left: skewY(-1deg) scaleY(75%) translateY(-1%);
+    --card-badge-drop-shadow-left:  3px 3px 4px 1px rgba(var(--color-shadow), 1);
+    --card-badge-surface-shadow-right: linear-gradient(-90deg,rgba(var(--card-shadow), 0.06) 0%, rgba(var(--card-shadow), 0.05) 50%, rgba(var(--card-shadow), 0) 100%);
     --card-badge-drop-shadow-transform-right: skewY(3deg) rotate(2deg) scaleX(90%) scaleY(75%) translateY(-4%);
     --card-badge-drop-shadow-right: 3px 5px 4px 1px rgba(var(--color-shadow),1);
-    --card-badge-padding: 1rem;
+    --card-badge-padding: 1.2rem;
 }
 
-.badge {
+.card-badge {
+
+
     border-radius: 0;
     display: flex;
         align-items: stretch;
-        font-size: calc(var(--font-body-scale) * 75%);
+        font-size: var(--h6);
         line-height: 1;
         font-family: var(--font-heading-family);
     position: absolute;
 
     &::before {
-        background: rgb(var(--color-background)), var(--card-badge-surface-shadow-left);
+        background-color: rgb(var(--color-background));
+        background-image: var(--card-badge-surface-shadow-left);
         background-blend-mode: multiply;
         content: '';
         display: inline-block;
-        opacity: 0.1;
-        mix-blend-mode: multiply;
+        // opacity: 0.1;
+        // mix-blend-mode: multiply;
         width: calc(var(--card-badge-padding)*2);
     }
 
@@ -33,6 +36,8 @@
         background-color: rgba(var(--color-shadow),1);
         box-shadow: var(--card-badge-drop-shadow-left);
         content: '';
+        mix-blend-mode: multiply;
+        opacity: 0.1;
         pointer-events: none;
         position: absolute;
         inset: 0;
@@ -41,29 +46,42 @@
     }
 }
 
-.badge-inner {
+.card-badge--article {
+    --card-badge-offset: -1px;
+}
+
+.card-badge__inner {
+    @include sharp-text;
     display: inline-block;
     font-family: inherit;
     font-size: inherit;
-    font-weight: bold;
+    // font-weight: bold;
+    min-width: 10rem;
     line-height: 1;
     padding: var(--card-badge-padding);
+    text-align: center;
     text-transform: uppercase;
-    transform: translateY(2px);
+    transform: translateY(1px);
 
-    .badge--top-right &,
-    .badge--bottom-right & {
+    .card-badge--article & {
+        // font-weight: var(--font-heading-weight);
+        opacity: var(--opacity-partial);
+        text-transform: none;
+    }
+
+    .card-badge--top-right &,
+    .card-badge--bottom-right & {
         padding-left: calc(var(--card-badge-padding)*2);
     }
 
-    .badge--top-left &,
-    .badge--bottom-left & {
+    .card-badge--top-left &,
+    .card-badge--bottom-left & {
         padding-right: calc(var(--card-badge-padding)*2);
     }
 }
 
-.badge--top-right,
-.badge--bottom-right {
+.card-badge--top-right,
+.card-badge--bottom-right {
     right: var(--card-badge-offset);
 
     &::before {
@@ -77,22 +95,22 @@
     }
 }
 
-.badge--top-left {
+.card-badge--top-left {
     top: calc(var(--card-badge-padding)/2);
     left: var(--card-badge-offset);
 }
 
-.badge--top-right {
+.card-badge--top-right {
     top: calc(var(--card-badge-padding)/2);
     right: var(--card-badge-offset);
 }
 
-.badge--bottom-left {
+.card-badge--bottom-left {
     bottom: calc(var(--card-badge-padding)/2);
     left: var(--card-badge-offset);
 }
 
-.badge--bottom-right {
+.card-badge--bottom-right {
     bottom: calc(var(--card-badge-padding)/2);
     right: var(--card-badge-offset);
 }

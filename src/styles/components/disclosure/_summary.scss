@@ -35,8 +35,16 @@ summary {
     position: relative;
 }
 
-  .disclosure-has-popup[open] > summary::before {
-
+.disclosure-has-popup[open] > summary::before {
+        background: var(--overlay-color);
+        content: " ";
+        cursor: default;
+        display: block;
+        opacity: 0.5;
+        position: fixed;
+        inset: 0;
+        z-index: 2;
+        z-index: 2;
   }
 
   .disclosure-has-popup > summary::before {

@@ -47,12 +47,14 @@
         endif
 
         if showBadge
-            assign badgeClass = 'card__badge--' | concat: badgePosition
+            assign badgeClass = 'card-badge--' | concat: badgePosition
         endif
     -%}
 
-    <div class="
-        card card--{{ settings.card_style }}
+    <a
+        href="{{ card_product.url }}"
+        id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
+        class="card card--{{ settings.card_style }}
         color-{{ settings.card_color_scheme }}
         {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
         {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} {% endif %}
@@ -63,11 +65,10 @@
         {% if showBadge %} card--badge-{{badgePosition}}{% endif %}
         "
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+        aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
     >
         {%- if card_product.featured_media -%}
-            <a
-                href="{{ card_product.url }}"
-                class="card__media media--hover-effect
+            <div class="card__media media--hover-effect
                     {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} {% endif %}
                     card__media--{{media_aspect_ratio}}
                     "
@@ -114,7 +115,7 @@
                     height="{{ card_product.media[1].height }}"
                 >
                 {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
-            </a>
+            </div>
         {%- endif -%}
 
         <div class="card__content">
@@ -125,14 +126,7 @@
                         id="title-{{ section_id }}-{{ card_product.id }}"
                     {% endif %}
                 >
-                    <a
-                        href="{{ card_product.url }}"
-                        id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
-                        class="full-unstyled-link"
-                        aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
-                    >
-                        {{ card_product.title | escape }}
-                    </a>
+                    {{ card_product.title | escape }}
                 </h3>
                 {%- if show_vendor -%}
                     <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
@@ -189,18 +183,18 @@
             {% render 'quick-add', card_product: card_product, horizontal_quick_add: horizontal_quick_add, section_id: section_id %}
         {%- endif -%}
         {% if showBadge %}
-            <div class="card__badge
+            <div class="card-badge
                 {% if card_product.available -%}
-                    {{ }}card__badge--{{ settings.badge_position | replace: " ", "-" }}
+                    {{ }}card-badge--{{ settings.badge_position | replace: " ", "-" }}
                     {% if card_product.compare_at_price > card_product.price -%}
                         {{ }}color-{{ settings.sale_badge_color_scheme }}
                     {%- endif -%}
                 {% else -%}
-                    {{ }}color-{{ settings.sold_out_badge_color_scheme }} card__badge--bottom-left
+                    {{ }}color-{{ settings.sold_out_badge_color_scheme }} card-badge--bottom-left
                 {%- endif -%}
             ">
                 <span
-                    class="card__badge-inner"
+                    class="card-badge__inner"
                     id="
                     {%- if card_product.available == false -%}
                         NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}
@@ -218,7 +212,7 @@
 
             </div>
         {%- endif -%}
-    </div>
+        </a>
     <!-- {%- if card_product.featured_media and show_secondary_image and card_product.media[1] != null -%}
         <div class="card__media media--hover-effect {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} {% endif %}">
             {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}

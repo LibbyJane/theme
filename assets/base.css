@@ -428,12 +428,6 @@ hr {
   display: block;
 }
 
-.placeholder {
-  background-color: rgba(var(--color-foreground), 0.04);
-  color: rgba(var(--color-foreground), 0.55);
-  fill: rgba(var(--color-foreground), 0.55);
-}
-
 details > * {
   box-sizing: border-box;
 }
@@ -442,29 +436,6 @@ details > * {
   word-break: break-word;
 }
 
-.visibility-hidden {
-  visibility: hidden;
-}
-
-@media (prefers-reduced-motion) {
-  .motion-reduce {
-    transition: none !important;
-    animation: none !important;
-  }
-}
-
-:root {
-  --duration-short: 100ms;
-  --duration-default: 200ms;
-  --duration-announcement-bar: 250ms;
-  --duration-medium: 300ms;
-  --duration-long: 500ms;
-  --duration-extra-long: 600ms;
-  --duration-extended: 3s;
-  --ease-out-slow: cubic-bezier(0, 0, 0.3, 1);
-  --animation-slide-in: slideIn var(--duration-extra-long) var(--ease-out-slow) forwards;
-  --animation-fade-in: fadeIn var(--duration-extra-long) var(--ease-out-slow);
-}
 
 
 .icon-arrow {
@@ -1565,7 +1536,7 @@ details-disclosure > details {
   .overflow-hidden-tablet {
     overflow: auto;
   }
-}
+/* }
 
 .badge {
   border: 1px solid transparent;
@@ -1580,7 +1551,7 @@ details-disclosure > details {
   border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
   color: rgb(var(--color-badge-foreground));
   word-break: break-word;
-}
+} */
 
 .gradient {
   background: rgb(var(--color-background));

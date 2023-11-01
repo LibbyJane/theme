@@ -69,7 +69,9 @@
         padding: 0;
 
         @media screen and (min-width: 750px) {
-            border-bottom: var(--inputs-border-width) dashed rgba(var(--color-foreground), 0.25);
+            --border-width: var(--inputs-border-width);
+            --border-color: var(--border-color-light);
+            border-bottom: var(--border);
             padding: var(--space);
 
             &:first-child {
@@ -243,7 +245,7 @@
 }
 
 .cart-remove__button {
-    color: rgba(var(--color-foreground), 0.75);
+    color: rgba(var(--color-foreground), var(--opacity-light));
     display: flex;
     min-width: calc(4.5rem / var(--font-body-scale));
     min-height: 4.5rem;

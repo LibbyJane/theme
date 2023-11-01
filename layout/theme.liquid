@@ -74,10 +74,15 @@
                 --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
                 --color-badge-border: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
                 --payment-terms-background-color: rgb({{ scheme.settings.background.rgb }});
-                accent-color: rgba(250, 15, 117);
-
             }
         {% endfor %}
+
+        :root {
+            accent-color: rgba(250, 15, 117);
+            --color-danger: rgb(235,15,46);
+            --white: rgb(255,255,255);
+            --black: rgb(0,0,0);
+        }
 
         {{ scheme_classes | prepend: 'body' }} {
             color: rgba(var(--color-foreground), 1);

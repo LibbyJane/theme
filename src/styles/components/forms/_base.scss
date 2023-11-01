@@ -1,3 +1,11 @@
+
+.placeholder {
+    background-color: rgba(var(--color-foreground), 0.04);
+    color: rgba(var(--color-foreground), 0.55);
+    fill: rgba(var(--color-foreground), 0.55);
+  }
+
+
 // form {
 //     &.has-max-width {
 //         max-width: var(--max-form-width);

@@ -1,12 +1,3 @@
-@mixin default-texture() {
-    background-color: rgb(var(--color-background));
-    background-blend-mode: multiply;
-    background-image: url('texture-paper.jpg?v=3'), var(--background-gradient);
-    background-position: top center, center;
-    background-repeat: repeat;
-    background-size: 200px auto, cover;
-}
-
 .texture-paper,
 .default-content-style,
 .shopify-challenge__container {

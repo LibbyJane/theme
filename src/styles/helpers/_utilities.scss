@@ -26,3 +26,24 @@
     text-align: center;
     margin-inline: auto;
 }
+
+.color--danger {
+    color: var(--color-danger) !important;
+}
+
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
+.break {
+    word-break: break-word;
+}
+
+
+@media (prefers-reduced-motion) {
+    .motion-reduce {
+        transition: none !important;
+        animation: none !important;
+    }
+}

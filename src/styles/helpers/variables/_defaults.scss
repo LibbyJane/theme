@@ -9,6 +9,8 @@
     --border-style: dashed;
     --border-color: currentColor;
     --border-color-light: rgba(var(--color-foreground), 0.25);
+    --border-color-ultralight: rgba(var(--color-foreground), 0.08);
 
     --border: var(--border-width) var(--border-style) var(--border-color);
+    --border-thin: thin solid var(--border-color);
 }

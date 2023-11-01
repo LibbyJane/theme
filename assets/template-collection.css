@@ -17,7 +17,7 @@
   display: none;
   width: 100%;
   padding: 0 1.5rem;
-  opacity: 0.7;
+  opacity: var(--opacity-light);
 }
 
 @media screen and (min-width: 750px) {
