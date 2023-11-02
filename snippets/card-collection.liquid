@@ -92,13 +92,13 @@
                                 {{ 'onboarding.collection_title' | t }}
                             {%- endif -%}
                             {%- if card_collection.description == blank -%}
-                                <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+                                {% render 'icon-arrow' %}
                             {%- endif %}
                         </h3>
                         {%- if card_collection.description != blank -%}
                             <p class="card__caption">
                                 {{- card_collection.description | strip_html | truncatewords: 12 -}}
-                            <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
+                                {% render 'icon-arrow' %}
                             </p>
                         {%- endif -%}
                     </div>
@@ -116,7 +116,7 @@
                         {{ 'onboarding.collection_title' | t }}
                         {%- endif -%}
                         {%- if card_collection.featured_image or card_collection.description == blank -%}
-                        <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+                        {% render 'icon-arrow' %}
                         {%- endif %}
                     </h3>
                     {%- if card_collection.featured_image == null and card_collection.description != blank -%}
@@ -134,7 +134,7 @@
                 <div class="card__information">
                     <h3 class="card__heading card__heading--placeholder">
                         {{ 'onboarding.collection_title' | t }}
-                        <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+                        {% render 'icon-arrow' %}
                     </h3>
                 </div>
             </div>

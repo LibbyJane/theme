@@ -1,0 +1,19 @@
+button,
+.button {
+    &.loading {
+        > .loading-overlay__spinner {
+                display: flex;
+            }
+    }
+
+    > .loading-overlay__spinner {
+        position: absolute;
+            inset: 0;
+        display: none;
+        align-items: center;
+
+        .spinner {
+            width: fit-content;
+        }
+    }
+}

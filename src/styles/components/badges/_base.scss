@@ -16,16 +16,46 @@
 
 /* HTML: <div class="ribbon">Your content</div> */
 .badge {
-    --r: .8em; /* control the cutout */
+    --r: .8rem; /* control the cutout */
+    background: transparent;
+    font-family: var(--font-heading-family);
+    font-size: var(--font-size-smaller);
+    line-height: 1.2;
+    padding: var(--space) var(--space-lg) var(--space) var(--space-med);
+    position: relative;
+    text-transform: uppercase;
 
-    border-block: .5em solid #0000;
-    padding-inline: .5em calc(var(--r) + .25em);
-    line-height: 1.8;
-    clip-path: polygon(100% 0,0 0,0 100%,100% 100%,calc(100% - var(--r)) calc(100% - .25em),100% 50%,calc(100% - var(--r)) .25em);
-    background:
-     radial-gradient(.2em 50% at left,#000a,#0000) border-box,
-     #45ADA8 padding-box; /* the color  */
-  }
+    &::before {
+        content: '';
+        position: absolute;
+        filter: drop-shadow(var(--space-lg) 0rem var(--space) rgba(var(--color-shadow), 0.3));
+        z-index: -1;
+        background: rgb(var(--color-background));
+        top: var(--space);
+        right: var(--space-med);
+        bottom: var(--space);
+        left: var(--space-lg);
+        mix-blend-mode: color-burn;
+    }
+
+    &::after
+    {
+
+        /* HTML: <div class="ribbon">Your content</div> */
+
+
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-block: .5rem solid #0000;
+        clip-path: polygon(100% 0,0 0,0 100%,100% 100%,100% calc(100% - .25em),calc(100% - var(--r)) 50%,100% .25em);
+        background: radial-gradient(.2rem 50% at left,#000a,#0000) border-box, rgb(var(--color-background)) padding-box; /* the color  */
+        padding-inline: var(--space-sm) calc(var(--r) + .25rem);
+        transform: translateY(-1px);
+        z-index: -1;
+    }
+
+}
 
 // /* HTML: <div class="ribbon">Your content</div> */
 // .ribbon {

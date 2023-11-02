@@ -57,7 +57,6 @@
 {%- endif -%}
 
 <section class="color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}{% endif %}">
-    <h1>featured-product</h1>
     <div class="page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}">
         <div class="featured-product product product--{{ section.settings.media_size }} product--gallery-{{ section.settings.media_position }} grid grid--1-col  color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 or product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
 
@@ -509,7 +508,7 @@
             {% else %}
               href="{{ product.url }}"
             {% endif %}
-            class="link product__view-details animate-arrow"
+            class="product__view-details animate-arrow"
           >
             {{ 'products.product.view_full_details' | t }}
             {% render 'icon-arrow' %}
