@@ -1,7 +1,14 @@
 :root {
+  --corner-shadow-alpha: 0.25;
+  --corner-size: 15px;
+  --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
+}
+
+:root {
   --transition-type: ease-in-out;
   --page-margin: var(--space-xxxl) auto;
   --content-padding-inline: var(--space-lg);
+  --full-width-offset-margin: calc(var(--content-padding-inline) * -1);
   --content-padding: var(--space-med) var(--content-padding-inline) var(--space-sm);
   --border-width: 2px;
   --border-style: dashed;
@@ -23,6 +30,7 @@
   --space-xxxl: 7rem;
   --icon-size-default: 1.5rem;
   --icon-size-lg: 2rem;
+  --icon-size-xl: 3rem;
   --opacity-full: 1;
   --opacity-partial: 0.85;
   --opacity-light: 0.7;
@@ -64,6 +72,7 @@
   --card-media-box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
   rgba(var(--color-shadow), var(--media-shadow-opacity));
   --card-image-offset: var(--product-card-image-offset);
+  --crease: linear-gradient(to bottom, rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), 0.05) 100%);
 }
 
 .collection-card-wrapper .card,
@@ -185,15 +194,17 @@
     animation: none !important;
   }
 }
-.footer-block__details-content ul a {
+.footer-block__details-content a {
   position: relative;
   z-index: 1;
+  display: inline-flex;
+  padding-bottom: 2px;
 }
-.footer-block__details-content ul a:hover::after, .footer-block__details-content ul a:focus::after {
+.footer-block__details-content a:hover::after, .footer-block__details-content a:focus::after {
   animation: scaleX100 var(--duration-medium) var(--transition-type) forwards;
   transform-origin: bottom left;
 }
-.footer-block__details-content ul a::after {
+.footer-block__details-content a::after {
   animation: scaleOutX100 var(--duration-medium) var(--transition-type) reverse;
   -webkit-mask-image: url(mask-underline.svg);
           mask-image: url(mask-underline.svg);
@@ -215,10 +226,9 @@
   transform-origin: bottom right;
 }
 .footer-block__details-content .list-menu__item--active {
-  opacity: 0.8;
+  filter: grayscale(1);
   pointer-events: none;
-  -webkit-text-decoration: strikethrough;
-          text-decoration: strikethrough;
+  opacity: 0.6;
 }
 
 .footer__copyright a {

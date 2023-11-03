@@ -18,9 +18,10 @@
     }
 }
 
-// .product__lead-in {
-
-// }
+.product__lead-in {
+    margin: 0;
+    padding: o;
+}
 
 
 // .product__lead-in,
@@ -58,9 +59,9 @@
         line-height: 1;
     }
 
-    .badge {
-        margin-left: calc((-1 * var(--space-lg)) - 2px);
-    }
+    // .badge {
+    //     margin-left: calc((-1 * var(--space-lg)) - 2px);
+    // }
 }
 
 .product-form__buttons {

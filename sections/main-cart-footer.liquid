@@ -39,17 +39,17 @@
 </script>
 
 <div class="cart__footer-outer page-width {% if cart == empty %} is-empty {% endif %}" id="main-cart-footer" data-id="{{ section.id }}">
-    <div class="cart__footer default-content-style section-{{ section.id }}-padding">
+    <div class="cart__footer default-content-style content-padding section-{{ section.id }}-padding">
         {%- if settings.show_cart_note -%}
             <cart-note class="cart__note field">
-            <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
-            <textarea
+                <textarea
                 class="text-area field__input"
                 name="note"
                 form="cart"
                 id="Cart-note"
                 placeholder="{{ 'sections.cart.note' | t }}"
             >{{ cart.note }}</textarea>
+                <label class="field__label" for="Cart-note">{{ 'sections.cart.note' | t }}</label>
             </cart-note>
         {%- endif -%}
 

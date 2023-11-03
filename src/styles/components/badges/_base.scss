@@ -1,82 +1,131 @@
-// .badge {
-//     border: 1px solid transparent;
-//     /* border-radius: var(--badge-corner-radius); */
-//     display: inline-block;
-//     font-size: 1.2rem;
-//     letter-spacing: .1rem;
-//     line-height: 1;
-//     padding: 0.5rem 1.3rem 0.6rem;
-//     text-align: center;
-//     background-color: rgb(var(--color-badge-background));
-//     border-color: rgba(var(--color-badge-border),var(--alpha-badge-border));
-//     color: rgb(var(--color-badge-foreground));
-//     word-break: break-word;
-//     display: block;
-// }
+:root {
+    --cnr-size: 1rem;
+    --cnr-size-inverse: calc(100% - var(--cnr-size));
+}
 
-/* HTML: <div class="ribbon">Your content</div> */
 .badge {
-    --r: .8rem; /* control the cutout */
-    background: transparent;
+    // --corner-offset: 12px;
+    @include corners;
+
     font-family: var(--font-heading-family);
     font-size: var(--font-size-smaller);
     line-height: 1.2;
-    padding: var(--space) var(--space-lg) var(--space) var(--space-med);
+    // text-transform: uppercase;
+}
+
+.badge__inner {
+    @include sharp-text;
+    clip-path: polygon(
+    var(--cnr-size) 0, 100% 0,
+    100% var(--cnr-size-inverse),
+    var(--cnr-size-inverse) 100%,
+    0 100%,
+    0 var(--cnr-size));
+    display: block;
+    font-size: var(--font-size-smaller);
+    letter-spacing: var(--letter-spacing);
+    line-height: 1;
+    padding: var(--space) var(--space-lg);
     position: relative;
-    text-transform: uppercase;
-
-    &::before {
-        content: '';
-        position: absolute;
-        filter: drop-shadow(var(--space-lg) 0rem var(--space) rgba(var(--color-shadow), 0.3));
-        z-index: -1;
-        background: rgb(var(--color-background));
-        top: var(--space);
-        right: var(--space-med);
-        bottom: var(--space);
-        left: var(--space-lg);
-        mix-blend-mode: color-burn;
-    }
-
-    &::after
-    {
-
-        /* HTML: <div class="ribbon">Your content</div> */
+    background: rgb(var(--color-background)) radial-gradient(ellipse farthest-corner at center center, rgb(var(--color-background)) 50%, rgba(var(--color-shadow),0.15) 100%);
+    background: linear-gradient(135deg, rgba(var(--color-shadow),0.75) 5%, rgb(var(--color-background)) 12%, rgb(var(--color-background)) 88%, rgba(var(--color-shadow),0.75) 95%), linear-gradient(180deg, rgba(var(--color-shadow),0.2) 0%, rgba(var(--color-shadow),0) 5%, rgba(var(--color-shadow),0) 95%, rgba(var(--color-shadow),0.2) 100%);
+    // background-blend-mode: multiply;
 
 
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-block: .5rem solid #0000;
-        clip-path: polygon(100% 0,0 0,0 100%,100% 100%,100% calc(100% - .25em),calc(100% - var(--r)) 50%,100% .25em);
-        background: radial-gradient(.2rem 50% at left,#000a,#0000) border-box, rgb(var(--color-background)) padding-box; /* the color  */
-        padding-inline: var(--space-sm) calc(var(--r) + .25rem);
-        transform: translateY(-1px);
-        z-index: -1;
-    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     inset: 0;
+    //     background: rgb(var(--color-background));
+    //     background:
+    //         linear-gradient(135deg, rgba(var(--color-shadow),0.75) 5%, rgb(var(--color-background)) 12%, rgb(var(--color-background)) 88%, rgba(var(--color-shadow),0.75) 95%),
+    //         linear-gradient(180deg, rgba(var(--color-shadow),0.2) 0%, rgba(var(--color-shadow),0) 5%, rgba(var(--color-shadow),0) 95%, rgba(var(--color-shadow),0.2) 100%);
+    //     background-blend-mode: multiply;
+
+    // }
+
 
 }
 
+// // .badge {
+// //     border: 1px solid transparent;
+// //     /* border-radius: var(--badge-corner-radius); */
+// //     display: inline-block;
+// //     font-size: 1.2rem;
+// //     letter-spacing: .1rem;
+// //     line-height: 1;
+// //     padding: 0.5rem 1.3rem 0.6rem;
+// //     text-align: center;
+// //     background-color: rgb(var(--color-badge-background));
+// //     border-color: rgba(var(--color-badge-border),var(--alpha-badge-border));
+// //     color: rgb(var(--color-badge-foreground));
+// //     word-break: break-word;
+// //     display: block;
+// // }
+
 // /* HTML: <div class="ribbon">Your content</div> */
-// .ribbon {
-//     --f: .5em; /* control the folded part*/
-//     --r: .8em; /* control the ribbon shape */
-
-//     position: absolute;
-//     bottom: 20px;
-//     left: calc(-1*var(--f));
-//     padding-inline: .25em;
-//     line-height: 1.8;
-//     background: #E3AD40;
-//     border-top: var(--f) solid #0005;
-//     border-right: var(--r) solid #0000;
-//     line-height: 1;
-//     padding: var(--card-badge-padding);
-//     text-align: center;
+// .badge {
+//     --r: .8rem; /* control the cutout */
+//     background: transparent;
+//     font-family: var(--font-heading-family);
+//     font-size: var(--font-size-smaller);
+//     line-height: 1.2;
+//     padding: var(--space) var(--space-lg) var(--space) var(--space-med);
+//     position: relative;
 //     text-transform: uppercase;
-//     clip-path: polygon(0 100%,0 var(--f),var(--f) 0,
-//         var(--f) var(--f),100% var(--f),
-//         calc(100% - var(--r)) calc(50% + var(--f)/2),100% 100%);
-//         word-break: break-word;
 
-//   }
+//     &::before {
+//         content: '';
+//         position: absolute;
+//         filter: drop-shadow(var(--space-lg) 0rem var(--space) rgba(var(--color-shadow), 0.3));
+//         z-index: -1;
+//         background: rgb(var(--color-background));
+//         top: var(--space);
+//         right: var(--space-med);
+//         bottom: var(--space);
+//         left: var(--space-lg);
+//         mix-blend-mode: color-burn;
+//     }
+
+//     &::after
+//     {
+
+//         /* HTML: <div class="ribbon">Your content</div> */
+
+
+//         content: '';
+//         position: absolute;
+//         inset: 0;
+//         border-block: .5rem solid #0000;
+//         clip-path: polygon(100% 0,0 0,0 100%,100% 100%,100% calc(100% - .25em),calc(100% - var(--r)) 50%,100% .25em);
+//         background: radial-gradient(.2rem 50% at left,#000a,#0000) border-box, rgb(var(--color-background)) padding-box; /* the color  */
+//         padding-inline: var(--space-sm) calc(var(--r) + .25rem);
+//         transform: translateY(-1px);
+//         z-index: -1;
+//     }
+
+// }
+
+// // /* HTML: <div class="ribbon">Your content</div> */
+// // .ribbon {
+// //     --f: .5em; /* control the folded part*/
+// //     --r: .8em; /* control the ribbon shape */
+
+// //     position: absolute;
+// //     bottom: 20px;
+// //     left: calc(-1*var(--f));
+// //     padding-inline: .25em;
+// //     line-height: 1.8;
+// //     background: #E3AD40;
+// //     border-top: var(--f) solid #0005;
+// //     border-right: var(--r) solid #0000;
+// //     line-height: 1;
+// //     padding: var(--card-badge-padding);
+// //     text-align: center;
+// //     text-transform: uppercase;
+// //     clip-path: polygon(0 100%,0 var(--f),var(--f) 0,
+// //         var(--f) var(--f),100% var(--f),
+// //         calc(100% - var(--r)) calc(50% + var(--f)/2),100% 100%);
+// //         word-break: break-word;
+
+// //   }

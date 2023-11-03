@@ -160,10 +160,10 @@
                                 <details id="Details-{{ block.id }}-{{ section.id }}">
                                 <summary>
                                     <div class="summary__title">
-                                    {% render 'icon-accordion', icon: block.settings.icon %}
-                                    <h2 class="h4 accordion__title inline-richtext">
-                                        {{ block.settings.heading | default: block.settings.page.title }}
-                                    </h2>
+                                        {% render 'icon-accordion', icon: block.settings.icon %}
+                                        <h5 class="accordion__title inline-richtext">
+                                            {{ block.settings.heading | default: block.settings.page.title }}
+                                        </h5>
                                     </div>
                                     {% render 'icon-caret' %}
                                 </summary>
@@ -237,11 +237,11 @@
                                 </p>
                     {%- endcase -%}
                 {%- endfor -%}
-                                <h1>TODO: remove this view detail link?</h1>
+                <!-- <h1>TODO: remove this view detail link?</h1>
                 <a href="{{ product.url }}" class="link product__view-details animate-arrow">
                     {{ 'products.product.view_full_details' | t }}
                     {% render 'icon-arrow' %}
-                </a>
+                </a> -->
                 <div class="product__tax caption rte">
                     {%- if shop.shipping_policy.body != blank -%}
                         {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}

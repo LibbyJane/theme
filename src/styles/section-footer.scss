@@ -1,16 +1,17 @@
 @import "helpers/helpers";
 
 .footer-block__details-content {
-    ul {
-        a {
-            @include underline-on-hover;
-        }
+    a {
+        @include underline-on-hover;
+        display: inline-flex;
+        padding-bottom: 2px;
     }
 
     .list-menu__item--active {
-        opacity: 0.8;
-        pointer-events: none;
-        text-decoration: strikethrough;
+        @include disabled;
+        // opacity: 0.8;
+        // pointer-events: none;
+        // text-decoration: strikethrough;
     }
 }
 

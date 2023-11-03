@@ -10,7 +10,7 @@
 
     --icon-size-default: 1.5rem;
     --icon-size-lg: 2rem;
-
+    --icon-size-xl: 3rem;
 
     --opacity-full: 1;
     --opacity-partial: 0.85;
@@ -24,27 +24,17 @@
     --zi-modal: 100;
     --zi-blocker: 100;
 
-  --duration-short: 100ms;
-  --duration-default: 200ms;
-  --duration-announcement-bar: 250ms;
-  --duration-medium: 300ms;
-  --duration-long: 500ms;
-  --duration-extra-long: 600ms;
-  --duration-extended: 3s;
-  --ease-out-slow: cubic-bezier(0, 0, 0.3, 1);
-  --animation-slide-in: slideIn var(--duration-extra-long) var(--ease-out-slow) forwards;
-  --animation-fade-in: fadeIn var(--duration-extra-long) var(--ease-out-slow);
+    --duration-short: 100ms;
+    --duration-default: 200ms;
+    --duration-announcement-bar: 250ms;
+    --duration-medium: 300ms;
+    --duration-long: 500ms;
+    --duration-extra-long: 600ms;
+    --duration-extended: 3s;
+    --ease-out-slow: cubic-bezier(0, 0, 0.3, 1);
+    --animation-slide-in: slideIn var(--duration-extra-long) var(--ease-out-slow) forwards;
+    --animation-fade-in: fadeIn var(--duration-extra-long) var(--ease-out-slow);
 
-// .visibility-hidden {
-//   visibility: hidden;
-// }
-
-// @media (prefers-reduced-motion) {
-//   .motion-reduce {
-//     transition: none !important;
-//     animation: none !important;
-//   }
-// }
 
 // :root {
 

@@ -42,7 +42,7 @@
 
 {%- style -%}
     .product {
-       --price-font-scale: {%- if price_font_scale != null and price_font_scale > 0 %} {{ price_font_scale | divided_by: 100.0 }} {% else %} 1.6{% endif -%};
+       --price-font-scale: {%- if price_font_scale != null and price_font_scale > 0 %} {{ price_font_scale | divided_by: 100.0 }} {% else %} 1.4{% endif -%};
     }
 {%- endstyle -%}
 
@@ -124,15 +124,18 @@
                 </span>
             </span>
         </small>
-        <div class="product__tax caption rte">
+        <p class="product__tax caption rte">
             {%- if taxes_included -%}
                 {{ taxes_included_message }}
             {%- endif -%}
-        </div>
+        </p>
     </div>
     {%- if show_badges -%}
-        <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
-            {{ 'products.product.on_sale' | t }}
+        <span class="badge price__badge-sale ">
+            <span class="badge__inner color-{{ settings.sale_badge_color_scheme }}">
+                {{ 'products.product.on_sale' | t }}
+            </span>
+
         </span>
 
         <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">

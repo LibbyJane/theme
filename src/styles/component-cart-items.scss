@@ -1,3 +1,6 @@
+@import "helpers/helpers";
+
+
 // $color_1: rgb(var(--color-foreground));
 
 .cart-items {
@@ -122,36 +125,9 @@
 }
 
 .cart-item__image-container {
-    --corner-size: 15px;
-    --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
+    @include corners;
     display: inline-flex;
     align-items: flex-start;
-    position: relative;
-
-    &::before,
-    &::after {
-        content: "";
-        display: block;
-        pointer-events: none;
-        position: absolute;
-        border: var(--corner-size) solid transparent;
-        transform: rotate(135deg);
-        z-index: 1;
-    }
-
-    &::before {
-        border-top-color: rgb(var(--color-background));
-        top: var(--corner-offset);
-        left: var(--corner-offset);
-        box-shadow: 0 -11px 5px -6px rgba(var(--color-shadow), 0.5);
-    }
-
-    &::after {
-        border-bottom-color: rgb(var(--color-background));
-        bottom: var(--corner-offset);
-        right: var(--corner-offset);
-        box-shadow: 0 11px 5px -6px rgba(var(--color-shadow), 0.5);
-    }
 }
 
 .cart-item__image {

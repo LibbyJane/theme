@@ -47,7 +47,7 @@
 -%}
 
 <{%- if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %}
-    class="header-wrapper header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} color-{{ section.settings.color_scheme }} default-content-style       ">
+    class="header-wrapper header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} color-{{ section.settings.color_scheme }}        ">
 
     {%- liquid
         assign social_links = false

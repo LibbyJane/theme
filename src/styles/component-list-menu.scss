@@ -14,7 +14,13 @@
 }
 
 .list-menu__item--active {
-  opacity: var(--opacity-light);
+    opacity: var(--opacity-light);
+//   text-decoration: underline;
+//   text-underline-offset: 0.3rem;
+}
+
+.list-menu__item--active:hover {
+//   text-decoration-thickness: 0.2rem;
 }
 
 .list-menu--disclosure.localization-selector {
@@ -23,4 +29,3 @@
   width: 10rem;
   padding: 0.5rem;
 }
-/*# sourceMappingURL=component-list-menu.css.map */

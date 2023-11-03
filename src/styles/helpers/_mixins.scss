@@ -587,11 +587,50 @@
     opacity: 0.6;
 }
 
-@mixin default-texture() {
+@mixin default-texture {
     background-color: rgb(var(--color-background));
     background-blend-mode: multiply;
     background-image: url('texture-paper.jpg?v=3'), var(--background-gradient);
     background-position: top center, center;
     background-repeat: repeat;
     background-size: 200px auto, cover;
+}
+
+:root {
+    --corner-shadow-alpha: 0.25;
+    --corner-size: 15px;
+    --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
+}
+
+@mixin corners($offset: var(--corner-offset)) {
+    position: relative;
+
+    &::before,
+    &::after {
+        // border: var(--corner-size) solid transparent;
+        // transform: rotate(135deg);
+        background: rgba(var(--color-shadow), var(--corner-shadow-alpha));
+        content: "";
+        filter: blur(5px);
+        height: 3rem;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        position: absolute;
+        transform-origin: center;
+        width: 3rem;
+        z-index: 1;
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        transform: rotate(45deg) scaleX(0.05) scaleY(0.66) translate(-950%, -0%);
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+        transform: rotate(45deg) scaleX(0.05) scaleY(0.66) translate(950%, 0%);
+
+    }
 }

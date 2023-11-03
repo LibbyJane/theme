@@ -288,10 +288,6 @@ a.product__text {
   text-transform: uppercase;
 }
 
-.product__accordion .accordion__content {
-  padding: 0 1rem;
-}
-
 .product .price dl {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -1392,6 +1388,11 @@ a.product__text {
   opacity: 0.8;
 }
 
+.product__lead-in {
+  margin: 0;
+  padding: o;
+}
+
 .product__title {
   line-height: 1.2;
 }
@@ -1411,9 +1412,6 @@ a.product__text {
 .product__price .price-item {
   font-size: calc(var(--price-font-scale) * 100%);
   line-height: 1;
-}
-.product__price .badge {
-  margin-left: calc(-1 * var(--space-lg) - 2px);
 }
 
 .product-form__buttons {
