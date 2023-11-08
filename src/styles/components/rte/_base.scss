@@ -2,7 +2,15 @@
 .inline-richtext {
     a {
         @include underlined-link;
-        color: currentColor;
+        color: rgba(var(--color-link), var(--alpha-link));
+        display: inline-flex;
+        line-height: 1.2;
+        text-decoration: none;
+
+        &button {
+            background-color: transparent;
+            border: 0;
+        }
     }
 
     strong {
@@ -13,14 +21,17 @@
         font-style: italic;
     }
 
+    ol, ul {
+        margin: 0 0 var(--space) var(--space-lg);
+        padding: 0;
+    }
+
     ul {
         list-style-type: disc;
-        margin-left: var(--space-lg);
     }
 
     ol {
         list-style-type: decimal;
-        margin-left: var(--space-lg);
     }
 
     img {
@@ -37,6 +48,12 @@
         display: inline-flex;
     }
 }
+
+
+.rte.inline-richtext a {
+    color: currentColor;
+}
+
 // .rte:after {
 //   clear: both;
 //   content: '';

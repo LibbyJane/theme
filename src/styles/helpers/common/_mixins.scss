@@ -493,7 +493,7 @@
     }
 }
 
-@mixin underline-on-hover() {
+@mixin underline-on-hover($underline-inline-offset: 0, $underline-bottom-offset: 0) {
     position: relative;
     z-index: 1;
 
@@ -501,12 +501,11 @@
     &:focus {
         &::after {
             animation: scaleX100 var(--duration-medium) var(--transition-type) forwards;
-            transform-origin: bottom left;
         }
     }
 
     &::after {
-        animation: scaleOutX100 var(--duration-medium) var(--transition-type) reverse;
+        animation: scaleOutX100 var(--duration-medium) var(--transition-type) forwards;
         mask-image: url(mask-underline.svg);
         mask-size: cover;
         mask-repeat: no-repeat;
@@ -514,13 +513,13 @@
         background-color: rgba(var(--color-link), var(--alpha-link));
         content: '';
         position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
+        bottom: $underline-bottom-offset;
+        left: $underline-inline-offset;
+        width: calc(100% - (#{$underline-inline-offset} * 2));
         height: 2px;
         z-index: -1;
         transform: scaleX(0);
-        transform-origin: bottom right;
+        transform-origin: bottom left;
     }
 }
 

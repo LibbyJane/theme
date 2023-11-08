@@ -40,10 +40,6 @@
     scroll-padding-left: 1.5rem;
   }
 }
-.collection__description > * {
-  margin: 0;
-}
-
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }

@@ -1,6 +1,5 @@
 .product {
     margin: 0;
-
 }
 
 .product__media-wrapper {
@@ -35,12 +34,13 @@
 .product__column-sticky {
     @media screen and (min-width: 750px) {
         display: block;
+        min-height: 100%;
         position: sticky;
-        top: 3rem;
+        // top: var(--space-xl);
         z-index: 2;
     }
 }
 
 .product__media-wrapper {
     padding-left: 0;
-  }
+}

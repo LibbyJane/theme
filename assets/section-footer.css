@@ -4,109 +4,6 @@
   --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
 }
 
-:root {
-  --transition-type: ease-in-out;
-  --page-margin: var(--space-xxxl) auto;
-  --content-padding-inline: var(--space-lg);
-  --full-width-offset-margin: calc(var(--content-padding-inline) * -1);
-  --content-padding: var(--space-med) var(--content-padding-inline) var(--space-sm);
-  --border-width: 2px;
-  --border-style: dashed;
-  --border-color: currentColor;
-  --border-color-light: rgba(var(--color-foreground), 0.25);
-  --border-color-ultralight: rgba(var(--color-foreground), 0.08);
-  --border: var(--border-width) var(--border-style) var(--border-color);
-  --border-thin: thin solid var(--border-color);
-}
-
-:root {
-  --space: 1rem;
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-med: 1.5rem;
-  --space-lg: 2rem;
-  --space-xl: 3rem;
-  --space-xxl: 5rem;
-  --space-xxxl: 7rem;
-  --icon-size-default: 1.5rem;
-  --icon-size-lg: 2rem;
-  --icon-size-xl: 3rem;
-  --opacity-full: 1;
-  --opacity-partial: 0.85;
-  --opacity-light: 0.7;
-  --opacity-transparent: 0;
-  --zi-base: 10;
-  --zi-header: 40;
-  --zi-header-nav: 41;
-  --zi-hamburger: 22;
-  --zi-modal: 100;
-  --zi-blocker: 100;
-  --duration-short: 100ms;
-  --duration-default: 200ms;
-  --duration-announcement-bar: 250ms;
-  --duration-medium: 300ms;
-  --duration-long: 500ms;
-  --duration-extra-long: 600ms;
-  --duration-extended: 3s;
-  --ease-out-slow: cubic-bezier(0, 0, 0.3, 1);
-  --animation-slide-in: slideIn var(--duration-extra-long) var(--ease-out-slow) forwards;
-  --animation-fade-in: fadeIn var(--duration-extra-long) var(--ease-out-slow);
-}
-
-:root {
-  --alpha-button-background: 1;
-  --alpha-button-border: 1;
-  --alpha-link: 0.85;
-  --alpha-badge-border: 0.1;
-  --card-padding: var(--product-card-padding);
-  --card-image-padding: var(--product-card-padding);
-  --card-corner-radius: var(--product-card-corner-radius);
-  --card-text-alignment: var(--product-card-text-alignment);
-  --card-border-width: var(--product-card-border-width);
-  --card-border-opacity: var(--product-card-border-opacity);
-  --card-shadow-opacity:var(--product-card-shadow-opacity);
-  --card-shadow-visible: var(--product-card-shadow-visible);
-  --card-shadow-horizontal-offset: var(--product-card-shadow-horizontal-offset);
-  --card-shadow-vertical-offset: var(--product-card-shadow-vertical-offset);
-  --card-shadow-blur-radius: var(--product-card-shadow-blur-radius);
-  --card-media-box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
-  rgba(var(--color-shadow), var(--media-shadow-opacity));
-  --card-image-offset: var(--product-card-image-offset);
-  --crease: linear-gradient(to bottom, rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), 0.05) 100%);
-}
-
-.collection-card-wrapper .card,
-.contains-card--collection {
-  --card-padding: var(--collection-card-image-padding);
-  --card-image-padding: var(--collection-card-image-padding);
-  --card-corner-radius: var(--collection-card-corner-radius);
-  --card-text-alignment: var(--collection-card-text-alignment);
-  --card-border-width: var(--collection-card-border-width);
-  --card-border-opacity: var(--collection-card-border-opacity);
-  --card-shadow-opacity:var(--collection-card-shadow-opacity);
-  --card-shadow-visible: var(--collection-card-shadow-visible);
-  --card-shadow-horizontal-offset: var(--collection-card-shadow-horizontal-offset);
-  --card-shadow-vertical-offset: var(--collection-card-shadow-vertical-offset);
-  --card-shadow-blur-radius: var(--collection-card-shadow-blur-radius);
-  --card-image-offset: var(--collection-card-image-offset);
-}
-
-.article-card-wrapper .card,
-.contains-card--article {
-  --card-padding: var(--blog-card-image-padding);
-  --card-image-padding: var(--blog-card-image-padding);
-  --card-corner-radius: var(--blog-card-corner-radius);
-  --card-text-alignment: var(--blog-card-text-alignment);
-  --card-border-width: var(--blog-card-border-width);
-  --card-border-opacity: var(--blog-card-border-opacity);
-  --card-shadow-opacity:var(--blog-card-shadow-opacity);
-  --card-shadow-visible: var(--blog-card-shadow-visible);
-  --card-shadow-horizontal-offset: var(--blog-card-shadow-horizontal-offset);
-  --card-shadow-vertical-offset: var(--blog-card-shadow-vertical-offset);
-  --card-shadow-blur-radius: var(--blog-card-shadow-blur-radius);
-  --card-image-offset: var(--blog-card-image-offset);
-}
-
 @keyframes draw {
   from {
     stroke-dashoffset: var(--path-length);
@@ -202,10 +99,9 @@
 }
 .footer-block__details-content a:hover::after, .footer-block__details-content a:focus::after {
   animation: scaleX100 var(--duration-medium) var(--transition-type) forwards;
-  transform-origin: bottom left;
 }
 .footer-block__details-content a::after {
-  animation: scaleOutX100 var(--duration-medium) var(--transition-type) reverse;
+  animation: scaleOutX100 var(--duration-medium) var(--transition-type) forwards;
   -webkit-mask-image: url(mask-underline.svg);
           mask-image: url(mask-underline.svg);
   -webkit-mask-size: cover;
@@ -219,11 +115,11 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 0 * 2);
   height: 2px;
   z-index: -1;
   transform: scaleX(0);
-  transform-origin: bottom right;
+  transform-origin: bottom left;
 }
 .footer-block__details-content .list-menu__item--active {
   filter: grayscale(1);
@@ -239,10 +135,9 @@
 }
 .footer__copyright a:hover::after, .footer__copyright a:focus::after {
   animation: scaleX100 var(--duration-medium) var(--transition-type) forwards;
-  transform-origin: bottom left;
 }
 .footer__copyright a::after {
-  animation: scaleOutX100 var(--duration-medium) var(--transition-type) reverse;
+  animation: scaleOutX100 var(--duration-medium) var(--transition-type) forwards;
   -webkit-mask-image: url(mask-underline.svg);
           mask-image: url(mask-underline.svg);
   -webkit-mask-size: cover;
@@ -256,11 +151,11 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 0 * 2);
   height: 2px;
   z-index: -1;
   transform: scaleX(0);
-  transform-origin: bottom right;
+  transform-origin: bottom left;
 }
 
 .footer__follow-on-shop {

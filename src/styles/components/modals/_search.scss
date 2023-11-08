@@ -1,3 +1,5 @@
+@import "helpers/common";
+
 // previously search-modal__form, but that class name was also used elsewhere
 .search-modal__form-wrapper {
     width: 100%;
@@ -12,7 +14,6 @@
     min-width: 50vw;
 }
 
-@import "helpers/mixins";
 
 .predictive-search {
     @include scrollbars;

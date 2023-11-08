@@ -1,9 +1,8 @@
 :root {
     --card-badge-offset: -4px;
-    --card-shadow: var(--color-shadow);
 
-    --card-badge-surface-shadow-left: linear-gradient(-90deg,rgba(var(--card-shadow), 0.06) 0%, rgba(var(--card-shadow), 0.05) 50%, rgba(var(--card-shadow), 0) 100%);
-    --card-badge-surface-shadow-right: linear-gradient(90deg,rgba(var(--card-shadow), 0) 0%, rgba(var(--card-shadow), 0.05) 50%, rgba(var(--card-shadow), 0.06) 100%);
+    --card-badge-surface-shadow-left: linear-gradient(-90deg,rgba(var(--color-shadow), 0.06) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0) 100%);
+    --card-badge-surface-shadow-right: linear-gradient(90deg,rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0.06) 100%);
 
     --card-badge-drop-shadow-transform-left: skewY(-1deg) scaleY(75%) translateY(-1%);
     --card-badge-drop-shadow-transform-right: skewY(3deg) rotate(2deg) scaleX(90%) scaleY(75%) translateY(-4%);
@@ -15,6 +14,19 @@
 }
 
 .card-badge {
+    --card-badge-offset: -4px;
+
+    --card-badge-surface-shadow-left: linear-gradient(-90deg,rgba(var(--color-shadow), 0.06) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0) 100%);
+    --card-badge-surface-shadow-right: linear-gradient(90deg,rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0.06) 100%);
+
+    --card-badge-drop-shadow-transform-left: skewY(-1deg) scaleY(75%) translateY(-1%);
+    --card-badge-drop-shadow-transform-right: skewY(3deg) rotate(2deg) scaleX(90%) scaleY(75%) translateY(-4%);
+
+    --card-badge-drop-shadow-left:  3px 3px 4px 1px rgba(var(--color-shadow), 1);
+    --card-badge-drop-shadow-right: 3px 5px 4px 1px rgba(var(--color-shadow), 1);
+
+    --card-badge-padding: 1.2rem;
+
     border-radius: 0;
     display: flex;
         align-items: stretch;
@@ -22,6 +34,9 @@
         line-height: 1;
         font-family: var(--font-heading-family);
     position: absolute;
+    z-index: 1;
+
+
 
     &::before {
         background-color: rgb(var(--color-background));
@@ -39,12 +54,13 @@
         box-shadow: var(--card-badge-drop-shadow-left);
         content: '';
         mix-blend-mode: multiply;
-        opacity: 0.1;
+        // opacity: 0.1;
         pointer-events: none;
         position: absolute;
         inset: 0;
         transform: var(--card-badge-drop-shadow-transform-left);
         z-index: -1;
+        outline:    10px dashed orange;
     }
 }
 
@@ -87,7 +103,7 @@
     right: var(--card-badge-offset);
 
     &::before {
-        background: var(--card-badge-surface-shadow-right);
+        background-image: var(--card-badge-surface-shadow-right);
         order: 2;
     }
 

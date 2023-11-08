@@ -9,18 +9,23 @@
   }
 {%- endstyle -%}
 
-<div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} ">
-  <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    <div class="collection-hero__text-wrapper">
-      <h1 class="collection-hero__title">
-        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
-        {{- collection.title | escape -}}
-      </h1>
+<div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} {% if section.settings.color_boundary == 'container' %} color-{{ section.settings.color_scheme }}{% endif %}">
+    <div class="page-width title-wrapper align-{{settings.title_alignment}}">
+        <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{% if section.settings.color_boundary == 'container' %}{{ settings.title_color_scheme }}{% else %}{{ section.settings.color_scheme }}{% endif %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+            {{- collection.title | escape -}}
+        </h2>
+    </div>
+
+
+  <div class="collection-hero__inner page-width {% if section.settings.color_boundary != 'container' %} color-{{ section.settings.color_scheme }}{% endif %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
 
       {%- if section.settings.show_collection_description -%}
+      <div class="collection-hero__text-wrapper default-content-style content-padding">
         <div class="collection-hero__description rte">{{ collection.description }}</div>
-      {%- endif -%}
     </div>
+      {%- endif -%}
+
 
     {%- if section.settings.show_collection_image and collection.image -%}
       <div class="collection-hero__image-container media ">
@@ -51,27 +56,43 @@
   "class": "section",
   "settings": [
     {
-      "type": "paragraph",
-      "content": "t:sections.main-collection-banner.settings.paragraph.content"
+        "type": "paragraph",
+        "content": "t:sections.main-collection-banner.settings.paragraph.content"
     },
     {
-      "type": "checkbox",
-      "id": "show_collection_description",
-      "default": true,
-      "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+        "type": "checkbox",
+        "id": "show_collection_description",
+        "default": true,
+        "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
     },
     {
-      "type": "checkbox",
-      "id": "show_collection_image",
-      "default": false,
-      "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
-      "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
+        "type": "checkbox",
+        "id": "show_collection_image",
+        "default": false,
+        "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
+        "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
     },
     {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "background-1"
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "background-1"
+    },
+    {
+        "type": "select",
+        "id": "color_boundary",
+        "options": [
+            {
+                "value": "container",
+                "label": "t:sections.all.color_boundary.container"
+            },
+            {
+                "value": "content",
+                "label": "t:sections.all.color_boundary.contents"
+            }
+        ],
+        "default": "content",
+        "label": "t:sections.all.color_boundary.label"
     }
   ]
 }

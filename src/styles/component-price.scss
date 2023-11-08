@@ -1,6 +1,15 @@
+@import "helpers/common";
+
 .price {
-    @media screen and (min-width: 750px) {
-        margin-bottom: 0;
+    margin-bottom: 0;
+    display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space);
+
+        @media screen and (min-width: 750px) {
+
     }
 
     &.price--unavailable {
@@ -24,7 +33,7 @@
 
 .price-item {
     display: inline-block;
-    margin: 0 var(--space) 0 0;
+    // margin: 0 var(--space) 0 0;
 }
 
 .price--center {
@@ -88,7 +97,18 @@
 .volume-pricing--sale-badge {
     .price__badge-sale {
         display: inline-block;
-        margin-left: 0.5rem;
+    }
+}
+
+.product__tax.product__tax  {
+    color: rgba(var(--color-foreground), var(--opacity-light));
+    margin: var(--space-sm) 0 var(--space-med);
+    padding: 0;
+    opacity: 1;
+
+    a {
+        @include underline-on-hover;
+        color: rgb(var(--color-link));
     }
 }
 

@@ -79,6 +79,7 @@
   height: 100%;
   margin-bottom: var(--space-lg);
   padding: var(--card-padding);
+  padding-bottom: calc(var(--card-padding) - var(--space));
   position: relative;
   text-decoration: none;
   text-align: var(--card-text-alignment);
@@ -87,7 +88,7 @@
   will-change: transform;
   transform-style: preserve-3d;
   z-index: 1;
-  outline: 1px solid transparent;
+  outline: 2px solid transparent;
   backface-visibility: hidden;
 }
 .grid__item .card.card:hover, .grid__item .card.card:focus {
@@ -145,6 +146,11 @@
 
 .collection-list .card__inner .card__information, .collage .card__inner .card__information {
   display: none;
+}
+
+.card__heading {
+  display: flex;
+  gap: var(--space);
 }
 
 .card__media {

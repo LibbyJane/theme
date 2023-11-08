@@ -1,12 +1,25 @@
 :root {
-    --space: 1rem;
-    --space-xs: 0.25rem;
-    --space-sm: 0.5rem;
-    --space-med: 1.5rem;
-    --space-lg: 2rem;
-    --space-xl: 3rem;
-    --space-xxl: 5rem;
-    --space-xxxl: 7rem;
+    // --space: 1rem;
+    // --space-xs: 0.25rem;
+    // --space-sm: 0.5rem;
+    // --space-med: 1.5rem;
+    // --space-lg: 2rem;
+    // --space-xl: 3rem;
+    // --space-xxl: 5rem;
+    // --space-xxxl: 7rem;
+
+    --space: var(--grid-mobile-vertical-spacing);
+    --space-xs: calc(var(--space)/4);
+    --space-sm: calc(var(--space)/2);
+    --space-med: calc(var(--space) * 1.5);
+    --space-lg: calc(var(--space) * 2);
+    --space-xl: calc(var(--space) * 3);
+    --space-xxl: calc(var(--space) * 5);
+    --space-xxxl: calc(var(--space) * 7);
+
+    @media screen and (min-width: 750px) {
+        --space: var(--grid-desktop-vertical-spacing);;
+    }
 
     --icon-size-default: 1.5rem;
     --icon-size-lg: 2rem;

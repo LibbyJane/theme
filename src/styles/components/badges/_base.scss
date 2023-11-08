@@ -22,13 +22,13 @@
     0 100%,
     0 var(--cnr-size));
     display: block;
-    font-size: var(--font-size-smaller);
+    font-size: var(--font-size-base);
     letter-spacing: var(--letter-spacing);
     line-height: 1;
     padding: var(--space) var(--space-lg);
     position: relative;
     background: rgb(var(--color-background)) radial-gradient(ellipse farthest-corner at center center, rgb(var(--color-background)) 50%, rgba(var(--color-shadow),0.15) 100%);
-    background: linear-gradient(135deg, rgba(var(--color-shadow),0.75) 5%, rgb(var(--color-background)) 12%, rgb(var(--color-background)) 88%, rgba(var(--color-shadow),0.75) 95%), linear-gradient(180deg, rgba(var(--color-shadow),0.2) 0%, rgba(var(--color-shadow),0) 5%, rgba(var(--color-shadow),0) 95%, rgba(var(--color-shadow),0.2) 100%);
+    // background: linear-gradient(135deg, rgba(var(--color-shadow),0.75) 5%, rgb(var(--color-background)) 12%, rgb(var(--color-background)) 88%, rgba(var(--color-shadow),0.75) 95%), linear-gradient(180deg, rgba(var(--color-shadow),0.2) 0%, rgba(var(--color-shadow),0) 5%, rgba(var(--color-shadow),0) 95%, rgba(var(--color-shadow),0.2) 100%);
     // background-blend-mode: multiply;
 
 

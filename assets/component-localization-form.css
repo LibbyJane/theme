@@ -1,3 +1,96 @@
+:root {
+  --corner-shadow-alpha: 0.25;
+  --corner-size: 15px;
+  --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: var(--path-length);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scaleX100 {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(100%);
+  }
+}
+@keyframes scaleOutX100 {
+  0% {
+    transform: scaleX(100%);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+@keyframes scaleOutX40 {
+  0% {
+    transform: scaleX(100%);
+  }
+  100% {
+    transform: scaleX(40%);
+  }
+}
+@keyframes scaleX100Angled {
+  0% {
+    transform: scaleX(0) rotate(0.5deg);
+  }
+  100% {
+    transform: scaleX(100%) rotate(0.5deg);
+  }
+}
+.margin-bottom {
+  margin-bottom: var(--space) !important;
+}
+
+.margin-bottom--med {
+  margin-bottom: var(--space-med) !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.content-padding-inline {
+  padding-inline: var(--content-padding-inline);
+}
+
+.content-padding {
+  padding: var(--content-padding);
+}
+
+.page-margin {
+  margin: var(--page-margin);
+}
+
+.center {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.color--danger {
+  color: var(--color-danger) !important;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.break {
+  word-break: break-word;
+}
+
+@media (prefers-reduced-motion) {
+  .motion-reduce {
+    transition: none !important;
+    animation: none !important;
+  }
+}
 .localization-form {
   display: flex;
   flex-direction: column;
@@ -162,6 +255,11 @@ noscript .localization-selector.link {
 }
 
 .disclosure__list {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: auto;
+  scrollbar-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
+  /* Chrome, Edge, and Safari */
   position: relative;
   overflow-y: auto;
   font-size: var(--font-size-smaller);
@@ -174,6 +272,19 @@ noscript .localization-selector.link {
   min-width: 12rem;
   width: -moz-max-content;
   width: max-content;
+}
+.disclosure__list::-webkit-scrollbar {
+  width: 12px;
+  scrollbar-width: thin;
+}
+.disclosure__list::-webkit-scrollbar-track {
+  background: transparent url("bg-scrollbar.png?v=2") repeat-y !important;
+  background-size: contain;
+}
+.disclosure__list::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--color-foreground), 0.2);
+  border-radius: 8px;
+  border: 2px solid rgba(var(--color-background), 1);
 }
 
 .disclosure__item {

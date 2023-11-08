@@ -22,7 +22,7 @@ _:root {
 .page-width {
     max-width: var(--page-width);
     margin: 0 auto;
-    padding: 0 var(--inline-padding);
+    padding: 0 var(--content-padding-inline);
 
     &.utility-bar__grid {
         padding-left: 3rem;
@@ -39,19 +39,20 @@ _:root {
     @media screen and (min-width: 750px) {
         padding: 0 9rem;
     }
+
     @media screen and (min-width: 990px) {
         max-width: 72.6rem;
         padding: 0;
     }
-  }
+}
 
-  .page-width-tablet {
+.page-width-tablet {
     @media screen and (min-width: 750px) {
-        padding: 0 var(--inline-padding);
+        padding: 0 var(--content-padding-inline);
     }
-  }
+}
 
-  .page-width-desktop {
+.page-width-desktop {
     padding: 0;
     margin: 0 auto;
 

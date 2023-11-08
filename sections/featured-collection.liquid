@@ -44,26 +44,27 @@
 -%}
 
 <div class="{% if section.settings.color_boundary == 'container' %} color-{{ section.settings.color_scheme }}{% endif %} isolate collection section-{{ section.id }} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
-    <div class="collection__title title-wrapper align-{{settings.title_alignment}}  page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
+    <div class="collection__title title-wrapper align-{{settings.title_alignment}} page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
         {%- if section.settings.title != blank -%}
             <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{% if section.settings.color_boundary == 'container' %}{{ settings.title_color_scheme }}{% else %}{{ section.settings.color_scheme }}{% endif %} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 {{ section.settings.title }}
             </h2>
         {%- endif -%}
 
-        {%- if section.settings.description != blank
-            or section.settings.show_description
-            and section.settings.collection.description != empty
-        -%}
-            <div class="collection__description {{ section.settings.description_style }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-                {%- if section.settings.show_description -%}
-                    {{ section.settings.collection.description }}
-                {%- else -%}
-                    {{ section.settings.description -}}
-                {%- endif %}
-            </div>
-        {%- endif -%}
     </div>
+
+    {%- if section.settings.description != blank
+        or section.settings.show_description
+        and section.settings.collection.description != empty
+    -%}
+        <div class="default-content-style content-padding page-width collection__description {{ section.settings.description_style }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            {%- if section.settings.show_description -%}
+                {{ section.settings.collection.description }}
+            {%- else -%}
+                {{ section.settings.description -}}
+            {%- endif %}
+        </div>
+    {%- endif -%}
 
     <slider-component class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <ul
@@ -212,10 +213,6 @@
         {
             "value": "subtitle",
             "label": "t:sections.featured-collection.settings.description_style.options__2.label"
-        },
-        {
-            "value": "uppercase",
-            "label": "t:sections.featured-collection.settings.description_style.options__3.label"
         }
         ],
         "default": "body"
