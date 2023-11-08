@@ -331,8 +331,8 @@
             "box_align": "middle-center",
             "text_alignment": "center",
             "show_text_box": true,
-            "color_scheme": "",
-            "background_texture": "paper",
+            "color_scheme": "background-2",
+            "background_texture": "torn",
             "text_alignment_mobile": "center"
           }
         },
