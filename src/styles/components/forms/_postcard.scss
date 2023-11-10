@@ -1,0 +1,168 @@
+.postcard {
+    --postcard-border-color: rgba(var(--color-foreground), 0.3);
+    --input-border-width: 1px;
+    aspect-ratio: 3/2;
+    background-color: rgb(var(--color-background));
+    background-image: radial-gradient(hsl(50, 0%, 96%), hsl(50, 0%, 94%), hsl(450, 0%, 85%));
+    background-blend-mode: multiply;
+    box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
+    display: grid;
+        grid-template-areas: "postcard-fields" "postcard-send";
+
+    padding: var(--content-padding);
+    position: relative;
+
+    @media screen and (min-width: 750px) {
+        grid-template-areas: "postcard-fields postcard-send";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .postage-stamp {
+        filter: drop-shadow(0 0 1px rgba(var(--color-shadow), 0.2));
+        width: 9rem;
+        transform: rotate(-1deg);
+        backface-visibility: hidden;
+        position: absolute;
+            top: var(--space-med);
+            right: var(--space-xl);
+        z-index: 1;
+
+        @media screen and (min-width: 750px) {
+            top: var(--space-med);
+            right: var(--space-xl);
+        }
+
+        img {
+            display: block;
+                height: auto;
+                width: 100%;
+            --mask:
+                linear-gradient(#000 0 0) 50%/calc(100% - 6px) calc(100% - 6px) no-repeat,
+                radial-gradient(3px,#0000 98%,#000) 0 -3px/5.55px 6px round no-repeat,
+                radial-gradient(3px,#0000 98%,#000) 0 calc(100% + 3px)/5.55px 6px round no-repeat,
+                radial-gradient(3px,#0000 98%,#000) -3px 0/6px 5.55px no-repeat round,
+                radial-gradient(3px,#0000 98%,#000) calc(100% + 3px) 0/6px 5.55px no-repeat round;
+                clip-path: polygon(6px 0,calc(100% - 6px) 0,100% 6px,100% calc(100% - 6px),calc(100% - 6px) 100%,6px 100%,0 calc(100% - 6px),0 6px);
+            // -webkit-mask: var(--mask);
+            mask: var(--mask);
+            padding: 4px;
+            background-color: var(--color-white);
+        }
+    }
+
+    .postage-stamp--landscape {
+        width: 14rem;
+        top: var(--space-xl);
+        right: var(--space-lg);
+    }
+
+    .postage-stamp--square {
+        top: var(--space-lg);
+        right: var(--space-xl);
+    }
+
+    fieldset {
+        display: flex;
+            flex-direction: column;
+        margin: var(--content-padding) 0;
+        padding: 0;
+        position: relative;
+
+        @media screen and (min-width: 750px) {
+            padding: 0 var(--content-padding);
+        }
+    }
+
+    // fieldset type
+    .contact__fields {
+        grid-area: postcard-fields;
+
+        @media screen and (min-width: 750px) {
+            border-right: 2px solid var(--postcard-border-color);
+        }
+    }
+
+    // fieldset type
+    .contact__submit {
+        grid-area: postcard-send;
+        padding-right: 0;
+
+        // stamp placement outline
+        &::before {
+            aspect-ratio: 2/3;
+            border: 2px dashed var(--postcard-border-color);
+            content: '';
+            width: 8rem;
+            margin-top: var(--space-med);
+            margin-left: auto;
+            transform: scale(0.9);
+
+            @media screen and (min-width: 750px) {
+                margin-top: 0;
+                margin-bottom: var(--space);
+                transform: translateY(calc(var(--space-med) * -1)) translateX(calc(var(--space-lg) * -1)) scale(0.9);
+            }
+        }
+    }
+
+    .field {
+        border-bottom: var(--input-border-width) solid var(--postcard-border-color);
+        padding-top: 0;
+    }
+
+    .field__label {
+        font-family: var(--font-heading-family);
+        font-style: var(--font-heading-style);
+    }
+
+    textarea {
+        --line-height: calc(var(--font-heading-scale) * 2rem);
+        background-size: var(--line-height) var(--line-height);
+        background-image: repeating-linear-gradient(0deg, var(--postcard-border-color), var(--postcard-border-color) var(--input-border-width), rgba(255,255,255,0) var(--input-border-width), rgba(255,255,255,0));
+        border: none;
+        line-height: var(--line-height);
+        padding-bottom: 0;
+    }
+
+    .contact__store-message {
+        @include text-heading;
+        font-size: var(--font-size-h5);
+    }
+
+    .contact__store-details {
+        padding-left: var(--space);
+
+        p,
+        address {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+    }
+
+    button[type="submit"] {
+        margin-top: auto;
+        width: 100%;
+    }
+}
+
+.postcard__reverse-face {
+    position: absolute;
+        inset: 0;
+    transform: rotate(5deg) translateY(5rem) translateX(6rem);
+    z-index: -1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    img {
+        box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
+        rgba(var(--color-shadow), var(--media-shadow-opacity));
+        display: block;
+            height:auto;
+            width:auto;
+            object-fit: cover;
+    }
+}

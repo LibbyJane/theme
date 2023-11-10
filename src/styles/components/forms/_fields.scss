@@ -17,8 +17,8 @@ input[type="search"]::-webkit-search-results-decoration {
     grid-template-columns: 1fr;
     gap: var(--space-sm);
     border-bottom: var(--border);
-    padding-top: var(--space-med);
-    margin: 0 0 var(--space-med);
+    padding-top: 0;
+    margin: 0 0 var(--space-lg);
     width: 100%;
     position: relative;
     z-index: 1;
@@ -36,7 +36,12 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .field__label {
     grid-area: field-input;
+    opacity: var(--opacity-lighter);
     text-align: left;
+
+    abbr {
+        opacity: var(--opacity-light);
+    }
 }
 
 .field__required {
@@ -71,9 +76,9 @@ input[type="search"]::-webkit-search-results-decoration {
     &[textarea] {
         line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
 
-        ~ .field__label {
-            margin: 0;
-        }
+        // ~ .field__label {
+        //     margin: 0;
+        // }
     }
 
     @include placeholder {
@@ -95,7 +100,8 @@ input[type="search"]::-webkit-search-results-decoration {
     &:focus{
         ~ .field__label {
             cursor: pointer;
-            transform: translateY(calc(var(--space-lg) * -1.2)) scale(0.8);
+            transform: translateY(calc(var(--space-med) * -0.8)) scale(0.8);
+            // transform: translateY(calc(var(--space-lg) * -1.2)) scale(0.8);
         }
     }
 }

@@ -13,6 +13,12 @@
   outline: none;
 }
 
+.list-menu__item {
+  display: flex;
+  align-items: center;
+  line-height: calc(1 + 0.3 / var(--font-body-scale));
+}
+
 .list-menu__item--active {
   opacity: var(--opacity-light);
 }

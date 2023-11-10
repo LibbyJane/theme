@@ -84,6 +84,16 @@ drawer-menu {
     }
 }
 
+.header__inline-menu {
+    // grid-area: navigation;
+    display: none;
+
+    @media screen and (min-width: 990px) {
+        display: block;
+    }
+
+}
+
 
 .header__submenu {
     transition: opacity var(--duration-default) ease, transform var(--duration-default) ease;
@@ -100,12 +110,6 @@ drawer-menu {
     }
 }
 
-// /* Header menu */
-// .header__inline-menu {
-//     margin-left: -1.2rem;
-//     grid-area: navigation;
-//     display: none;
-//   }
 
 //   .header--top-center .header__inline-menu,
 //   .header--top-center .header__heading-link {

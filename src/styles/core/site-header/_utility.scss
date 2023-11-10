@@ -81,12 +81,12 @@
 // .header__icon--cart {
 //     position: relative;
 //     &.has-items {
-//         // color: rgba(var(--ecommerce-color), 0.8);
+//         // color: rgba(var(--color-ecommerce), 0.8);
 
 //         &:hover,
 //         &:focus {
 //             svg {
-//                 // color: rgb(var(--ecommerce-color));
+//                 // color: rgb(var(--color-ecommerce));
 //             }
 //         }
 //     }
@@ -98,8 +98,8 @@
 // }
 
 .cart-count-bubble {
-    // background-color: rgb(var(--ecommerce-color));
-    // color: rgb(var(--ecommerce-contrast-color));
+    // background-color: rgb(var(--color-ecommerce));
+    // color: rgb(var(--color-ecommerce-contrast));
     background-color: rgb(var(--color-button));
     color: rgb(var(--color-button-text));
     border-radius: 99em;
@@ -111,7 +111,7 @@
     line-height: 1;
     min-width: 1.7rem;
     padding: var(--space-sm);
-    outline: 2px solid rgba(var(--ecommerce-contrast-color), 0.8);
+    outline: 2px solid rgba(var(--color-ecommerce-contrast), 0.8);
     position: absolute;
         bottom: 0;
         right: 0;

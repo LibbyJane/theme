@@ -9,7 +9,7 @@
     - show_compare_at_price: {Boolean} Renders the compare at price if the product matches the condition (optional)
     - taxes_included: {Boolean} Renders 'includes tax' message (optional)
     - taxes_included_message: {String} 'Includes tax' message text (optional)
-    - use_highlight_color: {Boolean} Apply highlight color to the price (optional)
+    - use_color_highlight: {Boolean} Apply highlight color to the price (optional)
 
     Usage:
     {% render 'price', product: product %}
@@ -80,13 +80,13 @@
                     {%- endunless -%}
                 {%- endif -%}
                 <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-                <span class="price-item price-item--regular price-item--actual {% if use_highlight_color %}highlight{%endif %}">
+                <span class="price-item price-item--regular price-item--actual {% if use_color_highlight %}highlight{%endif %}">
                     {{- 'products.product.volume_pricing.price_range' | t: minimum: money_price_min, maximum: money_price_max
                     -}}
                 </span>
             {%- else -%}
                 <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-                <span class="price-item price-item--regular price-item--actual {% if use_highlight_color %}highlight{%endif %}">
+                <span class="price-item price-item--regular price-item--actual {% if use_color_highlight %}highlight{%endif %}">
                     {{ money_price }}
                 </span>
             {%- endif -%}
@@ -105,14 +105,14 @@
                 </span>
             {%- endunless -%}
             <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-            <span class="price-item price-item--sale price-item--last price-item--actual {% if use_highlight_color %}highlight{%endif %}">
+            <span class="price-item price-item--sale price-item--last price-item--actual {% if use_color_highlight %}highlight{%endif %}">
                 {{ money_price }}
             </span>
         </div>
         <small
             class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
             <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-            <span class="price-item price-item--last price-item--actual {% if use_highlight_color %}highlight{%endif %}">
+            <span class="price-item price-item--last price-item--actual {% if use_color_highlight %}highlight{%endif %}">
                 <span>{{- product.selected_or_first_available_variant.unit_price | money -}}</span>
                 <span aria-hidden="true">/</span>
                 <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>

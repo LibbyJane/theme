@@ -4,6 +4,12 @@
   --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
 }
 
+:root {
+  --tape-color: hsl(53, 15%, 80%);
+  --tape-edge-color: hsl(53, 15%, 67%);
+  --tape-height: 4rem;
+}
+
 @keyframes draw {
   from {
     stroke-dashoffset: var(--path-length);

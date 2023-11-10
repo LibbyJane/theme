@@ -115,7 +115,14 @@
                         "id": "shadow",
                         "label": "t:settings_schema.colors.settings.shadow.label",
                         "default": "#121212"
+                    },
+                    {
+                        "type": "color",
+                        "id": "todo",
+                        "label": "t:settings_schema.colors.settings.shadow.label",
+                        "default": "#B9E41D"
                     }
+
                 ],
                 "role": {
                     "text": "text",
@@ -135,22 +142,39 @@
             },
             {
                 "type": "color",
-                "id": "highlight_color",
-                "label": "t:settings_schema.colors.settings.highlight_color.label",
-                "default": "#FEC4BF"
+                "id": "color_success",
+                "label": "t:settings_schema.colors.settings.success_color.label",
+                "default": "#4EE77C"
             },
             {
                 "type": "color",
-                "id": "ecommerce_color",
-                "label": "t:settings_schema.colors.settings.ecommerce_color.label",
-                "info": "t:settings_schema.colors.settings.ecommerce_color.info",
+                "id": "color_warning",
+                "label": "t:settings_schema.colors.settings.warning_color.label",
+                "default": "#F0A94D"
+            },
+            {
+                "type": "color",
+                "id": "color_danger",
+                "label": "t:settings_schema.colors.settings.danger_color.label",
+                "default": "#DF4841"
+            },
+            {
+                "type": "color",
+                "id": "color_ecommerce",
+                "label": "t:settings_schema.colors.settings.color_ecommerce.label",
                 "default": "#248656"
             },
             {
                 "type": "color",
-                "id": "ecommerce_contrast_color",
-                "label": "t:settings_schema.colors.settings.ecommerce_contrast_color.label",
+                "id": "color_ecommerce_contrast",
+                "label": "t:settings_schema.colors.settings.color_ecommerce_contrast.label",
                 "default": "#ffffff"
+            },
+            {
+                "type": "color",
+                "id": "color_highlight",
+                "label": "t:settings_schema.colors.settings.color_highlight.label",
+                "default": "#FEC4BF"
             }
         ]
     },

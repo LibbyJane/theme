@@ -398,29 +398,7 @@
     }
 }
 
-@mixin folded-corner() {
-    position: relative;
 
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     bottom: -2em;
-    //     left: 0;
-    //     right: 2em;
-    //     border-width: 1em;
-    //     border-style: solid;
-    //     border-color: red;
-    //  }
-    //  &::before {
-    //     content: "";
-    //     position: absolute;
-    //     bottom: -2em;
-    //     right: 0;
-    //     border-width: 2em 2em 0 0;
-    //     border-style: solid;
-    //     border-color: orangered;
-    //  }
-}
 
 @mixin hover-highlight($z-index: 1) {
     --rotation: -1deg;
@@ -445,7 +423,7 @@
     }
 
     &::before {
-        background: rgba(var(--highlight-color), var(--highlight-opacity));
+        background: rgba(var(--color-highlight), var(--highlight-opacity));
         border-radius: var(--button-border-radius);
         content: '';
         margin: -2px;
@@ -631,5 +609,47 @@
         right: 0;
         transform: rotate(45deg) scaleX(0.05) scaleY(0.66) translate(950%, 0%);
 
+    }
+}
+
+:root {
+    --tape-color: hsl(53, 15%, 80%);
+    --tape-edge-color: hsl(53, 15%, 67%);
+    --tape-height: 4rem;
+  }
+
+@mixin tape($position: top, $alignment: center, $angle: 0, $width: 8rem) {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+            left: 0;
+            right: 0;
+            width: $width;
+            height: var(--tape-height);
+        background-color: var(--tape-color);
+        border-right: 1px dotted var(--tape-edge-color);
+        border-left: 1px dotted var(--tape-edge-color);
+        opacity: 0.4;
+        transform: rotate(#{$angle}deg);
+
+        @if $position == top {
+            top: calc(var(--tape-height) * -0.5);
+        } @else {
+            bottom: calc(var(--tape-height) * -0.5);
+        }
+
+        @if $alignment == center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @else if $alignment == left {
+            margin-left: 0;
+            margin-right: auto;
+        } @else {
+            margin-left: auto;
+            margin-right: 0;
+        }
     }
 }

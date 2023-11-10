@@ -180,7 +180,7 @@ a {
     }
 
     &::before {
-        background-color: rgba(var(--highlight-color), var(--highlight-opacity));
+        background-color: rgba(var(--color-highlight), var(--highlight-opacity));
         content: '';
         animation: scaleOutX100 var(--duration-medium) ease;
         animation-delay: var(--duration-short);
@@ -195,7 +195,7 @@ a {
 }
 
 .link-with-icon__text {
-    // border-bottom: var(--icon-stroke-size) solid rgba(var(--highlight-color), var(--highlight-opacity));
+    // border-bottom: var(--icon-stroke-size) solid rgba(var(--color-highlight), var(--highlight-opacity));
     line-height: 1.2;
 }
 

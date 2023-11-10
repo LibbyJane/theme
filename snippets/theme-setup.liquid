@@ -35,13 +35,6 @@
         }
     {% endfor %}
 
-    :root {
-        accent-color: rgba(250, 15, 117);
-        --color-danger: rgb(235,15,46);
-        --white: rgb(255,255,255);
-        --black: rgb(0,0,0);
-    }
-
     {{ scheme_classes | prepend: 'body' }} {
         color: rgba(var(--color-foreground), 1);
         background-color: rgba(var(--color-background),var(--background-opacity));
@@ -97,10 +90,16 @@
         --title-shadow-blur-radius: {{ settings.card_shadow_blur | divided_by: 10.0 }}rem;
 
         --highlight-opacity: 0.9;
-        --highlight-color: {{ settings.highlight_color.red }},{{ settings.highlight_color.green }},{{ settings.highlight_color.blue }};
+        --color-highlight: {{ settings.color_highlight.red }},{{ settings.color_highlight.green }},{{ settings.color_highlight.blue }};
 
-        --ecommerce-color: {{ settings.ecommerce_color.red }},{{ settings.ecommerce_color.green }},{{ settings.ecommerce_color.blue }};
-        --ecommerce-contrast-color: {{ settings.ecommerce_contrast_color.red }},{{ settings.ecommerce_contrast_color.green }},{{ settings.ecommerce_contrast_color.blue }};
+        --color-ecommerce: {{ settings.color_ecommerce.red }},{{ settings.color_ecommerce.green }},{{ settings.color_ecommerce.blue }};
+        --color-ecommerce-contrast: {{ settings.ecommerce_contrast_color.red }},{{ settings.ecommerce_contrast_color.green }},{{ settings.ecommerce_contrast_color.blue }};
+        --color-success: {{ settings.color_success.red }},{{ settings.color_success.green }},{{ settings.color_success.blue }};
+        --color-warning: {{ settings.color_warning.red }},{{ settings.color_warning.green }},{{ settings.color_warning.blue }};
+        --color-danger: {{ settings.color_danger.red }},{{ settings.color_danger.green }},{{ settings.color_danger.blue }};
+        accent-color: var(--color-danger);
+        --color-white: rgb(255,255,255);
+        --color-black: rgb(0,0,0);
 
         --collection-card-image-padding: {{ settings.collection_card_padding | divided_by: 10.0 }}rem;
         --collection-card-corner-radius: {{ settings.collection_card_corner_radius | divided_by: 10.0 }}rem;
@@ -210,7 +209,7 @@
 
 
     .card {
-        --highlight-color: {% if settings.card_highlight_price  %}0.9{% else %}0{% endif %};
+        --color-highlight: {% if settings.card_highlight_price  %}0.9{% else %}0{% endif %};
     }
 
     *,

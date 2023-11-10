@@ -1,12 +1,3 @@
-_:root {
-    --inline-padding: var(--space-med);
-    --content-padding: var(--space-med) var(--inline-padding) var(--space-sm);
-
-    @media screen and (min-width: 750px) {
-        --inline-padding: var(--space-xxl);
-    }
-}
-
 .site-outer {
     @include scrollbars;
     background: var(--background-image);
@@ -62,7 +53,7 @@ _:root {
 
     @media screen and (min-width: 990px) {
         max-width: var(--page-width);
-        padding: 0 var(--inline-padding);
+        padding: 0 var(--inline-padding-lg);
     }
 }
 

@@ -18,8 +18,8 @@
     box-shadow:  0 1px 4px rgba(var(--color-shadow), 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
     box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
     rgba(var(--color-shadow), var(--popup-shadow-opacity)), 0 -2px 4px rgba(var(--color-shadow), 0.06);
-    padding-left: var(--inline-padding);
-    padding-right: var(--inline-padding);
+    padding-left: var(--inline-padding-lg);
+    padding-right: var(--inline-padding-lg);
     position: relative;
     pointer-events: all;
     width: 100%;
@@ -63,7 +63,7 @@ cart-items {
 
     .totals__total,
     .totals p {
-        color: rgb(var(--ecommerce-color));
+        color: rgb(var(--color-ecommerce));
         margin: 0;
         padding: 0;
     }

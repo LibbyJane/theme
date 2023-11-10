@@ -23,7 +23,7 @@
     position: relative;
 
     &::before {
-        background: rgba(var(--highlight-color), var(--highlight-opacity));
+        background: rgba(var(--color-highlight), var(--highlight-opacity));
         border-radius: var(--button-border-radius);
         content: '';
         margin: -2px;

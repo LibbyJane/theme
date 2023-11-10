@@ -3,7 +3,7 @@
     z-index: 1;
 
     &::before {
-        background-color: rgba(var(--highlight-color), var(--highlight-opacity));
+        background-color: rgba(var(--color-highlight), var(--highlight-opacity));
         content: '';
         // animation: scaleX100 var(--duration-long) ease;
         // animation-delay: var(--duration-medium);

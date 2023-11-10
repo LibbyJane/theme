@@ -17,7 +17,7 @@
 
     {%- style -%}
         .quantity {
-            --highlight-opacity: {% if section.settings.use_highlight_color  %}0.2{% else %}0{% endif %};
+            --highlight-opacity: {% if section.settings.use_color_highlight  %}0.2{% else %}0{% endif %};
         }
 
         .section-{{ section.id }}-padding {
@@ -126,7 +126,7 @@
                                     show_badges: true,
                                     price_class: block.settings.text_style,
                                     price_font_scale: block.settings.price_font_scale,
-                                    use_highlight_color: block.settings.use_price_highlight_color,
+                                    use_color_highlight: block.settings.use_price_color_highlight,
                                     taxes_included: cart.taxes_included,
                                     taxes_included_message: taxes_included_message
                                 -%}
@@ -452,9 +452,9 @@
                 },
                 {
                     "type": "checkbox",
-                    "id": "use_price_highlight_color",
+                    "id": "use_price_color_highlight",
                     "default": false,
-                    "label": "t:settings_schema.colors.settings.highlight_color.label"
+                    "label": "t:settings_schema.colors.settings.color_highlight.label"
                 }
             ]
         },
@@ -1777,9 +1777,9 @@
         },
         {
             "type": "checkbox",
-            "id": "use_highlight_color",
+            "id": "use_color_highlight",
             "default": false,
-            "label": "t:settings_schema.colors.settings.highlight_color.label"
+            "label": "t:settings_schema.colors.settings.color_highlight.label"
         },
         {
             "type": "header",

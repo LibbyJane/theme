@@ -33,7 +33,7 @@
           "settings": {
             "text_style": "body",
             "price_font_scale": 120,
-            "use_price_highlight_color": false
+            "use_price_color_highlight": false
           }
         },
         "2fb6f458-5da1-4e83-a150-83bca55c5817": {
@@ -121,7 +121,7 @@
         "enable_sticky_info": true,
         "color_scheme": "",
         "background_texture": "paper",
-        "use_highlight_color": true,
+        "use_color_highlight": true,
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",

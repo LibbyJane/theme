@@ -164,16 +164,9 @@
                 "background": {
                     "label": "Background"
                 },
-                "background_transparent": {
-                    "label": "Background transparent",
-                    "info": "The scheme scheme color won't be used and the container background will show."
-                },
                 "background_gradient": {
                     "label": "Background gradient",
                     "info": "Background gradient replaces background where possible."
-                },
-                "background_texture": {
-                    "label": "Apply texture to the background color"
                 },
                 "text": {
                     "label": "Text"
@@ -190,13 +183,41 @@
                 "shadow": {
                     "label": "Shadow"
                 },
-                "highlight_color": {
+                "background_transparent": {
+                    "label": "Background transparent",
+                    "info": "The scheme scheme color won't be used and the container background will show."
+                },
+                "background_texture": {
+                    "label": "Apply texture to the background color"
+                },
+                "use_container_color_scheme": {
+                    "label": "Apply color scheme to container"
+                },
+                "container_color_scheme": {
+                    "label": "Container color scheme"
+                },
+                "use_content_color_scheme": {
+                    "label": "Apply color scheme to content"
+                },
+                "content_color_scheme": {
+                    "label": "Content color scheme"
+                },
+                "success_color": {
+                    "label": "Success indicator color"
+                },
+                "warning_color": {
+                    "label": "Warning indicator color"
+                },
+                "danger_color": {
+                    "label": "Danger indicator color"
+                },
+                "color_highlight": {
                     "label": "Highlight color"
                 },
-                "use_highlight_color": {
+                "use_color_highlight": {
                     "label": "Highlight"
                 },
-                "ecommerce_color": {
+                "color_ecommerce": {
                     "label": "eCommerce color",
                     "info": "Used for add to cart buttons and highlighting eCommerce functionality"
                 },
@@ -498,6 +519,9 @@
                 "container": "Apply to container",
                 "contents": "Apply to contents"
             },
+            "heading": {
+                "label": "Heading"
+            },
             "heading_size": {
                 "label": "Heading size",
                 "options__1": {
@@ -763,6 +787,23 @@
             "name": "Contact Form",
             "presets": {
                 "name": "Contact form"
+            },
+            "settings": {
+                "show_store_name": {
+                    "label": "Show store name"
+                },
+                "show_store_contact_information": {
+                    "label": "Show store contact information"
+                },
+                "store_message": {
+                    "label": "Contact details message"
+                },
+                "stamp_image": {
+                    "label": "Postage stamp"
+                },
+                "secondary_image": {
+                    "label": "Secondary image"
+                }
             }
         },
         "custom-liquid": {

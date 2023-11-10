@@ -19,6 +19,8 @@
 
 @import "theme/textures";
 
+@import "core/pages/shopify";
+
 @import
         "components/buttons/base"
         ,"components/buttons/cart"
@@ -36,6 +38,7 @@
         ,"components/forms/fields"
         ,"components/forms/messages"
         ,"components/forms/errors"
+        ,"components/forms/postcard"
         ,"components/modals/base"
         ,"components/modals/search"
         ,"components/rte/base"

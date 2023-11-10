@@ -1,0 +1,5 @@
+.shopify-policy__container {
+    @include default-texture;
+    margin-block: var(--space-lg);
+    padding: var(--content-padding);
+}

@@ -13,15 +13,21 @@
   outline: none;
 }
 
+.list-menu__item {
+    display: flex;
+        align-items: center;
+        line-height: calc(1 + 0.3 / var(--font-body-scale));
+}
+
 .list-menu__item--active {
     opacity: var(--opacity-light);
 //   text-decoration: underline;
 //   text-underline-offset: 0.3rem;
 }
 
-.list-menu__item--active:hover {
-//   text-decoration-thickness: 0.2rem;
-}
+// .list-menu__item--active:hover {
+// text-decoration-thickness: 0.2rem;
+// }
 
 .list-menu--disclosure.localization-selector {
   max-height: 18rem;

@@ -23,7 +23,7 @@ button.shopify-payment-button__button--unbranded,
     --shadow-visible: var(--button-shadow-visible);
     --border-offset: var(--button-border-offset); /* reduce radius edge artifacts */
     --border-opacity: calc(1 - var(--button-border-opacity));
-
+    @include text-heading;
     background-color:  var(--button-background-color);
     border-style: solid;
     border-width: var(--button-border-width);
@@ -35,9 +35,7 @@ button.shopify-payment-button__button--unbranded,
         align-items: center;
         justify-content: center;
         gap: var(--space);
-    font-family: var(--font-heading-family);
     font-size: calc(var(--font-heading-scale) * 1.2rem);
-    font-weight: 600;
     margin: 0;
     padding: var(--space) var(--space-lg);
     //opacity: 0.85;

@@ -91,7 +91,7 @@
 
 .quantity__button-text {
   border-radius: 50%;
-  background-color: rgba(var(--highlight-color), var(--highlight-opacity));
+  background-color: rgba(var(--color-highlight), var(--highlight-opacity));
   font-family: var(--font-heading-family);
   padding: var(--space-sm);
   display: inline-block;
@@ -106,7 +106,7 @@
   position: relative;
 }
 .quantity-cart::before {
-  background-color: rgba(var(--highlight-color), 0.2);
+  background-color: rgba(var(--color-highlight), 0.2);
   content: "";
   position: absolute;
   margin: -1;
