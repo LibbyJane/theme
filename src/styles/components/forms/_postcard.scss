@@ -7,14 +7,20 @@
     background-blend-mode: multiply;
     box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
     display: grid;
-        grid-template-areas: "postcard-fields" "postcard-send";
-
+        grid-template-areas: "title" "postcard-fields" "postcard-send";
+    width: var(--page-width--narrow);
+    max-width: 100%;
+    margin: 0 auto;
     padding: var(--content-padding);
     position: relative;
 
     @media screen and (min-width: 750px) {
-        grid-template-areas: "postcard-fields postcard-send";
+        grid-template-areas: "title postcard-send" "postcard-fields postcard-send";
         grid-template-columns: 1fr 1fr;
+    }
+
+    .title {
+        grid-area: title;
     }
 
     .postage-stamp {
@@ -23,8 +29,8 @@
         transform: rotate(-1deg);
         backface-visibility: hidden;
         position: absolute;
-            top: var(--space-med);
-            right: var(--space-xl);
+            top: var(--space-lg);
+            right: 0;
         z-index: 1;
 
         @media screen and (min-width: 750px) {
@@ -52,13 +58,23 @@
 
     .postage-stamp--landscape {
         width: 14rem;
-        top: var(--space-xl);
-        right: var(--space-lg);
+        top: 2.5rem;
+        right: -0.5rem;
+
+        @media screen and (min-width: 750px) {
+            top: var(--space-xl);
+            right: var(--space-lg);
+        }
     }
 
     .postage-stamp--square {
-        top: var(--space-lg);
-        right: var(--space-xl);
+        top: 2.75rem;
+        right: -0.5rem;
+
+        @media screen and (min-width: 750px) {
+            top: var(--space-lg);
+            right: var(--space-xl);
+        }
     }
 
     fieldset {
@@ -86,6 +102,11 @@
     .contact__submit {
         grid-area: postcard-send;
         padding-right: 0;
+        padding-bottom: var(--space-med);
+
+        @media screen and (min-width: 750px) {
+            padding-bottom: var(--space);
+        }
 
         // stamp placement outline
         &::before {
@@ -96,6 +117,7 @@
             margin-top: var(--space-med);
             margin-left: auto;
             transform: scale(0.9);
+            opacity: var(--opacity-light);
 
             @media screen and (min-width: 750px) {
                 margin-top: 0;
@@ -103,11 +125,26 @@
                 transform: translateY(calc(var(--space-med) * -1)) translateX(calc(var(--space-lg) * -1)) scale(0.9);
             }
         }
+
+        &::after {
+            @include default-texture;
+            box-shadow: 0 0 2px rgba(var(--color-shadow), 1);
+            content: '';
+            position: absolute;
+            inset: 0 calc(var(--space-xl) * -1);
+            z-index: -1;
+
+            @media screen and (min-width: 750px) {
+                content: none;
+            }
+        }
     }
 
     .field {
-        border-bottom: var(--input-border-width) solid var(--postcard-border-color);
         padding-top: 0;
+    }
+    .field__input {
+        border-bottom: var(--input-border-width) solid var(--postcard-border-color);
     }
 
     .field__label {
@@ -141,15 +178,19 @@
     }
 
     button[type="submit"] {
-        margin-top: auto;
+        margin: var(--space) 0;
         width: 100%;
+
+        @media screen and (min-width: 750px) {
+            margin-top: auto;
+        }
     }
 }
 
 .postcard__reverse-face {
     position: absolute;
         inset: 0;
-    transform: rotate(5deg) translateY(5rem) translateX(6rem);
+    transform: rotate(5deg) translateY(1rem) translateX(7rem);
     z-index: -1;
     overflow: hidden;
     display: flex;

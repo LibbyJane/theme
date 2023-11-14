@@ -1,0 +1,21 @@
+{% comment %}
+    Renders a successful form submission status message
+
+    Accepts:
+    - id: {String} Element Id
+    - classes: {String} Any additional CSS classes
+    - message: {String}
+
+    Usage:
+    {%- render 'form-message-success', classes='newsletter-form__message h3', id: 'ContactFooter-success', message: newsletter.success -%}
+{% endcomment %}
+
+<div
+    class="form__message status-success{%- if classes != blank -%} {{classes}}{%- endif -%}"
+    id="{{id}}"
+    tabindex="-1"
+    autofocus
+>
+    {% render 'icon-success' -%}
+    {%- if message != blank -%}{{ message  | t  }}{%- endif -%}
+</div>

@@ -15,7 +15,7 @@
 {%- endstyle -%}
 
 <div class="contact {% if section.settings.use_container_color_scheme %} color-{{ section.settings.container_color_scheme }}{% endif %} section-{{ section.id }}-padding isolate">
-    <div class="page-width page-width--narrow isolate">
+    <div class="page-width isolate">
         {%- capture postcard_color_scheme -%}color-{{section.settings.content_color_scheme}}{% endcapture %}
         {%- liquid
             assign scroll_classes = ''
@@ -38,13 +38,14 @@
                 }}
             </div>
         {%- endif -%}
+
         {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
             {%- if section.settings.heading != blank -%}
-                <h1 class="title inline-richtext">
+                <h1 class="inline-richtext {{ section.settings.heading_size }}">
                     {{ section.settings.heading }}
                 </h1>
-            {% comment %}{%- else -%}
-            <h1 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h1> {% endcomment %}
+            {%- else -%}
+            <h1 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h1>
             {%- endif -%}
             <fieldset class="contact__fields">
                 <div class="field">
@@ -59,7 +60,7 @@
                     >
                     <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
                 </div>
-                <div class="field field--with-error">
+                <div class="field {% if form.errors contains 'email' %}status-error{% endif %}">
                     <input
                         autocomplete="email"
                         type="email"
@@ -78,17 +79,10 @@
                     >
                     <label class="field__label" for="ContactForm-email">
                         {{- 'templates.contact.form.email' | t }}
-                        <!-- <abbr class="field__required" title="Required">*</abbr> -->
+                        <abbr class="field__required" title="Required">*</abbr>
                     </label>
                     {%- if form.errors contains 'email' -%}
-                        <small class="contact__field-error" id="ContactForm-email-error">
-                            <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
-                            <span class="form__message">
-                                {%- render 'icon-error' -%}
-                                {{- form.errors.translated_fields.email | capitalize }}
-                                {{ form.errors.messages.email -}}
-                            </span>
-                        </small>
+                        {%- render 'form-field-error', id: 'ContactForm-email-error', field_name: form.errors.translated_fields.email, message: form.errors.messages.email -%}
                     {%- endif -%}
                 </div>
                 <div class="field">
@@ -134,25 +128,26 @@
                     </div>
                 {%- endif -%}
                 {%- if form.posted_successfully? -%}
-                    <h6 class="form-status form-status-list form__message status-success" tabindex="-1" autofocus>
-                    {% render 'icon-success' %}
-                    {{ 'templates.contact.form.post_success' | t }}
-                    </h6>
+                    <div class="form__message status-success">
+                        <h6 class="form__status-heading" tabindex="-1" autofocus>
+                            {{ 'templates.contact.form.post_success' | t }}
+                        </h6>
+                    </div>
                 {%- elsif form.errors -%}
                     <div class="form__message status-error">
-                    <h6 class="form-status" role="alert" tabindex="-1" autofocus>
-                        {% render 'icon-error' %}
-                        {{ 'templates.contact.form.error_heading' | t }}
-                    </h6>
+                        <h6 class="form__status-heading" role="alert" tabindex="-1" autofocus>
+                            {% render 'icon-error' %}
+                            {{ 'templates.contact.form.error_heading' | t }}
+                        </h6>
+                        <ul class="form__status-list" role="list">
+                            <li>
+                                <a href="#ContactForm-email">
+                                {{ form.errors.translated_fields.email | capitalize }}
+                                {{ form.errors.messages.email }}
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="form-status-list" role="list">
-                        <li>
-                            <a href="#ContactForm-email">
-                            {{ form.errors.translated_fields.email | capitalize }}
-                            {{ form.errors.messages.email }}
-                            </a>
-                        </li>
-                    </ul>
                 {%- endif -%}
 
                 <div class="contact__store-message inline-richtext">
@@ -176,7 +171,6 @@
                             {%- endif -%}
                         </div>
                 </div>
-
 
                 <button type="submit" class="button button--secondary">
                     {{ 'templates.contact.form.send' | t }}
