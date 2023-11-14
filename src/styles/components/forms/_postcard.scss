@@ -141,10 +141,14 @@
     }
 
     .field {
+        --border: var(--input-border-width) solid var(--postcard-border-color);
+        border-bottom: var(--border);
         padding-top: 0;
-    }
-    .field__input {
-        border-bottom: var(--input-border-width) solid var(--postcard-border-color);
+
+        &.status-error {
+            --border: var(--input-border-width) solid currentColor; // inherited by the status div
+            border-bottom: none;
+        }
     }
 
     .field__label {
@@ -190,7 +194,7 @@
 .postcard__reverse-face {
     position: absolute;
         inset: 0;
-    transform: rotate(5deg) translateY(1rem) translateX(7rem);
+    transform: rotate(4deg) translateY(-1rem) translateX(7rem);
     z-index: -1;
     overflow: hidden;
     display: flex;

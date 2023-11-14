@@ -7,9 +7,9 @@
 }
 
 .form__message {
-    --border-color: currentColor;
-    border: var(--border);
-    border-width: var(--border-width) 0;
+    // --border-color: currentColor;
+    // border: var(--border);
+    // border-width: var(--border-width) 0;
     margin: var(--space-med) 0;
     padding: var(--space) 0;
 }
@@ -21,9 +21,10 @@
     margin: 0;
     padding: 0;
 
-    &.status-error {
+    .status-error & {
         @include text-body;
         font-size: var(--font-size-smaller);
+
     }
 }
 

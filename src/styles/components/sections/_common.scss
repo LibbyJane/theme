@@ -1,0 +1,51 @@
+// todo: check if needed?
+// .section__container {
+//     display: flex;
+// }
+
+.section__content {
+    margin: auto;
+}
+
+.position-content-center {
+    justify-content: center;
+}
+
+.position-content-left {
+    justify-content: start;
+}
+
+.position-content-right {
+    justify-content: end;
+}
+
+.align-content-left {
+    text-align: left;
+}
+
+.align-content-right {
+    text-align: right;
+}
+
+.align-content-center {
+    text-align: center;
+}
+
+.width-full {
+    width: 100%;
+}
+
+.width-page {
+    margin-inline: auto;
+    width: var(--page-width);
+    max-width: 100%;
+}
+
+.width-narrow {
+    width: 50rem;
+    max-width: 100%;
+
+    @media screen and (min-width: 990px) {
+        width: 78rem;
+    }
+}

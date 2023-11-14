@@ -63,7 +63,8 @@
 }
 
 .content-padding-inline {
-  padding-inline: var(--content-padding-inline);
+  padding-left: var(--content-padding-inline);
+  padding-right: var(--content-padding-inline);
 }
 
 .content-padding {
@@ -89,6 +90,10 @@
 
 .break {
   word-break: break-word;
+}
+
+.flex {
+  display: flex;
 }
 
 @media (prefers-reduced-motion) {

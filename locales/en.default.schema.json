@@ -364,7 +364,7 @@
                     "content": "Social accounts"
                 },
                 "social_twitter_link": {
-                    "label": "Twitter",
+                    "label": "X / Twitter",
                     "info": "https://twitter.com/shopify"
                 },
                 "social_facebook_link": {
@@ -512,6 +512,7 @@
             "spacing": "Spacing",
             "colors": {
                 "label": "Color scheme",
+                "heading": "Colors",
                 "has_cards_info": "To change the card color scheme, update your theme settings."
             },
             "color_boundary": {
@@ -521,6 +522,12 @@
             },
             "heading": {
                 "label": "Heading"
+            },
+            "images": {
+                "heading": "Images"
+            },
+            "content": {
+                "heading": "Content"
             },
             "heading_size": {
                 "label": "Heading size",

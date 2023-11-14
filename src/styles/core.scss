@@ -22,7 +22,8 @@
 @import "core/pages/shopify";
 
 @import
-        "components/buttons/base"
+        "components/sections/common"
+        ,"components/buttons/base"
         ,"components/buttons/cart"
         ,"components/buttons/share"
         ,"components/badges/base"
@@ -32,6 +33,7 @@
         ,"components/highlight"
         ,"components/icons/base"
         ,"components/icons/with-text"
+        ,"components/images/base"
         ,"components/forms/base"
         ,"components/forms/fieldsets"
         ,"components/forms/checkable"
