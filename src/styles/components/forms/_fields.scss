@@ -6,6 +6,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .field {
+    // grid-template-rows leaves space for the error message to slot in
     --field-height: 4rem;
     --border-width: var(--inputs-border-width);
     // --border-color: rgba(var(--color-foreground), var(--inputs-border-opacity));
@@ -13,14 +14,14 @@ input[type="search"]::-webkit-search-results-decoration {
     // border-radius: var(--inputs-border-radius);
     // border-bottom-left-radius: 0;
     display: grid;
-    grid-template-areas: 'field-input';
-    grid-template-columns: 1fr;
-    gap: var(--space-sm);
-    border-bottom: var(--border);
-    padding-top: 0;
-    margin: 0 0 var(--space-lg);
-    width: 100%;
+        grid-template-areas: 'field-input' 'field-error';
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content minmax(var(--space), max-content);
+        gap: var(--space-sm);
+    margin: 0;
+    padding: 0 0 var(--space-sm);
     position: relative;
+    width: 100%;
     z-index: 1;
 }
 
@@ -36,8 +37,14 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .field__label {
     grid-area: field-input;
+
+    color: rgba(var(--color-foreground), 1);
     opacity: var(--opacity-lighter);
     text-align: left;
+
+    .field.status-error & {
+        color: currentColor;
+    }
 
     abbr {
         opacity: var(--opacity-light);
@@ -45,7 +52,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .field__required {
-    color: rgba(var(--color-highlight));
+    color: accent-color;
     cursor: help;
     text-decoration: none;
 }
@@ -56,21 +63,27 @@ input[type="search"]::-webkit-search-results-decoration {
     appearance: textfield;
     background: transparent;
     border: 0;
+    border-bottom: var(--border);
     box-shadow: none;
-    color: rgb(var(--color-foreground));
+    color: rgba(var(--color-foreground), 1);
     font-family: var(--font-heading-family);
     font-style: var(--font-heading-style);
     font-size: calc(var(--font-heading-scale) * 1.2rem);
     line-height: 1;
     min-height: var(--field-height);
     outline: 2px solid transparent;
-    padding: 0 0 var(--space-sm);
+    margin: 0;
+    padding: 0;
     text-align: left;
     text-indent: 1px;
     width: 100%;
 
     .field--search & {
         padding-top: var(--space-med);
+    }
+
+    .field.status-error & {
+        border-color: rgba(var(--color-danger), 1);
     }
 
     &[textarea] {
@@ -132,6 +145,19 @@ input[type="search"]::-webkit-search-results-decoration {
 textarea {
     @include scrollbars;
 }
+
+.field__error {
+    --icon-size: var(--icon-size-sm);
+
+    display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    font-size: var(--font-size-small);
+    font-weight: normal;
+    gap: var(--space-xs);
+    line-height: 1;
+}
+
 
 
 // // eg search form
@@ -304,7 +330,7 @@ textarea {
 //   display: flex;
 // }
 
-// .field--with-error {
+// .status-error {
 //   flex-wrap: wrap;
 // }
 
@@ -450,21 +476,21 @@ textarea {
 //   align-self: start;
 // }
 
-// .form-status {
+// .form__status {
 //   margin: 0;
 //   font-size: 1.6rem;
 // }
 
-// .form-status-list {
+// .form__status-list {
 //   padding: 0;
 //   margin: 2rem 0 4rem;
 // }
 
-// .form-status-list li {
+// .form__status-list li {
 //   list-style-position: inside;
 // }
 
-// .form-status-list .link::first-letter {
+// .form__status-list .link::first-letter {
 //   text-transform: capitalize;
 // }
 

@@ -9,7 +9,7 @@
     // --space-xxxl: 7rem;
 
     --space: var(--grid-mobile-vertical-spacing);
-    --space-xs: calc(var(--space)/4);
+    --space-xs: calc(var(--space)/3);
     --space-sm: calc(var(--space)/2);
     --space-med: calc(var(--space) * 1.5);
     --space-lg: calc(var(--space) * 2);
@@ -21,7 +21,10 @@
         --space: var(--grid-desktop-vertical-spacing);;
     }
 
-    --icon-size-default: 1.5rem;
+    --page-width--narrow: 72.6rem;
+
+    --icon-size: 1.5rem;
+    --icon-size-sm: 1.25rem;
     --icon-size-lg: 2rem;
     --icon-size-xl: 3rem;
 

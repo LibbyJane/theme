@@ -110,6 +110,9 @@
                     </button>
                   </div>
                   {%- if form.errors -%}
+                  <!-- TODO: check id on error -->
+                    {%- render 'form-field-error', classes='newsletter-form__message', id: "Newsletter-error--{{ section.id }}", field_name: form.errors.translated_fields.email, message: form.errors.messages.email -%}
+
                     <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">
                       {%- render 'icon-error' -%}
                       {{- form.errors.translated_fields.email | capitalize }}

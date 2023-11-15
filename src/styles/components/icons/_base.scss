@@ -2,5 +2,9 @@
     stroke-width: var(--icon-stroke-size);
     display: inline-block;
     pointer-events: none;
-    width: var(--icon-size-default);
+    width: var(--icon-size);
+}
+
+.icon-sm {
+    width: var(--icon-size-sm);
 }

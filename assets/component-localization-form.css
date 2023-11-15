@@ -324,7 +324,7 @@ noscript .localization-selector.link {
 
 .header-localization .disclosure .localization-form__select {
   font-size: var(--font-size-smaller);
-  letter-spacing: 0.06rem;
+  letter-spacing: var(--letter-spacing);
   height: auto;
   min-height: initial;
   background: transparent;
