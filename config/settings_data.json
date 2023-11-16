@@ -10,7 +10,7 @@
     "page_width": 1200,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 16,
-    "spacing_grid_vertical": 8,
+    "spacing_grid_vertical": 16,
     "buttons_border_thickness": 2,
     "buttons_border_opacity": 100,
     "buttons_radius": 15,
@@ -44,7 +44,6 @@
     "card_shadow_vertical_offset": 4,
     "card_shadow_blur": 5,
     "collection_card_style": "standard",
-    "collection_card_image_padding": 0,
     "collection_card_text_alignment": "left",
     "collection_card_color_scheme": "background-2",
     "collection_card_border_thickness": 0,
@@ -121,6 +120,7 @@
     "checkout_sidebar_background_color": "#ffffff",
     "checkout_accent_color": "#820030",
     "checkout_button_color": "#820030",
+    "collection_card_image_padding": 0,
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -155,7 +155,8 @@
           "button": "#242833",
           "button_label": "#ffffff",
           "secondary_button_label": "#242833",
-          "shadow": "#242833"
+          "shadow": "#242833",
+          "todo": "#B9E41D"
         }
       },
       "background-2": {
@@ -166,7 +167,8 @@
           "button": "#3f2b00",
           "button_label": "#fcf6ea",
           "secondary_button_label": "#3f2b00",
-          "shadow": "#3f2b00"
+          "shadow": "#3f2b00",
+          "todo": "#B9E41D"
         }
       },
       "inverse": {
@@ -177,7 +179,8 @@
           "button": "#ffffff",
           "button_label": "#242833",
           "secondary_button_label": "#ffffff",
-          "shadow": "#000000"
+          "shadow": "#000000",
+          "todo": "#B9E41D"
         }
       },
       "accent-1": {
@@ -188,7 +191,8 @@
           "button": "#ffffff",
           "button_label": "#820030",
           "secondary_button_label": "#ffffff",
-          "shadow": "#000000"
+          "shadow": "#000000",
+          "todo": "#B9E41D"
         }
       },
       "accent-2": {
@@ -199,7 +203,8 @@
           "button": "#cec2d8",
           "button_label": "#ffffff",
           "secondary_button_label": "#23455c",
-          "shadow": "#1a2227"
+          "shadow": "#1a2227",
+          "todo": "#B9E41D"
         }
       }
     }
