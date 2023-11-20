@@ -1,8 +1,9 @@
 @import "helpers/variables/breakpoints"
         ,"helpers/variables/defaults"
-        ,"helpers/variables/typography"
         ,"helpers/variables/core"
-        ,"helpers/variables/elements";
+        ,"helpers/variables/elements"
+        ,"helpers/utilities"
+        ;
 
 @import "helpers/common";
 
@@ -15,6 +16,7 @@
         ,"core/site-header/nav"
         ,"core/site-header/utility"
         ,"core/utility-bar/announcement-bar"
+        ,"core/no-js"
         ;
 
 @import "theme/textures";

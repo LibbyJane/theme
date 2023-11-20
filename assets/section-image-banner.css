@@ -37,10 +37,10 @@
 }
 
 .banner__box {
+  padding: var(--content-padding-inline);
   height: -moz-fit-content;
   height: fit-content;
   align-items: center;
-  padding: var(--space-xxl);
   position: relative;
   text-align: inherit;
   width: 100%;

@@ -93,9 +93,12 @@
         --page-width: {{ settings.page_width | divided_by: 10 }}rem;
         --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
 
+        --content-width--narrow: 36rem;
+
         --product-card-padding: {{ settings.card_padding | divided_by: 10.0 }}rem;
         --product-card-corner-radius: {{ settings.card_corner_radius | divided_by: 10.0 }}rem;
         --product-card-text-alignment: {{ settings.card_text_alignment }};
+        --product-card-justification: {% if settings.card_text_alignment == 'left' %}flex-start{% elsif settings.card_text_alignment == 'right' %}flex-end{% else %}center{% endif %};
         --product-card-border-width: {{ settings.card_border_thickness | divided_by: 10.0 }}rem;
         --product-card-border-opacity: {{ settings.card_border_opacity | divided_by: 100.0 }};
         --product-card-shadow-opacity: {{ settings.card_shadow_opacity | divided_by: 100.0 }};
@@ -148,8 +151,6 @@
         --blog-card-shadow-blur-radius: {{ settings.blog_card_shadow_blur | divided_by: 10.0 }}rem;
         --blog-card-image-offset: {% if settings.blog_card_image_full_width  %}{{ settings.blog_card_image_padding | divided_by: -10.0 }}rem;{% else %}0{% endif %};
 
-        --badge-corner-radius: {{ settings.badge_corner_radius | divided_by: 10.0 }}rem;
-
         --popup-border-width: {{ settings.popup_border_thickness }}px;
         --popup-border-opacity: {{ settings.popup_border_opacity | divided_by: 100.0 }};
         --popup-corner-radius: {{ settings.popup_corner_radius }}px;
@@ -174,6 +175,14 @@
         --grid-desktop-horizontal-spacing: {{ settings.spacing_grid_horizontal }}px;
         --grid-mobile-vertical-spacing: {{ settings.spacing_grid_vertical }}px;
         --grid-mobile-horizontal-spacing: {{ settings.spacing_grid_horizontal }}px;
+
+        --grid-horizontal-spacing: var(--grid-mobile-horizontal-spacing, 1rem);
+        --grid-vertical-spacing: var(--grid-mobile-vertical-spacing, 1rem);
+
+        @media screen and (min-width: 750px) {
+            --grid-horizontal-spacing: var(--grid-desktop-horizontal-spacing, 1rem);
+            --grid-vertical-spacing: var(--grid-desktop-vertical-spacing, 1rem);
+        }
 
         --text-boxes-border-opacity: {{ settings.text_boxes_border_opacity | divided_by: 100.0 }};
         --text-boxes-border-width: {{ settings.text_boxes_border_thickness }}px;

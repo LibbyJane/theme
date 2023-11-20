@@ -103,7 +103,7 @@
     max-height: 100%;
   }
   quick-add-modal .product--mobile-columns .product__media-item {
-    width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing));
+    width: calc(100% - 3rem - var(--grid-horizontal-spacing));
   }
 }
 .quick-add-modal__toggle {
@@ -164,12 +164,12 @@ quick-add-modal .product__column-sticky {
 @media screen and (min-width: 750px) {
   quick-add-modal .product:not(.product--no-media) .product__media-wrapper {
     max-width: 45%;
-    width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2);
+    width: calc(45% - var(--grid-horizontal-spacing) / 2);
   }
   quick-add-modal .product:not(.product--no-media) .product__info-wrapper {
     padding-left: 4rem;
     max-width: 54%;
-    width: calc(54% - var(--grid-desktop-horizontal-spacing) / 2);
+    width: calc(54% - var(--grid-horizontal-spacing) / 2);
   }
   quick-add-modal .product--columns .product__media-item:not(.product__media-item--single):not(:only-child) {
     max-width: 100%;

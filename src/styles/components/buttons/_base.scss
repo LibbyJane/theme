@@ -191,10 +191,8 @@ a,
 //.shopify-challenge__button.shopify-challenge__button,
 .shopify-payment-button__button.shopify-payment-button__button {
     border-color:  var(--button-foreground-color);
-
-    &:hover, &:focus {
-        background-color:  var(--button-background-color);
-    }
+    background-color:  var(--button-background-color);
+    color: var(--button-foreground-color)
 }
 
 

@@ -25,14 +25,12 @@
 
 .collage {
   display: grid;
-  grid-column-gap: var(--grid-mobile-horizontal-spacing);
-  grid-row-gap: var(--grid-mobile-vertical-spacing);
+  grid-column-gap: var(--grid-horizontal-spacing);
+  grid-row-gap: var(--grid-vertical-spacing);
 }
 @media screen and (min-width: 750px) {
   .collage {
     grid-auto-flow: column;
-    grid-column-gap: var(--grid-desktop-horizontal-spacing);
-    grid-row-gap: var(--grid-desktop-vertical-spacing);
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
@@ -166,13 +164,6 @@
 .collage-card__link {
   display: block;
   height: 100%;
-}
-
-.collage__item > * {
-  width: 100%;
-}
-.collage__item .card__content {
-  flex-grow: initial;
 }
 
 @media screen and (min-width: 750px) {

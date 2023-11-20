@@ -39,13 +39,11 @@
 
 .collage {
     display: grid;
-        grid-column-gap: var(--grid-mobile-horizontal-spacing);
-        grid-row-gap: var(--grid-mobile-vertical-spacing);
+        grid-column-gap: var(--grid-horizontal-spacing);
+        grid-row-gap: var(--grid-vertical-spacing);
 
     @media screen and (min-width: 750px) {
         grid-auto-flow: column;
-        grid-column-gap: var(--grid-desktop-horizontal-spacing);
-        grid-row-gap: var(--grid-desktop-vertical-spacing);
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     // large block is on the left
@@ -216,16 +214,16 @@
     height: 100%;
 }
 
-.collage__item  {
-    > * {
-        width: 100%;
+// .collage__item  {
+//     > * {
+//         width: 100%;
 
-    }
+//     }
 
-    .card__content {
-        flex-grow: initial;
-    }
-}
+//     .card__content {
+//         flex-grow: initial;
+//     }
+// }
 
 .collage__item--collection,
 .collage__item--product {

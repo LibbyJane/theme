@@ -25,7 +25,7 @@
 }
 
 .texture-lined {
-    $border-size: 30px;
+    --texture-lined-border-size: 30px;
 
     $vertical-line-offset: 10px;
     $vertical-line-offset2: $vertical-line-offset + 3px;
@@ -37,7 +37,7 @@
     linear-gradient(#eee .1rem, transparent .1rem),
     var(--background-gradient);
     position: relative;
-    padding-left: $border-size;
+    padding-left: var(--texture-lined-border-size, 30px);
 
     &::before {
         background: rgb(var(--color-background));
@@ -45,8 +45,8 @@
         position: absolute;
             top: 0;
             bottom: 0;
-            left: -$border-size;
-        width: $border-size;
+            left: calc(var(--texture-lined-border-size) * -1);
+        width: var(--texture-lined-border-size, 30px);
         -webkit-mask-box-image: url('img-paper-hole-border.svg?v=2') 1 round;
             // 1 /          /* slice */
             // // 20px /             /* width */

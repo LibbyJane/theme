@@ -36,7 +36,8 @@ h5,
 .h2,
 .h3,
 .h4,
-.h5 {
+.h5,
+.text-subtitle {
     @include text-heading;
 }
 
@@ -84,6 +85,12 @@ h6,
     &--large {
         --font-size-caption: 1.4rem;
     }
+}
+
+
+.text-subtitle {
+    @include text-heading;
+    font-size: var(--font-size-h6);
 }
 
 .caption-with-letter-spacing {

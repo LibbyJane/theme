@@ -37,9 +37,9 @@
 
     <a {% if card_collection == blank %}role="link" aria-disabled="true"{% else %}href="{{ card_collection.url }}"{% endif %}
         class="card card--{{ card_style }}
-        {% if card_style == 'card' %}color-{{ card_color_scheme }}{% endif %}
-        {% if card_collection.featured_image %} card--media{% else %} card--text{% endif %}
         {% if card_style == 'card' %} color-{{ card_color_scheme }} gradient{% endif %}
+        {% if card_collection.featured_image %} card--media{% else %} card--text{% endif %}
+
         {% if extend_height %} card--extend-height{% endif %}
         "
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
@@ -85,7 +85,7 @@
             {%- if card_collection == blank -%}
                 <div class="card__content">
                     <div class="card__information">
-                        <h3 class="card__heading">
+                        <h3 class="card__heading h4">
                             {%- if card_collection.title != blank -%}
                                 {{- card_collection.title | escape -}}
                             {%- else -%}

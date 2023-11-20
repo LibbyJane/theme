@@ -54,7 +54,7 @@
         box-shadow: var(--card-badge-drop-shadow-left);
         content: '';
         mix-blend-mode: multiply;
-        // opacity: 0.1;
+        opacity: 0.3;
         pointer-events: none;
         position: absolute;
         inset: 0;
@@ -69,6 +69,7 @@
 
 .card-badge__inner {
     @include sharp-text;
+    background-color: rgb(var(--color-background));
     display: inline-block;
     font-family: inherit;
     font-size: inherit;
@@ -78,7 +79,8 @@
     padding: var(--card-badge-padding);
     text-align: center;
     text-transform: uppercase;
-    transform: translateY(1px);
+    position: relative;
+    z-index: var(--zi-base);
 
     .card-badge--article & {
         // font-weight: var(--font-heading-weight);

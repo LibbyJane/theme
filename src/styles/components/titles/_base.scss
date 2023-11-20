@@ -1,6 +1,9 @@
 .title-wrapper {
+
     display: flex;
+        flex-direction: column;
     margin-bottom: var(--title-margin-bottom);
+    padding-inline: var(--content-padding-inline);
 
     &.align-center {
         justify-content: center;
@@ -14,20 +17,43 @@
 .title {
     display: block;
     margin: 0 auto;
-    padding: var(--space-med) var(--space-lg) var(--space-lg);
+    padding: var(--space-med) var(--content-padding-inline) var(--space-lg);
     transform: rotate(-0.5deg);
 
+    &.animate--slide-in {
+        @media (prefers-reduced-motion: no-preference) {
+            transform: rotate(-0.5deg) translateY(2rem);
+        }
+    }
+
     .align-left & {
-        margin-left: var(--space-sm);
+        margin-left: 0;
     }
 
     .align-right & {
-        margin-right: var(--space-sm);
+        margin-right: 0;
     }
 
     &.texture-transparent {
         --title-shadow-opacity: 0;
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+.title--additional {
+    // eg descriptive text
+    clip-path: none; // don't fold the corner
+    margin: calc(var(--space-xs) * -1) auto 0;
+    transform: translateX(-2px);
+
+    &.animate--slide-in {
+        @media (prefers-reduced-motion: no-preference) {
+            transform: translateX(-2px) translateY(2rem);
+        }
+    }
+
+    &::after {
+        content: none; // don't fold the corner
     }
 }

@@ -1,5 +1,12 @@
-.shopify-policy__container {
+.shopify-policy__container
+{
     @include default-texture;
     margin-block: var(--space-lg);
     padding: var(--content-padding);
+}
+
+.shopify-app-block
+{
+    @include default-texture;
+    margin-block: var(--space-med);
 }

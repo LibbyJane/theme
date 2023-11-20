@@ -484,7 +484,7 @@ quick-order-list-remove-button:hover .icon-remove {
   }
 
   .quick-order-list__button {
-    max-width: 36rem;
+    max-width: var(--content-width--narrow);
   }
 }
 
@@ -693,7 +693,7 @@ quick-order-list-remove-button {
 
   .quick-order-list__button-confirm {
     width: 100%;
-    max-width: 36rem;
+    max-width: var(--content-width--narrow);
   }
 
   quick-order-list .tax-note {

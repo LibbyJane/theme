@@ -1,106 +1,167 @@
-.image-with-text .grid {
-  margin-bottom: 0;
+.image-with-text {
+    .grid {
+      margin-bottom: 0;
+    }
+
+    .grid__item {
+        position: relative;
+    }
+
+    .image-with-text .global-media-settings {
+        overflow: hidden !important;
+    }
 }
 
-.image-with-text .grid__item {
-  position: relative;
-}
-
-@media screen and (min-width: 750px) {
-  .image-with-text__grid--reverse {
-    flex-direction: row-reverse;
-  }
+.image-with-text__grid--reverse {
+    @media screen and (min-width: 750px) {
+        flex-direction: row-reverse;
+    }
 }
 
 .image-with-text__media {
-  min-height: 100%;
-  overflow: visible;
+    min-height: 100%;
+    overflow: visible;
 }
 
 .image-with-text__media--small {
-  height: 19.4rem;
+    height: 19.4rem;
+
+    @media screen and (min-width: 750px) {
+        height: 31.4rem;
+    }
 }
 
 .image-with-text__media--medium {
-  height: 29.6rem;
+    height: 29.6rem;
+
+    @media screen and (min-width: 750px) {
+        height: 46remrem;
+    }
 }
 
 .image-with-text__media--large {
-  height: 43.5rem;
-}
+    height: 43.5rem;
 
-@media screen and (min-width: 750px) {
-  .image-with-text__media--small {
-    height: 31.4rem;
-  }
-
-  .image-with-text__media--medium {
-    height: 46rem;
-  }
-
-  .image-with-text__media--large {
-    height: 69.5rem;
-  }
+    @media screen and (min-width: 750px) {
+        height: 69.5rem;
+    }
 }
 
 .image-with-text__media--placeholder {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
+
+    // .image-with-text__media--placeholder:after {
+    //   content: '';
+    //   position: absolute;
+    //   background: rgba(var(--color-foreground), 0.04);
+    // }
+
+
+    > svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        fill: currentColor;
+    }
+
+    &:is(.animate--ambient, .animate--zoom-in) > svg {
+        top: 0;
+        left: 0;
+        transform: translate(0);
+    }
 }
 
-.image-with-text__media--placeholder:after {
-  content: '';
-  position: absolute;
-  background: rgba(var(--color-foreground), 0.04);
+.image-with-text__media--adapt {
+    height: 20rem;
+
+    @media screen and (min-width: 750px) {
+        height: 30rem;
+    }
 }
 
-.image-with-text__media--placeholder.image-with-text__media--adapt {
-  height: 20rem;
-}
-
-@media screen and (min-width: 750px) {
-  .image-with-text__media--placeholder.image-with-text__media--adapt {
-    height: 30rem;
-  }
-}
-
-.image-with-text__media--placeholder > svg {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  fill: currentColor;
-}
-
-.image-with-text__media--placeholder:is(.animate--ambient, .animate--zoom-in) > svg {
-  top: 0;
-  left: 0;
-  transform: translate(0);
+.image-with-text__media-item--small {
+    flex-grow: 0;
 }
 
 .image-with-text__content {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  align-self: center;
-  padding: 4rem calc(4rem / var(--font-body-scale)) 5rem;
-  position: relative;
-  z-index: 1;
+    --translateX: 0;
+    --translateY: 0;
+    align-self: center;
+    display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    // padding: var(--space-xxl) calc( var(--space-xxl) / var(--font-body-scale)) calc( var(--space-xxl) - var(--space));
+    padding: var(--content-padding);
+    position: relative;
+    transform: translateX(var(--translateX)) translateY(var(--translateX));
+    z-index: var(--zi-base);
+
+    @media screen and (min-width: 750px) {
+        padding: var(--space-xxl) calc( var(--space-xxl) / var(--font-body-scale)) calc( var(--space-xxl) - var(--space));
+    }
+
+    &.texture-lined {
+        --translateX: calc(var(--texture-lined-border-size)/2);
+        max-width: calc(100% - var(--texture-lined-border-size));
+
+        @media screen and (min-width: 750px) {
+            --translateX: 0;
+        }
+
+        .image-with-text--overlap & {
+            --translateY: calc(var(--space-med)* -1);
+            overflow: visible;
+
+            @media screen and (min-width: 750px) {
+                --translateY: 0;
+            }
+        }
+
+        &.image-with-text__content--desktop-left
+        {
+            overflow: visible;
+        }
+    }
 }
 
-.image-with-text .grid__item::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+
+
+/*
+    Multirow
+    note: consider removing from this stylesheet if multirow-specific styles increase signficantly
+*/
+.multirow__inner {
+    display: flex;
+        flex-direction: column;
+        row-gap: var(--grid-vertical-spacing);
+
+    @media screen and (min-width: 750px) {
+        row-gap: var(--grid-vertical-spacing);
+    }
 }
+
+
+
+// // todo: clean this up
+
+
+// todo: what is this for??
+// .image-with-text .grid__item::after {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: -1;
+// }
 
 .image-with-text:not(.image-with-text--overlap) .image-with-text__media-item:after {
   border-radius: var(--media-radius);
@@ -121,9 +182,7 @@
     rgba(var(--color-shadow), var(--media-shadow-opacity));
 }
 
-.image-with-text .global-media-settings {
-  overflow: hidden !important;
-}
+
 
 .image-with-text .image-with-text__text-item > * {
   border-radius: var(--text-boxes-radius);
@@ -132,17 +191,7 @@
     var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
 }
 
-.image-with-text__content {
-    overflow: hidden;
 
-    &.texture-lined {
-        .image-with-text--overlap &,
-        &.image-with-text__content--desktop-left
-        {
-            overflow: visible;
-        }
-    }
-}
 
 .image-with-text:not(.image-with-text--overlap) .image-with-text__media-item > *,
 .image-with-text:not(.image-with-text--overlap) .image-with-text__text-item > * {
@@ -180,8 +229,13 @@
 }
 
 .image-with-text--overlap .image-with-text__content {
-  width: 90%;
-  margin: -3rem auto 0;
+    width: calc(100% - var(--texture-lined-border-size) - var(--content-padding-inline) - var(--content-padding-inline));
+    margin: calc(var(--space) * -1) auto 0;
+
+    @media screen and (min-width: 750px) {
+        width: 90%;
+        margin: -3rem auto 0;
+    }
 }
 
 @media screen and (min-width: 750px) {
@@ -412,18 +466,3 @@
   }
 }
 
-/*
-  Multirow
-  note: consider removing from this stylesheet if multirow-specific styles increase signficantly
-*/
-.multirow__inner {
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--grid-mobile-vertical-spacing);
-}
-
-@media screen and (min-width: 750px) {
-  .multirow__inner {
-    row-gap: var(--grid-desktop-vertical-spacing);
-  }
-}
