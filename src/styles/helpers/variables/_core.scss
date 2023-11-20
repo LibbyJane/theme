@@ -8,7 +8,7 @@
     // --space-xxl: 5rem;
     // --space-xxxl: 7rem;
 
-    --space: var(--grid-mobile-vertical-spacing);
+    --space: var(--grid-vertical-spacing, 1rem);
     --space-xs: calc(var(--space)/3);
     --space-sm: calc(var(--space)/2);
     --space-med: calc(var(--space) * 1.5);
@@ -16,10 +16,6 @@
     --space-xl: calc(var(--space) * 3);
     --space-xxl: calc(var(--space) * 5);
     --space-xxxl: calc(var(--space) * 7);
-
-    @media screen and (min-width: 750px) {
-        --space: var(--grid-desktop-vertical-spacing);;
-    }
 
     --page-width--narrow: 72.6rem;
 

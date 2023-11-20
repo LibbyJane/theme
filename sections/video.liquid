@@ -2,157 +2,152 @@
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
-  }
+
+    @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
 {%- endstyle -%}
 
 {%- liquid
-  assign video_id = section.settings.video.id | default: section.settings.video_url.id
-  assign video_alt = section.settings.video.alt | default: section.settings.description
-  assign alt = 'sections.video.load_video' | t: description: video_alt | escape
-  assign poster = section.settings.video.preview_image | default: section.settings.cover_image
+    assign video_id = section.settings.video.id | default: section.settings.video_url.id
+    assign video_alt = section.settings.video.alt | default: section.settings.description
+    assign alt = 'sections.video.load_video' | t: description: video_alt | escape
+    assign poster = section.settings.video.preview_image | default: section.settings.cover_image
 
-  if section.settings.video != null
-    assign ratio_diff = section.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
-    if ratio_diff < 0.01 and ratio_diff > 0
-      assign fix_ratio = true
+    if section.settings.video != null
+        assign ratio_diff = section.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
+        if ratio_diff < 0.01 and ratio_diff > 0
+        assign fix_ratio = true
+        endif
     endif
-  endif
 -%}
 
 {%- capture sizes -%}
   {% if section.settings.full_width -%}
-    100vw
-  {%- else -%}
-    (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px)
-    calc(100vw - 10rem), 100vw
-  {%- endif %}
+        100vw
+    {%- else -%}
+        (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px)
+        calc(100vw - 10rem), 100vw
+    {%- endif %}
 {%- endcapture -%}
 
-{% comment %} <div class="color-{{ section.settings.color_scheme }} "> {% endcomment %}
-  <div class="video-section {% if section.settings.color_boundary == 'container' %} color-{{ section.settings.color_scheme }}{% endif %} isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
-    <div
-      {% if section.settings.full_width %}
-        class="page-width"
-      {% endif %}
-    >
-        {%- unless section.settings.heading == blank -%}
-            <div class="title-wrapper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-                <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{% if section.settings.color_boundary == 'container' %}{{ settings.title_color_scheme }}{% else %}{{ section.settings.color_scheme }}{% endif %} {{ section.settings.heading_size }}">
-                    {{ section.settings.heading }}
-                </h2>
-            </div>
-        {%- endunless -%}
-    </div>
+
+<div class="video-section color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} isolate {% if section.settings.full_width %}width-full {% else %} width-page {% endif %} section-{{ section.id }}-padding">
+    {%- unless section.settings.heading == blank -%}
+        <div class="title-wrapper title-wrapper align-{{settings.title_alignment}} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }}">
+                {{ section.settings.heading }}
+            </h2>
+        </div>
+    {%- endunless -%}
+
     <noscript>
-      <div
-        class="video-section__media"
-        {% if poster != null %}
-          style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
-        {% endif %}
-      >
-        {%- if section.settings.video == null and section.settings.video_url != null -%}
-          <a
-            href="{{ section.settings.video_url }}"
-            class="video-section__poster media media--transparent{% if poster == null %} video-section__placeholder{% endif %}"
-          >
-            {%- if poster != null -%}
-              {{
-                poster
-                | image_url: width: 3840
-                | image_tag:
-                  loading: 'lazy',
-                  sizes: sizes,
-                  widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-                  alt: alt
-              }}
+        <div
+            class="video-section__media"
+            {% if poster != null %}
+            style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+            {% endif %}
+        >
+            {%- if section.settings.video == null and section.settings.video_url != null -%}
+            <a
+                href="{{ section.settings.video_url }}"
+                class="video-section__poster media media--transparent{% if poster == null %} video-section__placeholder{% endif %}"
+            >
+                {%- if poster != null -%}
+                {{
+                    poster
+                    | image_url: width: 3840
+                    | image_tag:
+                    loading: 'lazy',
+                    sizes: sizes,
+                    widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                    alt: alt
+                }}
+                {%- else -%}
+                {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                {%- endif -%}
+            </a>
             {%- else -%}
-              {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+            {{
+                section.settings.video
+                | video_tag: image_size: '1100x', loop: section.settings.enable_video_looping, controls: true, muted: false
+            }}
             {%- endif -%}
-          </a>
-        {%- else -%}
-          {{
-            section.settings.video
-            | video_tag: image_size: '1100x', loop: section.settings.enable_video_looping, controls: true, muted: false
-          }}
-        {%- endif -%}
-      </div>
+        </div>
     </noscript>
     <deferred-media
-      class="video-section__media deferred-media no-js-hidden  global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-      data-media-id="{{ video_id }}"
-      {% if poster != null %}
-        style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
-      {% endif %}
-    >
-      <button
-        id="Deferred-Poster-Modal-{{ video_id }}"
-        class="video-section__poster media deferred-media__poster media--landscape"
-        type="button"
-        aria-label="{{ alt }}"
-      >
-        {%- if poster != null -%}
-          {{
-            poster
-            | image_url: width: 3840
-            | image_tag: loading: 'lazy', sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
-          }}
-        {%- else -%}
-          {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-        {%- endif -%}
-        <span class="deferred-media__poster-button motion-reduce">
-          {%- render 'icon-play' -%}
-        </span>
-      </button>
-      <template>
-        {%- if section.settings.video == null and section.settings.video_url != null -%}
-          {%- liquid
-            assign loop = ''
-            if section.settings.enable_video_looping
-              assign loop = '&loop=1&playlist=' | append: video_id
-            endif
-          -%}
-          {%- if section.settings.video_url.type == 'youtube' -%}
-            <iframe
-              src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
-              class="js-youtube"
-              allow="autoplay; encrypted-media"
-              allowfullscreen
-              title="{{ section.settings.description | escape }}"
-            ></iframe>
-          {%- else -%}
-            <iframe
-              src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1{{ loop }}"
-              class="js-vimeo"
-              allow="autoplay; encrypted-media"
-              allowfullscreen
-              title="{{ section.settings.description | escape }}"
-            ></iframe>
-          {%- endif -%}
-        {%- else -%}
-          {{
-            section.settings.video
-            | video_tag:
-              image_size: '1100x',
-              autoplay: true,
-              loop: section.settings.enable_video_looping,
-              controls: true,
-              muted: false
-          }}
-        {%- endif -%}
-      </template>
+        class="video-section__media deferred-media no-js-hidden  global-media-settings{% if section.settings.full_width %} global-media-settings--full-width {% else %} content-margin-inline {% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        data-media-id="{{ video_id }}"
+        {% if poster != null %}
+            style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+        {% endif %}
+        >
+        <button
+            id="Deferred-Poster-Modal-{{ video_id }}"
+            class="video-section__poster media deferred-media__poster media--landscape"
+            type="button"
+            aria-label="{{ alt }}"
+        >
+            {%- if poster != null -%}
+            {{
+                poster
+                | image_url: width: 3840
+                | image_tag: loading: 'lazy', sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
+            }}
+            {%- else -%}
+            {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+            {%- endif -%}
+            <span class="deferred-media__poster-button motion-reduce">
+            {%- render 'icon-play' -%}
+            </span>
+        </button>
+        <template>
+            {%- if section.settings.video == null and section.settings.video_url != null -%}
+            {%- liquid
+                assign loop = ''
+                if section.settings.enable_video_looping
+                assign loop = '&loop=1&playlist=' | append: video_id
+                endif
+            -%}
+            {%- if section.settings.video_url.type == 'youtube' -%}
+                <iframe
+                src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
+                class="js-youtube"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                title="{{ section.settings.description | escape }}"
+                ></iframe>
+            {%- else -%}
+                <iframe
+                src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1{{ loop }}"
+                class="js-vimeo"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                title="{{ section.settings.description | escape }}"
+                ></iframe>
+            {%- endif -%}
+            {%- else -%}
+            {{
+                section.settings.video
+                | video_tag:
+                image_size: '1100x',
+                autoplay: true,
+                loop: section.settings.enable_video_looping,
+                controls: true,
+                muted: false
+            }}
+            {%- endif -%}
+        </template>
     </deferred-media>
-  </div>
-{% comment %} </div> {% endcomment %}
+</div>
+
 
 {% schema %}
 {
@@ -248,20 +243,10 @@
             "default": "background-1"
         },
         {
-            "type": "select",
-            "id": "color_boundary",
-            "options": [
-                {
-                    "value": "container",
-                    "label": "t:sections.all.color_boundary.container"
-                },
-                {
-                    "value": "content",
-                    "label": "t:sections.all.color_boundary.contents"
-                }
-            ],
-            "default": "content",
-            "label": "t:sections.all.color_boundary.label"
+            "type": "checkbox",
+            "id": "background_transparent",
+            "default": true,
+            "label": "t:settings_schema.colors.settings.background_transparent.label"
         },
         {
             "type": "header",

@@ -64,12 +64,12 @@
                 {{ block.settings.heading }}
               </h2>
             {%- when 'caption' -%}
-              <p
-                class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
+              <h6
+                class="image-with-text__text text-{{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}"
                 {{ block.shopify_attributes }}
               >
                 {{ block.settings.caption | escape }}
-              </p>
+              </h6>
             {%- when 'text' -%}
               <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                 {{ block.settings.text }}

@@ -10,27 +10,30 @@
 // --text-alignment: var(--collection-card-text-alignment);
 
 .card {
-    border-radius: var(--card-corner-radius);
-    box-shadow: var(--card-shadow-horizontal-offset) var(--card-shadow-vertical-offset) var(--card-shadow-blur-radius) rgba(var(--color-shadow), var(--card-shadow-opacity));
-    background-color: rgba(var(--color-background),1);
-    border: var(--card-border-width) solid rgba(var(--color-foreground),var(--card-border-opacity));
+        // padding-bottom: calc(var(--card-padding) - var(--space));
+    // margin-bottom: var(--space-lg);
+    background: transparent;
+    border: none;
     color: rgb(var(--color-foreground));
     display: flex;
         flex-direction: column;
         height: 100%;
-    margin-bottom: var(--space-lg);
-    padding: var(--card-padding);
-        padding-bottom: calc(var(--card-padding) - var(--space));
-    position: relative;
-    text-decoration: none;
-    text-align: var(--card-text-alignment);
-    transition: all var(--duration-medium) var(--transition-type);
-    transform: rotate(-0.5deg);
-    will-change: transform;
-    transform-style: preserve-3d;
-    z-index: 1;
     outline: 2px solid transparent;
-    backface-visibility: hidden;
+    // overflow: hidden; cuts off shadow
+    padding: 0;
+
+    position: relative;
+    text-align: var(--card-text-alignment);
+    text-decoration: none;
+    transform-style: preserve-3d;
+    transform: rotate(-0.5deg);
+    transition: all var(--duration-medium) var(--transition-type);
+    will-change: transform;
+    z-index: 1;
+
+    &.card--card{
+        @include card-container;
+    }
 
     &.card {
         .grid__item & {
@@ -50,6 +53,10 @@
     .ratio {
         flex-direction: row;
         height: auto;
+
+        .article-card & {
+            flex-direction: column;
+        }
     }
 
     &--badge-bottom-left {

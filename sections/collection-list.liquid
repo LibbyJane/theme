@@ -1,4 +1,4 @@
-{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+<!-- {{ 'section-collection-list.css' | asset_url | stylesheet_tag }} -->
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 
@@ -24,12 +24,12 @@
     endif
 -%}
 
-  <div class="collection-list-wrapper {% if section.settings.color_boundary == 'container' %} color-{{ section.settings.color_scheme }}{% endif %} isolate{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding">
+  <div class="collection-list-wrapper color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} isolate {% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding">
     {%- unless section.settings.title == blank -%}
-        <div class="page-width {% if show_mobile_slider %} page-width-desktop{% endif %} title-wrapper {% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} align-{{settings.title_alignment}}">
+        <div class="page-width title-wrapper align-{{settings.title_alignment}}">
             <h2
                 id="SectionHeading-{{ section.id }}"
-                class="collection-list-title title inline-richtext texture-{{ settings.title_style }} color-{% if section.settings.color_boundary == 'container' %}{{ settings.title_color_scheme }}{% else %}{{ section.settings.color_scheme }}{% endif %} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                class="collection-list-title title texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 {{ section.settings.title }}
             </h2>
 
@@ -109,7 +109,7 @@
 
     {%- if section.settings.show_view_all and section.blocks.size < collections.size -%}
       <div
-        class="center collection-list-view-all{% if show_mobile_slider %} small-hide medium-hide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        class="center margin-top--lg collection-list-view-all{% if show_mobile_slider %} small-hide medium-hide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
         {% if settings.animations_reveal_on_scroll %}
           data-cascade
         {% endif %}
@@ -200,20 +200,10 @@
             "default": "background-1"
         },
         {
-            "type": "select",
-            "id": "color_boundary",
-            "options": [
-                {
-                    "value": "container",
-                    "label": "t:sections.all.color_boundary.container"
-                },
-                {
-                    "value": "content",
-                    "label": "t:sections.all.color_boundary.contents"
-                }
-            ],
-            "default": "content",
-            "label": "t:sections.all.color_boundary.label"
+            "type": "checkbox",
+            "id": "background_transparent",
+            "default": true,
+            "label": "t:settings_schema.colors.settings.background_transparent.label"
         },
         {
             "type": "checkbox",

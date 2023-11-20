@@ -84,7 +84,7 @@
 
         <a href="{{ routes.root_url }}" class="header__brand header__heading-link link link--text focus-inset" >
             {%- if settings.logo != blank -%}
-            <div class="style-postage-stamp">
+                {% comment %}<div class="style-postage-stamp">{% endcomment %}
                 {% comment %} <div class="header__heading-logo-wrapper"> {% endcomment %}
                 {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
                 {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
@@ -100,7 +100,7 @@
                     preload: true
                 }}
                 {% comment %} </div> {% endcomment %}
-            </div>
+            {% comment %}</div>{% endcomment %}
             {%- else -%}
                 <div class="header__brand-text h2">{{ shop.name }}</div>
             {%- endif -%}

@@ -6,16 +6,36 @@
     margin-bottom: var(--space-med) !important;
 }
 
+// enable if required
+// .margin-top {
+//     margin-top: var(--space) !important;
+// }
+
+// .margin-top--med {
+//     margin-top: var(--space-med) !important;
+// }
+
+.margin-top--lg {
+    margin-top: var(--space-lg) !important;
+}
+
 .w-100 {
     width: 100% !important;
 }
 
 .content-padding-inline {
-    padding-inline: var(--content-padding-inline);
+    padding-left: var(--content-padding-inline);
+    padding-right: var(--content-padding-inline);
 }
 
 .content-padding {
     padding: var(--content-padding);
+}
+
+// eg for videos, where absolute positioning doesn't play nicely with padding
+.content-margin-inline {
+    margin-left: var(--content-padding-inline);
+    margin-right: var(--content-padding-inline);
 }
 
 .page-margin {
@@ -40,10 +60,18 @@
     word-break: break-word;
 }
 
+.flex {
+    display: flex;
+}
+
 
 @media (prefers-reduced-motion) {
     .motion-reduce {
         transition: none !important;
         animation: none !important;
     }
+}
+
+.background-transparent.background-transparent {
+    background: transparent;
 }

@@ -11,9 +11,10 @@
 }
 
 .page-width {
+    width: 100%;
     max-width: var(--page-width);
     margin: 0 auto;
-    padding: 0 var(--content-padding-inline);
+    //padding: 0 var(--content-padding-inline);
 
     &.utility-bar__grid {
         padding-left: 3rem;

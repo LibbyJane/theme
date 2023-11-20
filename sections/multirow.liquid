@@ -2,14 +2,14 @@
 
 {%- style -%}
     .section-{{ section.id }}-padding {
-        --grid-mobile-vertical-spacing: {{ section.settings.row_gap | times: 0.75 | round: 0 }}px;
+        --grid-vertical-spacing: {{ section.settings.row_gap | times: 0.75 | round: 0 }}px;
         padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
         padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
 
     @media screen and (min-width: 750px) {
         .section-{{ section.id }}-padding {
-            --grid-desktop-vertical-spacing: {{ section.settings.row_gap }}px;
+            --grid-desktop-spacing: {{ section.settings.row_gap }}px;
             padding-top: {{ section.settings.padding_top }}px;
             padding-bottom: {{ section.settings.padding_bottom }}px;
         }
@@ -17,34 +17,34 @@
 {%- endstyle -%}
 
 {%- liquid
-  if section.settings.image_layout contains 'right'
-    assign odd_class = ' image-with-text__grid--reverse'
-  else
-    assign even_class = ' image-with-text__grid--reverse'
-  endif
+    if section.settings.image_layout contains 'right'
+        assign odd_class = ' image-with-text__grid--reverse'
+    else
+        assign even_class = ' image-with-text__grid--reverse'
+    endif
 
-  if section.settings.row_color_scheme == section.settings.section_color_scheme
-    assign no_content_background = true
-  endif
+    if section.settings.row_color_scheme == section.settings.section_color_scheme
+        assign no_content_background = true
+    endif
 
-  if settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0
-    assign no_content_styles = true
-  endif
+    if settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0
+        assign no_content_styles = true
+    endif
 
-  if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0
-    assign borders_class = ' collapse-borders'
-  endif
+    if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0
+        assign borders_class = ' collapse-borders'
+    endif
 
-  if no_content_background and no_content_styles
-    assign padding_class = ' collapse-padding'
-  endif
+    if no_content_background and no_content_styles
+        assign padding_class = ' collapse-padding'
+    endif
 
-  unless no_content_background and no_content_styles
-    assign corners_class = ' collapse-corners'
-  endunless
+    unless no_content_background and no_content_styles
+        assign corners_class = ' collapse-corners'
+    endunless
 -%}
 
-<div class="multirow section-{{ section.id }}-padding  {% if section.settings.background_transparent != true %}color-{{ section.settings.section_color_scheme }}{% endif %}">
+<div class="multirow section-{{ section.id }}-padding color-{{ section.settings.section_color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %}">
   <div class="multirow__inner page-width">
     {%- for block in section.blocks -%}
       <div

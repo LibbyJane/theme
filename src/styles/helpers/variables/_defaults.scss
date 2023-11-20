@@ -2,15 +2,16 @@
     --transition-type: ease-in-out;
 
     --page-margin: var(--space-xxxl) auto;
-    --content-padding-inline: var(--space);
+
+    --inline-padding-max: var(--space-med, 1.5rem);
+    --content-padding-inline: var(--inline-padding-max); // fallback in case clamp isn't supported
+    --content-padding-inline: clamp(var(--space-sm), 4vw, var(--inline-padding-max));
     --content-padding: var(--space-med) var(--content-padding-inline) var(--space-sm);
     --full-width-offset-margin: calc(var(--content-padding-inline) * -1);
 
-    --inline-padding-lg: var(--space-med);
+    // TODO: check use case / standarise
+    --inline-padding-lg: var(--space-xxl);
 
-    @media screen and (min-width: 750px) {
-        --inline-padding-lg: var(--space-xxl);
-    }
 
     --border-width: 2px;
     --border-style: dashed;

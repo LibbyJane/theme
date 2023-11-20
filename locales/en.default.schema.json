@@ -91,7 +91,7 @@
                     "label": "Style"
                 },
                 "image_full_width": {
-                    "label": "Image spans full width"
+                    "label": "Card image spans full width"
                 },
                 "highlight_price": {
                     "label": "Highlight price"
@@ -111,7 +111,7 @@
                     "label": "Style"
                 },
                 "image_full_width": {
-                    "label": "Image spans full width"
+                    "label": "Card image spans full width"
                 }
             }
         },
@@ -128,7 +128,7 @@
                     "label": "Style"
                 },
                 "image_full_width": {
-                    "label": "Image spans full width"
+                    "label": "Card image spans full width"
                 }
             }
         },
@@ -185,7 +185,7 @@
                 },
                 "background_transparent": {
                     "label": "Background transparent",
-                    "info": "The scheme scheme color won't be used and the container background will show."
+                    "info": "The main site background color will show, rather than the section background."
                 },
                 "background_texture": {
                     "label": "Apply texture to the background color"
@@ -364,7 +364,7 @@
                     "content": "Social accounts"
                 },
                 "social_twitter_link": {
-                    "label": "Twitter",
+                    "label": "X / Twitter",
                     "info": "https://twitter.com/shopify"
                 },
                 "social_facebook_link": {
@@ -512,6 +512,7 @@
             "spacing": "Spacing",
             "colors": {
                 "label": "Color scheme",
+                "heading": "Colors",
                 "has_cards_info": "To change the card color scheme, update your theme settings."
             },
             "color_boundary": {
@@ -521,6 +522,12 @@
             },
             "heading": {
                 "label": "Heading"
+            },
+            "images": {
+                "heading": "Images"
+            },
+            "content": {
+                "heading": "Content"
             },
             "heading_size": {
                 "label": "Heading size",

@@ -43,30 +43,28 @@
     endif
 -%}
 
-<div class="{% if section.settings.color_boundary == 'container' %} color-{{ section.settings.color_scheme }}{% endif %} isolate collection section-{{ section.id }} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
-    <div class="collection__title title-wrapper align-{{settings.title_alignment}} page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
+<div class="color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} isolate collection section-{{ section.id }} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
+    <header class="title-wrapper align-{{settings.title_alignment}} page-width">
         {%- if section.settings.title != blank -%}
-            <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{% if section.settings.color_boundary == 'container' %}{{ settings.title_color_scheme }}{% else %}{{ section.settings.color_scheme }}{% endif %} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 {{ section.settings.title }}
             </h2>
         {%- endif -%}
 
-    </div>
+        {%- if section.settings.show_collection_description and section.settings.collection.description != empty
+            or section.settings.show_collection_description == false and section.settings.description != blank
+        -%}
+            <div class="title title--additional texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} text-{{section.settings.description_style}}">
+                {%- if section.settings.show_collection_description and section.settings.collection.description != empty -%}
+                    {{ section.settings.collection.description }}
+                {%- else -%}
+                    {{ section.settings.description -}}
+                {%- endif %}
+            </div>
+        {%- endif -%}
+    </header>
 
-    {%- if section.settings.description != blank
-        or section.settings.show_description
-        and section.settings.collection.description != empty
-    -%}
-        <div class="default-content-style content-padding page-width collection__description {{ section.settings.description_style }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-            {%- if section.settings.show_description -%}
-                {{ section.settings.collection.description }}
-            {%- else -%}
-                {{ section.settings.description -}}
-            {%- endif %}
-        </div>
-    {%- endif -%}
-
-    <slider-component class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <slider-component class="slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <ul
             id="Slider-{{ section.id }}"
             class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
@@ -120,9 +118,9 @@
                 >
                     {% render 'icon-caret' %}
                 </button>
-                <div class="slider-counter caption">
+                <div class="slider-counter">
                     <span class="slider-counter--current">1</span>
-                    <span aria-hidden="true"> / </span>
+                    <span class="slider-counter--divider" aria-hidden="true"> / </span>
                     <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
                     <span class="slider-counter--total">{{ products_to_display }}</span>
                 </div>
@@ -197,7 +195,7 @@
     },
     {
         "type": "checkbox",
-        "id": "show_description",
+        "id": "show_collection_description",
         "label": "t:sections.featured-collection.settings.show_description.label",
         "default": false
     },
@@ -278,6 +276,7 @@
         "label": "t:sections.featured-collection.settings.enable_desktop_slider.label",
         "default": false
     },
+
     {
         "type": "color_scheme",
         "id": "color_scheme",
@@ -286,20 +285,10 @@
         "default": "inverse"
     },
     {
-        "type": "select",
-        "id": "color_boundary",
-        "options": [
-            {
-                "value": "container",
-                "label": "t:sections.all.color_boundary.container"
-            },
-            {
-                "value": "content",
-                "label": "t:sections.all.color_boundary.contents"
-            }
-        ],
-        "default": "content",
-        "label": "t:sections.all.color_boundary.label"
+        "type": "checkbox",
+        "id": "background_transparent",
+        "default": true,
+        "label": "t:settings_schema.colors.settings.background_transparent.label"
     },
     {
         "type": "header",
