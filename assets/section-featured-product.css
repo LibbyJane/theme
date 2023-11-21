@@ -80,17 +80,16 @@
   height: auto;
   width: 100%;
 }
-.section__container--featured-product .share-button {
-  min-height: 4.4rem;
-}
 .section__container--featured-product .share-button:nth-last-child(2) {
   display: inline-flex;
 }
 .section__container--featured-product .share-button + .product__view-details {
-  min-height: 4.4rem;
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.section__container--featured-product .share-button__button {
+  min-height: 4.4rem;
 }
 
 .product__view-details {

@@ -1,10 +1,19 @@
+:root {
+    --rotate-icon: 0;
+}
+
 .icon {
     stroke-width: var(--icon-stroke-size);
     display: inline-block;
     pointer-events: none;
     width: var(--icon-size);
+    transform: rotate(calc(var(--rotate-icon) * 1deg));
 }
 
 .icon-sm {
-    width: var(--icon-size-sm);
+    --icon-size: var(--icon-size-sm);
+}
+
+.icon-xs {
+    --icon-size: var(--icon-size-xs);
 }
