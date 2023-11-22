@@ -25,7 +25,7 @@
   --space-xl: calc(var(--space) * 3);
   --space-xxl: calc(var(--space) * 5);
   --space-xxxl: calc(var(--space) * 7);
-  --page-width--medium: 60rem;
+  --page-width--medium: 64rem;
   --page-width--narrow: 72.6rem;
   --icon-size: 1.5rem;
   --icon-size-sm: 1.25rem;
