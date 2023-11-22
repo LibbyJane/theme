@@ -25,9 +25,11 @@
   --space-xl: calc(var(--space) * 3);
   --space-xxl: calc(var(--space) * 5);
   --space-xxxl: calc(var(--space) * 7);
+  --page-width--medium: 60rem;
   --page-width--narrow: 72.6rem;
   --icon-size: 1.5rem;
   --icon-size-sm: 1.25rem;
+  --icon-size-xs: 1rem;
   --icon-size-lg: 2rem;
   --icon-size-xl: 3rem;
   --opacity-full: 1;
@@ -73,7 +75,9 @@
   --card-media-box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
   rgba(var(--color-shadow), var(--media-shadow-opacity));
   --card-image-offset: var(--product-card-image-offset);
-  --crease: linear-gradient(to bottom, rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), 0.05) 100%);
+  --crease-alpha: 0.05;
+  --crease: linear-gradient(to bottom, rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), var(--crease-alpha)) 100%);
+  --crease-light: linear-gradient(to bottom, rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), calc(var(--crease-alpha)/4)) 100%);
 }
 
 .collection-card-wrapper .card,
@@ -347,6 +351,10 @@ h6,
 .h6 {
   font-size: var(--font-size-h6);
   font-weight: bold;
+}
+
+strong {
+  font-weight: 600;
 }
 
 .caption,
@@ -623,16 +631,12 @@ a {
   }
 }
 
-@media screen and (min-width: 750px) {
-  .page-width--narrow {
-    padding: 0 9rem;
-  }
+.page-width--medium {
+  max-width: var(--page-width--medium);
 }
-@media screen and (min-width: 990px) {
-  .page-width--narrow {
-    max-width: var(--page-width--narrow);
-    padding: 0;
-  }
+
+.page-width--narrow {
+  max-width: var(--page-width--narrow);
 }
 
 @media screen and (min-width: 750px) {
@@ -1912,6 +1916,13 @@ a .icon-funnel-clear,
   padding-right: 0;
 }
 
+.button--plain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
 .shopify-payment-button__button.shopify-payment-button__button {
   margin: 0 auto;
   min-height: 4.6rem;
@@ -2218,7 +2229,7 @@ details[open] > .share-button__fallback {
   line-height: 1;
   padding: var(--space) var(--space-lg);
   position: relative;
-  background: rgb(var(--color-background)) radial-gradient(ellipse farthest-corner at center center, rgb(var(--color-background)) 50%, rgba(var(--color-shadow), 0.15) 100%);
+  background: rgb(var(--color-background)) radial-gradient(ellipse farthest-corner at center center, rgb(var(--color-background)) 50%, rgba(var(--color-shadow), 0.07) 100%);
 }
 
 :root {
@@ -2399,15 +2410,24 @@ summary .icon-caret {
   pointer-events: none;
 }
 
+:root {
+  --rotate-icon: 0;
+}
+
 .icon {
   stroke-width: var(--icon-stroke-size);
   display: inline-block;
   pointer-events: none;
   width: var(--icon-size);
+  transform: rotate(calc(var(--rotate-icon) * 1deg));
 }
 
 .icon-sm {
-  width: var(--icon-size-sm);
+  --icon-size: var(--icon-size-sm);
+}
+
+.icon-xs {
+  --icon-size: var(--icon-size-xs);
 }
 
 .icon-with-text {

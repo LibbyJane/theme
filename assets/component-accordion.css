@@ -20,7 +20,7 @@
   position: relative;
   line-height: 1;
   padding-inline: var(--content-padding-inline);
-  padding-block: var(--space-med);
+  padding-block: var(--space);
 }
 .accordion summary:hover .icon-caret, .accordion summary:focus .icon-caret {
   transform: rotate(-90deg);
