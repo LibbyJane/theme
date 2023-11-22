@@ -157,7 +157,6 @@
   }
 }
 .customer td::before {
-  background-color: yellowgreen;
   color: rgba(var(--color-foreground), 0.75);
   content: attr(data-label);
   font-size: var(--font-size-smaller, 1.4rem);
@@ -200,6 +199,7 @@
 }
 .customer .order-details__grand-total th,
 .customer .order-details__grand-total td {
+  font-size: var(--font-size-base);
   font-weight: 600;
 }
 .customer .customer thead::after,
@@ -211,7 +211,6 @@
   position: absolute;
   left: 0;
   background: rgba(var(--color-foreground), 0.08);
-  outline: 20px solid red;
 }
 @media screen and (forced-colors: active) {
   .customer .customer thead::after,
