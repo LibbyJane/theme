@@ -25,7 +25,7 @@
   --space-xl: calc(var(--space) * 3);
   --space-xxl: calc(var(--space) * 5);
   --space-xxxl: calc(var(--space) * 7);
-  --page-width--medium: 64rem;
+  --page-width--medium: 99rem;
   --page-width--narrow: 72.6rem;
   --icon-size: 1.5rem;
   --icon-size-sm: 1.25rem;
@@ -112,71 +112,6 @@
   --card-image-offset: var(--blog-card-image-offset);
 }
 
-.margin-bottom {
-  margin-bottom: var(--space) !important;
-}
-
-.margin-bottom--med {
-  margin-bottom: var(--space-med) !important;
-}
-
-.margin-top--lg {
-  margin-top: var(--space-lg) !important;
-}
-
-.w-100 {
-  width: 100% !important;
-}
-
-.content-padding-inline {
-  padding-left: var(--content-padding-inline);
-  padding-right: var(--content-padding-inline);
-}
-
-.content-padding {
-  padding: var(--content-padding);
-}
-
-.content-margin-inline {
-  margin-left: var(--content-padding-inline);
-  margin-right: var(--content-padding-inline);
-}
-
-.page-margin {
-  margin: var(--page-margin);
-}
-
-.center {
-  text-align: center;
-  margin-inline: auto;
-}
-
-.color--danger {
-  color: var(--color-danger) !important;
-}
-
-.visibility-hidden {
-  visibility: hidden;
-}
-
-.break {
-  word-break: break-word;
-}
-
-.flex {
-  display: flex;
-}
-
-@media (prefers-reduced-motion) {
-  .motion-reduce {
-    transition: none !important;
-    animation: none !important;
-  }
-}
-.background-transparent.background-transparent {
-  background: transparent;
-}
-
 :root {
   --corner-shadow-alpha: 0.25;
   --corner-size: 15px;
@@ -229,6 +164,87 @@
     transform: scaleX(100%) rotate(0.5deg);
   }
 }
+.margin-bottom {
+  margin-bottom: var(--space) !important;
+}
+
+.margin-bottom-med {
+  margin-bottom: var(--space-med) !important;
+}
+
+.margin-top--lg {
+  margin-top: var(--space-lg) !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.content-padding-inline {
+  padding-left: var(--content-padding-inline);
+  padding-right: var(--content-padding-inline);
+}
+
+.content-padding {
+  padding: var(--content-padding);
+}
+
+.content-margin-inline {
+  margin-left: var(--content-padding-inline);
+  margin-right: var(--content-padding-inline);
+}
+
+.content-narrow {
+  max-width: 50rem;
+}
+
+.page-margin {
+  margin: var(--page-margin);
+}
+
+.center {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.color--danger {
+  color: var(--color-danger) !important;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.break {
+  word-break: break-word;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-start {
+  justify-content: flex-start;
+  justify-content: start;
+}
+
+.disabled,
+[disabled] {
+  filter: grayscale(1);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+@media (prefers-reduced-motion) {
+  .motion-reduce {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+.background-transparent.background-transparent {
+  background: transparent;
+}
+
 div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -396,26 +412,36 @@ a {
 }
 
 .underlined-link {
+  --underline-height: 0.2px;
   position: relative;
+  z-index: 1;
 }
-.underlined-link::after {
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  background-color: rgba(var(--color-link), var(--alpha-link));
+.underlined-link:hover, .underlined-link:focus {
+  --alpha-link: 1;
+  --underline-height: 1px;
+}
+.underlined-link:hover::before, .underlined-link:focus::before {
+  transform: rotate(-0.25deg) scaleX(1);
+}
+.underlined-link:hover::after, .underlined-link:focus::after {
+  transform: rotate(0.25deg) scaleX(1);
+}
+.underlined-link::before, .underlined-link::after {
   content: "";
-  flex: 0 0 auto;
-  -webkit-mask-image: url(mask-underline.svg);
-          mask-image: url(mask-underline.svg);
-  -webkit-mask-size: cover;
-          mask-size: cover;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: bottom left;
-          mask-position: bottom left;
+  background-color: rgba(var(--color-link), var(--alpha-link));
   position: absolute;
-  bottom: 0;
+  bottom: calc(var(--underline-height) * -1);
   left: 0;
+  height: var(--underline-height);
   width: 100%;
-  height: 2px;
+  transition: transform var(--duration-medium) var(--transition-type);
+  transform: rotate(0.25deg) scaleX(0.95);
+  z-index: -1;
+}
+.underlined-link::before {
+  transition-delay: var(--duration-short);
+  transform: rotate(-0.5deg) scaleX(0);
+  transform-origin: bottom left;
 }
 .underlined-linkbutton {
   background-color: transparent;
@@ -449,6 +475,34 @@ a {
   z-index: -1;
   transform: scaleX(0);
   transform-origin: bottom left;
+}
+
+.hover-highlight {
+  --rotation: -1deg;
+  position: relative;
+  z-index: 1;
+}
+.hover-highlight:nth-child(2n) {
+  --rotation: -2deg;
+}
+.hover-highlight:nth-child(3n) {
+  --rotation: 1deg;
+}
+.hover-highlight:hover::before, .hover-highlight:focus::before {
+  transition: transform var(--duration-long) var(--transition-type);
+  transform: rotate(var(--rotation)) scaleX(1);
+}
+.hover-highlight::before {
+  background: rgba(var(--color-highlight), var(--highlight-opacity));
+  border-radius: var(--button-border-radius);
+  content: "";
+  margin: -2px;
+  position: absolute;
+  inset: 0;
+  transform: rotate(-1deg) scaleX(0);
+  transform-origin: center left;
+  transition-delay: 100ms;
+  z-index: -1;
 }
 
 .link-with-icon {
@@ -1505,6 +1559,10 @@ html.no-js .no-js-hidden {
   --button-border-radius: var(--button-radius-large) var(--button-radius) var(--button-radius-med) var(--button-radius)/var(--button-radius) var(--button-radius-med) var(--button-radius) var(--button-radius-large);
 }
 
+a {
+  --alpha-link: 0.8;
+}
+
 .button,
 .shopify-challenge__button,
 .shopify-payment-button__button,
@@ -1512,9 +1570,9 @@ html.no-js .no-js-hidden {
 button.shopify-payment-button__button--unbranded,
 .cart__dynamic-checkout-buttons [role=button],
 .cart__dynamic-checkout-buttons iframe {
-  --button-opacity: 1;
-  --button-foreground-color: rgba(var(--color-button-text), var(--button-opacity));
-  --button-background-color: rgba(var(--color-button), var(--button-opacity));
+  --alpha-link: 1;
+  --button-foreground-color: rgba(var(--color-button-text), var(--alpha-link));
+  --button-background-color: rgba(var(--color-button), var(--alpha-link));
   --shadow-horizontal-offset: rgb(var(--button-shadow-horizontal-offset));
   --shadow-vertical-offset: var(--button-shadow-vertical-offset);
   --shadow-blur-radius: var(--button-shadow-blur-radius);
@@ -1539,7 +1597,7 @@ button.shopify-payment-button__button--unbranded,
   align-items: center;
   justify-content: center;
   gap: var(--space);
-  font-size: calc(var(--font-heading-scale) * 1.2rem);
+  font-size: var(--font-size-h5);
   margin: 0;
   padding: var(--space) var(--space-lg);
   position: relative;
@@ -1560,7 +1618,7 @@ button.shopify-payment-button__button--unbranded:focus::before,
 .cart__dynamic-checkout-buttons [role=button]:focus::before,
 .cart__dynamic-checkout-buttons iframe:hover::before,
 .cart__dynamic-checkout-buttons iframe:focus::before {
-  opacity: 1;
+  opacity: var(--alpha-link);
   transform: rotate(-1deg) scaleY(1.1) scaleX(1.05);
 }
 .button::before,
@@ -1607,213 +1665,294 @@ button.shopify-payment-button__button--unbranded .spinner,
   max-height: 80%;
 }
 
+.button-sm {
+  border-width: calc(var(--button-border-width) * 3 / 4);
+  font-size: var(--font-size-base);
+  line-height: 1;
+  padding: var(--space-sm) var(--space);
+}
+
+button:hover, button:focus,
+a:hover,
+a:focus,
+.draw-icon:hover,
+.draw-icon:focus {
+  --alpha-link: 1;
+  text-shadow: 0 0 0.1rem rgba(var(--color-foreground), 0.3);
+}
 button:hover .icon path,
 button:hover .icon line,
+button:hover .icon polyline,
 button:hover .icon circle, button:focus .icon path,
 button:focus .icon line,
+button:focus .icon polyline,
 button:focus .icon circle,
 a:hover .icon path,
 a:hover .icon line,
+a:hover .icon polyline,
 a:hover .icon circle,
 a:focus .icon path,
 a:focus .icon line,
+a:focus .icon polyline,
 a:focus .icon circle,
 .draw-icon:hover .icon path,
 .draw-icon:hover .icon line,
+.draw-icon:hover .icon polyline,
 .draw-icon:hover .icon circle,
 .draw-icon:focus .icon path,
 .draw-icon:focus .icon line,
+.draw-icon:focus .icon polyline,
 .draw-icon:focus .icon circle {
   stroke-dasharray: var(--path-length);
   animation: draw var(--duration-long) backwards;
 }
 button:hover .icon path:nth-child(1),
 button:hover .icon line:nth-child(1),
+button:hover .icon polyline:nth-child(1),
 button:hover .icon circle:nth-child(1), button:focus .icon path:nth-child(1),
 button:focus .icon line:nth-child(1),
+button:focus .icon polyline:nth-child(1),
 button:focus .icon circle:nth-child(1),
 a:hover .icon path:nth-child(1),
 a:hover .icon line:nth-child(1),
+a:hover .icon polyline:nth-child(1),
 a:hover .icon circle:nth-child(1),
 a:focus .icon path:nth-child(1),
 a:focus .icon line:nth-child(1),
+a:focus .icon polyline:nth-child(1),
 a:focus .icon circle:nth-child(1),
 .draw-icon:hover .icon path:nth-child(1),
 .draw-icon:hover .icon line:nth-child(1),
+.draw-icon:hover .icon polyline:nth-child(1),
 .draw-icon:hover .icon circle:nth-child(1),
 .draw-icon:focus .icon path:nth-child(1),
 .draw-icon:focus .icon line:nth-child(1),
+.draw-icon:focus .icon polyline:nth-child(1),
 .draw-icon:focus .icon circle:nth-child(1) {
   animation-delay: calc(var(--duration-short) * 1);
 }
 button:hover .icon path:nth-child(2),
 button:hover .icon line:nth-child(2),
+button:hover .icon polyline:nth-child(2),
 button:hover .icon circle:nth-child(2), button:focus .icon path:nth-child(2),
 button:focus .icon line:nth-child(2),
+button:focus .icon polyline:nth-child(2),
 button:focus .icon circle:nth-child(2),
 a:hover .icon path:nth-child(2),
 a:hover .icon line:nth-child(2),
+a:hover .icon polyline:nth-child(2),
 a:hover .icon circle:nth-child(2),
 a:focus .icon path:nth-child(2),
 a:focus .icon line:nth-child(2),
+a:focus .icon polyline:nth-child(2),
 a:focus .icon circle:nth-child(2),
 .draw-icon:hover .icon path:nth-child(2),
 .draw-icon:hover .icon line:nth-child(2),
+.draw-icon:hover .icon polyline:nth-child(2),
 .draw-icon:hover .icon circle:nth-child(2),
 .draw-icon:focus .icon path:nth-child(2),
 .draw-icon:focus .icon line:nth-child(2),
+.draw-icon:focus .icon polyline:nth-child(2),
 .draw-icon:focus .icon circle:nth-child(2) {
   animation-delay: calc(var(--duration-short) * 2);
 }
 button:hover .icon path:nth-child(3),
 button:hover .icon line:nth-child(3),
+button:hover .icon polyline:nth-child(3),
 button:hover .icon circle:nth-child(3), button:focus .icon path:nth-child(3),
 button:focus .icon line:nth-child(3),
+button:focus .icon polyline:nth-child(3),
 button:focus .icon circle:nth-child(3),
 a:hover .icon path:nth-child(3),
 a:hover .icon line:nth-child(3),
+a:hover .icon polyline:nth-child(3),
 a:hover .icon circle:nth-child(3),
 a:focus .icon path:nth-child(3),
 a:focus .icon line:nth-child(3),
+a:focus .icon polyline:nth-child(3),
 a:focus .icon circle:nth-child(3),
 .draw-icon:hover .icon path:nth-child(3),
 .draw-icon:hover .icon line:nth-child(3),
+.draw-icon:hover .icon polyline:nth-child(3),
 .draw-icon:hover .icon circle:nth-child(3),
 .draw-icon:focus .icon path:nth-child(3),
 .draw-icon:focus .icon line:nth-child(3),
+.draw-icon:focus .icon polyline:nth-child(3),
 .draw-icon:focus .icon circle:nth-child(3) {
   animation-delay: calc(var(--duration-short) * 3);
 }
 button:hover .icon path:nth-child(4),
 button:hover .icon line:nth-child(4),
+button:hover .icon polyline:nth-child(4),
 button:hover .icon circle:nth-child(4), button:focus .icon path:nth-child(4),
 button:focus .icon line:nth-child(4),
+button:focus .icon polyline:nth-child(4),
 button:focus .icon circle:nth-child(4),
 a:hover .icon path:nth-child(4),
 a:hover .icon line:nth-child(4),
+a:hover .icon polyline:nth-child(4),
 a:hover .icon circle:nth-child(4),
 a:focus .icon path:nth-child(4),
 a:focus .icon line:nth-child(4),
+a:focus .icon polyline:nth-child(4),
 a:focus .icon circle:nth-child(4),
 .draw-icon:hover .icon path:nth-child(4),
 .draw-icon:hover .icon line:nth-child(4),
+.draw-icon:hover .icon polyline:nth-child(4),
 .draw-icon:hover .icon circle:nth-child(4),
 .draw-icon:focus .icon path:nth-child(4),
 .draw-icon:focus .icon line:nth-child(4),
+.draw-icon:focus .icon polyline:nth-child(4),
 .draw-icon:focus .icon circle:nth-child(4) {
   animation-delay: calc(var(--duration-short) * 4);
 }
 button:hover .icon path:nth-child(5),
 button:hover .icon line:nth-child(5),
+button:hover .icon polyline:nth-child(5),
 button:hover .icon circle:nth-child(5), button:focus .icon path:nth-child(5),
 button:focus .icon line:nth-child(5),
+button:focus .icon polyline:nth-child(5),
 button:focus .icon circle:nth-child(5),
 a:hover .icon path:nth-child(5),
 a:hover .icon line:nth-child(5),
+a:hover .icon polyline:nth-child(5),
 a:hover .icon circle:nth-child(5),
 a:focus .icon path:nth-child(5),
 a:focus .icon line:nth-child(5),
+a:focus .icon polyline:nth-child(5),
 a:focus .icon circle:nth-child(5),
 .draw-icon:hover .icon path:nth-child(5),
 .draw-icon:hover .icon line:nth-child(5),
+.draw-icon:hover .icon polyline:nth-child(5),
 .draw-icon:hover .icon circle:nth-child(5),
 .draw-icon:focus .icon path:nth-child(5),
 .draw-icon:focus .icon line:nth-child(5),
+.draw-icon:focus .icon polyline:nth-child(5),
 .draw-icon:focus .icon circle:nth-child(5) {
   animation-delay: calc(var(--duration-short) * 5);
 }
 button:hover .icon path:nth-child(6),
 button:hover .icon line:nth-child(6),
+button:hover .icon polyline:nth-child(6),
 button:hover .icon circle:nth-child(6), button:focus .icon path:nth-child(6),
 button:focus .icon line:nth-child(6),
+button:focus .icon polyline:nth-child(6),
 button:focus .icon circle:nth-child(6),
 a:hover .icon path:nth-child(6),
 a:hover .icon line:nth-child(6),
+a:hover .icon polyline:nth-child(6),
 a:hover .icon circle:nth-child(6),
 a:focus .icon path:nth-child(6),
 a:focus .icon line:nth-child(6),
+a:focus .icon polyline:nth-child(6),
 a:focus .icon circle:nth-child(6),
 .draw-icon:hover .icon path:nth-child(6),
 .draw-icon:hover .icon line:nth-child(6),
+.draw-icon:hover .icon polyline:nth-child(6),
 .draw-icon:hover .icon circle:nth-child(6),
 .draw-icon:focus .icon path:nth-child(6),
 .draw-icon:focus .icon line:nth-child(6),
+.draw-icon:focus .icon polyline:nth-child(6),
 .draw-icon:focus .icon circle:nth-child(6) {
   animation-delay: calc(var(--duration-short) * 6);
 }
 button:hover .icon path:nth-child(7),
 button:hover .icon line:nth-child(7),
+button:hover .icon polyline:nth-child(7),
 button:hover .icon circle:nth-child(7), button:focus .icon path:nth-child(7),
 button:focus .icon line:nth-child(7),
+button:focus .icon polyline:nth-child(7),
 button:focus .icon circle:nth-child(7),
 a:hover .icon path:nth-child(7),
 a:hover .icon line:nth-child(7),
+a:hover .icon polyline:nth-child(7),
 a:hover .icon circle:nth-child(7),
 a:focus .icon path:nth-child(7),
 a:focus .icon line:nth-child(7),
+a:focus .icon polyline:nth-child(7),
 a:focus .icon circle:nth-child(7),
 .draw-icon:hover .icon path:nth-child(7),
 .draw-icon:hover .icon line:nth-child(7),
+.draw-icon:hover .icon polyline:nth-child(7),
 .draw-icon:hover .icon circle:nth-child(7),
 .draw-icon:focus .icon path:nth-child(7),
 .draw-icon:focus .icon line:nth-child(7),
+.draw-icon:focus .icon polyline:nth-child(7),
 .draw-icon:focus .icon circle:nth-child(7) {
   animation-delay: calc(var(--duration-short) * 7);
 }
 button:hover .icon path:nth-child(8),
 button:hover .icon line:nth-child(8),
+button:hover .icon polyline:nth-child(8),
 button:hover .icon circle:nth-child(8), button:focus .icon path:nth-child(8),
 button:focus .icon line:nth-child(8),
+button:focus .icon polyline:nth-child(8),
 button:focus .icon circle:nth-child(8),
 a:hover .icon path:nth-child(8),
 a:hover .icon line:nth-child(8),
+a:hover .icon polyline:nth-child(8),
 a:hover .icon circle:nth-child(8),
 a:focus .icon path:nth-child(8),
 a:focus .icon line:nth-child(8),
+a:focus .icon polyline:nth-child(8),
 a:focus .icon circle:nth-child(8),
 .draw-icon:hover .icon path:nth-child(8),
 .draw-icon:hover .icon line:nth-child(8),
+.draw-icon:hover .icon polyline:nth-child(8),
 .draw-icon:hover .icon circle:nth-child(8),
 .draw-icon:focus .icon path:nth-child(8),
 .draw-icon:focus .icon line:nth-child(8),
+.draw-icon:focus .icon polyline:nth-child(8),
 .draw-icon:focus .icon circle:nth-child(8) {
   animation-delay: calc(var(--duration-short) * 8);
 }
 button:hover .icon path:nth-child(9),
 button:hover .icon line:nth-child(9),
+button:hover .icon polyline:nth-child(9),
 button:hover .icon circle:nth-child(9), button:focus .icon path:nth-child(9),
 button:focus .icon line:nth-child(9),
+button:focus .icon polyline:nth-child(9),
 button:focus .icon circle:nth-child(9),
 a:hover .icon path:nth-child(9),
 a:hover .icon line:nth-child(9),
+a:hover .icon polyline:nth-child(9),
 a:hover .icon circle:nth-child(9),
 a:focus .icon path:nth-child(9),
 a:focus .icon line:nth-child(9),
+a:focus .icon polyline:nth-child(9),
 a:focus .icon circle:nth-child(9),
 .draw-icon:hover .icon path:nth-child(9),
 .draw-icon:hover .icon line:nth-child(9),
+.draw-icon:hover .icon polyline:nth-child(9),
 .draw-icon:hover .icon circle:nth-child(9),
 .draw-icon:focus .icon path:nth-child(9),
 .draw-icon:focus .icon line:nth-child(9),
+.draw-icon:focus .icon polyline:nth-child(9),
 .draw-icon:focus .icon circle:nth-child(9) {
   animation-delay: calc(var(--duration-short) * 9);
 }
 button:hover .icon path:nth-child(10),
 button:hover .icon line:nth-child(10),
+button:hover .icon polyline:nth-child(10),
 button:hover .icon circle:nth-child(10), button:focus .icon path:nth-child(10),
 button:focus .icon line:nth-child(10),
+button:focus .icon polyline:nth-child(10),
 button:focus .icon circle:nth-child(10),
 a:hover .icon path:nth-child(10),
 a:hover .icon line:nth-child(10),
+a:hover .icon polyline:nth-child(10),
 a:hover .icon circle:nth-child(10),
 a:focus .icon path:nth-child(10),
 a:focus .icon line:nth-child(10),
+a:focus .icon polyline:nth-child(10),
 a:focus .icon circle:nth-child(10),
 .draw-icon:hover .icon path:nth-child(10),
 .draw-icon:hover .icon line:nth-child(10),
+.draw-icon:hover .icon polyline:nth-child(10),
 .draw-icon:hover .icon circle:nth-child(10),
 .draw-icon:focus .icon path:nth-child(10),
 .draw-icon:focus .icon line:nth-child(10),
+.draw-icon:focus .icon polyline:nth-child(10),
 .draw-icon:focus .icon circle:nth-child(10) {
   animation-delay: calc(var(--duration-short) * 10);
 }
@@ -1917,10 +2056,17 @@ a .icon-funnel-clear,
 }
 
 .button--plain {
+  background: transparent;
+  border: none;
+  color: var(--button-background-color);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
+  padding: 0;
+}
+.button--plain::before {
+  content: none;
 }
 
 .shopify-payment-button__button.shopify-payment-button__button {
@@ -2538,6 +2684,14 @@ fieldset legend {
   z-index: -1;
 }
 
+input[type=checkbox] ~ .icon .icon-tick-background-circle {
+  display: none;
+}
+
+input[type=radio] ~ .icon .icon-tick-background-square {
+  display: none;
+}
+
 .checkable__tick {
   --path-length: 19;
   --icon-size: 2rem;
@@ -2583,10 +2737,14 @@ input[type=search]::-webkit-search-results-decoration {
   display: none;
 }
 
-.field {
+:root {
   --field-height: 4rem;
   --border-width: var(--inputs-border-width);
   --border-color: rgba(var(--color-foreground), 0.8);
+  --field-left-padding: 3px;
+}
+
+.field {
   border-bottom: var(--border);
   display: grid;
   grid-template-areas: "field-input" "field-error";
@@ -2618,6 +2776,7 @@ input[type=search]::-webkit-search-results-decoration {
   -ms-grid-column: 1;
   grid-area: field-input;
   color: rgba(var(--color-foreground), 1);
+  line-height: 1.2;
   opacity: var(--opacity-lighter);
   text-align: left;
 }
@@ -2662,7 +2821,7 @@ input[type=search]::-webkit-search-results-decoration {
   min-height: var(--field-height);
   outline: 2px solid transparent;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 3px;
   text-align: left;
   text-indent: 1px;
   width: 100%;
@@ -2699,6 +2858,7 @@ input[type=search]::-webkit-search-results-decoration {
   margin: 0;
   padding: 0;
   transition: transform var(--duration-short) var(--transition-type);
+  transform: translateX(var(--field-left-padding));
   transform-origin: top left;
 }
 .field__input:-moz-placeholder-shown ~ .field__label {
@@ -2709,11 +2869,11 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .field__input:not(:-moz-placeholder-shown) ~ .field__label {
   cursor: pointer;
-  transform: translateY(calc(var(--space-med) * -0.8)) scale(0.8);
+  transform: translateY(calc(var(--space-med) * -0.5)) translateX(var(--field-left-padding)) scale(0.8);
 }
 .field__input:not(:placeholder-shown) ~ .field__label, .field__input:focus ~ .field__label {
   cursor: pointer;
-  transform: translateY(calc(var(--space-med) * -0.8)) scale(0.8);
+  transform: translateY(calc(var(--space-med) * -0.5)) translateX(var(--field-left-padding)) scale(0.8);
 }
 
 .field__button {
@@ -3367,31 +3527,49 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 
 .rte a,
 .inline-richtext a {
+  --underline-height: 0.2px;
   position: relative;
+  z-index: 1;
   color: rgba(var(--color-link), var(--alpha-link));
   display: inline-flex;
   line-height: 1.2;
   text-decoration: none;
 }
-.rte a::after,
+.rte a:hover, .rte a:focus,
+.inline-richtext a:hover,
+.inline-richtext a:focus {
+  --alpha-link: 1;
+  --underline-height: 1px;
+}
+.rte a:hover::before, .rte a:focus::before,
+.inline-richtext a:hover::before,
+.inline-richtext a:focus::before {
+  transform: rotate(-0.25deg) scaleX(1);
+}
+.rte a:hover::after, .rte a:focus::after,
+.inline-richtext a:hover::after,
+.inline-richtext a:focus::after {
+  transform: rotate(0.25deg) scaleX(1);
+}
+.rte a::before, .rte a::after,
+.inline-richtext a::before,
 .inline-richtext a::after {
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  background-color: rgba(var(--color-link), var(--alpha-link));
   content: "";
-  flex: 0 0 auto;
-  -webkit-mask-image: url(mask-underline.svg);
-          mask-image: url(mask-underline.svg);
-  -webkit-mask-size: cover;
-          mask-size: cover;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: bottom left;
-          mask-position: bottom left;
+  background-color: rgba(var(--color-link), var(--alpha-link));
   position: absolute;
-  bottom: 0;
+  bottom: calc(var(--underline-height) * -1);
   left: 0;
+  height: var(--underline-height);
   width: 100%;
-  height: 2px;
+  transition: transform var(--duration-medium) var(--transition-type);
+  transform: rotate(0.25deg) scaleX(0.95);
+  z-index: -1;
+}
+.rte a::before,
+.inline-richtext a::before {
+  transition-delay: var(--duration-short);
+  transform: rotate(-0.5deg) scaleX(0);
+  transform-origin: bottom left;
 }
 .rte abutton,
 .inline-richtext abutton {

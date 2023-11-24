@@ -124,6 +124,10 @@ a {
     @include underline-on-hover;
 }
 
+.hover-highlight {
+    @include hover-highlight;
+}
+
 .link-with-icon {
     --highlight-opacity: 0.8;
     color: currentColor;

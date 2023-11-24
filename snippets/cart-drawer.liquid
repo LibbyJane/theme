@@ -41,7 +41,7 @@
                         onclick="this.closest('cart-drawer').close()"
                         aria-label="{{ 'accessibility.close' | t }}"
                     >
-                        {% render 'icon-close' %}
+                        {% render 'icon-cross' %}
                     </button>
                 </header>
                 {%- if cart == empty -%}
@@ -395,7 +395,7 @@
                                         type="button"
                                         aria-label="{{ 'accessibility.close' | t }}"
                                         >
-                                        {%- render 'icon-close' -%}
+                                        {%- render 'icon-cross' -%}
                                         </button>
                                         {%- if item.variant.quantity_price_breaks.size > 0 -%}
                                         <volume-pricing class="parent-display">

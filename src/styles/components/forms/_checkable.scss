@@ -36,6 +36,18 @@
     }
 }
 
+input[type="checkbox"] {
+    ~.icon .icon-tick-background-circle {
+        display: none;
+    }
+}
+
+input[type="radio"] {
+    ~.icon .icon-tick-background-square {
+        display: none;
+    }
+}
+
 .checkable__tick {
     --path-length: 19;
     --icon-size: 2rem;
@@ -85,9 +97,9 @@
 
 .icon-tick-draw {
     opacity: 0;
-
-   stroke-dashoffset: var(--path-length);
+    stroke-dashoffset: var(--path-length);
     stroke-dasharray: var(--path-length);
+
     animation-fill-mode: forwards;
     animation-direction: normal;
     animation-duration: var(--duration-long);

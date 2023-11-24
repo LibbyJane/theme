@@ -1,0 +1,14 @@
+{% comment %}
+Renders a header with title and 'back to' link, for use on the customers page
+
+Usage:
+{% render 'customer-header' title: title %}
+{% endcomment %}
+
+<header class="customer__header">
+    <h1 class="customer__title">{{ title }}</h1>
+    <a class="button--plain" style="--rotate-icon: 180" href="{{ routes.account_url }}">
+        {% render 'icon-arrow' %}
+        {{ 'customer.account.return' | t }}
+    </a>
+</header>

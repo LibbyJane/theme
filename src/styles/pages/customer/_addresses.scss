@@ -1,0 +1,64 @@
+.pg-customer--addresses {
+    [data-address] {
+        line-height: calc(1 + 0.3 / max(1, var(--font-body-scale)));
+    }
+}
+
+.customer-address__summary {
+    grid-area: customer-address-summary;
+}
+
+.customer-address__btn-edit {
+    grid-area: customer-address-btn_edit;
+    margin-right: var(--space);
+}
+
+.customer-address__btn-delete {
+    grid-area: customer-address-btn_delete;
+}
+
+.customer-address__form {
+    grid-area: customer-address-form;
+    padding-top: var(--space-lg);
+}
+
+[data-customer-addresses] {
+    [aria-expanded='false'] {
+        ~ div[id] {
+            display: none;
+        }
+    }
+    [aria-expanded='true'] {
+        ~ div[id] {
+            display: block;
+        }
+    }
+}
+
+.customer__address-list {
+    display: flex;
+        flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: var(--space) calc(var(--space) * -1) var(--space-sm);
+}
+
+
+.customer-address {
+    flex: 0 0 auto;
+    gap: 0;
+    display: grid;
+        grid-template-areas:
+            "customer-address-summary customer-address-summary"
+            "customer-address-btn_edit customer-address-btn_delete"
+            "customer-address-form customer-address-form"
+        ;
+
+    justify-content: stretch;
+    align-items: center;
+    align-content: end;
+    margin: 0;
+    padding: 0 var(--space) var(--space);
+    max-width: 50rem;
+    min-width: 260px;
+}
