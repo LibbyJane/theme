@@ -2,6 +2,10 @@
     --button-border-radius:  var(--button-radius-large) var(--button-radius) var(--button-radius-med) var(--button-radius)/var(--button-radius) var(--button-radius-med) var(--button-radius) var(--button-radius-large);
 }
 
+a {
+    --alpha-link: 0.8;
+}
+
 .button,
 .shopify-challenge__button,
 .shopify-payment-button__button,
@@ -11,9 +15,9 @@ button.shopify-payment-button__button--unbranded,
 .cart__dynamic-checkout-buttons [role='button'],
 .cart__dynamic-checkout-buttons iframe
 {
-    --button-opacity: 1;
-    --button-foreground-color: rgba(var(--color-button-text), var(--button-opacity));
-    --button-background-color: rgba(var(--color-button), var(--button-opacity));
+    --alpha-link: 1;
+    --button-foreground-color: rgba(var(--color-button-text), var(--alpha-link));
+    --button-background-color: rgba(var(--color-button), var(--alpha-link));
 
 // TODO: remove these?
     --shadow-horizontal-offset: rgb(var(--button-shadow-horizontal-offset));
@@ -35,7 +39,7 @@ button.shopify-payment-button__button--unbranded,
         align-items: center;
         justify-content: center;
         gap: var(--space);
-    font-size: calc(var(--font-heading-scale) * 1.2rem);
+    font-size: var(--font-size-h5);
     margin: 0;
     padding: var(--space) var(--space-lg);
     //opacity: 0.85;
@@ -46,7 +50,7 @@ button.shopify-payment-button__button--unbranded,
 
     &:hover, &:focus {
         &::before {
-            opacity: 1;
+            opacity: var(--alpha-link);
             transform: rotate(-1deg) scaleY(1.1) scaleX(1.05)
         }
     }
@@ -80,14 +84,25 @@ button.shopify-payment-button__button--unbranded,
     }
 }
 
+.button-sm {
+    border-width: calc(var(--button-border-width) * 3/4);
+    font-size: var(--font-size-base);
+    line-height: 1;
+    padding: var(--space-sm) var(--space);
+}
+
 button,
 a,
 .draw-icon {
     &:hover,
     &:focus {
+        --alpha-link: 1;
+        text-shadow: 0 0 0.1rem rgba(var(--color-foreground), 0.3);
+
         .icon {
             path,
             line,
+            polyline,
             circle {
                 stroke-dasharray: var(--path-length);
                 animation: draw var(--duration-long) backwards;
@@ -207,12 +222,19 @@ a,
 }
 
 .button--plain {
+    background: transparent;
+    border: none;
+    color: var(--button-background-color);
     display: flex;
         align-items: center;
         justify-content: center;
     gap: var(--space-sm);
-}
+    padding: 0;
 
+    &::before {
+        content: none;
+    }
+}
 
 
 

@@ -1,0 +1,21 @@
+.fulfillment {
+    // background: rgba(var(--color-foreground), 0.1);
+    display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+        width: fit-content;
+    font-size: var(--font-size-smaller, 1.4rem);
+    // padding: var(--space);
+    margin-top: var(--space);
+    text-align: left;
+
+    .highlight::before {
+        inset: calc(var(--space-xs) * -1) calc(var(--space-sm) * -1);
+        opacity: 0.4;
+    }
+
+    a {
+        justify-content: start;
+    }
+}
+

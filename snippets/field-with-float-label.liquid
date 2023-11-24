@@ -1,0 +1,61 @@
+{% comment %}
+Renders an input field with a floating label
+
+Accepts:
+- type: {String} Optional input type (if blank, defaults to "text")
+- id: {String} Input field ID
+- name: {String} Input field name
+- value: Optional autocapitalize value
+- autocapitalize: {String} Optional autocapitalize value
+- autocomplete: {String} Optional autocomplete value
+- placeholder: {String} Optional placeholder text
+- text: {String}
+- options: Select list values
+- data_attributes: {string} Optional data attributes
+
+Usage:
+    {% assign value = form.zip %}
+    {% assign label = 'customer.addresses.zip' | t  %}
+    {% assign id = 'AddressZip_' | append: form.id  %}
+
+    {% render 'field-with-float-label'
+        type: "text",
+        id: "AddressZipNew",
+        name:"address[zip]",
+        value: value,
+        autocapitalize: "characters",
+        autocomplete:"postal-code",
+        placeholder: label,
+        label: label
+    %}
+{% endcomment %}
+{% assign class = 'field__input' %}
+{% assign type = type | downcase %}
+
+
+<div class="field">
+    {%- if type == 'select' -%}
+        <select
+            class="{{ class }}"
+            id="{{ id }}"
+            {%- if name != blank -%} name="{{ name }}" {%- endif -%}
+            {%- if value != blank -%} value="{{ value }}" data-default="{{ value }}" {%- endif -%}
+            {%- if autocomplete != blank -%} autocomplete="{{ autocomplete }}" {%- endif -%}
+            {{ data_attributes }}
+        >
+            {{ options }}
+        </select>
+    {% else %}
+        <input
+            class="{{ class }}"
+            type="{%- if type != blank -%}{{ type}}{%- else -%}text{%- endif -%}"
+            id="{{ id }}"
+            {%- if name != blank -%} name="{{ name }}" {%- endif -%}
+            {%- if value != blank -%} value="{{ value }}" {%- endif -%}
+            {%- if autocapitalize != blank -%} autocapitalize="{{ autocapitalize }}" {%- endif -%}
+            {%- if autocomplete != blank -%} autocomplete="{{ autocomplete }}" {%- endif -%}
+            {%- if placeholder != blank -%} placeholder="{{ placeholder }}" {%- endif -%}
+        >
+    {%- endif -%}
+    <label class="field__label" for="{{ id }}">{{ label }}</label>
+</div>

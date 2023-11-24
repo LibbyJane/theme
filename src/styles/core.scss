@@ -1,11 +1,9 @@
 @import "helpers/variables/breakpoints"
         ,"helpers/variables/defaults"
         ,"helpers/variables/core"
-        ,"helpers/variables/elements"
-        ,"helpers/utilities"
-        ;
-
-@import "helpers/common";
+        ,"helpers/variables/elements",
+        "helpers/common",
+        "helpers/utilities";
 
 @import "core/reset"
         ,"core/typography"
@@ -2772,14 +2770,14 @@
 //   transition: transform 150ms ease, opacity 150ms ease;
 // }
 
-// details:not([open]) > .header__icon--menu .icon-close,
+// details:not([open]) > .header__icon--menu .icon-cross,
 // details[open] > .header__icon--menu .icon-hamburger {
 //   visibility: hidden;
 //   opacity: 0;
 //   transform: scale(0.8);
 // }
 
-// .js details[open]:not(.menu-opening) > .header__icon--menu .icon-close {
+// .js details[open]:not(.menu-opening) > .header__icon--menu .icon-cross {
 //   visibility: hidden;
 // }
 
@@ -3002,7 +3000,7 @@
 //     fill: CanvasText !important;
 //   }
 
-//   .icon-close-small path {
+//   .icon-cross-small path {
 //     stroke: CanvasText;
 //   }
 // }

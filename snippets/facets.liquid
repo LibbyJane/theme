@@ -77,7 +77,7 @@
                             <span class="active-facets__button-label">
                                 {{ filter.label }}: {{ value.label | escape }}
                             </span>
-                          {% render 'icon-close-small' %}
+                          {% render 'icon-cross-small' %}
                           <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
 
                       </a>
@@ -100,7 +100,7 @@
                                 {{ filter.range_max | money }}
                                 {%- endif -%}
                             </span>
-                            {% render 'icon-close-small' %}
+                            {% render 'icon-cross-small' %}
                             <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                         </a>
                       </facet-remove>
@@ -336,7 +336,7 @@
                         <span class="active-facets__button-label">
                             {{ filter.label }}: {{ value.label | escape }}
                         </span>
-                        {% render 'icon-close-small' %}
+                        {% render 'icon-cross-small' %}
                         <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                     </a>
                   </facet-remove>
@@ -358,7 +358,7 @@
                                     {{ filter.range_max | money }}
                                 {%- endif -%}
                             </span>
-                          {% render 'icon-close-small' %}
+                          {% render 'icon-cross-small' %}
                           <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
 
                       </a>
@@ -514,7 +514,7 @@
                     </span>
                     {% render 'icon-arrow' %}
                 </span>
-                <span tabindex="0" class="mobile-facets__disclosure-close mobile-facets__disclosure-close--no-js">{%- render 'icon-close' -%}</span>
+                <span tabindex="0" class="mobile-facets__disclosure-close mobile-facets__disclosure-close--no-js">{%- render 'icon-cross' -%}</span>
             </summary>
             <facet-filters-form>
                 <form id="FacetFiltersFormMobile" class="mobile-facets">
@@ -802,7 +802,7 @@
                     <span class="active-facets__button-label">
                         {{ filter.label }}: {{ value.label | escape }}
                     </span>
-                {% render 'icon-close-small' %}
+                {% render 'icon-cross-small' %}
                 <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
             </a>
             </facet-remove>
@@ -825,7 +825,7 @@
                             {{ filter.range_max | money }}
                         {%- endif -%}
                     </span>
-                    {% render 'icon-close-small' %}
+                    {% render 'icon-cross-small' %}
                     <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                 </a>
             </facet-remove>
@@ -922,7 +922,7 @@
                     <span class="active-facets__button-label">
                         {{ filter.label }}: {{ value.label | escape }}
                     </span>
-                    {% render 'icon-close-small' %}
+                    {% render 'icon-cross-small' %}
                     <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                 </a>
               </facet-remove>
@@ -945,7 +945,7 @@
                             {{ filter.range_max | money }}
                         {%- endif -%}
                     </span>
-                      {% render 'icon-close-small' %}
+                      {% render 'icon-cross-small' %}
                       <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
                   </a>
                 </facet-remove>

@@ -1,0 +1,30 @@
+#recover,
+#login {
+    scroll-margin-top: 20rem;
+}
+
+.login,
+.register {
+    --page-width: 60rem;
+
+    form {
+        margin-bottom: var(--space);
+
+        button[type="submit"] {
+            width: 100%;
+        }
+    }
+}
+
+#recover {
+    display: none;
+    margin-bottom: 0;
+
+    &:target {
+        display: block;
+
+        ~ #login {
+            display: none;
+        }
+    }
+}
