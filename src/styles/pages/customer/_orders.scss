@@ -8,6 +8,7 @@
     // padding: var(--space);
     margin-top: var(--space);
     text-align: left;
+    width: max-content;
 
     .highlight::before {
         inset: calc(var(--space-xs) * -1) calc(var(--space-sm) * -1);
