@@ -158,7 +158,7 @@
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "background-1",
+        "color_scheme": "inverse",
         "background_transparent": true,
         "image_ratio": "adapt",
         "image_shape": "default",
