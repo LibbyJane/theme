@@ -215,10 +215,11 @@
     "video": {
       "type": "video",
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
+        "heading": "Video Heading",
+        "heading_size": "h0",
         "enable_video_looping": false,
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify:\/\/shop_images\/warm-and-cozy-wine-cellar-with-barrels-in-soft-lighting-ai_24061456_914.jpg",
         "description": "",
         "full_width": false,
         "color_scheme": "background-1",
