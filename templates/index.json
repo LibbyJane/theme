@@ -260,7 +260,7 @@
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 3,
-        "color_scheme": "",
+        "color_scheme": "inverse",
         "background_transparent": true,
         "show_view_all": false,
         "columns_mobile": "1",
