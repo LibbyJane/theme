@@ -233,28 +233,29 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__account {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  padding: var(--space) 0;
-  font-size: var(--font-size-smaller);
-  color: rgb(var(--color-foreground));
-  margin-bottom: 0;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    padding: var(--space) 0;
+    font-size: var(--font-size-smaller);
+    color: rgb(var(--color-foreground));
+    margin-bottom: 0;
+
+    .icon {
+        height: var(--space-lg);
+        width: 2rem;
+        margin-right: var(--space);
+    }
 }
+
+// .menu-drawer__account:hover .icon-account {
+//     transform: scale(1.07);
+//   }
 
 .menu-drawer__utility-links:has(.menu-drawer__localization) .menu-drawer__account {
   margin: 0;
 }
 
-.menu-drawer__account .icon-account {
-  height: var(--space-lg);
-  width: var(--space-lg);
-  margin-right: var(--space);
-}
-
-.menu-drawer__account:hover .icon-account {
-  transform: scale(1.07);
-}
 
 .menu-drawer .list-social {
   justify-content: flex-start;

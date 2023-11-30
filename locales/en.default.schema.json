@@ -221,7 +221,7 @@
                     "label": "eCommerce color",
                     "info": "Used for add to cart buttons and highlighting eCommerce functionality"
                 },
-                "ecommerce_contrast_color": {
+                "color_ecommerce_contrast": {
                     "label": "eCommerce contrast color",
                     "info": "Used button text etc"
                 }

@@ -1,19 +1,18 @@
-/*  Card layout
-- card-wrapper
----- card (card--standard card--media card--extend-height)
--------- card__inner
------------- card__media
----------------- media
------------- card__content
----------------- card__information
--------------------- card__heading
--------------------- card__caption
--------------------- card-information (product cards - vendor, price)
----------------- card-badge (product cards)
--------- card__content
------------- card__information
----------------- card__heading
-*/
+// /*  Card layout */
+// - card-wrapper
+// ---- card (card--standard card--media card--extend-height)
+// -------- card__inner
+// ------------ card__media
+// ---------------- media
+// ------------ card__content
+// ---------------- card__information
+// -------------------- card__heading
+// -------------------- card__caption
+// -------------------- card-information (product cards - vendor, price)
+// ---------------- card-badge (product cards)
+// -------- card__content
+// ------------ card__information
+// ---------------- card__heading
 
 @mixin card-container {
     backface-visibility: hidden;
