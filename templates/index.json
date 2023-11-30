@@ -292,12 +292,21 @@
             "button_link": "",
             "button_style_secondary": "secondary"
           }
+        },
+        "39a75ffc-c6f5-4a3f-8706-ee447d1b8222": {
+          "type": "caption",
+          "settings": {
+            "caption": "Caption style UPPERCASE? Add a tagline",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
         }
       },
       "block_order": [
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-heading-1",
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-text-1",
-        "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-button-1"
+        "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-button-1",
+        "39a75ffc-c6f5-4a3f-8706-ee447d1b8222"
       ],
       "settings": {
         "height": "adapt",
