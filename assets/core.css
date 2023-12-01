@@ -245,6 +245,14 @@
   background: transparent;
 }
 
+::-moz-selection {
+  background-color: rgba(var(--color-highlight), 0.5);
+}
+
+::selection {
+  background-color: rgba(var(--color-highlight), 0.5);
+}
+
 div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -3043,6 +3051,7 @@ textarea {
   scrollbar-width: auto;
   scrollbar-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
   /* Chrome, Edge, and Safari */
+  padding-top: var(--space);
 }
 textarea::-webkit-scrollbar {
   width: 12px;
@@ -3559,9 +3568,6 @@ predictive-search[loading] .predictive-search {
 }
 
 .predictive-search__item {
-  --rotation: -1deg;
-  position: relative;
-  z-index: 1;
   color: currentColor;
   display: flex;
   margin: 0;
@@ -3569,28 +3575,6 @@ predictive-search[loading] .predictive-search {
   text-align: left;
   text-decoration: none;
   width: 100%;
-}
-.predictive-search__item:nth-child(2n) {
-  --rotation: -2deg;
-}
-.predictive-search__item:nth-child(3n) {
-  --rotation: 1deg;
-}
-.predictive-search__item:hover::before, .predictive-search__item:focus::before {
-  transition: transform var(--duration-long) var(--transition-type);
-  transform: rotate(var(--rotation)) scaleX(1);
-}
-.predictive-search__item::before {
-  background: rgba(var(--color-highlight), var(--highlight-opacity));
-  border-radius: var(--button-border-radius);
-  content: "";
-  margin: -2px;
-  position: absolute;
-  inset: 0;
-  transform: rotate(-1deg) scaleX(0);
-  transform-origin: center left;
-  transition-delay: 100ms;
-  z-index: -1;
 }
 
 .predictive-search__item--link-with-thumbnail {

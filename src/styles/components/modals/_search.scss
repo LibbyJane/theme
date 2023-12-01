@@ -42,7 +42,6 @@
 }
 
 .predictive-search__item {
-    @include hover-highlight;
     color: currentColor;
     display: flex;
     margin: 0;

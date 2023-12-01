@@ -23,6 +23,48 @@
         </header>
 
         <section class="customer__page-content default-content-style content-padding">
+
+
+
+
+<h1>TODO: remove test </h1>
+
+            <form method="post" action="/account/login?oseid=vmEbM4iiD79nm6VZC5rxy4A7" id="customer_login" accept-charset="UTF-8" data-login-with-shop-sign-in="true" novalidate="novalidate" data-editor-form-attribute=""><input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓"><h2 class="form__message color--danger" tabindex="-1" autofocus="">
+                <span class="visually-hidden">Error </span><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16" height="16" viewBox="-1.5 -1 16 16">
+<path fill="var(--color-danger)" stroke="var(--color-danger)" stroke-width=".7" d="M6.3.2c-2.2 0-7 1.1-7 7.5s3.9 6.9 7.1 7c3.2.1 7.2-.9 7.6-7.2C13.5.6 8.4.2 6.3.2z"></path>
+<path fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M7 2.9c-.3 6.1-.9 7.6-.9 7.6M5.9 12v.6"></path>
+</svg>Please adjust the following:
+            </h2>
+            <div class="errors"><ul><li>Incorrect email or password.</li></ul></div>
+<fieldset>
+            <div class="field">
+                <input class="field__input" type="email" name="customer[email]" id="CustomerEmail" autocomplete="email" autocorrect="off" autocapitalize="off" aria-invalid="true" placeholder="Email">
+                <label class="field__label" for="CustomerEmail">
+                    Email
+                </label>
+            </div></fieldset>
+        <footer class="button-bar button-bar--fluid-buttons">
+            <button class="button button--tertiary">
+                Sign in
+            </button>
+
+            <a href="/account/register" class="underlined-link">
+                Create account
+            </a>
+        </footer><input type="hidden" name="order" value="123456"><input type="hidden" name="oseid" value="vmEbM4iiD79nm6VZC5rxy4A7"></form>
+
+
+
+
+<!-- end todo -->
+
+
+
+
+
+
+
+
             <p>
                 {{ 'customer.recover_password.subtext' | t }}
             </p>
@@ -64,7 +106,9 @@
                     </button>
 
                     <a href="#login" class="underlined-link">
-                        {{ 'customer.login_page.cancel' | t }}
+                        <span class="underlined-link__text">
+                            {{ 'customer.login_page.cancel' | t }}
+                        </span>
                     </a>
                 </footer>
             {%- endform -%}
@@ -149,7 +193,9 @@
                     </button>
 
                     <a href="{{ routes.account_register_url }}" class="underlined-link">
-                        {{ 'customer.login_page.create_account' | t }}
+                        <span class="underlined-link__text">
+                            {{ 'customer.login_page.create_account' | t }}
+                        </span>
                     </a>
                 </footer>
             {%- endform -%}

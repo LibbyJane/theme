@@ -125,11 +125,12 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0 var(--space-lg);
+  gap: 0 var(--space);
 }
 @media screen and (min-width: 990px) {
   .customer__content-wrapper {
     flex-wrap: nowrap;
+    gap: 0 var(--space-lg);
   }
 }
 

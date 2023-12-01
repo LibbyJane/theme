@@ -263,6 +263,7 @@
 }
 
 .newsletter-form__field-wrapper {
+  margin-inline: auto;
   max-width: var(--content-width--narrow);
 }
 
