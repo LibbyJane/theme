@@ -10,10 +10,10 @@ Usage:
     <details id="Details-menu-drawer-container" class="menu-drawer-container">
         <summary class="header__icon header__icon--menu header__icon--summary link focus-inset"
             aria-label="{{ 'sections.header.menu' | t }}">
-            <span>
+                {% comment %}<span>{% endcomment %}
                 {% render 'icon-hamburger' %}
                 {% render 'icon-cross' %}
-            </span>
+            {% comment %}</span>{% endcomment %}
         </summary>
         <div id="menu-drawer" class="menu-drawer motion-reduce default-content-style color-{{ section.settings.menu_color_scheme }}">
             <div class="menu-drawer__inner-container">

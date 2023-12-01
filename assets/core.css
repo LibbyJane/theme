@@ -113,7 +113,7 @@
 }
 
 :root {
-  --corner-shadow-alpha: 0.25;
+  --corner-shadow-alpha: 0.5;
   --corner-size: 15px;
   --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
 }
@@ -245,6 +245,14 @@
   background: transparent;
 }
 
+::-moz-selection {
+  background-color: rgba(var(--color-highlight), 0.5);
+}
+
+::selection {
+  background-color: rgba(var(--color-highlight), 0.5);
+}
+
 div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -315,7 +323,7 @@ address,
 .text-body {
   font-size: var(--font-size-base);
   letter-spacing: var(--letter-spacing);
-  line-height: inherit;
+  line-height: calc(1 + 0.4 / max(1, var(--font-heading-scale)));
 }
 
 h1,
@@ -988,6 +996,23 @@ header-drawer {
   display: none;
 }
 
+details:not([open]) > .header__icon--menu .icon-cross,
+details[open] > .header__icon--menu .icon-hamburger {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.js details[open]:not(.menu-opening) > .header__icon--menu .icon-cross {
+  visibility: hidden;
+}
+
+.js details[open]:not(.menu-opening) > .header__icon--menu .icon-hamburger {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1.07);
+}
+
 .header__brand {
   display: flex;
   align-items: center;
@@ -1034,8 +1059,8 @@ header-drawer {
   display: inline-flex;
   flex-wrap: wrap;
 }
-@media (min-width: 990px) {
-  .header--top-left .header__nav li:first-of-type .header__menu-item {
+@media (min-width: 750px) {
+  .header--top-left .header__nav .list-menu > li:first-of-type .header__menu-item {
     padding-left: 0;
     margin-left: 0;
   }
@@ -1143,7 +1168,6 @@ drawer-menu {
 .header__utility .header__icon:hover, .header__utility .header__icon:focus {
   --header-fold-alpha: 0.005;
   --header-icon-alpha: 1;
-  --header-icon-margin-inline: 2px;
 }
 .header__utility::before, .header__utility::after {
   content: "";
@@ -1182,39 +1206,43 @@ drawer-menu {
 
 .header__icon {
   background-image: linear-gradient(to right, rgba(var(--color-shadow), var(--header-fold-alpha)) 0%, rgba(var(--color-shadow), 0) 40%);
-  color: rgba(var(--color-foreground), var(--(header-icon-alpha)));
+  color: rgba(var(--color-foreground), var(--header-icon-alpha));
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 4rem;
   width: 4.6rem;
-  mix-blend-mode: multiply;
   margin: auto var(--header-icon-margin-inline);
   padding: var(--space-lg) var(--space);
   position: relative;
   transition: all var(--duration-default) var(--transition-type);
   transition-delay: var(--duration-short);
 }
+.header__icon[aria-controls=menu-drawer] {
+  width: auto;
+}
 
 .cart-count-bubble {
-  background-color: rgb(var(--color-button));
-  color: rgb(var(--color-button-text));
+  background-color: rgb(var(--color-ecommerce));
+  color: rgb(var(--color-ecommerce-contrast));
+  aspect-ratio: 1/1;
   border-radius: 99em;
-  box-shadow: 0 2px 4px rgba(var(--color-shadow), 0.3);
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   font-size: 0.9rem;
+  font-weight: bold;
   line-height: 1;
-  min-width: 1.7rem;
-  padding: var(--space-sm);
-  outline: 2px solid rgba(var(--color-ecommerce-contrast), 0.8);
+  padding: var(--space-xs);
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 2rem;
+  right: 0.25rem;
 }
 .cart-count-bubble:empty {
   display: none;
+}
+.cart-count-bubble span {
+  transform: translateY(1px);
 }
 
 .localisation-form {
@@ -1675,6 +1703,8 @@ button.shopify-payment-button__button--unbranded .spinner,
 button:hover, button:focus,
 a:hover,
 a:focus,
+summary:hover,
+summary:focus,
 .draw-icon:hover,
 .draw-icon:focus {
   --alpha-link: 1;
@@ -1695,6 +1725,14 @@ a:focus .icon path,
 a:focus .icon line,
 a:focus .icon polyline,
 a:focus .icon circle,
+summary:hover .icon path,
+summary:hover .icon line,
+summary:hover .icon polyline,
+summary:hover .icon circle,
+summary:focus .icon path,
+summary:focus .icon line,
+summary:focus .icon polyline,
+summary:focus .icon circle,
 .draw-icon:hover .icon path,
 .draw-icon:hover .icon line,
 .draw-icon:hover .icon polyline,
@@ -1721,6 +1759,14 @@ a:focus .icon path:nth-child(1),
 a:focus .icon line:nth-child(1),
 a:focus .icon polyline:nth-child(1),
 a:focus .icon circle:nth-child(1),
+summary:hover .icon path:nth-child(1),
+summary:hover .icon line:nth-child(1),
+summary:hover .icon polyline:nth-child(1),
+summary:hover .icon circle:nth-child(1),
+summary:focus .icon path:nth-child(1),
+summary:focus .icon line:nth-child(1),
+summary:focus .icon polyline:nth-child(1),
+summary:focus .icon circle:nth-child(1),
 .draw-icon:hover .icon path:nth-child(1),
 .draw-icon:hover .icon line:nth-child(1),
 .draw-icon:hover .icon polyline:nth-child(1),
@@ -1746,6 +1792,14 @@ a:focus .icon path:nth-child(2),
 a:focus .icon line:nth-child(2),
 a:focus .icon polyline:nth-child(2),
 a:focus .icon circle:nth-child(2),
+summary:hover .icon path:nth-child(2),
+summary:hover .icon line:nth-child(2),
+summary:hover .icon polyline:nth-child(2),
+summary:hover .icon circle:nth-child(2),
+summary:focus .icon path:nth-child(2),
+summary:focus .icon line:nth-child(2),
+summary:focus .icon polyline:nth-child(2),
+summary:focus .icon circle:nth-child(2),
 .draw-icon:hover .icon path:nth-child(2),
 .draw-icon:hover .icon line:nth-child(2),
 .draw-icon:hover .icon polyline:nth-child(2),
@@ -1771,6 +1825,14 @@ a:focus .icon path:nth-child(3),
 a:focus .icon line:nth-child(3),
 a:focus .icon polyline:nth-child(3),
 a:focus .icon circle:nth-child(3),
+summary:hover .icon path:nth-child(3),
+summary:hover .icon line:nth-child(3),
+summary:hover .icon polyline:nth-child(3),
+summary:hover .icon circle:nth-child(3),
+summary:focus .icon path:nth-child(3),
+summary:focus .icon line:nth-child(3),
+summary:focus .icon polyline:nth-child(3),
+summary:focus .icon circle:nth-child(3),
 .draw-icon:hover .icon path:nth-child(3),
 .draw-icon:hover .icon line:nth-child(3),
 .draw-icon:hover .icon polyline:nth-child(3),
@@ -1796,6 +1858,14 @@ a:focus .icon path:nth-child(4),
 a:focus .icon line:nth-child(4),
 a:focus .icon polyline:nth-child(4),
 a:focus .icon circle:nth-child(4),
+summary:hover .icon path:nth-child(4),
+summary:hover .icon line:nth-child(4),
+summary:hover .icon polyline:nth-child(4),
+summary:hover .icon circle:nth-child(4),
+summary:focus .icon path:nth-child(4),
+summary:focus .icon line:nth-child(4),
+summary:focus .icon polyline:nth-child(4),
+summary:focus .icon circle:nth-child(4),
 .draw-icon:hover .icon path:nth-child(4),
 .draw-icon:hover .icon line:nth-child(4),
 .draw-icon:hover .icon polyline:nth-child(4),
@@ -1821,6 +1891,14 @@ a:focus .icon path:nth-child(5),
 a:focus .icon line:nth-child(5),
 a:focus .icon polyline:nth-child(5),
 a:focus .icon circle:nth-child(5),
+summary:hover .icon path:nth-child(5),
+summary:hover .icon line:nth-child(5),
+summary:hover .icon polyline:nth-child(5),
+summary:hover .icon circle:nth-child(5),
+summary:focus .icon path:nth-child(5),
+summary:focus .icon line:nth-child(5),
+summary:focus .icon polyline:nth-child(5),
+summary:focus .icon circle:nth-child(5),
 .draw-icon:hover .icon path:nth-child(5),
 .draw-icon:hover .icon line:nth-child(5),
 .draw-icon:hover .icon polyline:nth-child(5),
@@ -1846,6 +1924,14 @@ a:focus .icon path:nth-child(6),
 a:focus .icon line:nth-child(6),
 a:focus .icon polyline:nth-child(6),
 a:focus .icon circle:nth-child(6),
+summary:hover .icon path:nth-child(6),
+summary:hover .icon line:nth-child(6),
+summary:hover .icon polyline:nth-child(6),
+summary:hover .icon circle:nth-child(6),
+summary:focus .icon path:nth-child(6),
+summary:focus .icon line:nth-child(6),
+summary:focus .icon polyline:nth-child(6),
+summary:focus .icon circle:nth-child(6),
 .draw-icon:hover .icon path:nth-child(6),
 .draw-icon:hover .icon line:nth-child(6),
 .draw-icon:hover .icon polyline:nth-child(6),
@@ -1871,6 +1957,14 @@ a:focus .icon path:nth-child(7),
 a:focus .icon line:nth-child(7),
 a:focus .icon polyline:nth-child(7),
 a:focus .icon circle:nth-child(7),
+summary:hover .icon path:nth-child(7),
+summary:hover .icon line:nth-child(7),
+summary:hover .icon polyline:nth-child(7),
+summary:hover .icon circle:nth-child(7),
+summary:focus .icon path:nth-child(7),
+summary:focus .icon line:nth-child(7),
+summary:focus .icon polyline:nth-child(7),
+summary:focus .icon circle:nth-child(7),
 .draw-icon:hover .icon path:nth-child(7),
 .draw-icon:hover .icon line:nth-child(7),
 .draw-icon:hover .icon polyline:nth-child(7),
@@ -1896,6 +1990,14 @@ a:focus .icon path:nth-child(8),
 a:focus .icon line:nth-child(8),
 a:focus .icon polyline:nth-child(8),
 a:focus .icon circle:nth-child(8),
+summary:hover .icon path:nth-child(8),
+summary:hover .icon line:nth-child(8),
+summary:hover .icon polyline:nth-child(8),
+summary:hover .icon circle:nth-child(8),
+summary:focus .icon path:nth-child(8),
+summary:focus .icon line:nth-child(8),
+summary:focus .icon polyline:nth-child(8),
+summary:focus .icon circle:nth-child(8),
 .draw-icon:hover .icon path:nth-child(8),
 .draw-icon:hover .icon line:nth-child(8),
 .draw-icon:hover .icon polyline:nth-child(8),
@@ -1921,6 +2023,14 @@ a:focus .icon path:nth-child(9),
 a:focus .icon line:nth-child(9),
 a:focus .icon polyline:nth-child(9),
 a:focus .icon circle:nth-child(9),
+summary:hover .icon path:nth-child(9),
+summary:hover .icon line:nth-child(9),
+summary:hover .icon polyline:nth-child(9),
+summary:hover .icon circle:nth-child(9),
+summary:focus .icon path:nth-child(9),
+summary:focus .icon line:nth-child(9),
+summary:focus .icon polyline:nth-child(9),
+summary:focus .icon circle:nth-child(9),
 .draw-icon:hover .icon path:nth-child(9),
 .draw-icon:hover .icon line:nth-child(9),
 .draw-icon:hover .icon polyline:nth-child(9),
@@ -1946,6 +2056,14 @@ a:focus .icon path:nth-child(10),
 a:focus .icon line:nth-child(10),
 a:focus .icon polyline:nth-child(10),
 a:focus .icon circle:nth-child(10),
+summary:hover .icon path:nth-child(10),
+summary:hover .icon line:nth-child(10),
+summary:hover .icon polyline:nth-child(10),
+summary:hover .icon circle:nth-child(10),
+summary:focus .icon path:nth-child(10),
+summary:focus .icon line:nth-child(10),
+summary:focus .icon polyline:nth-child(10),
+summary:focus .icon circle:nth-child(10),
 .draw-icon:hover .icon path:nth-child(10),
 .draw-icon:hover .icon line:nth-child(10),
 .draw-icon:hover .icon polyline:nth-child(10),
@@ -1958,52 +2076,74 @@ a:focus .icon circle:nth-child(10),
 }
 button .icon,
 a .icon,
+summary .icon,
 .draw-icon .icon {
   --path-length: 30;
   stroke-width: 1.5px;
 }
+button .icon-account,
+a .icon-account,
+summary .icon-account,
+.draw-icon .icon-account {
+  --path-length: 33.4;
+}
 button .icon-arrow,
 a .icon-arrow,
+summary .icon-arrow,
 .draw-icon .icon-arrow {
   --path-length: 24;
 }
+button .icon-cart,
+a .icon-cart,
+summary .icon-cart,
+.draw-icon .icon-cart {
+  --path-length: 46;
+}
 button .icon-checkmark,
 a .icon-checkmark,
+summary .icon-checkmark,
 .draw-icon .icon-checkmark {
   --path-length: 32;
 }
 button .icon-reset,
 a .icon-reset,
+summary .icon-reset,
 .draw-icon .icon-reset {
   --path-length: 46.1;
 }
 button .icon-share,
 a .icon-share,
+summary .icon-share,
 .draw-icon .icon-share {
   --path-length: 59;
 }
 button .icon-search,
 a .icon-search,
+summary .icon-search,
 .draw-icon .icon-search {
   --path-length: 40.3;
 }
 button .icon-loading,
 a .icon-loading,
+summary .icon-loading,
 .draw-icon .icon-loading {
   --path-length: 215;
 }
 button .icon-filter,
 a .icon-filter,
+summary .icon-filter,
 .draw-icon .icon-filter {
   --path-length: 46;
 }
 button .icon-funnel,
 a .icon-funnel,
+summary .icon-funnel,
 .draw-icon .icon-funnel {
   --path-length: 42;
 }
 button .icon-funnel-clear,
 a .icon-funnel-clear,
+summary .icon-funnel-clear,
 .draw-icon .icon-funnel-clear {
   --path-length: 45;
 }
@@ -2345,7 +2485,7 @@ details[open] > .share-button__fallback {
   content: "";
   filter: blur(5px);
   height: 3rem;
-  mix-blend-mode: multiply;
+  mix-blend-mode: color-burn;
   pointer-events: none;
   position: absolute;
   transform-origin: center;
@@ -2375,7 +2515,7 @@ details[open] > .share-button__fallback {
   line-height: 1;
   padding: var(--space) var(--space-lg);
   position: relative;
-  background: rgb(var(--color-background)) radial-gradient(ellipse farthest-corner at center center, rgb(var(--color-background)) 50%, rgba(var(--color-shadow), 0.07) 100%);
+  background: rgb(var(--color-background)) radial-gradient(ellipse farthest-corner at center center, rgb(var(--color-background)) 50%, rgba(var(--color-shadow), 0.15) 100%);
 }
 
 :root {
@@ -2911,6 +3051,7 @@ textarea {
   scrollbar-width: auto;
   scrollbar-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
   /* Chrome, Edge, and Safari */
+  padding-top: var(--space);
 }
 textarea::-webkit-scrollbar {
   width: 12px;
@@ -2962,7 +3103,7 @@ textarea::-webkit-scrollbar-thumb {
 .status-error .form__status-heading {
   font-size: var(--font-size-base);
   letter-spacing: var(--letter-spacing);
-  line-height: inherit;
+  line-height: calc(1 + 0.4 / max(1, var(--font-heading-scale)));
   font-size: var(--font-size-smaller);
 }
 
@@ -3214,6 +3355,16 @@ textarea::-webkit-scrollbar-thumb {
      object-fit: cover;
 }
 
+.shopify-product-form,
+.quick-add-form {
+  color: rgb(var(--color-foreground)) !important;
+  font-size: var(--font-size-smaller);
+}
+.shopify-product-form *,
+.quick-add-form * {
+  color: rgb(var(--color-foreground)) !important;
+}
+
 /* component-modal */
 .modal__toggle {
   list-style-type: none;
@@ -3312,7 +3463,7 @@ details[open] .modal__outer::before {
 }
 
 :root {
-  --corner-shadow-alpha: 0.25;
+  --corner-shadow-alpha: 0.5;
   --corner-size: 15px;
   --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
 }
@@ -3417,9 +3568,6 @@ predictive-search[loading] .predictive-search {
 }
 
 .predictive-search__item {
-  --rotation: -1deg;
-  position: relative;
-  z-index: 1;
   color: currentColor;
   display: flex;
   margin: 0;
@@ -3427,28 +3575,6 @@ predictive-search[loading] .predictive-search {
   text-align: left;
   text-decoration: none;
   width: 100%;
-}
-.predictive-search__item:nth-child(2n) {
-  --rotation: -2deg;
-}
-.predictive-search__item:nth-child(3n) {
-  --rotation: 1deg;
-}
-.predictive-search__item:hover::before, .predictive-search__item:focus::before {
-  transition: transform var(--duration-long) var(--transition-type);
-  transform: rotate(var(--rotation)) scaleX(1);
-}
-.predictive-search__item::before {
-  background: rgba(var(--color-highlight), var(--highlight-opacity));
-  border-radius: var(--button-border-radius);
-  content: "";
-  margin: -2px;
-  position: absolute;
-  inset: 0;
-  transform: rotate(-1deg) scaleX(0);
-  transform-origin: center left;
-  transition-delay: 100ms;
-  z-index: -1;
 }
 
 .predictive-search__item--link-with-thumbnail {
@@ -3680,7 +3806,7 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 .list-unstyled {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: "";
 }
 
 .hidden {

@@ -1,0 +1,243 @@
+@import "helpers/variables/breakpoints"
+        ,"helpers/variables/defaults"
+        ,"helpers/variables/core"
+        ,"helpers/variables/elements",
+        "helpers/common",
+        "helpers/utilities";
+
+@import "components/buttons/base"
+        ,"components/badges/base"
+        ,"components/badges/card-badge"
+        ,"components/highlight";
+
+@import "core/reset"
+        ,"core/typography"
+        ,"core/site-layout/base";
+
+
+/* Base */
+a:empty,
+ul:empty,
+dl:empty,
+div:empty,
+section:empty,
+article:empty,
+p:empty,
+h1:empty,
+h2:empty,
+h3:empty,
+h4:empty,
+h5:empty,
+h6:empty {
+    display: none;
+}
+
+.gift-card {
+    display: block;
+    background-color: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
+    max-width: var(--page-width);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gift-card__price {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0 var(--space);
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    margin: var(--space-lg) auto var(--space-xl);
+    opacity: var(--opacity-lighter);
+}
+
+.gift-card__balance {
+    font-size: calc(var(--font-heading-scale) * 4rem);
+
+    @include breakpoint(large) {
+        font-size: calc(var(--font-heading-scale) * 4rem);
+    }
+    margin: 0;
+    padding: 0;
+}
+
+.gift-card__expiry {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.gift-card__expired {
+    font-size: var(--font-size-base);
+    text-transform: uppercase;
+
+    &::before {
+        inset: 0 -5px;
+        transform: rotate(-1deg);
+    }
+}
+
+
+.gift-card__image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto var(--space-xl);
+    max-width: 40rem;
+}
+
+.gift-card__image {
+    max-width: 100%;
+    height: auto;
+    object-fit: scale-down;
+    max-height: 26rem;
+
+    @media only screen and (min-width: 750px) {
+        padding: 0;
+    }
+}
+
+.gift-card__number {
+    color: rgb(var(--color-foreground));
+    font-size: var(--font-size-h4);
+    line-height: calc(1 + 0.6 / var(--font-body-scale));
+    text-align: center;
+    letter-spacing: 0.1rem;
+    opacity: var(--opacity-lighter);
+    margin: var(--space-lg) 0;
+}
+
+.gift-card__text {
+    text-align: center;
+    opacity: var(--opacity-light);
+    line-height: calc(1 + 0.5 / var(--font-body-scale));
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+.gift-card__copy-success.gift-card__copy-success {
+    color: rgba(var(--color-success), 1);
+
+    &:empty {
+        display: none;
+    }
+}
+
+
+// .badge {
+//   border: 1px solid transparent;
+//   border-radius: 4rem;
+//   display: inline-block;
+//   font-size: 1.2rem;
+//   letter-spacing: 0.1rem;
+//   line-height: 1;
+//   padding: 0.6rem 1.3rem;
+//   text-align: center;
+//   background-color: rgb(var(--color-background));
+//   border-color: rgba(var(--color-foreground), 0.04);
+//   color: rgb(var(--color-foreground));
+// }
+
+// .is-expired {
+//     background-color: rgb(var(--color-soldout-badge));
+//     color: rgb(var(--color-soldout-badge-label));
+//     border-color: rgba(var(--color-soldout-badge-label), 0.04);
+
+//     &::before {
+//         background-color: rgb(var(--color-soldout-badge),);
+//     }
+// }
+
+.gift-card__qr-code {
+    margin: 0 0 var(--space-lg);
+
+    img {
+        margin: 0 auto;
+    }
+}
+
+
+.gift_card__apple-wallet {
+    line-height: 0;
+    display: block;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.gift-card__buttons {
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.gift-card__buttons > .button {
+    display: block;
+    margin: 0 auto var(--space);
+}
+
+/*
+  Focus ring - default (with offset)
+*/
+
+/* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
+*:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+*:focus-visible {
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline-offset: 0.3rem;
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+}
+
+/* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
+.focused,
+.no-js *:focus {
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline-offset: 0.3rem;
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+}
+
+/* Negate the fallback side-effect for browsers that support :focus-visible */
+.no-js *:focus:not(:focus-visible) {
+  outline: 0;
+  box-shadow: none;
+}
+
+
+
+.form__message {
+    @include text-heading;
+    align-items: center;
+    display: flex;
+    font-size: var(--font-size-h6);
+    line-height: 1.5rem;
+    justify-content: center;
+    margin-bottom: var(--space);
+    // opacity: 0.8;
+}
+
+.form__message .icon {
+  flex-shrink: 0;
+  height: 1.3rem;
+  margin-right: 0.5rem;
+  width: 1.3rem;
+}
+
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+
+.gradient {
+  background: rgb(var(--color-background));
+  background: var(--gradient-background);
+  background-attachment: fixed;
+}

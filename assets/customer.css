@@ -1,5 +1,5 @@
 :root {
-  --corner-shadow-alpha: 0.25;
+  --corner-shadow-alpha: 0.5;
   --corner-size: 15px;
   --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
 }
@@ -125,11 +125,12 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0 var(--space-lg);
+  gap: 0 var(--space);
 }
 @media screen and (min-width: 990px) {
   .customer__content-wrapper {
     flex-wrap: nowrap;
+    gap: 0 var(--space-lg);
   }
 }
 
@@ -141,6 +142,7 @@
   flex: 1;
   letter-spacing: var(--letter-spacing);
   line-height: 1.4;
+  min-width: 20rem;
 }
 @media screen and (min-width: 990px) {
   .customer__sidebar {
@@ -178,7 +180,7 @@
 .pg-customer table {
   font-size: var(--font-size-base);
   letter-spacing: var(--letter-spacing);
-  line-height: inherit;
+  line-height: calc(1 + 0.4 / max(1, var(--font-heading-scale)));
   background-color: rgb(var(--color-background));
   box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), 0.1);
   color: rgb(var(--color-foreground));
@@ -360,6 +362,8 @@
   font-size: var(--font-size-smaller, 1.4rem);
   margin-top: var(--space);
   text-align: left;
+  width: -moz-max-content;
+  width: max-content;
 }
 .fulfillment .highlight::before {
   inset: calc(var(--space-xs) * -1) calc(var(--space-sm) * -1);

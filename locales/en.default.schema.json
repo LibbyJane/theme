@@ -221,7 +221,7 @@
                     "label": "eCommerce color",
                     "info": "Used for add to cart buttons and highlighting eCommerce functionality"
                 },
-                "ecommerce_contrast_color": {
+                "color_ecommerce_contrast": {
                     "label": "eCommerce contrast color",
                     "info": "Used button text etc"
                 }
@@ -1549,10 +1549,10 @@
                         "text_style": {
                             "label": "Text style",
                             "options__1": {
-                                "label": "Subtitle"
+                                "label": "Body"
                             },
                             "options__2": {
-                                "label": "Uppercase"
+                                "label": "Subtitle"
                             }
                         },
                         "caption_size": {
@@ -3006,10 +3006,10 @@
                         "text_style": {
                             "label": "Text style",
                             "options__1": {
-                                "label": "Subtitle"
+                                "label": "Body"
                             },
                             "options__2": {
-                                "label": "Uppercase"
+                                "label": "Subtitle"
                             }
                         },
                         "caption_size": {

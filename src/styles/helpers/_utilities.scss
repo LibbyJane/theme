@@ -89,3 +89,7 @@
 .background-transparent.background-transparent {
     background: transparent;
 }
+
+::selection {
+    background-color: rgba(var(--color-highlight), 0.5);
+}

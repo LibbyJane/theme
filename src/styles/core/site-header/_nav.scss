@@ -15,15 +15,17 @@
         }
     }
 
-    li {
-        &:first-of-type {
-            .header__menu-item {
-                .header--top-left & {
-                    @include breakpoint(large) {
-                        padding-left: 0;
-                        margin-left: 0;
-                    }
+    .list-menu {
+        >li {
+            &:first-of-type {
+                .header__menu-item {
+                    .header--top-left & {
+                        @include breakpoint(medium) {
+                            padding-left: 0;
+                            margin-left: 0;
+                        }
 
+                    }
                 }
             }
         }

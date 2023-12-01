@@ -55,28 +55,13 @@
   --card-image-offset: var(--blog-card-image-offset);
 }
 
-/*  Card layout
-- card-wrapper
----- card (card--standard card--media card--extend-height)
--------- card__inner
------------- card__media
----------------- media
------------- card__content
----------------- card__information
--------------------- card__heading
--------------------- card__caption
--------------------- card-information (product cards - vendor, price)
----------------- card-badge (product cards)
--------- card__content
------------- card__information
----------------- card__heading
-*/
 .card {
   background: transparent;
   border: none;
   color: rgb(var(--color-foreground));
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   outline: 2px solid transparent;
   padding: 0;
@@ -89,31 +74,24 @@
   will-change: transform;
   z-index: 1;
 }
-.card.card--card {
-  backface-visibility: hidden;
-  background-color: rgba(var(--color-background), 1);
-  border-radius: var(--card-corner-radius);
-  border: var(--card-border-width) solid rgba(var(--color-foreground), var(--card-border-opacity));
-  box-shadow: var(--card-shadow-horizontal-offset) var(--card-shadow-vertical-offset) var(--card-shadow-blur-radius) rgba(var(--color-shadow), var(--card-shadow-opacity));
-  padding: var(--card-padding);
-}
-.grid__item .card.card:hover, .grid__item .card.card:focus {
+.grid__item .card:hover, .grid__item .card:focus {
   transform: rotate(0) translateY(-3px) translateX(0);
 }
-.grid__item .card.card:hover .card__media-hover-image, .grid__item .card.card:focus .card__media-hover-image {
+.grid__item .card:hover .card__media-hover-image, .grid__item .card:focus .card__media-hover-image {
   opacity: 1;
   transform: scale(1);
 }
 .card.ratio,
 .card .ratio {
   flex-direction: row;
+  flex-wrap: wrap;
   height: auto;
 }
 .article-card .card.ratio,
 .article-card .card .ratio {
   flex-direction: column;
 }
-.card--badge-bottom-left {
+.card.card--badge-bottom-left {
   padding-bottom: calc(var(--card-padding) + var(--space-xl));
 }
 .grid__item:nth-child(2) .card {
@@ -129,6 +107,15 @@
   position: relative;
 }
 
+.card--card {
+  backface-visibility: hidden;
+  background-color: rgba(var(--color-background), 1);
+  border-radius: var(--card-corner-radius);
+  border: var(--card-border-width) solid rgba(var(--color-foreground), var(--card-border-opacity));
+  box-shadow: var(--card-shadow-horizontal-offset) var(--card-shadow-vertical-offset) var(--card-shadow-blur-radius) rgba(var(--color-shadow), var(--card-shadow-opacity));
+  padding: var(--card-padding);
+}
+
 .card-wrapper {
   color: inherit;
   height: 100%;
@@ -169,6 +156,10 @@
   opacity: 1;
   transition: transform var(--duration-long) ease;
   transform: scale(1.03);
+}
+
+.card__content {
+  margin-bottom: auto;
 }
 
 .card--standard .card__information {

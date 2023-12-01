@@ -36,8 +36,6 @@
     position: absolute;
     z-index: 1;
 
-
-
     &::before {
         background-color: rgb(var(--color-background));
         background-image: var(--card-badge-surface-shadow-left);
@@ -70,6 +68,7 @@
 .card-badge__inner {
     @include sharp-text;
     background-color: rgb(var(--color-background));
+    // background-image: var(--background-gradient);
     display: inline-block;
     font-family: inherit;
     font-size: inherit;

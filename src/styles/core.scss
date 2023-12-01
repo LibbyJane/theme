@@ -41,6 +41,7 @@
         ,"components/forms/messages"
         ,"components/forms/status"
         ,"components/forms/postcard"
+        ,"components/forms/shopify"
         ,"components/modals/base"
         ,"components/modals/search"
         ,"components/rte/base"
@@ -262,7 +263,7 @@
 .list-unstyled {
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style-type: "";  // "" instead of none to preserve accessiblity properties in safari`
 }
 
 .hidden {

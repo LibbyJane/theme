@@ -26,10 +26,11 @@
     display: flex;
         justify-content: space-between;
     flex-wrap: wrap;
-    gap: 0 var(--space-lg);
+    gap: 0 var(--space);
 
     @media screen and (min-width: 990px) {
         flex-wrap: nowrap;
+        gap: 0 var(--space-lg);
     }
 }
 
@@ -41,6 +42,7 @@
     flex: 1;
     letter-spacing: var(--letter-spacing);
     line-height: 1.4;
+    min-width: 20rem;
 
     @media screen and (min-width: 990px) {
         flex: 0 0 auto;

@@ -93,6 +93,7 @@ button.shopify-payment-button__button--unbranded,
 
 button,
 a,
+summary,
 .draw-icon {
     &:hover,
     &:focus {
@@ -121,8 +122,16 @@ a,
         stroke-width: 1.5px;
     }
 
+    .icon-account {
+        --path-length: 33.4;
+    }
+
     .icon-arrow {
         --path-length: 24;
+    }
+
+    .icon-cart {
+        --path-length: 46;
     }
 
     .icon-checkmark {

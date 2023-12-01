@@ -580,9 +580,9 @@
 }
 
 @mixin text-body {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-base) ;
     letter-spacing: var(--letter-spacing);
-    line-height: inherit;
+    line-height: calc(1 + 0.4 / max(1, var(--font-heading-scale)));
 }
 
 @mixin text-heading {
@@ -611,7 +611,7 @@
 }
 
 :root {
-    --corner-shadow-alpha: 0.25;
+    --corner-shadow-alpha: 0.5;
     --corner-size: 15px;
     --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
 }
@@ -627,7 +627,7 @@
         content: "";
         filter: blur(5px);
         height: 3rem;
-        mix-blend-mode: multiply;
+        mix-blend-mode: color-burn;
         pointer-events: none;
         position: absolute;
         transform-origin: center;

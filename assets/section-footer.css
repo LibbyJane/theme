@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :root {
-  --corner-shadow-alpha: 0.25;
+  --corner-shadow-alpha: 0.5;
   --corner-size: 15px;
   --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
 }
@@ -263,6 +263,7 @@
 }
 
 .newsletter-form__field-wrapper {
+  margin-inline: auto;
   max-width: var(--content-width--narrow);
 }
 

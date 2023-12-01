@@ -10,10 +10,10 @@
   z-index: 1;
 }
 
-/*
 .card--card .quick-add {
-  margin: 0 1.3rem 1rem;
-} */
+  margin: auto 0 var(--space);
+}
+
 .quick-add-modal {
   box-sizing: border-box;
   opacity: 0;

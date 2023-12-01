@@ -1,5 +1,5 @@
 :root {
-  --corner-shadow-alpha: 0.25;
+  --corner-shadow-alpha: 0.5;
   --corner-size: 15px;
   --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
 }
@@ -339,19 +339,14 @@ details[open].menu-opening > .menu-drawer__submenu {
   color: rgb(var(--color-foreground));
   margin-bottom: 0;
 }
-
-.menu-drawer__utility-links:has(.menu-drawer__localization) .menu-drawer__account {
-  margin: 0;
-}
-
-.menu-drawer__account .icon-account {
+.menu-drawer__account .icon {
   height: var(--space-lg);
-  width: var(--space-lg);
+  width: 2rem;
   margin-right: var(--space);
 }
 
-.menu-drawer__account:hover .icon-account {
-  transform: scale(1.07);
+.menu-drawer__utility-links:has(.menu-drawer__localization) .menu-drawer__account {
+  margin: 0;
 }
 
 .menu-drawer .list-social {

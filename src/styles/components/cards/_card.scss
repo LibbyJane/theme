@@ -17,6 +17,7 @@
     color: rgb(var(--color-foreground));
     display: flex;
         flex-direction: column;
+        justify-content: space-between;
         height: 100%;
     outline: 2px solid transparent;
     // overflow: hidden; cuts off shadow
@@ -31,20 +32,15 @@
     will-change: transform;
     z-index: 1;
 
-    &.card--card{
-        @include card-container;
-    }
 
-    &.card {
-        .grid__item & {
-            &:hover,
-            &:focus {
-                transform: rotate(0) translateY(-3px) translateX(0);
+    .grid__item & {
+        &:hover,
+        &:focus {
+            transform: rotate(0) translateY(-3px) translateX(0);
 
-                .card__media-hover-image {
-                    opacity: 1;
-                    transform: scale(1);
-                }
+            .card__media-hover-image {
+                opacity: 1;
+                transform: scale(1);
             }
         }
     }
@@ -52,6 +48,7 @@
     &.ratio,
     .ratio {
         flex-direction: row;
+        flex-wrap: wrap;
         height: auto;
 
         .article-card & {
@@ -59,7 +56,7 @@
         }
     }
 
-    &--badge-bottom-left {
+    &.card--badge-bottom-left {
         padding-bottom: calc(var(--card-padding) + var(--space-xl));
     }
 
@@ -78,4 +75,8 @@
     .price-item--actual {
         position: relative;
     }
+}
+
+.card--card{
+    @include card-container;
 }
