@@ -1,7 +1,7 @@
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
-  --alpha-link: 0.85;
+  --alpha-link: 0.95;
   --alpha-badge-border: 0.1;
   --card-padding: var(--product-card-padding);
   --card-image-padding: var(--product-card-padding);
@@ -162,8 +162,11 @@
   margin-bottom: auto;
 }
 
+.card__information {
+  padding: 0 3px;
+}
 .card--standard .card__information {
-  padding-bottom: var(--padding);
+  padding: 0 0 var(--padding);
 }
 .collection-list .card__inner .card__information, .collage .card__inner .card__information {
   display: none;
@@ -211,6 +214,14 @@
   position: relative;
   width: calc(var(--card-image-offset) * -2 + 100%);
   min-width: 100%;
+}
+.card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  outline: 2px dashed aqua;
+  box-shadow: inset 0 0 5px rgba(var(--color-shadow), 0.25);
+  mix-blend-mode: multiply;
 }
 .card__media .media {
   position: absolute;

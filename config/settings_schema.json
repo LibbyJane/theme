@@ -115,14 +115,7 @@
                         "id": "shadow",
                         "label": "t:settings_schema.colors.settings.shadow.label",
                         "default": "#121212"
-                    },
-                    {
-                        "type": "color",
-                        "id": "todo",
-                        "label": "t:settings_schema.colors.settings.shadow.label",
-                        "default": "#B9E41D"
                     }
-
                 ],
                 "role": {
                     "text": "text",
@@ -632,15 +625,15 @@
                 "id": "card_style",
                 "options": [
                     {
-                        "value": "standard",
-                        "label": "t:settings_schema.cards.settings.style.options__1.label"
-                    },
-                    {
                         "value": "card",
                         "label": "t:settings_schema.cards.settings.style.options__2.label"
+                    },
+                    {
+                        "value": "standard",
+                        "label": "t:settings_schema.cards.settings.style.options__1.label"
                     }
                 ],
-                "default": "standard",
+                "default": "card",
                 "label": "t:settings_schema.cards.settings.style.label"
             },
             {
@@ -720,10 +713,10 @@
                 "id": "card_corner_radius",
                 "min": 0,
                 "max": 40,
-                "step": 2,
+                "step": 1,
                 "unit": "px",
                 "label": "t:settings_schema.global.settings.corner_radius.label",
-                "default": 0
+                "default": 3
             },
             {
                 "type": "header",

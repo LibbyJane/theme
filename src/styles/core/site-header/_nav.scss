@@ -38,7 +38,7 @@
 }
 
 .header__menu-item {
-    @include underline-on-hover($underline-inline-offset: var(--space), $underline-bottom-offset: var(--space));
+    @include underline-child-on-hover;
     color: rgba(var(--color-foreground), var(--opacity-light));
     display: flex;
         align-items: center;

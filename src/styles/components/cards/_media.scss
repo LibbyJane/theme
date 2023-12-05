@@ -20,6 +20,15 @@
     width: calc((var(--card-image-offset) * -2) + 100%);
     min-width: 100%;
 
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        outline: 2px dashed aqua;
+        box-shadow: inset 0 0 5px rgba(var(--color-shadow), 0.25);
+        mix-blend-mode: multiply;
+    }
+
     // .card--standard & {
     //     padding-top:  calc((var(--card-image-offset) * -2) + var(--ratio-percent));
     // }

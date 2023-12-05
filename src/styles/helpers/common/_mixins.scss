@@ -508,6 +508,44 @@
     }
 }
 
+@mixin underline-child-on-hover($underline-inline-offset: 0, $underline-bottom-offset: 0) {
+    >:first-child {
+        display: flex;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            animation: scaleOutX100 var(--duration-medium) var(--transition-type) forwards;
+            mask-image: url(mask-underline.svg?v=4);
+            mask-size: auto 2px;
+            mask-repeat: repeat;
+            mask-position: bottom center;
+            background-color: rgba(var(--color-link), var(--alpha-link));
+            content: '';
+            position: absolute;
+            right: $underline-inline-offset;
+            bottom: $underline-bottom-offset;
+            left: $underline-inline-offset;
+            height: 1.5px;
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: bottom left;
+            shape-rendering: crispEdges;
+            vector-effect: non-scaling-stroke;
+        }
+    }
+
+
+    &:hover,
+    &:focus {
+        >:first-child {
+            &::after {
+                animation: scaleX100 var(--duration-medium) var(--transition-type) forwards;
+            }
+        }
+    }
+}
+
 @mixin underline-on-hover($underline-inline-offset: 0, $underline-bottom-offset: 0) {
     position: relative;
     z-index: 1;
@@ -528,9 +566,9 @@
         background-color: rgba(var(--color-link), var(--alpha-link));
         content: '';
         position: absolute;
-        bottom: $underline-bottom-offset;
-        left: $underline-inline-offset;
-        width: calc(100% - (#{$underline-inline-offset} * 2));
+            right: $underline-inline-offset;
+            bottom: $underline-bottom-offset;
+            left: $underline-inline-offset;
         height: 2px;
         z-index: -1;
         transform: scaleX(0);
