@@ -32,7 +32,7 @@
     "inputs_shadow_horizontal_offset": 0,
     "inputs_shadow_vertical_offset": 4,
     "inputs_shadow_blur": 5,
-    "card_style": "standard",
+    "card_style": "card",
     "card_padding": 10,
     "card_text_alignment": "left",
     "card_color_scheme": "background-2",
@@ -44,7 +44,6 @@
     "card_shadow_vertical_offset": 4,
     "card_shadow_blur": 5,
     "collection_card_style": "standard",
-    "collection_card_image_padding": 0,
     "collection_card_text_alignment": "left",
     "collection_card_color_scheme": "background-2",
     "collection_card_border_thickness": 0,
@@ -57,11 +56,11 @@
     "blog_card_style": "standard",
     "blog_card_image_padding": 0,
     "blog_card_text_alignment": "left",
-    "blog_card_color_scheme": "background-2",
-    "blog_card_border_thickness": 0,
-    "blog_card_border_opacity": 10,
+    "blog_card_color_scheme": "accent-1",
+    "blog_card_border_thickness": 10,
+    "blog_card_border_opacity": 100,
     "blog_card_corner_radius": 0,
-    "blog_card_shadow_opacity": 0,
+    "blog_card_shadow_opacity": 55,
     "blog_card_shadow_horizontal_offset": 0,
     "blog_card_shadow_vertical_offset": 4,
     "blog_card_shadow_blur": 5,
@@ -120,6 +119,7 @@
     "checkout_sidebar_background_color": "#ffffff",
     "checkout_accent_color": "#820030",
     "checkout_button_color": "#820030",
+    "collection_card_image_padding": 0,
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -154,7 +154,8 @@
           "button": "#242833",
           "button_label": "#ffffff",
           "secondary_button_label": "#242833",
-          "shadow": "#242833"
+          "shadow": "#242833",
+          "todo": "#b9e41d"
         }
       },
       "background-2": {
@@ -165,7 +166,8 @@
           "button": "#3f2b00",
           "button_label": "#fcf6ea",
           "secondary_button_label": "#3f2b00",
-          "shadow": "#3f2b00"
+          "shadow": "#3f2b00",
+          "todo": "#b9e41d"
         }
       },
       "inverse": {
@@ -176,7 +178,8 @@
           "button": "#ffffff",
           "button_label": "#242833",
           "secondary_button_label": "#ffffff",
-          "shadow": "#000000"
+          "shadow": "#000000",
+          "todo": "#b9e41d"
         }
       },
       "accent-1": {
@@ -187,7 +190,8 @@
           "button": "#ffffff",
           "button_label": "#820030",
           "secondary_button_label": "#ffffff",
-          "shadow": "#000000"
+          "shadow": "#000000",
+          "todo": "#b9e41d"
         }
       },
       "sticky-1": {
