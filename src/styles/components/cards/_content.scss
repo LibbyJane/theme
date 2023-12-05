@@ -50,8 +50,10 @@
 // .card--standard.card--text.article-card>.card__content .card__information,
 // .card--standard>.card__content .card__caption {
 .card__information {
+    padding: 0 3px;
+
     .card--standard & {
-        padding-bottom: var(--padding);
+        padding: 0 0 var(--padding);
     }
     .collection-list .card__inner &,
     .collage .card__inner & {

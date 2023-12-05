@@ -58,7 +58,7 @@
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
-  --alpha-link: 0.85;
+  --alpha-link: 0.95;
   --alpha-badge-border: 0.1;
   --card-padding: var(--product-card-padding);
   --card-image-padding: var(--product-card-padding);
@@ -255,10 +255,6 @@
 
 :root {
   --button-border-radius: var(--button-radius-large) var(--button-radius) var(--button-radius-med) var(--button-radius)/var(--button-radius) var(--button-radius-med) var(--button-radius) var(--button-radius-large);
-}
-
-a {
-  --alpha-link: 0.8;
 }
 
 .button,
@@ -949,6 +945,8 @@ summary .icon-funnel-clear,
   font-family: var(--font-heading-family);
   font-size: var(--font-size-smaller);
   line-height: 1.2;
+  filter: drop-shadow(0 0 1px rgba(var(--color-shadow), 10.2));
+  text-transform: uppercase;
 }
 .badge::before, .badge::after {
   background: rgba(var(--color-shadow), var(--corner-shadow-alpha));
@@ -974,9 +972,6 @@ summary .icon-funnel-clear,
 }
 
 .badge__inner {
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  -webkit-font-smoothing: subpixel-antialiased;
   -webkit-clip-path: polygon(var(--cnr-size) 0, 100% 0, 100% var(--cnr-size-inverse), var(--cnr-size-inverse) 100%, 0 100%, 0 var(--cnr-size));
           clip-path: polygon(var(--cnr-size) 0, 100% 0, 100% var(--cnr-size-inverse), var(--cnr-size-inverse) 100%, 0 100%, 0 var(--cnr-size));
   display: block;
@@ -985,7 +980,16 @@ summary .icon-funnel-clear,
   line-height: 1;
   padding: var(--space) var(--space-lg);
   position: relative;
-  background: rgb(var(--color-background)) radial-gradient(ellipse farthest-corner at center center, rgb(var(--color-background)) 50%, rgba(var(--color-shadow), 0.15) 100%);
+  background-color: rgb(var(--color-background));
+  transform: skewX(1deg);
+}
+.badge__inner::after {
+  content: "";
+  position: absolute;
+  inset: calc(var(--cnr-size) * -1.5);
+  transform: skewX(-45deg);
+  box-shadow: inset 0 0 5px rgba(var(--color-shadow), 10.2);
+  mix-blend-mode: multiply;
 }
 
 :root {
@@ -1341,9 +1345,9 @@ a {
   background-color: rgba(var(--color-link), var(--alpha-link));
   content: "";
   position: absolute;
+  right: 0;
   bottom: 0;
   left: 0;
-  width: calc(100% - 0 * 2);
   height: 2px;
   z-index: -1;
   transform: scaleX(0);
