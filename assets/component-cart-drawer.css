@@ -223,7 +223,7 @@ cart-drawer-items {
   padding: 0;
 }
 .cart-drawer th {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-bottom: var(--border-light);
   flex: 0 1 auto;
 }
 .cart-drawer .cart-items__th-product {

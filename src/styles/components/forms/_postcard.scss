@@ -1,27 +1,41 @@
+:root {
+    --postcard-aspect-ratio: 3/2;
+    --postcard-padding: var(--content-padding-inline);
+
+    @media screen and (min-width: 750px) {
+        --postcard-padding: var(--space-lg);
+    }
+}
+
+.postcard-container {
+    margin: auto;
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    z-index: var(--zi-base);
+}
+
 .postcard {
     --postcard-border-color: rgba(var(--color-foreground), 0.3);
     --input-border-width: 1px;
-    aspect-ratio: 3/2;
+    aspect-ratio: var(--postcard-aspect-ratio);
     background-color: rgb(var(--color-background));
     background-image: radial-gradient(hsl(50, 0%, 96%), hsl(50, 0%, 94%), hsl(450, 0%, 85%));
     background-blend-mode: multiply;
     box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
     display: grid;
-        grid-template-areas: "title" "postcard-fields" "postcard-send";
+        grid-template-areas: "postcard-title" "postcard-fields" "postcard-send";
     width: var(--page-width--narrow);
     max-width: 100%;
     margin: 0 auto;
-    padding: var(--content-padding);
+    padding: var(--postcard-padding);
     position: relative;
 
     @media screen and (min-width: 750px) {
-        grid-template-areas: "title postcard-send" "postcard-fields postcard-send";
-        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "postcard-title postcard-title postcard-title postcard-send" "postcard-fields postcard-fields blank postcard-send";
+        grid-template-columns: 1fr max-content max-content minmax(40%, max-content);
     }
 
-    .title {
-        grid-area: title;
-    }
 
     .postage-stamp {
         filter: drop-shadow(0 0 1px rgba(var(--color-shadow), 0.2));
@@ -62,9 +76,13 @@
         right: -0.5rem;
 
         @media screen and (min-width: 750px) {
-            top: var(--space-xl);
-            right: var(--space-lg);
+            top: 0;
+            right: var(--space-med);
         }
+
+        // @media screen and (min-width: 990px) {
+        //     right: var(--space-lg);
+        // }
     }
 
     .postage-stamp--square {
@@ -80,33 +98,36 @@
     fieldset {
         display: flex;
             flex-direction: column;
-        margin: var(--content-padding) 0;
-        padding: 0;
+        // margin: var(--content-padding) 0;
+        margin: 0;
+        padding: 0 0 var(--postcard-padding);
         position: relative;
 
         @media screen and (min-width: 750px) {
-            padding: 0 var(--content-padding);
+            padding-bottom: 0;
+            padding-right: var(--space-lg);
         }
     }
 
     // fieldset type
     .contact__fields {
         grid-area: postcard-fields;
-
-        @media screen and (min-width: 750px) {
-            border-right: 2px solid var(--postcard-border-color);
-        }
     }
 
     // fieldset type
     .contact__submit {
         grid-area: postcard-send;
         padding-right: 0;
-        padding-bottom: var(--space-med);
+        padding-bottom: var(--space);
 
         @media screen and (min-width: 750px) {
-            padding-bottom: var(--space);
+            border-left: 2px solid var(--postcard-border-color);
+            padding-left: var(--space-lg);
         }
+
+        // @media screen and (min-width: 750px) {
+        //     padding-bottom: var(--space);
+        // }
 
         // stamp placement outline
         &::before {
@@ -131,7 +152,7 @@
             box-shadow: 0 0 2px rgba(var(--color-shadow), 1);
             content: '';
             position: absolute;
-            inset: 0 calc(var(--space-xl) * -1);
+            inset: 0 calc(var(--postcard-padding) * -1);
             z-index: -1;
 
             @media screen and (min-width: 750px) {
@@ -162,12 +183,14 @@
         background-image: repeating-linear-gradient(0deg, var(--postcard-border-color), var(--postcard-border-color) var(--input-border-width), rgba(255,255,255,0) var(--input-border-width), rgba(255,255,255,0));
         border: none;
         line-height: var(--line-height);
+        padding-top: 0;
         padding-bottom: 0;
     }
 
     .contact__store-message {
         @include text-heading;
         font-size: var(--font-size-h5);
+        margin-bottom: var(--space-med);
     }
 
     .contact__store-details {
@@ -182,7 +205,7 @@
     }
 
     button[type="submit"] {
-        margin: var(--space) 0;
+        margin: 0 auto;
         width: 100%;
 
         @media screen and (min-width: 750px) {
@@ -191,16 +214,23 @@
     }
 }
 
+.postcard-title {
+    grid-area: postcard-title;
+}
+
 .postcard__reverse-face {
+    aspect-ratio: var(--postcard-aspect-ratio);
     position: absolute;
-        inset: 0;
-    transform: rotate(4deg) translateY(-1rem) translateX(7rem);
+        top: 0;
+        left: auto;
+        bottom: 0;
+        left: auto;
+    transform: rotate(-5deg) translateX(1rem);
     z-index: -1;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-
 
     img {
         box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)

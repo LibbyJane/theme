@@ -1,8 +1,18 @@
 @import "helpers/common";
 
+.footer {
+    --font-size-base: 1.6rem;
+}
+
+.footer-block__heading {
+    margin-bottom: var(--space-sm);
+}
+
+
 .footer-block__details-content {
     a {
-        @include underline-on-hover;
+        //@include underline-on-hover;
+        @include hover-highlight;
         display: inline-flex;
         padding-bottom: 2px;
     }
@@ -33,10 +43,9 @@
 }
 
 .footer-block__newsletter {
+    padding-top: var(--space);
     text-align: center;
     flex-grow: 1;
-
-
 }
 
 
@@ -61,21 +70,21 @@
   }
 
   .footer__content-top {
-    padding-bottom: 3rem;
-    padding-left: calc(4rem / var(--font-body-scale));
-    padding-right: calc(4rem / var(--font-body-scale));
+    padding-bottom: var(--space);
+    // padding-left: calc(4rem / var(--font-body-scale));
+    // padding-right: calc(4rem / var(--font-body-scale));
   }
 }
 
 @media screen and (min-width: 750px) {
   .footer__content-top .grid {
-    row-gap: 6rem;
+    row-gap: var(--space-xl);
     margin-bottom: 0;
   }
 }
 
 .footer__content-bottom {
-  border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
+  border-top: var( --border-light);
   padding-top: 3rem;
 }
 

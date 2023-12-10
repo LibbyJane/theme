@@ -162,6 +162,10 @@
   margin-bottom: auto;
 }
 
+.card--text {
+  padding-top: var(--space);
+}
+
 .card__information {
   padding: 0 3px;
 }

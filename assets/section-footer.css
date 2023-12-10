@@ -51,35 +51,42 @@
     transform: scaleX(100%) rotate(0.5deg);
   }
 }
+.footer {
+  --font-size-base: 1.6rem;
+}
+
+.footer-block__heading {
+  margin-bottom: var(--space-sm);
+}
+
 .footer-block__details-content a {
+  --rotation: -1deg;
   position: relative;
   z-index: 1;
   display: inline-flex;
   padding-bottom: 2px;
 }
-.footer-block__details-content a:hover::after, .footer-block__details-content a:focus::after {
-  animation: scaleX100 var(--duration-medium) var(--transition-type) forwards;
+.footer-block__details-content a:nth-child(2n) {
+  --rotation: -2deg;
 }
-.footer-block__details-content a::after {
-  animation: scaleOutX100 var(--duration-medium) var(--transition-type) forwards;
-  -webkit-mask-image: url(mask-underline.svg);
-          mask-image: url(mask-underline.svg);
-  -webkit-mask-size: cover;
-          mask-size: cover;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: bottom left;
-          mask-position: bottom left;
-  background-color: rgba(var(--color-link), var(--alpha-link));
+.footer-block__details-content a:nth-child(3n) {
+  --rotation: 1deg;
+}
+.footer-block__details-content a:hover::before, .footer-block__details-content a:focus::before {
+  transition: transform var(--duration-long) var(--transition-type);
+  transform: rotate(var(--rotation)) scaleX(1);
+}
+.footer-block__details-content a::before {
+  background: rgba(var(--color-highlight), var(--highlight-opacity));
+  border-radius: var(--button-border-radius);
   content: "";
+  margin: -2px;
   position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 2px;
+  inset: 0;
+  transform: rotate(-1deg) scaleX(0);
+  transform-origin: center left;
+  transition-delay: 100ms;
   z-index: -1;
-  transform: scaleX(0);
-  transform-origin: bottom left;
 }
 .footer-block__details-content .list-menu__item--active {
   filter: grayscale(1);
@@ -128,6 +135,7 @@
 }
 
 .footer-block__newsletter {
+  padding-top: var(--space);
   text-align: center;
   flex-grow: 1;
 }
@@ -150,19 +158,17 @@
     margin-top: 0;
   }
   .footer__content-top {
-    padding-bottom: 3rem;
-    padding-left: calc(4rem / var(--font-body-scale));
-    padding-right: calc(4rem / var(--font-body-scale));
+    padding-bottom: var(--space);
   }
 }
 @media screen and (min-width: 750px) {
   .footer__content-top .grid {
-    row-gap: 6rem;
+    row-gap: var(--space-xl);
     margin-bottom: 0;
   }
 }
 .footer__content-bottom {
-  border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
+  border-top: var(--border-light);
   padding-top: 3rem;
 }
 

@@ -15,7 +15,7 @@
     border: none;
     display: flex;
         align-items: center;
-        color: rgb(var(--color-link));
+        color: rgb(var(--color-link),var(--alpha-link));
     font-size: var(--font-size-smaller);
     opacity: var(--opacity-light);
     margin-left: 0;

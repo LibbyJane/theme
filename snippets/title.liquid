@@ -1,0 +1,56 @@
+{% comment %}
+    Renders a styled section/page title
+
+    Accepts:
+    - text: {String} Title text
+    - id: {String} Optional id
+    - tag: {String} Optional tag type (default is h2)
+    - css_classes_wrapper: {String} Optional. If unspecified, defaults to 'page-width'
+    - css_classes_title: {String} Optional. Size classes can be included here
+    - additional_attributes: Optional
+    - additional_html_pre: Optional
+    - additional_html_post: Optional
+
+    Simple usage:
+    {% render 'title', text: section.settings.heading, css_classes_title: section.settings.heading_size %}
+
+    Additional usage examples:
+    {%- capture view_all_html -%}
+        {%- if section.settings.show_view_all and show_mobile_slider -%}
+            <a
+                href="{{ routes.collections_url }}"
+                id="ViewAll-{{ section.id }}"
+                class="link underlined-link large-up-hide{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
+            >
+                {{- 'sections.collection_list.view_all' | t -}}
+            </a>
+        {%- endif -%}
+    {%- endcapture -%}
+
+    {%- unless section.settings.title == blank -%}
+        {%- capture id -%}SectionHeading-{{ section.id }}{%- endcapture -%}
+        {% render 'title', text: section.settings.title, id: id, css_classes_title: section.settings.heading_size, additional_html: view_all_html %}
+        </div>
+    {%- endunless -%}
+{% endcomment %}
+
+{%- liquid
+    if tag_type == blank
+        assign tag_type = 'h2'
+    endif
+
+    if css_classes == blank
+        assign css_classes = 'page-width'
+    endif
+-%}
+
+<div class="{{ css_classes_wrapper }} title-wrapper align-{{settings.title_alignment}}">
+    <{{tag_type }} {% unless id == blank %}id="{{id}}"{% endunless %} class="{{ css_classes_title }} title inline-rich texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {%- if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{additional_attributes}}>
+        {% unless additional_html_pre == blank %}{{ additional_html_pre }}{% endunless %}
+
+        {{ text }}
+
+        {% unless additional_html_post == blank %}{{ additional_html_post }}{% endunless %}
+    </{{tag_type }}>
+</div>
