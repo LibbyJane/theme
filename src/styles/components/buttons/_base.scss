@@ -37,7 +37,7 @@ button.shopify-payment-button__button--unbranded,
         gap: var(--space);
     font-size: var(--font-size-h5);
     margin: 0;
-    padding: var(--space) var(--space-lg);
+    padding: calc(var(--space)*0.75) var(--space-med);
     //opacity: 0.85;
     position: relative;
     text-decoration: none;
@@ -85,6 +85,13 @@ button.shopify-payment-button__button--unbranded,
     font-size: var(--font-size-base);
     line-height: 1;
     padding: var(--space-sm) var(--space);
+}
+
+
+.button-med {
+    font-size: var(--font-size-base);
+    line-height: 1;
+    padding: var(--space) var(--space-med);
 }
 
 button,

@@ -9,7 +9,8 @@
   }
 {%- endstyle -%}
 
-<div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} {% if section.settings.color_boundary == 'container' %} color-{{ section.settings.color_scheme }}{% endif %}">
+<div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %}">
+
     <div class="page-width title-wrapper align-{{settings.title_alignment}}">
         <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{% if section.settings.color_boundary == 'container' %}{{ settings.title_color_scheme }}{% else %}{{ section.settings.color_scheme }}{% endif %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
             <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
@@ -75,6 +76,12 @@
         "id": "color_scheme",
         "label": "t:sections.all.colors.label",
         "default": "inverse"
+    },
+    {
+        "type": "checkbox",
+        "id": "background_transparent",
+        "default": true,
+        "label": "t:settings_schema.colors.settings.background_transparent.label"
     },
     {
         "type": "select",

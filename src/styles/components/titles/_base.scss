@@ -15,9 +15,12 @@
 }
 
 .title {
-    display: block;
+    display: flex;
+        align-items: center;
+        gap: var(--space-xl);
     margin: 0 auto;
-    padding: var(--space-med) var(--content-padding-inline) var(--space-lg);
+    //padding: var(--space-med) var(--content-padding-inline) var(--space-lg);
+    padding: var(--space-med) var(--content-padding-inline);
     transform: rotate(-0.5deg);
 
     &.animate--slide-in {
@@ -39,6 +42,10 @@
         padding-left: 0;
         padding-right: 0;
     }
+}
+
+.title--multiline {
+    flex-wrap: wrap;;
 }
 
 .title--additional {

@@ -2,18 +2,20 @@
 {{ 'newsletter-section.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
-  }
+
+    @media screen and (min-width: 750px) {
+        .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
 {%- endstyle -%}
+
+{% capture error_id %}Newsletter-error--{{ section.id }}{% endcapture %}
 
 <div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
   <div class="newsletter__wrapper color-{{ section.settings.color_scheme }}  content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
@@ -47,6 +49,12 @@
           <div {{ block.shopify_attributes }}>
             {% form 'customer', class: 'newsletter-form' %}
               <input type="hidden" name="contact[tags]" value="newsletter">
+
+                <h1>TODO: newsletter,.. // {{form.form_id}} //  {{form.type}} //  {{form.id}}</h1>
+                {% if form.posted_successfully %}
+                yes
+                {% else %} no
+              {% endif %}
               <div
                 class="newsletter-form__field-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {% if settings.animations_reveal_on_scroll %}
@@ -68,7 +76,7 @@
                     {% if form.errors %}
                       autofocus
                       aria-invalid="true"
-                      aria-describedby="Newsletter-error--{{ section.id }}"
+                      aria-describedby="{{ error_id }}"
                     {% elsif form.posted_successfully? %}
                       aria-describedby="Newsletter-success--{{ section.id }}"
                     {% endif %}
@@ -89,7 +97,7 @@
                   </button>
                 </div>
                 {%- if form.errors -%}
-                    {%- render 'form-field-error', classes='newsletter-form__message', id: "Newsletter-error--{{ section.id }}", field_name: form.errors.translated_fields.email, message: form.errors.messages.email -%}
+                    {%- render 'form-field-error', classes='newsletter-form__message', id: error_id, field_name: form.errors.translated_fields.email, message: form.errors.messages.email -%}
                 {%- endif -%}
               </div>
               {%- if form.posted_successfully? -%}

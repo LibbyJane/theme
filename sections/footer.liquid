@@ -48,7 +48,7 @@
         or section.settings.enable_follow_on_shop
     -%}
         {%- unless only_empty_brand -%}
-            <div class="footer__content-top page-width content-padding-inline">
+            <div class="footer__content-top page-width">
                 {%- if section.blocks.size > 0 -%}
                     {%- liquid
                         if section.blocks.size == 9
@@ -75,7 +75,7 @@
                                     {% endif %}
                                 >
                                     {%- if block.settings.heading != blank -%}
-                                    <h5 class="inline-richtext">{{- block.settings.heading -}}</h5>
+                                        <h5 class="inline-richtext footer-block__heading">{{- block.settings.heading -}}</h5>
                                     {%- endif -%}
 
                                     {%- case block.type -%}

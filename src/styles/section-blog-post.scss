@@ -1,0 +1,202 @@
+// .article-template > *:first-child:not(.article-template__hero-container) {
+//   margin-top: 5rem;
+// }
+
+// @media screen and (min-width: 750px) {
+//   .article-template > *:first-child:not(.article-template__hero-container) {
+//     margin-top: calc(5rem + var(--page-width-margin));
+//   }
+// }
+
+.article-template__hero-container {
+    max-width: 130rem;
+    margin: 0 auto calc(var(--space) * -1);
+}
+
+.article-template__hero-small {
+    height: 11rem;
+
+    @media screen and (min-width: 750px) {
+        height: 22rem;
+    }
+
+    @media screen and (min-width: 990px) {
+        height: 27.5rem;
+    }
+}
+
+.article-template__hero-medium {
+    height: 22rem;
+
+    @media screen and (min-width: 750px) {
+        height: 44rem;
+    }
+
+    @media screen and (min-width: 990px) {
+        height: 55rem;
+    }
+}
+
+.article-template__hero-large {
+    height: 33rem;
+
+    @media screen and (min-width: 750px) {
+        height: 66rem;
+    }
+
+    @media screen and (min-width: 990px) {
+        height: 82.5rem;
+    }
+}
+
+
+// .article-template header {
+//   margin-top: 4.4rem;
+//  // margin-bottom: 2rem;
+//   line-height: calc(0.8 / var(--font-body-scale));
+// font-family: var(--font-heading-family);
+// font-style: var(--font-heading-style);
+// }
+
+// @media screen and (min-width: 750px) {
+//   .article-template header {
+//     margin-top: 5rem;
+//   }
+// }
+
+// .article-template__title {
+//   margin: 0;
+// }
+
+// .article-template__title:not(:only-child) {
+//   margin-bottom: 1rem;
+// }
+
+// .article-template__link {
+//   font-size: 1.8rem;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   text-decoration: none;
+// }
+
+// .article-template__link .icon-wrap {
+//   display: flex;
+//   margin-right: 1rem;
+//   transform: rotate(180deg);
+// }
+
+.article-template__main {
+    display: grid;
+        gap: var(--space) 0;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        padding-top: var(--space-sm);
+    }
+}
+
+// .article-template__content {
+//   //margin-top: 3rem;
+//   margin-bottom: var(--space-xl);
+// }
+
+// .article-template__social-sharing {
+//   margin-top: 3rem;
+// }
+
+// .article-template__social-sharing + header,
+// .article-template__social-sharing + .article-template__content {
+//   margin-top: 1.5rem;
+// }
+
+.article-template__comment-wrapper {
+    background-image: var(--crease);
+    margin-bottom: var(--space-med);
+}
+
+// @media screen and (min-width: 750px) {
+//   .article-template__comment-wrapper {
+//     padding: 3.6rem 0;
+//   }
+// }
+
+// .article-template__comment-wrapper h2 {
+//   margin-top: 0;
+// }
+
+.article-template__comments {
+    margin-bottom: var(--space-lg);
+}
+
+// @media screen and (min-width: 750px) {
+//   .article-template__comments {
+//     margin-bottom: 7rem;
+//   }
+// }
+
+.article-template__comments-fields {
+    margin-bottom: var(--space-xl);
+
+
+}
+
+.article-template__comment-fields {
+    @media screen and (min-width: 750px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: var(--space-xl);
+    }
+}
+
+
+.article-template__comments-comment {
+    padding: 0 0 var(--space-xl);
+
+    p {
+        //font-size: var(--font-size-smaller);
+        line-height: 1.4;
+        margin: 0;
+        padding: 0 0 var(--space-sm);
+    }
+}
+
+// .article-template__comments-comment p {
+//   margin: 0 0 1rem;
+// }
+
+// .article-template__comment-fields > * {
+//   margin-bottom: 3rem;
+// }
+
+
+.article-template__comments-footer {
+    display: flex;
+        justify-content: flex-end;
+    font-size: var(--font-size-smaller);
+    font-family: var(--font-heading-family);
+    font-style: var(--font-heading-style);
+    letter-spacing: 0;
+    line-height: 1.2;
+}
+
+.article-template__comment-warning {
+    margin: 2rem 0 2.5rem;
+}
+
+@media screen and (min-width: 990px) {
+  .article-template__comments .pagination-wrapper {
+    margin: 5rem 0 8rem;
+  }
+}
+
+.article-template__back:last-child {
+  margin-bottom: 3.2rem;
+}
+
+.comment-form {
+    margin-bottom: var(--space-med);
+}

@@ -16,105 +16,7 @@
 
 <div class="contact {% if section.settings.use_container_color_scheme %} color-{{ section.settings.container_color_scheme }}{% endif %} section-{{ section.id }}-padding isolate">
 
-
-
-<!-- todo: remove test form -->
-{%- comment -%}
-
-    <div class="page-width isolate">
-
-        <form method="post" action="/contact?oseid=FCWjQi2K1HTPDKhqdTbMNfyh#ContactForm" id="ContactForm" accept-charset="UTF-8" class="postcard color-background-1 scroll-trigger animate--slide-in" data-editor-form-attribute=""><input type="hidden" name="form_type" value="contact"><input type="hidden" name="utf8" value="✓"><h1 class="inline-richtext h1" data-live-text-setting="section.template--21116524790081__d41da2e0-c9f9-486d-aa5c-976f2ec8c070.heading">
-                            Contact form
-                        </h1><fieldset class="contact__fields">
-                        <div class="field">
-                            <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[Name]" value="" placeholder="Name">
-                            <label class="field__label" for="ContactForm-name">Name</label>
-                        </div>
-                        <div class="field status-error">
-                            <input autocomplete="email" type="email" id="ContactForm-email" class="field__input" name="contact[email]" spellcheck="false" autocapitalize="off" value="" aria-required="true" aria-invalid="true" aria-describedby="ContactForm-email-error" placeholder="Email">
-                            <label class="field__label" for="ContactForm-email">Email
-                                <abbr class="field__required" title="Required">*</abbr>
-                            </label>
-
-        <small class="field__error status-error" id="ContactForm-email-error">
-            <span class="visually-hidden">Error</span><svg aria-hidden="true" focusable="false" class="icon icon-error" viewBox="0 0 14 14">
-            <circle cx="6.5" cy="6.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1"></circle>
-            <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="currentColor"></path>
-        </svg>
-        Email is invalid</small></div>
-                        <div class="field">
-                            <input type="tel" id="ContactForm-phone" class="field__input" autocomplete="tel" name="contact[Phone number]" pattern="[0-9\-]*" value="" placeholder="Phone number">
-                            <label class="field__label" for="ContactForm-phone">Phone number</label>
-                        </div>
-                        <div class="field">
-                            <textarea rows="6" id="ContactForm-body" class="text-area field__input" name="contact[Comment]" placeholder="Comment"></textarea>
-                            <label class="form__label field__label" for="ContactForm-body">Comment</label>
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="contact__submit"><div class="form__message status-error">
-                                <h6 class="form__status-heading" role="alert" tabindex="-1" autofocus="">
-                                    <svg aria-hidden="true" focusable="false" class="icon icon-error" viewBox="0 0 14 14">
-            <circle cx="6.5" cy="6.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1"></circle>
-            <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="currentColor"></path>
-        </svg>
-
-                                    Please adjust the following:
-                                </h6>
-                                <ul class="form__status-list" role="list">
-                                    <li>
-                                        <a href="#ContactForm-email">
-                                        Email
-                                        is invalid
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div><div class="contact__store-message inline-richtext"><p data-live-text-setting="section.template--21116524790081__d41da2e0-c9f9-486d-aa5c-976f2ec8c070.store_message">To:</p><div class="contact__store-details"><address>Road Trip Wines<br><p>480 Methley Place<br>Leeds LS7 3NN<br>United Kingdom</p>
-        </address>
-
-                                        <!--<p>01234123123</p>--></div>
-                        </div>
-
-                        <button type="submit" class="button button--secondary">
-                            Send
-                        </button>
-                    </fieldset><input type="hidden" name="oseid" value="FCWjQi2K1HTPDKhqdTbMNfyh"></form></div>
-
-
-
-    {%- endcomment -%}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="page-width isolate">
+    <div class="postcard-container">
         {%- capture postcard_color_scheme -%}color-{{section.settings.content_color_scheme}}{% endcapture %}
         {%- liquid
             assign scroll_classes = ''
@@ -140,7 +42,7 @@
 
         {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
             {%- if section.settings.heading != blank -%}
-                <h1 class="inline-richtext {{ section.settings.heading_size }}">
+                <h1 class="postcard-title inline-richtext {{ section.settings.heading_size }}">
                     {{ section.settings.heading }}
                 </h1>
             {%- else -%}
@@ -180,10 +82,17 @@
                         {{- 'templates.contact.form.email' | t }}
                         <abbr class="field__required" title="Required">*</abbr>
                     </label>
-                    {%- if form.errors contains 'email' -%}
-                        {%- render 'form-field-error', id: 'ContactForm-email-error', field_name: form.errors.translated_fields.email, message: form.errors.messages.email -%}
-                    {%- endif -%}
                 </div>
+
+                <h1>TODO: contact form {{form.id}} {{form.errors.messages}}</h1>
+                {% if form.posted_successfully %}
+                    yes
+                    {% else %} no
+                  {% endif %}
+                <!-- todo: check error -->
+                {%- if form.errors contains 'email' -%}
+                    {%- render 'form-field-error', id: 'ContactForm-email-error', field_name: form.errors.translated_fields.email, message: form.errors.messages.email -%}
+                {%- endif -%}
                 <div class="field">
                     <input
                     type="tel"

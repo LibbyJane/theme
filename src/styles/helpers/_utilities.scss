@@ -6,8 +6,12 @@
     margin-bottom: var(--space-med) !important;
 }
 
+.margin-bottom-0 {
+    margin-bottom: 0 !important;
+}
+
 // enable if required
-// .margin-top {
+// margin-top {
 //     margin-top: var(--space) !important;
 // }
 
@@ -17,6 +21,25 @@
 
 .margin-top--lg {
     margin-top: var(--space-lg) !important;
+}
+
+
+@media screen and (max-width: 749px) {
+    .small-hide {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+    .medium-hide {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .large-up-hide {
+        display: none !important;
+    }
 }
 
 .w-100 {

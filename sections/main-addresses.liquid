@@ -291,7 +291,7 @@
                                 {% assign value = form.country %}
                                 {% assign label = 'customer.addresses.country' | t  %}
                                 {% assign id = 'AddressCountry_' | append: form.id  %}
-                                {% assign data_attributes = 'data-address-country-select data-form-id="' | append: form.id | append: '"' %}
+                                {% assign additional_attributes = 'data-address-country-select data-form-id="' | append: form.id | append: '"' %}
                                 {% render 'field-with-float-label'
                                     type: "select",
                                     id: id,
@@ -299,7 +299,7 @@
                                     value: value,
                                     autocomplete:"country",
                                     options: all_country_option_tags,
-                                    data_attributes: data_attributes,
+                                    additional_attributes: additional_attributes,
                                     label: label
                                 %}
 

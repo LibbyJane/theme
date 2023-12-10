@@ -234,10 +234,10 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__account {
     display: inline-flex;
-    align-items: center;
-    text-decoration: none;
+        align-items: center;
     padding: var(--space) 0;
-    font-size: var(--font-size-smaller);
+    // text-decoration: none;
+    // font-size: var(--font-size-smaller);
     color: rgb(var(--color-foreground));
     margin-bottom: 0;
 

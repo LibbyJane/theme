@@ -421,7 +421,7 @@ quick-order-list-remove-button:hover .icon-remove {
   .quick-order-list__table thead tr {
     display: flex;
     justify-content: space-between;
-    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+    border-bottom: var( --border-light);
     margin-bottom: 4rem;
   }
 
@@ -509,7 +509,7 @@ quick-order-list-remove-button:hover .icon-remove {
   }
 
   .quick-order-list__table th {
-    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+    border-bottom: var( --border-light);
   }
 
   .quick-order-list__table thead th:first-child {
