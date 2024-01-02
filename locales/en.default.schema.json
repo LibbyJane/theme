@@ -636,6 +636,51 @@
                 "name": "Announcement bar"
             }
         },
+        "statement-bar": {
+            "name": "Statements bar",
+            "settings": {
+                "auto_rotate": {
+                    "label": "Auto-rotate statements"
+                },
+                "change_slides_speed": {
+                    "label": "Change every"
+                },
+                "header__1": {
+                    "content": "Messages"
+                }
+            },
+            "blocks": {
+                "statement": {
+                    "name": "Statement",
+                    "settings": {
+                        "text": {
+                            "label": "Text"
+                        },
+                        "text_alignment": {
+                            "label": "Text alignment",
+                            "options__1": {
+                                "label": "Left"
+                            },
+                            "options__2": {
+                                "label": "Center"
+                            },
+                            "options__3": {
+                                "label": "Right"
+                            }
+                        },
+                        "link": {
+                            "label": "Link"
+                        },
+                        "icon": {
+                            "label": "Icon"
+                        }
+                    }
+                }
+            },
+            "presets": {
+                "name": "Statements bar"
+            }
+        },
         "apps": {
             "name": "Apps",
             "settings": {
@@ -1552,7 +1597,7 @@
                                 "label": "Body"
                             },
                             "options__2": {
-                                "label": "Subtitle"
+                                "label": "Heading"
                             }
                         },
                         "caption_size": {
@@ -2336,6 +2381,15 @@
                             },
                             "options__44": {
                                 "label": "Washing"
+                            },
+                            "options__45": {
+                                "label": "Flag"
+                            },
+                            "options__46": {
+                                "label": "Edit"
+                            },
+                            "options__47": {
+                                "label": "Bag"
                             }
                         }
                     }
@@ -3475,6 +3529,15 @@
                             },
                             "options__44": {
                                 "label": "Washing"
+                            },
+                            "options__45": {
+                                "label": "Flag"
+                            },
+                            "options__46": {
+                                "label": "Edit"
+                            },
+                            "options__47": {
+                                "label": "Bag"
                             }
                         }
                     }

@@ -209,6 +209,11 @@
     &:focus {
         color: rgb(var(--color-foreground));
     }
+
+    .announcement-bar & {
+        grid-template-columns: auto max-content;
+    }
+
 }
 
 .disclosure__link--active {

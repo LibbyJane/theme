@@ -33,6 +33,7 @@
   --icon-size-xs: 1rem;
   --icon-size-lg: 2rem;
   --icon-size-xl: 3rem;
+  --icon-size-hero: 4rem;
   --opacity-full: 1;
   --opacity-lighter: 0.85;
   --opacity-light: 0.7;
@@ -77,8 +78,9 @@
   rgba(var(--color-shadow), var(--media-shadow-opacity));
   --card-image-offset: var(--product-card-image-offset);
   --crease-alpha: 0.05;
-  --crease: linear-gradient(to bottom, rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), var(--crease-alpha)) 100%);
-  --crease-light: linear-gradient(to bottom, rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), calc(var(--crease-alpha)/4)) 100%);
+  --crease-direction: bottom;
+  --crease: linear-gradient(to var(--crease-direction), rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), var(--crease-alpha)) 100%);
+  --crease-light: linear-gradient(to var(--crease-direction), rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), calc(var(--crease-alpha)/4)) 100%);
 }
 
 .collection-card-wrapper .card,
@@ -236,11 +238,15 @@
 }
 
 .break {
-  word-break: break-word;
+  word-break: break-word !important;
 }
 
-.flex {
-  display: flex;
+.d-flex {
+  display: flex !important;
+}
+
+.d-block {
+  display: block !important;
 }
 
 .align-start {
@@ -248,8 +254,8 @@
   justify-content: start;
 }
 
-.disabled,
-[disabled] {
+.disabled:not([disabled=false]),
+[disabled]:not([disabled=false]) {
   filter: grayscale(1);
   pointer-events: none;
   opacity: 0.6;
@@ -271,6 +277,12 @@
 
 ::selection {
   background-color: rgba(var(--color-highlight), 0.5);
+}
+
+.gradient {
+  background: var(--background-gradient);
+  background-color: rgb(var(--color-background));
+  background-attachment: fixed;
 }
 
 div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -945,6 +957,9 @@ header-drawer {
   header-drawer {
     display: none;
   }
+  header-drawer[data-breakpoint=desktop] {
+    display: block;
+  }
 }
 
 .header__nav {
@@ -1040,16 +1055,19 @@ details[open] > .header__icon--menu .icon-hamburger {
   align-self: start;
   position: relative;
   text-decoration: none;
+  z-index: var(--zi-header);
 }
 
 .header__brand-image {
   box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
   display: block;
-  max-width: 100%;
-  max-height: var(--header-height);
   height: auto;
   width: auto;
-  margin-bottom: calc(var(--space) * -1);
+  max-width: 100%;
+  max-height: calc(var(--header-height) + var(--space-sm));
+  height: auto;
+  width: auto;
+  margin-bottom: calc(var(--space-sm) * -1);
   transition: max-height var(--duration-long) ease;
 }
 .header--middle-left .header__brand-image {
@@ -1143,7 +1161,7 @@ details[open] > .header__menu-item .icon-caret {
   transform: rotate(180deg);
 }
 .header__menu-item .icon-caret {
-  right: 0.8rem;
+  right: 0;
 }
 
 .header__active-menu-item {
@@ -1291,18 +1309,18 @@ drawer-menu {
   margin-bottom: 0;
   scroll-behavior: auto;
 }
-
-.utility-bar__grid .announcement-bar-slider {
-  width: 100%;
+.announcement-bar form,
+.announcement-bar .disclosure {
+  font-size: var(--font-size-smaller);
 }
 
-.utility-bar__grid .announcement-bar-slider {
-  width: 100%;
-}
-
-.announcement-bar-slider,
+.announcement-bar-slider, .utility-bar__grid .announcement-bar-slider,
 .announcement-bar-slider .slider {
   width: 100%;
+}
+.announcement-bar-slider.slider-buttons {
+  background: transparent;
+  margin: auto;
 }
 
 .announcement-bar .slider-button--next {
@@ -1360,11 +1378,14 @@ drawer-menu {
 }
 
 .announcement-bar__message {
+  --block-padding: var(--space);
   text-align: center;
-  padding: 1rem 0;
+  padding: var(--block-padding) var(--space);
   margin: 0;
-  letter-spacing: 0.1rem;
   min-height: 3.8rem;
+}
+.section-header ~ .announcement-bar .announcement-bar__message {
+  --block-padding: calc(var(--space-med) + var(--space-xs));
 }
 
 .announcement-bar-slider--fade-in-next .announcement-bar__message,
@@ -1616,6 +1637,7 @@ html.no-js .no-js-hidden {
 .button,
 .shopify-challenge__button,
 .shopify-payment-button__button,
+.shopify-payment-button [role=button],
 .customer button,
 button.shopify-payment-button__button--unbranded,
 .cart__dynamic-checkout-buttons [role=button],
@@ -1660,6 +1682,8 @@ button.shopify-payment-button__button--unbranded,
 .shopify-challenge__button:focus::before,
 .shopify-payment-button__button:hover::before,
 .shopify-payment-button__button:focus::before,
+.shopify-payment-button [role=button]:hover::before,
+.shopify-payment-button [role=button]:focus::before,
 .customer button:hover::before,
 .customer button:focus::before,
 button.shopify-payment-button__button--unbranded:hover::before,
@@ -1674,6 +1698,7 @@ button.shopify-payment-button__button--unbranded:focus::before,
 .button::before,
 .shopify-challenge__button::before,
 .shopify-payment-button__button::before,
+.shopify-payment-button [role=button]::before,
 .customer button::before,
 button.shopify-payment-button__button--unbranded::before,
 .cart__dynamic-checkout-buttons [role=button]::before,
@@ -1695,6 +1720,7 @@ button.shopify-payment-button__button--unbranded::before,
 .button .loading-overlay__spinner,
 .shopify-challenge__button .loading-overlay__spinner,
 .shopify-payment-button__button .loading-overlay__spinner,
+.shopify-payment-button [role=button] .loading-overlay__spinner,
 .customer button .loading-overlay__spinner,
 button.shopify-payment-button__button--unbranded .loading-overlay__spinner,
 .cart__dynamic-checkout-buttons [role=button] .loading-overlay__spinner,
@@ -1708,6 +1734,7 @@ button.shopify-payment-button__button--unbranded .loading-overlay__spinner,
 .button .spinner,
 .shopify-challenge__button .spinner,
 .shopify-payment-button__button .spinner,
+.shopify-payment-button [role=button] .spinner,
 .customer button .spinner,
 button.shopify-payment-button__button--unbranded .spinner,
 .cart__dynamic-checkout-buttons [role=button] .spinner,
@@ -2115,6 +2142,12 @@ summary .icon-account,
 .draw-icon .icon-account {
   --path-length: 33.4;
 }
+button .icon-accordion,
+a .icon-accordion,
+summary .icon-accordion,
+.draw-icon .icon-accordion {
+  --path-length: 60;
+}
 button .icon-arrow,
 a .icon-arrow,
 summary .icon-arrow,
@@ -2131,7 +2164,7 @@ button .icon-checkmark,
 a .icon-checkmark,
 summary .icon-checkmark,
 .draw-icon .icon-checkmark {
-  --path-length: 32;
+  --path-length: 52;
 }
 button .icon-reset,
 a .icon-reset,
@@ -2577,7 +2610,8 @@ details[open] > .share-button__fallback {
   border-radius: 0;
   display: flex;
   align-items: stretch;
-  font-size: var(--h6);
+  font-size: var(--font-size-h6);
+  font-weight: bold;
   line-height: 1;
   font-family: var(--font-heading-family);
   position: absolute;
@@ -2814,6 +2848,22 @@ summary .icon-caret {
 
 svg {
   vector-effect: non-scaling-stroke;
+}
+
+.placeholder,
+.placeholder-svg {
+  background-color: rgb(var(--color-background));
+  background-blend-mode: multiply;
+  background-image: url("texture-paper-white.jpg"), url("bg-grain.svg");
+  background-position: top center, cover;
+  background-repeat: repeat;
+  background-size: 100px auto, cover;
+  position: relative;
+}
+
+.placeholder-svg,
+.placeholder svg {
+  fill: rgba(var(--color-foreground, 1));
 }
 
 .placeholder {
@@ -3870,6 +3920,10 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
   --title-shadow-opacity: 0;
   padding-left: 0;
   padding-right: 0;
+}
+
+.title--with-caption {
+  flex-direction: column;
 }
 
 .title--multiline {

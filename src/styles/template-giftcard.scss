@@ -236,8 +236,8 @@ h6:empty {
   }
 }
 
-.gradient {
-  background: rgb(var(--color-background));
-  background: var(--gradient-background);
-  background-attachment: fixed;
-}
+// .gradient {
+//     background: rgb(var(--color-background));
+//     background: var(--background-gradient, rgb(var(--color-background)));
+//     background-attachment: fixed;
+// }

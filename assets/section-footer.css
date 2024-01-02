@@ -88,7 +88,7 @@
   transition-delay: 100ms;
   z-index: -1;
 }
-.footer-block__details-content .list-menu__item--active {
+.footer-block__details-content .list-menu__item--active:not([disabled=false]) {
   filter: grayscale(1);
   pointer-events: none;
   opacity: 0.6;

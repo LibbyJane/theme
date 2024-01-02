@@ -129,11 +129,28 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__navigation-container {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: auto;
+  scrollbar-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
+  /* Chrome, Edge, and Safari */
   display: grid;
   grid-template-rows: 1fr auto;
   align-content: space-between;
-  overflow-y: auto;
   height: 100%;
+}
+.menu-drawer__navigation-container::-webkit-scrollbar {
+  width: 12px;
+  scrollbar-width: thin;
+}
+.menu-drawer__navigation-container::-webkit-scrollbar-track {
+  background: transparent url("bg-scrollbar.png?v=2") repeat-y !important;
+  background-size: contain;
+}
+.menu-drawer__navigation-container::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--color-foreground), 0.2);
+  border-radius: 8px;
+  border: 2px solid rgba(var(--color-background), 1);
 }
 
 .menu-drawer__inner-submenu {

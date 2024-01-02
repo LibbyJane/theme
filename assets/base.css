@@ -1101,11 +1101,11 @@ details[open] > .share-button__fallback {
 .localization-wrapper .localization-selector + .disclosure__list-wrapper {
   animation: animateMenuOpen var(--duration-default) ease;
 }
-
+/*
 .utility-bar .localization-wrapper .disclosure .localization-form__select,
 .utility-bar .localization-wrapper .disclosure__link {
   font-size: calc(var(--font-heading-scale) * 1.3rem);
-}
+} */
 
 @media screen and (min-width: 990px) {
     /* body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width { */
@@ -1285,13 +1285,13 @@ details[open] > .header__submenu {
   color: rgb(var(--color-badge-foreground));
   word-break: break-word;
 } */
-
+/*
 .gradient {
   background: rgb(var(--color-background));
-  background: var(--gradient-background);
+  background: var(--background-gradient, rgb(var(--color-background)));
   background-attachment: fixed;
 
-}
+} */
 
 .texture {
     background-color: var(--color-background);

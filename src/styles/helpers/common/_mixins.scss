@@ -131,82 +131,11 @@
     }
 }
 
-@mixin overline {
-    padding-top: calc(var(--space) * 2);
-    position: relative;
-
-    &::before {
-        background: $accent;
-        content: '';
-        position: absolute;
-            top: 0;
-
-        height: 0.4rem;
-        width: 5rem;
-        // transform: translateX(var(--h-space));
-
-        @include breakpoint($header-breakpoint) {
-            height: 0.85rem;
-            width: 7.7rem;
-        }
-    }
-}
-
-
-@mixin bg-image {
-    background: {
-        color: lighten($black, 45);
-        position: center;
-        size: cover;
-        repeat: no-repeat;
-    }
-    background-blend-mode: multiply;
-    color: $white;
-    display: flex;
-        flex-direction: column;
-        justify-content: center;
-    min-height: 10rem;
-    position: relative;
-
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        &::before {
-            background: transparentize($black, 0.5);
-            content: '';
-            position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-            z-index: 0;
-        }
-    }
-
-    .content {
-        z-index: 1;
-    }
-}
 
 @mixin disabled {
     filter: grayscale(1);
     opacity: 0.6;
     pointer-events: none;
-}
-
-
-
-@mixin clearfix {
-    &::before,
-    &::after {
-        content: "";
-        display: table;
-        flex-basis: 0;
-        order: 1;
-        width: 100%;
-    }
-
-    &::after {
-        clear: both;
-    }
 }
 
 @mixin sharp-text {
@@ -634,9 +563,11 @@
 }
 
 @mixin disabled {
-    filter: grayscale(1);
-    pointer-events: none;
-    opacity: 0.6;
+    &:not([disabled="false"]) { // shopify-buy-it-now button needs the :not
+        filter: grayscale(1);
+        pointer-events: none;
+        opacity: 0.6;
+    }
 }
 
 @mixin default-texture {

@@ -51,14 +51,13 @@
             </h2>
         {%- endif -%}
 
-        {%- if section.settings.show_collection_description and section.settings.collection.description != empty
-            or section.settings.show_collection_description == false and section.settings.description != blank
+        {%- if section.settings.description != blank or section.settings.show_collection_description and section.settings.collection.description != empty
         -%}
-            <div class="title title--additional texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} text-{{section.settings.description_style}}">
-                {%- if section.settings.show_collection_description and section.settings.collection.description != empty -%}
-                    {{ section.settings.collection.description }}
-                {%- else -%}
-                    {{ section.settings.description -}}
+            <div class="title title--additional d-block texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} text-{{section.settings.description_style}} ">
+                {{ section.settings.description -}}
+
+                {%- if section.settings.show_collection_description and section.settings.collection.description != blank -%}
+                    <p>{{ section.settings.collection.description }}</p>
                 {%- endif %}
             </div>
         {%- endif -%}
@@ -101,7 +100,7 @@
                         style="--animation-order: {{ forloop.index }};"
                         {% endif %}
                     >
-                        {%- assign placeholder_image = 'product-apparel-' | append: forloop.rindex -%}
+                        {%- assign placeholder_image = 'product-' | append: forloop.rindex -%}
                         {% render 'card-product', show_vendor: section.settings.show_vendor, placeholder_image: placeholder_image %}
                     </li>
                 {%- endfor -%}

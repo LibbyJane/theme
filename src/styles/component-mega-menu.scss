@@ -1,0 +1,102 @@
+@import "helpers/common";
+
+.mega-menu {
+    position: static;
+}
+
+.mega-menu__content {
+    --crease-direction: top;
+    @include scrollbars;
+    background-color: rgb(var(--color-background));
+    background-image: var(--crease);
+    background-position: top center;
+    background-size: 100% auto;
+    border: 0;
+    border-radius: 0;
+    // padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+
+    .shopify-section-header-sticky & {
+        max-height: calc(100vh - var(--header-bottom-position-desktop, 20rem) - var(--space-xxl));
+    }
+
+    .js & {
+        opacity: 0;
+        transform: translateY(-1.5rem);
+    }
+
+    .mega-menu[open] & {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.mega-menu__list.mega-menu__list {
+    &,
+    .header__nav & {
+        display: grid;
+            gap: var(--space-med) var(--space-xl);
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+        list-style: none;
+        margin: 0 auto;
+        padding: 0 var(--content-padding-inline);
+    }
+
+    .header--top-center & {
+        display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        column-gap: 0;
+
+        > li {
+            width: 16%;
+            padding-right: var(--space-lg);
+        }
+    }
+}
+
+.mega-menu__link {
+    @include underline-on-hover($underline-inline-offset: var(--content-padding-inline));
+    color: rgba(var(--color-foreground), 0.75);
+    display: block;
+    line-height: calc(1 + 0.3 / var(--font-body-scale));
+    padding: var(--space-sm) var(--content-padding-inline);
+    /* padding-bottom: 0.6rem;
+    padding-top: 0.6rem; */
+    text-decoration: none;
+    transition: text-decoration var(--duration-short) ease;
+    word-wrap: break-word;
+}
+
+.mega-menu__link--level-2 {
+    font-weight: bold;
+}
+
+.mega-menu__link--active{
+    &::after {
+        animation: scaleX100 var(--duration-medium) var(--transition-type) forwards;
+    }
+}
+
+//.mega-menu__link:hover,
+// .mega-menu__link--active {
+//   color: rgb(var(--color-foreground));
+//   text-decoration: underline;
+// }
+//
+
+
+.mega-menu__list--condensed {
+    .mega-menu & {
+        display: block;
+    }
+
+    .mega-menu__link {
+        font-weight: normal;
+    }
+}

@@ -263,6 +263,9 @@ noscript .localization-selector.link {
 .disclosure__link:hover, .disclosure__link:focus {
   color: rgb(var(--color-foreground));
 }
+.announcement-bar .disclosure__link {
+  grid-template-columns: auto max-content;
+}
 
 .disclosure__link--active {
   font-weight: bold;

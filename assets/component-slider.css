@@ -388,7 +388,7 @@ slider-component.slider-component-full-width {
 .slider-button:hover {
   opacity: 1;
 }
-.slider-button:disabled {
+.slider-button:disabled:not([disabled=false]) {
   filter: grayscale(1);
   pointer-events: none;
   opacity: 0.6;

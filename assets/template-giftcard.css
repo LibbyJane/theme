@@ -33,6 +33,7 @@
   --icon-size-xs: 1rem;
   --icon-size-lg: 2rem;
   --icon-size-xl: 3rem;
+  --icon-size-hero: 4rem;
   --opacity-full: 1;
   --opacity-lighter: 0.85;
   --opacity-light: 0.7;
@@ -77,8 +78,9 @@
   rgba(var(--color-shadow), var(--media-shadow-opacity));
   --card-image-offset: var(--product-card-image-offset);
   --crease-alpha: 0.05;
-  --crease: linear-gradient(to bottom, rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), var(--crease-alpha)) 100%);
-  --crease-light: linear-gradient(to bottom, rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), calc(var(--crease-alpha)/4)) 100%);
+  --crease-direction: bottom;
+  --crease: linear-gradient(to var(--crease-direction), rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), var(--crease-alpha)) 100%);
+  --crease-light: linear-gradient(to var(--crease-direction), rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), calc(var(--crease-alpha)/4)) 100%);
 }
 
 .collection-card-wrapper .card,
@@ -236,11 +238,15 @@
 }
 
 .break {
-  word-break: break-word;
+  word-break: break-word !important;
 }
 
-.flex {
-  display: flex;
+.d-flex {
+  display: flex !important;
+}
+
+.d-block {
+  display: block !important;
 }
 
 .align-start {
@@ -248,8 +254,8 @@
   justify-content: start;
 }
 
-.disabled,
-[disabled] {
+.disabled:not([disabled=false]),
+[disabled]:not([disabled=false]) {
   filter: grayscale(1);
   pointer-events: none;
   opacity: 0.6;
@@ -273,6 +279,12 @@
   background-color: rgba(var(--color-highlight), 0.5);
 }
 
+.gradient {
+  background: var(--background-gradient);
+  background-color: rgb(var(--color-background));
+  background-attachment: fixed;
+}
+
 :root {
   --button-border-radius: var(--button-radius-large) var(--button-radius) var(--button-radius-med) var(--button-radius)/var(--button-radius) var(--button-radius-med) var(--button-radius) var(--button-radius-large);
 }
@@ -280,6 +292,7 @@
 .button,
 .shopify-challenge__button,
 .shopify-payment-button__button,
+.shopify-payment-button [role=button],
 .customer button,
 button.shopify-payment-button__button--unbranded,
 .cart__dynamic-checkout-buttons [role=button],
@@ -324,6 +337,8 @@ button.shopify-payment-button__button--unbranded,
 .shopify-challenge__button:focus::before,
 .shopify-payment-button__button:hover::before,
 .shopify-payment-button__button:focus::before,
+.shopify-payment-button [role=button]:hover::before,
+.shopify-payment-button [role=button]:focus::before,
 .customer button:hover::before,
 .customer button:focus::before,
 button.shopify-payment-button__button--unbranded:hover::before,
@@ -338,6 +353,7 @@ button.shopify-payment-button__button--unbranded:focus::before,
 .button::before,
 .shopify-challenge__button::before,
 .shopify-payment-button__button::before,
+.shopify-payment-button [role=button]::before,
 .customer button::before,
 button.shopify-payment-button__button--unbranded::before,
 .cart__dynamic-checkout-buttons [role=button]::before,
@@ -359,6 +375,7 @@ button.shopify-payment-button__button--unbranded::before,
 .button .loading-overlay__spinner,
 .shopify-challenge__button .loading-overlay__spinner,
 .shopify-payment-button__button .loading-overlay__spinner,
+.shopify-payment-button [role=button] .loading-overlay__spinner,
 .customer button .loading-overlay__spinner,
 button.shopify-payment-button__button--unbranded .loading-overlay__spinner,
 .cart__dynamic-checkout-buttons [role=button] .loading-overlay__spinner,
@@ -372,6 +389,7 @@ button.shopify-payment-button__button--unbranded .loading-overlay__spinner,
 .button .spinner,
 .shopify-challenge__button .spinner,
 .shopify-payment-button__button .spinner,
+.shopify-payment-button [role=button] .spinner,
 .customer button .spinner,
 button.shopify-payment-button__button--unbranded .spinner,
 .cart__dynamic-checkout-buttons [role=button] .spinner,
@@ -779,6 +797,12 @@ summary .icon-account,
 .draw-icon .icon-account {
   --path-length: 33.4;
 }
+button .icon-accordion,
+a .icon-accordion,
+summary .icon-accordion,
+.draw-icon .icon-accordion {
+  --path-length: 60;
+}
 button .icon-arrow,
 a .icon-arrow,
 summary .icon-arrow,
@@ -795,7 +819,7 @@ button .icon-checkmark,
 a .icon-checkmark,
 summary .icon-checkmark,
 .draw-icon .icon-checkmark {
-  --path-length: 32;
+  --path-length: 52;
 }
 button .icon-reset,
 a .icon-reset,
@@ -1041,7 +1065,8 @@ summary .icon-funnel-clear,
   border-radius: 0;
   display: flex;
   align-items: stretch;
-  font-size: var(--h6);
+  font-size: var(--font-size-h6);
+  font-weight: bold;
   line-height: 1;
   font-family: var(--font-heading-family);
   position: absolute;
@@ -1810,10 +1835,5 @@ h6:empty {
   .no-print {
     display: none;
   }
-}
-.gradient {
-  background: rgb(var(--color-background));
-  background: var(--gradient-background);
-  background-attachment: fixed;
 }
 /*# sourceMappingURL=template-giftcard.css.map */

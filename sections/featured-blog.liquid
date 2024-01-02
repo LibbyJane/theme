@@ -29,7 +29,29 @@
     <div class="page-width-desktop isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
         {%- unless section.settings.heading == blank -%}
             <div class="title-wrapper align-{{settings.title_alignment}} page-width">
-                <div class="title texture-{{ settings.title_style }}">
+                {%- capture view_all_html -%}
+                    {%- if section.settings.blog != blank
+                        and section.settings.show_view_all
+                        and section.settings.post_limit < section.settings.blog.articles_count
+                    -%}
+                        <a
+                            href="{{ section.settings.blog.url }}"
+                            id="ViewAll-{{ section.id }}"
+                            class="link underlined-link large-up-hide{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                            aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
+                        >
+                            {{- 'sections.featured_blog.view_all' | t -}}
+                        </a>
+                    {%- endif -%}
+                {%- endcapture -%}
+
+                {%- unless section.settings.title == blank -%}
+                    {%- capture id -%}SectionHeading-{{ section.id }}{%- endcapture -%}
+                    {% render 'title', text: section.settings.title, id: id, css_classes_title: section.settings.heading_size, additional_html: view_all_html %}
+                    </div>
+                {%- endunless -%}
+
+                <div class="title title texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }}">
                     <h2
                         id="SectionHeading-{{ section.id }}"
                         class="blog__title inline-richtext inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} margin-bottom-0"

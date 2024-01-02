@@ -374,7 +374,7 @@
   margin: auto 0;
 }
 
-.facet-checkbox--disabled {
+.facet-checkbox--disabled:not([disabled=false]) {
   filter: grayscale(1);
   pointer-events: none;
   opacity: 0.6;
@@ -447,7 +447,7 @@
     font-size: var(--font-size-smaller);
   }
 }
-.active-facets__button.disabled {
+.active-facets__button.disabled:not([disabled=false]) {
   filter: grayscale(1);
   pointer-events: none;
   opacity: 0.6;
@@ -796,7 +796,7 @@
   word-break: break-word;
 }
 
-.mobile-facets__label--disabled {
+.mobile-facets__label--disabled:not([disabled=false]) {
   filter: grayscale(1);
   pointer-events: none;
   opacity: 0.6;

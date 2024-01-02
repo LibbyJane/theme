@@ -45,7 +45,7 @@
                     | image_tag: loading: 'lazy', sizes: sizes, widths: widths
                 }}
                 {%- else -%}
-                    {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {{ 'collection-4' | placeholder_svg_tag: 'placeholder-svg' }}
                 {%- endif -%}
             </div>
         </div>
@@ -73,23 +73,25 @@
                             </h6>
 
                         {%- when 'text' -%}
-                            <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+                            <div class="image-with-text__text rte font-{{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                                 {{ block.settings.text }}
                             </div>
 
                         {%- when 'button' -%}
                             {%- if block.settings.button_label != blank -%}
+                            <p>
                                 <a
-                                {% if block.settings.button_link == blank %}
-                                    role="link" aria-disabled="true"
-                                {% else %}
-                                    href="{{ block.settings.button_link }}"
-                                {% endif %}
-                                class="button button--{{ block.settings.button_style_secondary }}"
-                                {{ block.shopify_attributes }}
-                                >
-                                {{ block.settings.button_label | escape }}
+                                    {% if block.settings.button_link == blank %}
+                                        role="link" aria-disabled="true"
+                                    {% else %}
+                                        href="{{ block.settings.button_link }}"
+                                    {% endif %}
+                                    class="button button--{{ block.settings.button_style_secondary }}"
+                                    {{ block.shopify_attributes }}
+                                    >
+                                    {{ block.settings.button_label | escape }}
                                 </a>
+                            </p>
                         {%- endif -%}
                     {%- endcase -%}
                 {%- endfor -%}
@@ -382,15 +384,15 @@
             "id": "text_style",
             "options": [
                 {
-                "value": "subtitle",
+                "value": "body",
                 "label": "t:sections.image-with-text.blocks.caption.settings.text_style.options__1.label"
                 },
                 {
-                "value": "caption-with-letter-spacing",
+                "value": "subtitle",
                 "label": "t:sections.image-with-text.blocks.caption.settings.text_style.options__2.label"
                 }
             ],
-            "default": "caption-with-letter-spacing",
+            "default": "subtitle",
             "label": "t:sections.image-with-text.blocks.caption.settings.text_style.label"
             },
             {
