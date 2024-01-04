@@ -3,9 +3,11 @@
         align-items: center;
         justify-content: center;
         align-self: start;
+    min-height: 100%;
     position: relative;
     text-decoration: none;
     z-index: var(--zi-header);
+    outline: 2px dashed yellow;
 }
 
 .header__brand-image {
