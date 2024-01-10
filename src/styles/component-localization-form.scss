@@ -4,23 +4,23 @@
     display: flex;
     flex-direction: column;
     flex: auto 1 0;
-    padding: 1rem;
+    padding: var(--space);
     margin: 0 auto;
 
     @media screen and (min-width: 750px) {
-        padding: 1rem 2rem 1rem 0;
+        padding: var(--space) 2rem var(--space) 0;
     }
 
     &:only-child {
         display: inline-flex;
         flex-wrap: wrap;
         flex: initial;
-        padding: 1rem 0;
+        padding: var(--space) 0;
 
         @media screen and (min-width: 750px) {
             justify-content: start;
             width: auto;
-            margin: 0 1rem 0 0;
+            margin: 0 var(--space) 0 0;
         }
 
         noscript & {
@@ -32,11 +32,11 @@
 
         .button,
         .localization-form__select {
-            margin: 1rem 1rem 0.5rem;
+            margin: var(--space) var(--space) 0.5rem;
             flex-grow: 1;
 
             @media screen and (min-width: 750px) {
-                margin: 1rem 0;
+                margin: var(--space) 0;
             }
         }
     }
@@ -48,7 +48,7 @@
     }
 
     .button {
-        padding: 1rem;
+        padding: var(--space);
         word-break: break-all;
 
         @media screen and (min-width: 750px) {
@@ -66,17 +66,15 @@
 }
 
 .localization-form__select {
-    border-radius: var(--inputs-radius-outset);
     position: relative;
-    margin-bottom: 1.5rem;
-    padding-left: 1rem;
+    margin-bottom: var(--space-med);
+    padding-left: var(--space);
     text-align: left;
     min-height: calc(4rem + var(--inputs-border-width) * 2);
     min-width: calc(7rem + var(--inputs-border-width) * 2);
 
     &.disclosure__button {
         padding: calc(2rem + var(--inputs-border-width));
-        background: rgb(var(--color-background));
     }
 
     noscript & {
@@ -88,14 +86,14 @@
     }
 
     .disclosure & {
-        padding-top: 1.5rem;
+        padding-top: var(--space-med);
     }
 
     .icon-caret {
         position: absolute;
         content: '';
         height: 0.6rem;
-        right: calc(var(--inputs-border-width) + 1.5rem);
+        right: calc(var(--inputs-border-width) + var(--space-med));
         top: calc(50% - 0.2rem);
         transition: transform var(--duration-short) var(--transition-type);
     }
@@ -110,13 +108,8 @@
         -moz-appearance: none;
         color: rgb(var(--color-foreground));
         width: 100%;
-        padding-right: 4rem;
-        padding-bottom: 1.5rem;
-
-        noscript & {
-            padding-top: 1.5rem;
-            padding-left: 1.5rem;
-        }
+        padding: var(--space-med);
+            padding-right: 4rem;
     }
 
     option {
@@ -139,7 +132,7 @@
     cursor: pointer;
     display: flex;
     height: 4rem;
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 var(--space-med);
     font-size: 1.3rem;
     background-color: transparent;
 }
@@ -151,7 +144,7 @@
   overflow: hidden;
   position: absolute;
   bottom: 100%;
-  transform: translateY(-1rem);
+  transform: translateY(calc(var(--space)*-1));
   z-index: 2;
   background-color: rgb(var(--color-background));
   border-radius: var(--popup-corner-radius);
@@ -161,10 +154,13 @@
 
 
 .disclosure .localization-form__select {
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    gap: 1rem;
-  padding-top: 1.5rem;
+    // display: grid;
+    // grid-template-columns: repeat(2, max-content);
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--space);
+    padding-top: var(--space-med);
+    align-content: center;
 }
 
 .localization-selector option {
@@ -324,7 +320,7 @@ transform: rotate(180deg);
 .menu-drawer__localization .localization-form__select {
   background-color: initial;
   margin-top: 0;
-  padding: 1rem 3.6rem 1rem 0rem;
+  padding: var(--space) 3.6rem var(--space) 0rem;
 }
 
 .menu-drawer__localization .localization-form {
@@ -336,7 +332,7 @@ transform: rotate(180deg);
 }
 
 .menu-drawer__localization + .list-social {
-  margin-top: 1rem;
+  margin-top: var(--space);
 }
 
 .menu-drawer__localization noscript .localization-form__select {

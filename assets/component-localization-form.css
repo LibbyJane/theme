@@ -54,25 +54,25 @@
   display: flex;
   flex-direction: column;
   flex: auto 1 0;
-  padding: 1rem;
+  padding: var(--space);
   margin: 0 auto;
 }
 @media screen and (min-width: 750px) {
   .localization-form {
-    padding: 1rem 2rem 1rem 0;
+    padding: var(--space) 2rem var(--space) 0;
   }
 }
 .localization-form:only-child {
   display: inline-flex;
   flex-wrap: wrap;
   flex: initial;
-  padding: 1rem 0;
+  padding: var(--space) 0;
 }
 @media screen and (min-width: 750px) {
   .localization-form:only-child {
     justify-content: start;
     width: auto;
-    margin: 0 1rem 0 0;
+    margin: 0 var(--space) 0 0;
   }
 }
 @media screen and (max-width: 989px) {
@@ -82,13 +82,13 @@
 }
 .localization-form:only-child .button,
 .localization-form:only-child .localization-form__select {
-  margin: 1rem 1rem 0.5rem;
+  margin: var(--space) var(--space) 0.5rem;
   flex-grow: 1;
 }
 @media screen and (min-width: 750px) {
   .localization-form:only-child .button,
   .localization-form:only-child .localization-form__select {
-    margin: 1rem 0;
+    margin: var(--space) 0;
   }
 }
 @media screen and (min-width: 750px) {
@@ -97,7 +97,7 @@
   }
 }
 .localization-form .button {
-  padding: 1rem;
+  padding: var(--space);
   word-break: break-all;
 }
 @media screen and (min-width: 750px) {
@@ -115,17 +115,15 @@
 }
 
 .localization-form__select {
-  border-radius: var(--inputs-radius-outset);
   position: relative;
-  margin-bottom: 1.5rem;
-  padding-left: 1rem;
+  margin-bottom: var(--space-med);
+  padding-left: var(--space);
   text-align: left;
   min-height: calc(4rem + var(--inputs-border-width) * 2);
   min-width: calc(7rem + var(--inputs-border-width) * 2);
 }
 .localization-form__select.disclosure__button {
   padding: calc(2rem + var(--inputs-border-width));
-  background: rgb(var(--color-background));
 }
 noscript .localization-form__select {
   padding-left: 0;
@@ -136,13 +134,13 @@ noscript .localization-form__select {
   }
 }
 .disclosure .localization-form__select {
-  padding-top: 1.5rem;
+  padding-top: var(--space-med);
 }
 .localization-form__select .icon-caret {
   position: absolute;
   content: "";
   height: 0.6rem;
-  right: calc(var(--inputs-border-width) + 1.5rem);
+  right: calc(var(--inputs-border-width) + var(--space-med));
   top: calc(50% - 0.2rem);
   transition: transform var(--duration-short) var(--transition-type);
 }
@@ -154,12 +152,8 @@ noscript .localization-form__select {
   -moz-appearance: none;
   color: rgb(var(--color-foreground));
   width: 100%;
+  padding: var(--space-med);
   padding-right: 4rem;
-  padding-bottom: 1.5rem;
-}
-noscript .localization-selector.link {
-  padding-top: 1.5rem;
-  padding-left: 1.5rem;
 }
 .localization-selector option {
   color: #000000;
@@ -178,7 +172,7 @@ noscript .localization-selector.link {
   cursor: pointer;
   display: flex;
   height: 4rem;
-  padding: 0 1.5rem 0 1.5rem;
+  padding: 0 var(--space-med);
   font-size: 1.3rem;
   background-color: transparent;
 }
@@ -190,7 +184,7 @@ noscript .localization-selector.link {
   overflow: hidden;
   position: absolute;
   bottom: 100%;
-  transform: translateY(-1rem);
+  transform: translateY(calc(var(--space) * -1));
   z-index: 2;
   background-color: rgb(var(--color-background));
   border-radius: var(--popup-corner-radius);
@@ -198,10 +192,11 @@ noscript .localization-selector.link {
 }
 
 .disclosure .localization-form__select {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  gap: 1rem;
-  padding-top: 1.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space);
+  padding-top: var(--space-med);
+  align-content: center;
 }
 
 .localization-selector option {
@@ -370,7 +365,7 @@ noscript .localization-selector.link {
 .menu-drawer__localization .localization-form__select {
   background-color: initial;
   margin-top: 0;
-  padding: 1rem 3.6rem 1rem 0rem;
+  padding: var(--space) 3.6rem var(--space) 0rem;
 }
 
 .menu-drawer__localization .localization-form {
@@ -382,7 +377,7 @@ noscript .localization-selector.link {
 }
 
 .menu-drawer__localization + .list-social {
-  margin-top: 1rem;
+  margin-top: var(--space);
 }
 
 .menu-drawer__localization noscript .localization-form__select {

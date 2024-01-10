@@ -49,10 +49,14 @@
 .content-padding-inline {
     padding-left: var(--content-padding-inline);
     padding-right: var(--content-padding-inline);
+    // TODO
+    outline: 5px dashed orange;
 }
 
 .content-padding {
     padding: var(--content-padding);
+    // TODO
+    outline: 5px dotted orange;
 }
 
 // eg for videos, where absolute positioning doesn't play nicely with padding

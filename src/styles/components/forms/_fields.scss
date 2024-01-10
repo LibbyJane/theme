@@ -15,11 +15,12 @@ input[type="search"]::-webkit-search-results-decoration {
 .field {
     // grid-template-rows leaves space for the error message to slot in
 
-    // --border-color: rgba(var(--color-foreground), var(--inputs-border-opacity));
+    --border-color: rgba(var(--color-foreground), var(--inputs-border-opacity));
 
     // border-radius: var(--inputs-border-radius);
     // border-bottom-left-radius: 0;
     border-bottom: var(--border);
+    border-color: var(--border-color);
     display: grid;
         grid-template-areas: 'field-input' 'field-error';
         grid-template-columns: 1fr;

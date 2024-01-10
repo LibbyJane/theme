@@ -58,6 +58,29 @@
                 }
             }
         },
+        "alignment": {
+            "alignment": {
+                "options__1": {
+                    "label": "Left"
+                },
+                "options__2": {
+                    "label": "Center"
+                },
+                "options__3": {
+                    "label": "Right"
+                },
+                "label": "Alignment"
+            },
+            "text_alignment": {
+                "label": "Text alignment"
+            },
+            "image_alignment": {
+                "label": "Image alignment"
+            },
+            "desktop_image_alignment": {
+                "label": "Desktop image alignment"
+            }
+        },
         "titles": {
             "name": "Titles",
             "settings": {

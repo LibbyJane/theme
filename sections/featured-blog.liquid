@@ -26,9 +26,9 @@
 -%}
 
 <div class="blogs color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} {% if section.settings.heading == blank %} no-heading{% endif %}">
-    <div class="page-width-desktop isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
+    <div class="page-width isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
         {%- unless section.settings.heading == blank -%}
-            <div class="title-wrapper align-{{settings.title_alignment}} page-width">
+            <div class="title-wrapper align-{{settings.title_alignment}}">
                 {%- capture view_all_html -%}
                     {%- if section.settings.blog != blank
                         and section.settings.show_view_all
