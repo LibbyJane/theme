@@ -38,21 +38,27 @@
     if target == product and product.price_varies
         assign money_price = 'products.product.price.from_price_html' | t: price: money_price
     endif
+
+    if product.selected_or_first_available_variant.unit_price_measurement == nil
+        assign product_exists = false
+    else
+        assign product_exists = true
+    endif
 -%}
 
 {%- style -%}
     .product {
-       --price-font-scale: {%- if price_font_scale != null and price_font_scale > 0 %} {{ price_font_scale | divided_by: 100.0 }} {% else %} 1.4{% endif -%};
+        --price-font-scale: {%- if price_font_scale != null and price_font_scale > 0 %} {{ price_font_scale | divided_by: 100.0 }} {% else %} 1.4{% endif -%};
     }
 {%- endstyle -%}
 
 <div class="price
-        {%- if price_class %} {{ price_class }}{% endif -%}
-        {%- if available == false %} price--sold-out{% endif -%}
-        {%- if compare_at_price > price and product.quantity_price_breaks_configured? != true %} price--on-sale{% endif -%}
-        {%- if compare_at_price > price and product.quantity_price_breaks_configured? %} volume-pricing--sale-badge{% endif -%}
-        {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
-        {%- if show_badges %} price--show-badge{% endif -%}
+    {%- if price_class %} {{ price_class }}{% endif -%}
+    {%- if available == false %} price--sold-out{% endif -%}
+    {%- if compare_at_price > price and product.quantity_price_breaks_configured? != true %} price--on-sale{% endif -%}
+    {%- if compare_at_price > price and product.quantity_price_breaks_configured? %} volume-pricing--sale-badge{% endif -%}
+    {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
+    {%- if show_badges %} price--show-badge{% endif -%}
     "
 >
     <div class="price__container">
@@ -92,22 +98,24 @@
             {%- endif -%}
         </div>
         <div class="price__sale">
-            {%- unless product.price_varies == false and product.compare_at_price_varies %}
-                <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-                <span>
-                    <s class="price-item price-item--regular">
-                        {% if settings.currency_code_enabled %}
-                        {{ compare_at_price | money_with_currency }}
-                        {% else %}
-                        {{ compare_at_price | money }}
-                        {% endif %}
-                    </s>
+            {% if product_exists %}
+                {%- unless product.price_varies == false and product.compare_at_price_varies %}
+                    <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+                    <span>
+                        <s class="price-item price-item--regular">
+                            {% if settings.currency_code_enabled %}
+                                {{ compare_at_price | money_with_currency }}
+                            {% else %}
+                                {{ compare_at_price | money }}
+                            {% endif %}
+                        </s>
+                    </span>
+                {%- endunless -%}
+                <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
+                <span class="price-item price-item--sale price-item--last price-item--actual {% if use_color_highlight %}highlight{%endif %}">
+                    {{ money_price }}
                 </span>
-            {%- endunless -%}
-            <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-            <span class="price-item price-item--sale price-item--last price-item--actual {% if use_color_highlight %}highlight{%endif %}">
-                {{ money_price }}
-            </span>
+            {%- endif -%}
         </div>
         <small
             class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
@@ -135,25 +143,26 @@
             <span class="badge__inner color-{{ settings.sale_badge_color_scheme }}">
                 {{ 'products.product.on_sale' | t }}
             </span>
-
         </span>
 
-        <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
-            {{ 'products.product.sold_out' | t }}
+        <span class="badge price__badge-sold-out">
+            <span class="badge__inner color-{{ settings.sold_out_badge_color_scheme }}">
+                {{ 'products.product.sold_out' | t }}
+            </span>
         </span>
     {%- endif -%}
 </div>
 
 {%- if product.quantity_price_breaks_configured? -%}
-<div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
-    <span>{{ 'products.product.volume_pricing.note' | t }}</span>
-</div>
+    <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
+        <span>{{ 'products.product.volume_pricing.note' | t }}</span>
+    </div>
 {%- endif -%}
 
-{%- if product -%}
+{%- if product_exists -%}
     {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
     {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
         <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-    {{ form | payment_terms }}
+        {{ form | payment_terms }}
     {%- endform -%}
 {%- endif -%}

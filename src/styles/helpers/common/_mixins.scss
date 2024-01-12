@@ -566,7 +566,7 @@
     &:not([disabled="false"]) { // shopify-buy-it-now button needs the :not
         filter: grayscale(1);
         pointer-events: none;
-        opacity: 0.6;
+        opacity: 0.4;
     }
 }
 

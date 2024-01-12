@@ -377,7 +377,7 @@
 .facet-checkbox--disabled:not([disabled=false]) {
   filter: grayscale(1);
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 .facets__price {
@@ -450,7 +450,7 @@
 .active-facets__button.disabled:not([disabled=false]) {
   filter: grayscale(1);
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 .active-facets__button svg {
   pointer-events: none;
@@ -799,7 +799,7 @@
 .mobile-facets__label--disabled:not([disabled=false]) {
   filter: grayscale(1);
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 .js .mobile-facets__submenu {

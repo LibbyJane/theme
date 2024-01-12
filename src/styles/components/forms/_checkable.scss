@@ -36,14 +36,18 @@
     }
 }
 
+// ~.icon is the standard layout
+// ~label is required by the recipient form(todo: refactor?)
 input[type="checkbox"] {
-    ~.icon .icon-tick-background-circle {
+    ~.icon .icon-tick-background-circle,
+    ~label .icon-tick-background-circle {
         display: none;
     }
 }
 
 input[type="radio"] {
-    ~.icon .icon-tick-background-square {
+    ~.icon .icon-tick-background-square,
+    ~ label .icon-tick-background-square {
         display: none;
     }
 }
@@ -94,6 +98,18 @@ input[type="radio"] {
         margin-right: var(--space-sm);
     }
 }
+
+input[checkbox] {
+    outline: 20px dashed blue;
+}
+input[checkbox]:checked + .checkable__tick {
+    outline: 20px dashed lime;
+    .icon-tick-draw {
+        opacity: 1;
+        animation-name: draw;
+    }
+}
+
 
 .icon-tick-draw {
     opacity: 0;

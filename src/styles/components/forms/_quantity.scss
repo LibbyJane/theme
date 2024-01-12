@@ -99,9 +99,14 @@
         width: calc(6rem / var(--font-heading-scale));
     }
 
-
-    &:hover, &:focus {
+    &:focus {
         background-color: rgba(var(--color-background), 1);
+    }
+
+
+    &:hover {
+        background-color: rgba(var(--color-background), 1);
+
         .quantity__button-text {
             transform: scale(1.2);
         }
@@ -113,16 +118,20 @@
         pointer-events: none;
     }
 
-    &:first-child {
+    &:first-child,
+    &:last-child  {
         --border-width: var(--inputs-border-width);
-        --border-color: rgba(var(--color-foreground), calc(var(--inputs-border-opacity)/4));
+        --border-color: rgba(var(--color-foreground), calc(var(--inputs-border-opacity)/1));
+        --border: var(--border-width) var(--border-style) var(--border-color);
+        transform: scaleY(0.9);
+    }
+
+    &:first-child {
         border-right: var(--border);
         margin-left: calc(var(--inputs-border-width));
     }
 
     &:last-child {
-        --border-width: var(--inputs-border-width);
-        --border-color: rgba(var(--color-foreground), calc(var(--inputs-border-opacity)/4));
         border-left: var(--border);
         margin-right: calc(var(--inputs-border-width));
     }

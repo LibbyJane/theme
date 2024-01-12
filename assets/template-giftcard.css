@@ -205,12 +205,10 @@
 .content-padding-inline {
   padding-left: var(--content-padding-inline);
   padding-right: var(--content-padding-inline);
-  outline: 5px dashed orange;
 }
 
 .content-padding {
   padding: var(--content-padding);
-  outline: 5px dotted orange;
 }
 
 .content-margin-inline {
@@ -260,7 +258,7 @@
 [disabled]:not([disabled=false]) {
   filter: grayscale(1);
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 @media (prefers-reduced-motion) {
@@ -1644,7 +1642,6 @@ a {
   width: 100%;
   max-width: var(--page-width);
   margin: 0 auto;
-  outline: 5px dotted red;
 }
 .page-width.utility-bar__grid {
   padding-left: 3rem;

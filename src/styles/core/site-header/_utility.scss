@@ -16,7 +16,7 @@
     justify-self: end;
     padding: 0;
     position: relative;
-    z-index: 1;
+    z-index: calc(var(--zi-header) + 1); // needs to be above the logo, otherwise site search is obscured
 
     &::before,
     &::after {

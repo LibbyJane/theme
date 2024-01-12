@@ -944,10 +944,7 @@
                         "label": "Body"
                     },
                     "options__2": {
-                        "label": "Subtitle"
-                    },
-                    "options__3": {
-                        "label": "Uppercase"
+                        "label": "Display"
                     }
                 },
                 "collection": {
@@ -978,7 +975,7 @@
                     "label": "Enable carousel on desktop"
                 },
                 "full_width": {
-                    "label": "Make products full width"
+                    "label": "Make products full screen width"
                 },
                 "header": {
                     "content": "Product card"
@@ -1009,6 +1006,9 @@
                     "label": "Enable quick add button",
                     "info": "Optimal with popup or drawer cart type."
                 },
+                "header_layout": {
+                    "content": "Layout"
+                },
                 "header_mobile": {
                     "content": "Mobile Layout"
                 },
@@ -1022,7 +1022,7 @@
                     }
                 },
                 "swipe_on_mobile": {
-                    "label": "Enable swipe on mobile"
+                    "label": "Enable swipe (carousel) on mobile"
                 }
             },
             "presets": {

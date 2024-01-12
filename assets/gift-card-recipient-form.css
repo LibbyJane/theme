@@ -1,0 +1,22 @@
+.recipient-form {
+  /* (2.88[line-height] - 1.6rem) / 2 */
+  display: block;
+  position: relative;
+}
+.recipient-form.is-expanded .recipient-fields {
+  display: block;
+}
+
+.recipient-form-field-label--space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.no-js .recipient-checkbox {
+  display: none;
+}
+
+.js .recipient-fields {
+  display: none;
+}
+/*# sourceMappingURL=gift-card-recipient-form.css.map */
