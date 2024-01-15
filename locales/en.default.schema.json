@@ -234,6 +234,9 @@
                 "danger_color": {
                     "label": "Danger indicator color"
                 },
+                "color_status_background": {
+                    "label": "Status indicator background color"
+                },
                 "color_highlight": {
                     "label": "Highlight color"
                 },

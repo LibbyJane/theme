@@ -57,9 +57,9 @@
 {%- endif -%}
 
 <div class="section__container section__container--featured-product isolate">
-    <div class="section__content content-padding-inline color-{{ section.settings.color_scheme }} {% if section.settings.full_width %}width-full{% else %}width-page{% endif %}  section-{{ section.id }}-padding">
+    <div class="section__content content-padding-inline color-{{ section.settings.color_scheme }} {% if section.settings.background_texture != blank %}texture-{{section.settings.background_texture}}{% endif %} {% if section.settings.full_width %}width-full{% else %}width-page{% endif %} section-{{ section.id }}-padding">
         <div class="page-width">
-            <div class="product product--{{ section.settings.media_size }} product--gallery-{{ section.settings.media_position }} grid grid--1-col  product--{{ section.settings.media_position }} {% if product.media.size > 0 or product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+            <div class="product product--{{ section.settings.media_size }} product--gallery-{{ section.settings.media_position }} grid grid--1-col product--{{ section.settings.media_position }} {% if product.media.size > 0 or product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
                 <div class="grid__item product__media-wrapper">
                     <media-gallery
                     id="MediaGallery-{{ section.id }}"
@@ -139,7 +139,7 @@
                     </media-gallery>
                 </div>
 
-                <div class="product__info-wrapper grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.background_texture != blank %}texture-{{section.settings.background_texture}}{% endif %} ">
+                <div class="product__info-wrapper grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                     <product-info
                     id="ProductInfo-{{ section.id }}"
                     class="product__info-container"
@@ -1452,6 +1452,31 @@
             "id": "color_scheme",
             "label": "t:sections.all.colors.label",
             "default": "accent-1"
+        },
+        {
+            "type": "select",
+            "id": "background_texture",
+            "options": [
+                {
+                    "value": "",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__1.label"
+                },
+                {
+                    "value": "paper",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__2.label"
+                },
+                {
+                    "value": "torn",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__3.label"
+                },
+                {
+                    "value": "lined",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__4.label"
+                }
+            ],
+            "default": "paper",
+            "label": "t:settings_schema.textures.settings.background_texture.label",
+            "info": "t:settings_schema.textures.settings.background_texture.info"
         },
         {
             "type": "checkbox",

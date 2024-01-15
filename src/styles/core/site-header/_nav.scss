@@ -3,16 +3,16 @@
         margin-left: 0;
         margin-right: auto;
     }
+// todo: clean up the different menu type selectors
+    >ul:first-of-type {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
 
     ul {
         list-style: none;
         padding: 0;
         margin: 0;
-
-        &:first-of-type {
-            display: inline-flex;
-            flex-wrap: wrap;
-        }
     }
 
     .list-menu {
@@ -101,7 +101,10 @@ drawer-menu {
     transition: opacity var(--duration-default) ease, transform var(--duration-default) ease;
 
     &.list-menu {
+        display: flex;
+        flex-direction: column;
         padding: var(--space) 0;
+        min-width: 0;
     }
 
 
@@ -109,6 +112,34 @@ drawer-menu {
         background-color: rgba(var(--color-foreground), 0.03);
         padding: var(--space) 0;
         margin: var(--space) 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@keyframes animateMenuOpen {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+details[open]>.header__submenu {
+    animation: animateMenuOpen var(--duration-default) ease;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+@media (prefers-reduced-motion) {
+    details[open]>.header__submenu {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 

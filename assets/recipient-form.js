@@ -13,6 +13,7 @@ if (!customElements.get('recipient-form')) {
                 this.nameInput = this.querySelector(`#Recipient-name-${this.dataset.sectionId}`);
                 this.messageInput = this.querySelector(`#Recipient-message-${this.dataset.sectionId}`);
                 this.sendonInput = this.querySelector(`#Recipient-send-on-${this.dataset.sectionId}`);
+
                 this.offsetProperty = this.querySelector(`#Recipient-timezone-offset-${this.dataset.sectionId}`);
                 if (this.offsetProperty) this.offsetProperty.value = new Date().getTimezoneOffset().toString();
 
@@ -103,25 +104,25 @@ if (!customElements.get('recipient-form')) {
                 if (typeof body === 'object') {
                     this.errorMessage.innerText = this.defaultErrorHeader;
                     return Object.entries(body).forEach(([key, value]) => {
-                        const errorMessageId = `RecipientForm-${key}-error-${this.dataset.sectionId}`;
-                        const fieldSelector = `#Recipient-${key}-${this.dataset.sectionId}`;
+                        const errorInputId = `Recipient-${key}-${this.dataset.sectionId}`;
                         const message = `${value.join(', ')}`;
-                        const errorMessageElement = this.querySelector(`#${errorMessageId}`);
-                        const errorTextElement = errorMessageElement?.querySelector('.js-error-message');
-                        if (!errorTextElement) return;
 
                         if (this.errorMessageList) {
-                            this.errorMessageList.appendChild(this.createErrorListItem(fieldSelector, message));
+                            this.errorMessageList.appendChild(this.createErrorListItem(`#${errorInputId}`, message));
                         }
 
+                        const errorTextElement = this.querySelector(`#${errorInputId}-error`);
+
+                        if (!errorTextElement) return;
                         errorTextElement.innerText = `${message}.`;
-                        errorMessageElement.classList.remove('hidden');
+                        errorTextElement.classList.remove('hidden');
 
                         const inputElement = this[`${key}Input`];
                         if (!inputElement) return;
 
+                        inputElement.closest('.js-field').classList.add('status-error');
                         inputElement.setAttribute('aria-invalid', true);
-                        inputElement.setAttribute('aria-describedby', errorMessageId);
+                        inputElement.setAttribute('aria-describedby', errorInputId);
                     });
                 }
 
@@ -143,10 +144,14 @@ if (!customElements.get('recipient-form')) {
 
                 if (this.errorMessageList) this.errorMessageList.innerHTML = '';
 
-                this.querySelectorAll('.recipient-fields .form__message').forEach((field) => {
-                    field.classList.add('hidden');
+                this.querySelectorAll('.recipient-fields .js-field').forEach((field) => {
+                    field.classList.remove('status-error');
                     const textField = field.querySelector('.js-error-message');
-                    if (textField) textField.innerText = '';
+
+                    if (textField) {
+                        textField.classList.add('hidden');
+                        textField.innerText = '';
+                    }
                 });
 
                 [this.emailInput, this.messageInput, this.nameInput, this.sendonInput].forEach((inputElement) => {

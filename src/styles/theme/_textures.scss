@@ -1,7 +1,6 @@
 .texture-paper,
-.default-content-style,
-.shopify-challenge__container {
-   @include default-texture;
+.default-content-style {
+    @include default-texture;
 }
 
 .texture-paper-craft {
@@ -36,7 +35,10 @@
     linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
     linear-gradient(#eee .1rem, transparent .1rem),
     var(--background-gradient);
-    position: relative;
+    //background-image:
+    // linear-gradient(90deg, transparent $vertical-line-offset, rgba(var(--color-foreground), 0.2) $vertical-line-offset, rgba(var(--color-foreground), 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
+    // linear-gradient(rgba(var(--color-foreground), 0.15) .1rem, transparent .1rem),
+    // var(--background-gradient);
     padding-left: var(--texture-lined-border-size, 30px);
 
     &::before {

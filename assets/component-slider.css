@@ -56,9 +56,15 @@ slider-component {
   display: block;
   margin-bottom: var(--space-med);
 }
-@media screen and (max-width: 749px) {
+slider-component.page-width {
+  padding-inline: var(--content-padding-inline);
+}
+slider-component.slider-component-mobile {
+  padding-inline: 0;
+}
+@media screen and (min-width: 750px) {
   slider-component.slider-component-mobile {
-    --content-padding-inline: 0;
+    padding-inline: var(--content-padding-inline);
   }
 }
 slider-component.slider-component-full-width {

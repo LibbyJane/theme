@@ -10,6 +10,7 @@ input[type="search"]::-webkit-search-results-decoration {
     --border-width: var(--inputs-border-width);
     --border-color: rgba(var(--color-foreground), 0.8);
     --field-left-padding: 3px; // keep the input text roughly aligned with the select text
+    --field-bottom-space: var(--space-lg);
 }
 
 .field {
@@ -26,7 +27,7 @@ input[type="search"]::-webkit-search-results-decoration {
         grid-template-columns: 1fr;
         grid-template-rows: max-content max-content;
         gap: 0 var(--space-sm);
-    margin: 0 0 var(--space-med);
+    margin: 0 0 var(--field-bottom-space);
     padding: 0;
     position: relative;
     width: 100%;
@@ -103,7 +104,7 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 100%;
 
     .field--search & {
-        padding-top: var(--space-med);
+        padding-top: var(--field-bottom-space);
     }
 
     &:is(textarea) {
@@ -132,10 +133,31 @@ input[type="search"]::-webkit-search-results-decoration {
     &:focus{
         ~ .field__label {
             cursor: pointer;
-            transform: translateY(calc(var(--space-med) * -0.6)) translateX(var(--field-left-padding)) scale(0.8);
+            transform: translateY(calc(var(--field-bottom-space) * -0.6)) translateX(var(--field-left-padding)) scale(0.8);
             // transform: translateY(calc(var(--space-lg) * -1.2)) scale(0.8);
         }
     }
+
+    &[type="date"] {
+        cursor: pointer;
+    }
+}
+
+.field__maxchars {
+    display: flex;
+        // justify-content: space-between;
+        justify-content: flex-end;
+    font-size: var(--font-size-small);
+    font-style: italic;
+    padding-left: var(--field-left-padding);
+    text-align: right;
+    margin-top: calc(var(--field-bottom-space) * -1);
+    margin-bottom: var(--field-bottom-space);
+}
+
+::-webkit-calendar-picker-indicator {
+    background: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
 }
 
 .field__button {
@@ -171,6 +193,7 @@ input[type="search"]::-webkit-search-results-decoration {
     grid-area: field-error;
 
     border-top: var(--border);
+    border-color: currentColor;
     display: flex;
         align-items: center;
         justify-content: flex-end;

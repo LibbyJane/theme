@@ -1,3 +1,5 @@
+@import "helpers/common";
+
 .recipient-form {
     /* (2.88[line-height] - 1.6rem) / 2 */
     // --recipient-checkbox-margin-top: 0.64rem;
@@ -17,12 +19,6 @@
 //   .recipient-form-field-label {
 //     margin: 0.6rem 0;
 //   }
-
-.recipient-form-field-label--space-between {
-    display: flex;
-        justify-content: space-between;
-}
-
 //   .recipient-checkbox {
 //     flex-grow: 1;
 //     font-size: 1.6rem;
@@ -69,6 +65,15 @@
     }
 }
 
+.error-message-title {
+    display: flex;
+        justify-content: start;
+        gap: var(--space);
+        align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
 //   .recipient-checkbox > svg {
 //     margin-top: var(--recipient-checkbox-margin-top);
 //     margin-right: 1.2rem;
@@ -102,10 +107,14 @@
 //     display: none;
 //   }
 
-//   .js .recipient-email-label.required,
-//   .no-js .recipient-email-label.optional {
-//     display: inline;
-//   }
+.recipient-email-label {
+    display: none;
+}
+
+.js .recipient-email-label.required,
+.no-js .recipient-email-label.optional {
+    display: inline;
+}
 
 //   .recipient-form ul {
 //     line-height: calc(1 + 0.6 / var(--font-body-scale));

@@ -7,12 +7,14 @@
     - field_name: {String}
     - message: {String}
 
+    - placeholder: {Boolean} Used to render an empty placeholder error div for use by JS
+
     Usage:
     {%- render 'form-field-error', classes='newsletter-form__message', id: 'ContactFooter-error', field_name: form.errors.translated_fields.email, message: form.errors.messages.email -%}
 
 {% endcomment %}
 
-<small class="field__error status-error {%- if classes != blank -%}" {{ classes}} {%- endif -%}" id="{{id}}">
+<small {% if id != blank -%}id="{{ id}}-error {%- endif -%}" class="field__error status-error js-error-message{%- if classes != blank -%}" {{ classes}} {%- endif -%} {%- if placeholder %} hidden {%- endif -%}" id="{%- if id != blank -%}" {{ id}} {%- endif -%}" >
     <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
     {%- render 'icon-error' -%}
     {%- if field_name != blank -%} {{ field_name | capitalize }} {%- endif -%}

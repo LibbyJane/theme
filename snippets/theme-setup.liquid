@@ -45,7 +45,7 @@
         --font-size-smaller: 1.4rem;
         --font-size-small: 1.2rem;
         --font-size-caption: 1.1rem;
-        --letter-spacing: 0.06rem;
+        --letter-spacing: 0.025rem;
 
         --font-size-h1: calc(var(--font-heading-scale) * 3rem);
         --font-size-h2: calc(var(--font-heading-scale) * 2rem);
@@ -121,6 +121,8 @@
         --color-success: {{ settings.color_success.red }},{{ settings.color_success.green }},{{ settings.color_success.blue }};
         --color-warning: {{ settings.color_warning.red }},{{ settings.color_warning.green }},{{ settings.color_warning.blue }};
         --color-danger: {{ settings.color_danger.red }},{{ settings.color_danger.green }},{{ settings.color_danger.blue }};
+        --color-status-background: {{ settings.color_status_background.red }},{{ settings.color_status_background.green }},{{ settings.color_status_background.blue }};
+
         --color-white: rgb(255,255,255);
 
         --collection-card-image-padding: {{ settings.collection_card_padding | divided_by: 10.0 }}rem;

@@ -35,18 +35,18 @@
 
         <div
             id="product-form__recipient-error-message-wrapper"
-            class="product-form__recipient-error-message-wrapper"
+            class="form__message status-error"
             role="alert"
             {% unless form.errors %}
                 hidden
             {% endunless %}
         >
-            <h3 class="form__message" tabindex="-1" autofocus>
+            <h6 class="form__status-heading" role="alert" tabindex="-1" autofocus>
                 {% render 'icon-error' %}
                 <span class="error-message js-error-message">{{ 'templates.contact.form.error_heading' | t }}</span>
-            </h3>
+            </h6>
 
-            <ul class="js-error-message-list">
+            <ul class="form__status-list js-error-message-list">
                 {%- if form.errors -%}
                 {%- for field in form.errors -%}
                     <li>
@@ -69,150 +69,97 @@
         ></p>
 
         <fieldset class="recipient-fields">
-            <div class="recipient-fields__field">
-                <div class="field">
-                    <input
-                        class="field__input"
-                        id="Recipient-email-{{ section.id }}"
-                        type="email"
-                        placeholder="{{ 'recipient.form.email' | t }}"
-                        name="properties[Recipient email]"
-                        value="{{ form.email }}"
-                        {% if form.errors contains 'email' %}
-                        aria-invalid="true"
-                        aria-describedby="RecipientForm-email-error-{{ section.id }}"
-                        {% endif %}
-                    >
-                    <label class="field__label" for="Recipient-email-{{ section.id }}">
-                        <span class="recipient-email-label required">{{ 'recipient.form.email_label' | t }}</span>
-                        <span class="recipient-email-label optional">
-                        {{- 'recipient.form.email_label_optional_for_no_js_behavior' | t -}}
-                        </span>
-                    </label>
-                </div>
+            {% assign label =  'recipient.form.email_label' | t %}
+            {% assign id = 'Recipient-email-' | append: section.id  %}
+            {% assign placeholder = 'recipient.form.email' | t  %}
+            {% capture additional_attributes %}{% if form.errors contains 'email' %}
+                aria-invalid="true"
+                aria-describedby="{{id}}-error"
+            {% endif %}{% endcapture %}
+            {% capture error_message %}{%- if form.errors contains 'email' -%}{{form.errors.messages.email}}{% endif %}{% endcapture %}
+            {% render 'field-with-float-label'
+                type: "email",
+                id: id,
+                name: "properties[Recipient email]",
+                value: form.email,
+                placeholder: placeholder,
+                additional_attributes: additional_attributes,
+                label: label,
+                required: true,
+                error_message: error_message,
+                include_error_placeholder: true
+            %}
 
-                <div
-                    id="RecipientForm-email-error-{{ section.id }}"
-                    class="form__message{% unless form.errors contains 'email' %} hidden{% endunless %}"
-                >
-                    {% render 'icon-error' %}
-                    <span class="error-message js-error-message">
-                        {%- if form.errors contains 'email' -%}
-                        {{ form.errors.messages.email }}.
-                        {%- endif -%}
-                    </span>
-                </div>
-            </div>
 
-            <div class="recipient-fields__field">
-                <div class="field">
-                    <input
-                        class="field__input"
-                        autocomplete="name"
-                        type="text"
-                        id="Recipient-name-{{ section.id }}"
-                        name="properties[Recipient name]"
-                        placeholder="{{ 'recipient.form.name' | t }}"
-                        value="{{ form.name }}"
-                        {% if form.errors contains 'name' %}
-                        aria-invalid="true"
-                        aria-describedby="RecipientForm-name-error-{{ section.id }}"
-                        {% endif %}
-                    >
-                    <label class="field__label" for="Recipient-name-{{ section.id }}">
-                        {{- 'recipient.form.name_label' | t -}}
-                    </label>
-                </div>
+            {% assign label =  'recipient.form.name_label' | t %}
+            {% assign id = 'Recipient-name-' | append: section.id  %}
+            {% assign placeholder = 'recipient.form.name' | t  %}
+            {% capture additional_attributes %}autocomplete="name" {% if form.errors contains 'name' %}
+            aria-invalid="true"
+            aria-describedby="{{id}}-error"{% endif %}{% endcapture %}
+            {% capture error_message %}{%- if form.errors contains 'name' -%}{{form.errors.messages.name}}{% endif %}{% endcapture %}
+            {% render 'field-with-float-label'
+                id: id,
+                name: "properties[Recipient name]",
+                value: form.name,
+                placeholder: placeholder,
+                additional_attributes: additional_attributes,
+                label: label,
+                error_message: error_message,
+                include_error_placeholder: true
+            %}
 
-                <div
-                id="RecipientForm-name-error-{{ section.id }}"
-                class="form__message{% unless form.errors contains 'name' %} hidden{% endunless %}"
-                >
-                    {% render 'icon-error' %}
-                    <span class="error-message js-error-message">
-                        {%- if form.errors contains 'name' -%}
-                        {{ form.errors.messages.name }}.
-                        {%- endif -%}
-                    </span>
-                </div>
-            </div>
 
-            <div class="recipient-fields__field">
+            <div id="RecipientForm-message-{{ section.id }}" class="recipient-fields__field">
                 {%- assign max_chars_message = 200 -%}
                 {%- assign max_chars_message_rendered = 'recipient.form.max_characters' | t: max_chars: max_chars_message -%}
                 {%- assign message_label_rendered = 'recipient.form.message_label' | t -%}
-                <div class="field">
-                    <textarea
-                        rows="10"
-                        id="Recipient-message-{{ section.id }}"
-                        class="text-area field__input"
-                        name="properties[Message]"
-                        maxlength="{{ max_chars_message }}"
-                        placeholder="{{ 'recipient.form.message' | t }}"
-                        aria-label="{{ message_label_rendered }} {{ max_chars_message_rendered }}"
-                        {% if form.errors contains 'message' %}
-                        aria-invalid="true"
-                        aria-describedby="RecipientForm-message-error-{{ section.id }}"
-                        {% endif %}
-                    >
-                        {{ form.message }}
-                    </textarea>
-                    <label class="form__label field__label" for="Recipient-message-{{ section.id }}">
-                        {{ message_label_rendered }}
-                    </label>
-                </div>
 
-                <label class="form__label recipient-form-field-label recipient-form-field-label--space-between">
-                    <span>{{ max_chars_message_rendered }}</span>
-                </label>
+                {% assign value = form.message %}
+                {% assign id = 'Recipient-message-' | append: section.id  %}
+                {% assign placeholder = 'recipient.form.message' | t  %}
 
-                <div
-                    id="RecipientForm-message-error-{{ section.id }}"
-                    class="form__message{% unless form.errors contains 'message' %} hidden{% endunless %}"
-                >
-                    {% render 'icon-error' %}
-                    <span class="error-message js-error-message">
-                        {%- if form.errors contains 'message' -%}
-                        {{ form.errors.messages.message }}.
-                        {%- endif -%}
-                    </span>
-                </div>
+                {% capture additional_attributes %}rows="6" maxlength="{{ max_chars_message }}" aria-label="{{ message_label_rendered }} {{ max_chars_message_rendered }}" {% if form.errors contains 'message' %}
+                aria-invalid="true"
+                aria-describedby="{{id}}-error"{% endif %}{% endcapture %}
+                {% capture error_message %}{%- if form.errors contains 'body' -%}{{form.errors.messages.body}}{% endif %}{% endcapture %}
+
+                {% render 'field-with-float-label'
+                    type: "textarea",
+                    id: id,
+                    name: "properties[Message]",
+                    value: value,
+                    placeholder: placeholder,
+                    additional_attributes: additional_attributes,
+                    label: message_label_rendered,
+                    error_message: error_message,
+                    include_error_placeholder: true
+                %}
+
+                <div class="field__maxchars">{{ max_chars_message_rendered }}</div>
             </div>
 
-            <div class="recipient-fields__field">
-                <div class="field">
-                    <input
-                        class="field__input text-body"
-                        autocomplete="send_on"
-                        type="date"
-                        id="Recipient-send-on-{{ section.id }}"
-                        name="properties[Send on]"
-                        placeholder="{{ 'recipient.form.send_on' | t }}"
-                        pattern="\d{4}-\d{2}-\d{2}"
-                        value="{{ form.send_on }}"
-                        {% if form.errors contains 'send_on' %}
-                        aria-invalid="true"
-                        aria-describedby="RecipientForm-send_on-error-{{ section.id }}"
-                        {% endif %}
-                    >
-                    <label class="form__label field__label" for="Recipient-send-on-{{ section.id }}">
-                        {{ 'recipient.form.send_on_label' | t }}
-                    </label>
-                    </div>
 
-                    <div
-                    id="RecipientForm-send_on-error-{{ section.id }}"
-                    class="form__message{% unless form.errors contains 'send_on' %} hidden{% endunless %}"
-                    >
-                    {% render 'icon-error' %}
-                    <span class="error-message js-error-message">
-                        {%- if form.errors contains 'send_on' -%}
-                        {{ form.errors.messages.send_on }}.
-                        {%- endif -%}
-                    </span>
-                </div>
-            </div>
+            {% assign label =  'recipient.form.send_on_label' | t %}
+            {% assign id = 'Recipient-send-on-' | append: section.id  %}
+            {% assign placeholder = 'recipient.form.send_on' | t  %}
+            {% capture additional_attributes %}onfocus="this.showPicker()" autocomplete="send_on" pattern="\d{4}-\d{2}-\d{2}" {% if form.errors contains 'send_on' %}
+            aria-invalid="true"
+            aria-describedby="{{id}}-error"{% endif %}{% endcapture %}
+            {% capture error_message %}{%- if form.errors contains 'send_on' -%}{{form.errors.messages.send_on}}{% endif %}{% endcapture %}
+            {% render 'field-with-float-label'
+                type: "date",
+                id: id,
+                name: "properties[Send on]",
+                value: form.send_on,
+                placeholder: placeholder,
+                additional_attributes: additional_attributes,
+                label: label,
+                error_message: error_message,
+                include_error_placeholder: true
+            %}
         </fieldset>
+
         <input
             type="hidden"
             name="{{ gift_card_recipient_control_flag }}"

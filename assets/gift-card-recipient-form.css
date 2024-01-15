@@ -1,3 +1,55 @@
+:root {
+  --corner-shadow-alpha: 0.5;
+  --corner-size: 15px;
+  --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
+}
+
+:root {
+  --tape-color: hsl(53, 15%, 80%);
+  --tape-edge-color: hsl(53, 15%, 67%);
+  --tape-height: 4rem;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: var(--path-length);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scaleX100 {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(100%);
+  }
+}
+@keyframes scaleOutX100 {
+  0% {
+    transform: scaleX(100%);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+@keyframes scaleOutX40 {
+  0% {
+    transform: scaleX(100%);
+  }
+  100% {
+    transform: scaleX(40%);
+  }
+}
+@keyframes scaleX100Angled {
+  0% {
+    transform: scaleX(0) rotate(0.5deg);
+  }
+  100% {
+    transform: scaleX(100%) rotate(0.5deg);
+  }
+}
 .recipient-form {
   /* (2.88[line-height] - 1.6rem) / 2 */
   display: block;
@@ -7,16 +59,29 @@
   display: block;
 }
 
-.recipient-form-field-label--space-between {
-  display: flex;
-  justify-content: space-between;
-}
-
 .no-js .recipient-checkbox {
   display: none;
 }
 
 .js .recipient-fields {
   display: none;
+}
+
+.error-message-title {
+  display: flex;
+  justify-content: start;
+  gap: var(--space);
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.recipient-email-label {
+  display: none;
+}
+
+.js .recipient-email-label.required,
+.no-js .recipient-email-label.optional {
+  display: inline;
 }
 /*# sourceMappingURL=gift-card-recipient-form.css.map */

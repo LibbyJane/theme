@@ -55,6 +55,7 @@
   --ease-out-slow: cubic-bezier(0, 0, 0.3, 1);
   --animation-slide-in: slideIn var(--duration-extra-long) var(--ease-out-slow) forwards;
   --animation-fade-in: fadeIn var(--duration-extra-long) var(--ease-out-slow);
+  --list-menu-disclosure-width: 20rem;
 }
 
 :root {
@@ -1115,14 +1116,14 @@ details[open] > .header__icon--menu .icon-hamburger {
     margin-right: auto;
   }
 }
+.header__nav > ul:first-of-type {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
 .header__nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-.header__nav ul:first-of-type {
-  display: inline-flex;
-  flex-wrap: wrap;
 }
 @media (min-width: 750px) {
   .header--top-left .header__nav .list-menu > li:first-of-type .header__menu-item {
@@ -1217,14 +1218,41 @@ drawer-menu {
   transition: opacity var(--duration-default) ease, transform var(--duration-default) ease;
 }
 .header__submenu.list-menu {
+  display: flex;
+  flex-direction: column;
   padding: var(--space) 0;
+  min-width: 0;
 }
 .header__submenu .header__submenu {
   background-color: rgba(var(--color-foreground), 0.03);
   padding: var(--space) 0;
   margin: var(--space) 0;
+  display: flex;
+  flex-direction: column;
 }
 
+@keyframes animateMenuOpen {
+  0% {
+    opacity: 0;
+    transform: translateY(-1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+details[open] > .header__submenu {
+  animation: animateMenuOpen var(--duration-default) ease;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion) {
+  details[open] > .header__submenu {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .header__utility {
   --header-fold-alpha: 0.025;
   --header-icon-alpha: var(--opacity-light);
@@ -1473,6 +1501,32 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   max-width: 100%;
 }
 
+*:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+*:focus-visible,
+.focused,
+.no-js *:focus {
+  outline: 0.2rem dashed currentColor;
+  outline-offset: 0.3rem;
+}
+
+/* Negate the fallback side-effect for browsers that support :focus-visible */
+.no-js *:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+/*
+  Focus ring - none
+*/
+/* Dangerous for a11y - Use with care */
+.focus-none {
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
 .no-js:not(html) {
   display: none !important;
 }
@@ -1494,8 +1548,7 @@ html.no-js .no-js-hidden {
 }
 
 .texture-paper,
-.default-content-style,
-.shopify-challenge__container {
+.default-content-style {
   background-color: rgb(var(--color-background));
   background-blend-mode: multiply;
   background-image: url("texture-paper.jpg?v=3"), var(--background-gradient);
@@ -1529,7 +1582,6 @@ html.no-js .no-js-hidden {
   background-size: 100% 2.4rem, 100% 2.4rem, cover;
   background-blend-mode: multiply;
   background-image: linear-gradient(90deg, transparent 10px, rgba(171, 206, 212, 0.2) 10px, rgba(171, 206, 212, 0.2) 13px, transparent 13px), linear-gradient(#eee 0.1rem, transparent 0.1rem), var(--background-gradient);
-  position: relative;
   padding-left: var(--texture-lined-border-size, 30px);
 }
 .texture-lined::before {
@@ -3084,6 +3136,7 @@ input[type=search]::-webkit-search-results-decoration {
   --border-width: var(--inputs-border-width);
   --border-color: rgba(var(--color-foreground), 0.8);
   --field-left-padding: 3px;
+  --field-bottom-space: var(--space-lg);
 }
 
 .field {
@@ -3095,7 +3148,7 @@ input[type=search]::-webkit-search-results-decoration {
   grid-template-columns: 1fr;
   grid-template-rows: max-content max-content;
   gap: 0 var(--space-sm);
-  margin: 0 0 var(--space-med);
+  margin: 0 0 var(--field-bottom-space);
   padding: 0;
   position: relative;
   width: 100%;
@@ -3191,7 +3244,7 @@ input[type=search]::-webkit-search-results-decoration {
   -ms-grid-column: 1;
 }
 .field--search .field__input {
-  padding-top: var(--space-med);
+  padding-top: var(--field-bottom-space);
 }
 .field__input:is(textarea) {
   overflow-x: hidden;
@@ -3242,11 +3295,30 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .field__input:not(:-moz-placeholder-shown) ~ .field__label {
   cursor: pointer;
-  transform: translateY(calc(var(--space-med) * -0.6)) translateX(var(--field-left-padding)) scale(0.8);
+  transform: translateY(calc(var(--field-bottom-space) * -0.6)) translateX(var(--field-left-padding)) scale(0.8);
 }
 .field__input:not(:placeholder-shown) ~ .field__label, .field__input:focus ~ .field__label {
   cursor: pointer;
-  transform: translateY(calc(var(--space-med) * -0.6)) translateX(var(--field-left-padding)) scale(0.8);
+  transform: translateY(calc(var(--field-bottom-space) * -0.6)) translateX(var(--field-left-padding)) scale(0.8);
+}
+.field__input[type=date] {
+  cursor: pointer;
+}
+
+.field__maxchars {
+  display: flex;
+  justify-content: flex-end;
+  font-size: var(--font-size-small);
+  font-style: italic;
+  padding-left: var(--field-left-padding);
+  text-align: right;
+  margin-top: calc(var(--field-bottom-space) * -1);
+  margin-bottom: var(--field-bottom-space);
+}
+
+::-webkit-calendar-picker-indicator {
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
 }
 
 .field__button {
@@ -3287,6 +3359,7 @@ input[type=search]::-webkit-search-results-decoration {
   --icon-size: var(--icon-size-sm);
   grid-area: field-error;
   border-top: var(--border);
+  border-color: currentColor;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -3299,17 +3372,54 @@ input[type=search]::-webkit-search-results-decoration {
   padding: var(--space-xs) 0;
 }
 
-.status-error {
-  color: rgba(var(--color-danger), 1);
-}
-
-.status-success {
-  color: rgba(var(--color-success), 1);
-}
-
 .form__message {
   margin: var(--space-med) 0;
   padding: var(--space) 0;
+}
+.form__message[class*=status-] {
+  background: rgba(var(--color-status-background), var(--opacity-lighter));
+  padding: var(--space) var(--space) 0;
+}
+.form__message.status-error {
+  color: rgba(var(--color-danger), 1);
+}
+.form__message.status-success {
+  color: rgba(var(--color-success), 1);
+}
+.form__message a {
+  --underline-height: 0.2px;
+  position: relative;
+  z-index: 1;
+}
+.form__message a:hover, .form__message a:focus {
+  --alpha-link: 1;
+  --underline-height: 1px;
+}
+.form__message a:hover::before, .form__message a:focus::before {
+  transform: rotate(-0.25deg) scaleX(1);
+}
+.form__message a:hover::after, .form__message a:focus::after {
+  transform: rotate(0.25deg) scaleX(1);
+}
+.form__message a::before, .form__message a::after {
+  content: "";
+  background-color: rgba(var(--color-link), var(--alpha-link));
+  position: absolute;
+  bottom: calc(var(--underline-height) * -1);
+  left: 0;
+  height: var(--underline-height);
+  width: 100%;
+  transition: transform var(--duration-medium) var(--transition-type);
+  transform: rotate(0.25deg) scaleX(0.95);
+  z-index: -1;
+}
+.form__message a::before {
+  transition-delay: var(--duration-short);
+  transform: rotate(-0.5deg) scaleX(0);
+  transform-origin: bottom left;
+}
+.form__message a::before, .form__message a::after {
+  background-color: currentColor;
 }
 
 .form__status-heading {
@@ -3325,6 +3435,7 @@ input[type=search]::-webkit-search-results-decoration {
   letter-spacing: var(--letter-spacing);
   line-height: calc(1 + 0.4 / max(1, var(--font-heading-scale)));
   font-size: var(--font-size-smaller);
+  margin-bottom: var(--space-sm);
 }
 
 .form__status {
@@ -3335,10 +3446,9 @@ input[type=search]::-webkit-search-results-decoration {
 .form__status-list {
   font-size: var(--font-size-smaller);
   list-style: disc;
-  margin-bottom: var(--space);
-  padding: 0 0 0 2.25rem;
+  padding: 0 0 var(--space) 2.25rem;
 }
-.form__status-list a {
+.form__status-list.form__status-list a {
   color: currentColor;
 }
 
@@ -3937,6 +4047,12 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 }
 
 .shopify-challenge__container {
+  background-color: rgb(var(--color-background));
+  background-blend-mode: multiply;
+  background-image: url("texture-paper.jpg?v=3"), var(--background-gradient);
+  background-position: top center, center;
+  background-repeat: repeat;
+  background-size: 200px auto, cover;
   margin: var(--page-margin);
   padding: var(--content-padding);
   position: relative;
