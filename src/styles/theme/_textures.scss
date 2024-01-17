@@ -39,7 +39,8 @@
     // linear-gradient(90deg, transparent $vertical-line-offset, rgba(var(--color-foreground), 0.2) $vertical-line-offset, rgba(var(--color-foreground), 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
     // linear-gradient(rgba(var(--color-foreground), 0.15) .1rem, transparent .1rem),
     // var(--background-gradient);
-    padding-left: var(--texture-lined-border-size, 30px);
+    padding-left: var(--texture-lined-border-size, 30px) !important;
+    position: relative;
 
     &::before {
         background: rgb(var(--color-background));
@@ -61,6 +62,7 @@
             // // 30px /           /* width */
             // // 1px              /* outset */
             // round;
+            outline: 100px solid red;
     }
 }
 

@@ -418,7 +418,7 @@ details>* {
     word-break: break-word;
 }
 
-
+/*
 
 .icon-arrow {
     width: 1.5rem;
@@ -437,7 +437,7 @@ h3 .icon-arrow,
 
 .animate-arrow:hover .icon-arrow path {
     transform: translateX(-0.05rem);
-}
+} */
 
 /* component-title
 .title,

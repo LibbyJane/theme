@@ -76,6 +76,18 @@
     .card--standard & {
         padding-bottom: var(--padding);
     }
+
+    .grid--2-col-tablet-down & {
+        @media screen and (max-width: 749px) {
+            // smaller font size, spacing when using two column layout on mobile
+            font-size: var(--font-size-h4);
+            gap: var(--space-sm);
+        }
+    }
+
+    .icon {
+        flex: 0 0 auto;
+    }
 }
 
 .card {

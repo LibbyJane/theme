@@ -56,6 +56,15 @@
   align-items: center;
   gap: var(--space);
 }
+.align-content-right .button-bar {
+  justify-content: flex-end;
+}
+.align-content-left .button-bar {
+  justify-content: flex-start;
+}
+.align-content-center .button-bar {
+  justify-content: center;
+}
 
 .button-bar--fluid-buttons button,
 .button-bar--fluid-buttons .button,

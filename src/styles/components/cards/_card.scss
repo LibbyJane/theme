@@ -37,18 +37,21 @@
         &:hover,
         &:focus {
             @media (prefers-reduced-motion: no-preference) {
-                transform: rotate(0) translateY(-3px) translateX(0);
+                &,
+                &:nth-child {
+                    transform: rotate(0) translateY(-3px) translateX(0);
 
-                .card__media-hover-image {
-                    opacity: 1;
-                    transform: scale(1);
+                    .card__media-hover-image {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+
+                    .shape--blob {
+                        clip-path: polygon(var(--shape--blob-5));
+                    }
                 }
 
-                .shape--blob {
-                    clip-path: polygon(var(--shape--blob-5));
-                }
             }
-
         }
     }
 

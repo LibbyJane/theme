@@ -3089,7 +3089,7 @@
                                 "label": "Body"
                             },
                             "options__2": {
-                                "label": "Subtitle"
+                                "label": "Heading"
                             }
                         },
                         "caption_size": {

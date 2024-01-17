@@ -33,14 +33,11 @@
 -%}
 <!-- {% if card_collection.featured_image == nil and card_style == 'card' %} ratio{% endif %} -->
 <div class="card-wrapper {% if card_collection != blank %}animate-arrow{% endif %} {% if wrapper_class and wrapper_class != 'none' %}{{ wrapper_class }}{% else %}collection-card-wrapper{% endif %}">
-
-
     <a {% if card_collection == blank %}role="link" aria-disabled="true"{% else %}href="{{ card_collection.url }}"{% endif %}
         class="card card--{{ card_style }}
-        {% if card_style == 'card' %} color-{{ card_color_scheme }} gradient{% endif %}
-        {% if card_collection.featured_image %} card--media{% else %} card--text{% endif %}
-
-        {% if extend_height %} card--extend-height{% endif %}
+        {%- if card_style == 'card' %} color-{{ card_color_scheme }} gradient{% endif -%}
+        {%- if card_collection.featured_image %} card--media{% else %} card--text{% endif %}
+        {%- if extend_height %} card--extend-height{% endif %}
         "
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
