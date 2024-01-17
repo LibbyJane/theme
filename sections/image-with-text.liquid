@@ -79,7 +79,7 @@
 
                         {%- when 'button' -%}
                             {%- if block.settings.button_label != blank -%}
-                            <p>
+                            <p class="image-with-text__button">
                                 <a
                                     {% if block.settings.button_link == blank %}
                                         role="link" aria-disabled="true"
@@ -272,10 +272,6 @@
             {
             "value": "none",
             "label": "t:sections.all.animation.image_behavior.options__1.label"
-            },
-            {
-            "value": "ambient",
-            "label": "t:sections.all.animation.image_behavior.options__2.label"
             },
             {
             "value": "zoom-in",
