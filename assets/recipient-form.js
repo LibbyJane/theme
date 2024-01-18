@@ -146,6 +146,7 @@ if (!customElements.get('recipient-form')) {
 
                 this.querySelectorAll('.recipient-fields .js-field').forEach((field) => {
                     field.classList.remove('status-error');
+
                     const textField = field.querySelector('.js-error-message');
 
                     if (textField) {

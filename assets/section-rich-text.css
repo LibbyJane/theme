@@ -13,6 +13,21 @@
 .align-content-center .button-bar {
   justify-content: center;
 }
+@media screen and (min-width: 750px) {
+  .align-content-desktop-right .button-bar {
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 750px) {
+  .align-content-desktop-left .button-bar {
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 750px) {
+  .align-content-desktop-center .button-bar {
+    justify-content: center;
+  }
+}
 
 .button-bar--fluid-buttons button,
 .button-bar--fluid-buttons .button,

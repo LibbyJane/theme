@@ -1347,7 +1347,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 }
 
 .header__brand-image {
-  box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
+  box-shadow: 0 5px 5px rgba(var(--color-shadow), var(--shadow-opacity));
   display: block;
   height: auto;
   width: auto;
