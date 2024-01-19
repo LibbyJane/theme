@@ -342,6 +342,23 @@
         "buttons": {
             "name": "Buttons"
         },
+        "links": {
+            "name": "Links",
+            "settings": {
+                "hover_style": {
+                    "options__1": {
+                        "label": "Underline"
+                    },
+                    "options__2": {
+                        "label": "Highlight"
+                    },
+                    "options__3": {
+                        "label": "Draw icon"
+                    },
+                    "label": "Link hover style"
+                }
+            }
+        },
         "variant_pills": {
             "name": "Variant pills",
             "paragraph": "Variant pills are one way of displaying your product variants. [Learn more](https://help.shopify.com/en/manual/online-store/themes/theme-structure/page-types#variant-picker-block)"

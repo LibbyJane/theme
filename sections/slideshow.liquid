@@ -166,7 +166,7 @@
                 </div>
                 {%- endif -%}
                 {%- if block.settings.button_label != blank -%}
-                <div class="banner__buttons">
+                <p class="button-bar">
                     <a
                     {% if block.settings.link %}
                         href="{{ block.settings.link }}"
@@ -177,7 +177,7 @@
                     >
                     {{- block.settings.button_label | escape -}}
                     </a>
-                </div>
+                </p>
                 {%- endif -%}
             </div>
             </div>
