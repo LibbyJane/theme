@@ -1890,7 +1890,6 @@ html.no-js .no-js-hidden {
 .texture-torn {
   --texture-lined-border-size: 30px;
   background-color: rgb(var(--color-background));
-  background-repeat: repeat, cover;
   background-blend-mode: multiply;
   background-image: url("texture-paper.jpg?v=2"), var(--background-gradient);
   padding-left: var(--texture-lined-border-size, 30px);
