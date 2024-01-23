@@ -103,26 +103,26 @@
 //   --text-alignment: var(--blog-card-text-alignment);
 // }
 
-// .contains-content-container,
-// .content-container {
-//   --border-radius: var(--text-boxes-radius);
-//   --border-width: var(--text-boxes-border-width);
-//   --border-opacity: var(--text-boxes-border-opacity);
-//   --shadow-horizontal-offset: var(--text-boxes-shadow-horizontal-offset);
-//   --shadow-vertical-offset: var(--text-boxes-shadow-vertical-offset);
-//   --shadow-blur-radius: var(--text-boxes-shadow-blur-radius);
-//   --shadow-opacity: var(--text-boxes-shadow-opacity);
-//   --shadow-visible: var(--text-boxes-shadow-visible);
-// }
+.contains-content-container,
+.content-container {
+    --border-radius: var(--text-boxes-radius);
+    --border-width: var(--text-boxes-border-width);
+    --border-opacity: var(--text-boxes-border-opacity);
+    --shadow-horizontal-offset: var(--text-boxes-shadow-horizontal-offset);
+    --shadow-vertical-offset: var(--text-boxes-shadow-vertical-offset);
+    --shadow-blur-radius: var(--text-boxes-shadow-blur-radius);
+    --shadow-opacity: var(--text-boxes-shadow-opacity);
+    --shadow-visible: var(--text-boxes-shadow-visible);
+}
 
-// .contains-media,
-// .global-media-settings {
-//   --border-radius: var(--media-radius);
-//   --border-width: var(--media-border-width);
-//   --border-opacity: var(--media-border-opacity);
-//   --shadow-horizontal-offset: var(--media-shadow-horizontal-offset);
-//   --shadow-vertical-offset: var(--media-shadow-vertical-offset);
-//   --shadow-blur-radius: var(--media-shadow-blur-radius);
-//   --shadow-opacity: var(--media-shadow-opacity);
-//   --shadow-visible: var(--media-shadow-visible);
-// }
+.contains-media,
+.global-media-settings {
+  --border-radius: var(--media-radius);
+  --border-width: var(--media-border-width);
+  --border-opacity: var(--media-border-opacity);
+  --shadow-horizontal-offset: var(--media-shadow-horizontal-offset);
+  --shadow-vertical-offset: var(--media-shadow-vertical-offset);
+  --shadow-blur-radius: var(--media-shadow-blur-radius);
+  --shadow-opacity: var(--media-shadow-opacity);
+  --shadow-visible: var(--media-shadow-visible);
+}

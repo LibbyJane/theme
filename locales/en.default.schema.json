@@ -509,6 +509,9 @@
                 "page_width": {
                     "label": "Page width"
                 },
+                "full_width": {
+                    "label": "Full screen width"
+                },
                 "spacing_sections": {
                     "label": "Space between template sections"
                 },
@@ -1741,13 +1744,13 @@
                     "label": "Heading size"
                 },
                 "text_style": {
+                    "label": "Text style",
                     "options__1": {
                         "label": "Body"
                     },
                     "options__2": {
-                        "label": "Subtitle"
-                    },
-                    "label": "Text style"
+                        "label": "Heading"
+                    }
                 },
                 "button_style": {
                     "options__1": {
@@ -3377,17 +3380,8 @@
                         "label": "Right"
                     }
                 },
-                "layout": {
-                    "label": "Layout",
-                    "options__1": {
-                        "label": "No container"
-                    },
-                    "options__2": {
-                        "label": "Row container"
-                    },
-                    "options__3": {
-                        "label": "Section container"
-                    }
+                "column_height": {
+                    "label": "At least equal content height on desktop"
                 },
                 "container_color_scheme": {
                     "label": "Container color scheme",

@@ -30,30 +30,15 @@
 }
 
 .image-with-text__media--small {
-  height: 19.4rem;
-}
-@media screen and (min-width: 750px) {
-  .image-with-text__media--small {
-    height: 31.4rem;
-  }
+  height: var(--content-area-height-small);
 }
 
 .image-with-text__media--medium {
-  height: 29.6rem;
-}
-@media screen and (min-width: 750px) {
-  .image-with-text__media--medium {
-    height: 46rem;
-  }
+  height: var(--content-area-height-medium);
 }
 
 .image-with-text__media--large {
-  height: 43.5rem;
-}
-@media screen and (min-width: 750px) {
-  .image-with-text__media--large {
-    height: 69.5rem;
-  }
+  height: var(--content-area-height-large);
 }
 
 .image-with-text__media--adapt {
@@ -131,21 +116,6 @@
 @media screen and (min-width: 750px) {
   .image-with-text__content.texture-lined {
     --translateX: 0;
-  }
-}
-
-/*
-    Multirow
-    note: consider removing from this stylesheet if multirow-specific styles increase signficantly
-*/
-.multirow__inner {
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--grid-vertical-spacing);
-}
-@media screen and (min-width: 750px) {
-  .multirow__inner {
-    row-gap: var(--grid-vertical-spacing);
   }
 }
 

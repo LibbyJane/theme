@@ -1,6 +1,6 @@
 .accordion {
     background-image: var( --crease);
-    margin-inline: var(--full-width-offset-margin);
+    // margin-inline: var(--full-width-offset-margin);
     margin-top: var(--space-lg);
     margin-bottom: 0;
     // border-top: thin solid rgba(255,255,255,0.1);
@@ -22,6 +22,7 @@
 
     summary {
         display: flex;
+        align-items: center;
         position: relative;
         line-height: 1;
         padding-inline: var(--content-padding-inline);
@@ -57,7 +58,16 @@
     }
 
     .icon {
+        margin: 0;
+        padding: 0;
+        position: relative;
         transition: transform var(--duration-default) var(--transition-type);
+    }
+
+    .icon-caret {
+        display: block;
+            height: var(--icon-size-sm);
+        margin-left: auto;
     }
 }
 
