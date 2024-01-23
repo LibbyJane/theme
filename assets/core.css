@@ -616,7 +616,7 @@ button {
   --font-size-base: 1.8rem;
   --font-size-smaller: 1.4rem;
   --font-size-small: 1.2rem;
-  --font-size-caption: 1.1rem;
+  --font-size-caption: 1.15rem;
   --letter-spacing: 0.06rem;
   --font-size-h1: calc(var(--font-heading-scale) * 3rem);
   --font-size-h2: calc(var(--font-heading-scale) * 2rem);
@@ -1895,13 +1895,14 @@ html.no-js .no-js-hidden {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgb(var(--color-background));
+  background-color: rgba(var(--color-background), var(--background-opacity));
   background-blend-mode: multiply;
   background-image: url("texture-paper.jpg?v=2"), var(--background-gradient);
   background-position: top center, center;
   background-repeat: repeat, cover;
   box-shadow: 0 0 9rem rgba(var(--color-shadow), 0.05) inset;
   filter: url(#tornPaper);
+  z-index: -1;
 }
 
 .texture-folded {
