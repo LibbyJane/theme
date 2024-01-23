@@ -1889,7 +1889,7 @@ html.no-js .no-js-hidden {
 
 .texture-torn {
   background-color: rgb(var(--color-background));
-  background-size: auto, cover;
+  background-size: 3em 25%, cover;
   background-blend-mode: multiply;
   background-image: url("texture-paper.jpg?v=2"), var(--background-gradient);
   position: relative;
