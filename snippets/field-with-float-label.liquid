@@ -10,10 +10,11 @@ Accepts:
 - autocomplete: {String} Optional autocomplete value
 - placeholder: {String} Optional placeholder text
 - text: {String}
-- additional_attributes: {string} Optional data attributes
+- additional_attributes: {String} Optional data attributes
 - required: {Boolean} Set the required state of the input and output an * if required
 - options: Select list values
-- error_message: {string} Optional
+- error_message: {String} Optional
+- include_error_placeholder: {Boolean} Optional, used to output a hidden placeholder element if needed for js validation
 
 Usage:
     {% assign value = form.zip %}
@@ -34,7 +35,7 @@ Usage:
 {% assign class = 'field__input' %}
 {% assign type = type | downcase %}
 
-<div class="field {%- if error_message != blank %} status-error {% endif %}">
+<div class="field {%- if error_message != blank %} status-error {% endif %} js-field">
     {%- if type == 'select' -%}
         <select
             class="{{ class }}"
@@ -76,8 +77,11 @@ Usage:
         {{ label }}
         {%- if required -%} <abbr class="field__required" title="Required">*</abbr> {%- endif -%}
     </label>
-    {%- if error_message != blank %}
-        {% capture error_id %}"{{id}}-error"{% endcapture %}
-        {%- render 'form-field-error', id: error_id, field_name: name, message: error_message -%}
-    {% endif %}
+
+{%- if error_message != blank %}
+    {% capture error_id %}"{{id}}-error"{% endcapture %}
+    {%- render 'form-field-error', id: error_id, field_name: name, message: error_message -%}
+{%- elsif include_error_placeholder %}
+    {%- render 'form-field-error', placeholder: true, id: id  -%}
+{% endif %}
 </div>

@@ -1,2 +1,4 @@
-
+.article-card.card--standard.card--text {
+  padding-top: var(--space);
+}
 /*# sourceMappingURL=component-article-card.css.map */

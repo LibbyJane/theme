@@ -27,7 +27,7 @@
     text-align: var(--card-text-alignment);
     text-decoration: none;
     transform-style: preserve-3d;
-    transform: rotate(-0.5deg);
+    transform: rotate(-0.5deg) translateY(-2px);
     transition: all var(--duration-medium) var(--transition-type);
     will-change: transform;
     z-index: 1;
@@ -36,20 +36,39 @@
     .grid__item & {
         &:hover,
         &:focus {
-            transform: rotate(0) translateY(-3px) translateX(0);
+            @media (prefers-reduced-motion: no-preference) {
+                &,
+                &:nth-child {
+                    transform: rotate(0) translateY(-3px) translateX(0);
 
-            .card__media-hover-image {
-                opacity: 1;
-                transform: scale(1);
+                    .card__media-hover-image {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+
+                    .shape--blob {
+                        clip-path: polygon(var(--shape--blob-5));
+                    }
+                }
             }
+        }
+    }
+
+    .shape--blob {
+        @media (prefers-reduced-motion: no-preference) {
+            transition: clip-path var(--duration-long) ease-in-out;
         }
     }
 
     &.ratio,
     .ratio {
         flex-direction: row;
-        flex-wrap: wrap;
-        height: auto;
+            flex-wrap: wrap;
+            height: auto;
+
+        .slider & {
+            height: 100%;
+        }
 
         .article-card & {
             flex-direction: column;
@@ -79,4 +98,18 @@
 
 .card--card{
     @include card-container;
+}
+
+.card--extend-height {
+    height: 100%;
+
+    &.card--standard.card--text,
+    &.card--media {
+        display: flex;
+            flex-direction: column;
+
+        .card__inner  {
+            flex-grow: 1;
+        }
+    }
 }

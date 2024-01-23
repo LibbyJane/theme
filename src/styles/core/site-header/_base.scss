@@ -110,6 +110,10 @@ header-drawer {
 
     @include breakpoint(large) {
         display: none;
+        &[data-breakpoint="desktop"] {
+            display: block;
+        }
+
     }
 }
 

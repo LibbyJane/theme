@@ -1,0 +1,33 @@
+@import "helpers/common";
+
+
+.statements-bar__list {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-md);
+    list-style: none;
+    margin: 0;
+    padding: var(--content-padding);
+}
+
+.statements-bar__item-container {
+    margin: 0;
+    padding: 0;
+}
+
+.statements-bar__item {
+    @include text-heading;
+    display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    font-size: var(--font-size-h3);
+
+    .icon {
+        height: var(--icon-size-hero);
+        width: var(--icon-size-hero);
+    }
+}

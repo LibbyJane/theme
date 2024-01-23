@@ -23,55 +23,13 @@
         </header>
 
         <section class="customer__page-content default-content-style content-padding">
-
-
-
-
-<h1>TODO: remove test </h1>
-
-            <form method="post" action="/account/login?oseid=vmEbM4iiD79nm6VZC5rxy4A7" id="customer_login" accept-charset="UTF-8" data-login-with-shop-sign-in="true" novalidate="novalidate" data-editor-form-attribute=""><input type="hidden" name="form_type" value="customer_login"><input type="hidden" name="utf8" value="✓"><h2 class="form__message color--danger" tabindex="-1" autofocus="">
-                <span class="visually-hidden">Error </span><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16" height="16" viewBox="-1.5 -1 16 16">
-<path fill="var(--color-danger)" stroke="var(--color-danger)" stroke-width=".7" d="M6.3.2c-2.2 0-7 1.1-7 7.5s3.9 6.9 7.1 7c3.2.1 7.2-.9 7.6-7.2C13.5.6 8.4.2 6.3.2z"></path>
-<path fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M7 2.9c-.3 6.1-.9 7.6-.9 7.6M5.9 12v.6"></path>
-</svg>Please adjust the following:
-            </h2>
-            <div class="errors"><ul><li>Incorrect email or password.</li></ul></div>
-<fieldset>
-            <div class="field">
-                <input class="field__input" type="email" name="customer[email]" id="CustomerEmail" autocomplete="email" autocorrect="off" autocapitalize="off" aria-invalid="true" placeholder="Email">
-                <label class="field__label" for="CustomerEmail">
-                    Email
-                </label>
-            </div></fieldset>
-        <footer class="button-bar button-bar--fluid-buttons">
-            <button class="button button--tertiary">
-                Sign in
-            </button>
-
-            <a href="/account/register" class="underlined-link">
-                Create account
-            </a>
-        </footer><input type="hidden" name="order" value="123456"><input type="hidden" name="oseid" value="vmEbM4iiD79nm6VZC5rxy4A7"></form>
-
-
-
-
-<!-- end todo -->
-
-
-
-
-
-
-
-
             <p>
                 {{ 'customer.recover_password.subtext' | t }}
             </p>
 
             {%- form 'recover_customer_password' -%}
                 {% assign recover_success = form.posted_successfully? %}
-                <fieldset>
+                <fieldset class="margin-top--lg">
                     <div class="field">
                         <input
                             class="field__input"
@@ -125,12 +83,8 @@
         <section class="customer__page-content default-content-style content-padding">
             {%- if recover_success == true -%}
                 <h3 class="form__message" tabindex="-1" autofocus>
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 13 13">
-                    <path d="M6.5 12.35C9.73087 12.35 12.35 9.73086 12.35 6.5C12.35 3.26913 9.73087 0.65 6.5 0.65C3.26913 0.65 0.65 3.26913 0.65 6.5C0.65 9.73086 3.26913 12.35 6.5 12.35Z" fill="#428445" stroke="white" stroke-width="0.7"/>
-                    <path d="M5.53271 8.66357L9.25213 4.68197" stroke="white"/>
-                    <path d="M4.10645 6.7688L6.13766 8.62553" stroke="white">
-                </svg>
-                {{ 'customer.recover_password.success' | t }}
+                    {%- render 'icon-success' -%}
+                    {{ 'customer.recover_password.success' | t }}
                 </h3>
             {%- endif -%}
             {%- form 'customer_login', novalidate: 'novalidate' -%}
@@ -142,7 +96,7 @@
                     </h2>
                     {{ form.errors | default_errors }}
                 {%- endif -%}
-                <fieldset>
+                <fieldset class="margin-top--lg">
                     <div class="field">
                         <input
                             class="field__input"

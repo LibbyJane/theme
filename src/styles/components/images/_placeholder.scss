@@ -1,0 +1,34 @@
+// :root {
+//     --color-placeholder-bg: #faf8f4;
+// }
+
+.placeholder,
+.placeholder-svg {
+    background-color: rgb(var(--color-background));
+    background-blend-mode: multiply;
+    background-image: url('texture-paper-white.jpg'), url('bg-grain.svg');
+    background-position: top center, cover;
+    background-repeat: repeat;
+    background-size: 100px auto, cover;
+    position: relative;
+}
+
+.placeholder-svg,
+.placeholder svg {
+    fill: rgba(var(--color-foreground, 1));
+}
+
+
+// .placeholder-svg {
+//     background-color: var(--color-placeholder-bg);
+
+//     .card--card & {
+//         background-size: 100% 100%;
+//         background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+//         background-image: radial-gradient(49% 81% at 45% 47%, #232A3BFF 0%, #073AFF00 100%),radial-gradient(113% 91% at 17% -2%, #242833 1%, #FF000000 99%),radial-gradient(142% 91% at 83% 7%, #172550FF 1%, #FF000000 99%),radial-gradient(142% 91% at -6% 74%, #040C19FF 1%, #FF000000 99%),radial-gradient(142% 91% at 111% 84%, #0F0D09FF 0%, #030303FF 100%);
+
+//         svg {
+//             filter: invert(1);
+//         }
+//     }
+// }

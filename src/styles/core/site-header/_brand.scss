@@ -3,28 +3,34 @@
         align-items: center;
         justify-content: center;
         align-self: start;
+    min-height: 100%;
     position: relative;
     text-decoration: none;
-}
-
-.header__brand-image {
-    box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
-    rgba(var(--color-shadow), var(--media-shadow-opacity));
-    display: block;
-    max-width: 100%;
-    max-height: var(--header-height);
-    height: auto;
-    width: auto;
-    margin-bottom: calc(var(--space) * -1);
-    transition: max-height var(--duration-long) ease;
+    z-index: var(--zi-header);
 
     .header--middle-left & {
         margin-left: calc(var(--space) * -1);
     }
+}
+
+.header__brand-image {
+    // box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
+    // rgba(var(--color-shadow), var(--media-shadow-opacity));
+    box-shadow: 0 5px 5px rgba(var(--color-shadow), var(--shadow-opacity));
+    display: block;
+        height: auto;
+        width: auto;
+        // max-width: 100%; // causing issues when header resizes in shopify theme editor
+        max-height: calc(var(--header-height) + var(--space-sm));
+    height: auto;
+    width: auto;
+    margin-bottom: calc(var(--space-sm) * -1);
+    transition: max-height var(--duration-long) ease;
 
     [data-sticky-type="reduce-logo-size"] & {
         .scrolled-past-header & {
             max-height: calc(var(--header-height) * 0.66) ;
+            margin-top: -1px;
         }
     }
 }

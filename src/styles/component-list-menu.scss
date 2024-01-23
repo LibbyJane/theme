@@ -3,10 +3,14 @@
 }
 
 .list-menu--disclosure {
-  position: absolute;
-  min-width: 100%;
-  width: 20rem;
-  border: 1px solid rgba(var(--color-foreground), 0.2);
+    position: absolute;
+    min-width: 100%;
+    width: var(--list-menu-disclosure-width);
+    border: 1px solid rgba(var(--color-foreground), 0.2);
+
+    &.header__submenu {
+        min-width: 0;
+    }
 }
 
 .list-menu--disclosure:focus {

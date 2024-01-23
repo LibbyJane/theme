@@ -1,0 +1,24 @@
+.multirow {
+    .button {
+        margin-top: var(--space);
+    }
+
+    .image-with-text__content--desktop-left {
+        &.texture-lined {
+            @media screen and (min-width: 750px) {
+                margin-left: var(--texture-lined-border-size);
+                max-width: none;
+            }
+        }
+    }
+}
+
+.multirow__inner {
+    display: flex;
+        flex-direction: column;
+        row-gap: var(--grid-vertical-spacing);
+
+    @media screen and (min-width: 750px) {
+        row-gap: var(--grid-vertical-spacing);
+    }
+}

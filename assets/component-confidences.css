@@ -1,0 +1,53 @@
+:root {
+  --corner-shadow-alpha: 0.5;
+  --corner-size: 15px;
+  --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
+}
+
+:root {
+  --tape-color: hsl(53, 15%, 80%);
+  --tape-edge-color: hsl(53, 15%, 67%);
+  --tape-height: 4rem;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: var(--path-length);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scaleX100 {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(100%);
+  }
+}
+@keyframes scaleOutX100 {
+  0% {
+    transform: scaleX(100%);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+@keyframes scaleOutX40 {
+  0% {
+    transform: scaleX(100%);
+  }
+  100% {
+    transform: scaleX(40%);
+  }
+}
+@keyframes scaleX100Angled {
+  0% {
+    transform: scaleX(0) rotate(0.5deg);
+  }
+  100% {
+    transform: scaleX(100%) rotate(0.5deg);
+  }
+}
+/*# sourceMappingURL=component-confidences.css.map */

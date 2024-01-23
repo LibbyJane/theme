@@ -199,3 +199,14 @@ slider-component {
         transition: all var(--duration-medium) var(--transition-type);
     }
 }
+
+.image-magnify-full-size {
+    cursor: zoom-out;
+    z-index: 1;
+    margin: 0;
+    border-radius: calc(var(--media-radius) - var(--media-border-width));
+}
+
+.image-magnify-hover {
+    cursor: zoom-in;
+}

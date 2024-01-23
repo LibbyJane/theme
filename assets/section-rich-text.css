@@ -1,4 +1,52 @@
+.button-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space);
+}
+.align-content-right .button-bar {
+  justify-content: flex-end;
+}
+.align-content-left .button-bar {
+  justify-content: flex-start;
+}
+.align-content-center .button-bar {
+  justify-content: center;
+}
+@media screen and (min-width: 750px) {
+  .align-content-desktop-right .button-bar {
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 750px) {
+  .align-content-desktop-left .button-bar {
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 750px) {
+  .align-content-desktop-center .button-bar {
+    justify-content: center;
+  }
+}
+
+.button-bar--fluid-buttons button,
+.button-bar--fluid-buttons .button,
+.button-bar--fluid-buttons a {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
 .section__container--rich-text .section__content {
   display: flex;
+}
+.section__container--rich-text .button-bar {
+  margin-block: var(--space-med);
+}
+.section__container--rich-text .rich-text__caption {
+  font-weight: normal;
+}
+.section__container--rich-text .rich-text__heading:last-child,
+.section__container--rich-text div:last-child {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=section-rich-text.css.map */

@@ -84,12 +84,6 @@
                     </label>
                 </div>
 
-                <h1>TODO: contact form {{form.id}} {{form.errors.messages}}</h1>
-                {% if form.posted_successfully %}
-                    yes
-                    {% else %} no
-                  {% endif %}
-                <!-- todo: check error -->
                 {%- if form.errors contains 'email' -%}
                     {%- render 'form-field-error', id: 'ContactForm-email-error', field_name: form.errors.translated_fields.email, message: form.errors.messages.email -%}
                 {%- endif -%}

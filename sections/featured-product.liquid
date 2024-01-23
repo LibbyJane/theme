@@ -57,9 +57,9 @@
 {%- endif -%}
 
 <div class="section__container section__container--featured-product isolate">
-    <div class="section__content content-padding-inline color-{{ section.settings.color_scheme }} {% if section.settings.full_width %}width-full{% else %}width-page{% endif %}  section-{{ section.id }}-padding">
+    <div class="section__content content-padding-inline color-{{ section.settings.color_scheme }} {% if section.settings.background_texture != blank %}texture-{{section.settings.background_texture}}{% endif %} {% if section.settings.full_width %}width-full{% else %}width-page{% endif %} section-{{ section.id }}-padding">
         <div class="page-width">
-            <div class="product product--{{ section.settings.media_size }} product--gallery-{{ section.settings.media_position }} grid grid--1-col  product--{{ section.settings.media_position }} {% if product.media.size > 0 or product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+            <div class="product product--{{ section.settings.media_size }} product--gallery-{{ section.settings.media_position }} grid grid--1-col product--{{ section.settings.media_position }} {% if product.media.size > 0 or product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
                 <div class="grid__item product__media-wrapper">
                     <media-gallery
                     id="MediaGallery-{{ section.id }}"
@@ -117,7 +117,7 @@
                             class="product-media-container global-media-settings {% if section.settings.constrain_to_viewport %} constrain-height{% endif %}"
                             style="--ratio: 1.0; --preview-ratio: 1.0;"
                             >
-                            {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                            {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
                             </div>
                         </div>
                         {%- endif -%}
@@ -139,7 +139,7 @@
                     </media-gallery>
                 </div>
 
-                <div class="product__info-wrapper grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.background_texture != blank %}texture-{{section.settings.background_texture}}{% endif %} ">
+                <div class="product__info-wrapper grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                     <product-info
                     id="ProductInfo-{{ section.id }}"
                     class="product__info-container"
@@ -147,11 +147,11 @@
                     data-url="{{ product.url }}"
                     >
                     {%- assign product_form_id = 'product-form-' | append: section.id -%}
-
                         {%- for block in section.blocks -%}
                             {%- case block.type -%}
                                 {%- when '@app' -%}
                                     % render block %}
+
                                 {%- when 'text' -%}
                                     <p class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                                         {{ block.shopify_attributes }}
@@ -159,6 +159,7 @@
                                         {{- block.settings.text -}}
                                     </p>
                                 {%- when 'title' -%}
+
                                     <h1 class="product__title {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
                                         {%- if product.title != blank -%}
                                         {{ product.title | escape }}
@@ -166,7 +167,8 @@
                                         {{ 'onboarding.product_title' | t }}
                                         {%- endif -%}
                                     </h1>
-                                {%- when 'price' -%}
+
+                                    {%- when 'price' -%}
                                     <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                                         {%- render 'price',
                                         product: product,
@@ -198,6 +200,7 @@
                                         {%- endform -%}
                                         </div>
                                     {%- endif -%}
+
                                 {%- when 'sku' -%}
                                     <p
                                         class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -208,64 +211,59 @@
                                         <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
                                         {{- product.selected_or_first_available_variant.sku -}}
                                     </p>
+
                                 {%- when 'quantity_selector' -%}
                                     <div
                                         id="Quantity-Form-{{ section.id }}"
                                         class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
                                         {{ block.shopify_attributes }}
                                     >
-                                        {% comment %} TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter {% endcomment %}
-                                        {% # theme-check-disable %}
-                                        {%- assign cart_qty = cart
-                                        | item_count_for_variant: product.selected_or_first_available_variant.id
-                                        -%}
-                                        {% # theme-check-enable %}
+                                        {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
+
                                         <label class="quantity__label form__label" for="Quantity-{{ section.id }}">
-                                        {{ 'products.product.quantity.label' | t }}
-                                        <span class="quantity__rules-cart no-js-hidden{% if cart_qty == 0 %} hidden{% endif %}">
-                                            <span class="loading-overlay hidden">
-                                            <span class="loading-overlay__spinner">
-                                                {% render 'icon-loading' %}
+                                            <!-- {{ 'products.product.quantity.label' | t }} -->
+                                            <span class="quantity__rules-cart no-js-hidden{% if cart_qty == 0 %} hidden{% endif %}">
+                                                <span class="loading-overlay hidden">
+                                                    <span class="loading-overlay__spinner">
+                                                        {% render 'icon-loading' %}
+                                                    </span>
+                                                </span>
+                                                <span>
+                                                    {{- 'products.product.quantity.in_cart_html' | t: quantity: cart_qty -}}
+                                                </span>
                                             </span>
-                                            </span>
-                                            <span
-                                            >(
-                                            {{- 'products.product.quantity.in_cart_html' | t: quantity: cart_qty -}}
-                                            )</span
-                                            >
-                                        </span>
                                         </label>
                                         <div class="price-per-item__container">
-                                        <quantity-input class="quantity">
-                                            <button class="quantity__button no-js-hidden" name="minus" type="button">
-                                            <span class="visually-hidden">
-                                                {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
-                                            </span>
-                                            <span class="quantity__button-text">-</span>
-                                            </button>
-                                            <input
-                                            class="quantity__input"
-                                            type="number"
-                                            name="quantity"
-                                            id="Quantity-{{ section.id }}"
-                                            data-cart-quantity="{{ cart_qty }}"
-                                            data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                                            min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                                            {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
-                                                data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
-                                                max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
-                                            {% endif %}
-                                            step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
-                                            value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                                            form="{{ product_form_id }}"
-                                            >
-                                            <button class="quantity__button no-js-hidden" name="plus" type="button">
-                                            <span class="visually-hidden">
-                                                {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
-                                            </span>
-                                            <span class="quantity__button-text">+</span>
-                                            </button>
-                                        </quantity-input>
+                                            <quantity-input class="quantity">
+                                                <button class="quantity__button no-js-hidden" name="minus" type="button">
+                                                <span class="visually-hidden">
+                                                    {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
+                                                </span>
+                                                <span class="quantity__button-text">-</span>
+                                                </button>
+                                                <input
+                                                class="quantity__input"
+                                                type="number"
+                                                name="quantity"
+                                                id="Quantity-{{ section.id }}"
+                                                data-cart-quantity="{{ cart_qty }}"
+                                                data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                                                min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                                                {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
+                                                    data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                                                    max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                                                {% endif %}
+                                                step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
+                                                value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                                                form="{{ product_form_id }}"
+                                                >
+                                                <button class="quantity__button no-js-hidden" name="plus" type="button">
+                                                <span class="visually-hidden">
+                                                    {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
+                                                </span>
+                                                <span class="quantity__button-text">+</span>
+                                                </button>
+                                            </quantity-input>
                                         {%- liquid
                                             assign volume_pricing_array = product.selected_or_first_available_variant.quantity_price_breaks | sort: 'quantity' | reverse
                                             assign current_qty_for_volume_pricing = cart_qty | plus: product.selected_or_first_available_variant.quantity_rule.min
@@ -444,9 +442,11 @@
                                         </volume-pricing>
                                         {%- endif -%}
                                     </div>
+
                                 {%- when 'share' -%}
                                     {% assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin %}
                                     {% render 'share-button', block: block, share_link: share_url %}
+
                                 {%- when 'variant_picker' -%}
                                     {% render 'product-variant-picker',
                                         product: product,
@@ -454,6 +454,7 @@
                                         product_form_id: product_form_id,
                                         update_url: false
                                 %}
+
                                 {%- when 'buy_buttons' -%}
                                     {%- render 'buy-buttons',
                                         block: block,
@@ -461,53 +462,56 @@
                                         product_form_id: product_form_id,
                                         section_id: section.id
                                     -%}
+
                                 {%- when 'custom_liquid' -%}
                                     {{ block.settings.custom_liquid }}
+
                                 {%- when 'rating' -%}
                                     {%- if product.metafields.reviews.rating.value != blank -%}
                                         {% liquid
-                                        assign rating_decimal = 0
-                                        assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
-                                        if decimal >= 0.3 and decimal <= 0.7
-                                            assign rating_decimal = 0.5
-                                        elsif decimal > 0.7
-                                            assign rating_decimal = 1
-                                        endif
+                                            assign rating_decimal = 0
+                                            assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
+                                            if decimal >= 0.3 and decimal <= 0.7
+                                                assign rating_decimal = 0.5
+                                            elsif decimal > 0.7
+                                                assign rating_decimal = 1
+                                            endif
                                         %}
                                         <div
-                                        class="rating"
-                                        role="img"
-                                        aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}"
+                                            class="rating"
+                                            role="img"
+                                            aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}"
                                         >
-                                        <span
-                                            aria-hidden="true"
-                                            class="rating-star"
-                                            style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
-                                        ></span>
+                                            <span
+                                                aria-hidden="true"
+                                                class="rating-star"
+                                                style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
+                                            ></span>
                                         </div>
                                         <p class="rating-text caption">
-                                        <span aria-hidden="true">
-                                            {{- product.metafields.reviews.rating.value }} /
-                                            {{ product.metafields.reviews.rating.value.scale_max -}}
-                                        </span>
+                                            <span aria-hidden="true">
+                                                {{- product.metafields.reviews.rating.value }} /
+                                                {{ product.metafields.reviews.rating.value.scale_max -}}
+                                            </span>
                                         </p>
                                         <p class="rating-count caption">
-                                        <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
-                                        <span class="visually-hidden">
-                                            {{- product.metafields.reviews.rating_count }}
-                                            {{ 'accessibility.total_reviews' | t -}}
-                                        </span>
+                                            <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
+                                            <span class="visually-hidden">
+                                                {{- product.metafields.reviews.rating_count }}
+                                                {{ 'accessibility.total_reviews' | t -}}
+                                            </span>
                                         </p>
                                     {%- endif -%}
+
                                 {%- when 'icon-with-text' -%}
                                     {% render 'icon-with-text', block: block %}
                             {%- endcase -%}
                         {%- endfor -%}
                     <a
                         {% if product == blank %}
-                        role="link" aria-disabled="true"
+                            role="link" aria-disabled="true"
                         {% else %}
-                        href="{{ product.url }}"
+                            href="{{ product.url }}"
                         {% endif %}
                         class="product__view-details"
                     >
@@ -618,8 +622,8 @@
 </script>
 
 {% if product.media.size > 0 %}
-  <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
 {% endif %}
 
 {% schema %}
@@ -1447,7 +1451,32 @@
             "type": "color_scheme",
             "id": "color_scheme",
             "label": "t:sections.all.colors.label",
-            "default": "background-1"
+            "default": "accent-1"
+        },
+        {
+            "type": "select",
+            "id": "background_texture",
+            "options": [
+                {
+                    "value": "",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__1.label"
+                },
+                {
+                    "value": "paper",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__2.label"
+                },
+                {
+                    "value": "torn",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__3.label"
+                },
+                {
+                    "value": "lined",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__4.label"
+                }
+            ],
+            "default": "paper",
+            "label": "t:settings_schema.textures.settings.background_texture.label",
+            "info": "t:settings_schema.textures.settings.background_texture.info"
         },
         {
             "type": "checkbox",

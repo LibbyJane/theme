@@ -4,35 +4,37 @@
 //   }
 
 .collage--mobile {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    @media screen and (max-width: 749px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    .collage__item--left {
-        &:nth-child(3n - 2) {
-            grid-column: span 2;
-
-            &:nth-last-child(2) {
-                grid-column: span 1;
-            }
-        }
-        &:nth-child(3n) {
-            grid-column-start: 2;
-        }
-    }
-
-    .collage__item--right {
-        &:nth-child(3n - 2) {
-            grid-column-start: 1;
-
-            &:last-child {
+        .collage__item--left {
+            &:nth-child(3n - 2) {
                 grid-column: span 2;
+
+                &:nth-last-child(2) {
+                    grid-column: span 1;
+                }
+            }
+            &:nth-child(3n) {
+                grid-column-start: 2;
             }
         }
-        &:nth-child(3n - 1) {
-            grid-column-start: 2;
-        }
 
-        &:nth-child(3n) {
-            grid-column: 1 / span 2;
+        .collage__item--right {
+            &:nth-child(3n - 2) {
+                grid-column-start: 1;
+
+                &:last-child {
+                    grid-column: span 2;
+                }
+            }
+            &:nth-child(3n - 1) {
+                grid-column-start: 2;
+            }
+
+            &:nth-child(3n) {
+                grid-column: 1 / span 2;
+            }
         }
     }
 }
@@ -45,6 +47,7 @@
     @media screen and (min-width: 750px) {
         grid-auto-flow: column;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+
     }
     // large block is on the left
     .collage__item--left {
@@ -57,6 +60,12 @@
             &:last-child {
                 @media screen and (min-width: 750px) {
                     grid-column: 1 / span 3;
+                }
+            }
+
+            &:only-child {
+                @media screen and (min-width: 750px) {
+                    grid-column: 1 / span 2;
                 }
             }
         }
@@ -91,6 +100,12 @@
             &:last-child {
                 @media screen and (min-width: 750px) {
                     grid-column: 1 / span 3;
+                }
+            }
+
+            &:only-child {
+                @media screen and (min-width: 750px) {
+                    grid-column: 2 / span 2;
                 }
             }
         }

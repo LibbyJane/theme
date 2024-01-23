@@ -1,7 +1,6 @@
 .texture-paper,
-.default-content-style,
-.shopify-challenge__container {
-   @include default-texture;
+.default-content-style {
+    @include default-texture;
 }
 
 .texture-paper-craft {
@@ -36,29 +35,31 @@
     linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
     linear-gradient(#eee .1rem, transparent .1rem),
     var(--background-gradient);
-    position: relative;
+    //background-image:
+    // linear-gradient(90deg, transparent $vertical-line-offset, rgba(var(--color-foreground), 0.2) $vertical-line-offset, rgba(var(--color-foreground), 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
+    // linear-gradient(rgba(var(--color-foreground), 0.15) .1rem, transparent .1rem),
+    // var(--background-gradient);
     padding-left: var(--texture-lined-border-size, 30px);
+    position: relative;
 
     &::before {
         background: rgb(var(--color-background));
         content: '';
         position: absolute;
-            top: 0;
+            top: 0.1px;
             bottom: 0;
             left: calc(var(--texture-lined-border-size) * -1);
         width: var(--texture-lined-border-size, 30px);
-        -webkit-mask-box-image: url('img-paper-hole-border.svg?v=2') 1 round;
+        -webkit-mask-box-image: url('img-paper-hole-border-left.svg') 1 round;
+        mask-border: url('img-paper-hole-border-left.svg') 1 round;
+
             // 1 /          /* slice */
             // // 20px /             /* width */
             // // 1px                /* outset */
             // round;             /* repeat */
+        /* source | slice | width | outset | repeat | mode */
 
-        mask-border:
-            url('img-paper-hole-border.svg?v=2') 1 round;
-            // 1 /        /* slice */
-            // // 30px /           /* width */
-            // // 1px              /* outset */
-            // round;
+       // mask-border: url('img-paper-hole-border-left.svg') 10 / 10px / 4px round
     }
 }
 
@@ -72,14 +73,24 @@
 }
 
 .texture-torn {
-    background-color: rgb(var(--color-background));
-    background-blend-mode: multiply;
-    background-image: url('texture-paper.jpg?v=2'), var(--background-gradient);
-    background-position: top center, center;
-    background-repeat: repeat, cover;
-    box-shadow: 0 0 9rem rgba(var(--color-shadow), 0.05) inset;
+    background: transparent;
+    position: relative;
 
-    filter: url(#tornPaper);
+    &::before {
+        content: '';
+        position: absolute;
+            inset: 0;
+        background-color: rgb(var(--color-background));
+        background-blend-mode: multiply;
+        background-image: url('texture-paper.jpg?v=2'), var(--background-gradient);
+        background-position: top center, center;
+        background-repeat: repeat, cover;
+        box-shadow: 0 0 9rem rgba(var(--color-shadow), 0.05) inset;
+
+        filter: url(#tornPaper);
+
+    }
+
 }
 
 .texture-folded {

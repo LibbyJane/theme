@@ -58,6 +58,29 @@
                 }
             }
         },
+        "alignment": {
+            "alignment": {
+                "options__1": {
+                    "label": "Left"
+                },
+                "options__2": {
+                    "label": "Center"
+                },
+                "options__3": {
+                    "label": "Right"
+                },
+                "label": "Alignment"
+            },
+            "text_alignment": {
+                "label": "Text alignment"
+            },
+            "image_alignment": {
+                "label": "Image alignment"
+            },
+            "desktop_image_alignment": {
+                "label": "Desktop image alignment"
+            }
+        },
         "titles": {
             "name": "Titles",
             "settings": {
@@ -211,6 +234,9 @@
                 "danger_color": {
                     "label": "Danger indicator color"
                 },
+                "color_status_background": {
+                    "label": "Status indicator background color"
+                },
                 "color_highlight": {
                     "label": "Highlight color"
                 },
@@ -315,6 +341,23 @@
         },
         "buttons": {
             "name": "Buttons"
+        },
+        "links": {
+            "name": "Links",
+            "settings": {
+                "hover_style": {
+                    "options__1": {
+                        "label": "Underline"
+                    },
+                    "options__2": {
+                        "label": "Highlight"
+                    },
+                    "options__3": {
+                        "label": "Draw icon"
+                    },
+                    "label": "Link hover style"
+                }
+            }
         },
         "variant_pills": {
             "name": "Variant pills",
@@ -465,6 +508,9 @@
             "settings": {
                 "page_width": {
                     "label": "Page width"
+                },
+                "full_width": {
+                    "label": "Full screen width"
                 },
                 "spacing_sections": {
                     "label": "Space between template sections"
@@ -634,6 +680,51 @@
             },
             "presets": {
                 "name": "Announcement bar"
+            }
+        },
+        "statement-bar": {
+            "name": "Statements bar",
+            "settings": {
+                "auto_rotate": {
+                    "label": "Auto-rotate statements"
+                },
+                "change_slides_speed": {
+                    "label": "Change every"
+                },
+                "header__1": {
+                    "content": "Messages"
+                }
+            },
+            "blocks": {
+                "statement": {
+                    "name": "Statement",
+                    "settings": {
+                        "text": {
+                            "label": "Text"
+                        },
+                        "text_alignment": {
+                            "label": "Text alignment",
+                            "options__1": {
+                                "label": "Left"
+                            },
+                            "options__2": {
+                                "label": "Center"
+                            },
+                            "options__3": {
+                                "label": "Right"
+                            }
+                        },
+                        "link": {
+                            "label": "Link"
+                        },
+                        "icon": {
+                            "label": "Icon"
+                        }
+                    }
+                }
+            },
+            "presets": {
+                "name": "Statements bar"
             }
         },
         "apps": {
@@ -876,10 +967,7 @@
                         "label": "Body"
                     },
                     "options__2": {
-                        "label": "Subtitle"
-                    },
-                    "options__3": {
-                        "label": "Uppercase"
+                        "label": "Display"
                     }
                 },
                 "collection": {
@@ -910,7 +998,7 @@
                     "label": "Enable carousel on desktop"
                 },
                 "full_width": {
-                    "label": "Make products full width"
+                    "label": "Make products full screen width"
                 },
                 "header": {
                     "content": "Product card"
@@ -941,6 +1029,9 @@
                     "label": "Enable quick add button",
                     "info": "Optimal with popup or drawer cart type."
                 },
+                "header_layout": {
+                    "content": "Layout"
+                },
                 "header_mobile": {
                     "content": "Mobile Layout"
                 },
@@ -954,7 +1045,7 @@
                     }
                 },
                 "swipe_on_mobile": {
-                    "label": "Enable swipe on mobile"
+                    "label": "Enable swipe (carousel) on mobile"
                 }
             },
             "presets": {
@@ -1552,7 +1643,7 @@
                                 "label": "Body"
                             },
                             "options__2": {
-                                "label": "Subtitle"
+                                "label": "Heading"
                             }
                         },
                         "caption_size": {
@@ -1653,13 +1744,13 @@
                     "label": "Heading size"
                 },
                 "text_style": {
+                    "label": "Text style",
                     "options__1": {
                         "label": "Body"
                     },
                     "options__2": {
-                        "label": "Subtitle"
-                    },
-                    "label": "Text style"
+                        "label": "Heading"
+                    }
                 },
                 "button_style": {
                     "options__1": {
@@ -2336,6 +2427,15 @@
                             },
                             "options__44": {
                                 "label": "Washing"
+                            },
+                            "options__45": {
+                                "label": "Flag"
+                            },
+                            "options__46": {
+                                "label": "Edit"
+                            },
+                            "options__47": {
+                                "label": "Bag"
                             }
                         }
                     }
@@ -3009,7 +3109,7 @@
                                 "label": "Body"
                             },
                             "options__2": {
-                                "label": "Subtitle"
+                                "label": "Heading"
                             }
                         },
                         "caption_size": {
@@ -3280,17 +3380,8 @@
                         "label": "Right"
                     }
                 },
-                "layout": {
-                    "label": "Layout",
-                    "options__1": {
-                        "label": "No container"
-                    },
-                    "options__2": {
-                        "label": "Row container"
-                    },
-                    "options__3": {
-                        "label": "Section container"
-                    }
+                "column_height": {
+                    "label": "At least equal content height on desktop"
                 },
                 "container_color_scheme": {
                     "label": "Container color scheme",
@@ -3475,6 +3566,15 @@
                             },
                             "options__44": {
                                 "label": "Washing"
+                            },
+                            "options__45": {
+                                "label": "Flag"
+                            },
+                            "options__46": {
+                                "label": "Edit"
+                            },
+                            "options__47": {
+                                "label": "Bag"
                             }
                         }
                     }

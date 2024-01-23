@@ -1,4 +1,5 @@
 .shopify-challenge__container {
+    @include default-texture;
     margin: var(--page-margin);
     padding: var(--content-padding);
     position: relative;
