@@ -73,15 +73,10 @@
 }
 
 .texture-torn {
-    --texture-lined-border-size: 30px;
-
-    $vertical-line-offset: 10px;
-    $vertical-line-offset2: $vertical-line-offset + 3px;
     background-color: rgb(var(--color-background));
-    background-size: cover, cover;
+    background-size: 100%, cover;
     background-blend-mode: multiply;
     background-image: url('texture-paper.jpg?v=2'), var(--background-gradient);
-    padding-left: var(--texture-lined-border-size, 30px);
     position: relative;
     box-shadow: 0 0 9rem rgba(var(--color-shadow), 0.05) inset;
 
