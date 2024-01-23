@@ -78,8 +78,7 @@
     $vertical-line-offset: 10px;
     $vertical-line-offset2: $vertical-line-offset + 3px;
     background-color: rgb(var(--color-background));
-    //background-position: top center, center;
-    //background-repeat: repeat, cover;
+    background-size: cover, cover;
     background-blend-mode: multiply;
     background-image: url('texture-paper.jpg?v=2'), var(--background-gradient);
     padding-left: var(--texture-lined-border-size, 30px);
