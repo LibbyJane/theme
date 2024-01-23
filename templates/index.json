@@ -131,7 +131,7 @@
       ],
       "settings": {
         "product": "the-collection-snowboard-oxygen",
-        "color_scheme": "accent-1",
+        "color_scheme": "inverse",
         "background_texture": "torn",
         "full_width": false,
         "media_size": "large",
