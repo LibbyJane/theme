@@ -132,7 +132,7 @@
       "settings": {
         "product": "the-collection-snowboard-oxygen",
         "color_scheme": "sticky-1",
-        "background_texture": "paper",
+        "background_texture": "torn",
         "full_width": false,
         "media_size": "large",
         "constrain_to_viewport": true,
