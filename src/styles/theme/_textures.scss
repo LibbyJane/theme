@@ -77,10 +77,10 @@
 
     $vertical-line-offset: 10px;
     $vertical-line-offset2: $vertical-line-offset + 3px;
-    background-size: 100% 2.4rem, cover;
-    background-blend-mode: multiply;
-    background-image: url('texture-paper.jpg?v=2'), var(--background-gradient);
     background-color: rgb(var(--color-background));
+    background-size: cover;
+    background-blend-mode: multiply;
+    //background-image: url('texture-paper.jpg?v=2'), var(--background-gradient);
 
     //     background-position: top center, center;
     //background-image:
