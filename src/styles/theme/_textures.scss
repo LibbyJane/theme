@@ -80,7 +80,7 @@
         content: '';
         position: absolute;
             inset: 0;
-        background-color: rgb(var(--color-background));
+        background-color: rgba(var(--color-background),var(--background-opacity));
         background-blend-mode: multiply;
         background-image: url('texture-paper.jpg?v=2'), var(--background-gradient);
         background-position: top center, center;
@@ -88,7 +88,7 @@
         box-shadow: 0 0 9rem rgba(var(--color-shadow), 0.05) inset;
 
         filter: url(#tornPaper);
-
+        z-index: -1;
     }
 
 }

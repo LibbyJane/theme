@@ -3381,7 +3381,7 @@
                     }
                 },
                 "column_height": {
-                    "label": "At least equal content height on desktop"
+                    "label": "At least equal column height on desktop when image is shown"
                 },
                 "container_color_scheme": {
                     "label": "Container color scheme",

@@ -1476,7 +1476,7 @@ button {
   --font-size-base: 1.8rem;
   --font-size-smaller: 1.4rem;
   --font-size-small: 1.2rem;
-  --font-size-caption: 1.1rem;
+  --font-size-caption: 1.15rem;
   --letter-spacing: 0.06rem;
   --font-size-h1: calc(var(--font-heading-scale) * 3rem);
   --font-size-h2: calc(var(--font-heading-scale) * 2rem);
