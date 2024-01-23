@@ -77,13 +77,12 @@
 
     $vertical-line-offset: 10px;
     $vertical-line-offset2: $vertical-line-offset + 3px;
-    background-color: rgb(var(--color-background));
-    background-size: 100% 2.4rem, 100% 2.4rem, cover;
+    background-size: 100% 2.4rem, cover;
     background-blend-mode: multiply;
-    background-image:
-    linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
-    linear-gradient(#eee .1rem, transparent .1rem),
-    var(--background-gradient);
+    background-image: url('texture-paper.jpg?v=2'), var(--background-gradient);
+    background-color: rgb(var(--color-background));
+
+    //     background-position: top center, center;
     //background-image:
     // linear-gradient(90deg, transparent $vertical-line-offset, rgba(var(--color-foreground), 0.2) $vertical-line-offset, rgba(var(--color-foreground), 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
     // linear-gradient(rgba(var(--color-foreground), 0.15) .1rem, transparent .1rem),
