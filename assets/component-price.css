@@ -328,7 +328,7 @@
   display: none;
 }
 
-.price-item {
+.price .price-item {
   display: inline-block;
 }
 
