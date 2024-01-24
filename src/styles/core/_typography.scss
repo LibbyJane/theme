@@ -45,6 +45,7 @@ address,
 .title-wrapper-with-link {
     margin: 0 0 var(--space);
     padding: 0;
+    orphans: 2;
 }
 
 .text-body {

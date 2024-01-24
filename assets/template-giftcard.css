@@ -1431,7 +1431,7 @@ div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: var(--font-size-base);
   font: inherit;
   vertical-align: baseline;
 }
@@ -1517,6 +1517,7 @@ address,
 .title-wrapper-with-link {
   margin: 0 0 var(--space);
   padding: 0;
+  orphans: 2;
 }
 
 .text-body {
