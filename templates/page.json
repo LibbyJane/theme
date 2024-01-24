@@ -112,7 +112,7 @@
         "button_label": "Contact us",
         "button_link": "shopify:\/\/pages\/contact",
         "color_scheme": "",
-        "background_texture": "paper",
+        "background_texture": "lined",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
