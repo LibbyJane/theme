@@ -30,16 +30,6 @@
             "link": "shopify:\/\/pages\/contact"
           }
         },
-        "column_DLibdV": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/modern-business-woman-portrait.jpg",
-            "title": "Maizie Wise",
-            "text": "<h5>Legals<\/h5><p>Maizie takes a-maiz-ing care of all the legal nitty gritty. She's the best in the business.<\/p>",
-            "link_label": "Get in touch",
-            "link": "shopify:\/\/pages\/contact"
-          }
-        },
         "column_HPy3Rw": {
           "type": "column",
           "settings": {
@@ -59,14 +49,35 @@
             "link_label": "Get in touch",
             "link": "shopify:\/\/pages\/contact"
           }
+        },
+        "column_DLibdV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/modern-business-woman-portrait.jpg",
+            "title": "Maizie Wise",
+            "text": "<h5>Legals<\/h5><p>Maizie takes a-maiz-ing care of all the legal nitty gritty. She's the best in the business.<\/p>",
+            "link_label": "Get in touch",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "column_hnKdr6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/man-on-bike.jpg",
+            "title": "Barney Sharpe",
+            "text": "<h5>Tours & Travel<\/h5><p>Barney loves to travel and meet the makers, then turn that knowledge into fascinating tours for the public.<\/p>",
+            "link_label": "Get in touch",
+            "link": "shopify:\/\/pages\/contact"
+          }
         }
       },
       "block_order": [
         "column_XNxwcJ",
         "column_KjbepU",
-        "column_DLibdV",
         "column_HPy3Rw",
-        "column_kPpiYa"
+        "column_kPpiYa",
+        "column_DLibdV",
+        "column_hnKdr6"
       ],
       "settings": {
         "title": "",
