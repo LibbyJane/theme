@@ -69,6 +69,26 @@
             "link_label": "Get in touch",
             "link": "shopify:\/\/pages\/contact"
           }
+        },
+        "column_6dBHMD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/man-on-bike.jpg",
+            "title": "Barney Sharpe",
+            "text": "<h5>Tours & Travel<\/h5><p>Barney loves to travel and meet the makers, then turn that knowledge into fascinating tours for the public.<\/p>",
+            "link_label": "Get in touch",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "column_GTxWxt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/smiling-model-surrounded-by-plants.jpg",
+            "title": "Mari Thompson",
+            "text": "<h5>Brand Ambassador<\/h5><p>Barney loves to travel and meet the makers, then turn that knowledge into fascinating tours for the public.<\/p>",
+            "link_label": "Get in touch",
+            "link": "shopify:\/\/pages\/contact"
+          }
         }
       },
       "block_order": [
@@ -77,14 +97,16 @@
         "column_HPy3Rw",
         "column_kPpiYa",
         "column_DLibdV",
-        "column_hnKdr6"
+        "column_hnKdr6",
+        "column_6dBHMD",
+        "column_GTxWxt"
       ],
       "settings": {
         "title": "",
         "heading_size": "h1",
         "image_width": "half",
         "image_ratio": "circle",
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "column_alignment": "center",
         "column_link_hover_style": "hover-highlight",
         "button_label": "Button label",
