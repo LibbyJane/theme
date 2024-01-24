@@ -1888,13 +1888,21 @@ html.no-js .no-js-hidden {
 }
 
 .texture-torn {
+  background: transparent;
+  position: relative;
+}
+.texture-torn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-color: rgb(var(--color-background));
-  background-size: 3rem auto, cover;
+  background-size: 12rem auto, cover;
   background-blend-mode: multiply;
   background-image: url("texture-paper.jpg?v=2"), var(--background-gradient);
   position: relative;
   box-shadow: 0 0 9rem rgba(var(--color-shadow), 0.05) inset;
   filter: url(#tornPaper);
+  z-index: -1;
 }
 
 .texture-folded {
