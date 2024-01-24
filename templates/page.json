@@ -33,9 +33,9 @@
         "column_DLibdV": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/welcome-to-my-business.jpg",
-            "title": "Miya Crosby",
-            "text": "<p>Founder<\/p><p>Miya fell in love with the industry during her gap year, and has ever looked back.<\/p>",
+            "image": "shopify:\/\/shop_images\/modern-business-woman-portrait.jpg",
+            "title": "Maizie Wise",
+            "text": "<h5>Legals<\/h5><p>Maizie takes a-maiz-ing care of all the legal nitty gritty. She's the best in the business.<\/p>",
             "link_label": "",
             "link": ""
           }
