@@ -26,8 +26,8 @@
             "image": "shopify:\/\/shop_images\/welcome-to-my-business.jpg",
             "title": "Sebastian Perkins",
             "text": "<h5>Buyer<\/h5><p>Sebastian has been building up his global network of contacts since he started travelling at the tender age of 19.<\/p>",
-            "link_label": "",
-            "link": ""
+            "link_label": "Get in touch",
+            "link": "shopify:\/\/pages\/contact"
           }
         },
         "column_DLibdV": {
