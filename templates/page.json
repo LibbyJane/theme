@@ -15,7 +15,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/hard-work-pays-off.jpg",
             "title": "Miya Crosby",
-            "text": "<p>Founder<\/p><p>Miya fell in love with the industry during her gap year, and has ever looked back.<\/p>",
+            "text": "<h5>Founder<\/h5><p>Miya fell in love with the industry during her gap year and has ever looked back.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -104,7 +104,7 @@
         "heading_size": "h1",
         "image_width": "half",
         "image_ratio": "circle",
-        "columns_desktop": 5,
+        "columns_desktop": 4,
         "column_alignment": "center",
         "column_link_hover_style": "hover-highlight",
         "button_label": "Button label",
