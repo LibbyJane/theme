@@ -74,12 +74,12 @@
 
 .texture-torn {
     background-color: rgb(var(--color-background));
-    background-size: 25rem auto, cover;
+    background-size: 3em auto, cover;
     background-blend-mode: multiply;
     background-image: url('texture-paper.jpg?v=2'), var(--background-gradient);
     position: relative;
     box-shadow: 0 0 9rem rgba(var(--color-shadow), 0.05) inset;
-    background-attachment: fixed;
+    // background-attachment: scroll;
     filter: url(#tornPaper);
 
 
