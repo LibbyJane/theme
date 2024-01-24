@@ -79,7 +79,7 @@
     background-image: url('texture-paper.jpg?v=2'), var(--background-gradient);
     position: relative;
     box-shadow: 0 0 9rem rgba(var(--color-shadow), 0.05) inset;
-   // background-attachment: scroll;
+    background-attachment: fixed;
     filter: url(#tornPaper);
 
 
