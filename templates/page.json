@@ -20,6 +20,56 @@
             "link": ""
           }
         },
+        "column_KjbepU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/welcome-to-my-business.jpg",
+            "title": "Miya Crosby",
+            "text": "<p>Founder<\/p><p>Miya fell in love with the industry during her gap year, and has ever looked back.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DLibdV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/welcome-to-my-business.jpg",
+            "title": "Miya Crosby",
+            "text": "<p>Founder<\/p><p>Miya fell in love with the industry during her gap year, and has ever looked back.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HPy3Rw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/welcome-to-my-business.jpg",
+            "title": "Miya Crosby",
+            "text": "<p>Founder<\/p><p>Miya fell in love with the industry during her gap year, and has ever looked back.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_kPpiYa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/welcome-to-my-business.jpg",
+            "title": "Miya Crosby",
+            "text": "<p>Founder<\/p><p>Miya fell in love with the industry during her gap year, and has ever looked back.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8kanDn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/welcome-to-my-business.jpg",
+            "title": "Miya Crosby",
+            "text": "<p>Founder<\/p><p>Miya fell in love with the industry during her gap year, and has ever looked back.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_7QKiqy": {
           "type": "column",
           "settings": {
@@ -41,6 +91,11 @@
       },
       "block_order": [
         "column_XNxwcJ",
+        "column_KjbepU",
+        "column_DLibdV",
+        "column_HPy3Rw",
+        "column_kPpiYa",
+        "column_8kanDn",
         "column_7QKiqy",
         "column_GbMCdF"
       ],
