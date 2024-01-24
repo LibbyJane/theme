@@ -1837,7 +1837,7 @@ html.no-js .no-js-hidden {
   background-image: url("texture-paper.jpg?v=3"), var(--background-gradient);
   background-position: top center, center;
   background-repeat: repeat;
-  background-size: 200px auto, cover;
+  background-size: 12rem auto, cover;
 }
 
 .texture-paper-craft {
@@ -1889,7 +1889,7 @@ html.no-js .no-js-hidden {
 
 .texture-torn {
   background-color: rgb(var(--color-background));
-  background-size: 3em auto, cover;
+  background-size: 3rem auto, cover;
   background-blend-mode: multiply;
   background-image: url("texture-paper.jpg?v=2"), var(--background-gradient);
   position: relative;
@@ -1930,7 +1930,7 @@ html.no-js .no-js-hidden {
   background-image: url("texture-paper.jpg?v=3"), var(--background-gradient);
   background-position: top center, center;
   background-repeat: repeat;
-  background-size: 200px auto, cover;
+  background-size: 12rem auto, cover;
   margin-block: var(--space-lg);
   padding: var(--content-padding);
 }
@@ -1941,7 +1941,7 @@ html.no-js .no-js-hidden {
   background-image: url("texture-paper.jpg?v=3"), var(--background-gradient);
   background-position: top center, center;
   background-repeat: repeat;
-  background-size: 200px auto, cover;
+  background-size: 12rem auto, cover;
   margin-block: var(--space-med);
 }
 
@@ -3841,7 +3841,7 @@ input[type=search]::-webkit-search-results-decoration {
   background-image: url("texture-paper.jpg?v=3"), var(--background-gradient);
   background-position: top center, center;
   background-repeat: repeat;
-  background-size: 200px auto, cover;
+  background-size: 12rem auto, cover;
   box-shadow: 0 0 2px rgba(var(--color-shadow), 1);
   content: "";
   position: absolute;
@@ -4292,7 +4292,7 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
   background-image: url("texture-paper.jpg?v=3"), var(--background-gradient);
   background-position: top center, center;
   background-repeat: repeat;
-  background-size: 200px auto, cover;
+  background-size: 12rem auto, cover;
   margin: var(--page-margin);
   padding: var(--content-padding);
   position: relative;

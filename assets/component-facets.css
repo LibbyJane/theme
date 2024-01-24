@@ -933,7 +933,7 @@
   background-image: url("texture-paper.jpg?v=3"), var(--background-gradient);
   background-position: top center, center;
   background-repeat: repeat;
-  background-size: 200px auto, cover;
+  background-size: 12rem auto, cover;
   display: flex;
   align-items: center;
   gap: var(--space);
