@@ -187,6 +187,7 @@
         "container_color_scheme": "",
         "background_texture": "paper",
         "open_first_collapsible_row": false,
+        "image": "shopify:\/\/shop_images\/vintage-van-parked.jpg",
         "column_height": true,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
