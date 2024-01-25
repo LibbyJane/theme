@@ -101,6 +101,7 @@
         "column_6dBHMD",
         "column_GTxWxt"
       ],
+      "disabled": true,
       "settings": {
         "title": "Our crew",
         "heading_size": "h1",
@@ -118,10 +119,75 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_PqNgKK": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_83LMgG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Orders and delivery",
+            "icon": "stopwatch",
+            "row_content": "<p>We aim to have all orders processed within 2 business days, however during busy times  of year (such as Christmas or during a large promotion) it may take a day longer. <\/p><p>Our packing team takes a break on the weekend, so orders placed on a Friday may not start processing until the next Monday (or Tuesday in case of a bank holiday).<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_JnFVcw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_LJjcPE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_b8Cbm6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_83LMgG",
+        "collapsible_row_JnFVcw",
+        "collapsible_row_LJjcPE",
+        "collapsible_row_b8Cbm6"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Collapsible content",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "full_width": true,
+        "color_scheme": "",
+        "background_transparent": true,
+        "container_color_scheme": "",
+        "background_texture": "paper",
+        "open_first_collapsible_row": false,
+        "column_height": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "multicolumn_JqzpaT"
+    "multicolumn_JqzpaT",
+    "collapsible_content_PqNgKK"
   ]
 }
