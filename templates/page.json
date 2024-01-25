@@ -144,9 +144,9 @@
         "collapsible_row_LJjcPE": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "How much is shipping?",
+            "icon": "price_tag",
+            "row_content": "<p>Shipping on all orders is free!<\/p>",
             "page": ""
           }
         },
