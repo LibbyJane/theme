@@ -158,13 +158,23 @@
             "row_content": "<p>For express checkout, we offer ShopPay, PayPal, ApplePay and GooglePay. For standard checkout we accept Visa, MasterCard, American Express, UnionPay, PayPal, and our digital gift cards. <\/p>",
             "page": ""
           }
+        },
+        "collapsible_row_iKwdDT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is payment secure?",
+            "icon": "lock",
+            "row_content": "<p>We take your security very seriously. All transactions processed on our site are secure and encrypted.<\/p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "collapsible_row_83LMgG",
         "collapsible_row_JnFVcw",
         "collapsible_row_LJjcPE",
-        "collapsible_row_b8Cbm6"
+        "collapsible_row_b8Cbm6",
+        "collapsible_row_iKwdDT"
       ],
       "settings": {
         "caption": "Orders & Delivery",
