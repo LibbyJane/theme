@@ -127,7 +127,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "When will my order be processed?",
-            "icon": "truck",
+            "icon": "stopwatch",
             "row_content": "<p>We aim to have all orders processed within 2 business days, however during busy times  of year (such as Christmas or during a large promotion) it may take a day longer. <\/p><p>Our packing team takes a break on the weekend, so orders placed on a Friday may not start processing until the next Monday (or Tuesday in case of a bank holiday).<\/p><p>If you do need to make a change to your order or delivery address, please let us know as soon as possible!<\/p>",
             "page": ""
           }
