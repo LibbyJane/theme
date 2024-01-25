@@ -248,11 +248,11 @@
       "scheme-f69b63f1-c8bf-4fc9-9013-2b62912d9c07": {
         "settings": {
           "background": "#f6f8fa",
-          "background_gradient": "radial-gradient(rgba(255, 255, 255, 1), rgba(246, 248, 250, 1) 30%, rgba(224, 228, 237, 1) 100%)",
-          "text": "#051843",
-          "button": "#383f51",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#051843",
+          "background_gradient": "radial-gradient(rgba(255, 255, 255, 1), rgba(246, 248, 250, 1) 30%, rgba(237, 238, 240, 1) 100%)",
+          "text": "#0f3079",
+          "button": "#1c2f59",
+          "button_label": "#f6f8fa",
+          "secondary_button_label": "#1c2f59",
           "shadow": "#010816"
         }
       }
