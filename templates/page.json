@@ -137,7 +137,7 @@
           "settings": {
             "heading": "When will my order be delivered?",
             "icon": "truck",
-            "row_content": "",
+            "row_content": "<p>Mainland orders are generally delivered within two business days after the order is processed. Rural areas will generally receive their orders within 4 business days after the order is processed.<\/p>",
             "page": ""
           }
         },
