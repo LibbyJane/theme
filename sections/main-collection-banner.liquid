@@ -17,7 +17,7 @@
             {{- collection.title | escape -}}
         </h2>
     </div>
-
+<!-- TODO: replace color_boundary with consistent color selection -->
 
   <div class="collection-hero__inner page-width {% if section.settings.color_boundary != 'container' %} color-{{ section.settings.color_scheme }}{% endif %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
         {%- if section.settings.show_collection_description and collection.description != blank -%}

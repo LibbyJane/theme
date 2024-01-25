@@ -37,6 +37,8 @@
   --opacity-full: 1;
   --opacity-lighter: 0.85;
   --opacity-light: 0.7;
+  --opacity-half: 0.5;
+  --opacity-quarter: 0.25;
   --opacity-border: 0.1;
   --opacity-transparent: 0;
   --zi-base: 10;
@@ -565,6 +567,18 @@
   background: var(--background-gradient);
   background-color: rgb(var(--color-background));
   background-attachment: fixed;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
 }
 
 :root {

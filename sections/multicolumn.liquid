@@ -23,7 +23,7 @@
     endif
 -%}
 
-<div class="isolate section-{{ section.id }}-padding">
+<div class="multicolumn isolate section-{{ section.id }}-padding color-{{ section.settings.section_color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %}">
     {%- if section.settings.title != blank -%}
         <div
             class="page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -32,168 +32,167 @@
             {% endif %}
         >
             <div class="title-wrapper align-{{settings.title_alignment}}">
-                <h2 class="title texture-{{ settings.title_style }} inline-richtext {{ section.settings.heading_size }}">
+                <h2 class="title texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }} inline-richtext">
                     {{ section.settings.title }}
                 </h2>
             </div>
         </div>
     {% endif %}
 
-    <div class="multicolumn isolate color-{{ section.settings.color_scheme }} texture-{{section.settings.background_texture}}">
-        <div
-            class="page-width content-padding-inline section-{{ section.id }}-padding {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-            {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-            {% endif %}
-        >
-            <slider-component class="slider-mobile-gutter">
-                <ul
-                    class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}"
-                    id="Slider-{{ section.id }}"
-                    role="list"
-                >
-                    {%- liquid
-                        assign highest_ratio = 0
-                        for block in section.blocks
-                            if block.settings.image.aspect_ratio > highest_ratio
-                            assign highest_ratio = block.settings.image.aspect_ratio
-                            endif
-                        endfor
+
+    <div
+        class="color-{{ section.settings.color_scheme }} texture-{{section.settings.background_texture}} {% if section.settings.full_width %}width-full {% else %}page-width {% endif %} content-padding-inline section-{{ section.id }}-padding {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        {% if settings.animations_reveal_on_scroll %}
+        data-cascade
+        {% endif %}
+    >
+        <slider-component class="slider-mobile-gutter">
+            <ul
+                class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}"
+                id="Slider-{{ section.id }}"
+                role="list"
+            >
+                {%- liquid
+                    assign highest_ratio = 0
+                    for block in section.blocks
+                        if block.settings.image.aspect_ratio > highest_ratio
+                        assign highest_ratio = block.settings.image.aspect_ratio
+                        endif
+                    endfor
+                -%}
+                {%- for block in section.blocks -%}
+                    {%- assign empty_column = '' -%}
+                    {%- if block.settings.image == blank
+                        and block.settings.title == blank
+                        and block.settings.text == blank
+                        and block.settings.link_label == blank
                     -%}
-                    {%- for block in section.blocks -%}
-                        {%- assign empty_column = '' -%}
-                        {%- if block.settings.image == blank
-                            and block.settings.title == blank
-                            and block.settings.text == blank
-                            and block.settings.link_label == blank
-                        -%}
-                            {%- assign empty_column = ' multicolumn-list__item--empty' -%}
-                        {%- endif -%}
+                        {%- assign empty_column = ' multicolumn-list__item--empty' -%}
+                    {%- endif -%}
 
-                        <li
-                            id="Slide-{{ section.id }}-{{ forloop.index }}"
-                            class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}"
-                            {{ block.shopify_attributes }}
-                            {% if settings.animations_reveal_on_scroll %}
-                            data-cascade
-                            style="--animation-order: {{ forloop.index }};"
-                            {% endif %}
-                        >
-                            <div class="multicolumn-card content-container">
-                                {%- if block.settings.image != blank -%}
-                                    {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
-                                    {% assign spaced_image = true %}
-                                    {% endif %}
-                                    <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
-                                        <div
-                                            class="media media--transparent media--{{ section.settings.image_ratio }}"
-                                            {% if section.settings.image_ratio == 'adapt' %}
-                                            style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
-                                            {% endif %}
-                                        >
-                                            {%- liquid
-                                            assign number_of_columns = section.settings.columns_desktop
-                                            assign number_of_columns_mobile = section.settings.columns_mobile
-                                            assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                                            assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                                            assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
-                                            if section.settings.image_width == 'half'
-                                                assign image_width = 0.5
-                                            elsif section.settings.image_width == 'third'
-                                                assign image_width = 0.33
-                                            else
-                                                assign image_width = 1
-                                            endif
-                                            -%}
-                                            {% capture sizes %}
-                                            (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
-                                            (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
-                                            (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
-                                            calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
-                                            {% endcapture %}
-                                            {{
-                                            block.settings.image
-                                            | image_url: width: 3200
-                                            | image_tag:
-                                                loading: 'lazy',
-                                                widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
-                                                sizes: sizes,
-                                                class: 'multicolumn-card__image'
-                                            }}
-                                        </div>
-                                    </div>
-                                {%- endif -%}
-                                <div class="multicolumn-card__info">
-                                    {%- if block.settings.title != blank -%}
-                                        <h3 class="inline-richtext">{{ block.settings.title }}</h3>
-                                    {%- endif -%}
-
-                                    {%- if block.settings.text != blank -%}
-                                        <div class="rte">{{ block.settings.text }}</div>
-                                    {%- endif -%}
-
-                                    {%- if block.settings.link_label != blank -%}
-                                        <a
-                                            class="multicolumn-card__link {{ section.settings.column_link_hover_style}}"
-                                            {% if block.settings.link == blank %}
-                                                role="link" aria-disabled="true"
-                                            {% else %}
-                                                href="{{ block.settings.link }}"
-                                            {% endif %}
-                                        >
-                                            {{- block.settings.link_label | escape -}}
-                                            {% render 'icon-arrow' %}
-                                        </a>
-                                    {%- endif -%}
-                                </div>
-                            </div>
-                        </li>
-                    {%- endfor -%}
-                </ul>
-
-                {%- if show_mobile_slider -%}
-                    <div class="slider-buttons no-js-hidden medium-hide">
-                        <button
-                            type="button"
-                            class="slider-button slider-button--prev"
-                            name="previous"
-                            aria-label="{{ 'general.slider.previous_slide' | t }}"
-                        >
-                            {% render 'icon-caret' %}
-                        </button>
-                        <div class="slider-counter caption">
-                            <span class="slider-counter--current">1</span>
-                            <span aria-hidden="true"> / </span>
-                            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-                            <span class="slider-counter--total">{{ section.blocks.size }}</span>
-                        </div>
-                        <button
-                            type="button"
-                            class="slider-button slider-button--next"
-                            name="next"
-                            aria-label="{{ 'general.slider.next_slide' | t }}"
-                        >
-                            {% render 'icon-caret' %}
-                        </button>
-                    </div>
-                {%- endif -%}
-            </slider-component>
-
-            {%- if section.settings.button_label != blank -%}
-                <div class="center">
-                    <a
-                        class="button button--primary"
-                        {% if section.settings.button_link == blank %}
-                            role="link" aria-disabled="true"
-                        {% else %}
-                            href="{{ section.settings.button_link }}"
+                    <li
+                        id="Slide-{{ section.id }}-{{ forloop.index }}"
+                        class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}"
+                        {{ block.shopify_attributes }}
+                        {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
                         {% endif %}
-                        >
-                        {{ section.settings.button_label | escape }}
-                    </a>
+                    >
+                        <div class="multicolumn-card content-container">
+                            {%- if block.settings.image != blank -%}
+                                {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
+                                {% assign spaced_image = true %}
+                                {% endif %}
+                                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
+                                    <div
+                                        class="media media--transparent media--{{ section.settings.image_ratio }}"
+                                        {% if section.settings.image_ratio == 'adapt' %}
+                                        style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                                        {% endif %}
+                                    >
+                                        {%- liquid
+                                        assign number_of_columns = section.settings.columns_desktop
+                                        assign number_of_columns_mobile = section.settings.columns_mobile
+                                        assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+                                        assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+                                        assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
+                                        if section.settings.image_width == 'half'
+                                            assign image_width = 0.5
+                                        elsif section.settings.image_width == 'third'
+                                            assign image_width = 0.33
+                                        else
+                                            assign image_width = 1
+                                        endif
+                                        -%}
+                                        {% capture sizes %}
+                                        (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
+                                        (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
+                                        (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
+                                        calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
+                                        {% endcapture %}
+                                        {{
+                                        block.settings.image
+                                        | image_url: width: 3200
+                                        | image_tag:
+                                            loading: 'lazy',
+                                            widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                                            sizes: sizes,
+                                            class: 'multicolumn-card__image'
+                                        }}
+                                    </div>
+                                </div>
+                            {%- endif -%}
+                            <div class="multicolumn-card__info">
+                                {%- if block.settings.title != blank -%}
+                                    <h3 class="inline-richtext">{{ block.settings.title }}</h3>
+                                {%- endif -%}
+
+                                {%- if block.settings.text != blank -%}
+                                    <div class="rte">{{ block.settings.text }}</div>
+                                {%- endif -%}
+
+                                {%- if block.settings.link_label != blank -%}
+                                    <a
+                                        class="multicolumn-card__link {{ section.settings.column_link_hover_style}}"
+                                        {% if block.settings.link == blank %}
+                                            role="link" aria-disabled="true"
+                                        {% else %}
+                                            href="{{ block.settings.link }}"
+                                        {% endif %}
+                                    >
+                                        {{- block.settings.link_label | escape -}}
+                                        {% render 'icon-arrow' %}
+                                    </a>
+                                {%- endif -%}
+                            </div>
+                        </div>
+                    </li>
+                {%- endfor -%}
+            </ul>
+
+            {%- if show_mobile_slider -%}
+                <div class="slider-buttons no-js-hidden medium-hide">
+                    <button
+                        type="button"
+                        class="slider-button slider-button--prev"
+                        name="previous"
+                        aria-label="{{ 'general.slider.previous_slide' | t }}"
+                    >
+                        {% render 'icon-caret' %}
+                    </button>
+                    <div class="slider-counter caption">
+                        <span class="slider-counter--current">1</span>
+                        <span aria-hidden="true"> / </span>
+                        <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                        <span class="slider-counter--total">{{ section.blocks.size }}</span>
+                    </div>
+                    <button
+                        type="button"
+                        class="slider-button slider-button--next"
+                        name="next"
+                        aria-label="{{ 'general.slider.next_slide' | t }}"
+                    >
+                        {% render 'icon-caret' %}
+                    </button>
                 </div>
             {%- endif -%}
-        </div>
+        </slider-component>
+
+        {%- if section.settings.button_label != blank -%}
+            <div class="center">
+                <a
+                    class="button button--primary"
+                    {% if section.settings.button_link == blank %}
+                        role="link" aria-disabled="true"
+                    {% else %}
+                        href="{{ section.settings.button_link }}"
+                    {% endif %}
+                    >
+                    {{ section.settings.button_label | escape }}
+                </a>
+            </div>
+        {%- endif -%}
     </div>
 </div>
 
@@ -231,6 +230,12 @@
         ],
         "default": "h1",
         "label": "t:sections.all.heading_size.label"
+        },
+        {
+            "type": "checkbox",
+            "id": "full_width",
+            "label": "t:sections.video.settings.full_width.label",
+            "default": true
         },
         {
         "type": "select",
@@ -333,9 +338,21 @@
         "label": "t:sections.multicolumn.settings.button_link.label"
         },
         {
+            "type": "color_scheme",
+            "id": "section_color_scheme",
+            "label": "t:settings_schema.colors.settings.container_color_scheme.label",
+            "default": "inverse"
+        },
+        {
+            "type": "checkbox",
+            "id": "background_transparent",
+            "default": true,
+            "label": "t:settings_schema.colors.settings.background_transparent.label"
+        },
+        {
         "type": "color_scheme",
         "id": "color_scheme",
-        "label": "t:sections.all.colors.label",
+        "label": "t:settings_schema.colors.settings.content_color_scheme.label",
         "default": "background-1"
         },
         {

@@ -311,51 +311,19 @@
   position: relative;
   z-index: 0;
 }
+.collapsible-content .caption {
+  opacity: var(--opacity-light);
+}
 .collapsible-content .accordion {
-  --underline-height: 0.2px;
-  position: relative;
-  z-index: 1;
   background: transparent;
   border: 0;
   margin: initial;
-}
-.collapsible-content .accordion:hover, .collapsible-content .accordion:focus {
-  --alpha-link: 1;
-  --underline-height: 1px;
-}
-.collapsible-content .accordion:hover::before, .collapsible-content .accordion:focus::before {
-  transform: rotate(-0.25deg) scaleX(1);
-}
-.collapsible-content .accordion:hover::after, .collapsible-content .accordion:focus::after {
-  transform: rotate(0.25deg) scaleX(1);
-}
-.collapsible-content .accordion::before, .collapsible-content .accordion::after {
-  content: "";
-  background-color: rgba(var(--color-link), var(--alpha-link));
-  position: absolute;
-  bottom: calc(var(--underline-height) * -1);
-  left: 0;
-  height: var(--underline-height);
-  width: 100%;
-  transition: transform var(--duration-medium) var(--transition-type);
-  transform: rotate(0.25deg) scaleX(0.95);
-  z-index: -1;
-}
-.collapsible-content .accordion::before {
-  transition-delay: var(--duration-short);
-  transform: rotate(-0.5deg) scaleX(0);
-  transform-origin: bottom left;
-}
-.collapsible-content .accordion::after {
-  opacity: 0.2;
-}
-.collapsible-content .accordion::before {
-  content: "";
-  opacity: 0;
+  position: relative;
 }
 .collapsible-content summary {
   padding-right: var(--space-sm);
 }
+
 .collapsible-content__grid {
   gap: 0;
   margin-inline: auto;
@@ -369,9 +337,6 @@
   margin-bottom: 0;
 }
 
-.collapsible-content__grid--has-media .collapsible-content__grid-item--accordion-wrapper {
-  margin-top: 2px;
-}
 .collapsible-content__grid-item--accordion-wrapper.texture-torn {
   padding: var(--space);
 }
@@ -398,7 +363,6 @@
   margin: 0 auto;
   padding-right: var(--content-padding-inline);
   padding-left: var(--content-padding-inline);
-  max-width: 73.4rem;
 }
 
 .collapsible-content__header {
@@ -424,22 +388,5 @@
 .collapsible-row-layout .accordion {
   /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
   transform: perspective(0);
-}
-
-/* check for flexbox gap in older Safari versions */
-@supports not (inset: 10px) {
-  @media screen and (min-width: 750px) {
-    .collapsible-content__grid:not(.collapsible-content__grid--reverse) .grid__item:last-child,
-    .collapsible-content__grid--reverse .collapsible-content__grid-item {
-      padding-left: 5rem;
-      padding-right: 0;
-    }
-  }
-  @media screen and (min-width: 990px) {
-    .collapsible-content__grid:not(.collapsible-content__grid--reverse) .grid__item:last-child,
-    .collapsible-content__grid--reverse .collapsible-content__grid-item {
-      padding-left: 7rem;
-    }
-  }
 }
 /*# sourceMappingURL=collapsible-content.css.map */

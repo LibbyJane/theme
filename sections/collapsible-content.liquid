@@ -15,24 +15,19 @@
     }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} section-{{ section.id }}-padding">
+<div class="color-{{ section.settings.section_color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} section-{{ section.id }}-padding">
     {%- if section.settings.heading == blank -%}
         <h2 class="visually-hidden">{{ 'accessibility.collapsible_content_title' | t }}</h2>
     {%- else -%}
         <div class="title-wrapper page-width {% if section.settings.image == blank %} page-width--narrow {% endif %} align-{{settings.title_alignment}} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-            <h2 class="title{% if section.settings.caption != blank %} title--with-caption{% endif %} inline-richtext texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }} text-align-{{ section.settings.heading_alignment }}"
+            <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }}"
             >
-                {%- unless section.settings.caption == blank -%}
-                    <span class="caption-with-letter-spacing">
-                        {{ section.settings.caption | escape }}
-                    </span>
-                {% endunless %}
                 {{ section.settings.heading }}
             </h2>
         </div>
     {% endif %}
 
-    <div class="collapsible-content {% if section.settings.column_height %} collapsible-container--equal-col-height {% endif %} isolate {% if section.settings.image == blank %} color-{{ section.settings.container_color_scheme }} texture-{{section.settings.background_texture}} {% endif %} {% unless section.settings.full_width %} page-width {% endunless %} ">
+    <div class="collapsible-content {% if section.settings.column_height %} collapsible-container--equal-col-height {% endif %} isolate page-width content-padding-inline {% if section.settings.image == blank %} page-width--narrow{% endif %}">
             <!--<div class="collapsible-content__wrapper ">
             <div class="{% if section.settings.image == blank %}collapsible-content-wrapper-narrow{% else %}content-padding-inline{% endif %}"> -->
                 <div class="grid grid--1-col grid--2-col-tablet collapsible-content__grid{% if section.settings.desktop_layout == 'image_second' %} collapsible-content__grid--reverse{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {% if section.settings.image == blank %}collapsible-content__grid--no-media page-width--narrow {% else %} collapsible-content__grid--has-media {% endif %}">
@@ -68,7 +63,13 @@
                             </div>
                         </div>
                     {% endif %}
-                    <div class="grid__item  collapsible-content__grid-item collapsible-content__grid-item--accordion-wrapper {% unless section.settings.image == blank %}content-container color-{{ section.settings.container_color_scheme }} texture-{{section.settings.background_texture}} {% endunless %}">
+                    <div class="grid__item collapsible-content__grid-item collapsible-content__grid-item--accordion-wrapper color-{{ section.settings.content_color_scheme }} texture-{{section.settings.background_texture}} {% unless section.settings.image == blank %}content-container {% endunless %}">
+                        {%- unless section.settings.caption == blank -%}
+                            <h5 class="caption caption-with-letter-spacing content-padding text-align-{{ section.settings.caption_alignment }}">
+                                {{ section.settings.caption | escape }}
+                            </h5>
+                        {% endunless %}
+
                         {%- for block in section.blocks -%}
                             <div
                                 class="accordion"
@@ -115,11 +116,7 @@
         "groups": ["header", "footer"]
     },
     "settings": [
-        {
-        "type": "text",
-        "id": "caption",
-        "label": "t:sections.collapsible_content.settings.caption.label"
-        },
+
         {
         "type": "inline_richtext",
         "id": "heading",
@@ -147,35 +144,40 @@
         "label": "t:sections.all.heading_size.label"
         },
         {
+            "type": "text",
+            "id": "caption",
+            "label": "t:sections.collapsible_content.settings.caption.label"
+        },
+        {
             "type": "select",
-            "id": "heading_alignment",
-            "label": "t:sections.collapsible_content.settings.heading_alignment.label",
+            "id": "caption_alignment",
+            "label": "t:sections.collapsible_content.settings.caption_alignment.label",
             "options": [
               {
                 "value": "left",
-                "label": "t:sections.collapsible_content.settings.heading_alignment.options__1.label"
+                "label": "t:sections.collapsible_content.settings.caption_alignment.options__1.label"
               },
               {
                 "value": "center",
-                "label": "t:sections.collapsible_content.settings.heading_alignment.options__2.label"
+                "label": "t:sections.collapsible_content.settings.caption_alignment.options__2.label"
               },
               {
                 "value": "right",
-                "label": "t:sections.collapsible_content.settings.heading_alignment.options__3.label"
+                "label": "t:sections.collapsible_content.settings.caption_alignment.options__3.label"
               }
             ],
             "default": "center"
         },
         {
             "type": "checkbox",
-            "id": "full_width",
-            "label": "t:settings_schema.layout.settings.full_width.label",
-            "default": true
+            "id": "open_first_collapsible_row",
+            "default": false,
+            "label": "t:sections.collapsible_content.settings.open_first_collapsible_row.label"
         },
         {
         "type": "color_scheme",
-        "id": "color_scheme",
-        "label": "t:sections.all.colors.label",
+        "id": "section_color_scheme",
+        "label": "t:settings_schema.colors.settings.container_color_scheme.label",
         "default": "inverse"
         },
         {
@@ -186,9 +188,9 @@
         },
         {
         "type": "color_scheme",
-        "id": "container_color_scheme",
-        "label": "t:sections.collapsible_content.settings.container_color_scheme.label",
-        "default": "background-2"
+        "id": "content_color_scheme",
+        "label": "t:settings_schema.colors.settings.content_color_scheme.label",
+        "default": "background-1"
         },
         {
             "type": "select",
@@ -214,12 +216,7 @@
             "default": "paper",
             "label": "t:settings_schema.textures.settings.background_texture.label"
         },
-        {
-        "type": "checkbox",
-        "id": "open_first_collapsible_row",
-        "default": false,
-        "label": "t:sections.collapsible_content.settings.open_first_collapsible_row.label"
-        },
+
         {
         "type": "header",
         "content": "t:sections.collapsible_content.settings.header.content"

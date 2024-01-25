@@ -37,6 +37,8 @@
   --opacity-full: 1;
   --opacity-lighter: 0.85;
   --opacity-light: 0.7;
+  --opacity-half: 0.5;
+  --opacity-quarter: 0.25;
   --opacity-border: 0.1;
   --opacity-transparent: 0;
   --zi-base: 10;
@@ -565,6 +567,18 @@
   background: var(--background-gradient);
   background-color: rgb(var(--color-background));
   background-attachment: fixed;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
 }
 
 div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {

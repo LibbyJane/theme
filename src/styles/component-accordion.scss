@@ -7,6 +7,10 @@
     border-top: var( --border-light);
     // border-bottom: var( --border-light);
 
+    .texture-lined & {
+        --underline-height: 0;
+    }
+
     + .accordion {
         margin-top: 0;
         border-top: none;
@@ -49,20 +53,20 @@
         }
     }
 
-    .icon-accordion {
-        align-self: center;
-        fill: rgb(var(--color-foreground));
-        height: 100%;
-        min-height: var(--icon-size-xl);
-        margin-right: var(--space-med);
-        width: var(--icon-size-xl);
-    }
-
     .icon {
         margin: 0;
         padding: 0;
         position: relative;
         transition: transform var(--duration-default) var(--transition-type);
+    }
+
+    .icon-accordion {
+        align-self: center;
+        fill: rgb(var(--color-foreground));
+        height: 100%;
+        min-height: var(--icon-size-xl);
+        padding-right: var(--space-sm);
+        width: var(--icon-size-xl);
     }
 
     .icon-caret {

@@ -4,6 +4,9 @@
   margin-bottom: 0;
   border-top: var(--border-light);
 }
+.texture-lined .accordion {
+  --underline-height: 0;
+}
 .accordion + .accordion {
   margin-top: 0;
   border-top: none;
@@ -36,19 +39,19 @@
   height: calc(var(--font-heading-scale) * 0.6rem);
   height: var(--icon-size-lg);
 }
-.accordion .icon-accordion {
-  align-self: center;
-  fill: rgb(var(--color-foreground));
-  height: 100%;
-  min-height: var(--icon-size-xl);
-  margin-right: var(--space-med);
-  width: var(--icon-size-xl);
-}
 .accordion .icon {
   margin: 0;
   padding: 0;
   position: relative;
   transition: transform var(--duration-default) var(--transition-type);
+}
+.accordion .icon-accordion {
+  align-self: center;
+  fill: rgb(var(--color-foreground));
+  height: 100%;
+  min-height: var(--icon-size-xl);
+  padding-right: var(--space-sm);
+  width: var(--icon-size-xl);
 }
 .accordion .icon-caret {
   display: block;

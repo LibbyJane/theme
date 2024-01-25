@@ -217,7 +217,7 @@
                     "label": "Apply color scheme to container"
                 },
                 "container_color_scheme": {
-                    "label": "Container color scheme"
+                    "label": "Section color scheme"
                 },
                 "use_content_color_scheme": {
                     "label": "Apply color scheme to content"
@@ -3362,14 +3362,14 @@
         "collapsible_content": {
             "name": "Collapsible content",
             "settings": {
-                "caption": {
-                    "label": "Caption"
-                },
                 "heading": {
                     "label": "Heading"
                 },
-                "heading_alignment": {
-                    "label": "Heading alignment",
+                "caption": {
+                    "label": "Caption"
+                },
+                "caption_alignment": {
+                    "label": "Caption alignment",
                     "options__1": {
                         "label": "Left"
                     },
