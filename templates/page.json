@@ -153,9 +153,9 @@
         "collapsible_row_b8Cbm6": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "What payment methods do you accept?",
+            "icon": "question_mark",
+            "row_content": "<p>For express checkout, we offer ShopPay, PayPal, ApplePay and GooglePay. For standard checkout we accept Visa, MasterCard, American Express, UnionPay, PayPal, and our digital gift cards. <\/p>",
             "page": ""
           }
         }
