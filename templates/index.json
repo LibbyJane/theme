@@ -486,16 +486,15 @@
         "template--20955328512321__cedce7e5-6cf9-4779-97f7-3ba6127619cb-collapsible_row-4"
       ],
       "settings": {
-        "caption": "",
         "heading": "Collapsible content",
         "heading_size": "h1",
-        "heading_alignment": "center",
-        "full_width": true,
-        "color_scheme": "",
-        "background_transparent": true,
-        "container_color_scheme": "",
-        "background_texture": "paper",
+        "caption": "",
+        "caption_alignment": "center",
         "open_first_collapsible_row": false,
+        "section_color_scheme": "",
+        "background_transparent": true,
+        "content_color_scheme": "",
+        "background_texture": "paper",
         "column_height": true,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
@@ -523,12 +522,37 @@
           "type": "email_form",
           "settings": {
           }
+        },
+        "trustreviews_review_carousel_CQ3Ua9": {
+          "type": "shopify:\/\/apps\/trustreviews\/blocks\/review-carousel\/56d0fe1b-e701-4cff-8f84-466a26e09adb",
+          "settings": {
+          }
+        },
+        "judge_me_reviews_verified_badge_9MCFPQ": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/verified_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
+        "judge_me_reviews_ugc_media_grid_FhWfMU": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/ugc_media_grid\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
+        "judge_me_reviews_preview_badge_homepage_GhfJnj": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge_homepage\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "product": ""
+          }
         }
       },
       "block_order": [
         "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-heading-1",
         "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-paragraph-1",
-        "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-email_form-1"
+        "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-email_form-1",
+        "trustreviews_review_carousel_CQ3Ua9",
+        "judge_me_reviews_verified_badge_9MCFPQ",
+        "judge_me_reviews_ugc_media_grid_FhWfMU",
+        "judge_me_reviews_preview_badge_homepage_GhfJnj"
       ],
       "settings": {
         "color_scheme": "",
@@ -638,6 +662,7 @@
       "settings": {
         "title": "",
         "heading_size": "h1",
+        "full_width": true,
         "image_width": "third",
         "image_ratio": "adapt",
         "columns_desktop": 3,
@@ -645,6 +670,8 @@
         "column_link_hover_style": "hover-highlight",
         "button_label": "",
         "button_link": "",
+        "section_color_scheme": "",
+        "background_transparent": true,
         "color_scheme": "background-1",
         "background_texture": "paper",
         "columns_mobile": "1",
