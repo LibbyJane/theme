@@ -363,6 +363,7 @@
   margin: 0 auto;
   padding-right: var(--content-padding-inline);
   padding-left: var(--content-padding-inline);
+  max-width: 73.4rem;
 }
 
 .collapsible-content__header {

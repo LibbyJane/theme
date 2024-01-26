@@ -5,9 +5,17 @@
     margin: var(--space-med) 0;
     padding: var(--space) 0;
 
+     // eg email signup form success message
+    // todo - test if too specific
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space);
+
     &[class*='status-'] {
         background: rgba(var(--color-status-background), var(--opacity-lighter));
         padding: var(--space) var(--space) 0;
+
+
     }
 
     &.status-error {

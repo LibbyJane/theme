@@ -2838,6 +2838,23 @@
                 },
                 "email_form": {
                     "name": "Email form"
+                },
+                "text": {
+                    "name": "Text",
+                    "settings": {
+                        "text": {
+                            "label": "Fine print text"
+                        },
+                        "text_style": {
+                            "options__1": {
+                                "label": "Small"
+                            },
+                            "options__2": {
+                                "label": "Regular"
+                            },
+                            "label": "Text size"
+                        }
+                    }
                 }
             },
             "presets": {

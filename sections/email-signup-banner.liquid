@@ -62,7 +62,7 @@
         </div>
     {%- endif -%}
     <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width">
-        <div class="email-signup-banner__box banner__box newsletter newsletter__wrapper isolate{% if section.settings.show_background_image == false %} email-signup-banner__box--no-image{% endif %} content-container color-{{ section.settings.color_scheme }}  content-container--full-width-mobile">
+        <div class="email-signup-banner__box banner__box newsletter newsletter__wrapper isolate{% if section.settings.show_background_image == false %} email-signup-banner__box--no-image{% endif %} content-container color-{{ section.settings.color_scheme }} texture-{{section.settings.background_texture}} content-container--full-width-mobile">
             {%- for block in section.blocks -%}
                 {%- case block.type -%}
                     {%- when 'heading' -%}
@@ -258,7 +258,32 @@
             "label": "t:sections.all.colors.label",
             "info": "t:sections.email-signup-banner.settings.color_scheme.info",
             "default": "background-1"
-        }, {
+        },
+        {
+            "type": "select",
+            "id": "background_texture",
+            "options": [
+                {
+                    "value": "",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__1.label"
+                },
+                {
+                    "value": "paper",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__2.label"
+                },
+                {
+                    "value": "torn",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__3.label"
+                },
+                {
+                    "value": "lined",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__4.label"
+                }
+            ],
+            "default": "paper",
+            "label": "t:settings_schema.textures.settings.background_texture.label"
+        },
+        {
             "type": "header",
             "content": "t:sections.email-signup-banner.settings.header.content"
         }, {

@@ -125,6 +125,14 @@ input[type="search"]::-webkit-search-results-decoration {
         transform-origin: top left;
     }
 
+    @at-root {
+        .field--single-line {
+            .field__label {
+                transform: translateX(var(--field-left-padding)) translateY(var(--space-sm));
+            }
+        }
+    }
+
     &:placeholder-shown ~ .field__label {
         cursor: text;
     }

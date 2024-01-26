@@ -52,6 +52,10 @@ address,
     @include text-body;
 }
 
+.text-small {
+    font-size: var(--font-size-small);
+}
+
 
 h1,
 h2,
