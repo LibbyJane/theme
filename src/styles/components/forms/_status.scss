@@ -14,8 +14,6 @@
     &[class*='status-'] {
         background: rgba(var(--color-status-background), var(--opacity-lighter));
         padding: var(--space) var(--space) 0;
-
-
     }
 
     &.status-error {

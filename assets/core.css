@@ -581,6 +581,15 @@
   text-align: right;
 }
 
+.isolate {
+  position: relative;
+  z-index: 0;
+}
+
+.zi-base {
+  z-index: var(--zi-base);
+}
+
 div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -3744,6 +3753,12 @@ input[type=search]::-webkit-search-results-decoration {
   max-width: 100%;
   z-index: var(--zi-base);
 }
+@media screen and (min-width: 750px) {
+  .postcard-container form {
+    margin-top: -2px;
+    margin-left: 2px;
+  }
+}
 
 .postcard {
   --postcard-border-color: rgba(var(--color-foreground), 0.3);
@@ -3779,8 +3794,8 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media screen and (min-width: 750px) {
   .postcard .postage-stamp {
-    top: var(--space-med);
-    right: var(--space-xl);
+    top: 0;
+    right: var(--space-sm);
   }
 }
 .postcard .postage-stamp img {
@@ -3807,8 +3822,8 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media screen and (min-width: 750px) {
   .postcard .postage-stamp--landscape {
-    top: 0;
-    right: var(--space-med);
+    top: 1.2rem;
+    right: var(--space-xs);
   }
 }
 .postcard .postage-stamp--square {
@@ -3817,8 +3832,8 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media screen and (min-width: 750px) {
   .postcard .postage-stamp--square {
-    top: var(--space-lg);
-    right: var(--space-xl);
+    top: var(--space);
+    right: var(--space-xs);
   }
 }
 .postcard fieldset {
@@ -3838,6 +3853,11 @@ input[type=search]::-webkit-search-results-decoration {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: postcard-fields;
+}
+@media screen and (min-width: 750px) {
+  .postcard .contact__fields {
+    padding-top: var(--space-xs);
+  }
 }
 .postcard .contact__submit {
   -ms-grid-row: 3;
@@ -3866,7 +3886,6 @@ input[type=search]::-webkit-search-results-decoration {
   .postcard .contact__submit::before {
     margin-top: 0;
     margin-bottom: var(--space);
-    transform: translateY(calc(var(--space-med) * -1)) translateX(calc(var(--space-lg) * -1)) scale(0.9);
   }
 }
 .postcard .contact__submit::after {
@@ -3966,10 +3985,10 @@ input[type=search]::-webkit-search-results-decoration {
   aspect-ratio: var(--postcard-aspect-ratio);
   position: absolute;
   top: 0;
-  left: auto;
+  right: auto;
   bottom: 0;
   left: auto;
-  transform: rotate(-5deg) translateX(1rem);
+  transform: rotate(-5deg) translateX(5rem) translateY(2rem);
   z-index: -1;
   overflow: hidden;
   display: flex;
@@ -4301,6 +4320,10 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 .rte ol,
 .inline-richtext ol {
   list-style-type: decimal;
+}
+.rte table,
+.inline-richtext table {
+  margin-bottom: var(--space);
 }
 .rte img,
 .inline-richtext img {

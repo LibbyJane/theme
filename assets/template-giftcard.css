@@ -581,6 +581,15 @@
   text-align: right;
 }
 
+.isolate {
+  position: relative;
+  z-index: 0;
+}
+
+.zi-base {
+  z-index: var(--zi-base);
+}
+
 :root {
   --button-border-radius: var(--button-radius-large) var(--button-radius) var(--button-radius-med) var(--button-radius)/var(--button-radius) var(--button-radius-med) var(--button-radius) var(--button-radius-large);
 }

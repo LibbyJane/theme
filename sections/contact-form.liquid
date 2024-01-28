@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 
-<div class="contact {% if section.settings.use_container_color_scheme %} color-{{ section.settings.container_color_scheme }}{% endif %} section-{{ section.id }}-padding isolate">
+<div class="contact color-{{ section.settings.section_color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} section-{{ section.id }}-padding isolate">
 
     <div class="postcard-container">
         {%- capture postcard_color_scheme -%}color-{{section.settings.content_color_scheme}}{% endcapture %}
@@ -42,9 +42,9 @@
 
         {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
             {%- if section.settings.heading != blank -%}
-                <h1 class="postcard-title inline-richtext {{ section.settings.heading_size }}">
+                <h2 class="postcard-title inline-richtext {{ section.settings.heading_size }}">
                     {{ section.settings.heading }}
-                </h1>
+                </h2>
             {%- else -%}
             <h1 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h1>
             {%- endif -%}
@@ -201,19 +201,19 @@
             "id": "heading_size",
             "options": [
                 {
-                "value": "h2",
+                "value": "h5",
                 "label": "t:sections.all.heading_size.options__1.label"
                 },
                 {
-                "value": "h1",
+                "value": "h3",
                 "label": "t:sections.all.heading_size.options__2.label"
                 },
                 {
-                "value": "h0",
+                "value": "h1",
                 "label": "t:sections.all.heading_size.options__3.label"
                 }
             ],
-            "default": "h1",
+            "default": "h3",
             "label": "t:sections.all.heading_size.label"
         },
         {
@@ -221,16 +221,16 @@
             "content": "t:sections.all.colors.heading"
         },
         {
-            "type": "checkbox",
-            "id": "use_container_color_scheme",
-            "default": false,
-            "label": "t:settings_schema.colors.settings.use_container_color_scheme.label"
+            "type": "color_scheme",
+            "id": "section_color_scheme",
+            "label": "t:settings_schema.colors.settings.container_color_scheme.label",
+            "default": "inverse"
         },
         {
-            "type": "color_scheme",
-            "id": "container_color_scheme",
-            "label": "t:settings_schema.colors.settings.container_color_scheme.label",
-            "default": "background-1"
+            "type": "checkbox",
+            "id": "background_transparent",
+            "default": true,
+            "label": "t:settings_schema.colors.settings.background_transparent.label"
         },
         {
             "type": "color_scheme",
@@ -296,7 +296,7 @@
             "step": 4,
             "unit": "px",
             "label": "t:sections.all.padding.padding_bottom",
-            "default": 36
+            "default": 32
         }
     ],
     "presets": [

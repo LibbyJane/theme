@@ -147,3 +147,12 @@
 .text-align-right {
     text-align: right;
 }
+
+.isolate {
+    position: relative;
+    z-index: 0;
+}
+
+.zi-base {
+    z-index: var(--zi-base);
+}
