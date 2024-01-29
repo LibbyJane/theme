@@ -221,10 +221,7 @@
 //   }
 // }
 
-// .isolate {
-//   position: relative;
-//   z-index: 0;
-// }
+
 
 // .section + .section {
 //   margin-top: var(--spacing-sections-mobile);
@@ -265,27 +262,6 @@
 //   margin: 0 auto 2rem;
 // }
 
-.list-unstyled {
-    margin: 0;
-    padding: 0;
-    list-style-type: "";  // "" instead of none to preserve accessiblity properties in safari`
-}
-
-.hidden {
-  display: none !important;
-}
-
-.visually-hidden {
-    position: absolute !important;
-    overflow: hidden;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    clip: rect(0 0 0 0);
-    word-wrap: normal !important;
-}
 
 // .visually-hidden--inline {
 //   margin: 0;

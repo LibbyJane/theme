@@ -2,27 +2,50 @@
 {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  @media screen and (max-width: 749px) {
-    .collection-hero--with-image .collection-hero__inner {
-      padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
+    @media screen and (max-width: 749px) {
+        .collection-hero--with-image .collection-hero__inner {
+            padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
+        }
     }
-  }
 {%- endstyle -%}
 
-<div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %}">
+{%- liquid
+    assign has_image = false
 
-    <div class="page-width title-wrapper align-{{settings.title_alignment}}">
-        <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{% if section.settings.color_boundary == 'container' %}{{ settings.title_color_scheme }}{% else %}{{ section.settings.color_scheme }}{% endif %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-            <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+    if section.settings.show_collection_image and collection.image
+        assign has_image = true
+    endif
+
+    assign has_text = false
+
+    if section.settings.show_collection_description and collection.description != blank
+        assign has_text = true
+    endif
+
+    assign narrow_content = false
+
+    unless has_image and has_text
+        assign narrow_content = true
+    endunless
+-%}
+
+<div class="collection-hero{% if has_image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} content-padding">
+    <div class="title-wrapper page-width {% if narrow_content %} page-width--narrow {% endif %} align-{{settings.title_alignment}} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }}"
+        >
             {{- collection.title | escape -}}
         </h2>
     </div>
-<!-- TODO: replace color_boundary with consistent color selection -->
 
-  <div class="collection-hero__inner page-width {% if section.settings.color_boundary != 'container' %} color-{{ section.settings.color_scheme }}{% endif %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="collection-hero__inner isolate page-width {% if narrow_content %} page-width--narrow {% endif %} color-{{ section.settings.content_color_scheme }} texture-{{section.settings.background_texture}}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} margin-bottom">
         {%- if section.settings.show_collection_description and collection.description != blank -%}
-            <div class="collection-hero__text-wrapper default-content-style content-padding">
-                <div class="collection-hero__description rte">{{ collection.description }}</div>
+            {% assign first_char = collection.description | slice: 0 %}
+            <div class="collection-hero__text-wrapper content-padding">
+                <div class="collection-hero__description rte">
+                    {% unless first_char == "<" %}<p>{% endunless %}
+                        {{ collection.description }}
+                    {% unless first_char == "<" %}</p>{% endunless %}
+                </div>
             </div>
         {%- endif -%}
 
@@ -44,61 +67,75 @@
                 width="{{ collection.image.width }}"
                 height="{{ collection.image.height }}"
                 >
-        </div>
+            </div>
         {%- endif -%}
     </div>
 </div>
 
 {% schema %}
 {
-  "name": "t:sections.main-collection-banner.name",
-  "class": "section",
-  "settings": [
-    {
-        "type": "paragraph",
-        "content": "t:sections.main-collection-banner.settings.paragraph.content"
-    },
-    {
-        "type": "checkbox",
-        "id": "show_collection_description",
-        "default": true,
-        "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
-    },
-    {
-        "type": "checkbox",
-        "id": "show_collection_image",
-        "default": false,
-        "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
-        "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
-    },
-    {
-        "type": "color_scheme",
-        "id": "color_scheme",
-        "label": "t:sections.all.colors.label",
-        "default": "inverse"
-    },
-    {
-        "type": "checkbox",
-        "id": "background_transparent",
-        "default": true,
-        "label": "t:settings_schema.colors.settings.background_transparent.label"
-    },
-    {
-        "type": "select",
-        "id": "color_boundary",
-        "options": [
-            {
-                "value": "container",
-                "label": "t:sections.all.color_boundary.container"
-            },
-            {
-                "value": "content",
-                "label": "t:sections.all.color_boundary.contents"
-            }
-        ],
-        "default": "content",
-        "label": "t:sections.all.color_boundary.label"
-    }
-  ]
+    "name": "t:sections.main-collection-banner.name",
+    "class": "section",
+    "settings": [
+        {
+            "type": "paragraph",
+            "content": "t:sections.main-collection-banner.settings.paragraph.content"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_collection_description",
+            "default": true,
+            "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_collection_image",
+            "default": false,
+            "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
+            "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
+        },
+        {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "label": "t:sections.all.colors.label",
+            "default": "inverse"
+        },
+        {
+            "type": "checkbox",
+            "id": "background_transparent",
+            "default": true,
+            "label": "t:settings_schema.colors.settings.background_transparent.label"
+        },
+        {
+            "type": "color_scheme",
+            "id": "content_color_scheme",
+            "label": "t:settings_schema.colors.settings.content_color_scheme.label",
+            "default": "background-1"
+        },
+        {
+            "type": "select",
+            "id": "background_texture",
+            "options": [
+                {
+                    "value": "",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__1.label"
+                },
+                {
+                    "value": "paper",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__2.label"
+                },
+                {
+                    "value": "torn",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__3.label"
+                },
+                {
+                    "value": "lined",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__4.label"
+                }
+            ],
+            "default": "paper",
+            "label": "t:settings_schema.textures.settings.background_texture.label"
+        }
+    ]
 }
 {% endschema %}

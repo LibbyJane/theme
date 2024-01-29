@@ -21,7 +21,7 @@
     </div>
     {% if page.content != blank %}
         {% assign first_char = page.content | slice: 0 %}
-        <div class="page-width page-width--narrow zi-base isolate content-padding default-content-style ">
+        <div class="page-width page-width--narrow zi-base isolate content-padding-med default-content-style ">
             <div class="rte {% unless first_char == "<" %}p{% endunless %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 {{ page.content }}
             </div>

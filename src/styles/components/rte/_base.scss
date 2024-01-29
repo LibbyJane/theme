@@ -53,6 +53,15 @@
     }
 }
 
+.rte-img--pull-right {
+    display: inline-flex;
+    float: right;
+    margin: 0 0 var(--space) var(--space-med);
+
+    @media screen and (min-width: 750px) {
+        margin: 0 -4rem var(--space) var(--space-med);
+    }
+}
 
 .rte.inline-richtext a {
     color: currentColor;
