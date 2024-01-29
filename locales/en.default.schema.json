@@ -561,11 +561,6 @@
                 "heading": "Colors",
                 "has_cards_info": "To change the card color scheme, update your theme settings."
             },
-            "color_boundary": {
-                "label": "Color scheme target",
-                "container": "Apply to container",
-                "contents": "Apply to contents"
-            },
             "heading": {
                 "label": "Heading"
             },

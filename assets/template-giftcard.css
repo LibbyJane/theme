@@ -5,6 +5,7 @@
   --content-padding-inline: var(--inline-padding-max);
   --content-padding-inline: clamp(var(--space-sm), 4vw, var(--inline-padding-max));
   --content-padding: var(--space-med) var(--content-padding-inline) var(--space-sm);
+  --content-padding--med: calc(var(--content-padding-inline)*1.25) calc(var(--content-padding-inline)*1.25) calc(var(--content-padding-inline)*1.25 - var(--space));
   --full-width-offset-margin: calc(var(--content-padding-inline) * -1);
   --inline-padding-lg: var(--space-xxl);
   --border-width: 2px;
@@ -495,6 +496,10 @@
   padding: var(--content-padding);
 }
 
+.content-padding-med {
+  padding: var(--content-padding-medium);
+}
+
 .content-margin-inline {
   margin-left: var(--content-padding-inline);
   margin-right: var(--content-padding-inline);
@@ -588,6 +593,28 @@
 
 .zi-base {
   z-index: var(--zi-base);
+}
+
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style-type: "";
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  word-wrap: normal !important;
 }
 
 :root {

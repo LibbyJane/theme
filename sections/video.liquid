@@ -19,7 +19,7 @@
     assign video_id = section.settings.video.id | default: section.settings.video_url.id
     assign video_alt = section.settings.video.alt | default: section.settings.description
     assign alt = 'sections.video.load_video' | t: description: video_alt | escape
-    assign poster = section.settings.video.preview_image | default: section.settings.cover_image
+    assign poster = section.settings.cover_image | default: section.settings.video.preview_image
 
     if section.settings.video != null
         assign ratio_diff = section.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
@@ -52,7 +52,7 @@
         <div
             class="video-section__media"
             {% if poster != null %}
-            style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+                style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
             {% endif %}
         >
             {%- if section.settings.video == null and section.settings.video_url != null -%}
@@ -185,12 +185,6 @@
             "label": "t:sections.all.heading_size.label"
         },
         {
-            "type": "checkbox",
-            "id": "enable_video_looping",
-            "label": "t:sections.video.settings.enable_video_looping.label",
-            "default": false
-        },
-        {
             "type": "header",
             "content": "t:sections.video.settings.header__1.content"
         },
@@ -214,6 +208,12 @@
             "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "label": "t:sections.video.settings.video_url.label",
             "info": "t:sections.video.settings.video_url.info"
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_video_looping",
+            "label": "t:sections.video.settings.enable_video_looping.label",
+            "default": false
         },
         {
             "type": "image_picker",
@@ -240,7 +240,7 @@
             "type": "color_scheme",
             "id": "color_scheme",
             "label": "t:sections.all.colors.label",
-            "default": "background-1"
+            "default": "inverse"
         },
         {
             "type": "checkbox",
