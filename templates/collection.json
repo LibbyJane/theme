@@ -4,8 +4,9 @@
       "type": "main-collection-banner",
       "settings": {
         "show_collection_description": true,
-        "show_collection_image": false,
+        "show_collection_image": true,
         "color_scheme": "background-1",
+        "background_transparent": true,
         "color_boundary": "content"
       }
     },
@@ -14,6 +15,8 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
+        "color_scheme": "",
+        "background_transparent": false,
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
