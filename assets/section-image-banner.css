@@ -28,6 +28,11 @@
     justify-content: center;
   }
 }
+.button-bar button:only-child,
+.button-bar .button:only-child,
+.button-bar a:only-child {
+  margin-inline: auto;
+}
 
 .button-bar--fluid-buttons button,
 .button-bar--fluid-buttons .button,

@@ -149,7 +149,7 @@
         --blog-card-shadow-horizontal-offset: {{ settings.blog_card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
         --blog-card-shadow-vertical-offset: {{ settings.blog_card_shadow_vertical_offset | divided_by: 10.0 }}rem;
         --blog-card-shadow-blur-radius: {{ settings.blog_card_shadow_blur | divided_by: 10.0 }}rem;
-        --blog-card-image-offset: {% if settings.blog_card_image_full_width  %}{{ settings.blog_card_image_padding | divided_by: -10.0 }}rem;{% else %}0{% endif %};
+        --blog-card-image-offset: {% if settings.blog_card_image_full_width and settings.blog_card_style == 'card' %}{{ settings.blog_card_image_padding | divided_by: -10.0 }}rem{% else %}0{% endif %};
 
         --popup-border-width: {{ settings.popup_border_thickness }}px;
         --popup-border-opacity: {{ settings.popup_border_opacity | divided_by: 100.0 }};

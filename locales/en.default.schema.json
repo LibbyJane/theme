@@ -151,7 +151,7 @@
                     "label": "Style"
                 },
                 "image_full_width": {
-                    "label": "Card image spans full width"
+                    "label": "If style is 'Card', image spans full width"
                 }
             }
         },
