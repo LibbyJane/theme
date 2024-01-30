@@ -14,9 +14,9 @@
     width: 100%;
     max-width: var(--page-width);
     margin: 0 auto;
-    //padding: 0 var(--content-padding-inline);
+
     // todo
-    // outline: 5px dotted red;
+    //outline: 5px dotted red;
 
     &.utility-bar__grid {
         padding-left: 3rem;
@@ -28,6 +28,17 @@
         }
     }
 }
+
+// .content-padding-inline {
+//      // todo
+//      outline: 5px dotted pink;
+// }
+
+
+// .content-padding-inline {
+//     // todo
+//     outline: 5px dotted purple;
+// }
 
 .page-width--medium {
     max-width: var(--page-width--medium);

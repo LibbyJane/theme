@@ -5,7 +5,7 @@
   --content-padding-inline: var(--inline-padding-max);
   --content-padding-inline: clamp(var(--space-sm), 4vw, var(--inline-padding-max));
   --content-padding: var(--space-med) var(--content-padding-inline) var(--space-sm);
-  --content-padding--med: calc(var(--content-padding-inline)*1.25) calc(var(--content-padding-inline)*1.25) calc(var(--content-padding-inline)*1.25 - var(--space));
+  --content-padding-med: calc(var(--content-padding-inline)*1.25) calc(var(--content-padding-inline)*1.25) calc(var(--content-padding-inline)*1.25 - var(--space));
   --full-width-offset-margin: calc(var(--content-padding-inline) * -1);
   --inline-padding-lg: var(--space-xxl);
   --border-width: 2px;
@@ -497,7 +497,7 @@
 }
 
 .content-padding-med {
-  padding: var(--content-padding-medium);
+  padding: var(--content-padding-med);
 }
 
 .content-margin-inline {

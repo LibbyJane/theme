@@ -12,19 +12,15 @@
     &.articles-wrapper {
         margin-bottom: var(--space);
 
-        @media screen and (min-width: 990px) {
-            margin-bottom: 0;
-        }
+        // @media screen and (min-width: 990px) {
+        //     margin-bottom: 0;
+        // }
     }
 
     .article {
         scroll-snap-align: start;
     }
 }
-
-
-
-
 
 @media screen and (max-width: 749px) {
   .blog__post.article {
@@ -39,16 +35,6 @@
 .blog__posts .card-wrapper {
   width: 100%;
 }
-
-.blog__button {
-    margin-top: 3rem;
-
-    @media screen and (min-width: 750px) {
-        margin-top: 5rem;
-    }
-}
-
-
 
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {
