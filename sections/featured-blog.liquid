@@ -54,8 +54,6 @@
                         {% render 'article-card',
                             blog: section.settings.blog,
                             article: article,
-                            color: section.settings.content_color_scheme,
-                            background_transparent: true,
                             media_aspect_ratio: 1.66,
                             show_image: section.settings.show_image,
                             show_date: section.settings.show_date,
@@ -224,12 +222,6 @@
             ],
             "default": "paper",
             "label": "t:settings_schema.textures.settings.background_texture.label"
-        },
-        {
-            "type": "checkbox",
-            "id": "content_background_transparent",
-            "default": false,
-            "label": "t:settings_schema.colors.settings.content_background_transparent.label"
         },
         {
             "type": "checkbox",

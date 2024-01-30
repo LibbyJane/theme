@@ -973,30 +973,6 @@
                 "default": "background-2"
             },
             {
-                "type": "select",
-                "id": "blog_card_texture",
-                "options": [
-                    {
-                        "value": "",
-                        "label": "t:settings_schema.blog_cards.settings.texture.options__1.label"
-                    },
-                    {
-                        "value": "paper",
-                        "label": "t:settings_schema.blog_cards.settings.texture.options__2.label"
-                    },
-                    {
-                        "value": "torn",
-                        "label": "t:settings_schema.blog_cards.settings.texture.options__3.label"
-                    },
-                    {
-                        "value": "lined",
-                        "label": "t:settings_schema.blog_cards.settings.texture.options__4.label"
-                    }
-                ],
-                "default": "",
-                "label": "t:settings_schema.blog_cards.settings.texture.label"
-            },
-            {
                 "type": "header",
                 "content": "t:settings_schema.global.settings.header__border.content"
             },

@@ -18,7 +18,8 @@
     backface-visibility: hidden;
     background-color: rgb(var(--color-background));
     border-radius: var(--card-corner-radius);
-    border: var(--card-border-width) solid rgba(var(--color-background),var(--card-border-opacity));
+    border: var(--card-border-width) solid rgba(var(--color-foreground),var(--card-border-opacity));
     box-shadow: var(--card-shadow-horizontal-offset) var(--card-shadow-vertical-offset) var(--card-shadow-blur-radius) rgba(var(--color-shadow), var(--card-shadow-opacity));
+    overflow: hidden;
     padding: var(--card-padding);
 }

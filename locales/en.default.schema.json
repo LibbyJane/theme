@@ -152,21 +152,6 @@
                 },
                 "image_full_width": {
                     "label": "Card image spans full width"
-                },
-                "texture": {
-                    "options__1": {
-                        "label": "None"
-                    },
-                    "options__2": {
-                        "label": "Paper"
-                    },
-                    "options__3": {
-                        "label": "Torn"
-                    },
-                    "options__4": {
-                        "label": "Lined"
-                    },
-                    "label": "Standard card background texture "
                 }
             }
         },
@@ -239,9 +224,6 @@
                 },
                 "content_color_scheme": {
                     "label": "Content color scheme"
-                },
-                "content_background_transparent": {
-                    "label": "Inner background transparent"
                 },
                 "success_color": {
                     "label": "Success indicator color"

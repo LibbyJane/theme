@@ -66,9 +66,11 @@
             flex-wrap: wrap;
             height: auto;
 
-        .slider & {
-            height: 100%;
-        }
+        // .slider & {
+            // breaks blog posts
+            // todo: check where needed?
+        //     height: 100%;
+        // }
 
         .article-card & {
             flex-direction: column;
