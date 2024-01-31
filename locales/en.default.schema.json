@@ -213,9 +213,6 @@
                 "background_texture": {
                     "label": "Apply texture to the background color"
                 },
-                "use_container_color_scheme": {
-                    "label": "Apply color scheme to container"
-                },
                 "container_color_scheme": {
                     "label": "Section color scheme"
                 },
@@ -224,6 +221,9 @@
                 },
                 "content_color_scheme": {
                     "label": "Content color scheme"
+                },
+                "content_background_transparent": {
+                    "label": "Content background transparent"
                 },
                 "success_color": {
                     "label": "Success indicator color"
@@ -1869,6 +1869,9 @@
                 "featured_image": {
                     "name": "Featured image",
                     "settings": {
+                        "image_full_screen": {
+                            "label": "Featured image full screen width"
+                        },
                         "image_height": {
                             "label": "Featured image height",
                             "options__1": {

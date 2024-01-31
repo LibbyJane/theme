@@ -74,8 +74,8 @@
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
-        --line-height-body: calc(1 + 0.4 / var(--font-body-scale));
-        --line-height-heading: calc(1 + 0.4 / var(--font-heading-scale));
+        --line-height-body: calc(1 + 0.45 / var(--font-body-scale));
+        --line-height-heading: calc(1 + 0.45 / var(--font-heading-scale));
 
         --background-image: url({% if settings.site_background != blank %}{{ settings.site_background | image_url }}{% else %}{{ 'background.jpg' | asset_url }}{% endif %});
         --background-size: {% if settings.site_background != blank %}'cover'{% else %}'initial'{% endif %};

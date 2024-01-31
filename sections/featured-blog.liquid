@@ -92,7 +92,7 @@
                                     {%- endif -%}
                                     <div class="card__content">
                                         <div class="card__information">
-                                            <h3 class="card__heading">
+                                            <h3 class="card__heading h2">
                                                 {{ 'sections.featured_blog.onboarding_title' | t }}
                                             </h3>
                                             <p class="article-card__excerpt rte-width">
@@ -198,6 +198,12 @@
             "id": "content_color_scheme",
             "label": "t:settings_schema.colors.settings.content_color_scheme.label",
             "default": "background-1"
+        },
+        {
+            "type": "checkbox",
+            "id": "content_background_transparent",
+            "default": false,
+            "label": "t:settings_schema.colors.settings.content_background_transparent.label"
         },
         {
             "type": "select",

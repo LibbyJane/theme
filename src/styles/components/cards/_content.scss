@@ -57,7 +57,7 @@
     padding: 0 3px;
 
     .card--standard & {
-        padding: 0 0 var(--padding);
+        padding: 0 0 var(--space);
     }
 
     .collection-list .card__inner &,
@@ -71,11 +71,11 @@
         gap: var(--space);
         justify-content: var(--card-justification);
     margin: 0;
-    padding: 0;
+    padding: 0 0 var(--space);
 
-    .card--standard & {
-        padding-bottom: var(--padding);
-    }
+    // .card--standard & {
+    //     padding-bottom: var(--space);
+    // }
 
     .grid--2-col-tablet-down & {
         @media screen and (max-width: 749px) {

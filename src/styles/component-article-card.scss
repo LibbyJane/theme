@@ -1,6 +1,10 @@
 .article-card {
     @media screen and (min-width: 750px) {
-    margin-inline: var(--space);
+        margin-inline: var(--space);
+
+        .blog-articles & {
+            margin-inline: 0;
+        }
     }
 
     &.card--standard {

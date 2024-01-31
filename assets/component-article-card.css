@@ -2,6 +2,9 @@
   .article-card {
     margin-inline: var(--space);
   }
+  .blog-articles .article-card {
+    margin-inline: 0;
+  }
 }
 .article-card.card--standard.card--text {
   padding-top: var(--space);
