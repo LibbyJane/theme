@@ -129,6 +129,10 @@
 .slider .card .ratio {
   height: 100%;
 }
+.contains-card--article.contains-card--standard .card.ratio,
+.contains-card--article.contains-card--standard .card .ratio {
+  height: auto;
+}
 .article-card .card.ratio,
 .article-card .card .ratio {
   flex-direction: column;
@@ -153,7 +157,7 @@
   backface-visibility: hidden;
   background-color: rgb(var(--color-background));
   border-radius: var(--card-corner-radius);
-  border: var(--card-border-width) solid rgba(var(--color-background), var(--card-border-opacity));
+  border: var(--card-border-width) solid rgba(var(--color-foreground), var(--card-border-opacity));
   box-shadow: var(--card-shadow-horizontal-offset) var(--card-shadow-vertical-offset) var(--card-shadow-blur-radius) rgba(var(--color-shadow), var(--card-shadow-opacity));
   padding: var(--card-padding);
 }
@@ -223,7 +227,7 @@
   padding: 0 3px;
 }
 .card--standard .card__information {
-  padding: 0 0 var(--padding);
+  padding: 0 0 var(--space);
 }
 .collection-list .card__inner .card__information, .collage .card__inner .card__information {
   display: none;
@@ -234,10 +238,7 @@
   gap: var(--space);
   justify-content: var(--card-justification);
   margin: 0;
-  padding: 0;
-}
-.card--standard .card__heading {
-  padding-bottom: var(--padding);
+  padding: 0 0 var(--space);
 }
 @media screen and (max-width: 749px) {
   .grid--2-col-tablet-down .card__heading {
@@ -260,7 +261,7 @@
   backface-visibility: hidden;
   background-color: rgb(var(--color-background));
   border-radius: var(--card-corner-radius);
-  border: var(--card-border-width) solid rgba(var(--color-background), var(--card-border-opacity));
+  border: var(--card-border-width) solid rgba(var(--color-foreground), var(--card-border-opacity));
   box-shadow: var(--card-shadow-horizontal-offset) var(--card-shadow-vertical-offset) var(--card-shadow-blur-radius) rgba(var(--color-shadow), var(--card-shadow-opacity));
   padding: var(--card-padding);
   margin-bottom: var(--space);

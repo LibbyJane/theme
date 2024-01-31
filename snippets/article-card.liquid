@@ -24,8 +24,8 @@
         endif
     -%}
     <div class="article-card-wrapper card-wrapper">
-        <a href="{{ article.url }}" class="card article-card card--{{ settings.blog_card_style }} color-{{ settings.blog_card_color_scheme }}
-            {%- if media_height and media_height != 'adapt' %} article-card__image--{{ media_height }}{% endif %}
+        <a href="{{ article.url }}" class="card article-card card--{{ settings.blog_card_style }}
+            article-card__image--{%- if media_height and media_height != 'adapt' %}{{ media_height }}{% else %}adapt{% endif %}
             {%- if article.image and show_image %} card--media{% else %} card--text{% endif %}
             {%- if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} {% endif %}
             {%- if settings.blog_card_style == 'card' and media_height == nil and article.image == empty or show_image == false %} ratio{% endif %}
@@ -72,7 +72,8 @@
             </div>
             <div class="card__content">
                 <div class="card__information">
-                    <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
+                    <!-- <h3 class="card__heading{% if show_excerpt %} h2{% endif %}"> -->
+                    <h3 class="card__heading">
                         {{ article.title | truncate: 50 | escape }}
                     </h3>
                     <div class="article-card__info caption-with-letter-spacing h5">
@@ -95,7 +96,7 @@
                     {%- endif -%}
                     <div class="article-card__footer">
                     {%- if article.comments_count > 0 and blog.comments_enabled? -%}
-                        <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
+                        <p class="text-small">{{ 'blogs.article.comments' | t: count: article.comments_count }}</p>
                     {%- endif -%}
                     </div>
                 {%- endif -%}

@@ -5,7 +5,7 @@
   --content-padding-inline: var(--inline-padding-max);
   --content-padding-inline: clamp(var(--space-sm), 4vw, var(--inline-padding-max));
   --content-padding: var(--space-med) var(--content-padding-inline) var(--space-sm);
-  --content-padding--med: calc(var(--content-padding-inline)*1.25) calc(var(--content-padding-inline)*1.25) calc(var(--content-padding-inline)*1.25 - var(--space));
+  --content-padding-med: calc(var(--content-padding-inline)*1.25) calc(var(--content-padding-inline)*1.25) calc(var(--content-padding-inline)*1.25 - var(--space));
   --full-width-offset-margin: calc(var(--content-padding-inline) * -1);
   --inline-padding-lg: var(--space-xxl);
   --border-width: 2px;
@@ -497,7 +497,7 @@
 }
 
 .content-padding-med {
-  padding: var(--content-padding-medium);
+  padding: var(--content-padding-med);
 }
 
 .content-margin-inline {
@@ -2815,37 +2815,6 @@ summary .icon-funnel-clear,
   width: fit-content;
 }
 
-.share-button__button {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  display: flex;
-  align-items: center;
-  color: rgb(var(--color-link), var(--alpha-link));
-  font-size: var(--font-size-smaller);
-  opacity: var(--opacity-light);
-  margin-left: 0;
-  padding-left: 0;
-}
-.share-button__button:hover {
-  opacity: 1;
-}
-.share-button__button .icon-share {
-  height: 1.2rem;
-  margin-right: 1rem;
-  min-width: 1.3rem;
-}
-
-details[open] > .share-button__fallback {
-  animation: animateMenuOpen var(--duration-default) ease;
-}
-
-.share-button__fallback button {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-}
-
 .share-button__button .share-button__fallback {
   display: flex;
   align-items: center;
@@ -2858,6 +2827,41 @@ details[open] > .share-button__fallback {
   min-width: max-content;
   border-radius: var(--inputs-radius);
   border: 0;
+}
+
+.share-button__button {
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
+  color: rgb(var(--color-foreground));
+  line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
+  word-break: break-word;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: rgb(var(--color-link), var(--alpha-link));
+  font-size: var(--font-size-smaller);
+  gap: var(--space);
+  opacity: var(--opacity-light);
+  margin-left: 0;
+  padding-left: 0;
+}
+.share-button__button:hover {
+  opacity: 1;
+}
+.share-button__button .icon-share {
+  height: var(--icon-size-sm);
+  min-width: var(--icon-size-sm);
+}
+
+details[open] > .share-button__fallback {
+  animation: animateMenuOpen var(--duration-default) ease;
+}
+
+.share-button__fallback button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .share-button__fallback:after {

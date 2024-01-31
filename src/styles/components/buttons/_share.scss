@@ -9,14 +9,29 @@
     }
 }
 
+
+.share-button__button
+.share-button__fallback {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 3rem;
+    left: 0.1rem;
+    z-index: 3;
+    width: 100%;
+    min-width: max-content;
+    border-radius: var(--inputs-radius);
+    border: 0;
+}
+
 .share-button__button {
+    @include text-heading;
     cursor: pointer;
     background-color: transparent;
     border: none;
-    display: flex;
-        align-items: center;
         color: rgb(var(--color-link),var(--alpha-link));
     font-size: var(--font-size-smaller);
+    gap: var(--space);
     opacity: var(--opacity-light);
     margin-left: 0;
     padding-left: 0;
@@ -29,12 +44,12 @@
     }
 
     .icon-share {
-        height: 1.2rem;
-        margin-right: 1rem;
-        min-width: 1.3rem;
+        height: var(--icon-size-sm);
+        min-width: var(--icon-size-sm);
     }
-
 }
+
+
 
   details[open] > .share-button__fallback {
     animation: animateMenuOpen var(--duration-default) ease;
@@ -51,19 +66,6 @@
 }
 
 
-  .share-button__button
-  .share-button__fallback {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 3rem;
-    left: 0.1rem;
-    z-index: 3;
-    width: 100%;
-    min-width: max-content;
-    border-radius: var(--inputs-radius);
-    border: 0;
-  }
 
   .share-button__fallback:after {
     pointer-events: none;

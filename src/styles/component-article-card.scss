@@ -1,4 +1,12 @@
 .article-card {
+    @media screen and (min-width: 750px) {
+        margin-inline: var(--space);
+
+        .blog-articles & {
+            margin-inline: 0;
+        }
+    }
+
     &.card--standard {
         &.card--text {
             padding-top: var(--space)

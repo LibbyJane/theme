@@ -70,6 +70,10 @@
             height: 100%;
         }
 
+        .contains-card--article.contains-card--standard & {
+            height: auto;
+        }
+
         .article-card & {
             flex-direction: column;
         }

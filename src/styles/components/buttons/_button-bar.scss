@@ -33,6 +33,14 @@
             justify-content: center;
         }
     }
+
+    button,
+    .button,
+    a {
+        &:only-child {
+            margin-inline: auto;
+        }
+    }
 }
 
 .button-bar--fluid-buttons {
