@@ -276,9 +276,6 @@ slider-component {
   }
 
   .slider--desktop.grid--1-col-desktop .grid__item {
-    @media screen and (min-width: 750px) {
-        width: calc((100% - var(--desktop-margin-left-first-item)) - var(--grid-horizontal-spacing) * 9);
-    }
     width: calc((100% - var(--desktop-margin-left-first-item)) - var(--grid-horizontal-spacing) * 9);
   }
 
@@ -340,12 +337,6 @@ slider-component {
         transform: scale(1.1);
     }
 }
-
-.slider-counter__link--dots  {
-
-}
-
-
 
 .slider-counter__link--numbers {
     color: rgba(var(--color-foreground), 0.5);

@@ -587,6 +587,15 @@
             "content": {
                 "heading": "Content"
             },
+            "width": {
+                "label": "Content width",
+                "options__1": {
+                    "label": "Full screen"
+                },
+                "options__2": {
+                    "label": "Page width"
+                }
+            },
             "heading_size": {
                 "label": "Heading size",
                 "options__1": {
