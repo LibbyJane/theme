@@ -69,6 +69,13 @@
         }
     }
 
+    .grid--1-col-desktop & {
+        @media screen and (min-width: 990px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
     .grid--2-col-desktop & {
         @media screen and (min-width: 990px) {
             width: calc(50% - var(--grid-horizontal-spacing) / 2);

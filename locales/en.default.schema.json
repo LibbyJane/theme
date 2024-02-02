@@ -274,6 +274,23 @@
                 }
             }
         },
+        "background": {
+            "name": "Background",
+            "settings": {
+                "background_type": {
+                    "options__1": {
+                        "label": "Page width"
+                    },
+                    "options__2": {
+                        "label": "Full width"
+                    },
+                    "options__3": {
+                        "label": "Transparent"
+                    },
+                    "label": "Background width"
+                }
+            }
+        },
         "logo": {
             "name": "Logo and Images",
             "settings": {
@@ -569,6 +586,15 @@
             },
             "content": {
                 "heading": "Content"
+            },
+            "width": {
+                "label": "Content width",
+                "options__1": {
+                    "label": "Full screen"
+                },
+                "options__2": {
+                    "label": "Page width"
+                }
             },
             "heading_size": {
                 "label": "Heading size",

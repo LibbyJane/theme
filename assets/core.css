@@ -1073,20 +1073,11 @@ a {
   overflow: hidden;
 }
 
-.page-width {
+.page-width,
+.background-page {
   width: 100%;
   max-width: var(--page-width);
   margin: 0 auto;
-}
-.page-width.utility-bar__grid {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-@media screen and (min-width: 750px) {
-  .page-width.utility-bar__grid {
-    padding-left: 3.2rem;
-    padding-right: 3.2rem;
-  }
 }
 
 .page-width--medium {
@@ -1183,6 +1174,12 @@ a {
 @media screen and (min-width: 750px) {
   .grid--4-col-tablet .grid__item {
     width: calc(25% - var(--grid-horizontal-spacing) * 3 / 4);
+  }
+}
+@media screen and (min-width: 990px) {
+  .grid--1-col-desktop .grid__item {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 @media screen and (min-width: 990px) {
@@ -1704,6 +1701,10 @@ details[open] > .header__submenu {
 .announcement-bar form,
 .announcement-bar .disclosure {
   font-size: var(--font-size-smaller);
+}
+
+.utility-bar__grid {
+  padding-inline: var(-space-xl);
 }
 
 .announcement-bar-slider, .utility-bar__grid .announcement-bar-slider,

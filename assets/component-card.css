@@ -217,6 +217,7 @@
 
 .card__content {
   margin-bottom: auto;
+  width: 100%;
 }
 
 .card--text {
@@ -224,9 +225,9 @@
 }
 
 .card__information {
-  padding: 0 3px;
+  padding: var(--space-sm);
 }
-.card--standard .card__information {
+.card--text .card__information {
   padding: 0 0 var(--space);
 }
 .collection-list .card__inner .card__information, .collage .card__inner .card__information {

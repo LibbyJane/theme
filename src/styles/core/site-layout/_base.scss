@@ -10,23 +10,11 @@
     overflow: hidden;
 }
 
-.page-width {
+.page-width,
+.background-page {
     width: 100%;
     max-width: var(--page-width);
     margin: 0 auto;
-    //padding: 0 var(--content-padding-inline);
-    // todo
-    // outline: 5px dotted red;
-
-    &.utility-bar__grid {
-        padding-left: 3rem;
-        padding-right: 3rem;
-
-        @media screen and (min-width: 750px) {
-            padding-left: 3.2rem;
-            padding-right: 3.2rem;
-        }
-    }
 }
 
 .page-width--medium {

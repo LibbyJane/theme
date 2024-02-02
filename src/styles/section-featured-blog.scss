@@ -12,19 +12,29 @@
     &.articles-wrapper {
         margin-bottom: var(--space);
 
-        // @media screen and (min-width: 990px) {
-        //     margin-bottom: 0;
-        // }
+        @media screen and (min-width: 750px) {
+            --grid-horizontal-spacing: calc( var(--grid-desktop-horizontal-spacing) * 2 );
+        }
+    }
+
+    .card-wrapper {
+        width: 100%;
     }
 
     .article {
         scroll-snap-align: start;
     }
+
+    .article-card {
+        margin-inline: 0;
+    }
+
+    .card--media {
+        .card__inner {
+            height: auto;
+        }
+    }
 }
-
-
-
-
 
 @media screen and (max-width: 749px) {
   .blog__post.article {
@@ -36,9 +46,7 @@
   background-color: rgb(var(--color-background));
 }
 
-.blog__posts .card-wrapper {
-  width: 100%;
-}
+
 
 .blog__button {
     margin-top: 3rem;
