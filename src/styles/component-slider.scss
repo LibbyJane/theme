@@ -276,6 +276,9 @@ slider-component {
   }
 
   .slider--desktop.grid--1-col-desktop .grid__item {
+    @media screen and (min-width: 750px) {
+        width: calc((100% - var(--desktop-margin-left-first-item)) - var(--grid-horizontal-spacing) * 9);
+    }
     width: calc((100% - var(--desktop-margin-left-first-item)) - var(--grid-horizontal-spacing) * 9);
   }
 

@@ -68,6 +68,29 @@
         }]
     },
     {
+        "name": "t:settings_schema.background.name",
+        "settings": [{
+            "type": "select",
+            "id": "background_type",
+            "options": [
+                {
+                    "value": "page",
+                    "label": "t:settings_schema.background.settings.background_type.options__1.label"
+                },
+                {
+                    "value": "full",
+                    "label": "t:settings_schema.background.settings.background_type.options__2.label"
+                },
+                {
+                    "value": "transparent",
+                    "label": "t:settings_schema.background.settings.background_type.options__3.label"
+                }
+            ],
+            "default": "page",
+            "label": "t:settings_schema.background.settings.background_type.label"
+        }]
+    },
+    {
         "name": "t:settings_schema.colors.name",
         "settings": [
             {
@@ -1015,7 +1038,7 @@
                 "id": "blog_card_shadow_opacity",
                 "min": 0,
                 "max": 100,
-                "step": 5,
+                "step": 1,
                 "unit": "%",
                 "label": "t:settings_schema.global.settings.opacity.label",
                 "default": 10

@@ -35,10 +35,10 @@
         {%- endif -%}
     </header>
 
-    <slider-component class="slider-mobile-gutter margin-bottom page-width{% if show_desktop_slider %} slider-component-desktop{% endif %} {% if show_mobile_slider %} slider-component-mobile{% endif %} content-padding color-{{ section.settings.content_color_scheme }} texture-{{section.settings.background_texture}} background-{% if section.settings.content_background_transparent %}transparent {% else %}theme {% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <slider-component class="slider-mobile-gutter margin-bottom {% if show_desktop_slider %} slider-component-desktop{% endif %} {% if show_mobile_slider %} slider-component-mobile{% endif %} content-padding color-{{ section.settings.content_color_scheme }} texture-{{section.settings.background_texture}} background-{{section.settings.background_type}}  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <ul
         id="Slider-{{ section.id }}"
-        class="blog__posts articles-wrapper contains-card contains-card--article{% if settings.blog_card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
+        class="page-width blog__posts articles-wrapper contains-card contains-card--article{% if settings.blog_card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
         role="list"
         >
             {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
@@ -200,10 +200,24 @@
             "default": "background-1"
         },
         {
-            "type": "checkbox",
-            "id": "content_background_transparent",
-            "default": false,
-            "label": "t:settings_schema.colors.settings.content_background_transparent.label"
+            "type": "select",
+            "id": "background_type",
+            "options": [
+                {
+                    "value": "page",
+                    "label": "t:settings_schema.background.settings.background_type.options__1.label"
+                },
+                {
+                    "value": "full",
+                    "label": "t:settings_schema.background.settings.background_type.options__2.label"
+                },
+                {
+                    "value": "transparent",
+                    "label": "t:settings_schema.background.settings.background_type.options__3.label"
+                }
+            ],
+            "default": "full",
+            "label": "t:settings_schema.background.settings.background_type.label"
         },
         {
             "type": "select",

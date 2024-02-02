@@ -24,6 +24,10 @@
     }
 }
 
+.utility-bar__grid {
+    padding-inline: var(-space-xl);
+}
+
 .announcement-bar-slider {
     &,
     .utility-bar__grid &,

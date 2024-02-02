@@ -42,6 +42,7 @@
 
 .card__content {
     margin-bottom: auto;
+    width: 100%;
 }
 
 .card--text {
@@ -54,11 +55,15 @@
 // .card--standard.card--text.article-card>.card__content .card__information,
 // .card--standard>.card__content .card__caption {
 .card__information {
-    padding: 0 3px;
+    padding: var(--space-sm);
 
-    .card--standard & {
+    .card--text & {
         padding: 0 0 var(--space);
     }
+
+    // .card--standard & {
+    //     padding: 0 0 var(--space);
+    // }
 
     .collection-list .card__inner &,
     .collage .card__inner & {

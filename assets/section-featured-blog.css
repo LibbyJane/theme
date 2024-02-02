@@ -10,8 +10,22 @@
 .blog__posts.articles-wrapper {
   margin-bottom: var(--space);
 }
+@media screen and (min-width: 750px) {
+  .blog__posts.articles-wrapper {
+    --grid-horizontal-spacing: calc( var(--grid-desktop-horizontal-spacing) * 2 );
+  }
+}
+.blog__posts .card-wrapper {
+  width: 100%;
+}
 .blog__posts .article {
   scroll-snap-align: start;
+}
+.blog__posts .article-card {
+  margin-inline: 0;
+}
+.blog__posts .card--media .card__inner {
+  height: auto;
 }
 
 @media screen and (max-width: 749px) {
@@ -21,10 +35,6 @@
 }
 .background-secondary .blog-placeholder__content {
   background-color: rgb(var(--color-background));
-}
-
-.blog__posts .card-wrapper {
-  width: 100%;
 }
 
 .blog__button {
