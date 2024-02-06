@@ -143,6 +143,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "5460033060862993441": {
+        "type": "shopify:\/\/apps\/essential-announcement\/blocks\/app-embed\/93b5429f-c8d6-4c33-ae14-250fd84f361b",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
