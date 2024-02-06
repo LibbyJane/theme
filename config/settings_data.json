@@ -149,6 +149,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "5890205134905443601": {
+        "type": "shopify:\/\/apps\/seoant-trust-badges\/blocks\/trust_core\/f42f2346-5d14-4b41-a8b9-4b6ee352262e",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
