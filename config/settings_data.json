@@ -273,10 +273,10 @@
         "settings": {
           "background": "#fbfbfb",
           "background_gradient": "radial-gradient(rgba(255, 255, 255, 1), rgba(246, 248, 250, 1) 30%, rgba(237, 238, 240, 1) 100%)",
-          "text": "#0f3079",
-          "button": "#1c2f59",
+          "text": "#242833",
+          "button": "#242833",
           "button_label": "#f6f8fa",
-          "secondary_button_label": "#1c2f59",
+          "secondary_button_label": "#242833",
           "shadow": "#010816"
         }
       }
