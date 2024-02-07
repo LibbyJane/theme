@@ -238,20 +238,20 @@
         "collection-0": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "australia"
           }
         },
         "product": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "the-3p-fulfilled-snowboard",
             "second_image": false
           }
         },
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "south-africa"
           }
         }
       },
