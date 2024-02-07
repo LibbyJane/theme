@@ -37,7 +37,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
         "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image_height": "small",
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
@@ -47,6 +47,37 @@
         "stack_images_on_mobile": false,
         "show_text_below": false,
         "image_behavior": "none"
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "desktop_content_position": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "background_texture": "paper",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "c657e444-d7f1-438c-bdf8-529f9fd69377": {
@@ -198,38 +229,6 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "disabled": true,
-      "settings": {
-        "content_alignment": "center",
-        "desktop_content_position": "center",
-        "color_scheme": "inverse",
-        "full_width": true,
-        "background_texture": "paper",
-        "padding_top": 40,
-        "padding_bottom": 40
       }
     },
     "collage": {
@@ -690,10 +689,10 @@
   },
   "order": [
     "image_banner",
+    "rich_text",
     "c657e444-d7f1-438c-bdf8-529f9fd69377",
     "featured_collection",
     "90d8b6df-d98a-47ac-a60d-4dab79b288ea",
-    "rich_text",
     "collage",
     "video",
     "707cd939-d696-4530-a0a6-5655a617fdbf",
