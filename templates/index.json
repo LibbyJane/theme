@@ -18,7 +18,7 @@
             "text_alignment": "center",
             "show_text_box": true,
             "color_scheme": "background-2",
-            "background_texture": "torn",
+            "background_texture": "paper",
             "text_alignment_mobile": "center"
           }
         },
