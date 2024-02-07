@@ -1,5 +1,70 @@
 {
   "sections": {
+    "90d8b6df-d98a-47ac-a60d-4dab79b288ea": {
+      "type": "featured-product",
+      "blocks": {
+        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-title-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-price-1": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-variant_picker-1": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-buy_buttons-1": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-share-1": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-text-1",
+        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-title-1",
+        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-price-1",
+        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-variant_picker-1",
+        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-buy_buttons-1",
+        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-share-1"
+      ],
+      "settings": {
+        "product": "the-collection-snowboard-oxygen",
+        "color_scheme": "accent-1",
+        "background_texture": "torn",
+        "full_width": false,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "c657e444-d7f1-438c-bdf8-529f9fd69377": {
       "type": "slideshow",
       "blocks": {
@@ -135,71 +200,6 @@
         "background_texture": "paper",
         "padding_top": 40,
         "padding_bottom": 40
-      }
-    },
-    "90d8b6df-d98a-47ac-a60d-4dab79b288ea": {
-      "type": "featured-product",
-      "blocks": {
-        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-title-1": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-price-1": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-variant_picker-1": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-buy_buttons-1": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-share-1": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-text-1",
-        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-title-1",
-        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-price-1",
-        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-variant_picker-1",
-        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-buy_buttons-1",
-        "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-share-1"
-      ],
-      "settings": {
-        "product": "the-collection-snowboard-oxygen",
-        "color_scheme": "accent-1",
-        "background_texture": "torn",
-        "full_width": false,
-        "media_size": "large",
-        "constrain_to_viewport": true,
-        "media_fit": "cover",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "featured_collection": {
@@ -688,10 +688,10 @@
     }
   },
   "order": [
+    "90d8b6df-d98a-47ac-a60d-4dab79b288ea",
     "c657e444-d7f1-438c-bdf8-529f9fd69377",
     "image_banner",
     "rich_text",
-    "90d8b6df-d98a-47ac-a60d-4dab79b288ea",
     "featured_collection",
     "collage",
     "video",
