@@ -3299,6 +3299,9 @@
                         "label": "Numbers"
                     }
                 },
+                "overlay_pagination": {
+                    "label": "Overlay pagination"
+                },
                 "auto_rotate": {
                     "label": "Auto-rotate slides"
                 },
