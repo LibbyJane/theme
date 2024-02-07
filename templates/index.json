@@ -10,7 +10,7 @@
             "image_overlay_opacity": 0,
             "heading": "10% off  store-wide",
             "heading_size": "h1",
-            "subheading": "Discount code <strong>RTW2424<\/strong>",
+            "subheading": "Use discount code <strong>RTW2424<\/strong>",
             "button_label": "Start shopping",
             "link": "shopify:\/\/collections\/all",
             "button_style_secondary": "primary",
@@ -25,18 +25,19 @@
         "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
             "image_overlay_opacity": 0,
-            "heading": "Image slide",
+            "heading": "Latest from the blog",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
+            "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in  Hawkes Bay",
+            "button_label": "Read about it",
+            "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
             "button_style_secondary": "secondary",
             "box_align": "middle-center",
             "text_alignment": "center",
             "show_text_box": true,
             "color_scheme": "",
-            "background_texture": "paper",
+            "background_texture": "lined",
             "text_alignment_mobile": "center"
           }
         }
@@ -54,6 +55,35 @@
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
         "image_behavior": "none"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "title": "Favorite products",
+        "heading_size": "h2",
+        "description": "",
+        "show_collection_description": false,
+        "description_style": "body",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "color_scheme": "inverse",
+        "background_transparent": true,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "padding_top": 28,
+        "padding_bottom": 36
       }
     },
     "image_banner": {
@@ -93,7 +123,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
         "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image_height": "small",
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
@@ -201,55 +231,26 @@
         "padding_bottom": 36
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "all",
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_collection_description": false,
-        "description_style": "body",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "color_scheme": "inverse",
-        "background_transparent": true,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
     "collage": {
       "type": "collage",
       "blocks": {
         "collection-0": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "australia"
           }
         },
         "product": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "the-3p-fulfilled-snowboard",
             "second_image": false
           }
         },
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "south-africa"
           }
         }
       },
@@ -688,10 +689,10 @@
   },
   "order": [
     "c657e444-d7f1-438c-bdf8-529f9fd69377",
+    "featured_collection",
     "image_banner",
     "rich_text",
     "90d8b6df-d98a-47ac-a60d-4dab79b288ea",
-    "featured_collection",
     "collage",
     "video",
     "707cd939-d696-4530-a0a6-5655a617fdbf",
