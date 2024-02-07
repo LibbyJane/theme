@@ -35,10 +35,7 @@
     linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
     linear-gradient(#eee .1rem, transparent .1rem),
     var(--background-gradient);
-    //background-image:
-    // linear-gradient(90deg, transparent $vertical-line-offset, rgba(var(--color-foreground), 0.2) $vertical-line-offset, rgba(var(--color-foreground), 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
-    // linear-gradient(rgba(var(--color-foreground), 0.15) .1rem, transparent .1rem),
-    // var(--background-gradient);
+    box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
     padding-left: var(--texture-lined-border-size, 30px);
     position: relative;
 
@@ -53,13 +50,9 @@
         -webkit-mask-box-image: url('img-paper-hole-border-left.svg') 1 round;
         mask-border: url('img-paper-hole-border-left.svg') 1 round;
 
-            // 1 /          /* slice */
-            // // 20px /             /* width */
-            // // 1px                /* outset */
-            // round;             /* repeat */
-        /* source | slice | width | outset | repeat | mode */
-
-       // mask-border: url('img-paper-hole-border-left.svg') 10 / 10px / 4px round
+        .banner--desktop-transparent & {
+            content: none;
+        }
     }
 }
 
@@ -73,44 +66,22 @@
 }
 
 .texture-torn {
+    background: transparent;
+    position: relative;
 
+    &::before {
+        content: '';
+        position: absolute;
+            inset: 0;
+            background-color: rgb(var(--color-background));
+            background-size: 12rem auto, cover;
+            background-blend-mode: multiply;
+            background-image: url('texture-paper.jpg?v=2'), var(--background-gradient);
+            box-shadow: 0 0 9rem rgba(var(--color-shadow), 0.05) inset;
 
-  background: transparent;
-position: relative;
-
-&::before {
-    content: '';
-    position: absolute;
-        inset: 0;
-        background-color: rgb(var(--color-background));
-        background-size: 12rem auto, cover;
-        background-blend-mode: multiply;
-        background-image: url('texture-paper.jpg?v=2'), var(--background-gradient);
-        box-shadow: 0 0 9rem rgba(var(--color-shadow), 0.05) inset;
-
-    filter: url(#tornPaper);
-    z-index: -1;
-}
-
-// original
-    // background: transparent;
-    // position: relative;
-
-    // &::before {
-    //     content: '';
-    //     position: absolute;
-    //         inset: 0;
-    //     background-color: rgb(var(--color-background));
-    //     background-blend-mode: multiply;
-    //     background-image: url('texture-paper.jpg?v=2'), var(--background-gradient);
-    //     background-position: top center, center;
-    //     background-repeat: repeat, cover;
-    //     box-shadow: 0 0 9rem rgba(var(--color-shadow), 0.05) inset;
-
-    //     filter: url(#tornPaper);
-    //     z-index: -1;
-    // }
-
+        filter: url(#tornPaper);
+        z-index: -1;
+    }
 }
 
 .texture-folded {

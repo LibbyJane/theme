@@ -1,22 +1,25 @@
 .header__utility {
-    --header-fold-alpha: 0.025;
     --header-icon-alpha: var(--opacity-light);
-    --header-icon-margin-inline: 0;
+    --icon-inline-padding: var(--space);
+
+    display: flex;
+        justify-self: end;
+    margin-right: calc(var(--icon-inline-padding) * -1);
+    padding: 0;
+    position: relative;
+    z-index: calc(var(--zi-header) + 1); // needs to be above the logo, otherwise site search is obscured
 
     .header__icon  {
         &:hover,
         &:focus {
-            --header-fold-alpha: 0.005;
             --header-icon-alpha: 1;
-            // --header-icon-margin-inline: 2px;
         }
     }
+}
 
-    display: flex;
-    justify-self: end;
-    padding: 0;
-    position: relative;
-    z-index: calc(var(--zi-header) + 1); // needs to be above the logo, otherwise site search is obscured
+.header__utility--folded {
+    --header-fold-alpha: 0.025;
+    margin-right: 0;
 
     &::before,
     &::after {
@@ -71,14 +74,23 @@
     min-height: 4rem;
     width: 4.6rem;
     // mix-blend-mode: multiply; // won't work on reversed color schemes
-    margin: auto var(--header-icon-margin-inline);
-    padding: var(--space-lg) var(--space);
+    margin: auto 0;
+    padding: var(--space-lg) var(--icon-inline-padding);
     position: relative;
     transition: all var(--duration-default) var(--transition-type);
     transition-delay: var(--duration-short);
 
     &[aria-controls="menu-drawer"] {
         width: auto;
+    }
+
+    .header__utility--folded & {
+
+
+        &:hover,
+        &:focus {
+            --header-fold-alpha: 0.005;
+        }
     }
 
     // &.has-items {
