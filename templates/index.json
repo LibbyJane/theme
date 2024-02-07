@@ -1,5 +1,61 @@
 {
   "sections": {
+    "c657e444-d7f1-438c-bdf8-529f9fd69377": {
+      "type": "slideshow",
+      "blocks": {
+        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "10% off  store-wide",
+            "heading_size": "h1",
+            "subheading": "Discount code <strong>RTW2424<\/strong>",
+            "button_label": "Start shopping",
+            "link": "shopify:\/\/collections\/all",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-2",
+            "background_texture": "torn",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "secondary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-1",
+        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "image_behavior": "none"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -326,61 +382,6 @@
         "padding_bottom": 36
       }
     },
-    "c657e444-d7f1-438c-bdf8-529f9fd69377": {
-      "type": "slideshow",
-      "blocks": {
-        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-1": {
-          "type": "slide",
-          "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": "secondary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "background-2",
-            "background_texture": "lined",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2": {
-          "type": "slide",
-          "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": "secondary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "",
-            "background_texture": "paper",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-1",
-        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
-        "image_behavior": "none"
-      }
-    },
     "44448a2e-966d-4293-a4e6-c650ac1cb22b": {
       "type": "multirow",
       "blocks": {
@@ -588,7 +589,7 @@
         "color_scheme": "",
         "background_transparent": true,
         "content_color_scheme": "",
-        "content_background_transparent": false,
+        "background_type": "full",
         "background_texture": "paper",
         "show_image": true,
         "show_date": true,
@@ -686,6 +687,7 @@
     }
   },
   "order": [
+    "c657e444-d7f1-438c-bdf8-529f9fd69377",
     "image_banner",
     "rich_text",
     "90d8b6df-d98a-47ac-a60d-4dab79b288ea",
@@ -694,7 +696,6 @@
     "video",
     "707cd939-d696-4530-a0a6-5655a617fdbf",
     "8776c05e-0fa5-4e29-8a52-52d5df273951",
-    "c657e444-d7f1-438c-bdf8-529f9fd69377",
     "44448a2e-966d-4293-a4e6-c650ac1cb22b",
     "cedce7e5-6cf9-4779-97f7-3ba6127619cb",
     "2448094c-7197-4ebb-b9cd-889ab8e34336",
