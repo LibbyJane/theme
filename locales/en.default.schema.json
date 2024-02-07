@@ -277,22 +277,25 @@
         "background": {
             "name": "Background",
             "settings": {
-                "background_type": {
+                "site_background_image": {
+                    "label": "Replace the website background image"
+                },
+                "site_background_style": {
                     "options__1": {
-                        "label": "Page width"
+                        "label": "Cover"
                     },
                     "options__2": {
-                        "label": "Full width"
+                        "label": "Tile"
                     },
                     "options__3": {
-                        "label": "Transparent"
+                        "label": "No image"
                     },
-                    "label": "Background width"
+                    "label": "Background image style"
                 }
             }
         },
         "logo": {
-            "name": "Logo and Images",
+            "name": "Logo",
             "settings": {
                 "logo_image": {
                     "label": "Logo"
@@ -304,10 +307,6 @@
                 "favicon": {
                     "label": "Favicon image",
                     "info": "Will be scaled down to 32 x 32px"
-                },
-                "site_background": {
-                    "label": "Website background",
-                    "info": "Will be scaled to cover the background"
                 }
             }
         },
@@ -1341,6 +1340,15 @@
                     },
                     "options__3": {
                         "label": "Drawer"
+                    }
+                },
+                "utility_menu_style": {
+                    "label": "Utility menu style",
+                    "options__1": {
+                        "label": "Folded"
+                    },
+                    "options__2": {
+                        "label": "Plain"
                     }
                 },
                 "header__1": {

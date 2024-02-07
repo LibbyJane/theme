@@ -1910,8 +1910,9 @@ a {
   scrollbar-width: auto;
   scrollbar-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
   /* Chrome, Edge, and Safari */
-  background: var(--background-image);
-  background-size: var(--background-size);
+  background: var(--site-background-image);
+  background-size: var(--site-background-size);
+  background-repeat: var(--site-background-repeat);
   background-position: center;
   background-attachment: fixed;
 }
