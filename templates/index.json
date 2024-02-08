@@ -47,10 +47,9 @@
         "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2"
       ],
       "settings": {
-        "layout": "full_bleed",
+        "layout": "grid",
         "slide_height": "medium",
         "slider_visual": "counter",
-        "overlay_pagination": true,
         "auto_rotate": false,
         "change_slides_speed": 5,
         "show_text_below": true,
