@@ -8,5 +8,6 @@
 .shopify-app-block
 {
     @include default-texture;
+    box-shadow: none;
     margin-block: var(--space-med);
 }

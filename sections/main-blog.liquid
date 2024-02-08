@@ -17,7 +17,7 @@
 {%- endstyle -%}
 
 {%- paginate blog.articles by 6 -%}
-    <div class="main-blog section-{{ section.id }}-padding">
+    <div class="main-blog section-{{ section.id }}-padding  ">
         <header class="title-wrapper page-width align-{{settings.title_alignment}} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
             <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }}"
             >
@@ -25,30 +25,30 @@
             </h2>
         </header>
 
-        <div class="page-width blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
-        {%- for article in blog.articles -%}
-            <div class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-            {% if settings.animations_reveal_on_scroll %}
-                data-cascade
-                style="--animation-order: {{ forloop.index }};"
-            {% endif %}
-            >
-            {%- render 'article-card',
-                article: article,
-                media_height: section.settings.image_height,
-                media_aspect_ratio: article.image.aspect_ratio,
-                show_image: section.settings.show_image,
-                show_date: section.settings.show_date,
-                show_author: section.settings.show_author,
-                show_excerpt: true
-            -%}
-            </div>
-        {%- endfor -%}
-        </div>
+        <div class="page-width blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %} color-{{ section.settings.content_color_scheme }} background-{% if section.settings.background_transparent %}transparent content-padding-inline {% else %}theme texture-{{section.settings.background_texture}} content-padding{% endif %} isolate">
+            {%- for article in blog.articles -%}
+                <div class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+                >
+                    {%- render 'article-card',
+                        article: article,
+                        media_height: section.settings.image_height,
+                        media_aspect_ratio: article.image.aspect_ratio,
+                        show_image: section.settings.show_image,
+                        show_date: section.settings.show_date,
+                        show_author: section.settings.show_author,
+                        show_excerpt: true
+                    -%}
+                </div>
+            {%- endfor -%}
 
-        {%- if paginate.pages > 1 -%}
-        {%- render 'pagination', paginate: paginate -%}
-        {%- endif -%}
+            {%- if paginate.pages > 1 -%}
+                {%- render 'pagination', paginate: paginate -%}
+            {%- endif -%}
+        </div>
     </div>
 {%- endpaginate -%}
 
@@ -79,6 +79,42 @@
         "label": "t:sections.main-blog.settings.layout.label",
         "info": "t:sections.main-blog.settings.layout.info"
         },
+        {
+            "type": "color_scheme",
+            "id": "content_color_scheme",
+            "label": "t:settings_schema.colors.settings.content_color_scheme.label",
+            "default": "inverse"
+            },
+            {
+                "type": "checkbox",
+                "id": "background_transparent",
+                "default": true,
+                "label": "t:settings_schema.colors.settings.background_transparent.label"
+            },
+            {
+                "type": "select",
+                "id": "background_texture",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "t:settings_schema.textures.settings.background_texture.options__1.label"
+                    },
+                    {
+                        "value": "paper",
+                        "label": "t:settings_schema.textures.settings.background_texture.options__2.label"
+                    },
+                    {
+                        "value": "torn",
+                        "label": "t:settings_schema.textures.settings.background_texture.options__3.label"
+                    },
+                    {
+                        "value": "lined",
+                        "label": "t:settings_schema.textures.settings.background_texture.options__4.label"
+                    }
+                ],
+                "default": "paper",
+                "label": "t:settings_schema.textures.settings.background_texture.label"
+            },
         {
             "type": "checkbox",
             "id": "show_image",

@@ -26,6 +26,10 @@
         column-gap: 0;
         row-gap: 0;
     }
+
+    &.grid--col-gap-lg {
+        column-gap: calc(var(--grid-horizontal-spacing) * 2);
+    }
 }
 
 .grid__item {

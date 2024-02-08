@@ -1,6 +1,6 @@
 <section
     id="MainProduct-{{ section.id }}"
-    class="page-width content-padding-inline section-{{ section.id }}-padding"
+    class="page-width content-padding-inline section-{{ section.id }}-padding color-{{ section.settings.section_color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} {% if section.settings.section_background_texture != blank %}texture-{{section.settings.section_background_texture}}{% endif %}"
     data-section="{{ section.id }}"
 >
     {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
@@ -75,11 +75,13 @@
                 product--mobile-{{ section.settings.mobile_thumbnails }}
                 grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}
     ">
-        <div class="grid__item product__media-wrapper color-{{ section.settings.color_scheme }}">
-            {% render 'product-media-gallery', variant_images: variant_images %}
-        </div>
+        {% if product.media.size > 0 %}
+            <div class="grid__item product__media-wrapper color-{{ section.settings.color_scheme }}">
+                {% render 'product-media-gallery', variant_images: variant_images %}
+            </div>
+        {% endif %}
 
-        <div class="grid__item product__info-wrapper color-{{ section.settings.color_scheme }}
+        <div class="grid__item product__info-wrapper color-{{ section.settings.content_color_scheme }}
             {% if section.settings.background_texture != blank %}texture-{{section.settings.background_texture}}{% endif %}
             {% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}
             {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
@@ -1746,11 +1748,48 @@
             "label": "t:sections.main-product.settings.enable_sticky_info.label"
         },
         {
-          "type": "color_scheme",
-          "id": "color_scheme",
-          "label": "t:sections.all.colors.label",
-          "default": "background-1"
+            "type": "color_scheme",
+            "id": "section_color_scheme",
+            "label": "t:settings_schema.colors.settings.container_color_scheme.label",
+            "default": "inverse"
         },
+        {
+                "type": "checkbox",
+                "id": "background_transparent",
+                "default": true,
+                "label": "t:settings_schema.colors.settings.background_transparent.label"
+        },
+        {
+            "type": "select",
+            "id": "section_background_texture",
+            "options": [
+                {
+                    "value": "",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__1.label"
+                },
+                {
+                    "value": "paper",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__2.label"
+                },
+                {
+                    "value": "torn",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__3.label"
+                },
+                {
+                    "value": "lined",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__4.label"
+                }
+            ],
+            "default": "paper",
+            "label": "t:settings_schema.textures.settings.container_texture.label"
+        },
+        {
+            "type": "color_scheme",
+            "id": "content_color_scheme",
+            "label": "t:settings_schema.colors.settings.content_color_scheme.label",
+            "default": "background-1"
+        },
+
         {
             "type": "select",
             "id": "background_texture",
@@ -1773,7 +1812,7 @@
                 }
             ],
             "default": "paper",
-            "label": "t:settings_schema.textures.settings.background_texture.label"
+            "label": "t:settings_schema.textures.settings.content_texture.label"
         },
         {
             "type": "checkbox",

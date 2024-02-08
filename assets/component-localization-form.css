@@ -1,5 +1,5 @@
 :root {
-  --corner-shadow-alpha: 0.5;
+  --corner-shadow-alpha: 0.125;
   --corner-size: 15px;
   --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
 }

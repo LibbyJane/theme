@@ -144,7 +144,7 @@
 }
 
 :root {
-  --corner-shadow-alpha: 0.5;
+  --corner-shadow-alpha: 0.125;
   --corner-size: 15px;
   --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
 }
@@ -1141,6 +1141,10 @@ a {
        column-gap: 0;
   row-gap: 0;
 }
+.grid.grid--col-gap-lg {
+  -moz-column-gap: calc(var(--grid-horizontal-spacing) * 2);
+       column-gap: calc(var(--grid-horizontal-spacing) * 2);
+}
 
 .grid__item {
   width: calc(25% - var(--grid-horizontal-spacing) * 3 / 4);
@@ -1961,6 +1965,7 @@ html.no-js .no-js-hidden {
   background-repeat: repeat;
   background-size: 12rem auto, cover;
   box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
+  box-shadow: none;
   margin-block: var(--space-med);
 }
 
@@ -2942,6 +2947,49 @@ details[open] > .share-button__fallback {
 
 .share-button__message:not(:empty):not(.hidden) ~ * {
   display: none;
+}
+
+.button-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space);
+}
+.align-content-right .button-bar {
+  justify-content: flex-end;
+}
+.align-content-left .button-bar {
+  justify-content: flex-start;
+}
+.align-content-center .button-bar {
+  justify-content: center;
+}
+@media screen and (min-width: 750px) {
+  .align-content-desktop-right .button-bar {
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 750px) {
+  .align-content-desktop-left .button-bar {
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 750px) {
+  .align-content-desktop-center .button-bar {
+    justify-content: center;
+  }
+}
+.button-bar button:only-child,
+.button-bar .button:only-child,
+.button-bar a:only-child {
+  margin-inline: auto;
+}
+
+.button-bar--fluid-buttons button,
+.button-bar--fluid-buttons .button,
+.button-bar--fluid-buttons a {
+  flex: 1 1 auto;
+  text-align: center;
 }
 
 :root {
@@ -4389,7 +4437,7 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 .inline-richtext img {
   height: auto;
   max-width: 100%;
-  border: var(--media-border-width) solid rgba(var(--color-foreground), var(--media-border-opacity));
+  border: var(--media-border-width) solid rgba(var(--color-media-border), var(--media-border-opacity));
   border-radius: var(--media-radius);
   box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
   margin-bottom: var(--media-shadow-vertical-offset);

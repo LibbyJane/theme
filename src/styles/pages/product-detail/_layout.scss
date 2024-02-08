@@ -1,9 +1,5 @@
 .product {
     margin: 0;
-
-    .grid {
-        column-gap: calc(var(--grid-horizontal-spacing) * 2);
-    }
 }
 
 .product__media-wrapper {
@@ -33,7 +29,7 @@
 }
 
 .product--no-media {
-    max-width: 57rem;
+    // max-width: 57rem;
     margin: 0 auto;
 }
 
@@ -43,6 +39,7 @@
         min-height: 100%;
         position: sticky;
         // top: var(--space-xl);
+        top: 0;
         z-index: 2;
     }
 }

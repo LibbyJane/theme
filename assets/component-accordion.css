@@ -1,8 +1,8 @@
 .accordion {
-  background-image: var(--crease);
-  margin-top: var(--space-lg);
-  margin-bottom: 0;
-  border-top: var(--border-light);
+  background: transparent;
+  border: 0;
+  margin: initial;
+  position: relative;
 }
 .texture-lined .accordion {
   --underline-height: 0;

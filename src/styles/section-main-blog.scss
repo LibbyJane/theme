@@ -1,6 +1,6 @@
 .blog-articles {
     display: grid;
-        column-gap: var(--grid-horizontal-spacing);
+        column-gap: calc(var(--grid-horizontal-spacing) * 2);
         row-gap: var(--grid-vertical-spacing);
 
     @media screen and (min-width: 750px) {
@@ -46,10 +46,10 @@
 @media screen and (min-width: 750px) {
   .blog-articles--collage > *:nth-child(3n + 1),
   .blog-articles--collage > *:nth-child(3n + 2):last-child {
-    --card-justification: center;
-    --product-card-justification: center;
+    // --card-justification: center;
+    // --product-card-justification: center;
     grid-column: span 2;
-    text-align: center;
+    // text-align: center;
 
     .article-card__image--small {
         .card__media {
@@ -58,12 +58,12 @@
     }
   }
 
-    .blog-articles--collage > *:nth-child(3n + 1) .card,
-    .blog-articles--collage > *:nth-child(3n + 2):last-child .card {
-        text-align: center;
-        --card-justification: center;
-        --product-card-justification: center;
-    }
+    // .blog-articles--collage > *:nth-child(3n + 1) .card,
+    // .blog-articles--collage > *:nth-child(3n + 2):last-child .card {
+    //     text-align: center;
+    //     --card-justification: center;
+    //     --product-card-justification: center;
+    // }
 
   .blog-articles--collage > *:nth-child(3n + 1) .article-card__image--small .ratio::before,
   .blog-articles--collage > *:nth-child(3n + 2):last-child .article-card__image--small .ratio::before {

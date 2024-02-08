@@ -34,6 +34,9 @@
             --color-badge-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
             --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
             --color-badge-border: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+            {% unless settings.media_border_color_custom %}
+                --color-media-border: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+            {% endunless %}
             --payment-terms-background-color: rgb({{ scheme.settings.background.rgb }});
         }
     {% endfor %}
@@ -87,6 +90,9 @@
 
         --media-padding: {{ settings.media_padding }}px;
         --media-border-opacity: {{ settings.media_border_opacity | divided_by: 100.0 }};
+        {% if settings.media_border_color_custom %}
+            --color-media-border: {{ settings.media_border_color.red }},{{ settings.media_border_color.green }},{{ settings.media_border_color.blue }};
+        {% endif %}
         --media-border-width: {{ settings.media_border_thickness }}px;
         --media-radius: {{ settings.media_radius }}px;
         --media-shadow-opacity: {{ settings.media_shadow_opacity | divided_by: 100.0 }};

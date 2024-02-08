@@ -50,6 +50,8 @@ slider-component {
     scroll-snap-align: start;
     flex-shrink: 0;
     padding-bottom: 0;
+    position: relative;
+    z-index: 1;
 
     &[aria-hidden="true"] {
         visibility: hidden;
@@ -362,7 +364,7 @@ slider-component {
 
 
 .slider-buttons {
-    background-color: rgb(var(--color-background));
+    background-color: rgba(var(--color-background), var(--slider-pagination-bg-opacity, 1));
     color: rgb(var(--color-foreground));
     display: flex;
         align-items: center;
