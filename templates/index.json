@@ -49,7 +49,10 @@
       "settings": {
         "layout": "grid",
         "slide_height": "medium",
+        "section_color_scheme": "accent-1",
         "slider_visual": "counter",
+        "slider_visual_background_opacity": 5,
+        "overlay_pagination_desktop": true,
         "auto_rotate": false,
         "change_slides_speed": 5,
         "show_text_below": true,
