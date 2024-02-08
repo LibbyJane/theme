@@ -47,7 +47,7 @@
         "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2"
       ],
       "settings": {
-        "layout": "grid",
+        "layout": "full_bleed",
         "slide_height": "medium",
         "section_color_scheme": "accent-1",
         "slider_visual": "counter",
