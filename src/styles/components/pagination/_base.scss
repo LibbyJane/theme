@@ -1,8 +1,9 @@
 .pagination-wrapper {
-    margin-top: 4rem;
+    grid-column: 1/-1;
+    margin-top: var(--space-xl);
 
     @media screen and (min-width: 990px) {
-        margin-top: 5rem;
+        margin-top: var(--space-xxl);
     }
 }
 
@@ -20,17 +21,22 @@
     }
 
     a {
+
         display: block;
         line-height: 1;
         padding: var(--space-sm) var(--space);
     }
 }
 
-.pagination__prev {
+.pagination__item--page {
+    @include hover-highlight;
+}
+
+.pagination__item--prev {
     --rotate-icon: 90;
 }
 
-.pagination__next {
+.pagination__item--next {
     --rotate-icon: 270;
 }
 

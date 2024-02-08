@@ -27,11 +27,11 @@
   }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %}">
+<div class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} isolate">
     {%- paginate collection.products by section.settings.products_per_page -%}
         {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
         {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
-        <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
+        <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden content-padding-inline">
             <form class="facets__form--vertical" id="FacetSortForm">
             <div class="facet-filters sorting caption">
                 <div class="facet-filters__field">
@@ -93,7 +93,7 @@
         </facet-filters-form>
         {%- endif -%}
 
-        <div class="facets-wrapper default-content-style {% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
+        <div class="facets-wrapper default-content-style {% if section.settings.filter_type == 'vertical' %} facets-vertical page-width content-padding-inline{% endif %}">
         {{ 'component-facets.css' | asset_url | stylesheet_tag }}
         <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
         {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
@@ -123,7 +123,19 @@
             {%- if collection.products.size == 0 -%}
             <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
                 <div class="loading-overlay "></div>
-                <div class="title-wrapper center">
+                <header class="title-wrapper align-{{settings.title_alignment}} page-width">
+                    {%- if section.settings.title != blank -%}
+                        <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                            {{ 'sections.collection_template.empty' | t -}}
+                            <br>
+                            {{
+                            'sections.collection_template.use_fewer_filters_html'
+                            | t: link: collection.url, class: 'underlined-link'
+                            }}
+                        </h2>
+                    {%- endif -%}
+                </header>
+                {% comment %} <div class="title-wrapper center">
                 <h2 class="title title--primary">
                     {{ 'sections.collection_template.empty' | t -}}
                     <br>
@@ -132,7 +144,7 @@
                     | t: link: collection.url, class: 'underlined-link link'
                     }}
                 </h2>
-                </div>
+                </div> {% endcomment %}
             </div>
             {%- else -%}
             <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">

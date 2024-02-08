@@ -310,9 +310,16 @@
      object-fit: cover;
 }
 .card__media img {
-  min-width: 100%;
-  min-height: 100%;
   transform: scale(1.2);
+}
+.card__media .card__media-image-aspect-ratio--landscape {
+  height: 100%;
+}
+.card__media .card__media-image-aspect-ratio--portrait {
+  width: 100%;
+}
+.card__media .card__media-image-aspect-ratio--square {
+  width: 100%;
 }
 
 .card__media-hover-image {

@@ -194,6 +194,12 @@
         "text": {
           "label": "Text"
         },
+        "border_color_custom": {
+            "label": "Override the default border color for all color schemes"
+        },
+        "border_color": {
+            "label": "Border color"
+        },
         "button_background": {
           "label": "Solid button background"
         },
@@ -271,6 +277,12 @@
           },
           "label": "Apply a texture to the background area",
           "info": "The texture is only visible if the container is set to show."
+        },
+        "container_texture": {
+            "label": "Apply texture to the section background color"
+        },
+        "content_texture": {
+            "label": "Apply texture to the content background color"
         }
       }
     },
@@ -3299,8 +3311,11 @@
             "label": "Numbers"
           }
         },
-        "overlay_pagination": {
-          "label": "Overlay pagination"
+        "slider_visual_background_opacity": {
+            "label": "Pagination background opacity"
+        },
+        "overlay_pagination_desktop": {
+          "label": "Overlay pagination on desktop"
         },
         "auto_rotate": {
           "label": "Auto-rotate slides"

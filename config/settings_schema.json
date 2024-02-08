@@ -1156,7 +1156,7 @@
         "step": 5,
         "unit": "%",
         "label": "t:settings_schema.global.settings.opacity.label",
-        "default": 5
+        "default": 100
       },
       {
         "type": "range",
@@ -1167,6 +1167,18 @@
         "unit": "px",
         "label": "t:settings_schema.global.settings.corner_radius.label",
         "default": 0
+      },
+      {
+        "type": "checkbox",
+        "id": "media_border_color_custom",
+        "default": false,
+        "label": "t:settings_schema.colors.settings.border_color_custom.label"
+      },
+      {
+        "type": "color",
+        "id": "media_border_color",
+        "label": "t:settings_schema.colors.settings.border_color.label",
+        "default": "#FFFFFF"
       },
       {
         "type": "header",
