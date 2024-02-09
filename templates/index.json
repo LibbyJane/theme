@@ -89,6 +89,47 @@
         "padding_bottom": 36
       }
     },
+    "707cd939-d696-4530-a0a6-5655a617fdbf": {
+      "type": "collection-list",
+      "blocks": {
+        "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "australia"
+          }
+        },
+        "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "argentina"
+          }
+        },
+        "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "new-zealand"
+          }
+        }
+      },
+      "block_order": [
+        "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-1",
+        "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-2",
+        "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-3"
+      ],
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "inverse",
+        "background_transparent": true,
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -286,47 +327,6 @@
         "full_width": false,
         "color_scheme": "background-1",
         "background_transparent": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "707cd939-d696-4530-a0a6-5655a617fdbf": {
-      "type": "collection-list",
-      "blocks": {
-        "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-1",
-        "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-2",
-        "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-3"
-      ],
-      "settings": {
-        "title": "Collections",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "inverse",
-        "background_transparent": true,
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -693,12 +693,12 @@
   "order": [
     "c657e444-d7f1-438c-bdf8-529f9fd69377",
     "featured_collection",
+    "707cd939-d696-4530-a0a6-5655a617fdbf",
     "image_banner",
     "rich_text",
     "90d8b6df-d98a-47ac-a60d-4dab79b288ea",
     "collage",
     "video",
-    "707cd939-d696-4530-a0a6-5655a617fdbf",
     "8776c05e-0fa5-4e29-8a52-52d5df273951",
     "44448a2e-966d-4293-a4e6-c650ac1cb22b",
     "cedce7e5-6cf9-4779-97f7-3ba6127619cb",
