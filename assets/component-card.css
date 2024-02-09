@@ -310,10 +310,31 @@
      object-fit: cover;
 }
 .card__media img {
+  min-width: 100%;
+  min-height: 100%;
   transform: scale(1.2);
 }
 .card__media .card__media--portrait {
   height: 100%;
+}
+
+.ratio .card__media,
+.ratio .media {
+  background: pink;
+  height: auto;
+  padding: 0;
+}
+
+.card .media {
+  width: 100%;
+}
+
+.card__media--square {
+  min-width: 100%;
+}
+
+.card__media--portrait {
+  min-height: 100%;
 }
 
 .card__media-hover-image {

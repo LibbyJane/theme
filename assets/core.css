@@ -1142,8 +1142,12 @@ a {
   row-gap: 0;
 }
 .grid.grid--col-gap-lg {
-  -moz-column-gap: calc(var(--grid-horizontal-spacing) * 2);
-       column-gap: calc(var(--grid-horizontal-spacing) * 2);
+  --grid-horizontal-spacing: calc(var(--grid-mobile-horizontal-spacing) * 2);
+}
+@media screen and (min-width: 750px) {
+  .grid.grid--col-gap-lg {
+    --grid-horizontal-spacing: calc(var(--grid-desktop-horizontal-spacing) * 2);
+  }
 }
 
 .grid__item {
