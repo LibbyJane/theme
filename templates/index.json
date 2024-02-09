@@ -555,8 +555,8 @@
         "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-email_form-1"
       ],
       "settings": {
-        "color_scheme": "",
-        "background_texture": "paper",
+        "color_scheme": "background-2",
+        "background_texture": "torn",
         "full_width": false,
         "padding_top": 40,
         "padding_bottom": 52
