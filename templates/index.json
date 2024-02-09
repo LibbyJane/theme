@@ -108,7 +108,7 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "color_scheme": "inverse",
         "background_transparent": true,
         "image_ratio": "square",
