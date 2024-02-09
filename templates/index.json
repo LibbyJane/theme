@@ -534,7 +534,7 @@
           "type": "heading",
           "settings": {
             "heading": "Sign up & get 10% off your first order",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-paragraph-1": {
@@ -547,42 +547,17 @@
           "type": "email_form",
           "settings": {
           }
-        },
-        "trustreviews_review_carousel_CQ3Ua9": {
-          "type": "shopify:\/\/apps\/trustreviews\/blocks\/review-carousel\/56d0fe1b-e701-4cff-8f84-466a26e09adb",
-          "settings": {
-          }
-        },
-        "judge_me_reviews_verified_badge_9MCFPQ": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/verified_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        },
-        "judge_me_reviews_ugc_media_grid_FhWfMU": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/ugc_media_grid\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        },
-        "judge_me_reviews_preview_badge_homepage_GhfJnj": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge_homepage\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "product": ""
-          }
         }
       },
       "block_order": [
         "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-heading-1",
         "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-paragraph-1",
-        "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-email_form-1",
-        "trustreviews_review_carousel_CQ3Ua9",
-        "judge_me_reviews_verified_badge_9MCFPQ",
-        "judge_me_reviews_ugc_media_grid_FhWfMU",
-        "judge_me_reviews_preview_badge_homepage_GhfJnj"
+        "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-email_form-1"
       ],
       "settings": {
         "color_scheme": "",
         "background_texture": "paper",
-        "full_width": true,
+        "full_width": false,
         "padding_top": 40,
         "padding_bottom": 52
       }
