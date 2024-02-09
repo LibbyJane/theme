@@ -591,17 +591,17 @@
       "type": "contact-form",
       "settings": {
         "heading": "",
-        "heading_size": "h1",
+        "heading_size": "h3",
         "section_color_scheme": "",
         "background_transparent": true,
         "content_color_scheme": "",
-        "store_message": "To:",
+        "store_message": "Send To:",
         "show_store_name": true,
         "show_store_contact_information": true,
         "stamp_image": "shopify:\/\/shop_images\/warm-and-cozy-wine-cellar-with-barrels-in-soft-lighting-ai_24061456_914_4abd04e5-8ce3-4409-a42e-4c9f5e71ed38.jpg",
         "secondary_image": "shopify:\/\/shop_images\/black-grapes-on-the-vine.jpg",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "dd71af2d-22bf-4c16-8c4d-3f035f3aeb98": {
