@@ -47,7 +47,7 @@
         >
             <div
 
-                class="card__media"
+                class="motion-reduce card__media-image card__media-image-aspect-ratio--{% if card_collection.featured_media.width > card_collection.featured_media.height %}landscape{%elsif card_collection.featured_media.width < card_collection.featured_media.height %}portrait{%else%}square{% endif %} card__media "
             >
                 {%- if card_collection.featured_image -%}
                     <div class="media media--transparent media--hover-effect">
