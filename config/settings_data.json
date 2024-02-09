@@ -94,7 +94,7 @@
     "drawer_shadow_vertical_offset": 4,
     "drawer_shadow_blur": 5,
     "badge_position": "bottom left",
-    "sale_badge_color_scheme": "accent-2",
+    "sale_badge_color_scheme": "sticky-1",
     "sold_out_badge_color_scheme": "inverse",
     "social_facebook_link": "",
     "social_instagram_link": "",
@@ -218,7 +218,7 @@
       },
       "sticky-1": {
         "settings": {
-          "background": "#fdd74e",
+          "background": "#f2dc77",
           "background_gradient": "",
           "text": "#2d0101",
           "button": "#2d0101",
