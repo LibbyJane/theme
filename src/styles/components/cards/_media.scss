@@ -28,6 +28,11 @@
         mix-blend-mode: multiply;
     }
 
+    .card--extend-height & {
+        height: auto;
+        padding-top: 0;
+    }
+
     // .card--standard & {
     //     padding-top:  calc((var(--card-image-offset) * -2) + var(--ratio-percent));
     // }
@@ -56,43 +61,6 @@
         min-height: 100%;
         transform: scale(1.2);
     }
-    // .card__media-image-aspect-ratio--landscape {
-    //     height: 100%;
-    // }
-
-    // .card__media-image-aspect-ratio--portrait {
-    //     width: 100%;
-    // }
-
-    // .card__media-image-aspect-ratio--square {
-    //     width: 100%;
-    // }
-
-    .card__media--portrait {
-        height: 100%;
-    }
-}
-
-.ratio {
-    .card__media,
-    .media {
-        background: pink;
-        height: auto;
-        padding: 0;
-    }
-}
-
-.card .media {
-  width: 100%;
-}
-
-
-.card__media--square {
-    min-width: 100%;
-}
-
-.card__media--portrait {
-    min-height: 100%;
 }
 
 .card__media-hover-image {

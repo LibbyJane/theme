@@ -78,6 +78,10 @@
     margin: 0;
     padding: 0 0 var(--space);
 
+    &:last-child {
+        padding-bottom: 0;
+    }
+
     // .card--standard & {
     //     padding-bottom: var(--space);
     // }

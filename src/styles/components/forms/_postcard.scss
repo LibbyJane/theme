@@ -20,6 +20,11 @@
             margin-left: 2px;
         }
     }
+
+    .form__message {
+        flex-direction: column;
+        align-items: start;
+    }
 }
 
 .postcard {
@@ -183,6 +188,10 @@
             --border: var(--input-border-width) solid currentColor; // inherited by the status div
             border-bottom: none;
         }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     .field__label {
@@ -229,6 +238,8 @@
 
 .postcard-title {
     grid-area: postcard-title;
+    padding-top: var(--space-xs);
+    transform: rotate(-0.5deg) translateX(-3px) translateY(-2px);
 }
 
 .postcard__reverse-face {

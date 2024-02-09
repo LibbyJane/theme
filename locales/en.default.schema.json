@@ -81,6 +81,7 @@
         "label": "Desktop image alignment"
       }
     },
+
     "titles": {
       "name": "Titles",
       "settings": {
@@ -364,7 +365,17 @@
         },
         "body_scale": {
           "label": "Font size scale"
+        },
+        "text_style": {
+            "label": "Text style",
+            "options__1": {
+                "label": "Body"
+            },
+            "options__2": {
+                "label": "Display"
+            }
         }
+
       }
     },
     "buttons": {
