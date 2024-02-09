@@ -37,7 +37,7 @@
                 style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
             >
                 {%- if show_image == true and article.image -%}
-                    <div class="article-card__image-wrapper card__media">
+                    <div class="article-card__image-wrapper card__media card__media-image-aspect-ratio--{% if article.image.width > article.image.height %}landscape{%elsif article.image.width < article.image.height %}portrait{%else%}square{% endif %}">
                         <div
                             class="article-card__image media media--hover-effect"
                             {% if section.settings.media_height == 'adapt' %}

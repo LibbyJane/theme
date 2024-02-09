@@ -54,16 +54,20 @@
     img {
         transform: scale(1.2);
     }
-    .card__media-image-aspect-ratio--landscape {
+    // .card__media-image-aspect-ratio--landscape {
+    //     height: 100%;
+    // }
+
+    // .card__media-image-aspect-ratio--portrait {
+    //     width: 100%;
+    // }
+
+    // .card__media-image-aspect-ratio--square {
+    //     width: 100%;
+    // }
+
+    .card__media--portrait {
         height: 100%;
-    }
-
-    .card__media-image-aspect-ratio--portrait {
-        width: 100%;
-    }
-
-    .card__media-image-aspect-ratio--square {
-        width: 100%;
     }
 }
 

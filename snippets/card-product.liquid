@@ -67,7 +67,7 @@
         aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
     >
         {%- if card_product.featured_media -%}
-            <div class="card__media media--hover-effect
+            <div class="card__media card__media-image-aspect-ratio--{% if card_product.featured_media.width > card_product.featured_media.height %}landscape{%elsif card_product.featured_media.width < card_product.featured_media.height %}portrait{%else%}square{% endif %} media--hover-effect
                     {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} {% endif %}
                     card__media--{{media_aspect_ratio}}
                     "

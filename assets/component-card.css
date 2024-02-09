@@ -312,14 +312,8 @@
 .card__media img {
   transform: scale(1.2);
 }
-.card__media .card__media-image-aspect-ratio--landscape {
+.card__media .card__media--portrait {
   height: 100%;
-}
-.card__media .card__media-image-aspect-ratio--portrait {
-  width: 100%;
-}
-.card__media .card__media-image-aspect-ratio--square {
-  width: 100%;
 }
 
 .card__media-hover-image {
