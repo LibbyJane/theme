@@ -96,7 +96,7 @@
       "type": "featured-collection",
       "settings": {
         "collection": "all",
-        "title": "Favorite products",
+        "title": "Our latest favorites",
         "heading_size": "h2",
         "description": "",
         "show_collection_description": false,
