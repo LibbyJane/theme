@@ -55,20 +55,32 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>Our diminutive natural wine bar and shop in the Chapel Allerton suburb of Leeds is where it all started, in 2017. This was the space we opened to give a home to the vast and varied rainbow of natural, low intervention, organic and biodynamic wines from Italy, France, Spain and beyond that we had spent the previous five years discovering, hunting and avidly learning about.<br\/><\/p>"
+          }
+        },
+        "button_3RWqqz": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
         "heading",
-        "text"
+        "text",
+        "button_3RWqqz"
       ],
       "settings": {
         "content_alignment": "center",
