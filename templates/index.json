@@ -109,12 +109,19 @@
           "settings": {
             "collection": "new-zealand"
           }
+        },
+        "featured_collection_ranhhW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "south-africa"
+          }
         }
       },
       "block_order": [
         "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-1",
         "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-2",
-        "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-3"
+        "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-3",
+        "featured_collection_ranhhW"
       ],
       "settings": {
         "title": "Collections",
