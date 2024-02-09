@@ -68,8 +68,8 @@
         "button_3RWqqz": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "More about us",
+            "button_link": "shopify:\/\/pages\/our-story",
             "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
