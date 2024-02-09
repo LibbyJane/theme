@@ -18,22 +18,21 @@ slider-component {
     //}
 
     &.slider-component-mobile {
-        padding-inline: 0;
-
-        @media screen and (min-width: 750px) {
-            padding-inline: var(--content-padding-inline);
+        @media screen and (max-width: 749px) {
+            --content-padding-inline: 0;
         }
     }
 
     &.slider-component-full-width {
         --desktop-margin-left-first-item: var(--space-med);
 
-        &.slider-component-desktop {
+    }
+
+    &.slider-component-desktop {
+        @media screen and (min-width: 750px) {
             --content-padding-inline: 0;
         }
     }
-
-
 }
 
 
