@@ -79,7 +79,7 @@
         "swipe_on_mobile": false,
         "color_scheme": "inverse",
         "background_transparent": true,
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
