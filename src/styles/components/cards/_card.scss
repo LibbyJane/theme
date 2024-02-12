@@ -32,6 +32,17 @@
     will-change: transform;
     z-index: 1;
 
+    @media (prefers-reduced-motion: no-preference) {
+        &,
+        &:nth-child {
+            &:hover,
+            &:focus {
+                .grid__item & {
+                    transform: rotate(0) translateY(-3px) translateX(0);
+                }
+            }
+        }
+    }
 
     .grid__item & {
         &:hover,
@@ -76,6 +87,15 @@
 
         .article-card & {
             flex-direction: column;
+        }
+    }
+
+    &.card--standard {
+        &.ratio,
+        .ratio {
+            .slider & {
+                height: auto;
+            }
         }
     }
 

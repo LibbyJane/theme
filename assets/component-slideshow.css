@@ -45,7 +45,8 @@ slideshow-component .slideshow.banner {
 }
 @media screen and (min-width: 750px) {
   .slideshow__controls--overlaid .slideshow__text.banner__box {
-    padding-block: var(--space-xl);
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
   }
 }
 

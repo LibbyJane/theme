@@ -276,8 +276,11 @@
           "options__4": {
             "label": "Lined"
           },
+          "options__5": {
+            "label": "Transparent"
+          },
           "label": "Apply a texture to the background area",
-          "info": "The texture is only visible if the container is set to show."
+          "info": "The texture is only visible if the container is not transparent."
         },
         "container_texture": {
             "label": "Apply texture to the section background color"
@@ -288,6 +291,23 @@
       }
     },
     "background": {
+        "name": "Background",
+        "settings": {
+          "content_background_width": {
+            "options__1": {
+              "label": "Page"
+            },
+            "options__2": {
+              "label": "Full screen"
+            },
+            "options__3": {
+              "label": "Transparent"
+            },
+            "label": "Content background width"
+          }
+        }
+      },
+    "site_background": {
       "name": "Background",
       "settings": {
         "site_background_image": {

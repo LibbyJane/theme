@@ -555,6 +555,7 @@ slider-component.slider-component-full-width {
   align-items: center;
   justify-content: center;
   min-width: 4.4rem;
+  font-family: var(--font-heading-family);
   font-size: var(--font-size-smaller);
 }
 
@@ -623,6 +624,9 @@ slider-component.slider-component-full-width {
   margin: var(--space) auto;
   width: -moz-max-content;
   width: max-content;
+}
+[class^=texture-] .slider-buttons, div[class*=" texture-"] .slider-buttons {
+  --slider-pagination-bg-opacity: 0;
 }
 .background-transparent .slider-buttons {
   margin-bottom: calc(-1 * var(--space-sm));

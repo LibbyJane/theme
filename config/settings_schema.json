@@ -34,12 +34,12 @@
     ]
   },
   {
-    "name": "t:settings_schema.background.name",
+    "name": "t:settings_schema.site_background.name",
     "settings": [
       {
         "type": "image_picker",
         "id": "site_background",
-        "label": "t:settings_schema.background.settings.site_background_image.label"
+        "label": "t:settings_schema.site_background.settings.site_background_image.label"
       },
       {
         "type": "select",
@@ -47,19 +47,19 @@
         "options": [
           {
             "value": "cover",
-            "label": "t:settings_schema.background.settings.site_background_style.options__1.label"
+            "label": "t:settings_schema.site_background.settings.site_background_style.options__1.label"
           },
           {
             "value": "tile",
-            "label": "t:settings_schema.background.settings.site_background_style.options__2.label"
+            "label": "t:settings_schema.site_background.settings.site_background_style.options__2.label"
           },
           {
             "value": "transparent",
-            "label": "t:settings_schema.background.settings.site_background_style.options__3.label"
+            "label": "t:settings_schema.site_background.settings.site_background_style.options__3.label"
           }
         ],
         "default": "cover",
-        "label": "t:settings_schema.background.settings.site_background_style.label"
+        "label": "t:settings_schema.site_background.settings.site_background_style.label"
       }
     ]
   },

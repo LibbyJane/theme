@@ -294,6 +294,7 @@ slider-component {
         align-items: center;
         justify-content: center;
         min-width: 4.4rem;
+    font-family: var(--font-heading-family);
     font-size: var(--font-size-smaller);
 }
 
@@ -363,6 +364,10 @@ slider-component {
 
 
 .slider-buttons {
+    [class^='texture-'] &, div[class*=' texture-'] & {
+        --slider-pagination-bg-opacity: 0;
+    }
+
     background-color: rgba(var(--color-background), var(--slider-pagination-bg-opacity, 1));
     color: rgb(var(--color-foreground));
     display: flex;
