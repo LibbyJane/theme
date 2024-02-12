@@ -141,7 +141,7 @@ slideshow-component:not(.page-width) .slider-buttons {
 }
 
 .slideshow__autoplay {
-  right: 0;
+  position: relative;
   border-left: none;
   display: flex;
   justify-content: center;
@@ -155,7 +155,6 @@ slideshow-component:not(.page-width) .slider-buttons {
 }
 @media screen and (min-width: 750px) {
   .slideshow__autoplay.slider-button {
-    position: inherit;
     margin-left: var(--space-sm);
     padding: 0 0 0 var(--space-sm);
     border-left: var(--border-light);

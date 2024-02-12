@@ -1,29 +1,3 @@
-// also in theme-setup.liquid but duplicated here for ease of storybook setup
-:root {
-    --font-size-base: 1.8rem;
-    --font-size-smaller: 1.4rem;
-    --font-size-small: 1.2rem;
-    --font-size-caption: 1.15rem;
-    --letter-spacing: 0.06rem;
-
-    --font-size-h1: calc(var(--font-heading-scale) * 3rem);
-    --font-size-h2: calc(var(--font-heading-scale) * 2rem);
-    --font-size-h3: calc(var(--font-heading-scale) * 1.6rem);
-    --font-size-h4: calc(var(--font-heading-scale) * 1.4rem);
-    --font-size-h5: calc(var(--font-heading-scale) * 1.2rem);
-    --font-size-h6: var(--font-size-base);
-
-    @media screen and (min-width: 750px) {
-        --font-size-base: 1.6rem;
-        --font-size-caption: 1.2rem;
-        --font-size-h1: calc(var(--font-heading-scale) * 3.4rem);
-        --font-size-h2: calc(var(--font-heading-scale) * 3rem);
-        --font-size-h3: calc(var(--font-heading-scale) * 1.8rem);
-        --font-size-h4: calc(var(--font-heading-scale) * 1.6rem);
-        --font-size-h5: calc(var(--font-heading-scale) * 1.3rem);
-    }
-}
-
 h1,
 h2,
 h3,
@@ -107,6 +81,19 @@ strong {
     font-weight: 600;
 }
 
+
+
+.text-subtitle,
+.text-display {
+    @include text-heading;
+    font-size: var(--font-size-h6);
+    line-height: var(--line-height-heading);
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
 .caption,
 .caption-with-letter-spacing {
     font-size: var(--font-size-caption);
@@ -122,16 +109,13 @@ strong {
     }
 }
 
-
-.text-subtitle,
-.text-display {
-    @include text-heading;
-    font-size: var(--font-size-h6);
-    line-height: var(--line-height-heading);
-}
-
 .caption-with-letter-spacing {
     letter-spacing: calc(var(--font-size-caption) / 10 + 00.04rem);
+}
+
+.text-caption {
+    font-size: var(--font-size-caption);
+    letter-spacing: calc(var(--font-size-caption) / 10 + 00.01rem);
 }
 
 mark {

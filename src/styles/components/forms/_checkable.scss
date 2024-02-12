@@ -21,6 +21,7 @@
     cursor: pointer;
     padding: var(--space-xs) var(--space-sm);
     position: relative;
+    z-index: var(--zi-base);
 
     &::before {
         background: rgba(var(--color-highlight), var(--highlight-opacity));

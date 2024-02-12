@@ -1,4 +1,5 @@
 .header__brand {
+    // aspect-ratio: var(--header-brand-aspect-ratio);
     display: flex;
         align-items: center;
         justify-content: center;
@@ -7,6 +8,13 @@
     position: relative;
     text-decoration: none;
     z-index: var(--zi-header);
+
+    [data-sticky-type="reduce-logo-size"] & {
+        .scrolled-past-header & {
+            height: calc(var(--header-height) * 0.66) ;
+            margin: auto;
+        }
+    }
 
     .header--middle-left & {
         margin-left: calc(var(--space) * -1);
@@ -29,8 +37,9 @@
 
     [data-sticky-type="reduce-logo-size"] & {
         .scrolled-past-header & {
-            max-height: calc(var(--header-height) * 0.66) ;
-            margin-top: -1px;
+            // max-height: calc(var(--header-height) * 0.66) ;
+            max-height: none;
+            margin: auto;
         }
     }
 }
