@@ -3,6 +3,25 @@
     "c657e444-d7f1-438c-bdf8-529f9fd69377": {
       "type": "slideshow",
       "blocks": {
+        "slide_68XgRr": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
+            "image_overlay_opacity": 20,
+            "heading": "Welcome to Road Trip Wines",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Discover a new favourite!",
+            "link": "shopify:\/\/collections\/all",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
         "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-1": {
           "type": "slide",
           "settings": {
@@ -40,31 +59,12 @@
             "background_texture": "lined",
             "text_alignment_mobile": "center"
           }
-        },
-        "slide_68XgRr": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
-            "image_overlay_opacity": 20,
-            "heading": "Welcome to Road Trip Wines",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "Discover a new favourite!",
-            "link": "shopify:\/\/collections\/all",
-            "button_style_secondary": "primary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "background_texture": "paper",
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
+        "slide_68XgRr",
         "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-1",
-        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2",
-        "slide_68XgRr"
+        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -77,55 +77,6 @@
         "change_slides_speed": 5,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
-        "image_behavior": "none"
-      }
-    },
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Welcome to Road Trip Wines",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Discover a new favorite >",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": "primary",
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": "primary"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
-        "image_overlay_opacity": 40,
-        "image_height": "small",
-        "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "inverse",
-        "background_texture": "paper",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false,
         "image_behavior": "none"
       }
     },
@@ -185,8 +136,8 @@
         "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "link",
-        "enable_desktop_slider": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "color_scheme": "inverse",
@@ -199,6 +150,56 @@
         "enable_quick_add": true,
         "padding_top": 28,
         "padding_bottom": 36
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome to Road Trip Wines",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Discover a new favorite >",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
+        "image_overlay_opacity": 40,
+        "image_height": "small",
+        "desktop_content_position": "bottom-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "inverse",
+        "background_texture": "paper",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "image_behavior": "none"
       }
     },
     "707cd939-d696-4530-a0a6-5655a617fdbf": {
@@ -241,10 +242,10 @@
         "image_ratio": "square",
         "columns_desktop": 4,
         "color_scheme": "inverse",
-        "background_transparent": true,
+        "background_transparent": false,
         "show_view_all": false,
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -709,9 +710,9 @@
   },
   "order": [
     "c657e444-d7f1-438c-bdf8-529f9fd69377",
-    "image_banner",
     "rich_text",
     "featured_collection",
+    "image_banner",
     "707cd939-d696-4530-a0a6-5655a617fdbf",
     "90d8b6df-d98a-47ac-a60d-4dab79b288ea",
     "collage",
