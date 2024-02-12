@@ -194,7 +194,7 @@
         "color_scheme": "inverse",
         "background_transparent": false,
         "content_color_scheme": "",
-        "content_background_width": "full",
+        "content_background_width": "page",
         "background_texture": "transparent",
         "show_view_all": false,
         "columns_mobile": "1",
