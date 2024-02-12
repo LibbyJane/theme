@@ -83,22 +83,22 @@
     "slideshow_tkzBcF": {
       "type": "slideshow",
       "blocks": {
-        "slide_R4yGjm": {
+        "slide_4YeNRq": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
-            "image_overlay_opacity": 40,
-            "heading": "Welcome to Road Trip Wines",
+            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
+            "image_overlay_opacity": 20,
+            "heading": "Latest from the blog",
             "heading_size": "h1",
-            "subheading": "",
-            "button_label": "Discover a new favourite!",
-            "link": "shopify:\/\/collections\/all",
-            "button_style_secondary": "primary",
+            "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in  Hawkes Bay",
+            "button_label": "Read about it",
+            "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
+            "button_style_secondary": "secondary",
             "box_align": "middle-center",
             "text_alignment": "center",
             "show_text_box": true,
-            "color_scheme": "background-1",
-            "background_texture": "paper",
+            "color_scheme": "",
+            "background_texture": "lined",
             "text_alignment_mobile": "center"
           }
         },
@@ -120,31 +120,11 @@
             "background_texture": "torn",
             "text_alignment_mobile": "center"
           }
-        },
-        "slide_4YeNRq": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
-            "image_overlay_opacity": 20,
-            "heading": "Latest from the blog",
-            "heading_size": "h1",
-            "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in  Hawkes Bay",
-            "button_label": "Read about it",
-            "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
-            "button_style_secondary": "secondary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "",
-            "background_texture": "lined",
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
-        "slide_R4yGjm",
-        "slide_yjGJtz",
-        "slide_4YeNRq"
+        "slide_4YeNRq",
+        "slide_yjGJtz"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -163,25 +143,6 @@
     "slideshow_rJxjrr": {
       "type": "slideshow",
       "blocks": {
-        "slide_yhqzyL": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
-            "image_overlay_opacity": 40,
-            "heading": "Welcome to Road Trip Wines",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "Discover a new favourite!",
-            "link": "shopify:\/\/collections\/all",
-            "button_style_secondary": "primary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "background_texture": "paper",
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_E8dbwj": {
           "type": "slide",
           "settings": {
@@ -200,31 +161,10 @@
             "background_texture": "torn",
             "text_alignment_mobile": "center"
           }
-        },
-        "slide_NBxtgW": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
-            "image_overlay_opacity": 20,
-            "heading": "Latest from the blog",
-            "heading_size": "h1",
-            "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in  Hawkes Bay",
-            "button_label": "Read about it",
-            "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
-            "button_style_secondary": "secondary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "",
-            "background_texture": "lined",
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
-        "slide_yhqzyL",
-        "slide_E8dbwj",
-        "slide_NBxtgW"
+        "slide_E8dbwj"
       ],
       "settings": {
         "layout": "full_bleed",
