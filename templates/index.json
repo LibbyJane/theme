@@ -193,7 +193,7 @@
         "columns_desktop": 4,
         "color_scheme": "inverse",
         "background_transparent": false,
-        "content_color_scheme": "",
+        "content_color_scheme": "accent-1",
         "content_background_width": "page",
         "background_texture": "transparent",
         "show_view_all": false,
