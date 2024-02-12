@@ -844,6 +844,7 @@
         "button_rwAxWX"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/grapes-to-wine.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
