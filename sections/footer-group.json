@@ -12,33 +12,42 @@
             "menu": "footer"
           }
         },
-        "footer-1": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Info",
-            "menu": "info"
-          }
-        },
         "footer-2": {
           "type": "text",
           "settings": {
             "heading": "Opening Hours",
-            "subtext": "<p>Monday 10am–3pm<br\/>Tuesday 10am–6pm<br\/>Wednesday 10am–6pm<br\/>Thursday 10am–7pm<br\/>Friday 10am–7pm<br\/>Saturday 10am–7pm<br\/>Sunday 10AM–3PM<\/p>"
+            "subtext": "<p>Monday 10am–3pm<br\/>Tuesday 10am–6pm<br\/>Wednesday 10am–6pm<br\/>Thursday 10am–7pm<br\/>Friday 10am–7pm<br\/>Saturday 10am–7pm<br\/>Sunday 10am–3pm<\/p>"
+          }
+        },
+        "footer-1": {
+          "type": "link_list",
+          "disabled": true,
+          "settings": {
+            "heading": "Info",
+            "menu": "info"
           }
         },
         "text_jadedQ": {
           "type": "text",
           "settings": {
             "heading": "Heading",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "subtext": ""
+          }
+        },
+        "text_rim633": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
+            "subtext": ""
           }
         }
       },
       "block_order": [
         "footer-0",
-        "footer-1",
         "footer-2",
-        "text_jadedQ"
+        "footer-1",
+        "text_jadedQ",
+        "text_rim633"
       ],
       "settings": {
         "color_scheme": "background-1",
