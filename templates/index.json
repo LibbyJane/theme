@@ -1,5 +1,65 @@
 {
   "sections": {
+    "c657e444-d7f1-438c-bdf8-529f9fd69377": {
+      "type": "slideshow",
+      "blocks": {
+        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "10% off  store-wide",
+            "heading_size": "h1",
+            "subheading": "Use discount code <strong>RTW2424<\/strong>",
+            "button_label": "Start shopping",
+            "link": "shopify:\/\/collections\/all",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-2",
+            "background_texture": "torn",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "Latest from the blog",
+            "heading_size": "h1",
+            "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in  Hawkes Bay",
+            "button_label": "Read about it",
+            "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
+            "button_style_secondary": "secondary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "",
+            "background_texture": "lined",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-1",
+        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "section_color_scheme": "accent-1",
+        "slider_visual": "counter",
+        "slider_visual_background_opacity": 5,
+        "overlay_pagination_desktop": true,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "image_behavior": "none"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -167,66 +227,6 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "c657e444-d7f1-438c-bdf8-529f9fd69377": {
-      "type": "slideshow",
-      "blocks": {
-        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "10% off  store-wide",
-            "heading_size": "h1",
-            "subheading": "Use discount code <strong>RTW2424<\/strong>",
-            "button_label": "Start shopping",
-            "link": "shopify:\/\/collections\/all",
-            "button_style_secondary": "primary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "background-2",
-            "background_texture": "torn",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "Latest from the blog",
-            "heading_size": "h1",
-            "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in  Hawkes Bay",
-            "button_label": "Read about it",
-            "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
-            "button_style_secondary": "secondary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "",
-            "background_texture": "lined",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-1",
-        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "section_color_scheme": "accent-1",
-        "slider_visual": "counter",
-        "slider_visual_background_opacity": 5,
-        "overlay_pagination_desktop": true,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
-        "image_behavior": "none"
       }
     },
     "90d8b6df-d98a-47ac-a60d-4dab79b288ea": {
@@ -688,11 +688,11 @@
     }
   },
   "order": [
+    "c657e444-d7f1-438c-bdf8-529f9fd69377",
     "image_banner",
     "rich_text",
     "featured_collection",
     "707cd939-d696-4530-a0a6-5655a617fdbf",
-    "c657e444-d7f1-438c-bdf8-529f9fd69377",
     "90d8b6df-d98a-47ac-a60d-4dab79b288ea",
     "collage",
     "video",
