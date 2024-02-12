@@ -707,111 +707,6 @@
         "padding_bottom": 36
       }
     },
-    "featured_product_YCFJXc": {
-      "type": "featured-product",
-      "blocks": {
-        "text_fLXGEX": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "body"
-          }
-        },
-        "title_c6BJMJ": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_kEnii6": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "variant_picker_b7HnVP": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "buy_buttons_MpDFGT": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_KUXUWw": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_fLXGEX",
-        "title_c6BJMJ",
-        "price_kEnii6",
-        "variant_picker_b7HnVP",
-        "buy_buttons_MpDFGT",
-        "share_KUXUWw"
-      ],
-      "settings": {
-        "product": "edenvine-cabernet-sauvignon",
-        "color_scheme": "accent-1",
-        "background_texture": "",
-        "full_width": true,
-        "media_size": "large",
-        "constrain_to_viewport": true,
-        "media_fit": "cover",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "australia"
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "the-3p-fulfilled-snowboard",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "south-africa"
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "inverse",
-        "background_transparent": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -861,22 +756,6 @@
         "image_behavior": "none"
       }
     },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "Video Heading",
-        "heading_size": "h0",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "enable_video_looping": false,
-        "cover_image": "shopify:\/\/shop_images\/warm-and-cozy-wine-cellar-with-barrels-in-soft-lighting-ai_24061456_914.jpg",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "background_transparent": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "8776c05e-0fa5-4e29-8a52-52d5df273951": {
       "type": "image-with-text",
       "blocks": {
@@ -901,21 +780,68 @@
             "button_link": "",
             "button_style_secondary": "secondary"
           }
-        },
-        "39a75ffc-c6f5-4a3f-8706-ee447d1b8222": {
-          "type": "caption",
-          "settings": {
-            "caption": "Caption style UPPERCASE? Add a tagline",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
         }
       },
       "block_order": [
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-heading-1",
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-text-1",
-        "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-button-1",
-        "39a75ffc-c6f5-4a3f-8706-ee447d1b8222"
+        "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/black-grapes-on-the-vine.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "background_texture": "paper",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_PgraJ9": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_4AgpwM": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "heading_UaLLyj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_8YGLNb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_rwAxWX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "caption_4AgpwM",
+        "heading_UaLLyj",
+        "text_8YGLNb",
+        "button_rwAxWX"
       ],
       "settings": {
         "height": "adapt",
@@ -924,8 +850,54 @@
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "overlap",
-        "color_scheme": "background-2",
-        "background_texture": "torn",
+        "color_scheme": "",
+        "background_texture": "lined",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_PdmEkj": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xNqrcT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_hgFR9U": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_QR3akM": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xNqrcT",
+        "text_hgFR9U",
+        "button_QR3akM"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "",
+        "background_texture": "lined",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
@@ -1207,11 +1179,10 @@
     "featured_product_ifQmGM",
     "featured_product_a7fatY",
     "featured_product_x39YQz",
-    "featured_product_YCFJXc",
-    "collage",
     "image_banner",
-    "video",
     "8776c05e-0fa5-4e29-8a52-52d5df273951",
+    "image_with_text_PgraJ9",
+    "image_with_text_PdmEkj",
     "44448a2e-966d-4293-a4e6-c650ac1cb22b",
     "cedce7e5-6cf9-4779-97f7-3ba6127619cb",
     "2448094c-7197-4ebb-b9cd-889ab8e34336",
