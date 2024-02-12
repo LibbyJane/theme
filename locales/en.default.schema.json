@@ -81,7 +81,6 @@
         "label": "Desktop image alignment"
       }
     },
-
     "titles": {
       "name": "Titles",
       "settings": {
@@ -196,10 +195,10 @@
           "label": "Text"
         },
         "border_color_custom": {
-            "label": "Override the default border color for all color schemes"
+          "label": "Override the default border color for all color schemes"
         },
         "border_color": {
-            "label": "Border color"
+          "label": "Border color"
         },
         "button_background": {
           "label": "Solid button background"
@@ -283,30 +282,30 @@
           "info": "The texture is only visible if the container is not transparent."
         },
         "container_texture": {
-            "label": "Apply texture to the section background color"
+          "label": "Apply texture to the section background color"
         },
         "content_texture": {
-            "label": "Apply texture to the content background color"
+          "label": "Apply texture to the content background color"
         }
       }
     },
     "background": {
-        "name": "Background",
-        "settings": {
-          "content_background_width": {
-            "options__1": {
-              "label": "Page"
-            },
-            "options__2": {
-              "label": "Full screen"
-            },
-            "options__3": {
-              "label": "Transparent"
-            },
-            "label": "Content background width"
-          }
+      "name": "Background",
+      "settings": {
+        "content_background_width": {
+          "options__1": {
+            "label": "Page"
+          },
+          "options__2": {
+            "label": "Full screen"
+          },
+          "options__3": {
+            "label": "Transparent"
+          },
+          "label": "Content background width"
         }
-      },
+      }
+    },
     "site_background": {
       "name": "Background",
       "settings": {
@@ -387,15 +386,14 @@
           "label": "Font size scale"
         },
         "text_style": {
-            "label": "Text style",
-            "options__1": {
-                "label": "Body"
-            },
-            "options__2": {
-                "label": "Display"
-            }
+          "label": "Text style",
+          "options__1": {
+            "label": "Body"
+          },
+          "options__2": {
+            "label": "Display"
+          }
         }
-
       }
     },
     "buttons": {
@@ -3343,7 +3341,7 @@
           }
         },
         "slider_visual_background_opacity": {
-            "label": "Pagination background opacity"
+          "label": "Pagination background opacity"
         },
         "overlay_pagination_desktop": {
           "label": "Overlay pagination on desktop"
