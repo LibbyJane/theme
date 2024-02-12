@@ -127,7 +127,7 @@
       "type": "featured-collection",
       "settings": {
         "collection": "all",
-        "title": "Our latest favorites",
+        "title": "Our latest finds",
         "heading_size": "h2",
         "description": "",
         "show_collection_description": false,
