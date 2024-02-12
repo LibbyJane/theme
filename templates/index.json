@@ -214,8 +214,8 @@
         "color_scheme": "",
         "background_transparent": true,
         "content_color_scheme": "",
-        "content_background_width": "full",
-        "background_texture": "paper",
+        "content_background_width": "page",
+        "background_texture": "lined",
         "show_image": true,
         "show_date": true,
         "show_author": true,
@@ -274,9 +274,9 @@
         "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-share-1"
       ],
       "settings": {
-        "product": "the-collection-snowboard-oxygen",
+        "product": "edenvine-cabernet-sauvignon",
         "color_scheme": "accent-1",
-        "background_texture": "torn",
+        "background_texture": "paper",
         "full_width": false,
         "media_size": "large",
         "constrain_to_viewport": true,
