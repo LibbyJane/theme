@@ -187,8 +187,8 @@
         "featured_collection_ranhhW"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
+        "title": "Browse by region",
+        "heading_size": "h2",
         "image_ratio": "square",
         "columns_desktop": 4,
         "color_scheme": "inverse",
