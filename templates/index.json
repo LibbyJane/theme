@@ -1113,8 +1113,9 @@
       "settings": {
         "heading": "Video",
         "heading_size": "h1",
+        "video": "shopify:\/\/files\/videos\/vecteezy_vineyard-agriculture-farm-field-aerial-view-in-langhe_15284289_a9763fd8-7c93-4000-9487-747ed86b7cab.mov",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "enable_video_looping": false,
+        "enable_video_looping": true,
         "description": "",
         "full_width": false,
         "color_scheme": "",
