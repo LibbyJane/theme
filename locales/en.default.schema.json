@@ -1125,10 +1125,10 @@
             "text_style": {
               "label": "Text style",
               "options__1": {
-                "label": "Body"
+                "label": "Caption"
               },
               "options__2": {
-                "label": "Subtitle"
+                "label": "Display"
               },
               "options__3": {
                 "label": "Uppercase"
@@ -1177,7 +1177,7 @@
                 "label": "Body"
               },
               "options__2": {
-                "label": "Subtitle"
+                "label": "Caption"
               },
               "options__3": {
                 "label": "Uppercase"
