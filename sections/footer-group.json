@@ -22,7 +22,14 @@
         "footer-2": {
           "type": "text",
           "settings": {
-            "heading": "Our mission",
+            "heading": "Opening Hours",
+            "subtext": "<p>Monday 10am–3pm<br\/>Tuesday 10am–6pm<br\/>Wednesday 10am–6pm<br\/>Thursday 10am–7pm<br\/>Friday 10am–7pm<br\/>Saturday 10am–7pm<br\/>Sunday 10AM–3PM<\/p>"
+          }
+        },
+        "text_jadedQ": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
             "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
           }
         }
@@ -30,7 +37,8 @@
       "block_order": [
         "footer-0",
         "footer-1",
-        "footer-2"
+        "footer-2",
+        "text_jadedQ"
       ],
       "settings": {
         "color_scheme": "background-1",
@@ -38,8 +46,8 @@
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
         "show_social": true,
-        "enable_country_selector": false,
-        "enable_language_selector": false,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
         "payment_enable": true,
         "show_policy": false,
         "margin_top": 48,
