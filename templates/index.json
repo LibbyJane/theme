@@ -389,6 +389,331 @@
         "padding_bottom": 36
       }
     },
+    "featured_product_M9gW3Q": {
+      "type": "featured-product",
+      "blocks": {
+        "text_UXyQye": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "body"
+          }
+        },
+        "title_xdPadL": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_TwHikM": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_JVHFmR": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons_TLDjyx": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_qnkYr9": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_UXyQye",
+        "title_xdPadL",
+        "price_TwHikM",
+        "variant_picker_JVHFmR",
+        "buy_buttons_TLDjyx",
+        "share_qnkYr9"
+      ],
+      "settings": {
+        "product": "edenvine-cabernet-sauvignon",
+        "color_scheme": "accent-1",
+        "background_texture": "",
+        "full_width": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_ifQmGM": {
+      "type": "featured-product",
+      "blocks": {
+        "text_EwFjdt": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "body"
+          }
+        },
+        "title_nbrBbW": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_qAkM7y": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_C9RGPm": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons_EKLpkr": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_6mxjcm": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_EwFjdt",
+        "title_nbrBbW",
+        "price_qAkM7y",
+        "variant_picker_C9RGPm",
+        "buy_buttons_EKLpkr",
+        "share_6mxjcm"
+      ],
+      "settings": {
+        "product": "edenvine-cabernet-sauvignon",
+        "color_scheme": "accent-1",
+        "background_texture": "",
+        "full_width": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_a7fatY": {
+      "type": "featured-product",
+      "blocks": {
+        "text_8zrnnf": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "body"
+          }
+        },
+        "title_TWQemQ": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_jgEbqg": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_kMAabM": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons_NN8e6t": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_MGyXXw": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_8zrnnf",
+        "title_TWQemQ",
+        "price_jgEbqg",
+        "variant_picker_kMAabM",
+        "buy_buttons_NN8e6t",
+        "share_MGyXXw"
+      ],
+      "settings": {
+        "product": "edenvine-cabernet-sauvignon",
+        "color_scheme": "accent-1",
+        "background_texture": "",
+        "full_width": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_x39YQz": {
+      "type": "featured-product",
+      "blocks": {
+        "text_NLQdwC": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "body"
+          }
+        },
+        "title_4bWpNx": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_xibj38": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_T3Vn4a": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons_UVh84m": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_4jyqYj": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_NLQdwC",
+        "title_4bWpNx",
+        "price_xibj38",
+        "variant_picker_T3Vn4a",
+        "buy_buttons_UVh84m",
+        "share_4jyqYj"
+      ],
+      "settings": {
+        "product": "edenvine-cabernet-sauvignon",
+        "color_scheme": "accent-1",
+        "background_texture": "",
+        "full_width": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_YCFJXc": {
+      "type": "featured-product",
+      "blocks": {
+        "text_fLXGEX": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "body"
+          }
+        },
+        "title_c6BJMJ": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_kEnii6": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_b7HnVP": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons_MpDFGT": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_KUXUWw": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_fLXGEX",
+        "title_c6BJMJ",
+        "price_kEnii6",
+        "variant_picker_b7HnVP",
+        "buy_buttons_MpDFGT",
+        "share_KUXUWw"
+      ],
+      "settings": {
+        "product": "edenvine-cabernet-sauvignon",
+        "color_scheme": "accent-1",
+        "background_texture": "",
+        "full_width": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collage": {
       "type": "collage",
       "blocks": {
@@ -818,6 +1143,11 @@
     "707cd939-d696-4530-a0a6-5655a617fdbf",
     "dd71af2d-22bf-4c16-8c4d-3f035f3aeb98",
     "90d8b6df-d98a-47ac-a60d-4dab79b288ea",
+    "featured_product_M9gW3Q",
+    "featured_product_ifQmGM",
+    "featured_product_a7fatY",
+    "featured_product_x39YQz",
+    "featured_product_YCFJXc",
     "collage",
     "image_banner",
     "video",
