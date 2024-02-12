@@ -231,7 +231,7 @@
           "type": "text",
           "settings": {
             "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
+            "text_style": "body"
           }
         },
         "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-title-1": {
@@ -276,8 +276,8 @@
       "settings": {
         "product": "edenvine-cabernet-sauvignon",
         "color_scheme": "accent-1",
-        "background_texture": "paper",
-        "full_width": false,
+        "background_texture": "",
+        "full_width": true,
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "cover",
