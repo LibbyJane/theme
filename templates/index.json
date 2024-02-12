@@ -252,6 +252,64 @@
         "padding_bottom": 36
       }
     },
+    "featured_collection_kirhW3": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "title": "Our latest finds",
+        "heading_size": "h2",
+        "description": "",
+        "show_collection_description": false,
+        "description_style": "body",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "color_scheme": "inverse",
+        "background_transparent": true,
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_3LjfDw": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "title": "Our latest finds",
+        "heading_size": "h2",
+        "description": "",
+        "show_collection_description": false,
+        "description_style": "body",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "color_scheme": "inverse",
+        "background_transparent": true,
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
     "707cd939-d696-4530-a0a6-5655a617fdbf": {
       "type": "collection-list",
       "blocks": {
@@ -1140,6 +1198,8 @@
     "slideshow_rJxjrr",
     "rich_text",
     "featured_collection",
+    "featured_collection_kirhW3",
+    "featured_collection_3LjfDw",
     "707cd939-d696-4530-a0a6-5655a617fdbf",
     "dd71af2d-22bf-4c16-8c4d-3f035f3aeb98",
     "90d8b6df-d98a-47ac-a60d-4dab79b288ea",
