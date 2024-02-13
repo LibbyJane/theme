@@ -207,7 +207,7 @@
             "image_overlay_opacity": 0,
             "heading": "2048 1:1 <a href=\"\/blogs\/news\" title=\"News\">Internal, same window<\/a>",
             "heading_size": "h1",
-            "subheading": "Use <a href=\"https:\/\/www.theguardian.com\/crosswords\/\" target=\"_blank\" title=\"https:\/\/www.theguardian.com\/crosswords\/\">discount (external link)<\/a> code <strong>RTW2424<\/strong>",
+            "subheading": "Use <a href=\"https:\/\/www.theguardian.com\/crosswords\/\" target=\"_blank\" title=\"https:\/\/www.theguardian.com\/crosswords\/\">discount (external link)<\/a> code <strong>RTW2424 <\/strong><a href=\"https:\/\/www.theguardian.com\/crosswords\/\" title=\"https:\/\/www.theguardian.com\/crosswords\/\"><strong>external site, same window<\/strong><\/a>",
             "button_label": "Start shopping",
             "link": "shopify:\/\/collections\/all",
             "button_style_secondary": "primary",
