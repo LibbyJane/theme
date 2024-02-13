@@ -349,11 +349,11 @@
         "slide_height": "medium",
         "section_color_scheme": "inverse",
         "slider_visual": "counter",
-        "slider_visual_background_opacity": 0,
-        "overlay_pagination_desktop": true,
+        "slider_visual_background_opacity": 40,
+        "overlay_pagination_desktop": false,
         "auto_rotate": true,
-        "change_slides_speed": 5,
-        "show_text_below": true,
+        "change_slides_speed": 7,
+        "show_text_below": false,
         "accessibility_info": "Slideshow about our brand",
         "image_behavior": "none"
       }
