@@ -690,6 +690,71 @@
         "padding_bottom": 36
       }
     },
+    "featured_product_a7fatY": {
+      "type": "featured-product",
+      "blocks": {
+        "text_8zrnnf": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "body"
+          }
+        },
+        "title_TWQemQ": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_jgEbqg": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_kMAabM": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons_NN8e6t": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_MGyXXw": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_8zrnnf",
+        "title_TWQemQ",
+        "price_jgEbqg",
+        "variant_picker_kMAabM",
+        "buy_buttons_NN8e6t",
+        "share_MGyXXw"
+      ],
+      "settings": {
+        "product": "edenvine-cabernet-sauvignon",
+        "color_scheme": "background-1",
+        "background_texture": "lined",
+        "full_width": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_product_M9gW3Q": {
       "type": "featured-product",
       "blocks": {
@@ -806,71 +871,6 @@
       ],
       "settings": {
         "product": "the-out-of-stock-snowboard",
-        "color_scheme": "accent-1",
-        "background_texture": "",
-        "full_width": true,
-        "media_size": "large",
-        "constrain_to_viewport": true,
-        "media_fit": "cover",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_product_a7fatY": {
-      "type": "featured-product",
-      "blocks": {
-        "text_8zrnnf": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "body"
-          }
-        },
-        "title_TWQemQ": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_jgEbqg": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "variant_picker_kMAabM": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "buy_buttons_NN8e6t": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_MGyXXw": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_8zrnnf",
-        "title_TWQemQ",
-        "price_jgEbqg",
-        "variant_picker_kMAabM",
-        "buy_buttons_NN8e6t",
-        "share_MGyXXw"
-      ],
-      "settings": {
-        "product": "edenvine-cabernet-sauvignon",
         "color_scheme": "accent-1",
         "background_texture": "",
         "full_width": true,
@@ -1331,9 +1331,9 @@
     "dd71af2d-22bf-4c16-8c4d-3f035f3aeb98",
     "90d8b6df-d98a-47ac-a60d-4dab79b288ea",
     "featured_product_x39YQz",
+    "featured_product_a7fatY",
     "featured_product_M9gW3Q",
     "featured_product_ifQmGM",
-    "featured_product_a7fatY",
     "8776c05e-0fa5-4e29-8a52-52d5df273951",
     "image_with_text_PgraJ9",
     "image_with_text_PdmEkj",
