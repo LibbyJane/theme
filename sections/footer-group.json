@@ -33,6 +33,13 @@
             "subtext": "<p>Monday 10am–3pm<br\/>Tuesday 10am–6pm<br\/>Wednesday 10am–6pm<br\/>Thursday 10am–7pm<br\/>Friday 10am–7pm<br\/>Saturday 10am–7pm<br\/>Sunday 10am–3pm<\/p>"
           }
         },
+        "text_RDezyQ": {
+          "type": "text",
+          "settings": {
+            "heading": "Opening Hours",
+            "subtext": "<p>Monday 10am–3pm<br\/>Tuesday 10am–6pm<br\/>Wednesday 10am–6pm<br\/>Thursday 10am–7pm<br\/>Friday 10am–7pm<br\/>Saturday 10am–7pm<br\/>Sunday 10am–3pm<\/p>"
+          }
+        },
         "footer-0": {
           "type": "link_list",
           "settings": {
@@ -54,6 +61,13 @@
             "heading": "Quick links",
             "menu": "info"
           }
+        },
+        "link_list_RVPinF": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
         }
       },
       "block_order": [
@@ -61,9 +75,11 @@
         "text_9meyqB",
         "text_RDGxtT",
         "footer-2",
+        "text_RDezyQ",
         "footer-0",
         "footer-1",
-        "link_list_CK6Hf6"
+        "link_list_CK6Hf6",
+        "link_list_RVPinF"
       ],
       "settings": {
         "color_scheme": "background-1",
