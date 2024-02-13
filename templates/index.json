@@ -59,12 +59,50 @@
             "background_texture": "lined",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_ztFJ8x": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_k8M6FF": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
         "slide_68XgRr",
         "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-1",
-        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2"
+        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2",
+        "slide_ztFJ8x",
+        "slide_k8M6FF"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -120,11 +158,30 @@
             "background_texture": "torn",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_TbgDGV": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
         "slide_4YeNRq",
-        "slide_yjGJtz"
+        "slide_yjGJtz",
+        "slide_TbgDGV"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -146,9 +203,9 @@
         "slide_E8dbwj": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677.jpg",
+            "image": "shopify:\/\/shop_images\/p-2048-4-3.jpg",
             "image_overlay_opacity": 0,
-            "heading": "10% off  store-wide",
+            "heading": "Portrait 2048 4:3",
             "heading_size": "h1",
             "subheading": "Use discount code <strong>RTW2424<\/strong>",
             "button_label": "Start shopping",
@@ -161,10 +218,86 @@
             "background_texture": "torn",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_mxkVrX": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_Vi3AmH": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_HcFXEB": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_NJHYHw": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide_E8dbwj"
+        "slide_E8dbwj",
+        "slide_mxkVrX",
+        "slide_Vi3AmH",
+        "slide_HcFXEB",
+        "slide_NJHYHw"
       ],
       "settings": {
         "layout": "full_bleed",
