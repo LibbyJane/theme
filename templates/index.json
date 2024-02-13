@@ -310,7 +310,7 @@
         "slider_visual": "counter",
         "slider_visual_background_opacity": 0,
         "overlay_pagination_desktop": true,
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
