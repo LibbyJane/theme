@@ -4,6 +4,11 @@
   padding: 0 var(--content-padding-inline);
 }
 
+.newsletter-form__message {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 /* .newsletter__wrapper {
   padding-right: calc(4rem / var(--font-body-scale));
   padding-left: calc(4rem / var(--font-body-scale));

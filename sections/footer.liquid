@@ -176,6 +176,7 @@
                         {%- if section.settings.newsletter_heading != blank -%}
                             <h5 class="inline-richtext">{{ section.settings.newsletter_heading }}</h5>
                         {%- endif -%}
+
                         {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                             <input type="hidden" name="contact[tags]" value="newsletter">
                             <div class="newsletter-form__field-wrapper">
@@ -219,7 +220,7 @@
                             </div>
                             {%- if form.posted_successfully? -%}
                                 <div
-                                    class="newsletter-form__message newsletter-form__message--success form__message"
+                                    class="newsletter-form__message newsletter-form__message--success form__message text-display"
                                     id="ContactFooter-success"
                                     tabindex="-1"
                                     autofocus
