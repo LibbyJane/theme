@@ -163,17 +163,17 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/p-2048-3-2.jpg",
-            "image_overlay_opacity": 0,
-            "heading": "Portrait 3:2",
-            "heading_size": "h1",
+            "image_overlay_opacity": 30,
+            "heading": "Heading only, portrait 3:2",
+            "heading_size": "h0",
             "subheading": "",
             "button_label": "",
             "link": "",
             "button_style_secondary": "primary",
             "box_align": "middle-center",
             "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "background-1",
+            "show_text_box": false,
+            "color_scheme": "accent-1",
             "background_texture": "paper",
             "text_alignment_mobile": "center"
           }
