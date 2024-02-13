@@ -8,7 +8,7 @@
         "announcement_AkfXFi": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Welcome to our store with link",
             "link": "shopify:\/\/pages\/meet-the-team"
           }
         },
@@ -30,7 +30,7 @@
           "type": "announcement",
           "settings": {
             "text": "Welcome to our store",
-            "link": ""
+            "link": "shopify:\/\/policies\/refund-policy"
           }
         },
         "announcement_998FiJ": {
