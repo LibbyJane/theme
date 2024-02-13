@@ -29,7 +29,7 @@
         "announcement_fqciVX": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum accumsan quam, et turpis 100c.",
             "link": "shopify:\/\/policies\/refund-policy"
           }
         },
