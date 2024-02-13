@@ -260,10 +260,11 @@
         "slide_NL7HLm": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/2048-16-9.jpg",
             "image_overlay_opacity": 0,
-            "heading": "Image slide",
+            "heading": "Long button text, 2048 16:9",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
+            "subheading": "<a href=\"\/pages\/faq\" title=\"FAQ\">Internal link same window,<\/a> <a href=\"\/pages\/faq\" target=\"_blank\" title=\"FAQ\">internal link new window,<\/a> <a href=\"https:\/\/www.theguardian.com\/crosswords\/\" title=\"https:\/\/www.theguardian.com\/crosswords\/\">external link same window,<\/a> <a href=\"https:\/\/www.theguardian.com\/crosswords\/\" target=\"_blank\" title=\"https:\/\/www.theguardian.com\/crosswords\/\">external link new window<\/a>",
             "button_label": "Asinglewordlablenospaces30pluscharacters",
             "link": "",
             "button_style_secondary": "primary",
