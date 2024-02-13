@@ -181,11 +181,12 @@
         "slide_3NKDKQ": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/p-1024-4-3.jpg",
             "image_overlay_opacity": 0,
-            "heading": "Image slide",
+            "heading": "Heading only, with container, 1024 4:3",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
+            "subheading": "",
+            "button_label": "",
             "link": "",
             "button_style_secondary": "primary",
             "box_align": "middle-center",
