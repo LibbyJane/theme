@@ -63,6 +63,7 @@
         "slide_ztFJ8x": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/leaves-5722122_1920.png",
             "image_overlay_opacity": 0,
             "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum accumsan quam, et turpis duis.",
             "heading_size": "h2",
@@ -74,7 +75,7 @@
             "text_alignment": "center",
             "show_text_box": true,
             "color_scheme": "background-1",
-            "background_texture": "paper",
+            "background_texture": "lined",
             "text_alignment_mobile": "center"
           }
         },
