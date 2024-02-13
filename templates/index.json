@@ -59,12 +59,50 @@
             "background_texture": "lined",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_ztFJ8x": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_k8M6FF": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
         "slide_68XgRr",
         "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-1",
-        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2"
+        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2",
+        "slide_ztFJ8x",
+        "slide_k8M6FF"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -107,9 +145,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677.jpg",
             "image_overlay_opacity": 0,
-            "heading": "10% off  store-wide",
+            "heading": "",
             "heading_size": "h1",
-            "subheading": "Use discount code <strong>RTW2424<\/strong>",
+            "subheading": "",
             "button_label": "Start shopping",
             "link": "shopify:\/\/collections\/all",
             "button_style_secondary": "primary",
@@ -117,14 +155,74 @@
             "text_alignment": "center",
             "show_text_box": true,
             "color_scheme": "background-2",
-            "background_texture": "torn",
+            "background_texture": "lined",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_TbgDGV": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/p-2048-3-2.jpg",
+            "image_overlay_opacity": 30,
+            "heading": "Heading only, portrait 3:2",
+            "heading_size": "h0",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": false,
+            "color_scheme": "accent-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_3NKDKQ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/p-1024-4-3.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "Heading only, with container, 1024 4:3",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_wJXTTy": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2048-3-2.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "Subheading only",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
             "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
         "slide_4YeNRq",
-        "slide_yjGJtz"
+        "slide_yjGJtz",
+        "slide_TbgDGV",
+        "slide_3NKDKQ",
+        "slide_wJXTTy"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -133,7 +231,7 @@
         "slider_visual": "counter",
         "slider_visual_background_opacity": 0,
         "overlay_pagination_desktop": true,
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
@@ -146,12 +244,12 @@
         "slide_E8dbwj": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677.jpg",
+            "image": "shopify:\/\/shop_images\/2048-1-1.jpg",
             "image_overlay_opacity": 0,
-            "heading": "10% off  store-wide",
+            "heading": "2048 1:1 <a href=\"\/blogs\/news\" title=\"News\">Internal, same window<\/a>",
             "heading_size": "h1",
-            "subheading": "Use discount code <strong>RTW2424<\/strong>",
-            "button_label": "Start shopping",
+            "subheading": "Use <a href=\"https:\/\/www.theguardian.com\/crosswords\/\" target=\"_blank\" title=\"https:\/\/www.theguardian.com\/crosswords\/\">discount (external link)<\/a> code <strong>RTW2424 <\/strong><a href=\"https:\/\/www.theguardian.com\/crosswords\/\" title=\"https:\/\/www.theguardian.com\/crosswords\/\"><strong>external site, same window<\/strong><\/a>",
+            "button_label": "button internal same window",
             "link": "shopify:\/\/collections\/all",
             "button_style_secondary": "primary",
             "box_align": "middle-center",
@@ -161,10 +259,90 @@
             "background_texture": "torn",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_kLLgDf": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/p-2048-4-3.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "<a href=\"\/pages\/faq\" target=\"_blank\" title=\"FAQ\">Portrait<\/a> 2048 4:3",
+            "heading_size": "h1",
+            "subheading": "Use <a href=\"https:\/\/www.theguardian.com\/crosswords\/\" target=\"_blank\" title=\"https:\/\/www.theguardian.com\/crosswords\/\">discount (external link)<\/a> code <strong>RTW2424<\/strong>",
+            "button_label": "button external new window",
+            "link": "https:\/\/www.theguardian.com\/crosswords\/",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-2",
+            "background_texture": "torn",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_nQeARt": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/16to9.jpg",
+            "image_overlay_opacity": 30,
+            "heading": "placekitten 16:9",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Button label",
+            "link": "shopify:\/\/pages\/wines-by-color",
+            "button_style_secondary": "secondary",
+            "box_align": "bottom-right",
+            "text_alignment": "right",
+            "show_text_box": false,
+            "color_scheme": "inverse",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_NL7HLm": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2048-16-9.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "Long button text, 2048 16:9",
+            "heading_size": "h1",
+            "subheading": "<a href=\"\/pages\/faq\" title=\"FAQ\">Internal link same window,<\/a> <a href=\"\/pages\/faq\" target=\"_blank\" title=\"FAQ\">internal link new window,<\/a> <a href=\"https:\/\/www.theguardian.com\/crosswords\/\" title=\"https:\/\/www.theguardian.com\/crosswords\/\">external link same window,<\/a> <a href=\"https:\/\/www.theguardian.com\/crosswords\/\" target=\"_blank\" title=\"https:\/\/www.theguardian.com\/crosswords\/\">external link new window<\/a>",
+            "button_label": "Asinglewordlablenospaces30pluscharacters",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_b8Fghj": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2048-3-2.jpg",
+            "image_overlay_opacity": 40,
+            "heading": "Multiple word button label, 2048 3:2",
+            "heading_size": "h1",
+            "subheading": "Longer text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum accumsan quam, et turpis duis.",
+            "button_label": "Lorem ipsum dolor sit vivverra.",
+            "link": "shopify:\/\/blogs\/news",
+            "button_style_secondary": "secondary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": false,
+            "color_scheme": "accent-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide_E8dbwj"
+        "slide_E8dbwj",
+        "slide_kLLgDf",
+        "slide_nQeARt",
+        "slide_NL7HLm",
+        "slide_b8Fghj"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -173,7 +351,7 @@
         "slider_visual": "counter",
         "slider_visual_background_opacity": 0,
         "overlay_pagination_desktop": true,
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
