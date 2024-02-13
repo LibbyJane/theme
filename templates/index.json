@@ -203,6 +203,25 @@
         "slide_E8dbwj": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/2048-1-1.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "2048 1:1 <a href=\"\/blogs\/news\" title=\"News\">Internal, same window<\/a>",
+            "heading_size": "h1",
+            "subheading": "Use <a href=\"https:\/\/www.theguardian.com\/crosswords\/\" target=\"_blank\" title=\"https:\/\/www.theguardian.com\/crosswords\/\">discount (external link)<\/a> code <strong>RTW2424<\/strong>",
+            "button_label": "Start shopping",
+            "link": "shopify:\/\/collections\/all",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-2",
+            "background_texture": "torn",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_kLLgDf": {
+          "type": "slide",
+          "settings": {
             "image": "shopify:\/\/shop_images\/p-2048-4-3.jpg",
             "image_overlay_opacity": 0,
             "heading": "<a href=\"\/pages\/faq\" target=\"_blank\" title=\"FAQ\">Portrait<\/a> 2048 4:3",
@@ -240,6 +259,7 @@
       },
       "block_order": [
         "slide_E8dbwj",
+        "slide_kLLgDf",
         "slide_nQeARt"
       ],
       "settings": {
