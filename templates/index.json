@@ -241,17 +241,18 @@
         "slide_nQeARt": {
           "type": "slide",
           "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "Image slide",
+            "image": "shopify:\/\/shop_images\/16to9.jpg",
+            "image_overlay_opacity": 30,
+            "heading": "placekitten 16:9",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
+            "subheading": "",
             "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": "primary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "background-1",
+            "link": "shopify:\/\/pages\/wines-by-color",
+            "button_style_secondary": "secondary",
+            "box_align": "bottom-right",
+            "text_alignment": "right",
+            "show_text_box": false,
+            "color_scheme": "inverse",
             "background_texture": "paper",
             "text_alignment_mobile": "center"
           }
