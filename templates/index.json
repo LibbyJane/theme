@@ -145,9 +145,9 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677.jpg",
             "image_overlay_opacity": 0,
-            "heading": "10% off  store-wide",
+            "heading": "",
             "heading_size": "h1",
-            "subheading": "Use discount code <strong>RTW2424<\/strong>",
+            "subheading": "",
             "button_label": "Start shopping",
             "link": "shopify:\/\/collections\/all",
             "button_style_secondary": "primary",
@@ -155,7 +155,7 @@
             "text_alignment": "center",
             "show_text_box": true,
             "color_scheme": "background-2",
-            "background_texture": "torn",
+            "background_texture": "lined",
             "text_alignment_mobile": "center"
           }
         },
