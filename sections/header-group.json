@@ -15,8 +15,8 @@
         "announcement_XFCPQa": {
           "type": "announcement",
           "settings": {
-            "text": "Another link",
-            "link": "shopify:\/\/blogs\/news"
+            "text": "External link",
+            "link": "https:\/\/www.theguardian.com\/crosswords\/"
           }
         },
         "announcement_pUxenP": {
