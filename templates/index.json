@@ -1328,6 +1328,7 @@
         "heading_size": "h1",
         "video_url": "https:\/\/www.youtube.com\/watch?v=DnSXwrlrwIE",
         "enable_video_looping": false,
+        "cover_image": "shopify:\/\/shop_images\/p-2048-3-2.jpg",
         "description": "",
         "full_width": false,
         "color_scheme": "",
