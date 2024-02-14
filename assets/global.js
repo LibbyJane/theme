@@ -1060,7 +1060,8 @@ class VariantSelects extends HTMLElement {
     if (!pickUpAvailability) return;
 
     if (this.currentVariant && this.currentVariant.available) {
-      pickUpAvailability.fetchAvailability(this.currentVariant.id);
+        console.log(this.currentVariant.id);
+        pickUpAvailability.fetchAvailability(this.currentVariant.id);
     } else {
       pickUpAvailability.removeAttribute('available');
       pickUpAvailability.innerHTML = '';

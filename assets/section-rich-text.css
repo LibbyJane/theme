@@ -36,9 +36,13 @@
 
 .button-bar--fluid-buttons button,
 .button-bar--fluid-buttons .button,
-.button-bar--fluid-buttons a {
+.button-bar--fluid-buttons a,
+.button-bar--fluid-buttons form {
   flex: 1 1 auto;
   text-align: center;
+}
+.button-bar--fluid-buttons form button {
+  flex: 1 1 auto;
 }
 
 .section__container--rich-text .section__content {

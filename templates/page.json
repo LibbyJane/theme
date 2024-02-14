@@ -13,69 +13,69 @@
         "column_XNxwcJ": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hard-work-pays-off.jpg",
+            "image": "shopify://shop_images/hard-work-pays-off.jpg",
             "title": "Miya Crosby",
-            "text": "<h5>Founder<\/h5><p>Miya fell in love with the industry during her gap year and has ever looked back.<\/p>",
+            "text": "<h5>Founder</h5><p>Miya fell in love with the industry during her gap year and has ever looked back.</p>",
             "link_label": "Get in touch",
-            "link": "shopify:\/\/pages\/contact"
+            "link": "shopify://pages/contact"
           }
         },
         "column_KjbepU": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/welcome-to-my-business.jpg",
+            "image": "shopify://shop_images/welcome-to-my-business.jpg",
             "title": "Sebastian Perkins",
-            "text": "<h5>Buyer<\/h5><p>Sebastian has been building up his global network of contacts since he started travelling at the tender age of 19.<\/p>",
+            "text": "<h5>Buyer</h5><p>Sebastian has been building up his global network of contacts since he started travelling at the tender age of 19.</p>",
             "link_label": "Get in touch",
-            "link": "shopify:\/\/pages\/contact"
+            "link": "shopify://pages/contact"
           }
         },
         "column_HPy3Rw": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/man-dressed-in-monochrome-by-white-wall.jpg",
+            "image": "shopify://shop_images/man-dressed-in-monochrome-by-white-wall.jpg",
             "title": "Inayah Shepherd",
-            "text": "<h5>Customer Care<\/h5><p>Whatever the issue is, our fixer Inayah can handle it. They also have incredible taste in music.<\/p>",
+            "text": "<h5>Customer Care</h5><p>Whatever the issue is, our fixer Inayah can handle it. They also have incredible taste in music.</p>",
             "link_label": "Get in touch",
-            "link": "shopify:\/\/pages\/contact"
+            "link": "shopify://pages/contact"
           }
         },
         "column_kPpiYa": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/grey-woman-on-steps.jpg",
+            "image": "shopify://shop_images/grey-woman-on-steps.jpg",
             "title": "Marley Rowe",
-            "text": "<h5>Marketing<\/h5><p>Marley shines at all things social - hit her up if you'd like to do a collab.<\/p>",
+            "text": "<h5>Marketing</h5><p>Marley shines at all things social - hit her up if you'd like to do a collab.</p>",
             "link_label": "Get in touch",
-            "link": "shopify:\/\/pages\/contact"
+            "link": "shopify://pages/contact"
           }
         },
         "column_DLibdV": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/modern-business-woman-portrait.jpg",
+            "image": "shopify://shop_images/modern-business-woman-portrait.jpg",
             "title": "Maizie Wise",
-            "text": "<h5>Legals<\/h5><p>Maizie takes a-maiz-ing care of all the legal nitty gritty. She's the best in the business.<\/p>",
+            "text": "<h5>Legals</h5><p>Maizie takes a-maiz-ing care of all the legal nitty gritty. She's the best in the business.</p>",
             "link_label": "Get in touch",
-            "link": "shopify:\/\/pages\/contact"
+            "link": "shopify://pages/contact"
           }
         },
         "column_hnKdr6": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mens-fashion-stood-in-vineyard-shirt-and-shorts.jpg",
+            "image": "shopify://shop_images/mens-fashion-stood-in-vineyard-shirt-and-shorts.jpg",
             "title": "Barney Sharpe",
-            "text": "<h5>Tours & Travel<\/h5><p>Barney loves to travel and meet the makers, then turn that knowledge into fascinating tours for the public.<\/p>",
+            "text": "<h5>Tours & Travel</h5><p>Barney loves to travel and meet the makers, then turn that knowledge into fascinating tours for the public.</p>",
             "link_label": "Get in touch",
-            "link": "shopify:\/\/pages\/contact"
+            "link": "shopify://pages/contact"
           }
         },
         "column_6dBHMD": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/woman-sits-at-wooden-table-and-works-on-a-laptop.jpg",
+            "image": "shopify://shop_images/woman-sits-at-wooden-table-and-works-on-a-laptop.jpg",
             "title": "Dillon Sharp",
-            "text": "<h5>Development<\/h5><p>Tech was almost Dillon's first language, and she brings the know-how to all our online platform with flair and a smile. <\/p>",
+            "text": "<h5>Development</h5><p>Tech was almost Dillon's first language, and she brings the know-how to all our online platform with flair and a smile. </p>",
             "link_label": "",
             "link": ""
           }
@@ -83,11 +83,11 @@
         "column_GTxWxt": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/woman-in-a-blue-shirt-and-glasses-smiles-wide.jpg",
+            "image": "shopify://shop_images/woman-in-a-blue-shirt-and-glasses-smiles-wide.jpg",
             "title": "Mari Thompson",
-            "text": "<h5>Creative Designer<\/h5><p>Mari specialises in product designs that please your eyes and warm your heart.<\/p>",
+            "text": "<h5>Creative Designer</h5><p>Mari specialises in product designs that please your eyes and warm your heart.</p>",
             "link_label": "",
-            "link": "shopify:\/\/pages\/contact"
+            "link": "shopify://pages/contact"
           }
         }
       },
@@ -111,7 +111,7 @@
         "column_alignment": "center",
         "column_link_hover_style": "hover-highlight",
         "button_label": "Contact us",
-        "button_link": "shopify:\/\/pages\/contact",
+        "button_link": "shopify://pages/contact",
         "color_scheme": "background-1",
         "background_texture": "paper",
         "columns_mobile": "2",
@@ -128,7 +128,7 @@
           "settings": {
             "heading": "When will my order be processed?",
             "icon": "stopwatch",
-            "row_content": "<p>We aim to have all orders processed within 2 business days, however during busy times  of year (such as Christmas or during a large promotion) it may take a day longer. <\/p><p>Our packing team takes a break on the weekend, so orders placed on a Friday may not start processing until the next Monday (or Tuesday in case of a bank holiday).<\/p><p>If you do need to make a change to your order or delivery address, please let us know as soon as possible!<\/p>",
+            "row_content": "<p>We aim to have all orders processed within 2 business days, however during busy times  of year (such as Christmas or during a large promotion) it may take a day longer. </p><p>Our packing team takes a break on the weekend, so orders placed on a Friday may not start processing until the next Monday (or Tuesday in case of a bank holiday).</p><p>If you do need to make a change to your order or delivery address, please let us know as soon as possible!</p>",
             "page": ""
           }
         },
@@ -137,7 +137,7 @@
           "settings": {
             "heading": "When will my order be delivered?",
             "icon": "truck",
-            "row_content": "<p>Mainland orders are generally delivered within two business days after the order is processed. Rural areas will generally receive their orders within 4 business days after the order is processed.<\/p>",
+            "row_content": "<p>Mainland orders are generally delivered within two business days after the order is processed. Rural areas will generally receive their orders within 4 business days after the order is processed.</p>",
             "page": ""
           }
         },
@@ -146,7 +146,7 @@
           "settings": {
             "heading": "How much is shipping?",
             "icon": "price_tag",
-            "row_content": "<p>Shipping on all orders is free!<\/p>",
+            "row_content": "<p>Shipping on all orders is free!</p>",
             "page": ""
           }
         },
@@ -155,7 +155,7 @@
           "settings": {
             "heading": "What payment methods do you accept?",
             "icon": "question_mark",
-            "row_content": "<p>For express checkout, we offer ShopPay, PayPal, ApplePay and GooglePay. For standard checkout we accept Visa, MasterCard, American Express, UnionPay, PayPal, and our digital gift cards. <\/p>",
+            "row_content": "<p>For express checkout, we offer ShopPay, PayPal, ApplePay and GooglePay. For standard checkout we accept Visa, MasterCard, American Express, UnionPay, PayPal, and our digital gift cards. </p>",
             "page": ""
           }
         },
@@ -164,7 +164,7 @@
           "settings": {
             "heading": "Is payment secure?",
             "icon": "lock",
-            "row_content": "<p>We take your security very seriously. All transactions processed on our site are secure and encrypted.<\/p>",
+            "row_content": "<p>We take your security very seriously. All transactions processed on our site are secure and encrypted.</p>",
             "page": ""
           }
         }
@@ -187,7 +187,7 @@
         "container_color_scheme": "background-1",
         "background_texture": "lined",
         "open_first_collapsible_row": false,
-        "image": "shopify:\/\/shop_images\/vintage-van-parked.jpg",
+        "image": "shopify://shop_images/vintage-van-parked.jpg",
         "column_height": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",

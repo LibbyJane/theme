@@ -394,11 +394,7 @@ noscript .localization-form__select {
   padding-top: var(--space-med);
 }
 .localization-form__select .icon-caret {
-  position: absolute;
-  content: "";
-  height: 0.6rem;
-  right: calc(var(--inputs-border-width) + var(--space-med));
-  top: calc(50% - 0.2rem);
+  height: var(--icon-size-sm);
   transition: transform var(--duration-short) var(--transition-type);
 }
 

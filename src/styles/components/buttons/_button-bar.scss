@@ -46,8 +46,15 @@
 .button-bar--fluid-buttons {
     button,
     .button,
-    a {
+    a,
+    form {
         flex: 1 1 auto;
         text-align: center;
+    }
+
+    form {
+        button {
+            flex: 1 1 auto;
+        }
     }
 }

@@ -1,4 +1,7 @@
-
+.utility-bar {
+    position: relative;
+    z-index: var(--zi-base);
+}
 
 .announcement-bar,
 .announcement-bar__announcement {

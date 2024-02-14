@@ -1,8 +1,8 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/16to9.jpg",
+    "logo": "shopify://shop_images/16to9.jpg",
     "logo_width": 220,
-    "favicon": "shopify:\/\/shop_images\/logo_transparent.png",
+    "favicon": "shopify://shop_images/logo_transparent.png",
     "site_background_style": "tile",
     "type_header_font": "kalam_n4",
     "heading_scale": 150,
@@ -95,15 +95,15 @@
     "badge_position": "bottom left",
     "sale_badge_color_scheme": "sticky-2",
     "sold_out_badge_color_scheme": "background-3",
-    "social_facebook_link": "https:\/\/facebook.com\/shopify",
-    "social_instagram_link": "http:\/\/instagram.com\/shopify",
-    "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
-    "social_tiktok_link": "https:\/\/tiktok.com\/@shopify",
-    "social_twitter_link": "https:\/\/twitter.com",
-    "social_snapchat_link": "https:\/\/www.snapchat.com\/add\/shopify",
-    "social_pinterest_link": "https:\/\/pinterest.com\/shopify",
-    "social_tumblr_link": "https:\/\/shopify.tumlr.com",
-    "social_vimeo_link": "https:\/\/vimeo.com\/shopify",
+    "social_facebook_link": "https://facebook.com/shopify",
+    "social_instagram_link": "http://instagram.com/shopify",
+    "social_youtube_link": "https://www.youtube.com/shopify",
+    "social_tiktok_link": "https://tiktok.com/@shopify",
+    "social_twitter_link": "https://twitter.com",
+    "social_snapchat_link": "https://www.snapchat.com/add/shopify",
+    "social_pinterest_link": "https://pinterest.com/shopify",
+    "social_tumblr_link": "https://shopify.tumlr.com",
+    "social_vimeo_link": "https://vimeo.com/shopify",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": true,
@@ -112,10 +112,10 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
-    "checkout_header_image": "shopify:\/\/shop_images\/background.jpg",
-    "checkout_logo_image": "shopify:\/\/shop_images\/logo.png",
+    "checkout_header_image": "shopify://shop_images/background.jpg",
+    "checkout_logo_image": "shopify://shop_images/logo.png",
     "checkout_logo_position": "center",
-    "checkout_body_background_image": "shopify:\/\/shop_images\/texture-paper-craft.jpg",
+    "checkout_body_background_image": "shopify://shop_images/texture-paper-craft.jpg",
     "checkout_input_background_color_mode": "white",
     "checkout_sidebar_background_color": "#ffffff",
     "checkout_accent_color": "#820030",
@@ -140,31 +140,31 @@
     ],
     "blocks": {
       "14060646107696862457": {
-        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {
         }
       },
       "5460033060862993441": {
-        "type": "shopify:\/\/apps\/essential-announcement\/blocks\/app-embed\/93b5429f-c8d6-4c33-ae14-250fd84f361b",
+        "type": "shopify://apps/essential-announcement/blocks/app-embed/93b5429f-c8d6-4c33-ae14-250fd84f361b",
         "disabled": false,
         "settings": {
         }
       },
       "5890205134905443601": {
-        "type": "shopify:\/\/apps\/seoant-trust-badges\/blocks\/trust_core\/f42f2346-5d14-4b41-a8b9-4b6ee352262e",
+        "type": "shopify://apps/seoant-trust-badges/blocks/trust_core/f42f2346-5d14-4b41-a8b9-4b6ee352262e",
         "disabled": false,
         "settings": {
         }
       },
       "12657775114333427046": {
-        "type": "shopify:\/\/apps\/essential-countdown\/blocks\/app_embed\/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+        "type": "shopify://apps/essential-countdown/blocks/app_embed/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
         "disabled": false,
         "settings": {
         }
       },
       "5061257265103808445": {
-        "type": "shopify:\/\/apps\/ra-term-condition\/blocks\/embed-block\/471882a9-9b1b-4918-8943-6c66b60c94ea",
+        "type": "shopify://apps/ra-term-condition/blocks/embed-block/471882a9-9b1b-4918-8943-6c66b60c94ea",
         "disabled": false,
         "settings": {
         }
@@ -285,9 +285,9 @@
   },
   "presets": {
     "Default": {
-      "logo": "shopify:\/\/shop_images\/logo.png",
+      "logo": "shopify://shop_images/logo.png",
       "logo_width": 160,
-      "favicon": "shopify:\/\/shop_images\/logo_transparent.png",
+      "favicon": "shopify://shop_images/logo_transparent.png",
       "site_background_style": "tile",
       "type_header_font": "kalam_n4",
       "heading_scale": 150,
@@ -388,10 +388,10 @@
       "show_vendor": false,
       "show_cart_note": false,
       "cart_drawer_collection": "",
-      "checkout_header_image": "shopify:\/\/shop_images\/background.jpg",
-      "checkout_logo_image": "shopify:\/\/shop_images\/logo.png",
+      "checkout_header_image": "shopify://shop_images/background.jpg",
+      "checkout_logo_image": "shopify://shop_images/logo.png",
       "checkout_logo_position": "center",
-      "checkout_body_background_image": "shopify:\/\/shop_images\/texture-paper-craft.jpg",
+      "checkout_body_background_image": "shopify://shop_images/texture-paper-craft.jpg",
       "checkout_input_background_color_mode": "white",
       "checkout_sidebar_background_color": "#ffffff",
       "checkout_accent_color": "#820030",
@@ -525,9 +525,9 @@
       }
     },
     "Treasure": {
-      "logo": "shopify:\/\/shop_images\/logo.png",
+      "logo": "shopify://shop_images/logo.png",
       "logo_width": 160,
-      "favicon": "shopify:\/\/shop_images\/logo_transparent.png",
+      "favicon": "shopify://shop_images/logo_transparent.png",
       "site_background_style": "tile",
       "type_header_font": "kalam_n4",
       "heading_scale": 150,
@@ -637,10 +637,10 @@
       "show_vendor": false,
       "show_cart_note": false,
       "cart_drawer_collection": "",
-      "checkout_header_image": "shopify:\/\/shop_images\/background.jpg",
-      "checkout_logo_image": "shopify:\/\/shop_images\/logo.png",
+      "checkout_header_image": "shopify://shop_images/background.jpg",
+      "checkout_logo_image": "shopify://shop_images/logo.png",
       "checkout_logo_position": "center",
-      "checkout_body_background_image": "shopify:\/\/shop_images\/texture-paper-craft.jpg",
+      "checkout_body_background_image": "shopify://shop_images/texture-paper-craft.jpg",
       "checkout_input_background_color_mode": "white",
       "checkout_sidebar_background_color": "#ffffff",
       "checkout_accent_color": "#820030",
@@ -665,31 +665,31 @@
       ],
       "blocks": {
         "14060646107696862457": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "disabled": false,
           "settings": {
           }
         },
         "5460033060862993441": {
-          "type": "shopify:\/\/apps\/essential-announcement\/blocks\/app-embed\/93b5429f-c8d6-4c33-ae14-250fd84f361b",
+          "type": "shopify://apps/essential-announcement/blocks/app-embed/93b5429f-c8d6-4c33-ae14-250fd84f361b",
           "disabled": false,
           "settings": {
           }
         },
         "5890205134905443601": {
-          "type": "shopify:\/\/apps\/seoant-trust-badges\/blocks\/trust_core\/f42f2346-5d14-4b41-a8b9-4b6ee352262e",
+          "type": "shopify://apps/seoant-trust-badges/blocks/trust_core/f42f2346-5d14-4b41-a8b9-4b6ee352262e",
           "disabled": false,
           "settings": {
           }
         },
         "12657775114333427046": {
-          "type": "shopify:\/\/apps\/essential-countdown\/blocks\/app_embed\/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "type": "shopify://apps/essential-countdown/blocks/app_embed/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
           "disabled": false,
           "settings": {
           }
         },
         "5061257265103808445": {
-          "type": "shopify:\/\/apps\/ra-term-condition\/blocks\/embed-block\/471882a9-9b1b-4918-8943-6c66b60c94ea",
+          "type": "shopify://apps/ra-term-condition/blocks/embed-block/471882a9-9b1b-4918-8943-6c66b60c94ea",
           "disabled": false,
           "settings": {
           }

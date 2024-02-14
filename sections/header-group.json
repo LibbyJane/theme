@@ -9,14 +9,14 @@
           "type": "announcement",
           "settings": {
             "text": "Welcome to our store with internal link",
-            "link": "shopify:\/\/pages\/meet-the-team"
+            "link": "shopify://pages/meet-the-team"
           }
         },
         "announcement_XFCPQa": {
           "type": "announcement",
           "settings": {
             "text": "External link",
-            "link": "https:\/\/www.theguardian.com\/crosswords\/"
+            "link": "https://www.theguardian.com/crosswords/"
           }
         },
         "announcement_pUxenP": {
@@ -30,7 +30,7 @@
           "type": "announcement",
           "settings": {
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum accumsan quam, et turpis 100c.",
-            "link": "shopify:\/\/policies\/refund-policy"
+            "link": "shopify://policies/refund-policy"
           }
         },
         "announcement_998FiJ": {
