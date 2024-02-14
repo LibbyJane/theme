@@ -1996,7 +1996,6 @@ html.no-js .no-js-hidden {
   background-size: 12rem auto, cover;
   box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
   box-shadow: none;
-  margin-block: var(--space-med);
 }
 
 .section__content {

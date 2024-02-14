@@ -63,18 +63,19 @@
         "slide_ztFJ8x": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/leaves-5722122_1920.png",
             "image_overlay_opacity": 0,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
+            "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum accumsan quam, et turpis duis.",
+            "heading_size": "h2",
+            "subheading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum accumsan quam, et turpis duis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum accumsan quam, et turpis duis.",
+            "button_label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum accumsan quam, et turpis duis.",
             "link": "",
-            "button_style_secondary": "primary",
+            "button_style_secondary": "secondary",
             "box_align": "middle-center",
             "text_alignment": "center",
             "show_text_box": true,
             "color_scheme": "background-1",
-            "background_texture": "paper",
+            "background_texture": "lined",
             "text_alignment_mobile": "center"
           }
         },
@@ -108,8 +109,8 @@
         "layout": "full_bleed",
         "slide_height": "medium",
         "section_color_scheme": "inverse",
-        "slider_visual": "counter",
-        "slider_visual_background_opacity": 0,
+        "slider_visual": "numbers",
+        "slider_visual_background_opacity": 80,
         "overlay_pagination_desktop": true,
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -545,7 +546,7 @@
         "title": "Latest from the blog",
         "heading_size": "h2",
         "blog": "news",
-        "post_limit": 2,
+        "post_limit": 1,
         "columns_desktop": 1,
         "color_scheme": "",
         "background_transparent": true,
@@ -909,12 +910,21 @@
             "button_link": "",
             "button_style_secondary": "secondary"
           }
+        },
+        "caption_JtEE9x": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
         }
       },
       "block_order": [
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-heading-1",
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-text-1",
-        "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-button-1"
+        "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-button-1",
+        "caption_JtEE9x"
       ],
       "settings": {
         "image": "shopify://shop_images/black-grapes-on-the-vine.jpg",
@@ -994,15 +1004,20 @@
         "heading_xNqrcT": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Image with text heading",
             "heading_size": "h1"
           }
         },
         "text_hgFR9U": {
           "type": "text",
           "settings": {
+<<<<<<< HEAD
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_style": "body"
+=======
+            "text": "<p>60+ characters  of lorem ipsum dolor sit amet, consectetur adipiscing elit est.<\/p>",
+            "text_style": "subtitle"
+>>>>>>> origin
           }
         },
         "button_QR3akM": {
@@ -1012,12 +1027,21 @@
             "button_link": "",
             "button_style_secondary": "secondary"
           }
+        },
+        "caption_WHEkPy": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
         }
       },
       "block_order": [
         "heading_xNqrcT",
         "text_hgFR9U",
-        "button_QR3akM"
+        "button_QR3akM",
+        "caption_WHEkPy"
       ],
       "settings": {
         "image": "shopify://shop_images/wine-cantilena_9444d35d-7476-4f97-8e3a-7e0b953e2cc2.jpg",
@@ -1305,11 +1329,17 @@
     "video_KaLPQK": {
       "type": "video",
       "settings": {
-        "heading": "Video",
+        "heading": "External Video",
         "heading_size": "h1",
+<<<<<<< HEAD
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "enable_video_looping": false,
         "cover_image": "shopify://shop_images/a-beautiful-mountain-landscape-in-spain.jpg",
+=======
+        "video_url": "https:\/\/www.youtube.com\/watch?v=DnSXwrlrwIE",
+        "enable_video_looping": false,
+        "cover_image": "shopify:\/\/shop_images\/2048-3-2.jpg",
+>>>>>>> origin
         "description": "",
         "full_width": false,
         "color_scheme": "",
