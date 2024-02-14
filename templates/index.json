@@ -910,12 +910,21 @@
             "button_link": "",
             "button_style_secondary": "secondary"
           }
+        },
+        "caption_JtEE9x": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
         }
       },
       "block_order": [
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-heading-1",
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-text-1",
-        "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-button-1"
+        "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-button-1",
+        "caption_JtEE9x"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/black-grapes-on-the-vine.jpg",
@@ -995,15 +1004,15 @@
         "heading_xNqrcT": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Image with text heading",
             "heading_size": "h1"
           }
         },
         "text_hgFR9U": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
+            "text": "<p>60+ characters  of lorem ipsum dolor sit amet, consectetur adipiscing elit est.<\/p>",
+            "text_style": "subtitle"
           }
         },
         "button_QR3akM": {
@@ -1013,12 +1022,21 @@
             "button_link": "",
             "button_style_secondary": "secondary"
           }
+        },
+        "caption_WHEkPy": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
         }
       },
       "block_order": [
         "heading_xNqrcT",
         "text_hgFR9U",
-        "button_QR3akM"
+        "button_QR3akM",
+        "caption_WHEkPy"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/wine-cantilena_9444d35d-7476-4f97-8e3a-7e0b953e2cc2.jpg",
