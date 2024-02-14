@@ -7,8 +7,6 @@ if (!customElements.get('pickup-availability')) {
 
         if (!this.hasAttribute('available')) return;
 
-        console.log('?', this);
-
         this.errorHtml = this.querySelector('template').content.firstElementChild.cloneNode(true);
         this.onClickRefreshList = this.onClickRefreshList.bind(this);
         this.fetchAvailability(this.dataset.variantId);
@@ -29,7 +27,7 @@ if (!customElements.get('pickup-availability')) {
               .querySelector('.shopify-section');
             this.renderPreview(sectionInnerHTML);
           })
-          .catch((_e) => {
+          .catch((e) => {
             const button = this.querySelector('button');
             if (button) button.removeEventListener('click', this.onClickRefreshList);
             this.renderError();
@@ -60,10 +58,6 @@ if (!customElements.get('pickup-availability')) {
         this.setAttribute('available', '');
 
         document.body.appendChild(sectionInnerHTML.querySelector('pickup-availability-drawer'));
-        const colorClassesToApply = this.dataset.productPageColorScheme.split(' ');
-        colorClassesToApply.forEach((colorClass) => {
-          document.querySelector('pickup-availability-drawer').classList.add(colorClass);
-        });
 
         const button = this.querySelector('button');
         if (button)
