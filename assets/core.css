@@ -1687,15 +1687,12 @@ details[open] > .header__submenu {
   padding-inline: var(--content-padding-inline);
 }
 
+.utility-bar__grid {
+  padding-block: var(--space);
+}
+
 .announcement-bar,
 .announcement-bar__announcement {
-  color: rgb(var(--color-foreground));
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: center;
   grid-area: announcements;
 }
 
@@ -1706,10 +1703,6 @@ details[open] > .header__submenu {
 .announcement-bar form,
 .announcement-bar .disclosure {
   font-size: var(--font-size-smaller);
-}
-
-.utility-bar__grid {
-  padding-inline: var(-space-xl);
 }
 
 .announcement-bar-slider, .utility-bar__grid .announcement-bar-slider,
