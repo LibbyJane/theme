@@ -104,6 +104,14 @@
     display: block !important;
 }
 
+.flex-col {
+    flex-direction: column !important;
+}
+
+.flex-row {
+    flex-direction: row !important;
+}
+
 // .flex-wrap {
 //     flex-wrap: wrap;
 // }

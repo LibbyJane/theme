@@ -27,7 +27,7 @@
 
 
 <div class="color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} isolate collection section-{{ section.id }} section-{{ section.id }}-padding">
-    <header class="title-wrapper align-{{settings.title_alignment}} page-width">
+    <header class="title-wrapper align-{{ settings.title_alignment }} page-width">
         {%- if section.settings.title != blank -%}
             <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 {{ section.settings.title }}
@@ -37,7 +37,7 @@
 
 
     <div class="isolate color-{{ section.settings.content_color_scheme }} {% unless section.settings.content_background_width == 'full' %} page-width{% endunless %} {% if section.settings.background_texture == 'transparent' %}content-background-transparent content-padding-inline {% else %}content-padding texture-{{section.settings.background_texture}} {% endif %}">
-        <slider-component class="slider-mobile-gutter margin-bottom {% if show_mobile_slider %} slider-component-mobile{% endif %}  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <slider-component class="slider-mobile-gutter margin-bottom {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 <ul
                 id="Slider-{{ section.id }}"
                 class="blog__posts articles-wrapper contains-card contains-card--article{% if settings.blog_card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
@@ -161,7 +161,10 @@
     "name": "t:sections.featured-blog.name",
     "tag": "section",
     "disabled_on": {
-        "groups": ["header", "footer"]
+        "groups": [
+            "header",
+            "footer"
+        ]
     },
     "settings": [
         {
@@ -175,16 +178,16 @@
             "id": "heading_size",
             "options": [
                 {
-                "value": "h2",
-                "label": "t:sections.all.heading_size.options__1.label"
+                    "value": "h2",
+                    "label": "t:sections.all.heading_size.options__1.label"
                 },
                 {
-                "value": "h1",
-                "label": "t:sections.all.heading_size.options__2.label"
+                    "value": "h1",
+                    "label": "t:sections.all.heading_size.options__2.label"
                 },
                 {
-                "value": "h0",
-                "label": "t:sections.all.heading_size.options__3.label"
+                    "value": "h0",
+                    "label": "t:sections.all.heading_size.options__3.label"
                 }
             ],
             "default": "h1",

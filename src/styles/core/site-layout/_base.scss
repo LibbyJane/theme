@@ -1,5 +1,10 @@
-.site-outer {
+html, body {
     @include scrollbars;
+}
+
+.site-outer {
+
+    @include text-body;
     background: var(--site-background-image);
     background-size:  var(--site-background-size);
     background-repeat: var(--site-background-repeat);

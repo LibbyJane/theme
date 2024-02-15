@@ -34,124 +34,144 @@
             <div id="AddAddress">
                 <h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
                 {%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
-                    {% assign value = form.first_name %}
-                    {% assign label = 'customer.addresses.first_name' | t  %}
+                    {% liquid
+                        assign value = form.first_name
+                        assign label = 'customer.addresses.first_name' | t
+                    %}
                     {% render 'field-with-float-label'
                         type: "text",
                         id: "AddressFirstNameNew",
-                        name:"address[first_name]",
+                        name: "address[first_name]",
                         value: value,
-                        autocomplete:"given-name",
+                        autocomplete: "given-name",
                         placeholder: label,
                         label: label
                     %}
 
-                    {% assign value = form.last_name %}
-                    {% assign label = 'customer.addresses.last_name' | t  %}
+                    {% liquid
+                        assign value = form.last_name
+                        assign label = 'customer.addresses.last_name' | t
+                    %}
                     {% render 'field-with-float-label'
                         type: "text",
                         id: "AddressLastNameNew",
-                        name:"address[last_name]",
+                        name: "address[last_name]",
                         value: value,
-                        autocomplete:"family-name",
+                        autocomplete: "family-name",
                         placeholder: label,
                         label: label
                     %}
 
-                    {% assign value = form.company %}
-                    {% assign label = 'customer.addresses.company' | t  %}
+                    {% liquid
+                        assign value = form.company
+                        assign label = 'customer.addresses.company' | t
+                    %}
                     {% render 'field-with-float-label'
                         type: "text",
                         id: "AddressCompanyNew",
-                        name:"address[company]",
+                        name: "address[company]",
                         value: value,
-                        autocomplete:"organization",
+                        autocomplete: "organization",
                         placeholder: label,
                         label: label
                     %}
 
-                    {% assign value = form.address1 %}
-                    {% assign label = 'customer.addresses.address1' | t  %}
+                    {% liquid
+                        assign value = form.address1
+                        assign label = 'customer.addresses.address1' | t
+                    %}
                     {% render 'field-with-float-label'
                         type: "text",
                         id: "AddressAddress1New",
-                        name:"address[address1]",
+                        name: "address[address1]",
                         value: value,
-                        autocomplete:"address-line1",
+                        autocomplete: "address-line1",
                         placeholder: label,
                         label: label
                     %}
 
-                    {% assign value = form.address2 %}
-                    {% assign label = 'customer.addresses.address2' | t  %}
+                    {% liquid
+                        assign value = form.address2
+                        assign label = 'customer.addresses.address2' | t
+                    %}
                     {% render 'field-with-float-label'
                         type: "text",
                         id: "AddressAddress2New",
-                        name:"address[address2]",
+                        name: "address[address2]",
                         value: value,
-                        autocomplete:"address-line2",
+                        autocomplete: "address-line2",
                         placeholder: label,
                         label: label
                     %}
 
-                    {% assign value = form.city %}
-                    {% assign label = 'customer.addresses.city' | t  %}
+                    {% liquid
+                        assign value = form.city
+                        assign label = 'customer.addresses.city' | t
+                    %}
                     {% render 'field-with-float-label'
                         type: "text",
                         id: "AddressCityNew",
-                        name:"address[city]",
+                        name: "address[city]",
                         value: value,
-                        autocomplete:"address-level2",
+                        autocomplete: "address-level2",
                         placeholder: label,
                         label: label
                     %}
 
-                    {% assign value = form.country %}
-                    {% assign label = 'customer.addresses.country' | t  %}
+                    {% liquid
+                        assign value = form.country
+                        assign label = 'customer.addresses.country' | t
+                    %}
                     {% render 'field-with-float-label'
                         type: "select",
                         id: "AddressCountryNew",
-                        name:"address[country]",
+                        name: "address[country]",
                         value: value,
-                        autocomplete:"country",
+                        autocomplete: "country",
                         options: all_country_option_tags,
                         label: label
                     %}
 
                     <div id="AddressProvinceContainerNew" style="display: none">
-                        {% assign value = form.province %}
-                        {% assign label = 'customer.addresses.province' | t  %}
+                        {% liquid
+                            assign value = form.province
+                            assign label = 'customer.addresses.province' | t
+                        %}
                         {% render 'field-with-float-label'
                             type: "select",
                             id: "AddressProvinceNew",
-                            name:"address[province]",
+                            name: "address[province]",
                             value: value,
-                            autocomplete:"address-level1",
+                            autocomplete: "address-level1",
                             label: label
                         %}
                     </div>
 
-                    {% assign value = form.zip %}
-                    {% assign label = 'customer.addresses.zip' | t  %}
+                    {% liquid
+                        assign value = form.zip
+                        assign label = 'customer.addresses.zip' | t
+                    %}
                     {% render 'field-with-float-label'
                         type: "text",
                         id: "AddressZipNew",
-                        name:"address[zip]",
+                        name: "address[zip]",
                         value: value,
                         autocapitalize: "characters",
-                        autocomplete:"postal-code",
+                        autocomplete: "postal-code",
                         placeholder: label,
                         label: label
                     %}
 
-                    {% assign value = form.phone %}
-                    {% assign label = 'customer.addresses.phone' | t  %}
+                    {% liquid
+                        assign value = form.phone
+                        assign label = 'customer.addresses.phone' | t
+                    %}
                     {% render 'field-with-float-label'
                         type: "tel",
                         id: "AddressPhoneNew",
-                        name:"address[phone]",
+                        name: "address[phone]",
                         value: value,
-                        autocomplete:"tel",
+                        autocomplete: "tel",
                         placeholder: label,
                         label: label
                     %}
@@ -209,137 +229,156 @@
                             <h2>{{ 'customer.addresses.edit_address' | t }}</h2>
 
                             {%- form 'customer_address', address -%}
-                                {% assign value = form.first_name %}
-                                {% assign label = 'customer.addresses.first_name' | t  %}
-                                {% assign id = 'AddressFirstName_' | append: form.id  %}
+                                {% liquid
+                                    assign value = form.first_name
+                                    assign label = 'customer.addresses.first_name' | t
+                                    assign id = 'AddressFirstName_' | append: form.id
+                                %}
                                 {% render 'field-with-float-label'
                                     type: "text",
                                     id: id,
-                                    name:"address[first_name]",
+                                    name: "address[first_name]",
                                     value: value,
-                                    autocomplete:"given-name",
+                                    autocomplete: "given-name",
                                     placeholder: label,
                                     label: label
                                 %}
 
-                                {% assign value = form.last_name %}
-                                {% assign label = 'customer.addresses.last_name' | t  %}
-                                {% assign id = 'AddressLastName_' | append: form.id  %}
+                                {% liquid
+                                    assign value = form.last_name
+                                    assign label = 'customer.addresses.last_name' | t
+                                    assign id = 'AddressLastName_' | append: form.id
+                                %}
                                 {% render 'field-with-float-label'
                                     type: "text",
                                     id: id,
-                                    name:"address[last_name]",
+                                    name: "address[last_name]",
                                     value: value,
-                                    autocomplete:"family-name",
+                                    autocomplete: "family-name",
                                     placeholder: label,
                                     label: label
                                 %}
 
-                                {% assign value = form.company %}
-                                {% assign label = 'customer.addresses.company' | t  %}
-                                {% assign id = 'AddressCompany_' | append: form.id  %}
+                                {% liquid
+                                    assign value = form.company
+                                    assign label = 'customer.addresses.company' | t
+                                    assign id = 'AddressCompany_' | append: form.id
+                                %}
                                 {% render 'field-with-float-label'
                                     type: "text",
                                     id: id,
-                                    name:"address[company]",
+                                    name: "address[company]",
                                     value: value,
-                                    autocomplete:"organization",
+                                    autocomplete: "organization",
                                     placeholder: label,
                                     label: label
                                 %}
 
-                                {% assign value = form.address1 %}
-                                {% assign label = 'customer.addresses.address1' | t  %}
-                                {% assign id = 'AddressAddress1_' | append: form.id  %}
+                                {% liquid
+                                    assign value = form.address1
+                                    assign label = 'customer.addresses.address1' | t
+                                    assign id = 'AddressAddress1_' | append: form.id
+                                %}
                                 {% render 'field-with-float-label'
                                     type: "text",
                                     id: id,
-                                    name:"address[address1]",
+                                    name: "address[address1]",
                                     value: value,
-                                    autocomplete:"address-line1",
+                                    autocomplete: "address-line1",
                                     placeholder: label,
                                     label: label
                                 %}
 
-                                {% assign value = form.address2 %}
-                                {% assign label = 'customer.addresses.address2' | t  %}
-                                {% assign id = 'AddressAddress2New_' | append: form.id  %}
+                                {% liquid
+                                    assign value = form.address2
+                                    assign label = 'customer.addresses.address2' | t
+                                    assign id = 'AddressAddress2New_' | append: form.id
+                                %}
                                 {% render 'field-with-float-label'
                                     type: "text",
                                     id: id,
-                                    name:"address[address2]",
+                                    name: "address[address2]",
                                     value: value,
-                                    autocomplete:"address-line2",
+                                    autocomplete: "address-line2",
                                     placeholder: label,
                                     label: label
                                 %}
 
-
-                                {% assign value = form.city %}
-                                {% assign label = 'customer.addresses.city' | t  %}
-                                {% assign id = 'AddressCity_' | append: form.id  %}
+                                {% liquid
+                                    assign value = form.city
+                                    assign label = 'customer.addresses.city' | t
+                                    assign id = 'AddressCity_' | append: form.id
+                                %}
                                 {% render 'field-with-float-label'
                                     type: "text",
                                     id: id,
-                                    name:"address[city]",
+                                    name: "address[city]",
                                     value: value,
-                                    autocomplete:"address-level2",
+                                    autocomplete: "address-level2",
                                     placeholder: label,
                                     label: label
                                 %}
 
-                                {% assign value = form.country %}
-                                {% assign label = 'customer.addresses.country' | t  %}
-                                {% assign id = 'AddressCountry_' | append: form.id  %}
-                                {% assign additional_attributes = 'data-address-country-select data-form-id="' | append: form.id | append: '"' %}
+                                {% liquid
+                                    assign value = form.country
+                                    assign label = 'customer.addresses.country' | t
+                                    assign id = 'AddressCountry_' | append: form.id
+                                    assign additional_attributes = 'data-address-country-select data-form-id="' | append: form.id | append: '"'
+                                %}
                                 {% render 'field-with-float-label'
                                     type: "select",
                                     id: id,
-                                    name:"address[country]",
+                                    name: "address[country]",
                                     value: value,
-                                    autocomplete:"country",
+                                    autocomplete: "country",
                                     options: all_country_option_tags,
                                     additional_attributes: additional_attributes,
                                     label: label
                                 %}
 
                                 <div id="AddressProvinceContainer_{{ form.id }}" style="display:none;">
-                                    {% assign value = form.province %}
-                                    {% assign label = 'customer.addresses.province' | t  %}
-                                    {% assign id = 'AddressProvince_' | append: form.id  %}
+                                    {% liquid
+                                        assign value = form.province
+                                        assign label = 'customer.addresses.province' | t
+                                        assign id = 'AddressProvince_' | append: form.id
+                                    %}
                                     {% render 'field-with-float-label'
                                         type: "select",
                                         id: id,
-                                        name:"address[province]",
+                                        name: "address[province]",
                                         value: value,
-                                        autocomplete:"address-level1",
+                                        autocomplete: "address-level1",
                                         label: label
                                     %}
                                 </div>
 
-                                {% assign value = form.zip %}
-                                {% assign label = 'customer.addresses.zip' | t  %}
-                                {% assign id = 'AddressZip_' | append: form.id  %}
+                                {% liquid
+                                    assign value = form.zip
+                                    assign label = 'customer.addresses.zip' | t
+                                    assign id = 'AddressZip_' | append: form.id
+                                %}
                                 {% render 'field-with-float-label'
                                     type: "text",
                                     id: "AddressZipNew",
-                                    name:"address[zip]",
+                                    name: "address[zip]",
                                     value: value,
                                     autocapitalize: "characters",
-                                    autocomplete:"postal-code",
+                                    autocomplete: "postal-code",
                                     placeholder: label,
                                     label: label
                                 %}
 
-                                {% assign value = form.phone %}
-                                {% assign label = 'customer.addresses.phone' | t  %}
-                                {% assign id = 'AddressPhone_' | append: form.id  %}
+                                {% liquid
+                                    assign value = form.phone
+                                    assign label = 'customer.addresses.phone' | t
+                                    assign id = 'AddressPhone_' | append: form.id
+                                %}
                                 {% render 'field-with-float-label'
                                     type: "tel",
                                     id: id,
-                                    name:"address[phone]",
+                                    name: "address[phone]",
                                     value: value,
-                                    autocomplete:"tel",
+                                    autocomplete: "tel",
                                     placeholder: label,
                                     label: label
                                 %}

@@ -628,9 +628,6 @@ slider-component.slider-component-full-width {
 [class^=texture-] .slider-buttons, div[class*=" texture-"] .slider-buttons {
   --slider-pagination-bg-opacity: 0;
 }
-.background-transparent .slider-buttons {
-  margin-bottom: calc(-1 * var(--space-sm));
-}
 
 @media screen and (min-width: 990px) {
   .slider:not(.slider--everywhere):not(.slider--desktop) + .slider-buttons {

@@ -62,7 +62,7 @@
         </div>
     {%- endif -%}
     <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width">
-        <div class="email-signup-banner__box banner__box newsletter newsletter__wrapper isolate{% if section.settings.show_background_image == false %} email-signup-banner__box--no-image{% endif %} content-container color-{{ section.settings.color_scheme }} texture-{{section.settings.background_texture}} content-container--full-width-mobile">
+        <div class="email-signup-banner__box banner__box newsletter newsletter__wrapper isolate{% if section.settings.show_background_image == false %} email-signup-banner__box--no-image{% endif %} content-container color-{{ section.settings.color_scheme }} texture-{{ section.settings.background_texture }} content-container--full-width-mobile">
             {%- for block in section.blocks -%}
                 {%- case block.type -%}
                     {%- when 'heading' -%}
@@ -124,7 +124,7 @@
                             </div>
                             {%- if form.posted_successfully? -%}
                             <h3
-                                class="newsletter-form__message newsletter-form__message--success form__message"
+                                class="newsletter-form__message newsletter-form__message--success form__message  text-display"
                                 id="{{ success_id }}"
                                 tabindex="-1"
                                 autofocus
@@ -171,20 +171,24 @@
             "id": "show_background_image",
             "label": "t:sections.email-signup-banner.settings.show_background_image.label",
             "default": true
-        }, {
+        },
+        {
             "type": "select",
             "id": "image_height",
             "options": [
                 {
                     "value": "adapt-image",
                     "label": "t:sections.email-signup-banner.settings.image_height.options__1.label"
-                }, {
+                },
+                {
                     "value": "small",
                     "label": "t:sections.email-signup-banner.settings.image_height.options__2.label"
-                }, {
+                },
+                {
                     "value": "medium",
                     "label": "t:sections.email-signup-banner.settings.image_height.options__3.label"
-                }, {
+                },
+                {
                     "value": "large",
                     "label": "t:sections.email-signup-banner.settings.image_height.options__4.label"
                 }
@@ -192,7 +196,8 @@
             "default": "medium",
             "label": "t:sections.email-signup-banner.settings.image_height.label",
             "info": "t:sections.email-signup-banner.settings.image_height.info"
-        }, {
+        },
+        {
             "type": "select",
             "id": "desktop_content_position",
             "options": [
@@ -211,48 +216,58 @@
                 {
                     "value": "middle-left",
                     "label": "t:sections.email-signup-banner.settings.desktop_content_position.options__4.label"
-                }, {
+                },
+                {
                     "value": "middle-center",
                     "label": "t:sections.email-signup-banner.settings.desktop_content_position.options__5.label"
-                }, {
+                },
+                {
                     "value": "middle-right",
                     "label": "t:sections.email-signup-banner.settings.desktop_content_position.options__6.label"
-                }, {
+                },
+                {
                     "value": "bottom-left",
                     "label": "t:sections.email-signup-banner.settings.desktop_content_position.options__7.label"
-                }, {
+                },
+                {
                     "value": "bottom-center",
                     "label": "t:sections.email-signup-banner.settings.desktop_content_position.options__8.label"
-                }, {
+                },
+                {
                     "value": "bottom-right",
                     "label": "t:sections.email-signup-banner.settings.desktop_content_position.options__9.label"
                 }
             ],
             "default": "middle-center",
             "label": "t:sections.email-signup-banner.settings.desktop_content_position.label"
-        }, {
+        },
+        {
             "type": "checkbox",
             "id": "show_text_box",
             "default": true,
             "label": "t:sections.email-signup-banner.settings.show_text_box.label"
-        }, {
+        },
+        {
             "type": "select",
             "id": "desktop_content_alignment",
             "options": [
                 {
                     "value": "left",
                     "label": "t:sections.email-signup-banner.settings.desktop_content_alignment.options__1.label"
-                }, {
+                },
+                {
                     "value": "center",
                     "label": "t:sections.email-signup-banner.settings.desktop_content_alignment.options__2.label"
-                }, {
+                },
+                {
                     "value": "right",
                     "label": "t:sections.email-signup-banner.settings.desktop_content_alignment.options__3.label"
                 }
             ],
             "default": "center",
             "label": "t:sections.email-signup-banner.settings.desktop_content_alignment.label"
-        }, {
+        },
+        {
             "type": "color_scheme",
             "id": "color_scheme",
             "label": "t:sections.all.colors.label",
@@ -286,24 +301,28 @@
         {
             "type": "header",
             "content": "t:sections.email-signup-banner.settings.header.content"
-        }, {
+        },
+        {
             "type": "select",
             "id": "mobile_content_alignment",
             "options": [
                 {
                     "value": "left",
                     "label": "t:sections.email-signup-banner.settings.mobile_content_alignment.options__1.label"
-                }, {
+                },
+                {
                     "value": "center",
                     "label": "t:sections.email-signup-banner.settings.mobile_content_alignment.options__2.label"
-                }, {
+                },
+                {
                     "value": "right",
                     "label": "t:sections.email-signup-banner.settings.mobile_content_alignment.options__3.label"
                 }
             ],
             "default": "center",
             "label": "t:sections.email-signup-banner.settings.mobile_content_alignment.label"
-        }, {
+        },
+        {
             "type": "checkbox",
             "id": "show_text_below",
             "default": true,
@@ -321,17 +340,20 @@
                     "id": "heading",
                     "default": "Opening soon",
                     "label": "t:sections.email-signup-banner.blocks.heading.settings.heading.label"
-                }, {
+                },
+                {
                     "type": "select",
                     "id": "heading_size",
                     "options": [
                         {
                             "value": "h2",
                             "label": "t:sections.all.heading_size.options__1.label"
-                        }, {
+                        },
+                        {
                             "value": "h1",
                             "label": "t:sections.all.heading_size.options__2.label"
-                        }, {
+                        },
+                        {
                             "value": "h0",
                             "label": "t:sections.all.heading_size.options__3.label"
                         }
@@ -340,7 +362,8 @@
                     "label": "t:sections.all.heading_size.label"
                 }
             ]
-        }, {
+        },
+        {
             "type": "paragraph",
             "name": "t:sections.email-signup-banner.blocks.paragraph.name",
             "limit": 1,
@@ -350,14 +373,16 @@
                     "id": "text",
                     "default": "<p>Be the first to know when we launch.</p>",
                     "label": "t:sections.email-signup-banner.blocks.paragraph.settings.paragraph.label"
-                }, {
+                },
+                {
                     "type": "select",
                     "id": "text_style",
                     "options": [
                         {
                             "value": "body",
                             "label": "t:sections.email-signup-banner.blocks.paragraph.settings.text_style.options__1.label"
-                        }, {
+                        },
+                        {
                             "value": "subtitle",
                             "label": "t:sections.email-signup-banner.blocks.paragraph.settings.text_style.options__2.label"
                         }
@@ -366,7 +391,8 @@
                     "label": "t:sections.email-signup-banner.blocks.paragraph.settings.text_style.label"
                 }
             ]
-        }, {
+        },
+        {
             "type": "email_form",
             "name": "t:sections.email-signup-banner.blocks.email_form.name",
             "limit": 1
@@ -378,15 +404,18 @@
             "blocks": [
                 {
                     "type": "heading"
-                }, {
+                },
+                {
                     "type": "paragraph"
-                }, {
+                },
+                {
                     "type": "email_form"
                 }
             ]
         }
     ],
-    "templates": ["password"]
+    "templates": [
+        "password"
+    ]
 }
-
 {% endschema %}

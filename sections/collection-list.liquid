@@ -26,7 +26,7 @@
 
 <div class="color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} isolate collection section-{{ section.id }} section-{{ section.id }}-padding">
     {%- unless section.settings.title == blank -%}
-        <header class="title-wrapper align-{{settings.title_alignment}} page-width">
+        <header class="title-wrapper align-{{ settings.title_alignment }} page-width">
             {%- if section.settings.title != blank -%}
                 <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                     {{ section.settings.title }}
@@ -125,7 +125,10 @@
     "class": "section section-collection-list",
     "max_blocks": 15,
     "disabled_on": {
-        "groups": ["header", "footer"]
+        "groups": [
+            "header",
+            "footer"
+        ]
     },
     "settings": [
         {
@@ -310,9 +313,9 @@
             "name": "t:sections.collection-list.blocks.featured_collection.name",
             "settings": [
                 {
-                "type": "collection",
-                "id": "collection",
-                "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+                    "type": "collection",
+                    "id": "collection",
+                    "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
                 }
             ]
         }

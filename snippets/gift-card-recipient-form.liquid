@@ -69,14 +69,16 @@
         ></p>
 
         <fieldset class="recipient-fields">
-            {% assign label =  'recipient.form.email_label' | t %}
-            {% assign id = 'Recipient-email-' | append: section.id  %}
-            {% assign placeholder = 'recipient.form.email' | t  %}
+            {% liquid
+                assign label =  'recipient.form.email_label' | t
+                assign id = 'Recipient-email-' | append: section.id
+                assign placeholder = 'recipient.form.email' | t
+            %}
             {% capture additional_attributes %}{% if form.errors contains 'email' %}
                 aria-invalid="true"
-                aria-describedby="{{id}}-error"
+                aria-describedby="{{ id }}-error"
             {% endif %}{% endcapture %}
-            {% capture error_message %}{%- if form.errors contains 'email' -%}{{form.errors.messages.email}}{% endif %}{% endcapture %}
+            {% capture error_message %}{%- if form.errors contains 'email' -%}{{ form.errors.messages.email }}{% endif %}{% endcapture %}
             {% render 'field-with-float-label'
                 type: "email",
                 id: id,
@@ -90,14 +92,15 @@
                 include_error_placeholder: true
             %}
 
-
-            {% assign label =  'recipient.form.name_label' | t %}
-            {% assign id = 'Recipient-name-' | append: section.id  %}
-            {% assign placeholder = 'recipient.form.name' | t  %}
+            {% liquid
+                assign label =  'recipient.form.name_label' | t
+                assign id = 'Recipient-name-' | append: section.id
+                assign placeholder = 'recipient.form.name' | t
+            %}
             {% capture additional_attributes %}autocomplete="name" {% if form.errors contains 'name' %}
             aria-invalid="true"
-            aria-describedby="{{id}}-error"{% endif %}{% endcapture %}
-            {% capture error_message %}{%- if form.errors contains 'name' -%}{{form.errors.messages.name}}{% endif %}{% endcapture %}
+            aria-describedby="{{ id }}-error"{% endif %}{% endcapture %}
+            {% capture error_message %}{%- if form.errors contains 'name' -%}{{ form.errors.messages.name }}{% endif %}{% endcapture %}
             {% render 'field-with-float-label'
                 id: id,
                 name: "properties[Recipient name]",
@@ -111,18 +114,19 @@
 
 
             <div id="RecipientForm-message-{{ section.id }}" class="recipient-fields__field">
-                {%- assign max_chars_message = 200 -%}
-                {%- assign max_chars_message_rendered = 'recipient.form.max_characters' | t: max_chars: max_chars_message -%}
-                {%- assign message_label_rendered = 'recipient.form.message_label' | t -%}
+                {% liquid
+                    assign max_chars_message = 200
+                    assign max_chars_message_rendered = 'recipient.form.max_characters' | t: max_chars: max_chars_message
+                    assign message_label_rendered = 'recipient.form.message_label' | t
 
-                {% assign value = form.message %}
-                {% assign id = 'Recipient-message-' | append: section.id  %}
-                {% assign placeholder = 'recipient.form.message' | t  %}
-
+                    assign value = form.message
+                    assign id = 'Recipient-message-' | append: section.id
+                    assign placeholder = 'recipient.form.message' | t
+                %}
                 {% capture additional_attributes %}rows="6" maxlength="{{ max_chars_message }}" aria-label="{{ message_label_rendered }} {{ max_chars_message_rendered }}" {% if form.errors contains 'message' %}
                 aria-invalid="true"
-                aria-describedby="{{id}}-error"{% endif %}{% endcapture %}
-                {% capture error_message %}{%- if form.errors contains 'body' -%}{{form.errors.messages.body}}{% endif %}{% endcapture %}
+                aria-describedby="{{ id }}-error"{% endif %}{% endcapture %}
+                {% capture error_message %}{%- if form.errors contains 'body' -%}{{ form.errors.messages.body }}{% endif %}{% endcapture %}
 
                 {% render 'field-with-float-label'
                     type: "textarea",
@@ -139,14 +143,15 @@
                 <div class="field__maxchars">{{ max_chars_message_rendered }}</div>
             </div>
 
-
-            {% assign label =  'recipient.form.send_on_label' | t %}
-            {% assign id = 'Recipient-send-on-' | append: section.id  %}
-            {% assign placeholder = 'recipient.form.send_on' | t  %}
+            {% liquid
+                assign label =  'recipient.form.send_on_label' | t
+                assign id = 'Recipient-send-on-' | append: section.id
+                assign placeholder = 'recipient.form.send_on' | t
+            %}
             {% capture additional_attributes %}onfocus="this.showPicker()" autocomplete="send_on" pattern="\d{4}-\d{2}-\d{2}" {% if form.errors contains 'send_on' %}
             aria-invalid="true"
-            aria-describedby="{{id}}-error"{% endif %}{% endcapture %}
-            {% capture error_message %}{%- if form.errors contains 'send_on' -%}{{form.errors.messages.send_on}}{% endif %}{% endcapture %}
+            aria-describedby="{{ id }}-error"{% endif %}{% endcapture %}
+            {% capture error_message %}{%- if form.errors contains 'send_on' -%}{{ form.errors.messages.send_on }}{% endif %}{% endcapture %}
             {% render 'field-with-float-label'
                 type: "date",
                 id: id,

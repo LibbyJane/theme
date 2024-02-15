@@ -30,14 +30,14 @@
 -%}
 
 <div class="collection-hero{% if has_image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} content-padding">
-    <div class="title-wrapper page-width {% if narrow_content %} page-width--narrow {% endif %} align-{{settings.title_alignment}} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="title-wrapper page-width {% if narrow_content %} page-width--narrow {% endif %} align-{{ settings.title_alignment }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }}"
         >
             {{- collection.title | escape -}}
         </h2>
     </div>
 
-    <div class="collection-hero__inner isolate page-width {% if narrow_content %} page-width--narrow {% endif %} content-padding-inline color-{{ section.settings.content_color_scheme }} texture-{{section.settings.background_texture}}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} margin-bottom">
+    <div class="collection-hero__inner isolate page-width {% if narrow_content %} page-width--narrow {% endif %} content-padding-inline color-{{ section.settings.content_color_scheme }} texture-{{ section.settings.background_texture }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} margin-bottom">
         {%- if section.settings.show_collection_description and collection.description != blank -%}
             {% assign first_char = collection.description | slice: 0 %}
             <div class="collection-hero__text-wrapper content-padding">

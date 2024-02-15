@@ -33,7 +33,7 @@
                 </button>
             </header>
             <div id="cart-notification-product" class="cart-notification-product"></div>
-            <footer class="cart-notification__links">
+            <footer class="button-bar button-bar--fluid-buttons margin-bottom">
                 <a
                     href="{{ routes.cart_url }}"
                     id="cart-notification-button"
@@ -46,10 +46,10 @@
                         {{ 'sections.cart.checkout' | t }}
                     </button>
                 </form>
-                <button type="button" class="cart-notification__links-continue-shopping button--plain underline-on-hover">
-                    {{ 'general.continue_shopping' | t }} {% render 'icon-arrow' %}
-                </button>
             </footer>
+             <button type="button" class="cart-notification__links-continue-shopping button--plain underline-on-hover">
+                    {{ 'general.continue_shopping' | t }} {% render 'icon-arrow' %}
+            </button>
         </div>
     </div>
 </cart-notification>

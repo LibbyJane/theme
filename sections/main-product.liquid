@@ -17,7 +17,7 @@
 
     {%- style -%}
         .quantity {
-            --highlight-opacity: {% if section.settings.use_color_highlight  %}0.2{% else %}0{% endif %};
+            --highlight-opacity: {% if section.settings.use_color_highlight %}0.2{% else %}0{% endif %};
         }
 
         .section-{{ section.id }}-padding {
@@ -1754,10 +1754,10 @@
             "default": "inverse"
         },
         {
-                "type": "checkbox",
-                "id": "background_transparent",
-                "default": true,
-                "label": "t:settings_schema.colors.settings.background_transparent.label"
+            "type": "checkbox",
+            "id": "background_transparent",
+            "default": true,
+            "label": "t:settings_schema.colors.settings.background_transparent.label"
         },
         {
             "type": "select",
@@ -1789,7 +1789,6 @@
             "label": "t:settings_schema.colors.settings.content_color_scheme.label",
             "default": "background-1"
         },
-
         {
             "type": "select",
             "id": "background_texture",

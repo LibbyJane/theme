@@ -2,3 +2,13 @@ MatchingTranslations:
   enabled: false
 TemplateLength:
   enabled: false
+SchemaJsonFormat:
+  enabled: true
+  start_level: 0
+  indent: '    '
+UnusedSnippet:
+  enabled: false
+NestedSnippet:
+  enabled: true
+  ignore: []
+  max_nesting_level: 5

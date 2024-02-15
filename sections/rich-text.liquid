@@ -15,7 +15,7 @@
 {%- endstyle -%}
 
 <div class="section__container section__container--rich-text isolate align-content-{{ section.settings.content_alignment }} ">
-    <div class="section__content content-padding-inline color-{{ section.settings.color_scheme }} texture-{{section.settings.background_texture}} {% if section.settings.full_width %}width-full{% else %}width-page{% endif %} section-{{ section.id }}-padding">
+    <div class="section__content content-padding-inline color-{{ section.settings.color_scheme }} texture-{{ section.settings.background_texture }} {% if section.settings.full_width %}width-full{% else %}width-page{% endif %} section-{{ section.id }}-padding">
         <div class="page-width d-flex position-content-{{ section.settings.desktop_content_position }}">
             <div class="width-narrow ">
                 {%- for block in section.blocks -%}

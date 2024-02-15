@@ -376,9 +376,10 @@ slider-component {
     margin: var(--space) auto;
     width: max-content;
 
-    .background-transparent & {
-        margin-bottom: calc(-1 * var(--space-sm));
-    }
+    // WHERE Is this for - overlaid?
+    // .background-transparent & {
+    //     margin-bottom: calc(-1 * var(--space-sm));
+    // }
 }
 
 @media screen and (min-width: 990px) {

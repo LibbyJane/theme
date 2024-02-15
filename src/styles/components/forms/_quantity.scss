@@ -1,3 +1,5 @@
+@import "helpers/common";
+
 :root {
     --inputs-border-radius:  var(--inputs-radius-large) var(--inputs-radius) var(--inputs-radius-med) var(--inputs-radius)/var(--inputs-radius) var(--inputs-radius-med) var(--inputs-radius) var(--inputs-radius-large);
 }
@@ -34,6 +36,14 @@
             var(--inputs-shadow-blur-radius) rgba(var(--color-shadow), var(--inputs-shadow-opacity));
         z-index: -1;
     }
+}
+
+// eg '2 in cart', sits above quantity selector
+.qunatity__label {
+    @include text-heading;
+    display: flex;
+    font-size: var(--font-size-h6);
+    margin-top: var(--space);
 }
 
 //   .quantity:after {

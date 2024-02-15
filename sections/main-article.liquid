@@ -40,7 +40,7 @@
         {%- endfor -%}
     {%- endif -%}
 
-    <div class="article-template__main page-width page-width--narrow default-content-style content-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="article-template__main page-width page-width--narrow default-content-style content-padding isolate {% unless article.image %}margin-top--lg {% endunless %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
         {%- for block in section.blocks -%}
             {%- case block.type -%}
                 {%- when '@app' -%}
@@ -176,12 +176,13 @@
                     {% endif %}
                     >
                     <div class="article-template__comment-fields">
-                        {% assign value = form.author %}
-                        {% assign label = 'blogs.article.name' | t  %}
+                        {% liquid
+                            assign value = form.author
+                            assign label = 'blogs.article.name' | t
+                        %}
                         {% capture additional_attributes %}autocorrect="off" {% if form.errors contains 'author' %}
-                        aria-invalid="true" aria-describedby="CommentForm-author-error"{% endif %}{% endcapture %}
-                        {% capture error_message %}{%- if form.errors contains 'author' -%}{{form.errors.messages.author}}{% endif %}{% endcapture %}
-
+                            aria-invalid="true" aria-describedby="CommentForm-author-error"{% endif %}{% endcapture %}
+                        {% capture error_message %}{%- if form.errors contains 'author' -%}{{ form.errors.messages.author }}{% endif %}{% endcapture %}
                         {% render 'field-with-float-label'
                             type: "text",
                             id: "CommentForm-author",
@@ -195,11 +196,14 @@
                             error_message: error_message
                         %}
 
-                        {% assign value = form.email %}
-                        {% assign label = 'blogs.article.email' | t  %}
+                        {% liquid
+                            assign value = form.email
+                            assign label = 'blogs.article.email' | t
+                        %}
+
                         {% capture additional_attributes %}autocorrect="off" {% if form.errors contains 'email' %}
                         aria-invalid="true" aria-describedby="CommentForm-email-error"{% endif %}{% endcapture %}
-                        {% capture error_message %}{%- if form.errors contains 'email' -%}{{form.errors.messages.email}}{% endif %}{% endcapture %}
+                        {% capture error_message %}{%- if form.errors contains 'email' -%}{{ form.errors.messages.email }}{% endif %}{% endcapture %}
 
                         {% render 'field-with-float-label'
                             type: "email",
@@ -216,11 +220,13 @@
                         %}
                     </div>
 
-                    {% assign value = form.body %}
-                    {% assign label = 'blogs.article.message' | t  %}
+                    {% liquid
+                        assign value = form.body
+                        assign label = 'blogs.article.message' | t
+                    %}
                     {% capture additional_attributes %}rows="5" {% if form.errors contains 'body' %}
                     aria-invalid="true" aria-describedby="CommentForm-body-error"{% endif %}{% endcapture %}
-                    {% capture error_message %}{%- if form.errors contains 'body' -%}{{form.errors.messages.body}}{% endif %}{% endcapture %}
+                    {% capture error_message %}{%- if form.errors contains 'body' -%}{{ form.errors.messages.body }}{% endif %}{% endcapture %}
 
                     {% render 'field-with-float-label'
                         type: "textarea",
@@ -293,7 +299,6 @@
                     "type": "checkbox",
                     "id": "image_full_screen",
                     "default": true,
-
                     "label": "t:sections.main-article.blocks.featured_image.settings.image_full_screen.label"
                 }
             ]
@@ -303,18 +308,18 @@
             "name": "t:sections.main-article.blocks.title.name",
             "limit": 1,
             "settings": [
-            {
-                "type": "checkbox",
-                "id": "blog_show_date",
-                "default": true,
-                "label": "t:sections.main-article.blocks.title.settings.blog_show_date.label"
-            },
-            {
-                "type": "checkbox",
-                "id": "blog_show_author",
-                "default": false,
-                "label": "t:sections.main-article.blocks.title.settings.blog_show_author.label"
-            }
+                {
+                    "type": "checkbox",
+                    "id": "blog_show_date",
+                    "default": true,
+                    "label": "t:sections.main-article.blocks.title.settings.blog_show_date.label"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "blog_show_author",
+                    "default": false,
+                    "label": "t:sections.main-article.blocks.title.settings.blog_show_author.label"
+                }
             ]
         },
         {
@@ -323,25 +328,25 @@
             "limit": 1
         },
         {
-        "type": "share",
-        "name": "t:sections.main-article.blocks.share.name",
-        "limit": 2,
-        "settings": [
-            {
-            "type": "text",
-            "id": "share_label",
-            "label": "t:sections.main-article.blocks.share.settings.text.label",
-            "default": "Share"
-            },
-            {
-            "type": "paragraph",
-            "content": "t:sections.main-article.blocks.share.settings.featured_image_info.content"
-            },
-            {
-            "type": "paragraph",
-            "content": "t:sections.main-article.blocks.share.settings.title_info.content"
-            }
-        ]
+            "type": "share",
+            "name": "t:sections.main-article.blocks.share.name",
+            "limit": 2,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "share_label",
+                    "label": "t:sections.main-article.blocks.share.settings.text.label",
+                    "default": "Share"
+                },
+                {
+                    "type": "paragraph",
+                    "content": "t:sections.main-article.blocks.share.settings.featured_image_info.content"
+                },
+                {
+                    "type": "paragraph",
+                    "content": "t:sections.main-article.blocks.share.settings.title_info.content"
+                }
+            ]
         }
     ]
 }

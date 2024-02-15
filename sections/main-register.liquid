@@ -15,7 +15,7 @@
 {%- endstyle -%}
 
 <div class="pg-customer register section-{{ section.id }}-padding page-width">
-    <header class="title-wrapper align-{{settings.title_alignment}}">
+    <header class="title-wrapper align-{{ settings.title_alignment }}">
         <h1 class="title texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }}">
             {{ 'customer.register.title' | t }}
         </h1>
@@ -34,7 +34,7 @@
                 >
                     <h6 class="form__status-heading">
                         {% render 'icon-error' %}
-                        {{'templates.contact.form.error_heading' | t }}
+                        {{ 'templates.contact.form.error_heading' | t }}
                     </h6>
 
                     <ul class="form__status-list">
@@ -78,7 +78,7 @@
 
             {% assign label =  'customer.register.email' | t %}
             {% capture additional_attributes %}spellcheck="false" autocapitalize="off" autocomplete="email" aria-required="true" {% if form.errors contains 'email' %} aria-invalid="true" aria-describedby="RegisterForm-email-error" {% endif %}{% endcapture %}
-            {% capture error_message %}{%- if form.errors contains 'email' -%}{{ form.errors.translated_fields.email | capitalize }} {{form.errors.messages.email}}{% endif %}{% endcapture %}
+            {% capture error_message %}{%- if form.errors contains 'email' -%}{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}{% endif %}{% endcapture %}
             {% render 'field-with-float-label'
                 id: "RegisterForm-LastName",
                 type: "email",
@@ -92,7 +92,7 @@
 
             {% assign label =  'customer.register.password' | t %}
             {% capture additional_attributes %}aria-required="true" {% if form.errors contains 'password' %} aria-invalid="true" aria-describedby="RegisterForm-password-error" {% endif %}{% endcapture %}
-            {% capture error_message %}{%- if form.errors contains 'password' -%}{{ form.errors.translated_fields.password | capitalize }} {{form.errors.messages.password}}{% endif %}{% endcapture %}
+            {% capture error_message %}{%- if form.errors contains 'password' -%}{{ form.errors.translated_fields.password | capitalize }} {{ form.errors.messages.password }}{% endif %}{% endcapture %}
             {% render 'field-with-float-label'
                 id: "RegisterForm-password",
                 type: "password",

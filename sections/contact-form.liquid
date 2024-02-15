@@ -17,7 +17,7 @@
 <div class="contact color-{{ section.settings.section_color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} section-{{ section.id }}-padding isolate">
 
     <div class="postcard-container">
-        {%- capture postcard_color_scheme -%}color-{{section.settings.content_color_scheme}}{% endcapture %}
+        {%- capture postcard_color_scheme -%}color-{{ section.settings.content_color_scheme }}{% endcapture %}
         {%- liquid
             assign scroll_classes = ''
             if settings.animations_reveal_on_scroll
@@ -188,7 +188,10 @@
     "tag": "section",
     "class": "section",
     "disabled_on": {
-        "groups": ["header", "footer"]
+        "groups": [
+            "header",
+            "footer"
+        ]
     },
     "settings": [
         {
@@ -201,16 +204,16 @@
             "id": "heading_size",
             "options": [
                 {
-                "value": "h5",
-                "label": "t:sections.all.heading_size.options__1.label"
+                    "value": "h5",
+                    "label": "t:sections.all.heading_size.options__1.label"
                 },
                 {
-                "value": "h3",
-                "label": "t:sections.all.heading_size.options__2.label"
+                    "value": "h3",
+                    "label": "t:sections.all.heading_size.options__2.label"
                 },
                 {
-                "value": "h2",
-                "label": "t:sections.all.heading_size.options__3.label"
+                    "value": "h2",
+                    "label": "t:sections.all.heading_size.options__3.label"
                 }
             ],
             "default": "h3",
