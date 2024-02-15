@@ -1666,7 +1666,25 @@ details[open] > .header__submenu {
 
 .utility-bar {
   position: relative;
-  z-index: var(--zi-base);
+}
+.utility-bar .grid {
+  max-width: calc(100vw - 11rem);
+  margin: auto;
+  scroll-behavior: auto;
+}
+.utility-bar form,
+.utility-bar .disclosure {
+  font-size: var(--font-size-smaller);
+}
+.utility-bar .list-social {
+  padding-inline: var(--content-padding-inline);
+}
+.utility-bar .list-social:focus-visible {
+  outline-offset: -0.3rem;
+  box-shadow: 0 0 0 -0.2rem rgb(var(--color-foreground));
+}
+.utility-bar .localization-form__select.localization-form__select {
+  padding-inline: var(--content-padding-inline);
 }
 
 .announcement-bar,

@@ -1,6 +1,30 @@
 .utility-bar {
     position: relative;
-    z-index: var(--zi-base);
+    // z-index: calc(var(--zi-header) + 1); doesn't work when page scrolled
+
+    .grid {
+        max-width: calc(100vw - 11rem);
+        margin: auto;
+        scroll-behavior: auto;
+    }
+
+    form,
+    .disclosure {
+        font-size: var(--font-size-smaller);
+    }
+
+    .list-social {
+        padding-inline: var(--content-padding-inline);
+
+        &:focus-visible {
+            outline-offset: -0.3rem;
+            box-shadow: 0 0 0 -0.2rem rgb(var(--color-foreground));
+        }
+    }
+
+    .localization-form__select.localization-form__select {
+        padding-inline: var(--content-padding-inline);
+    }
 }
 
 .announcement-bar,
