@@ -45,12 +45,12 @@
     endif
 -%}
 
-<div class="{{ css_classes_wrapper }} title-wrapper align-{{settings.title_alignment}}">
-    <{{tag_type }} {% unless id == blank %}id="{{id}}"{% endunless %} class="{{ css_classes_title }} title inline-rich texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {%- if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{additional_attributes}}>
+<div class="{{ css_classes_wrapper }} title-wrapper align-{{ settings.title_alignment }}">
+    <{{ tag_type }} {% unless id == blank %}id="{{id}}"{% endunless %} class="{{ css_classes_title }} title inline-rich texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {%- if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ additional_attributes }}>
         {% unless additional_html_pre == blank %}{{ additional_html_pre }}{% endunless %}
 
         {{ text }}
 
         {% unless additional_html_post == blank %}{{ additional_html_post }}{% endunless %}
-    </{{tag_type }}>
+    </{{ tag_type }}>
 </div>

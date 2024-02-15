@@ -74,68 +74,68 @@
 
 {% schema %}
 {
-  "name": "t:sections.main-collection-banner.name",
-  "class": "section",
-  "settings": [
-    {
-      "type": "paragraph",
-      "content": "t:sections.main-collection-banner.settings.paragraph.content"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_collection_description",
-      "default": true,
-      "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_collection_image",
-      "default": false,
-      "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
-      "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "inverse"
-    },
-    {
-      "type": "checkbox",
-      "id": "background_transparent",
-      "default": true,
-      "label": "t:settings_schema.colors.settings.background_transparent.label"
-    },
-    {
-      "type": "color_scheme",
-      "id": "content_color_scheme",
-      "label": "t:settings_schema.colors.settings.content_color_scheme.label",
-      "default": "background-1"
-    },
-    {
-      "type": "select",
-      "id": "background_texture",
-      "options": [
+    "name": "t:sections.main-collection-banner.name",
+    "class": "section",
+    "settings": [
         {
-          "value": "",
-          "label": "t:settings_schema.textures.settings.background_texture.options__1.label"
+            "type": "paragraph",
+            "content": "t:sections.main-collection-banner.settings.paragraph.content"
         },
         {
-          "value": "paper",
-          "label": "t:settings_schema.textures.settings.background_texture.options__2.label"
+            "type": "checkbox",
+            "id": "show_collection_description",
+            "default": true,
+            "label": "t:sections.main-collection-banner.settings.show_collection_description.label"
         },
         {
-          "value": "torn",
-          "label": "t:settings_schema.textures.settings.background_texture.options__3.label"
+            "type": "checkbox",
+            "id": "show_collection_image",
+            "default": false,
+            "label": "t:sections.main-collection-banner.settings.show_collection_image.label",
+            "info": "t:sections.main-collection-banner.settings.show_collection_image.info"
         },
         {
-          "value": "lined",
-          "label": "t:settings_schema.textures.settings.background_texture.options__4.label"
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "label": "t:sections.all.colors.label",
+            "default": "inverse"
+        },
+        {
+            "type": "checkbox",
+            "id": "background_transparent",
+            "default": true,
+            "label": "t:settings_schema.colors.settings.background_transparent.label"
+        },
+        {
+            "type": "color_scheme",
+            "id": "content_color_scheme",
+            "label": "t:settings_schema.colors.settings.content_color_scheme.label",
+            "default": "background-1"
+        },
+        {
+            "type": "select",
+            "id": "background_texture",
+            "options": [
+                {
+                    "value": "",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__1.label"
+                },
+                {
+                    "value": "paper",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__2.label"
+                },
+                {
+                    "value": "torn",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__3.label"
+                },
+                {
+                    "value": "lined",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__4.label"
+                }
+            ],
+            "default": "paper",
+            "label": "t:settings_schema.textures.settings.background_texture.label"
         }
-      ],
-      "default": "paper",
-      "label": "t:settings_schema.textures.settings.background_texture.label"
-    }
-  ]
+    ]
 }
 {% endschema %}

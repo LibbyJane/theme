@@ -63,7 +63,7 @@
         "slide_ztFJ8x": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/leaves-5722122_1920.png",
+            "image": "shopify://shop_images/leaves-5722122_1920.png",
             "image_overlay_opacity": 0,
             "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum accumsan quam, et turpis duis.",
             "heading_size": "h2",
@@ -1011,7 +1011,7 @@
         "text_hgFR9U": {
           "type": "text",
           "settings": {
-            "text": "<p>60+ characters  of lorem ipsum dolor sit amet, consectetur adipiscing elit est.<\/p>",
+            "text": "<p>60+ characters  of lorem ipsum dolor sit amet, consectetur adipiscing elit est.</p>",
             "text_style": "subtitle"
           }
         },
@@ -1326,9 +1326,9 @@
       "settings": {
         "heading": "External Video",
         "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=DnSXwrlrwIE",
+        "video_url": "https://www.youtube.com/watch?v=DnSXwrlrwIE",
         "enable_video_looping": false,
-        "cover_image": "shopify:\/\/shop_images\/2048-3-2.jpg",
+        "cover_image": "shopify://shop_images/2048-3-2.jpg",
         "description": "",
         "full_width": false,
         "color_scheme": "",
