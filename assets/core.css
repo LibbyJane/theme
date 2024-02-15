@@ -1705,6 +1705,14 @@ details[open] > .header__submenu {
   font-size: var(--font-size-smaller);
 }
 
+.announcement-bar-slider {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+  max-width: 100%;
+}
 .announcement-bar-slider, .utility-bar__grid .announcement-bar-slider,
 .announcement-bar-slider .slider {
   width: 100%;
@@ -1713,20 +1721,21 @@ details[open] > .header__submenu {
   background: transparent;
   margin: auto;
 }
-
-.announcement-bar .slider-button--next {
-  margin-right: -1.5rem;
-  min-width: 44px;
+.announcement-bar-slider .slider-button {
+  background: transparent;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex: 0 0 auto;
+  min-height: 3.4rem;
+  min-width: 2.75rem;
+  margin: auto 0;
+  padding: 0 var(--content-padding-inline);
+  width: auto;
 }
-
-.announcement-bar .slider-button--prev {
-  margin-left: -1.5rem;
-  min-width: 44px;
-}
-
-.announcement-bar .slider-button--next:focus-visible,
-.announcement-bar .slider-button--prev:focus-visible,
-.utility-bar .list-social__link:focus-visible {
+.announcement-bar-slider .slider-button:focus-visible {
   outline-offset: -0.3rem;
   box-shadow: 0 0 0 -0.2rem rgb(var(--color-foreground));
 }
