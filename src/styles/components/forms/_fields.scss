@@ -58,6 +58,12 @@ input[type="search"]::-webkit-search-results-decoration {
     grid-template-columns: 1fr max-content max-content;
 }
 
+/* Remove extra spacing for search inputs in Safari */
+input::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+
 .field__label {
     grid-area: field-input;
 

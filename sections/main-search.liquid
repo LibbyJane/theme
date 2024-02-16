@@ -1,7 +1,6 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
-{{ 'component-search.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
   {{ 'component-facets.css' | asset_url | stylesheet_tag }}
@@ -13,35 +12,6 @@
 {%- endif -%}
 
 <script src="{{ 'main-search.js' | asset_url }}" defer="defer"></script>
-
-<!-- <style>
-  .template-search__header {
-    margin-bottom: 3rem;
-  }
-
-  .template-search__search {
-    margin: 0 auto 3.5rem;
-    max-width: 74.1rem;
-  }
-
-  .template-search__search .search {
-    margin-top: 3rem;
-  }
-
-  .template-search--empty {
-    padding-bottom: 18rem;
-  }
-
-  @media screen and (min-width: 750px) {
-    .template-search__header {
-      margin-bottom: 5rem;
-    }
-  }
-
-  .search__button .icon {
-    height: 1.8rem;
-  }
-</style> -->
 
 {%- liquid
     assign sort_by = search.sort_by | default: search.default_sort_by
@@ -76,12 +46,12 @@
         </header>
 
         <div class="template-search__search-container">
-            <div class="template-search__search default-content-style">
+            <div class="template-search__search default-content-style content-padding isolate">
                 {%- if settings.predictive_search_enabled -%}
                     <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
                 {%- endif -%}
                     <main-search>
-                        <form action="{{ routes.search_url }}" method="get" role="search" class="search">
+                        <form action="{{ routes.search_url }}" method="get" role="search" class="search margin-top--lg">
                             <div class="field field--search">
                                 <input
                                     class="search__input field__input"
