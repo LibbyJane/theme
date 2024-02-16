@@ -1,3 +1,8 @@
+:root {
+    --menu-item-padding: var(--space);
+    --menu-item-padding-inverse: calc(var(--space) * -1);
+}
+
 .header__nav {
     @include breakpoint(large) {
         margin-left: 0;
@@ -15,26 +20,26 @@
         margin: 0;
     }
 
-    .list-menu {
-        >li {
-            &:first-of-type {
-                .header__menu-item {
-                    .header--top-left & {
-                        @include breakpoint(medium) {
-                            padding-left: 0;
-                            margin-left: 0;
-                        }
+    // .list-menu {
+    //     >li {
+    //         &:first-of-type {
+    //             .header__menu-item {
+    //                 .header--top-left & {
+    //                     @include breakpoint(medium) {
+    //                         padding-left: 0;
+    //                         margin-left: 0;
+    //                     }
 
-                    }
-                }
-            }
-        }
-    }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 
-.header__menu {
-    padding: 0 var(--space);
+header__menu {
+    margin-left: var(--menu-item-padding-inverse);
 }
 
 .header__menu-item {
@@ -43,7 +48,7 @@
     display: flex;
         align-items: center;
     line-height: calc(1 + 0.3 / var(--font-body-scale));
-    padding: var(--space);
+    padding: var(--menu-item-padding);
     text-decoration: none;
     transition: text-decoration var(--duration-short) ease;
 
@@ -79,7 +84,7 @@
 drawer-menu {
     display: none;
     justify-self: start;
-    margin-left: calc(var(--space) * -1);
+    margin-left: var(--menu-item-padding-inverse);
 
     .drawer-menu & {
         display: block;

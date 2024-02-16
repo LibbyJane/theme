@@ -1039,36 +1039,30 @@ a {
   letter-spacing: 0.08rem;
 }
 
-html, body {
+.site-outer {
   overflow-x: hidden;
   overflow-y: auto;
   scrollbar-width: auto;
   scrollbar-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
   /* Chrome, Edge, and Safari */
-}
-html::-webkit-scrollbar, body::-webkit-scrollbar {
-  width: 12px;
-  scrollbar-width: thin;
-}
-html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
-  background: transparent url("bg-scrollbar.png?v=2") repeat-y !important;
-  background-size: contain;
-}
-html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
-  background-color: rgba(var(--color-foreground), 0.2);
-  border-radius: 8px;
-  border: 2px solid rgba(var(--color-background), 1);
-}
-
-.site-outer {
-  font-size: var(--font-size-base);
-  letter-spacing: var(--letter-spacing);
-  line-height: calc(1 + 0.4 / max(1, var(--font-body-scale)));
   background: var(--site-background-image);
   background-size: var(--site-background-size);
   background-repeat: var(--site-background-repeat);
   background-position: center;
   background-attachment: fixed;
+}
+.site-outer::-webkit-scrollbar {
+  width: 12px;
+  scrollbar-width: thin;
+}
+.site-outer::-webkit-scrollbar-track {
+  background: transparent url("bg-scrollbar.png?v=2") repeat-y !important;
+  background-size: contain;
+}
+.site-outer::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--color-foreground), 0.2);
+  border-radius: 8px;
+  border: 2px solid rgba(var(--color-background), 1);
 }
 
 .overflow-hidden {
@@ -1401,6 +1395,11 @@ details[open] > .header__icon--menu .icon-hamburger {
   text-align: center;
 }
 
+:root {
+  --menu-item-padding: var(--space);
+  --menu-item-padding-inverse: calc(var(--space) * -1);
+}
+
 @media (min-width: 990px) {
   .header__nav {
     margin-left: 0;
@@ -1416,15 +1415,9 @@ details[open] > .header__icon--menu .icon-hamburger {
   padding: 0;
   margin: 0;
 }
-@media (min-width: 750px) {
-  .header--top-left .header__nav .list-menu > li:first-of-type .header__menu-item {
-    padding-left: 0;
-    margin-left: 0;
-  }
-}
 
-.header__menu {
-  padding: 0 var(--space);
+header__menu {
+  margin-left: var(--menu-item-padding-inverse);
 }
 
 .header__menu-item {
@@ -1432,7 +1425,7 @@ details[open] > .header__icon--menu .icon-hamburger {
   display: flex;
   align-items: center;
   line-height: calc(1 + 0.3 / var(--font-body-scale));
-  padding: var(--space);
+  padding: var(--menu-item-padding);
   text-decoration: none;
   transition: -webkit-text-decoration var(--duration-short) ease;
   transition: text-decoration var(--duration-short) ease;
@@ -1490,7 +1483,7 @@ details[open] > .header__menu-item .icon-caret {
 drawer-menu {
   display: none;
   justify-self: start;
-  margin-left: calc(var(--space) * -1);
+  margin-left: var(--menu-item-padding-inverse);
 }
 .drawer-menu drawer-menu {
   display: block;
@@ -1625,12 +1618,14 @@ details[open] > .header__submenu {
   min-height: 4rem;
   width: 4.6rem;
   margin: auto 0;
-  padding: var(--space-lg) var(--icon-inline-padding);
+  padding: var(--space-lg) var(--icon-inline-padding, --space);
   position: relative;
   transition: all var(--duration-default) var(--transition-type);
   transition-delay: var(--duration-short);
 }
 .header__icon[aria-controls=menu-drawer] {
+  margin-inline-start: calc(var(--content-padding-inline) * 1);
+  padding-inline: var(--content-padding-inline);
   width: auto;
 }
 .header__utility--folded .header__icon:hover, .header__utility--folded .header__icon:focus {
@@ -1688,7 +1683,7 @@ details[open] > .header__submenu {
 }
 
 .utility-bar__grid {
-  padding-block: var(--space);
+  padding-block: var(--space-sm);
 }
 
 .announcement-bar,

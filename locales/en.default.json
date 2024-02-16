@@ -510,10 +510,5 @@
   },
   "generic": {
     "or": "or"
-  },
-  "    sections": {
-    "video": {
-      "load_video": "TODO"
-    }
   }
 }
