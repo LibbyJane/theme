@@ -443,9 +443,8 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__menu-item {
-  padding: var(--space) var(--content-padding-inlline);
-  text-decoration: none;
   font-size: var(--font-size-h3);
+  padding: var(--space) var(--content-padding-inline);
 }
 
 .no-js .menu-drawer__menu-item {
