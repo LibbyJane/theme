@@ -119,7 +119,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__menu-item {
     display: inline-flex;
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-h6);
     padding: var(--space-sm) var(--content-padding-inline);
 
     &:first-child {
@@ -190,17 +190,17 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__close-button {
-  margin-top: var(--space-med);
-  padding: var(--space-lg) var(--space-xl);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  font-size: var(--font-size-smaller);
-  width: 100%;
-  background-color: transparent;
-  font-family: var(--font-body-family);
-  font-style: var(--font-body-style);
-  text-align: left;
+    margin-top: var(--space-med);
+    padding: var(--space-med) var(--content-padding-inline);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-base);
+    width: 100%;
+    background-color: transparent;
+    font-family: var(--font-body-family);
+    font-style: var(--font-body-style);
+    text-align: left;
 }
 
 .no-js .menu-drawer__close-button {
