@@ -181,12 +181,10 @@ Usage:
 
                                 <localization-form class="no-js-hidden">
                                     {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'localization-form' -%}
-                                    <div>
                                         <h2 class="visually-hidden" id="HeaderLanguageMobileLabel">
                                             {{ 'localization.language_label' | t }}
                                         </h2>
                                         {%- render 'language-localization', localPosition: 'HeaderLanguageMobile' -%}
-                                    </div>
                                     {%- endform -%}
                                 </localization-form>
                                 {%- endif -%}

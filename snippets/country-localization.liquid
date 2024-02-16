@@ -29,7 +29,7 @@
         {%- for country in localization.available_countries -%}
             <li class="disclosure__item" tabindex="-1">
                 <a
-                    class="disclosure__linkfocus-inset{% if country.iso_code == localization.country.iso_code %} disclosure__link--active{% endif %}"
+                    class="disclosure__link focus-inset{% if country.iso_code == localization.country.iso_code %} disclosure__link--active{% endif %}"
                     href="#"
                     {% if country.iso_code == localization.country.iso_code %}
                     aria-current="true"

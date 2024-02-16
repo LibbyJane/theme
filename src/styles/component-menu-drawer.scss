@@ -113,8 +113,8 @@ details[open].menu-opening > .menu-drawer__submenu {
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.04);
 }
 
-.js .menu-drawer__menu li {
-  margin-bottom: 0.2rem;
+.menu-drawer__menu {
+    margin-bottom: var(--space);;
 }
 
 .menu-drawer__menu-item {
@@ -125,10 +125,6 @@ details[open].menu-opening > .menu-drawer__submenu {
     &:first-child {
         margin-top: var(--space-sm);
     }
-}
-
-.no-js .menu-drawer__menu-item {
-  font-size: var(--font-size-base);
 }
 
 // .no-js .menu-drawer__submenu .menu-drawer__menu-item {
