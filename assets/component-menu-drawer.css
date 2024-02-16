@@ -443,6 +443,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__menu-item {
+  display: inline-flex;
   font-size: var(--font-size-base);
   padding: var(--space-sm) var(--content-padding-inline);
 }
