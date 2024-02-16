@@ -1,4 +1,11 @@
 :root {
+  --sb-track-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
+  --sb-thumb-color: rgba(var(--color-foreground), 0.2);
+  --sb-size: 12px;
+  --sb-radius: 8px;
+}
+
+:root {
   --corner-shadow-alpha: 0.125;
   --corner-size: 15px;
   --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
@@ -315,9 +322,6 @@
   --crease-direction: top;
   overflow-x: hidden;
   overflow-y: auto;
-  scrollbar-width: auto;
-  scrollbar-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
-  /* Chrome, Edge, and Safari */
   background-color: rgb(var(--color-background));
   background-image: var(--crease);
   background-position: top center;
@@ -331,17 +335,23 @@
   left: 0;
 }
 .mega-menu__content::-webkit-scrollbar {
-  width: 12px;
+  width: var(--sb-size);
   scrollbar-width: thin;
 }
 .mega-menu__content::-webkit-scrollbar-track {
-  background: transparent url("bg-scrollbar.png?v=2") repeat-y !important;
+  background: var(--sb-track-color) url("bg-scrollbar.png?v=2") repeat-y !important;
   background-size: contain;
+  border-radius: var(--sb-radius);
 }
 .mega-menu__content::-webkit-scrollbar-thumb {
   background-color: rgba(var(--color-foreground), 0.2);
-  border-radius: 8px;
+  border-radius: var(--sb-radius);
   border: 2px solid rgba(var(--color-background), 1);
+}
+@supports not selector(::-webkit-scrollbar) {
+  .mega-menu__content {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 .shopify-section-header-sticky .mega-menu__content {
   max-height: calc(100vh - var(--header-bottom-position-desktop, 20rem) - var(--space-xxl));
@@ -365,10 +375,10 @@
 }
 .header--top-center .mega-menu__list.mega-menu__list {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   -moz-column-gap: 0;
        column-gap: 0;
+  margin-left: 0;
 }
 .header--top-center .mega-menu__list.mega-menu__list > li {
   width: 16%;

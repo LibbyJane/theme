@@ -90,7 +90,8 @@
     }
 
     .icon-caret {
-        height: var(--icon-size-sm);
+        height: var(--icon-size-xs);
+        width: var(--icon-size-xs);
         transition: transform var(--duration-short) var(--transition-type);
     }
 }

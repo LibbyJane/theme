@@ -143,6 +143,13 @@
 }
 
 :root {
+  --sb-track-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
+  --sb-thumb-color: rgba(var(--color-foreground), 0.2);
+  --sb-size: 12px;
+  --sb-radius: 8px;
+}
+
+:root {
   --corner-shadow-alpha: 0.125;
   --corner-size: 15px;
   --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
@@ -1042,9 +1049,6 @@ a {
 .site-outer {
   overflow-x: hidden;
   overflow-y: auto;
-  scrollbar-width: auto;
-  scrollbar-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
-  /* Chrome, Edge, and Safari */
   background: var(--site-background-image);
   background-size: var(--site-background-size);
   background-repeat: var(--site-background-repeat);
@@ -1052,17 +1056,23 @@ a {
   background-attachment: fixed;
 }
 .site-outer::-webkit-scrollbar {
-  width: 12px;
+  width: var(--sb-size);
   scrollbar-width: thin;
 }
 .site-outer::-webkit-scrollbar-track {
-  background: transparent url("bg-scrollbar.png?v=2") repeat-y !important;
+  background: var(--sb-track-color) url("bg-scrollbar.png?v=2") repeat-y !important;
   background-size: contain;
+  border-radius: var(--sb-radius);
 }
 .site-outer::-webkit-scrollbar-thumb {
   background-color: rgba(var(--color-foreground), 0.2);
-  border-radius: 8px;
+  border-radius: var(--sb-radius);
   border: 2px solid rgba(var(--color-background), 1);
+}
+@supports not selector(::-webkit-scrollbar) {
+  .site-outer {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 
 .overflow-hidden {
@@ -1501,24 +1511,27 @@ drawer-menu {
 .header__submenu {
   overflow-x: hidden;
   overflow-y: auto;
-  scrollbar-width: auto;
-  scrollbar-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
-  /* Chrome, Edge, and Safari */
   max-height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
   transition: opacity var(--duration-default) ease, transform var(--duration-default) ease;
 }
 .header__submenu::-webkit-scrollbar {
-  width: 12px;
+  width: var(--sb-size);
   scrollbar-width: thin;
 }
 .header__submenu::-webkit-scrollbar-track {
-  background: transparent url("bg-scrollbar.png?v=2") repeat-y !important;
+  background: var(--sb-track-color) url("bg-scrollbar.png?v=2") repeat-y !important;
   background-size: contain;
+  border-radius: var(--sb-radius);
 }
 .header__submenu::-webkit-scrollbar-thumb {
   background-color: rgba(var(--color-foreground), 0.2);
-  border-radius: 8px;
+  border-radius: var(--sb-radius);
   border: 2px solid rgba(var(--color-background), 1);
+}
+@supports not selector(::-webkit-scrollbar) {
+  .header__submenu {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 .header__submenu.list-menu {
   display: flex;
@@ -3201,6 +3214,8 @@ details[open] > .share-button__fallback {
 /* base-details-summary */
 summary {
   cursor: pointer;
+  display: flex;
+  gap: var(--space-sm);
   list-style: none;
   position: relative;
 }
@@ -3208,10 +3223,9 @@ summary::-webkit-details-marker {
   display: none;
 }
 summary .icon-caret {
-  position: absolute;
-  height: 0.6rem;
-  right: 1.5rem;
-  top: calc(50% - 0.2rem);
+  height: var(--icon-size-xs);
+  width: var(--icon-size-xs);
+  transition: transform var(--duration-short) var(--transition-type);
 }
 
 .disclosure-has-popup {
@@ -3593,24 +3607,27 @@ input[type=search]::-webkit-search-results-decoration {
 .field__input:is(textarea) {
   overflow-x: hidden;
   overflow-y: auto;
-  scrollbar-width: auto;
-  scrollbar-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
-  /* Chrome, Edge, and Safari */
   line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
   padding-top: var(--space);
 }
 .field__input:is(textarea)::-webkit-scrollbar {
-  width: 12px;
+  width: var(--sb-size);
   scrollbar-width: thin;
 }
 .field__input:is(textarea)::-webkit-scrollbar-track {
-  background: transparent url("bg-scrollbar.png?v=2") repeat-y !important;
+  background: var(--sb-track-color) url("bg-scrollbar.png?v=2") repeat-y !important;
   background-size: contain;
+  border-radius: var(--sb-radius);
 }
 .field__input:is(textarea)::-webkit-scrollbar-thumb {
   background-color: rgba(var(--color-foreground), 0.2);
-  border-radius: 8px;
+  border-radius: var(--sb-radius);
   border: 2px solid rgba(var(--color-background), 1);
+}
+@supports not selector(::-webkit-scrollbar) {
+  .field__input:is(textarea) {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 .field__input::-webkit-input-placeholder {
   opacity: 0;
@@ -4281,23 +4298,26 @@ details[open] .modal__outer::before {
 .predictive-search {
   overflow-x: hidden;
   overflow-y: auto;
-  scrollbar-width: auto;
-  scrollbar-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
-  /* Chrome, Edge, and Safari */
   display: none;
 }
 .predictive-search::-webkit-scrollbar {
-  width: 12px;
+  width: var(--sb-size);
   scrollbar-width: thin;
 }
 .predictive-search::-webkit-scrollbar-track {
-  background: transparent url("bg-scrollbar.png?v=2") repeat-y !important;
+  background: var(--sb-track-color) url("bg-scrollbar.png?v=2") repeat-y !important;
   background-size: contain;
+  border-radius: var(--sb-radius);
 }
 .predictive-search::-webkit-scrollbar-thumb {
   background-color: rgba(var(--color-foreground), 0.2);
-  border-radius: 8px;
+  border-radius: var(--sb-radius);
   border: 2px solid rgba(var(--color-background), 1);
+}
+@supports not selector(::-webkit-scrollbar) {
+  .predictive-search {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 predictive-search[open] .predictive-search {
   display: block;

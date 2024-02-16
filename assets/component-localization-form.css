@@ -1,4 +1,11 @@
 :root {
+  --sb-track-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
+  --sb-thumb-color: rgba(var(--color-foreground), 0.2);
+  --sb-size: 12px;
+  --sb-radius: 8px;
+}
+
+:root {
   --corner-shadow-alpha: 0.125;
   --corner-size: 15px;
   --corner-offset: calc(var(--corner-size) * -1 - var(--space-sm));
@@ -394,7 +401,8 @@ noscript .localization-form__select {
   padding-top: var(--space-med);
 }
 .localization-form__select .icon-caret {
-  height: var(--icon-size-sm);
+  height: var(--icon-size-xs);
+  width: var(--icon-size-xs);
   transition: transform var(--duration-short) var(--transition-type);
 }
 
@@ -464,9 +472,6 @@ noscript .localization-form__select {
 .disclosure__list {
   overflow-x: hidden;
   overflow-y: auto;
-  scrollbar-width: auto;
-  scrollbar-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
-  /* Chrome, Edge, and Safari */
   position: relative;
   overflow-y: auto;
   font-size: var(--font-size-smaller);
@@ -481,17 +486,23 @@ noscript .localization-form__select {
   width: max-content;
 }
 .disclosure__list::-webkit-scrollbar {
-  width: 12px;
+  width: var(--sb-size);
   scrollbar-width: thin;
 }
 .disclosure__list::-webkit-scrollbar-track {
-  background: transparent url("bg-scrollbar.png?v=2") repeat-y !important;
+  background: var(--sb-track-color) url("bg-scrollbar.png?v=2") repeat-y !important;
   background-size: contain;
+  border-radius: var(--sb-radius);
 }
 .disclosure__list::-webkit-scrollbar-thumb {
   background-color: rgba(var(--color-foreground), 0.2);
-  border-radius: 8px;
+  border-radius: var(--sb-radius);
   border: 2px solid rgba(var(--color-background), 1);
+}
+@supports not selector(::-webkit-scrollbar) {
+  .disclosure__list {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 
 .disclosure__item {

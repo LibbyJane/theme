@@ -2,6 +2,8 @@
 /* base-details-summary */
 summary {
     cursor: pointer;
+    display: flex;
+    gap: var(--space-sm);
     list-style: none;
     position: relative;
 
@@ -24,10 +26,9 @@ summary {
     // }
 
     .icon-caret {
-        position: absolute;
-        height: 0.6rem;
-        right: 1.5rem;
-        top: calc(50% - 0.2rem);
+        height: var(--icon-size-xs);
+        width: var(--icon-size-xs);
+        transition: transform var(--duration-short) var(--transition-type);
     }
 }
 
