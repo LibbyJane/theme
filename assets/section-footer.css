@@ -435,6 +435,17 @@
     text-align: center;
   }
 }
+.footer__row-item .disclosure .localization-form__select {
+  justify-content: center;
+}
+@media screen and (min-width: 750px) {
+  .footer__row-item .disclosure .localization-form__select {
+    justify-content: start;
+  }
+}
+.footer__row-item .disclosure__list {
+  width: 100%;
+}
 
 .footer__row-item--newsletter {
   margin-bottom: 0;

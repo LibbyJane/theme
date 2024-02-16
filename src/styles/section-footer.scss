@@ -133,6 +133,19 @@
             text-align: center;
         }
     }
+
+
+    .disclosure .localization-form__select {
+        justify-content: center;
+
+        @media screen and (min-width: 750px) {
+            justify-content: start;
+        }
+    }
+
+    .disclosure__list {
+        width: 100%;
+    }
 }
 
 .footer__row-item--newsletter {
