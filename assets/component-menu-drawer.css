@@ -443,8 +443,11 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__menu-item {
-  font-size: var(--font-size-h3);
-  padding: var(--space) var(--content-padding-inline);
+  font-size: var(--font-size-base);
+  padding: var(--space-sm) var(--content-padding-inline);
+}
+.menu-drawer__menu-item:first-child {
+  margin-top: var(--space-sm);
 }
 
 .no-js .menu-drawer__menu-item {
