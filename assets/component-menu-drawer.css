@@ -410,7 +410,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   border-radius: var(--sb-radius);
 }
 .menu-drawer__navigation-container::-webkit-scrollbar-thumb {
-  background-color: rgba(var(--color-foreground), 0.2);
+  background-color: var(--sb-track-color);
   border-radius: var(--sb-radius);
   border: 2px solid rgba(var(--color-background), 1);
 }

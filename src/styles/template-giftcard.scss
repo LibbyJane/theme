@@ -56,7 +56,7 @@ h6:empty {
 .gift-card__balance {
     font-size: calc(var(--font-heading-scale) * 4rem);
 
-    @include breakpoint(large) {
+    @media screen and (min-width: 990px) {
         font-size: calc(var(--font-heading-scale) * 4rem);
     }
     margin: 0;

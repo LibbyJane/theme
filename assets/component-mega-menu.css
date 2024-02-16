@@ -344,7 +344,7 @@
   border-radius: var(--sb-radius);
 }
 .mega-menu__content::-webkit-scrollbar-thumb {
-  background-color: rgba(var(--color-foreground), 0.2);
+  background-color: var(--sb-track-color);
   border-radius: var(--sb-radius);
   border: 2px solid rgba(var(--color-background), 1);
 }

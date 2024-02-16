@@ -362,7 +362,7 @@
   border-radius: var(--sb-radius);
 }
 .drawer__inner::-webkit-scrollbar-thumb {
-  background-color: rgba(var(--color-foreground), 0.2);
+  background-color: var(--sb-track-color);
   border-radius: var(--sb-radius);
   border: 2px solid rgba(var(--color-background), 1);
 }
@@ -436,7 +436,7 @@ cart-drawer-items {
     border-radius: var(--sb-radius);
   }
   cart-drawer-items::-webkit-scrollbar-thumb {
-    background-color: rgba(var(--color-foreground), 0.2);
+    background-color: var(--sb-track-color);
     border-radius: var(--sb-radius);
     border: 2px solid rgba(var(--color-background), 1);
   }

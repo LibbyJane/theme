@@ -63,22 +63,23 @@
     grid-template-areas: 'header-nav header-brand header-utility';
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
-    column-gap: var(--space-lg);
+    column-gap: var(--space);
 
-    @include breakpoint(large) {
+    @media screen and (min-width: 990px) {
         grid-template-areas: 'header-brand header-nav header-utility';
         grid-template-columns: auto 1fr max-content;
+        column-gap: var(--space-lg);
     }
 
     .header--middle-center & {
-        @include breakpoint(large) {
+        @media screen and (min-width: 990px) {
             grid-template-areas: 'header-nav header-brand header-utility';
             grid-template-columns: 1fr max-content 1fr;
         }
     }
 
     .header--top-left & {
-        @include breakpoint(large) {
+        @media screen and (min-width: 990px) {
             grid-template-areas:
             'header-brand header-utility'
             'header-nav header-nav';
@@ -88,7 +89,7 @@
     }
 
     .header--top-center & {
-        @include breakpoint(large) {
+        @media screen and (min-width: 990px) {
             grid-template-areas:
             'blank header-brand header-utility'
             'header-nav header-nav header-nav';
@@ -109,8 +110,9 @@
 header-drawer {
     grid-area: header-nav;
 
-    @include breakpoint(large) {
+    @media screen and (min-width: 990px) {
         display: none;
+
         &[data-breakpoint="desktop"] {
             display: block;
         }

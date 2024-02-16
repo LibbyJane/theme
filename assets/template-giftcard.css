@@ -1930,7 +1930,7 @@ a {
   border-radius: var(--sb-radius);
 }
 .site-outer::-webkit-scrollbar-thumb {
-  background-color: rgba(var(--color-foreground), 0.2);
+  background-color: var(--sb-track-color);
   border-radius: var(--sb-radius);
   border: 2px solid rgba(var(--color-background), 1);
 }
@@ -2023,7 +2023,7 @@ h6:empty {
   margin: 0;
   padding: 0;
 }
-@media (min-width: 990px) {
+@media screen and (min-width: 990px) {
   .gift-card__balance {
     font-size: calc(var(--font-heading-scale) * 4rem);
   }

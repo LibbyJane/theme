@@ -4,7 +4,7 @@
 }
 
 .header__nav {
-    @include breakpoint(large) {
+    @media screen and (min-width: 990px) {
         margin-left: 0;
         margin-right: auto;
     }
