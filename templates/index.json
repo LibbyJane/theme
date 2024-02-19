@@ -1212,7 +1212,6 @@
     },
     "d41da2e0-c9f9-486d-aa5c-976f2ec8c070": {
       "type": "contact-form",
-      "disabled": true,
       "settings": {
         "heading": "Get in touch!",
         "heading_size": "h3",
