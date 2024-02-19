@@ -3839,6 +3839,7 @@ input::-webkit-search-decoration {
 
 .contact {
   position: relative;
+  overflow-x: hidden;
   max-width: 100%;
 }
 
