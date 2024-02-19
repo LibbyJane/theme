@@ -1,6 +1,6 @@
 :root {
-  --sb-track-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
-  --sb-thumb-color: rgba(var(--color-foreground), 0.2);
+  --sb-track-color: rgba(var(--color-shadow), 0.2 );
+  --sb-thumb-color: rgba(var(--color-foreground), 0.7);
   --sb-size: 12px;
   --sb-radius: 8px;
 }
@@ -490,14 +490,11 @@ noscript .localization-form__select {
   scrollbar-width: thin;
 }
 .disclosure__list::-webkit-scrollbar-track {
-  background: var(--sb-track-color) url("bg-scrollbar.png?v=2") repeat-y !important;
-  background-size: contain;
-  border-radius: var(--sb-radius);
+  background: var(--sb-track-color);
 }
 .disclosure__list::-webkit-scrollbar-thumb {
   background-color: var(--sb-track-color);
   border-radius: var(--sb-radius);
-  border: 2px solid rgba(var(--color-background), 1);
 }
 @supports not selector(::-webkit-scrollbar) {
   .disclosure__list {

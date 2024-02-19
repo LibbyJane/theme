@@ -1523,8 +1523,8 @@ slider-component {
 }
 
 :root {
-  --sb-track-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
-  --sb-thumb-color: rgba(var(--color-foreground), 0.2);
+  --sb-track-color: rgba(var(--color-shadow), 0.2 );
+  --sb-thumb-color: rgba(var(--color-foreground), 0.7);
   --sb-size: 12px;
   --sb-radius: 8px;
 }

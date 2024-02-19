@@ -143,8 +143,8 @@
 }
 
 :root {
-  --sb-track-color: rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
-  --sb-thumb-color: rgba(var(--color-foreground), 0.2);
+  --sb-track-color: rgba(var(--color-shadow), 0.2 );
+  --sb-thumb-color: rgba(var(--color-foreground), 0.7);
   --sb-size: 12px;
   --sb-radius: 8px;
 }
@@ -1060,14 +1060,11 @@ a {
   scrollbar-width: thin;
 }
 .site-outer::-webkit-scrollbar-track {
-  background: var(--sb-track-color) url("bg-scrollbar.png?v=2") repeat-y !important;
-  background-size: contain;
-  border-radius: var(--sb-radius);
+  background: var(--sb-track-color);
 }
 .site-outer::-webkit-scrollbar-thumb {
   background-color: var(--sb-track-color);
   border-radius: var(--sb-radius);
-  border: 2px solid rgba(var(--color-background), 1);
 }
 @supports not selector(::-webkit-scrollbar) {
   .site-outer {
@@ -1521,14 +1518,11 @@ drawer-menu {
   scrollbar-width: thin;
 }
 .header__submenu::-webkit-scrollbar-track {
-  background: var(--sb-track-color) url("bg-scrollbar.png?v=2") repeat-y !important;
-  background-size: contain;
-  border-radius: var(--sb-radius);
+  background: var(--sb-track-color);
 }
 .header__submenu::-webkit-scrollbar-thumb {
   background-color: var(--sb-track-color);
   border-radius: var(--sb-radius);
-  border: 2px solid rgba(var(--color-background), 1);
 }
 @supports not selector(::-webkit-scrollbar) {
   .header__submenu {
@@ -3622,14 +3616,11 @@ input::-webkit-search-decoration {
   scrollbar-width: thin;
 }
 .field__input:is(textarea)::-webkit-scrollbar-track {
-  background: var(--sb-track-color) url("bg-scrollbar.png?v=2") repeat-y !important;
-  background-size: contain;
-  border-radius: var(--sb-radius);
+  background: var(--sb-track-color);
 }
 .field__input:is(textarea)::-webkit-scrollbar-thumb {
   background-color: var(--sb-track-color);
   border-radius: var(--sb-radius);
-  border: 2px solid rgba(var(--color-background), 1);
 }
 @supports not selector(::-webkit-scrollbar) {
   .field__input:is(textarea) {
@@ -3840,6 +3831,12 @@ input::-webkit-search-decoration {
   :root {
     --postcard-padding: var(--space-lg);
   }
+}
+
+.contact {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .postcard-container {
@@ -4312,14 +4309,11 @@ details[open] .modal__outer::before {
   scrollbar-width: thin;
 }
 .predictive-search::-webkit-scrollbar-track {
-  background: var(--sb-track-color) url("bg-scrollbar.png?v=2") repeat-y !important;
-  background-size: contain;
-  border-radius: var(--sb-radius);
+  background: var(--sb-track-color);
 }
 .predictive-search::-webkit-scrollbar-thumb {
   background-color: var(--sb-track-color);
   border-radius: var(--sb-radius);
-  border: 2px solid rgba(var(--color-background), 1);
 }
 @supports not selector(::-webkit-scrollbar) {
   .predictive-search {

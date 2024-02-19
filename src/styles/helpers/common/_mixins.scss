@@ -302,8 +302,8 @@
 // }
 
 :root {
-    --sb-track-color:  rgba(var(--color-foreground), 0.2) rgba(var(--color-background), 0.8);
-    --sb-thumb-color: rgba(var(--color-foreground), 0.2);
+    --sb-track-color: rgba(var(--color-shadow), 0.2 );
+    --sb-thumb-color: rgba(var(--color-foreground), 0.7);
     --sb-size: 12px;
     --sb-radius: 8px;
 }
@@ -319,15 +319,12 @@
     }
 
     &::-webkit-scrollbar-track {
-        background: var(--sb-track-color) url('bg-scrollbar.png?v=2') repeat-y !important;
-        background-size: contain;
-        border-radius: var(--sb-radius);
+        background: var(--sb-track-color);
     }
 
     &::-webkit-scrollbar-thumb {
         background-color: var(--sb-track-color);
         border-radius: var(--sb-radius);
-        border: 2px solid rgba(var(--color-background), 1);
     }
 
     @supports not selector(::-webkit-scrollbar) {
@@ -336,36 +333,6 @@
     }
 }
 
-
-
-
-// body {
-//   --sb-track-color: #232E33;
-//   --sb-thumb-color: #6BAF8D;
-//   --sb-size: 14px;
-// }
-
-// body::-webkit-scrollbar {
-//   width: var(--sb-size)
-// }
-
-// body::-webkit-scrollbar-track {
-//   background: var(--sb-track-color);
-//   border-radius: 3px;
-// }
-
-// body::-webkit-scrollbar-thumb {
-//   background: var(--sb-thumb-color);
-//   border-radius: 3px;
-
-// }
-
-// @supports not selector(::-webkit-scrollbar) {
-//   body {
-//     scrollbar-color: var(--sb-thumb-color)
-//                      var(--sb-track-color);
-//   }
-// }
 
 @mixin text-body {
     font-size: var(--font-size-base) ;
