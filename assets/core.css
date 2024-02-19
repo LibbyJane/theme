@@ -143,7 +143,7 @@
 }
 
 :root {
-  --sb-track-color: rgba(var(--color-shadow), 0.2 );
+  --sb-track-color: rgba(var(--color-shadow), 0.1 );
   --sb-thumb-color: rgba(var(--color-foreground), 0.7);
   --sb-size: 12px;
   --sb-radius: 8px;
@@ -1062,6 +1062,7 @@ a {
 }
 .site-outer::-webkit-scrollbar-track {
   background: var(--sb-track-color);
+  mix-blend-mode: multiply;
 }
 .site-outer::-webkit-scrollbar-thumb {
   background-color: var(--sb-track-color);
@@ -1520,6 +1521,7 @@ drawer-menu {
 }
 .header__submenu::-webkit-scrollbar-track {
   background: var(--sb-track-color);
+  mix-blend-mode: multiply;
 }
 .header__submenu::-webkit-scrollbar-thumb {
   background-color: var(--sb-track-color);
@@ -3618,6 +3620,7 @@ input::-webkit-search-decoration {
 }
 .field__input:is(textarea)::-webkit-scrollbar-track {
   background: var(--sb-track-color);
+  mix-blend-mode: multiply;
 }
 .field__input:is(textarea)::-webkit-scrollbar-thumb {
   background-color: var(--sb-track-color);
@@ -4311,6 +4314,7 @@ details[open] .modal__outer::before {
 }
 .predictive-search::-webkit-scrollbar-track {
   background: var(--sb-track-color);
+  mix-blend-mode: multiply;
 }
 .predictive-search::-webkit-scrollbar-thumb {
   background-color: var(--sb-track-color);
