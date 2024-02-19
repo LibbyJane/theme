@@ -6,13 +6,13 @@
         "slide_68XgRr": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
+            "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
             "image_overlay_opacity": 40,
             "heading": "Welcome to Road Trip Wines",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "Discover a new favourite!",
-            "link": "shopify://collections/all",
+            "link": "shopify:\/\/collections\/all",
             "button_style_secondary": "primary",
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -25,13 +25,13 @@
         "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-1": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677.jpg",
+            "image": "shopify:\/\/shop_images\/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677.jpg",
             "image_overlay_opacity": 0,
             "heading": "10% off  store-wide",
             "heading_size": "h1",
-            "subheading": "Use discount code <strong>RTW2424</strong>",
+            "subheading": "Use discount code <strong>RTW2424<\/strong>",
             "button_label": "Start shopping",
-            "link": "shopify://collections/all",
+            "link": "shopify:\/\/collections\/all",
             "button_style_secondary": "primary",
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -44,13 +44,13 @@
         "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/grapevine-reaches-out-to-the-sun.jpg",
+            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
             "image_overlay_opacity": 20,
             "heading": "Latest from the blog",
             "heading_size": "h1",
             "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in  Hawkes Bay",
             "button_label": "Read about it",
-            "link": "shopify://blogs/news/working-holiday-at-a-vineyard",
+            "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
             "button_style_secondary": "secondary",
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -63,7 +63,7 @@
         "slide_ztFJ8x": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/leaves-5722122_1920.png",
+            "image": "shopify:\/\/shop_images\/leaves-5722122_1920.png",
             "image_overlay_opacity": 0,
             "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum accumsan quam, et turpis duis.",
             "heading_size": "h2",
@@ -125,13 +125,13 @@
         "slide_4YeNRq": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/grapevine-reaches-out-to-the-sun.jpg",
+            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
             "image_overlay_opacity": 20,
             "heading": "Latest from the blog",
             "heading_size": "h1",
             "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in  Hawkes Bay",
             "button_label": "Read about it",
-            "link": "shopify://blogs/news/working-holiday-at-a-vineyard",
+            "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
             "button_style_secondary": "secondary",
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -144,13 +144,13 @@
         "slide_yjGJtz": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677.jpg",
+            "image": "shopify:\/\/shop_images\/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677.jpg",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "Start shopping",
-            "link": "shopify://collections/all",
+            "link": "shopify:\/\/collections\/all",
             "button_style_secondary": "primary",
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -163,7 +163,7 @@
         "slide_TbgDGV": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/p-2048-3-2.jpg",
+            "image": "shopify:\/\/shop_images\/p-2048-3-2.jpg",
             "image_overlay_opacity": 30,
             "heading": "Heading only, portrait 3:2",
             "heading_size": "h0",
@@ -182,7 +182,7 @@
         "slide_3NKDKQ": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/p-1024-4-3.jpg",
+            "image": "shopify:\/\/shop_images\/p-1024-4-3.jpg",
             "image_overlay_opacity": 0,
             "heading": "Heading only, with container, 1024 4:3",
             "heading_size": "h1",
@@ -201,7 +201,7 @@
         "slide_wJXTTy": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/2048-3-2.jpg",
+            "image": "shopify:\/\/shop_images\/2048-3-2.jpg",
             "image_overlay_opacity": 0,
             "heading": "",
             "heading_size": "h1",
@@ -245,13 +245,13 @@
         "slide_E8dbwj": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/2048-1-1.jpg",
+            "image": "shopify:\/\/shop_images\/2048-1-1.jpg",
             "image_overlay_opacity": 0,
-            "heading": "2048 1:1 <a href=\"/blogs/news\" title=\"News\">Internal, same window</a>",
+            "heading": "2048 1:1 <a href=\"\/blogs\/news\" title=\"News\">Internal, same window<\/a>",
             "heading_size": "h1",
-            "subheading": "Use <a href=\"https://www.theguardian.com/crosswords/\" target=\"_blank\" title=\"https://www.theguardian.com/crosswords/\">discount (external link)</a> code <strong>RTW2424 </strong><a href=\"https://www.theguardian.com/crosswords/\" title=\"https://www.theguardian.com/crosswords/\"><strong>external site, same window</strong></a>",
+            "subheading": "Use <a href=\"https:\/\/www.theguardian.com\/crosswords\/\" target=\"_blank\" title=\"https:\/\/www.theguardian.com\/crosswords\/\">discount (external link)<\/a> code <strong>RTW2424 <\/strong><a href=\"https:\/\/www.theguardian.com\/crosswords\/\" title=\"https:\/\/www.theguardian.com\/crosswords\/\"><strong>external site, same window<\/strong><\/a>",
             "button_label": "button internal same window",
-            "link": "shopify://collections/all",
+            "link": "shopify:\/\/collections\/all",
             "button_style_secondary": "primary",
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -264,13 +264,13 @@
         "slide_kLLgDf": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/p-2048-4-3.jpg",
+            "image": "shopify:\/\/shop_images\/p-2048-4-3.jpg",
             "image_overlay_opacity": 0,
-            "heading": "<a href=\"/pages/faq\" target=\"_blank\" title=\"FAQ\">Portrait</a> 2048 4:3",
+            "heading": "<a href=\"\/pages\/faq\" target=\"_blank\" title=\"FAQ\">Portrait<\/a> 2048 4:3",
             "heading_size": "h1",
-            "subheading": "Use <a href=\"https://www.theguardian.com/crosswords/\" target=\"_blank\" title=\"https://www.theguardian.com/crosswords/\">discount (external link)</a> code <strong>RTW2424</strong>",
+            "subheading": "Use <a href=\"https:\/\/www.theguardian.com\/crosswords\/\" target=\"_blank\" title=\"https:\/\/www.theguardian.com\/crosswords\/\">discount (external link)<\/a> code <strong>RTW2424<\/strong>",
             "button_label": "button external new window",
-            "link": "https://www.theguardian.com/crosswords/",
+            "link": "https:\/\/www.theguardian.com\/crosswords\/",
             "button_style_secondary": "primary",
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -283,13 +283,13 @@
         "slide_nQeARt": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/16to9.jpg",
+            "image": "shopify:\/\/shop_images\/16to9.jpg",
             "image_overlay_opacity": 30,
             "heading": "placekitten 16:9",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "Button label",
-            "link": "shopify://pages/wines-by-color",
+            "link": "shopify:\/\/pages\/wines-by-color",
             "button_style_secondary": "secondary",
             "box_align": "bottom-right",
             "text_alignment": "right",
@@ -302,11 +302,11 @@
         "slide_NL7HLm": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/2048-16-9.jpg",
+            "image": "shopify:\/\/shop_images\/2048-16-9.jpg",
             "image_overlay_opacity": 0,
             "heading": "Long button text, 2048 16:9",
             "heading_size": "h1",
-            "subheading": "<a href=\"/pages/faq\" title=\"FAQ\">Internal link same window,</a> <a href=\"/pages/faq\" target=\"_blank\" title=\"FAQ\">internal link new window,</a> <a href=\"https://www.theguardian.com/crosswords/\" title=\"https://www.theguardian.com/crosswords/\">external link same window,</a> <a href=\"https://www.theguardian.com/crosswords/\" target=\"_blank\" title=\"https://www.theguardian.com/crosswords/\">external link new window</a>",
+            "subheading": "<a href=\"\/pages\/faq\" title=\"FAQ\">Internal link same window,<\/a> <a href=\"\/pages\/faq\" target=\"_blank\" title=\"FAQ\">internal link new window,<\/a> <a href=\"https:\/\/www.theguardian.com\/crosswords\/\" title=\"https:\/\/www.theguardian.com\/crosswords\/\">external link same window,<\/a> <a href=\"https:\/\/www.theguardian.com\/crosswords\/\" target=\"_blank\" title=\"https:\/\/www.theguardian.com\/crosswords\/\">external link new window<\/a>",
             "button_label": "Asinglewordlablenospaces30pluscharacters",
             "link": "",
             "button_style_secondary": "primary",
@@ -321,13 +321,13 @@
         "slide_b8Fghj": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/2048-3-2.jpg",
+            "image": "shopify:\/\/shop_images\/2048-3-2.jpg",
             "image_overlay_opacity": 40,
             "heading": "Multiple word button label, 2048 3:2",
             "heading_size": "h1",
             "subheading": "Longer text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum accumsan quam, et turpis duis.",
             "button_label": "Lorem ipsum dolor sit vivverra.",
-            "link": "shopify://blogs/news",
+            "link": "shopify:\/\/blogs\/news",
             "button_style_secondary": "secondary",
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -372,14 +372,14 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>We’ve embarked on an adventure based on good wine, good company and new destinations. We’re always discovering something new, and there’s so much more still to discover. Please join us!</p>"
+            "text": "<p>We’ve embarked on an adventure based on good wine, good company and new destinations. We’re always discovering something new, and there’s so much more still to discover. Please join us!<\/p>"
           }
         },
         "button_3RWqqz": {
           "type": "button",
           "settings": {
             "button_label": "More about us",
-            "button_link": "shopify://pages/our-story",
+            "button_link": "shopify:\/\/pages\/our-story",
             "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -899,7 +899,7 @@
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "text_style": "body"
           }
         },
@@ -927,7 +927,7 @@
         "caption_JtEE9x"
       ],
       "settings": {
-        "image": "shopify://shop_images/black-grapes-on-the-vine.jpg",
+        "image": "shopify:\/\/shop_images\/black-grapes-on-the-vine.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -963,7 +963,7 @@
         "text_8YGLNb": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "text_style": "body"
           }
         },
@@ -983,7 +983,7 @@
         "button_rwAxWX"
       ],
       "settings": {
-        "image": "shopify://shop_images/grapes-to-wine.jpg",
+        "image": "shopify:\/\/shop_images\/grapes-to-wine.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -1011,7 +1011,7 @@
         "text_hgFR9U": {
           "type": "text",
           "settings": {
-            "text": "<p>60+ characters  of lorem ipsum dolor sit amet, consectetur adipiscing elit est.</p>",
+            "text": "<p>60+ characters  of lorem ipsum dolor sit amet, consectetur adipiscing elit est.<\/p>",
             "text_style": "subtitle"
           }
         },
@@ -1039,7 +1039,7 @@
         "caption_WHEkPy"
       ],
       "settings": {
-        "image": "shopify://shop_images/wine-cantilena_9444d35d-7476-4f97-8e3a-7e0b953e2cc2.jpg",
+        "image": "shopify:\/\/shop_images\/wine-cantilena_9444d35d-7476-4f97-8e3a-7e0b953e2cc2.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -1067,7 +1067,7 @@
         "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-paragraph-1": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
           }
         },
         "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-email_form-1": {
@@ -1097,7 +1097,7 @@
           "settings": {
             "caption": "Caption",
             "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "button_label": "Button label",
             "button_link": ""
           }
@@ -1107,7 +1107,7 @@
           "settings": {
             "caption": "Caption",
             "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "button_label": "Button label",
             "button_link": ""
           }
@@ -1117,7 +1117,7 @@
           "settings": {
             "caption": "Caption",
             "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "button_label": "Button label",
             "button_link": ""
           }
@@ -1212,6 +1212,7 @@
     },
     "d41da2e0-c9f9-486d-aa5c-976f2ec8c070": {
       "type": "contact-form",
+      "disabled": true,
       "settings": {
         "heading": "Get in touch!",
         "heading_size": "h3",
@@ -1221,8 +1222,8 @@
         "store_message": "Send To:",
         "show_store_name": true,
         "show_store_contact_information": true,
-        "stamp_image": "shopify://shop_images/warm-and-cozy-wine-cellar-with-barrels-in-soft-lighting-ai_24061456_914_4abd04e5-8ce3-4409-a42e-4c9f5e71ed38.jpg",
-        "secondary_image": "shopify://shop_images/black-grapes-on-the-vine.jpg",
+        "stamp_image": "shopify:\/\/shop_images\/warm-and-cozy-wine-cellar-with-barrels-in-soft-lighting-ai_24061456_914_4abd04e5-8ce3-4409-a42e-4c9f5e71ed38.jpg",
+        "secondary_image": "shopify:\/\/shop_images\/black-grapes-on-the-vine.jpg",
         "padding_top": 60,
         "padding_bottom": 60
       }
@@ -1277,7 +1278,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Discover a new favorite >",
-            "button_link_1": "shopify://collections/all",
+            "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": "primary",
             "button_label_2": "",
             "button_link_2": "",
@@ -1291,7 +1292,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
+        "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
         "image_overlay_opacity": 40,
         "image_height": "small",
         "desktop_content_position": "bottom-center",
@@ -1310,8 +1311,8 @@
       "settings": {
         "heading": "Video",
         "heading_size": "h1",
-        "video": "shopify://files/videos/vecteezy_vineyard-agriculture-farm-field-aerial-view-in-langhe_15284289_a9763fd8-7c93-4000-9487-747ed86b7cab.mov",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video": "shopify:\/\/files\/videos\/vecteezy_vineyard-agriculture-farm-field-aerial-view-in-langhe_15284289_a9763fd8-7c93-4000-9487-747ed86b7cab.mov",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "enable_video_looping": true,
         "description": "",
         "full_width": false,
@@ -1326,9 +1327,9 @@
       "settings": {
         "heading": "External Video",
         "heading_size": "h1",
-        "video_url": "https://www.youtube.com/watch?v=DnSXwrlrwIE",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=DnSXwrlrwIE",
         "enable_video_looping": false,
-        "cover_image": "shopify://shop_images/2048-3-2.jpg",
+        "cover_image": "shopify:\/\/shop_images\/2048-3-2.jpg",
         "description": "",
         "full_width": false,
         "color_scheme": "",
