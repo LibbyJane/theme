@@ -105,6 +105,7 @@
         "slide_ztFJ8x",
         "slide_k8M6FF"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -225,6 +226,7 @@
         "slide_3NKDKQ",
         "slide_wJXTTy"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -345,6 +347,7 @@
         "slide_NL7HLm",
         "slide_b8Fghj"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -392,6 +395,7 @@
         "text",
         "button_3RWqqz"
       ],
+      "disabled": true,
       "settings": {
         "content_alignment": "center",
         "desktop_content_position": "center",
@@ -404,6 +408,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "all",
         "title": "Our latest finds",
@@ -433,6 +438,7 @@
     },
     "featured_collection_kirhW3": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "hydrogen",
         "title": "Our latest finds",
@@ -462,6 +468,7 @@
     },
     "featured_collection_3LjfDw": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "australia",
         "title": "Our latest finds",
@@ -523,6 +530,7 @@
         "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-3",
         "featured_collection_ranhhW"
       ],
+      "disabled": true,
       "settings": {
         "title": "Browse by region",
         "heading_size": "h2",
@@ -542,6 +550,7 @@
     },
     "dd71af2d-22bf-4c16-8c4d-3f035f3aeb98": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "title": "Latest from the blog",
         "heading_size": "h2",
@@ -610,6 +619,7 @@
         "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-buy_buttons-1",
         "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-share-1"
       ],
+      "disabled": true,
       "settings": {
         "product": "edenvine-cabernet-sauvignon",
         "color_scheme": "accent-1",
@@ -675,6 +685,7 @@
         "buy_buttons_UVh84m",
         "share_4jyqYj"
       ],
+      "disabled": true,
       "settings": {
         "product": "edenvine-cabernet-sauvignon",
         "color_scheme": "inverse",
@@ -740,6 +751,7 @@
         "buy_buttons_NN8e6t",
         "share_MGyXXw"
       ],
+      "disabled": true,
       "settings": {
         "product": "edenvine-cabernet-sauvignon",
         "color_scheme": "background-1",
@@ -805,6 +817,7 @@
         "buy_buttons_TLDjyx",
         "share_qnkYr9"
       ],
+      "disabled": true,
       "settings": {
         "product": "2018-heathcote-shiraz",
         "color_scheme": "accent-1",
@@ -870,6 +883,7 @@
         "buy_buttons_EKLpkr",
         "share_6mxjcm"
       ],
+      "disabled": true,
       "settings": {
         "product": "the-out-of-stock-snowboard",
         "color_scheme": "accent-1",
@@ -926,6 +940,7 @@
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-button-1",
         "caption_JtEE9x"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/black-grapes-on-the-vine.jpg",
         "height": "adapt",
@@ -982,6 +997,7 @@
         "text_8YGLNb",
         "button_rwAxWX"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/grapes-to-wine.jpg",
         "height": "adapt",
@@ -1038,6 +1054,7 @@
         "button_QR3akM",
         "caption_WHEkPy"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/wine-cantilena_9444d35d-7476-4f97-8e3a-7e0b953e2cc2.jpg",
         "height": "adapt",
@@ -1081,6 +1098,7 @@
         "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-paragraph-1",
         "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-email_form-1"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "background-2",
         "background_texture": "torn",
@@ -1128,6 +1146,7 @@
         "template--20955328512321__44448a2e-966d-4293-a4e6-c650ac1cb22b-row-2",
         "template--20955328512321__44448a2e-966d-4293-a4e6-c650ac1cb22b-row-3"
       ],
+      "disabled": true,
       "settings": {
         "image_height": "medium",
         "desktop_image_width": "medium",
@@ -1193,6 +1212,7 @@
         "template--20955328512321__cedce7e5-6cf9-4779-97f7-3ba6127619cb-collapsible_row-3",
         "template--20955328512321__cedce7e5-6cf9-4779-97f7-3ba6127619cb-collapsible_row-4"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Collapsible content",
         "heading_size": "h1",
@@ -1212,6 +1232,7 @@
     },
     "d41da2e0-c9f9-486d-aa5c-976f2ec8c070": {
       "type": "contact-form",
+      "disabled": true,
       "settings": {
         "heading": "Get in touch!",
         "heading_size": "h3",
@@ -1229,6 +1250,7 @@
     },
     "39107e87-2f12-4b33-8faa-8320aaef510b": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "",
         "title": "Featured collection",
@@ -1290,6 +1312,7 @@
         "text",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
         "image_overlay_opacity": 40,
@@ -1307,6 +1330,7 @@
     },
     "video_jjwCDU": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "Video",
         "heading_size": "h1",
@@ -1323,6 +1347,7 @@
     },
     "video_KaLPQK": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "External Video",
         "heading_size": "h1",
