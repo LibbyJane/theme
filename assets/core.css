@@ -4169,16 +4169,8 @@ input::-webkit-search-decoration {
   display: none;
   aspect-ratio: var(--postcard-aspect-ratio);
   position: absolute;
-  top: 0;
-  right: auto;
-  bottom: 0;
-  left: auto;
-  transform: rotate(-5deg) translateX(5rem) translateY(2rem);
+  inset: 0;
   z-index: -1;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .postcard__reverse-face img {
   box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
@@ -4187,6 +4179,7 @@ input::-webkit-search-decoration {
   width: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: rotate(-5deg) translateX(5rem) translateY(2rem);
 }
 
 .shopify-product-form,
