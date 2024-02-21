@@ -3874,7 +3874,7 @@ input::-webkit-search-decoration {
   background-blend-mode: multiply;
   background-repeat: repeat;
   box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
-  display: grid;
+  display: block;
   grid-template-areas: "postcard-title" "postcard-fields" "postcard-send";
   width: var(--page-width--narrow);
   max-width: 100%;
