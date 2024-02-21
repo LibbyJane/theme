@@ -1766,11 +1766,12 @@ details[open] > .header__submenu {
 }
 .announcement-bar__link .icon {
   flex-shrink: 0;
-  margin-left: var(--space-sm);
-  transform: translateY(2px);
 }
 
 .announcement-bar__message {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
   margin: auto;
   padding: var(--space-sm) 0;
   text-align: center;

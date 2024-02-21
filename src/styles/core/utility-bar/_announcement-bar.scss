@@ -106,19 +106,17 @@
 
     .icon {
         flex-shrink: 0;
-        margin-left: var(--space-sm);
-        transform: translateY(2px);
     }
 }
 
 .announcement-bar__message {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
     margin: auto;
     padding: var(--space-sm) 0;
     text-align: center;
 }
-
-
-
   .announcement-bar-slider--fade-in-next .announcement-bar__message,
   .announcement-bar-slider--fade-in-previous .announcement-bar__message,
   .announcement-bar-slider--fade-out-next .announcement-bar__message,
