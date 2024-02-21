@@ -1771,7 +1771,7 @@ details[open] > .header__submenu {
 .announcement-bar__message {
   display: flex;
   justify-content: center;
-  gap: var(--space-sm);
+  gap: calc(var(--space) * 0.75);
   margin: auto;
   padding: var(--space-sm) 0;
   text-align: center;
