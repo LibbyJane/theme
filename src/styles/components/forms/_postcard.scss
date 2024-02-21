@@ -41,151 +41,147 @@
     background-image: radial-gradient(hsl(50, 0%, 96%), hsl(50, 0%, 94%), hsl(450, 0%, 85%));
     background-blend-mode: multiply;
     background-repeat: repeat;
+    background-size: cover;
     box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
-    display: grid;
-        grid-template-areas: "postcard-title" "postcard-fields" "postcard-send";
-    width: var(--page-width--narrow);
-    max-width: 100%;
-    margin: 0 auto;
-    padding: var(--postcard-padding);
-    position: relative;
+    // display: grid;
+    //     grid-template-areas: "postcard-title" "postcard-fields" "postcard-send";
+    // width: var(--page-width--narrow);
+    // max-width: 100%;
+    // margin: 0 auto;
+    // padding: var(--postcard-padding);
+    // position: relative;
 
-    @media screen and (min-width: 750px) {
-        grid-template-areas: "postcard-title postcard-title postcard-title postcard-send" "postcard-fields postcard-fields blank postcard-send";
-        grid-template-columns: 1fr max-content max-content minmax(40%, max-content);
+    // @media screen and (min-width: 750px) {
+    //     grid-template-areas: "postcard-title postcard-title postcard-title postcard-send" "postcard-fields postcard-fields blank postcard-send";
+    //     grid-template-columns: 1fr max-content max-content minmax(40%, max-content);
+    // }
+
+    fieldset {
+        display: flex;
+            flex-direction: column;
+        // margin: var(--content-padding) 0;
+        margin: 0;
+        padding: 0 0 var(--postcard-padding);
+        position: relative;
+
+        @media screen and (min-width: 750px) {
+            padding-bottom: 0;
+            padding-right: var(--space-lg);
+        }
+    }
+
+    // fieldset type
+    .contact__fields {
+        grid-area: postcard-fields;
+
+        @media screen and (min-width: 750px) {
+            padding-top: var(--space-xs);
+        }
+    }
+
+    // fieldset type
+    .contact__submit {
+        grid-area: postcard-send;
+        padding-right: 0;
+        padding-bottom: var(--space);
+
+        @media screen and (min-width: 750px) {
+            border-left: 2px solid var(--postcard-border-color);
+            padding-left: var(--space-lg);
+        }
+
+        // @media screen and (min-width: 750px) {
+        //     padding-bottom: var(--space);
+        // }
+
+        // stamp placement outline
+        &::before {
+            aspect-ratio: 2/3;
+            border: 2px dashed var(--postcard-border-color);
+            content: '';
+            width: 8rem;
+            margin-top: var(--space-med);
+            margin-left: auto;
+            transform: scale(0.9);
+            opacity: var(--opacity-light);
+
+            @media screen and (min-width: 750px) {
+                margin-top: 0;
+                margin-bottom: var(--space);
+                // transform: translateY(calc(var(--space-med) * -1)) translateX(calc(var(--space-lg) * -1)) scale(0.9);
+            }
+        }
+
+        &::after {
+            @include default-texture;
+            box-shadow: 0 0 2px rgba(var(--color-shadow), 1);
+            content: '';
+            position: absolute;
+            inset: 0 calc(var(--postcard-padding) * -1);
+            z-index: -1;
+
+            @media screen and (min-width: 750px) {
+                content: none;
+            }
+        }
+    }
+
+    .field {
+        --border: var(--input-border-width) solid var(--postcard-border-color);
+        border-bottom: var(--border);
+        padding-top: 0;
+
+        &.status-error {
+            --border: var(--input-border-width) solid currentColor; // inherited by the status div
+            border-bottom: none;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .field__label {
+        font-family: var(--font-heading-family);
+        font-style: var(--font-heading-style);
+    }
+
+    textarea {
+        --line-height: calc(var(--font-heading-scale) * 2rem);
+        background-size: var(--line-height) var(--line-height);
+        background-image: repeating-linear-gradient(0deg, var(--postcard-border-color), var(--postcard-border-color) var(--input-border-width), rgba(255,255,255,0) var(--input-border-width), rgba(255,255,255,0));
+        border: none;
+        line-height: var(--line-height);
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .contact__store-message {
+        @include text-heading;
+        font-size: var(--font-size-h5);
+        margin-bottom: var(--space-med);
+    }
+
+    .contact__store-details {
+        padding-left: var(--space);
+
+        p,
+        address {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+    }
+
+    button[type="submit"] {
+        margin: 0 auto;
+        width: 100%;
+
+        @media screen and (min-width: 750px) {
+            margin-top: auto;
+        }
     }
 }
-
-
-
-//     fieldset {
-//         display: flex;
-//             flex-direction: column;
-//         // margin: var(--content-padding) 0;
-//         margin: 0;
-//         padding: 0 0 var(--postcard-padding);
-//         position: relative;
-//         background: yellowgreen;
-//         outline: 2px solid green;
-
-//         @media screen and (min-width: 750px) {
-//             padding-bottom: 0;
-//             padding-right: var(--space-lg);
-//         }
-//     }
-
-//     // fieldset type
-//     .contact__fields {
-//         grid-area: postcard-fields;
-
-//         @media screen and (min-width: 750px) {
-//             padding-top: var(--space-xs);
-//         }
-//     }
-
-//     // fieldset type
-//     .contact__submit {
-//         grid-area: postcard-send;
-//         padding-right: 0;
-//         padding-bottom: var(--space);
-
-//         @media screen and (min-width: 750px) {
-//             border-left: 2px solid var(--postcard-border-color);
-//             padding-left: var(--space-lg);
-//         }
-
-//         // @media screen and (min-width: 750px) {
-//         //     padding-bottom: var(--space);
-//         // }
-
-//         // stamp placement outline
-//         &::before {
-//             aspect-ratio: 2/3;
-//             border: 2px dashed var(--postcard-border-color);
-//             content: '';
-//             width: 8rem;
-//             margin-top: var(--space-med);
-//             margin-left: auto;
-//             transform: scale(0.9);
-//             opacity: var(--opacity-light);
-
-//             @media screen and (min-width: 750px) {
-//                 margin-top: 0;
-//                 margin-bottom: var(--space);
-//                 // transform: translateY(calc(var(--space-med) * -1)) translateX(calc(var(--space-lg) * -1)) scale(0.9);
-//             }
-//         }
-
-//         &::after {
-//             @include default-texture;
-//             box-shadow: 0 0 2px rgba(var(--color-shadow), 1);
-//             content: '';
-//             position: absolute;
-//             inset: 0 calc(var(--postcard-padding) * -1);
-//             z-index: -1;
-
-//             @media screen and (min-width: 750px) {
-//                 content: none;
-//             }
-//         }
-//     }
-
-//     .field {
-//         --border: var(--input-border-width) solid var(--postcard-border-color);
-//         border-bottom: var(--border);
-//         padding-top: 0;
-
-//         &.status-error {
-//             --border: var(--input-border-width) solid currentColor; // inherited by the status div
-//             border-bottom: none;
-//         }
-
-//         &:last-child {
-//             margin-bottom: 0;
-//         }
-//     }
-
-//     .field__label {
-//         font-family: var(--font-heading-family);
-//         font-style: var(--font-heading-style);
-//     }
-
-//     textarea {
-//         --line-height: calc(var(--font-heading-scale) * 2rem);
-//         background-size: var(--line-height) var(--line-height);
-//         background-image: repeating-linear-gradient(0deg, var(--postcard-border-color), var(--postcard-border-color) var(--input-border-width), rgba(255,255,255,0) var(--input-border-width), rgba(255,255,255,0));
-//         border: none;
-//         line-height: var(--line-height);
-//         padding-top: 0;
-//         padding-bottom: 0;
-//     }
-
-//     .contact__store-message {
-//         @include text-heading;
-//         font-size: var(--font-size-h5);
-//         margin-bottom: var(--space-med);
-//     }
-
-//     .contact__store-details {
-//         padding-left: var(--space);
-
-//         p,
-//         address {
-//             font-family: inherit;
-//             font-size: inherit;
-//             line-height: inherit;
-//         }
-//     }
-
-//     button[type="submit"] {
-//         margin: 0 auto;
-//         width: 100%;
-
-//         @media screen and (min-width: 750px) {
-//             margin-top: auto;
-//         }
-//     }
-// }
 
 .postage-stamp {
     filter: drop-shadow(0 0 1px rgba(var(--color-shadow), 0.2));
