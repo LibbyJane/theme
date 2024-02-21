@@ -9,8 +9,9 @@
 
 .contact {
     position: relative;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     max-width: 100%;
+    outline: 2px dashed blue;
 }
 
 .postcard-container {
