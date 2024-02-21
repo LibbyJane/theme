@@ -255,11 +255,12 @@
     display: none;
     aspect-ratio: var(--postcard-aspect-ratio);
     position: absolute;
-    inset: 0;
-        // top: 0;
-        // right: auto;
-        // bottom: 0;
-        // left: auto;
+
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        transform: rotate(-5deg) translateX(5rem) translateY(2rem);
     // transform: rotate(-5deg) translateX(1rem);
 
     z-index: -1;
@@ -275,6 +276,6 @@
             height:auto;
             width:auto;
             object-fit: cover;
-    transform: rotate(-5deg) translateX(5rem) translateY(2rem);
+
     }
 }
