@@ -3846,10 +3846,15 @@ input::-webkit-search-decoration {
 .postcard-container {
   margin: auto;
   position: relative;
-  width: -moz-max-content;
-  width: max-content;
+  width: calc(100% - var(--content-padding-inline) - var(--content-padding-inline));
   max-width: 100%;
   z-index: var(--zi-base);
+}
+@media screen and (min-width: 750px) {
+  .postcard-container {
+    width: -moz-max-content;
+    width: max-content;
+  }
 }
 @media screen and (min-width: 750px) {
   .postcard-container form {
@@ -3874,7 +3879,6 @@ input::-webkit-search-decoration {
   box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
   display: grid;
   grid-template-areas: "postcard-title" "postcard-fields" "postcard-send";
-  width: calc(100% - var(--content-padding-inline) - var(--content-padding-inline));
   margin: 0 auto;
   padding: var(--postcard-padding);
   padding-bottom: 0;
