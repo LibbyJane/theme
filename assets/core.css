@@ -1636,6 +1636,7 @@ details[open] > .header__submenu {
   transition-delay: var(--duration-short);
 }
 .header__icon[aria-controls=menu-drawer] {
+  display: block;
   margin-inline-start: calc(var(--content-padding-inline) * -1);
   padding-inline: var(--content-padding-inline);
 }
