@@ -43,18 +43,18 @@
     background-repeat: repeat;
     background-size: cover;
     box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
-    // display: grid;
-    //     grid-template-areas: "postcard-title" "postcard-fields" "postcard-send";
+    display: grid;
+        grid-template-areas: "postcard-title" "postcard-fields" "postcard-send";
     //max-width: 100%;
     // margin: 0 auto;
     padding: var(--postcard-padding);
     position: relative;
 
-    // @media screen and (min-width: 750px) {
-    //     grid-template-areas: "postcard-title postcard-title postcard-title postcard-send" "postcard-fields postcard-fields blank postcard-send";
-    //     grid-template-columns: 1fr max-content max-content minmax(40%, max-content);
-        // width: var(--page-width--narrow);
-    // }
+    @media screen and (min-width: 750px) {
+        grid-template-areas: "postcard-title postcard-title postcard-title postcard-send" "postcard-fields postcard-fields blank postcard-send";
+        grid-template-columns: 1fr max-content max-content minmax(40%, max-content);
+        width: var(--page-width--narrow);
+    }
 
     fieldset {
         display: flex;
