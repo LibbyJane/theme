@@ -20,6 +20,9 @@
     width: max-content;
     max-width: 100%;
     z-index: var(--zi-base);
+    overflow: hidden;
+    max-width: 100%;
+    outline: 2px dashed blue;
 
     form {
         @media screen and (min-width: 750px) {
@@ -254,6 +257,7 @@
 }
 
 .postcard__reverse-face {
+    display: none;
     aspect-ratio: var(--postcard-aspect-ratio);
     position: absolute;
         top: 0;
