@@ -3846,8 +3846,7 @@ input::-webkit-search-decoration {
 .postcard-container {
   margin: auto;
   position: relative;
-  width: -moz-max-content;
-  width: max-content;
+  width: 100%;
   max-width: 100%;
   z-index: var(--zi-base);
 }
