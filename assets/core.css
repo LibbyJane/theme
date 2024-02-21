@@ -1648,6 +1648,9 @@ details[open] > .header__submenu {
 .header__utility--folded .header__icon:hover, .header__utility--folded .header__icon:focus {
   --header-fold-alpha: 0.005;
 }
+.header__icon .icon {
+  flex: 0 0 auto;
+}
 
 .cart-count-bubble {
   background-color: rgb(var(--color-ecommerce));
