@@ -3844,9 +3844,9 @@ input::-webkit-search-decoration {
 }
 
 .postcard-container {
-  margin: auto;
+  margin: 0 car(--content-padding-inline);
   position: relative;
-  width: 100%;
+  width: auto;
   max-width: 100%;
   z-index: var(--zi-base);
 }
