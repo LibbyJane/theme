@@ -4250,7 +4250,7 @@ details[open] .modal__outer::before {
 .modal__inner {
   box-shadow: 0 0 3rem rgba(var(--color-shadow), 0.5);
   margin: 0 auto;
-  padding: var(--space-xl);
+  padding: var(--content-padding-med);
   outline: 4px solid rgba(var(--color-background), 1);
   outline-offset: -1px;
 }
@@ -4274,10 +4274,8 @@ details[open] .modal__outer::before {
 .modal__close-button:hover .icon path:nth-child(2), .modal__close-button:focus .icon path:nth-child(2) {
   animation-delay: var(--duration-short);
 }
-.modal__close-button .icon path {
-  --path-length: 18;
-  stroke-width: 1.5px;
-  max-width: 1rem;
+.modal__close-button .icon {
+  width: var(--icon-size-sm);
 }
 
 .media-modal {

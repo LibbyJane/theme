@@ -44,7 +44,7 @@
     // border-radius: var(--space);
     box-shadow: 0 0 3rem rgba(var(--color-shadow),0.5);
     margin: 0 auto;
-    padding: var(--space-xl);
+    padding: var(--content-padding-med);
     outline: 4px solid rgba(var(--color-background), 1);
     outline-offset: -1px;
     // filter: url(#tornPaper);
@@ -77,11 +77,15 @@
         }
     }
 
-    .icon path {
-        --path-length: 18;
-        stroke-width: 1.5px;
-        max-width: 1rem;
+    .icon {
+        width: var(--icon-size-sm);
     }
+
+    // .icon path {
+    //     --path-length: 18;
+    //     stroke-width: 1.5px;
+    //     max-width: 1rem;
+    // }
 
     // @media screen and (min-width: 750px) {
     //     right: 1rem;
