@@ -3943,7 +3943,6 @@ input::-webkit-search-decoration {
   background-repeat: repeat;
   background-size: cover;
   box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
-  max-width: 100%;
   padding: var(--postcard-padding);
   position: relative;
 }
