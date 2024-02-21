@@ -3898,6 +3898,41 @@ input::-webkit-search-decoration {
   color: currentColor;
 }
 
+:root {
+  --postcard-aspect-ratio: 3/2;
+  --postcard-padding: var(--content-padding-inline);
+}
+@media screen and (min-width: 750px) {
+  :root {
+    --postcard-padding: var(--space-lg);
+  }
+}
+
+.contact {
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.postcard-container {
+  margin: auto;
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%;
+  z-index: var(--zi-base);
+}
+@media screen and (min-width: 750px) {
+  .postcard-container form {
+    margin-top: -2px;
+    margin-left: 2px;
+  }
+}
+.postcard-container .form__message {
+  flex-direction: column;
+  align-items: start;
+}
+
 .shopify-product-form,
 .quick-add-form {
   color: rgb(var(--color-foreground)) !important;

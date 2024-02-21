@@ -1,41 +1,37 @@
-// :root {
-//     --postcard-aspect-ratio: 3/2;
-//     --postcard-padding: var(--content-padding-inline);
+:root {
+    --postcard-aspect-ratio: 3/2;
+    --postcard-padding: var(--content-padding-inline);
 
-//     @media screen and (min-width: 750px) {
-//         --postcard-padding: var(--space-lg);
-//     }
-// }
+    @media screen and (min-width: 750px) {
+        --postcard-padding: var(--space-lg);
+    }
+}
 
-// .contact {
-//     position: relative;
-//     // overflow-x: hidden;
-//     max-width: 100%;
-//     outline: 2px dashed blue;
-// }
+.contact {
+    position: relative;
+    overflow-x: hidden;
+    max-width: 100%;
+}
 
-// .postcard-container {
-//     margin: auto;
-//     position: relative;
-//     width: max-content;
-//     max-width: 100%;
-//     z-index: var(--zi-base);
-//     overflow: hidden;
-//     max-width: 100%;
-//     outline: 2px dashed blue;
+.postcard-container {
+    margin: auto;
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    z-index: var(--zi-base);
 
-//     form {
-//         @media screen and (min-width: 750px) {
-//             margin-top: -2px;
-//             margin-left: 2px;
-//         }
-//     }
+    form {
+        @media screen and (min-width: 750px) {
+            margin-top: -2px;
+            margin-left: 2px;
+        }
+    }
 
-//     .form__message {
-//         flex-direction: column;
-//         align-items: start;
-//     }
-// }
+    .form__message {
+        flex-direction: column;
+        align-items: start;
+    }
+}
 
 // .postcard {
 //     --postcard-border-color: rgba(var(--color-foreground), 0.3);
