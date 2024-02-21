@@ -267,9 +267,9 @@
     transform: rotate(-5deg) translateX(5rem) translateY(2rem);
     z-index: -1;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
 
     img {
         box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
