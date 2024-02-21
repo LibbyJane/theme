@@ -3839,14 +3839,15 @@ input::-webkit-search-decoration {
 
 .contact {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   max-width: 100%;
 }
 
 .postcard-container {
-  margin: 0 var(--content-padding-inline);
+  margin: auto;
   position: relative;
-  width: auto;
+  width: -moz-max-content;
+  width: max-content;
   max-width: 100%;
   z-index: var(--zi-base);
 }
@@ -4011,63 +4012,6 @@ input::-webkit-search-decoration {
   }
 }
 
-.postage-stamp {
-  filter: drop-shadow(0 0 1px rgba(var(--color-shadow), 0.2));
-  width: 9rem;
-  transform: rotate(-1deg);
-  backface-visibility: hidden;
-  position: absolute;
-  top: var(--space-lg);
-  right: 0;
-  z-index: 1;
-}
-@media screen and (min-width: 750px) {
-  .postage-stamp {
-    top: 0;
-    right: var(--space-sm);
-  }
-}
-.postage-stamp img {
-  display: block;
-  height: auto;
-  width: 100%;
-  --mask:
-      linear-gradient(#000 0 0) 50%/calc(100% - 6px) calc(100% - 6px) no-repeat,
-      radial-gradient(3px,#0000 98%,#000) 0 -3px/5.55px 6px round no-repeat,
-      radial-gradient(3px,#0000 98%,#000) 0 calc(100% + 3px)/5.55px 6px round no-repeat,
-      radial-gradient(3px,#0000 98%,#000) -3px 0/6px 5.55px no-repeat round,
-      radial-gradient(3px,#0000 98%,#000) calc(100% + 3px) 0/6px 5.55px no-repeat round;
-  -webkit-clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
-          clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
-  padding: 4px;
-  background-color: var(--color-white);
-}
-
-.postage-stamp--landscape {
-  width: 14rem;
-  top: 2.5rem;
-  right: -0.5rem;
-}
-@media screen and (min-width: 750px) {
-  .postage-stamp--landscape {
-    top: 1.2rem;
-    right: var(--space-xs);
-  }
-}
-
-.postage-stamp--square {
-  top: 2.75rem;
-  right: -0.5rem;
-}
-@media screen and (min-width: 750px) {
-  .postage-stamp--square {
-    top: var(--space);
-    right: var(--space-xs);
-  }
-}
-
 .postcard-title {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -4165,16 +4109,76 @@ input::-webkit-search-decoration {
   }
 }
 
+.postage-stamp {
+  filter: drop-shadow(0 0 1px rgba(var(--color-shadow), 0.2));
+  width: 9rem;
+  transform: rotate(-1deg);
+  backface-visibility: hidden;
+  position: absolute;
+  top: var(--space-lg);
+  right: 0;
+  z-index: 1;
+}
+@media screen and (min-width: 750px) {
+  .postage-stamp {
+    top: 0;
+    right: var(--space-sm);
+  }
+}
+.postage-stamp img {
+  display: block;
+  height: auto;
+  width: 100%;
+  --mask:
+      linear-gradient(#000 0 0) 50%/calc(100% - 6px) calc(100% - 6px) no-repeat,
+      radial-gradient(3px,#0000 98%,#000) 0 -3px/5.55px 6px round no-repeat,
+      radial-gradient(3px,#0000 98%,#000) 0 calc(100% + 3px)/5.55px 6px round no-repeat,
+      radial-gradient(3px,#0000 98%,#000) -3px 0/6px 5.55px no-repeat round,
+      radial-gradient(3px,#0000 98%,#000) calc(100% + 3px) 0/6px 5.55px no-repeat round;
+  -webkit-clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
+          clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  padding: 4px;
+  background-color: var(--color-white);
+}
+
+.postage-stamp--landscape {
+  width: 14rem;
+  top: 2.5rem;
+  right: -0.5rem;
+}
+@media screen and (min-width: 750px) {
+  .postage-stamp--landscape {
+    top: 1.2rem;
+    right: var(--space-xs);
+  }
+}
+
+.postage-stamp--square {
+  top: 2.75rem;
+  right: -0.5rem;
+}
+@media screen and (min-width: 750px) {
+  .postage-stamp--square {
+    top: var(--space);
+    right: var(--space-xs);
+  }
+}
+
 .postcard__reverse-face {
-  display: none;
   aspect-ratio: var(--postcard-aspect-ratio);
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: auto;
+  right: auto;
+  bottom: 0;
   left: auto;
   transform: rotate(-5deg) translateX(5rem) translateY(2rem);
   z-index: -1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .postcard__reverse-face img {
   box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
