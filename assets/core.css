@@ -1627,8 +1627,8 @@ details[open] > .header__submenu {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: var(--icon-size);
-  width: var(--icon-size);
+  min-height: var(--icon-size-lg);
+  width: var(--icon-size-lg);
   margin: auto 0;
   padding: var(--space-lg) var(--icon-inline-padding, --space);
   position: relative;
