@@ -71,18 +71,20 @@
     display: inline-flex;
         align-items: center;
         justify-content: center;
+    min-height: var(--icon-size);
+    width: var(--icon-size);
     //min-height: 4rem;
     //width: 4.6rem;
     // mix-blend-mode: multiply; // won't work on reversed color schemes
-    //margin: auto 0;
-    //padding: var(--space-lg) var(--icon-inline-padding, --space);
+    margin: auto 0;
+    padding: var(--space-lg) var(--icon-inline-padding, --space);
     position: relative;
     transition: all var(--duration-default) var(--transition-type);
     transition-delay: var(--duration-short);
 
     &[aria-controls="menu-drawer"] {
-        // margin-inline-start: calc(var(--content-padding-inline) * -1);
-        //padding-inline: var(--content-padding-inline);
+        margin-inline-start: calc(var(--content-padding-inline) * -1);
+        padding-inline: var(--content-padding-inline);
         // width: auto;
     }
 
