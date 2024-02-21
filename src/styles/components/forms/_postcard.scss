@@ -14,7 +14,7 @@
 }
 
 .postcard-container {
-    margin: 0 car(--content-padding-inline);
+    margin: 0 var(--content-padding-inline);
     position: relative;
     width: auto;
     max-width: 100%;
