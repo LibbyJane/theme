@@ -1627,18 +1627,9 @@ details[open] > .header__submenu {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 4rem;
-  width: 4.6rem;
-  margin: auto 0;
-  padding: var(--space-lg) var(--icon-inline-padding, --space);
   position: relative;
   transition: all var(--duration-default) var(--transition-type);
   transition-delay: var(--duration-short);
-}
-.header__icon[aria-controls=menu-drawer] {
-  margin-inline-start: calc(var(--content-padding-inline) * 1);
-  padding-inline: var(--content-padding-inline);
-  width: auto;
 }
 .header__utility--folded .header__icon:hover, .header__utility--folded .header__icon:focus {
   --header-fold-alpha: 0.005;
