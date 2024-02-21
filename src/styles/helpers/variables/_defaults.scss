@@ -5,7 +5,7 @@
 
     --inline-padding-max: var(--space-med, 1.5rem);
     --content-padding-inline: var(--inline-padding-max); // fallback in case clamp isn't supported
-    --content-padding-inline: clamp(var(--space-sm), 4vw, var(--inline-padding-max));
+    --content-padding-inline: clamp(var(--space-sm), 5vw, var(--inline-padding-max));
     --content-padding: var(--space-med) var(--content-padding-inline) var(--space-sm);
     --content-padding-med: calc(var(--content-padding-inline)*1.25) calc(var(--content-padding-inline)*1.25) calc(var(--content-padding-inline)*1.25 - var(--space));
     --full-width-offset-margin: calc(var(--content-padding-inline) * -1);
@@ -23,4 +23,8 @@
     --border: var(--border-width) var(--border-style) var(--border-color);
     --border-thin: thin solid var(--border-color);
     --border-light: 0.1rem solid var(--border-color-ultralight);
+
+    @media screen and (min-width: 750px) {
+        --content-padding-inline: clamp(var(--space-sm), 4vw, var(--inline-padding-max));
+    }
 }
