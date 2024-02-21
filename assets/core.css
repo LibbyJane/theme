@@ -3933,6 +3933,69 @@ input::-webkit-search-decoration {
   align-items: start;
 }
 
+.postage-stamp {
+  filter: drop-shadow(0 0 1px rgba(var(--color-shadow), 0.2));
+  width: 9rem;
+  transform: rotate(-1deg);
+  backface-visibility: hidden;
+  position: absolute;
+  top: var(--space-lg);
+  right: 0;
+  z-index: 1;
+}
+@media screen and (min-width: 750px) {
+  .postage-stamp {
+    top: 0;
+    right: var(--space-sm);
+  }
+}
+.postage-stamp img {
+  display: block;
+  height: auto;
+  width: 100%;
+  --mask:
+      linear-gradient(#000 0 0) 50%/calc(100% - 6px) calc(100% - 6px) no-repeat,
+      radial-gradient(3px,#0000 98%,#000) 0 -3px/5.55px 6px round no-repeat,
+      radial-gradient(3px,#0000 98%,#000) 0 calc(100% + 3px)/5.55px 6px round no-repeat,
+      radial-gradient(3px,#0000 98%,#000) -3px 0/6px 5.55px no-repeat round,
+      radial-gradient(3px,#0000 98%,#000) calc(100% + 3px) 0/6px 5.55px no-repeat round;
+  -webkit-clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
+          clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  padding: 4px;
+  background-color: var(--color-white);
+}
+
+.postage-stamp--landscape {
+  width: 14rem;
+  top: 2.5rem;
+  right: -0.5rem;
+}
+@media screen and (min-width: 750px) {
+  .postage-stamp--landscape {
+    top: 1.2rem;
+    right: var(--space-xs);
+  }
+}
+
+.postage-stamp--square {
+  top: 2.75rem;
+  right: -0.5rem;
+}
+@media screen and (min-width: 750px) {
+  .postage-stamp--square {
+    top: var(--space);
+    right: var(--space-xs);
+  }
+}
+
+.postcard-title {
+  grid-area: postcard-title;
+  padding-top: var(--space-xs);
+  transform: rotate(-0.5deg) translateX(-3px) translateY(-2px);
+}
+
 .shopify-product-form,
 .quick-add-form {
   color: rgb(var(--color-foreground)) !important;
