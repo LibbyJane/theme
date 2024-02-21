@@ -46,6 +46,7 @@
     display: grid;
         grid-template-areas: "postcard-title" "postcard-fields" "postcard-send";
     //max-width: 100%;
+    width: calc(100% - var(--content-padding-inline) - var(--content-padding-inline));
     margin: 0 auto;
     padding: var(--postcard-padding);
     padding-bottom: 0;
