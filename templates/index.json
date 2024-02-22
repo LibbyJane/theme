@@ -385,6 +385,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "all",
         "title": "Our latest finds",
@@ -657,6 +658,41 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "sku_TxBtzD": {
+          "type": "sku",
+          "settings": {
+            "text_style": "caption"
+          }
+        },
+        "quantity_selector_iiG4yA": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "rating_9eJHRR": {
+          "type": "rating",
+          "settings": {
+          }
+        },
+        "icon_with_text_f99izh": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "heading_1": "Heading",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "icon_3": "truck",
+            "heading_3": "Heading"
+          }
+        },
+        "text_CRYTia": {
+          "type": "text",
+          "settings": {
+            "text": "Text block",
+            "text_style": "caption"
+          }
         }
       },
       "block_order": [
@@ -665,9 +701,13 @@
         "price_xibj38",
         "variant_picker_T3Vn4a",
         "buy_buttons_UVh84m",
-        "share_4jyqYj"
+        "share_4jyqYj",
+        "sku_TxBtzD",
+        "quantity_selector_iiG4yA",
+        "rating_9eJHRR",
+        "icon_with_text_f99izh",
+        "text_CRYTia"
       ],
-      "disabled": true,
       "settings": {
         "product": "edenvine-cabernet-sauvignon",
         "color_scheme": "inverse",
