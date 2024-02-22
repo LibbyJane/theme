@@ -354,6 +354,7 @@ a.product__text {
   display: grid;
   grid-gap: 0 var(--space);
   position: relative;
+  overflow: hidden;
 }
 .product__info-container .caption {
   line-height: 1.1;

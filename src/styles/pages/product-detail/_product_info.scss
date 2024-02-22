@@ -10,6 +10,7 @@
     display: grid;
     grid-gap: 0 var(--space);
     position: relative;
+    overflow: hidden; // badges causing overflow issues on ios
     // grid-template-columns: 2fr 3fr;
 
     .caption {
