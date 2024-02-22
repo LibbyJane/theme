@@ -78,32 +78,13 @@
             "background_texture": "lined",
             "text_alignment_mobile": "center"
           }
-        },
-        "slide_k8M6FF": {
-          "type": "slide",
-          "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": "primary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "background_texture": "paper",
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
         "slide_68XgRr",
         "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-1",
         "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2",
-        "slide_ztFJ8x",
-        "slide_k8M6FF"
+        "slide_ztFJ8x"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -349,7 +330,7 @@
         "layout": "full_bleed",
         "slide_height": "medium",
         "section_color_scheme": "inverse",
-        "slider_visual": "counter",
+        "slider_visual": "dots",
         "slider_visual_background_opacity": 40,
         "overlay_pagination_desktop": false,
         "auto_rotate": true,
@@ -625,7 +606,7 @@
       "settings": {
         "product": "edenvine-cabernet-sauvignon",
         "color_scheme": "accent-1",
-        "background_texture": "",
+        "background_texture": "torn",
         "full_width": true,
         "media_size": "large",
         "constrain_to_viewport": true,
@@ -677,6 +658,42 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "sku_TxBtzD": {
+          "type": "sku",
+          "settings": {
+            "text_style": "caption"
+          }
+        },
+        "quantity_selector_iiG4yA": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "rating_9eJHRR": {
+          "type": "rating",
+          "settings": {
+          }
+        },
+        "icon_with_text_f99izh": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "heart",
+            "image_1": "shopify:\/\/shop_images\/2048-3-2.jpg",
+            "heading_1": "Heading",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "icon_3": "truck",
+            "heading_3": "Heading"
+          }
+        },
+        "text_CRYTia": {
+          "type": "text",
+          "settings": {
+            "text": "Text block",
+            "text_style": "caption"
+          }
         }
       },
       "block_order": [
@@ -685,7 +702,12 @@
         "price_xibj38",
         "variant_picker_T3Vn4a",
         "buy_buttons_UVh84m",
-        "share_4jyqYj"
+        "share_4jyqYj",
+        "sku_TxBtzD",
+        "quantity_selector_iiG4yA",
+        "rating_9eJHRR",
+        "icon_with_text_f99izh",
+        "text_CRYTia"
       ],
       "settings": {
         "product": "edenvine-cabernet-sauvignon",
@@ -752,10 +774,11 @@
         "buy_buttons_NN8e6t",
         "share_MGyXXw"
       ],
+      "disabled": true,
       "settings": {
         "product": "edenvine-cabernet-sauvignon",
         "color_scheme": "background-1",
-        "background_texture": "lined",
+        "background_texture": "paper",
         "full_width": true,
         "media_size": "large",
         "constrain_to_viewport": true,
@@ -817,10 +840,11 @@
         "buy_buttons_TLDjyx",
         "share_qnkYr9"
       ],
+      "disabled": true,
       "settings": {
         "product": "2018-heathcote-shiraz",
-        "color_scheme": "accent-1",
-        "background_texture": "",
+        "color_scheme": "background-2",
+        "background_texture": "torn",
         "full_width": false,
         "media_size": "large",
         "constrain_to_viewport": true,
@@ -904,6 +928,7 @@
       "blocks": {
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-heading-1": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Image with text",
             "heading_size": "h1"
@@ -911,6 +936,7 @@
         },
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-text-1": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "text_style": "body"
@@ -918,6 +944,7 @@
         },
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-button-1": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Button label",
             "button_link": "",
@@ -926,6 +953,7 @@
         },
         "caption_JtEE9x": {
           "type": "caption",
+          "disabled": true,
           "settings": {
             "caption": "Add a tagline",
             "text_style": "subtitle",
@@ -941,8 +969,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/black-grapes-on-the-vine.jpg",
-        "height": "adapt",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
