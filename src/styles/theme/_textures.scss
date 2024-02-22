@@ -28,16 +28,20 @@
 
     $vertical-line-offset: 10px;
     $vertical-line-offset2: $vertical-line-offset + 3px;
-    background-color: rgb(var(--color-background));
-    background-size: 100% 2.4rem, 100% 2.4rem, cover;
-    background-blend-mode: multiply;
-    background-image:
-    linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
-    linear-gradient(#eee .1rem, transparent .1rem),
-    var(--background-gradient);
     box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
     padding-left: var(--texture-lined-border-size, 30px);
     position: relative;
+
+    &,
+    &::before {
+        background-color: rgb(var(--color-background));
+        background-size: 100% 2.4rem, 100% 2.4rem, cover;
+        background-blend-mode: multiply;
+        background-image:
+        linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
+        linear-gradient(#eee .1rem, transparent .1rem),
+        var(--background-gradient);
+    }
 
     &::before {
         -webkit-mask-image: url('img-paper-hole-border-left.svg?v=2');
@@ -46,7 +50,6 @@
   mask-repeat: no-repeat round;
   mask-size: var(--texture-lined-border-size, 30px);
 
-        background: rgb(var(--color-background)) var(--background-gradient);
         // background-size: cover;
         // background-repeat: repeat;
         content: '';
