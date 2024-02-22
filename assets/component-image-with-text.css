@@ -12,6 +12,9 @@
 .image-with-text .image-with-text .global-media-settings {
   overflow: hidden !important;
 }
+.image-with-text .image-with-text__button {
+  margin-bottom: var(--space-med);
+}
 .image-with-text .inline-richtext:last-child,
 .image-with-text .rte:last-child,
 .image-with-text .image-with-text__button .image-with-text__text:last-child {
