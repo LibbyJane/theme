@@ -58,13 +58,13 @@
     //     }
     // }
 
-    summary {
-        padding-right: var(--space-sm);
+    //summary {
+        //padding-right: var(--space-sm); // needed? spacing incorrect on home page
 
         // &:hover {
         //     // background: rgba(var(--color-foreground), 0.05);
         // }
-    }
+    //}
 }
 
 .collapsible-content__grid {

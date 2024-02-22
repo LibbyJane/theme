@@ -324,10 +324,6 @@
 .collapsible-content .accordion {
   margin: initial;
 }
-.collapsible-content summary {
-  padding-right: var(--space-sm);
-}
-
 .collapsible-content__grid {
   gap: 0;
   margin-inline: auto;

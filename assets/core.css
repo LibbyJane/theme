@@ -1255,9 +1255,6 @@ a {
   .grid--peek .grid__item {
     min-width: 35%;
   }
-  .grid--peek.slider .grid__item:first-of-type:not(:only-child) {
-    margin-left: 1.5rem;
-  }
   .grid--peek.slider:after {
     margin-left: calc(-1 * var(--grid-horizontal-spacing));
   }
@@ -1982,7 +1979,7 @@ html.no-js .no-js-hidden {
   position: absolute;
   top: 0.1px;
   bottom: 0;
-  left: calc(var(--texture-lined-border-size) * -1);
+  left: calc(var(--texture-lined-border-size) * -1 + 1px);
   width: var(--texture-lined-border-size, 30px);
   -webkit-mask-box-image: url("img-paper-hole-border-left.svg") 1 round;
   mask-border: url("img-paper-hole-border-left.svg") 1 round;
