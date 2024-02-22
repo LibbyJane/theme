@@ -132,7 +132,8 @@
     aspect-ratio: 1/1;
     // background-color: rgb(var(--color-button));
     // color: rgb(var(--color-button-text));
-    border-radius: 99em;
+    // border-radius: 99em;
+    border-radius: var(--button-border-radius);
     //box-shadow: 0 2px 4px rgba(var(--color-shadow),0.3);
     display: flex;
         align-items: center;

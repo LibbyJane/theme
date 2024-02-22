@@ -1656,7 +1656,7 @@ details[open] > .header__submenu {
   background-color: rgb(var(--color-ecommerce));
   color: rgb(var(--color-ecommerce-contrast));
   aspect-ratio: 1/1;
-  border-radius: 99em;
+  border-radius: var(--button-border-radius);
   display: flex;
   align-items: center;
   justify-content: center;
