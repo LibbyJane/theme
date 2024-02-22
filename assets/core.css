@@ -1965,21 +1965,22 @@ html.no-js .no-js-hidden {
 
 .texture-lined {
   --texture-lined-border-size: 30px;
+  background-size: 100% 2.4rem, 100% 2.4rem, cover;
   box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
   padding-left: var(--texture-lined-border-size, 30px);
   position: relative;
 }
 .texture-lined, .texture-lined::before {
   background-color: rgb(var(--color-background));
-  background-size: 100% 2.4rem, 100% 2.4rem, cover;
   background-blend-mode: multiply;
   background-image: linear-gradient(90deg, transparent 10px, rgba(171, 206, 212, 0.2) 10px, rgba(171, 206, 212, 0.2) 13px, transparent 13px), linear-gradient(#eee 0.1rem, transparent 0.1rem), var(--background-gradient);
 }
 .texture-lined::before {
+  background-size: 0 0, 100% 2.4rem, cover;
   -webkit-mask-image: url("img-paper-hole-border-left.svg?v=2");
   mask-image: url("img-paper-hole-border-left.svg?v=2");
-  -webkit-mask-repeat: no-repeat round;
-  mask-repeat: no-repeat round;
+  -webkit-mask-repeat: no-repeat space;
+  mask-repeat: no-repeat space;
   -webkit-mask-size: var(--texture-lined-border-size, 30px);
           mask-size: var(--texture-lined-border-size, 30px);
   content: "";
