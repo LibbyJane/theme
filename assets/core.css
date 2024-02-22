@@ -3370,7 +3370,7 @@ summary .icon-caret {
 }
 
 .icon-with-text--vertical {
-  --iwt-icon-size: var(--icon-size-lg);
+  --iwt-icon-size: var(--icon-size-xl);
   flex-direction: column;
   gap: var(--space);
 }
