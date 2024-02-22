@@ -50,8 +50,8 @@
             bottom: 0;
             left: calc(var(--texture-lined-border-size) * -1 + 2px);
         width: var(--texture-lined-border-size, 30px);
-        // -webkit-mask-box-image: url('img-paper-hole-border-left.svg') 1 round;
-        // mask-border: url('img-paper-hole-border-left.svg') 1 round;
+        -webkit-mask-box-image: url('img-paper-hole-border-left.svg') 1 round;
+        mask-border: url('img-paper-hole-border-left.svg') 1 round;
 
         // .banner--desktop-transparent & {
         //     content: none;
