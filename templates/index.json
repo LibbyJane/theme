@@ -677,6 +677,7 @@
         },
         "icon_with_text_f99izh": {
           "type": "icon-with-text",
+          "disabled": true,
           "settings": {
             "layout": "horizontal",
             "icon_1": "heart",
@@ -700,7 +701,7 @@
           "settings": {
             "layout": "vertical",
             "icon_1": "heart",
-            "heading_1": "Heading",
+            "heading_1": "Heading more text more text more text",
             "icon_2": "return",
             "image_2": "shopify:\/\/shop_images\/front-view-of-a-vintage-camper-van-parked.jpg",
             "heading_2": "Heading",
