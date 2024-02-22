@@ -1983,6 +1983,7 @@ html.no-js .no-js-hidden {
   width: var(--texture-lined-border-size, 30px);
   -webkit-mask-box-image: url("img-paper-hole-border-left.svg") 1 round;
   mask-border: url("img-paper-hole-border-left.svg") 1 round;
+  z-index: 1;
 }
 .banner--desktop-transparent .texture-lined::before {
   content: none;
