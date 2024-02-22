@@ -1029,7 +1029,6 @@
         "text_8YGLNb",
         "button_rwAxWX"
       ],
-      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/grapes-to-wine.jpg",
         "height": "adapt",
@@ -1086,7 +1085,6 @@
         "button_QR3akM",
         "caption_WHEkPy"
       ],
-      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/wine-cantilena_9444d35d-7476-4f97-8e3a-7e0b953e2cc2.jpg",
         "height": "adapt",
@@ -1130,7 +1128,6 @@
         "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-paragraph-1",
         "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-email_form-1"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "background-2",
         "background_texture": "torn",
