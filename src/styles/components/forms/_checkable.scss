@@ -100,11 +100,7 @@ input[type="radio"] {
     }
 }
 
-input[checkbox] {
-    outline: 20px dashed blue;
-}
 input[checkbox]:checked + .checkable__tick {
-    outline: 20px dashed lime;
     .icon-tick-draw {
         opacity: 1;
         animation-name: draw;

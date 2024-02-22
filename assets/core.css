@@ -3534,13 +3534,6 @@ input[type=radio] ~ label .icon-tick-background-square {
   margin-right: var(--space-sm);
 }
 
-input[checkbox] {
-  outline: 20px dashed blue;
-}
-
-input[checkbox]:checked + .checkable__tick {
-  outline: 20px dashed lime;
-}
 input[checkbox]:checked + .checkable__tick .icon-tick-draw {
   opacity: 1;
   animation-name: draw;
