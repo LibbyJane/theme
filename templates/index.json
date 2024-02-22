@@ -105,6 +105,7 @@
         "slide_ztFJ8x",
         "slide_k8M6FF"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -225,6 +226,7 @@
         "slide_3NKDKQ",
         "slide_wJXTTy"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -345,6 +347,7 @@
         "slide_NL7HLm",
         "slide_b8Fghj"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -404,6 +407,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "all",
         "title": "Our latest finds",
@@ -433,6 +437,7 @@
     },
     "featured_collection_kirhW3": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "hydrogen",
         "title": "Our latest finds",
@@ -462,6 +467,7 @@
     },
     "featured_collection_3LjfDw": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "australia",
         "title": "Our latest finds",
@@ -506,12 +512,14 @@
         },
         "template--20955328512321__707cd939-d696-4530-a0a6-5655a617fdbf-featured_collection-3": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": "new-zealand"
           }
         },
         "featured_collection_ranhhW": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": "south-africa"
           }
