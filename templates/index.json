@@ -404,6 +404,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "all",
         "title": "Our latest finds",
@@ -621,7 +622,6 @@
         "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-buy_buttons-1",
         "template--20955328512321__90d8b6df-d98a-47ac-a60d-4dab79b288ea-share-1"
       ],
-      "disabled": true,
       "settings": {
         "product": "edenvine-cabernet-sauvignon",
         "color_scheme": "accent-1",
@@ -687,7 +687,6 @@
         "buy_buttons_UVh84m",
         "share_4jyqYj"
       ],
-      "disabled": true,
       "settings": {
         "product": "edenvine-cabernet-sauvignon",
         "color_scheme": "inverse",
@@ -753,7 +752,6 @@
         "buy_buttons_NN8e6t",
         "share_MGyXXw"
       ],
-      "disabled": true,
       "settings": {
         "product": "edenvine-cabernet-sauvignon",
         "color_scheme": "background-1",
@@ -819,7 +817,6 @@
         "buy_buttons_TLDjyx",
         "share_qnkYr9"
       ],
-      "disabled": true,
       "settings": {
         "product": "2018-heathcote-shiraz",
         "color_scheme": "accent-1",
