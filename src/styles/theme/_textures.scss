@@ -30,8 +30,10 @@
     $vertical-line-offset2: $vertical-line-offset + 3px;
     background-size: 100% 2.4rem, 100% 2.4rem, cover;
     box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
-    padding-left: var(--texture-lined-border-size, 30px);
+    //padding-left: var(--texture-lined-border-size, 30px);
     position: relative;
+    width: calc(100% - var(--texture-lined-border-size));
+    transform: translateX(calc(var(--texture-lined-border-size)/2));
 
     &,
     &::before {
