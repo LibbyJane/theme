@@ -1974,6 +1974,10 @@ html.no-js .no-js-hidden {
   position: relative;
 }
 .texture-lined::before {
+  -webkit-mask-image: url("img-paper-hole-border-left.svg?v=2");
+  mask-image: url("img-paper-hole-border-left.svg?v=2");
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
   background: rgb(var(--color-background)) var(--background-gradient);
   content: "";
   position: absolute;
