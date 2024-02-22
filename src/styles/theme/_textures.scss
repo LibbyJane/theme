@@ -40,24 +40,21 @@
     position: relative;
 
     &::before {
-        //background: rgb(var(--color-background)) var(--background-gradient);
+        background: rgb(var(--color-background)) var(--background-gradient);
         // background-size: cover;
         // background-repeat: repeat;
-        background-color: rgb(var(--color-background));
         content: '';
         position: absolute;
             top: 0.1px;
             bottom: 0;
             left: calc(var(--texture-lined-border-size) * -1 + 2px);
         width: var(--texture-lined-border-size, 30px);
-        -webkit-mask-box-image: url('img-paper-hole-border-left.svg?v=2') 1 round;
-        mask-border: url('img-paper-hole-border-left.svg?v=2') 1 round;
-        mask-border: url("img-paper-hole-border-left.svg?v=2") 25 / 35px / 12px space alpha;
+        // -webkit-mask-box-image: url('img-paper-hole-border-left.svg?v=2') 1 round;
+        // mask-border: url('img-paper-hole-border-left.svg?v=2') 1 round;
 
-
-        // .banner--desktop-transparent & {
-        //     content: none;
-        // }
+        .banner--desktop-transparent & {
+            content: none;
+        }
     }
 }
 
