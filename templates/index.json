@@ -903,6 +903,7 @@
       "blocks": {
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-heading-1": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Image with text",
             "heading_size": "h1"
@@ -910,6 +911,7 @@
         },
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-text-1": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "text_style": "body"
@@ -917,6 +919,7 @@
         },
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-button-1": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Button label",
             "button_link": "",
@@ -925,6 +928,7 @@
         },
         "caption_JtEE9x": {
           "type": "caption",
+          "disabled": true,
           "settings": {
             "caption": "Add a tagline",
             "text_style": "subtitle",
