@@ -209,7 +209,7 @@
 }
 
 .image-with-text--overlap .image-with-text__content {
-    width: calc(100% - var(--texture-lined-border-size) - var(--content-padding-inline) - var(--content-padding-inline));
+    // width: calc(100% - var(--texture-lined-border-size) - var(--content-padding-inline) - var(--content-padding-inline));
     margin: calc(var(--space) * -1) auto 0;
 
     @media screen and (min-width: 750px) {
