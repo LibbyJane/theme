@@ -42,8 +42,9 @@
     &::before {
         -webkit-mask-image: url('img-paper-hole-border-left.svg?v=2');
   mask-image: url('img-paper-hole-border-left.svg?v=2');
-  -webkit-mask-repeat: repeat;
-  mask-repeat: repeat;
+  -webkit-mask-repeat: no-repeat round;
+  mask-repeat: no-repeat round;
+
         background: rgb(var(--color-background)) var(--background-gradient);
         // background-size: cover;
         // background-repeat: repeat;
