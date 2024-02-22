@@ -1241,7 +1241,6 @@
         "template--20955328512321__cedce7e5-6cf9-4779-97f7-3ba6127619cb-collapsible_row-3",
         "template--20955328512321__cedce7e5-6cf9-4779-97f7-3ba6127619cb-collapsible_row-4"
       ],
-      "disabled": true,
       "settings": {
         "heading": "Collapsible content",
         "heading_size": "h1",
@@ -1251,7 +1250,7 @@
         "section_color_scheme": "",
         "background_transparent": true,
         "content_color_scheme": "",
-        "background_texture": "paper",
+        "background_texture": "lined",
         "column_height": true,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
