@@ -942,6 +942,7 @@
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-button-1",
         "caption_JtEE9x"
       ],
+      "disabled": true,
       "settings": {
         "height": "small",
         "desktop_image_width": "medium",
