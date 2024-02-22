@@ -2,6 +2,11 @@
   margin-inline: 0;
   width: 100%;
 }
+@media screen and (max-width: 749px) {
+  .quick-add__submit {
+    font-size: var(--font-size-base);
+  }
+}
 
 .quick-add {
   position: relative;

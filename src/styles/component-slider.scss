@@ -20,6 +20,10 @@ slider-component {
     &.slider-component-mobile {
         @media screen and (max-width: 749px) {
             --content-padding-inline: 0;
+
+            .background-theme & {
+                margin-inline: var(--full-width-offset-margin);
+            }
         }
     }
 

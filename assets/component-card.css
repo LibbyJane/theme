@@ -235,10 +235,20 @@
 }
 
 .card__information {
-  padding: var(--space-sm);
+  padding: var(--space-sm) 0;
+}
+@media screen and (min-width: 750px) {
+  .card__information {
+    padding: var(--space-sm);
+  }
 }
 .card--text .card__information {
   padding: 0 0 var(--space);
+}
+@media screen and (min-width: 750px) {
+  .card--text .card__information {
+    padding: 0 0 var(--space);
+  }
 }
 .collection-list .card__inner .card__information, .collage .card__inner .card__information {
   display: none;

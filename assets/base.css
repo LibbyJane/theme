@@ -619,7 +619,7 @@ h3 .icon-arrow,
         max-width: 100%;
     }
 } */
-
+/*
 @media screen and (max-width: 749px) {
     .grid--peek.slider--mobile {
         margin: 0;
@@ -638,8 +638,10 @@ h3 .icon-arrow,
     .grid--peek.slider .grid__item:first-of-type {
         margin-left: 1.5rem;
     }
+    */
 
     /* Fix to show some space at the end of our sliders in all browsers */
+    /*
     .grid--peek.slider:after {
         margin-left: calc(-1 * var(--grid-horizontal-spacing));
     }
@@ -684,7 +686,7 @@ h3 .icon-arrow,
     .grid--1-col-tablet-down.grid--peek .grid__item {
         width: calc(100% - var(--grid-horizontal-spacing) - 3rem);
     }
-}
+} */
 
 /* component-media */
 .media {

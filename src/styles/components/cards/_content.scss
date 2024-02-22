@@ -55,10 +55,18 @@
 // .card--standard.card--text.article-card>.card__content .card__information,
 // .card--standard>.card__content .card__caption {
 .card__information {
-    padding: var(--space-sm);
+    padding: var(--space-sm) 0;
+
+    @media screen and (min-width: 750px) {
+        padding: var(--space-sm);
+    }
 
     .card--text & {
         padding: 0 0 var(--space);
+
+        @media screen and (min-width: 750px) {
+            padding: 0 0 var(--space);
+        }
     }
 
     // .card--standard & {

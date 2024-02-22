@@ -327,6 +327,9 @@ slider-component.page-width {
   slider-component.slider-component-mobile {
     --content-padding-inline: 0;
   }
+  .background-theme slider-component.slider-component-mobile {
+    margin-inline: var(--full-width-offset-margin);
+  }
 }
 slider-component.slider-component-full-width {
   --desktop-margin-left-first-item: var(--space-med);
