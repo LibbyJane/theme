@@ -46,21 +46,21 @@
     &::before {
         background-size: 0 0, 100% 2.4rem, cover;
         -webkit-mask-image: url('img-paper-hole-border-left.svg?v=2');
-  mask-image: url('img-paper-hole-border-left.svg?v=2');
-  -webkit-mask-repeat: no-repeat round;
-  mask-repeat: no-repeat round;
-  mask-size: var(--texture-lined-border-size, 30px);
-
-        // background-size: cover;
-        // background-repeat: repeat;
+        mask-image: url('img-paper-hole-border-left.svg?v=2');
+        -webkit-mask-repeat: no-repeat round;
+        mask-repeat: no-repeat round;
+        mask-size: var(--texture-lined-border-size, 30px);
         content: '';
         position: absolute;
             top: 0;
             bottom: 0;
             left: calc(var(--texture-lined-border-size) * -1 + 1px);
         width: var(--texture-lined-border-size, 30px);
-        // -webkit-mask-box-image: url('img-paper-hole-border-left.svg?v=2') 1 round;
-        // mask-border: url('img-paper-hole-border-left.svg?v=2') 1 round;
+
+        @supports (-webkit-touch-callout: none) {
+            /* CSS specific to iOS devices */
+            mask-repeat: no-repeat repeat;
+        }
 
         .banner--desktop-transparent & {
             content: none;

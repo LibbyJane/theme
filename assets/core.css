@@ -1990,6 +1990,13 @@ html.no-js .no-js-hidden {
   left: calc(var(--texture-lined-border-size) * -1 + 1px);
   width: var(--texture-lined-border-size, 30px);
 }
+@supports (-webkit-touch-callout: none) {
+  .texture-lined::before {
+    /* CSS specific to iOS devices */
+    -webkit-mask-repeat: no-repeat repeat;
+            mask-repeat: no-repeat repeat;
+  }
+}
 .banner--desktop-transparent .texture-lined::before {
   content: none;
 }
