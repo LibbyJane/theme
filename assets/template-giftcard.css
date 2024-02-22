@@ -6,6 +6,7 @@
   --content-padding-inline: clamp(var(--space-sm), 5vw, var(--inline-padding-max));
   --content-padding: var(--space-med) var(--content-padding-inline) var(--space-sm);
   --content-padding-med: calc(var(--content-padding-inline)*1.25) calc(var(--content-padding-inline)*1.25) calc(var(--content-padding-inline)*1.25 - var(--space));
+  --content-padding-lg: calc(var(--content-padding-inline)*2) calc(var(--content-padding-inline)*2) calc(var(--content-padding-inline)*2 - var(--space));
   --full-width-offset-margin: calc(var(--content-padding-inline) * -1);
   --inline-padding-lg: var(--space-xxl);
   --border-width: 2px;

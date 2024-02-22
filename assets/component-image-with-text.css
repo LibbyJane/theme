@@ -88,25 +88,10 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  padding: var(--content-padding);
+  padding: var(--content-padding-lg);
   position: relative;
   transform: translateX(var(--translateX)) translateY(var(--translateY));
   z-index: var(--zi-base);
-}
-@media screen and (min-width: 750px) {
-  .image-with-text__content {
-    padding: var(--large-padding);
-  }
-}
-.image-with-text__content.texture-torn {
-  --padding: calc(var(--content-padding-inline) * 2);
-  padding: var(--padding);
-  padding-bottom: calc(var(--padding) - var(--space));
-}
-@media screen and (min-width: 750px) {
-  .image-with-text__content.texture-torn {
-    padding: var(--large-padding);
-  }
 }
 .image-with-text__content.texture-lined {
   overflow: visible;
