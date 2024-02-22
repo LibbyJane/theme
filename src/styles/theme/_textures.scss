@@ -44,6 +44,7 @@
   mask-image: url('img-paper-hole-border-left.svg?v=2');
   -webkit-mask-repeat: no-repeat round;
   mask-repeat: no-repeat round;
+  mask-size: var(--texture-lined-border-size, 30px);
 
         background: rgb(var(--color-background)) var(--background-gradient);
         // background-size: cover;
@@ -52,7 +53,7 @@
         position: absolute;
             top: 0.1px;
             bottom: 0;
-            left: calc(var(--texture-lined-border-size) * -1 + 2px);
+            left: calc(var(--texture-lined-border-size) * -1 + 1px);
         width: var(--texture-lined-border-size, 30px);
         // -webkit-mask-box-image: url('img-paper-hole-border-left.svg?v=2') 1 round;
         // mask-border: url('img-paper-hole-border-left.svg?v=2') 1 round;

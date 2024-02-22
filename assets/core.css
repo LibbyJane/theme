@@ -1978,12 +1978,14 @@ html.no-js .no-js-hidden {
   mask-image: url("img-paper-hole-border-left.svg?v=2");
   -webkit-mask-repeat: no-repeat round;
   mask-repeat: no-repeat round;
+  -webkit-mask-size: var(--texture-lined-border-size, 30px);
+          mask-size: var(--texture-lined-border-size, 30px);
   background: rgb(var(--color-background)) var(--background-gradient);
   content: "";
   position: absolute;
   top: 0.1px;
   bottom: 0;
-  left: calc(var(--texture-lined-border-size) * -1 + 2px);
+  left: calc(var(--texture-lined-border-size) * -1 + 1px);
   width: var(--texture-lined-border-size, 30px);
 }
 .banner--desktop-transparent .texture-lined::before {
