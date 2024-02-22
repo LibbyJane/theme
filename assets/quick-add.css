@@ -7,6 +7,7 @@
   position: relative;
   grid-row-start: 4;
   margin: 0 0 1rem;
+  width: 100%;
   z-index: 1;
 }
 
