@@ -625,7 +625,7 @@
       "settings": {
         "product": "edenvine-cabernet-sauvignon",
         "color_scheme": "accent-1",
-        "background_texture": "",
+        "background_texture": "torn",
         "full_width": true,
         "media_size": "large",
         "constrain_to_viewport": true,
@@ -755,7 +755,7 @@
       "settings": {
         "product": "edenvine-cabernet-sauvignon",
         "color_scheme": "background-1",
-        "background_texture": "lined",
+        "background_texture": "paper",
         "full_width": true,
         "media_size": "large",
         "constrain_to_viewport": true,
@@ -819,8 +819,8 @@
       ],
       "settings": {
         "product": "2018-heathcote-shiraz",
-        "color_scheme": "accent-1",
-        "background_texture": "",
+        "color_scheme": "background-2",
+        "background_texture": "torn",
         "full_width": false,
         "media_size": "large",
         "constrain_to_viewport": true,
