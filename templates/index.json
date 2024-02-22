@@ -694,6 +694,19 @@
             "text": "Text block",
             "text_style": "caption"
           }
+        },
+        "icon_with_text_dBAVhe": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "heart",
+            "heading_1": "Heading",
+            "icon_2": "return",
+            "image_2": "shopify:\/\/shop_images\/front-view-of-a-vintage-camper-van-parked.jpg",
+            "heading_2": "Heading",
+            "icon_3": "truck",
+            "heading_3": "Heading"
+          }
         }
       },
       "block_order": [
@@ -707,7 +720,8 @@
         "quantity_selector_iiG4yA",
         "rating_9eJHRR",
         "icon_with_text_f99izh",
-        "text_CRYTia"
+        "text_CRYTia",
+        "icon_with_text_dBAVhe"
       ],
       "settings": {
         "product": "edenvine-cabernet-sauvignon",
