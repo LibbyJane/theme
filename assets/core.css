@@ -3400,6 +3400,9 @@ summary .icon-caret {
 .icon-with-text__text {
   text-align: center;
 }
+.icon-with-text--vertical .icon-with-text__text {
+  text-align: start;
+}
 
 svg {
   vector-effect: non-scaling-stroke;

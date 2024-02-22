@@ -52,4 +52,8 @@
 
 .icon-with-text__text {
     text-align: center;
+
+    .icon-with-text--vertical & {
+        text-align: start;
+    }
 }
