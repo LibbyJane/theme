@@ -1979,13 +1979,13 @@ html.no-js .no-js-hidden {
   background-size: 0 0, 100% 2.4rem, cover;
   -webkit-mask-image: url("img-paper-hole-border-left.svg?v=2");
   mask-image: url("img-paper-hole-border-left.svg?v=2");
-  -webkit-mask-repeat: no-repeat space;
-  mask-repeat: no-repeat space;
+  -webkit-mask-repeat: no-repeat round;
+  mask-repeat: no-repeat round;
   -webkit-mask-size: var(--texture-lined-border-size, 30px);
           mask-size: var(--texture-lined-border-size, 30px);
   content: "";
   position: absolute;
-  top: 0.1px;
+  top: 0;
   bottom: 0;
   left: calc(var(--texture-lined-border-size) * -1 + 1px);
   width: var(--texture-lined-border-size, 30px);
