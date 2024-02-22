@@ -1974,7 +1974,7 @@ html.no-js .no-js-hidden {
   position: relative;
 }
 .texture-lined::before {
-  background: red;
+  background: rgb(var(--color-background)) var(--background-gradient);
   content: "";
   position: absolute;
   top: 0.1px;

@@ -40,10 +40,9 @@
     position: relative;
 
     &::before {
-        // background: rgb(var(--color-background)) var(--background-gradient);
+        background: rgb(var(--color-background)) var(--background-gradient);
         // background-size: cover;
         // background-repeat: repeat;
-        background: red;
         content: '';
         position: absolute;
             top: 0.1px;
