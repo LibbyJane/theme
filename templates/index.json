@@ -939,7 +939,6 @@
       "blocks": {
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-heading-1": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "heading": "Image with text",
             "heading_size": "h1"
@@ -947,7 +946,6 @@
         },
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-text-1": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "text_style": "body"
@@ -955,7 +953,6 @@
         },
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-button-1": {
           "type": "button",
-          "disabled": true,
           "settings": {
             "button_label": "Button label",
             "button_link": "",
@@ -964,7 +961,6 @@
         },
         "caption_JtEE9x": {
           "type": "caption",
-          "disabled": true,
           "settings": {
             "caption": "Add a tagline",
             "text_style": "subtitle",
@@ -978,7 +974,6 @@
         "template--20955328512321__8776c05e-0fa5-4e29-8a52-52d5df273951-button-1",
         "caption_JtEE9x"
       ],
-      "disabled": true,
       "settings": {
         "height": "small",
         "desktop_image_width": "medium",
@@ -1034,7 +1029,6 @@
         "text_8YGLNb",
         "button_rwAxWX"
       ],
-      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/grapes-to-wine.jpg",
         "height": "adapt",
@@ -1091,7 +1085,6 @@
         "button_QR3akM",
         "caption_WHEkPy"
       ],
-      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/wine-cantilena_9444d35d-7476-4f97-8e3a-7e0b953e2cc2.jpg",
         "height": "adapt",
@@ -1135,7 +1128,6 @@
         "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-paragraph-1",
         "template--20955328512321__2448094c-7197-4ebb-b9cd-889ab8e34336-email_form-1"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "background-2",
         "background_texture": "torn",
