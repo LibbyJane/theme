@@ -678,7 +678,7 @@
         "icon_with_text_f99izh": {
           "type": "icon-with-text",
           "settings": {
-            "layout": "vertical",
+            "layout": "horizontal",
             "icon_1": "heart",
             "image_1": "shopify:\/\/shop_images\/2048-3-2.jpg",
             "heading_1": "Heading",
