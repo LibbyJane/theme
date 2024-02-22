@@ -155,7 +155,7 @@
         min-width: 35%;
     }
 
-    .grid--peek.slider .grid__item:first-of-type {
+    .grid--peek.slider .grid__item:first-of-type:not(:only-child) {
         margin-left: 1.5rem;
     }
 
