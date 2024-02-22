@@ -3353,11 +3353,17 @@ summary .icon-caret {
   --iwt-icon-size: calc(var(--font-heading-scale) * 3rem);
   display: flex;
   justify-content: center;
-  -moz-column-gap: var(--space-xl);
-       column-gap: var(--space-xl);
+  -moz-column-gap: var(--space-lg);
+       column-gap: var(--space-lg);
   flex-direction: row;
   margin-bottom: var(--space-med);
   padding-top: var(--space-sm);
+}
+@media screen and (min-width: 750px) {
+  .icon-with-text {
+    -moz-column-gap: var(--space-xl);
+         column-gap: var(--space-xl);
+  }
 }
 .icon-with-text .icon,
 .icon-with-text img {
@@ -3380,13 +3386,15 @@ summary .icon-caret {
   gap: var(--space-sm);
   align-items: center;
   flex-direction: column;
-  width: 33%;
+  flex: 0 0 auto;
+  max-width: 40%;
   margin-bottom: var(--space);
 }
 .icon-with-text--vertical .icon-with-text__item {
   gap: var(--space);
   flex-direction: row;
-  width: 100%;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 
 .icon-with-text__text {

@@ -4,10 +4,15 @@
 
     display: flex;
         justify-content: center;
-        column-gap: var(--space-xl);
+        column-gap: var(--space-lg);
         flex-direction: row;
     margin-bottom: var(--space-med);
     padding-top: var(--space-sm);
+
+
+    @media screen and (min-width: 750px) {
+        column-gap: var(--space-xl);
+    }
 
     .icon,
     img {
@@ -33,13 +38,15 @@
         gap: var(--space-sm);
         align-items: center;
         flex-direction: column;
-    width: 33%;
+    flex: 0 0 auto;
+    max-width: 40%;
     margin-bottom: var(--space);
 
     .icon-with-text--vertical & {
         gap: var(--space);
         flex-direction: row;
-        width: 100%;
+        flex: 0 0 auto;
+        max-width: 100%;
     }
 }
 
