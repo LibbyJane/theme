@@ -1983,6 +1983,8 @@ html.no-js .no-js-hidden {
   width: var(--texture-lined-border-size, 30px);
   -webkit-mask-box-image: url("img-paper-hole-border-left.svg?v=2") 1 round;
   mask-border: url("img-paper-hole-border-left.svg?v=2") 1 round;
+  -webkit-mask-box-image: url("img-paper-hole-border-left.svg?v=2") 25/35px/12px space alpha;
+          mask-border: url("img-paper-hole-border-left.svg?v=2") 25/35px/12px space alpha;
 }
 
 .texture-blueprint {
