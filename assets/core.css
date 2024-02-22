@@ -1984,7 +1984,6 @@ html.no-js .no-js-hidden {
   -webkit-mask-box-image: url("img-paper-hole-border-left.svg") 1 round;
   mask-border: url("img-paper-hole-border-left.svg") 1 round;
   z-index: 1;
-  outline: 10px dashed red;
 }
 .banner--desktop-transparent .texture-lined::before {
   content: none;

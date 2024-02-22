@@ -1130,7 +1130,7 @@
       ],
       "settings": {
         "color_scheme": "background-2",
-        "background_texture": "torn",
+        "background_texture": "lined",
         "full_width": false,
         "padding_top": 40,
         "padding_bottom": 52
