@@ -49,7 +49,7 @@
         mask-image: url('img-paper-hole-border-left.svg?v=2');
         -webkit-mask-repeat: no-repeat round;
         mask-repeat: no-repeat round;
-        mask-size: var(--texture-lined-border-size, 30px);
+        mask-size: calc(var(--texture-lined-border-size) + 1px);
         content: '';
         position: absolute;
             top: 0;
@@ -57,12 +57,12 @@
             left: calc(var(--texture-lined-border-size) * -1 + 1px);
         width: var(--texture-lined-border-size, 30px);
 
-        @supports (-webkit-touch-callout: none) {
-            /* CSS specific to iOS devices */
-            //mask-repeat: no-repeat repeat;
-            mask-size: 31px;
+        // @supports (-webkit-touch-callout: none) {
+        //     /* CSS specific to iOS devices */
+        //     //mask-repeat: no-repeat repeat;
+        //     mask-size: 31px;
 
-        }
+        // }
 
         .banner--desktop-transparent & {
             content: none;
