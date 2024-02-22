@@ -449,7 +449,6 @@ slider-component.slider-component-full-width {
   .slider--tablet-up {
     position: relative;
     flex-wrap: inherit;
-    overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scroll-padding-left: var(--space);
@@ -461,7 +460,6 @@ slider-component.slider-component-full-width {
   .slider--tablet {
     position: relative;
     flex-wrap: inherit;
-    overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scroll-padding-left: var(--space-med);
