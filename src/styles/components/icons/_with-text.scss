@@ -1,6 +1,13 @@
+// horizontal layout is default
 .icon-with-text {
-    --icon-size: calc(var(--font-heading-scale) * 3rem);
-    --icon-spacing: calc(var(--font-heading-scale) * 1rem);
+    --icon-size: --icon-size: calc(var(--font-heading-scale) * 3rem);
+
+    display: flex;
+        justify-content: center;
+        column-gap: var(--space-xl);
+        flex-direction: row;
+    margin-bottom: var(--space-med);
+    padding-top: var(--space-sm);
 
     .icon,
     img {
@@ -11,115 +18,30 @@
     img {
         object-fit: contain;
     }
+}
 
-    .h4 {
-        text-align: center;
-    }
-
-    .icon-with-text__item {
-        display: flex;
-        align-items: center;
-    }
-
-    &--horizontal {
-        display: flex;
-        justify-content: center;
-        column-gap: 3rem;
-        flex-direction: row;
-
-        .icon,
-        img {
-            margin-bottom: var(--icon-spacing);
-        }
-
-        .h4 {
-            padding-top: calc(var(--icon-size) + var(--icon-spacing));
-        }
-
-        svg+.h4,
-        img+.h4,
-        &.icon-with-text--text-only .h4 {
-            padding-top: 0;
-        }
-
-        .icon-with-text__item {
-            flex-direction: column;
-            width: 33%;
-        }
-    }
-
-    &--vertical {
-        --icon-size: calc(var(--font-heading-scale) * 2rem);
-
-        .icon {
-            min-height: var(--icon-size);
-            min-width: var(--icon-size);
-            margin-right: var(--icon-spacing);
-        }
-
-        img {
-            margin-right: var(--icon-spacing);
-        }
-
-        .icon-with-text__item {
-            margin-bottom: var(--icon-size);
-        }
-    }
-
-    .icon {
-        fill: rgb(var(--color-foreground));
-    }
+.icon-with-text--vertical {
+    --icon-size: calc(var(--font-heading-scale) * 3rem);
+    flex-direction: column;
+    gap: var(--space);
 }
 
 
-//   .icon-with-text .icon {
-//     fill: rgb(var(--color-foreground));
-//     height: var(--icon-size);
-//     width: var(--icon-size);
-//   }
+.icon-with-text__item {
+    display: flex;
+        gap: var(--space-sm);
+        align-items: center;
+        flex-direction: column;
+    width: 33%;
+    margin-bottom: var(--space);
 
-//   .icon-with-text--horizontal .icon,
-//   .icon-with-text--horizontal img {
-//     margin-bottom: var(--icon-spacing);
-//   }
+    .icon-with-text--vertical & {
+        gap: var(--space);
+        flex-direction: row;
+        width: 100%;
+    }
+}
 
-//   .icon-with-text--vertical .icon {
-//     min-height: var(--icon-size);
-//     min-width: var(--icon-size);
-//     margin-right: var(--icon-spacing);
-//   }
-
-//   .icon-with-text img {
-//     height: var(--icon-size);
-//     width: var(--icon-size);
-//     object-fit: contain;
-//   }
-
-//   .icon-with-text--vertical img {
-//     margin-right: var(--icon-spacing);
-//   }
-
-//   .icon-with-text--horizontal .h4 {
-//     padding-top: calc(var(--icon-size) + var(--icon-spacing));
-//     text-align: center;
-//   }
-
-//   .icon-with-text--horizontal svg + .h4,
-//   .icon-with-text--horizontal img + .h4,
-//   .icon-with-text--horizontal.icon-with-text--text-only .h4 {
-//     padding-top: 0;
-//   }
-
-//   .icon-with-text__item {
-//     display: flex;
-//     align-items: center;
-//   }
-
-//   .icon-with-text--horizontal .icon-with-text__item {
-//     flex-direction: column;
-//     width: 33%;
-//   }
-
-//   .icon-with-text--vertical .icon-with-text__item {
-//     margin-bottom: var(--icon-size);
-//   }
+.icon-with-text__text {
+    text-align: center;
+}

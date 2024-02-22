@@ -3350,8 +3350,14 @@ summary .icon-caret {
 }
 
 .icon-with-text {
-  --icon-size: calc(var(--font-heading-scale) * 3rem);
-  --icon-spacing: calc(var(--font-heading-scale) * 1rem);
+  --icon-size: --icon-size: calc(var(--font-heading-scale) * 3rem);
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: var(--space-xl);
+       column-gap: var(--space-xl);
+  flex-direction: row;
+  margin-bottom: var(--space-med);
+  padding-top: var(--space-sm);
 }
 .icon-with-text .icon,
 .icon-with-text img {
@@ -3362,51 +3368,29 @@ summary .icon-caret {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.icon-with-text .h4 {
-  text-align: center;
+
+.icon-with-text--vertical {
+  --icon-size: calc(var(--font-heading-scale) * 3rem);
+  flex-direction: column;
+  gap: var(--space);
 }
-.icon-with-text .icon-with-text__item {
+
+.icon-with-text__item {
   display: flex;
+  gap: var(--space-sm);
   align-items: center;
-}
-.icon-with-text--horizontal {
-  display: flex;
-  justify-content: center;
-  -moz-column-gap: 3rem;
-       column-gap: 3rem;
-  flex-direction: row;
-}
-.icon-with-text--horizontal .icon,
-.icon-with-text--horizontal img {
-  margin-bottom: var(--icon-spacing);
-}
-.icon-with-text--horizontal .h4 {
-  padding-top: calc(var(--icon-size) + var(--icon-spacing));
-}
-.icon-with-text--horizontal svg + .h4,
-.icon-with-text--horizontal img + .h4, .icon-with-text--horizontal.icon-with-text--text-only .h4 {
-  padding-top: 0;
-}
-.icon-with-text--horizontal .icon-with-text__item {
   flex-direction: column;
   width: 33%;
-}
-.icon-with-text--vertical {
-  --icon-size: calc(var(--font-heading-scale) * 2rem);
-}
-.icon-with-text--vertical .icon {
-  min-height: var(--icon-size);
-  min-width: var(--icon-size);
-  margin-right: var(--icon-spacing);
-}
-.icon-with-text--vertical img {
-  margin-right: var(--icon-spacing);
+  margin-bottom: var(--space);
 }
 .icon-with-text--vertical .icon-with-text__item {
-  margin-bottom: var(--icon-size);
+  gap: var(--space);
+  flex-direction: row;
+  width: 100%;
 }
-.icon-with-text .icon {
-  fill: rgb(var(--color-foreground));
+
+.icon-with-text__text {
+  text-align: center;
 }
 
 svg {
