@@ -1,6 +1,6 @@
 // horizontal layout is default
 .icon-with-text {
-    --icon-size: var(--icon-size, 1.5rem);
+    --iwt-icon-size: calc(var(--font-heading-scale) * 3rem);
 
     display: flex;
         justify-content: center;
@@ -11,8 +11,8 @@
 
     .icon,
     img {
-        height: var(--icon-size);
-        width: var(--icon-size);
+        height: var(--iwt-icon-size);
+        width: var(--iwt-icon-size);
     }
 
     img {
@@ -21,7 +21,7 @@
 }
 
 .icon-with-text--vertical {
-    --icon-size: calc(var(--font-heading-scale) * 3rem);
+    --iwt-icon-size: var(--icon-size-lg);
     flex-direction: column;
     gap: var(--space);
 }
