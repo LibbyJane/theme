@@ -1,6 +1,6 @@
 // horizontal layout is default
 .icon-with-text {
-    --icon-size: --icon-size: calc(var(--font-heading-scale) * 3rem);
+    --icon-size: var(--icon-size, 1.5rem);
 
     display: flex;
         justify-content: center;
