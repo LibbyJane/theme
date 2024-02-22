@@ -41,16 +41,16 @@
 
     &::before {
         background: rgb(var(--color-background)) var(--background-gradient);
+        background-size: cover;
+        background-repeat: repeat;
         content: '';
         position: absolute;
             top: 0.1px;
             bottom: 0;
-            left: calc(var(--texture-lined-border-size) * -1 + 1px);
+            left: calc(var(--texture-lined-border-size) * -1 + 2px);
         width: var(--texture-lined-border-size, 30px);
         -webkit-mask-box-image: url('img-paper-hole-border-left.svg') 1 round;
         mask-border: url('img-paper-hole-border-left.svg') 1 round;
-        z-index: 1;
-        outline: 10px dashed red;
 
         .banner--desktop-transparent & {
             content: none;
