@@ -553,7 +553,7 @@
         "title": "Latest from the blog",
         "heading_size": "h2",
         "blog": "news",
-        "post_limit": 1,
+        "post_limit": 3,
         "columns_desktop": 1,
         "color_scheme": "",
         "background_transparent": true,
