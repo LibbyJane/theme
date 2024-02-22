@@ -1993,8 +1993,8 @@ html.no-js .no-js-hidden {
 @supports (-webkit-touch-callout: none) {
   .texture-lined::before {
     /* CSS specific to iOS devices */
-    -webkit-mask-repeat: no-repeat repeat;
-            mask-repeat: no-repeat repeat;
+    -webkit-mask-size: cover;
+            mask-size: cover;
   }
 }
 .banner--desktop-transparent .texture-lined::before {
