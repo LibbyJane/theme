@@ -45,6 +45,11 @@
     mask-size: auto calc(var(--texture-lined-border-size) + 4px);
     -webkit-mask-origin: border;
     mask-origin: border-box;
+
+    @supports (-webkit-touch-callout: none) {
+        /* CSS specific to iOS devices */
+        mask-repeat: no-repeat repeat;
+    }
 }
 
 .texture-blueprint {

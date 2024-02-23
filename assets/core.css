@@ -1981,6 +1981,13 @@ html.no-js .no-js-hidden {
   -webkit-mask-origin: border;
   mask-origin: border-box;
 }
+@supports (-webkit-touch-callout: none) {
+  .texture-lined {
+    /* CSS specific to iOS devices */
+    -webkit-mask-repeat: no-repeat repeat;
+            mask-repeat: no-repeat repeat;
+  }
+}
 
 .texture-blueprint {
   background-image: linear-gradient(rgba(204, 204, 204, 0.22) 2px, transparent 2px), linear-gradient(90deg, rgba(204, 204, 204, 0.22) 2px, transparent 2px), linear-gradient(rgba(204, 204, 204, 0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(204, 204, 204, 0.18) 1px, transparent 1px);
