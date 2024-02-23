@@ -24,42 +24,40 @@
 }
 
 .texture-lined {
-    --tl-mx-width: 100%;
-    --texture-lined-border-size: 60px;
+    --texture-lined-border-size: 30px;
 
     $vertical-line-offset: 10px;
     $vertical-line-offset2: $vertical-line-offset + 3px;
+    background-size: 100% 2.4rem, 100% 2.4rem, cover;
     box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
-    //padding-left: var(--texture-lined-border-size, 60px);
+    //padding-left: var(--texture-lined-border-size, 30px);
     position: relative;
+    width: calc(100% - var(--texture-lined-border-size));
+    transform: translateX(var(--texture-lined-border-size));
 
-    &::before,
-    &::after {
+    &,
+    &::before {
         background-color: rgb(var(--color-background));
         background-blend-mode: multiply;
         background-image:
         linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
         linear-gradient(#eee .1rem, transparent .1rem),
         var(--background-gradient);
-        background-size: 100% 2.4rem, 100% 2.4rem, cover;
-
-        .banner--desktop-transparent & {
-            content: none;
-        }
     }
 
     &::before {
+        background-size: 0 0, 100% 2.4rem, cover;
         -webkit-mask-image: url('img-paper-hole-border-left.svg?v=2');
         mask-image: url('img-paper-hole-border-left.svg?v=2');
         -webkit-mask-repeat: no-repeat round;
         mask-repeat: no-repeat round;
-        mask-size: calc(var(--texture-lined-border-size)/2 + 2px);
+        mask-size: calc(var(--texture-lined-border-size) + 2px);
         content: '';
         position: absolute;
             top: 0;
             bottom: 0;
             left: calc(var(--texture-lined-border-size) * -1 + 1px);
-        width: var(--texture-lined-border-size, 60px);
+        width: var(--texture-lined-border-size, 30px);
 
         // @supports (-webkit-touch-callout: none) {
         //     /* CSS specific to iOS devices */
@@ -67,20 +65,11 @@
         //     mask-size: 31px;
 
         // }
+
+        .banner--desktop-transparent & {
+            content: none;
+        }
     }
-
-    &::after {
-        content: '';
-        position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: var(--texture-lined-border-size);
-
-        background-size: 0 0, 100% 2.4rem, cover;
-
-    }
-
 }
 
 .texture-blueprint {
