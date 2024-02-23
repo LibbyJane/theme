@@ -35,11 +35,11 @@
     position: relative;
     border-left: var(--texture-lined-border-size) dotted transparent;
 
-    -webkit-mask-image: url('img-paper-hole-border-wide.svg');
-    mask-image: url('img-paper-hole-border-wide.svg');
+    -webkit-mask-image: url('img-paper-hole-border-left-wide.svg?v=1');
+    mask-image: url('img-paper-hole-border-left-wide.svg?v=1');
     -webkit-mask-repeat: no-repeat round;
     mask-repeat: no-repeat round;
-    mask-size: calc(var(--texture-lined-border-size) + 2px);
+    mask-size: auto var(--texture-lined-border-size);
     &,
     &::before {
         background-color: rgb(var(--color-background));

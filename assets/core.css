@@ -1971,12 +1971,12 @@ html.no-js .no-js-hidden {
   box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
   position: relative;
   border-left: var(--texture-lined-border-size) dotted transparent;
-  -webkit-mask-image: url("img-paper-hole-border-wide.svg");
-  mask-image: url("img-paper-hole-border-wide.svg");
+  -webkit-mask-image: url("img-paper-hole-border-left-wide.svg?v=1");
+  mask-image: url("img-paper-hole-border-left-wide.svg?v=1");
   -webkit-mask-repeat: no-repeat round;
   mask-repeat: no-repeat round;
-  -webkit-mask-size: calc(var(--texture-lined-border-size) + 2px);
-          mask-size: calc(var(--texture-lined-border-size) + 2px);
+  -webkit-mask-size: auto var(--texture-lined-border-size);
+          mask-size: auto var(--texture-lined-border-size);
 }
 .texture-lined, .texture-lined::before {
   background-color: rgb(var(--color-background));
