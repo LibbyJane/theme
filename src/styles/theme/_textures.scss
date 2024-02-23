@@ -29,7 +29,7 @@
 
     $vertical-line-offset: 10px;
     $vertical-line-offset2: $vertical-line-offset + 3px;
-
+    box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
     //padding-left: var(--texture-lined-border-size, 30px);
     position: relative;
 
@@ -41,6 +41,7 @@
         linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
         linear-gradient(#eee .1rem, transparent .1rem),
         var(--background-gradient);
+        background-size: 100% 2.4rem, 100% 2.4rem, cover;
 
         .banner--desktop-transparent & {
             content: none;
@@ -48,7 +49,6 @@
     }
 
     &::before {
-        background-size: 0 0, 100% 2.4rem, cover;
         -webkit-mask-image: url('img-paper-hole-border-left.svg?v=2');
         mask-image: url('img-paper-hole-border-left.svg?v=2');
         -webkit-mask-repeat: no-repeat round;
@@ -76,8 +76,9 @@
             right: 0;
             bottom: 0;
             left: var(--texture-lined-border-size);
-            background-size: 100% 2.4rem, 100% 2.4rem, cover;
-            box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
+
+        background-size: 0 0, 100% 2.4rem, cover;
+
     }
 
 }

@@ -1967,18 +1967,19 @@ html.no-js .no-js-hidden {
 .texture-lined {
   --tl-mx-width: 100%;
   --texture-lined-border-size: 30px;
+  box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
   position: relative;
 }
 .texture-lined::before, .texture-lined::after {
   background-color: rgb(var(--color-background));
   background-blend-mode: multiply;
   background-image: linear-gradient(90deg, transparent 10px, rgba(171, 206, 212, 0.2) 10px, rgba(171, 206, 212, 0.2) 13px, transparent 13px), linear-gradient(#eee 0.1rem, transparent 0.1rem), var(--background-gradient);
+  background-size: 100% 2.4rem, 100% 2.4rem, cover;
 }
 .banner--desktop-transparent .texture-lined::before, .banner--desktop-transparent .texture-lined::after {
   content: none;
 }
 .texture-lined::before {
-  background-size: 0 0, 100% 2.4rem, cover;
   -webkit-mask-image: url("img-paper-hole-border-left.svg?v=2");
   mask-image: url("img-paper-hole-border-left.svg?v=2");
   -webkit-mask-repeat: no-repeat round;
@@ -1999,8 +2000,7 @@ html.no-js .no-js-hidden {
   right: 0;
   bottom: 0;
   left: var(--texture-lined-border-size);
-  background-size: 100% 2.4rem, 100% 2.4rem, cover;
-  box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
+  background-size: 0 0, 100% 2.4rem, cover;
 }
 
 .texture-blueprint {
