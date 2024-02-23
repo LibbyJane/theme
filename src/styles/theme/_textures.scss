@@ -32,7 +32,7 @@
     box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
     //padding-left: var(--texture-lined-border-size, 30px);
     position: relative;
-    width: calc(100% - var(--texture-lined-border-size));
+    max-width: calc(100% - var(--texture-lined-border-size));
     transform: translateX(var(--texture-lined-border-size));
 
     &,
@@ -51,7 +51,7 @@
         mask-image: url('img-paper-hole-border-left.svg?v=2');
         -webkit-mask-repeat: no-repeat round;
         mask-repeat: no-repeat round;
-        mask-size: calc(var(--texture-lined-border-size) + 1px);
+        mask-size: calc(var(--texture-lined-border-size) + 2px);
         content: '';
         position: absolute;
             top: 0;
