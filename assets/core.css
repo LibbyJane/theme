@@ -1975,7 +1975,7 @@ html.no-js .no-js-hidden {
   -webkit-mask-image: url("img-paper-hole-border-left-wide.svg?v=1");
   mask-image: url("img-paper-hole-border-left-wide.svg?v=1");
   -webkit-mask-repeat: no-repeat round;
-  mask-repeat: no-repeat repeat;
+  mask-repeat: no-repeat round;
   -webkit-mask-size: auto calc(var(--texture-lined-border-size) + 4px);
           mask-size: auto calc(var(--texture-lined-border-size) + 4px);
   -webkit-mask-origin: border;
