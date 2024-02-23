@@ -124,16 +124,16 @@
     //     }
     // }
 
-    &.texture-lined {
-        overflow: visible;
+    // &.texture-lined {
+    //     overflow: visible;
 
-        --translateX: calc(var(--texture-lined-border-size)/2);
-        max-width: calc(100% - var(--texture-lined-border-size));
+    //     --translateX: calc(var(--texture-lined-border-size)/2);
+    //     max-width: calc(100% - var(--texture-lined-border-size));
 
-        @media screen and (min-width: 750px) {
-            --translateX: 0;
-        }
-    }
+    //     @media screen and (min-width: 750px) {
+    //         --translateX: 0;
+    //     }
+    // }
 }
 
 .image-with-text .grid__item::after {

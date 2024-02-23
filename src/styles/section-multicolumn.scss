@@ -1,10 +1,10 @@
 @import "helpers/common";
 // todo: remove unused styles
 .multicolumn {
-    &.texture-lined {
-        margin-left: var(--texture-lined-border-size);
-        padding-left: 0;
-    }
+    // &.texture-lined {
+    //     margin-left: var(--texture-lined-border-size);
+    //     padding-left: 0;
+    // }
 
     .multicolumn-card__link {
         @include text-heading;

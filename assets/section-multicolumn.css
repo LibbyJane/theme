@@ -314,10 +314,6 @@
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
-.multicolumn.texture-lined {
-  margin-left: var(--texture-lined-border-size);
-  padding-left: 0;
-}
 .multicolumn .multicolumn-card__link {
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);

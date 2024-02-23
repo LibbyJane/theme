@@ -1,12 +1,6 @@
 .multirow .button {
   margin-top: var(--space);
 }
-@media screen and (min-width: 750px) {
-  .multirow .image-with-text__content--desktop-left.texture-lined {
-    margin-left: var(--texture-lined-border-size);
-    max-width: none;
-  }
-}
 
 .multirow__inner {
   display: flex;
