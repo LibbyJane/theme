@@ -43,6 +43,9 @@ slideshow-component .slideshow.banner {
   justify-content: center;
   max-width: 54.5rem;
 }
+.slideshow__text.banner__box.texture-lined {
+  max-width: calc(54.5rem - var(--texture-lined-border-size));
+}
 @media screen and (min-width: 750px) {
   .slideshow__controls--overlaid .slideshow__text.banner__box {
     padding-top: var(--space-xl);

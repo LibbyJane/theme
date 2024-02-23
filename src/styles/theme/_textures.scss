@@ -24,6 +24,7 @@
 }
 
 .texture-lined {
+    --tl-mx-width: 100%;
     --texture-lined-border-size: 30px;
 
     $vertical-line-offset: 10px;
@@ -32,7 +33,7 @@
     box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
     //padding-left: var(--texture-lined-border-size, 30px);
     position: relative;
-    max-width: calc(100% - var(--texture-lined-border-size));
+    width: calc(100% - var(--texture-lined-border-size));
     transform: translateX(var(--texture-lined-border-size));
 
     &,

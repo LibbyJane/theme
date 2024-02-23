@@ -1965,11 +1965,12 @@ html.no-js .no-js-hidden {
 }
 
 .texture-lined {
+  --tl-mx-width: 100%;
   --texture-lined-border-size: 30px;
   background-size: 100% 2.4rem, 100% 2.4rem, cover;
   box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
   position: relative;
-  max-width: calc(100% - var(--texture-lined-border-size));
+  width: calc(100% - var(--texture-lined-border-size));
   transform: translateX(var(--texture-lined-border-size));
 }
 .texture-lined, .texture-lined::before {
