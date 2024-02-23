@@ -3,6 +3,25 @@
     "c657e444-d7f1-438c-bdf8-529f9fd69377": {
       "type": "slideshow",
       "blocks": {
+        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
+            "image_overlay_opacity": 20,
+            "heading": "Latest from the blog",
+            "heading_size": "h1",
+            "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in  Hawkes Bay",
+            "button_label": "Read about it",
+            "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
+            "button_style_secondary": "secondary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "",
+            "background_texture": "lined",
+            "text_alignment_mobile": "center"
+          }
+        },
         "slide_68XgRr": {
           "type": "slide",
           "settings": {
@@ -41,25 +60,6 @@
             "text_alignment_mobile": "center"
           }
         },
-        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
-            "image_overlay_opacity": 20,
-            "heading": "Latest from the blog",
-            "heading_size": "h1",
-            "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in  Hawkes Bay",
-            "button_label": "Read about it",
-            "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
-            "button_style_secondary": "secondary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "",
-            "background_texture": "lined",
-            "text_alignment_mobile": "center"
-          }
-        },
         "slide_ztFJ8x": {
           "type": "slide",
           "settings": {
@@ -81,9 +81,9 @@
         }
       },
       "block_order": [
+        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2",
         "slide_68XgRr",
         "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-1",
-        "template--20955328512321__c657e444-d7f1-438c-bdf8-529f9fd69377-slide-2",
         "slide_ztFJ8x"
       ],
       "settings": {
