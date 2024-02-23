@@ -26,7 +26,7 @@
 .texture-lined {
     --texture-lined-border-size: 30px;
 
-    $vertical-line-offset: 20px;
+    $vertical-line-offset: 16px;
     $vertical-line-offset2: $vertical-line-offset + 3px;
     background-color: rgb(var(--color-background));
     background-blend-mode: multiply;
