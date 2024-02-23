@@ -33,7 +33,7 @@
     //padding-left: var(--texture-lined-border-size, 30px);
     position: relative;
     width: calc(100% - var(--texture-lined-border-size));
-    transform: translateX(var(--texture-lined-border-size));
+    transform: calc(translateX(var(--texture-lined-border-size))/2);
 
     &,
     &::before {
