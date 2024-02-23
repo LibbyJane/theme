@@ -35,6 +35,11 @@
     position: relative;
     border-left: var(--texture-lined-border-size) dotted transparent;
 
+    -webkit-mask-image: url('img-paper-hole-border-wide.svg');
+    mask-image: url('img-paper-hole-border-wide.svg');
+    -webkit-mask-repeat: no-repeat round;
+    mask-repeat: no-repeat round;
+    mask-size: calc(var(--texture-lined-border-size) + 2px);
     &,
     &::before {
         background-color: rgb(var(--color-background));
@@ -47,12 +52,7 @@
 
     &::before {
         background-size: 0 0, 100% 2.4rem, cover;
-        -webkit-mask-image: url('img-paper-hole-border-left.svg?v=2');
-        mask-image: url('img-paper-hole-border-left.svg?v=2');
-        -webkit-mask-repeat: no-repeat round;
-        mask-repeat: no-repeat round;
-        mask-size: calc(var(--texture-lined-border-size) + 2px);
-        content: '';
+        // content: '';
         position: absolute;
             top: 0;
             bottom: 0;
