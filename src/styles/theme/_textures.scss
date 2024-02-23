@@ -25,12 +25,12 @@
 
 .texture-lined {
     --tl-mx-width: 100%;
-    --texture-lined-border-size: 30px;
+    --texture-lined-border-size: 60px;
 
     $vertical-line-offset: 10px;
     $vertical-line-offset2: $vertical-line-offset + 3px;
     box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
-    //padding-left: var(--texture-lined-border-size, 30px);
+    //padding-left: var(--texture-lined-border-size, 60px);
     position: relative;
 
     &::before,
@@ -53,13 +53,13 @@
         mask-image: url('img-paper-hole-border-left.svg?v=2');
         -webkit-mask-repeat: no-repeat round;
         mask-repeat: no-repeat round;
-        mask-size: calc(var(--texture-lined-border-size) + 2px);
+        mask-size: calc(var(--texture-lined-border-size)/2 + 2px);
         content: '';
         position: absolute;
             top: 0;
             bottom: 0;
             left: calc(var(--texture-lined-border-size) * -1 + 1px);
-        width: var(--texture-lined-border-size, 30px);
+        width: var(--texture-lined-border-size, 60px);
 
         // @supports (-webkit-touch-callout: none) {
         //     /* CSS specific to iOS devices */
