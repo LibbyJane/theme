@@ -324,9 +324,6 @@ slider-component.page-width {
   padding-inline: var(--content-padding-inline);
 }
 @media screen and (max-width: 749px) {
-  slider-component.slider-component-mobile {
-    --content-padding-inline: 0;
-  }
   .background-theme slider-component.slider-component-mobile {
     margin-inline: var(--full-width-offset-margin);
   }
