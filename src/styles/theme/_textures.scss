@@ -34,7 +34,7 @@
         linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
         linear-gradient(#eee .1rem, transparent .1rem),
         var(--background-gradient);
-    background-origin: padding-box;
+    // background-origin: padding-box;
     background-size: 100% 2.4rem, 100% 2.4rem, cover;
     border-left: var(--texture-lined-border-size) dotted transparent;
     box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
