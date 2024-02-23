@@ -42,7 +42,7 @@
     mask-image: url('img-paper-hole-border-left-wide.svg?v=1');
     -webkit-mask-repeat: no-repeat round;
     mask-repeat: no-repeat round;
-    mask-size: auto var(--texture-lined-border-size);
+    mask-size: auto calc(var(--texture-lined-border-size) + 4px);
 }
 
 .texture-blueprint {
