@@ -29,21 +29,22 @@
 
     $vertical-line-offset: 10px;
     $vertical-line-offset2: $vertical-line-offset + 3px;
-    background-size: 100% 2.4rem, 100% 2.4rem, cover;
-    box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
+
     //padding-left: var(--texture-lined-border-size, 30px);
     position: relative;
-    width: calc(100% - var(--texture-lined-border-size));
-    transform: translateX(var(--texture-lined-border-size));
 
-    &,
-    &::before {
+    &::before,
+    &::after {
         background-color: rgb(var(--color-background));
         background-blend-mode: multiply;
         background-image:
         linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
         linear-gradient(#eee .1rem, transparent .1rem),
         var(--background-gradient);
+
+        .banner--desktop-transparent & {
+            content: none;
+        }
     }
 
     &::before {
@@ -66,11 +67,19 @@
         //     mask-size: 31px;
 
         // }
-
-        .banner--desktop-transparent & {
-            content: none;
-        }
     }
+
+    &::after {
+        content: '';
+        position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: var(--texture-lined-border-size);
+            background-size: 100% 2.4rem, 100% 2.4rem, cover;
+            box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
+    }
+
 }
 
 .texture-blueprint {
