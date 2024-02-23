@@ -401,7 +401,7 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "color_scheme": "inverse",
-        "background_transparent": true,
+        "background_transparent": false,
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
