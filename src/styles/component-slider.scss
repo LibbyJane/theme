@@ -12,7 +12,11 @@ slider-component {
 
     &.slider-component-mobile {
         @media screen and (max-width: 749px) {
-            //--content-padding-inline: 0;
+            padding-inline: 0;
+
+            .slider__slide:first-child {
+                margin-left: var(--content-padding-inline);
+            }
 
             // .background-theme & {
             //     margin-inline: var(--full-width-offset-margin);

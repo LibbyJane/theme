@@ -323,6 +323,14 @@ slider-component {
 slider-component.page-width {
   padding-inline: var(--content-padding-inline);
 }
+@media screen and (max-width: 749px) {
+  slider-component.slider-component-mobile {
+    padding-inline: 0;
+  }
+  slider-component.slider-component-mobile .slider__slide:first-child {
+    margin-left: var(--content-padding-inline);
+  }
+}
 slider-component.slider-component-full-width {
   --desktop-margin-left-first-item: var(--space-med);
 }
