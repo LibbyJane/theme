@@ -1966,10 +1966,11 @@ html.no-js .no-js-hidden {
 
 .texture-lined {
   --texture-lined-border-size: 30px;
+  background-origin: padding-box;
   background-size: 100% 2.4rem, 100% 2.4rem, cover;
   box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
   position: relative;
-  width: calc(100% - var(--texture-lined-border-size));
+  border-left: var(--texture-lined-border-size) dotted transparent;
 }
 .texture-lined, .texture-lined::before {
   background-color: rgb(var(--color-background));
