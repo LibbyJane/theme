@@ -65,6 +65,9 @@ slideshow-component .slideshow.banner {
   .banner--mobile-bottom .slideshow__text.banner__box {
     max-width: 100%;
   }
+  .banner--mobile-bottom .slideshow__text.banner__box.texture-lined {
+    max-width: calc(100% - var(--texture-lined-border-size));
+  }
   .banner--mobile-bottom .slideshow__text-wrapper {
     flex-grow: 1;
   }
