@@ -37,7 +37,7 @@
     // background-origin: padding-box;
     background-size: 100% 2.4rem, 100% 2.4rem, cover;
     border-left: var(--texture-lined-border-size) dotted transparent;
-    box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
+    filter: drop-shadow(0 0 5px rgba(var(--color-shadow), 0.1));
     -webkit-mask-image: url('img-paper-hole-border-left-wide.svg?v=1');
     mask-image: url('img-paper-hole-border-left-wide.svg?v=1');
     -webkit-mask-repeat: no-repeat round;
