@@ -1966,33 +1966,19 @@ html.no-js .no-js-hidden {
 
 .texture-lined {
   --texture-lined-border-size: 30px;
+  background-color: rgb(var(--color-background));
+  background-blend-mode: multiply;
+  background-image: linear-gradient(90deg, transparent 10px, rgba(171, 206, 212, 0.2) 10px, rgba(171, 206, 212, 0.2) 13px, transparent 13px), linear-gradient(#eee 0.1rem, transparent 0.1rem), var(--background-gradient);
   background-origin: padding-box;
   background-size: 100% 2.4rem, 100% 2.4rem, cover;
-  box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
-  position: relative;
   border-left: var(--texture-lined-border-size) dotted transparent;
+  box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
   -webkit-mask-image: url("img-paper-hole-border-left-wide.svg?v=1");
   mask-image: url("img-paper-hole-border-left-wide.svg?v=1");
   -webkit-mask-repeat: no-repeat round;
   mask-repeat: no-repeat round;
   -webkit-mask-size: auto var(--texture-lined-border-size);
           mask-size: auto var(--texture-lined-border-size);
-}
-.texture-lined, .texture-lined::before {
-  background-color: rgb(var(--color-background));
-  background-blend-mode: multiply;
-  background-image: linear-gradient(90deg, transparent 10px, rgba(171, 206, 212, 0.2) 10px, rgba(171, 206, 212, 0.2) 13px, transparent 13px), linear-gradient(#eee 0.1rem, transparent 0.1rem), var(--background-gradient);
-}
-.texture-lined::before {
-  background-size: 0 0, 100% 2.4rem, cover;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: calc(var(--texture-lined-border-size) * -1 + 1px);
-  width: var(--texture-lined-border-size, 30px);
-}
-.banner--desktop-transparent .texture-lined::before {
-  content: none;
 }
 
 .texture-blueprint {

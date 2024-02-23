@@ -28,48 +28,21 @@
 
     $vertical-line-offset: 10px;
     $vertical-line-offset2: $vertical-line-offset + 3px;
+    background-color: rgb(var(--color-background));
+    background-blend-mode: multiply;
+    background-image:
+        linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
+        linear-gradient(#eee .1rem, transparent .1rem),
+        var(--background-gradient);
     background-origin: padding-box;
     background-size: 100% 2.4rem, 100% 2.4rem, cover;
-    box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
-    //padding-left: var(--texture-lined-border-size, 30px);
-    position: relative;
     border-left: var(--texture-lined-border-size) dotted transparent;
-
+    box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
     -webkit-mask-image: url('img-paper-hole-border-left-wide.svg?v=1');
     mask-image: url('img-paper-hole-border-left-wide.svg?v=1');
     -webkit-mask-repeat: no-repeat round;
     mask-repeat: no-repeat round;
     mask-size: auto var(--texture-lined-border-size);
-    &,
-    &::before {
-        background-color: rgb(var(--color-background));
-        background-blend-mode: multiply;
-        background-image:
-        linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
-        linear-gradient(#eee .1rem, transparent .1rem),
-        var(--background-gradient);
-    }
-
-    &::before {
-        background-size: 0 0, 100% 2.4rem, cover;
-        // content: '';
-        position: absolute;
-            top: 0;
-            bottom: 0;
-            left: calc(var(--texture-lined-border-size) * -1 + 1px);
-        width: var(--texture-lined-border-size, 30px);
-
-        // @supports (-webkit-touch-callout: none) {
-        //     /* CSS specific to iOS devices */
-        //     //mask-repeat: no-repeat repeat;
-        //     mask-size: 31px;
-
-        // }
-
-        .banner--desktop-transparent & {
-            content: none;
-        }
-    }
 }
 
 .texture-blueprint {
