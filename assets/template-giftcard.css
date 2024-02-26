@@ -1361,10 +1361,15 @@ summary .icon-funnel-clear,
   font-size: var(--font-size-base);
   letter-spacing: var(--letter-spacing);
   line-height: 1;
-  padding: var(--space) var(--space-lg);
+  padding: var(--space-sm) var(--space-med);
   position: relative;
   background-color: rgb(var(--color-background));
   transform: skewX(1deg);
+}
+@media screen and (min-width: 750px) {
+  .badge__inner {
+    padding: var(--space) var(--space-lg);
+  }
 }
 .badge__inner::after {
   content: "";
@@ -1684,7 +1689,7 @@ mark {
 }
 
 a {
-  color: rgb(var(--color-link));
+  color: currentColor;
   text-decoration: none;
 }
 

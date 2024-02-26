@@ -7,6 +7,7 @@
     display: inline-block;
     pointer-events: none;
     width: var(--icon-size);
+    transition: transform var(--duration-default) var(--transition-type);
     transform: rotate(calc(var(--rotate-icon) * 1deg));
 }
 

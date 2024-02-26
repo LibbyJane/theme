@@ -1,4 +1,5 @@
 .product__info-wrapper {
+    overflow: hidden; // badges causing overflow issues on ios
     padding: var(--space-lg);
 }
 
@@ -10,7 +11,6 @@
     display: grid;
     grid-gap: 0 var(--space);
     position: relative;
-    overflow: hidden; // badges causing overflow issues on ios
     // grid-template-columns: 2fr 3fr;
 
     .caption {
@@ -64,9 +64,10 @@
         line-height: 1;
     }
 
-    // .badge {
-    //     margin-left: calc((-1 * var(--space-lg)) - 2px);
-    // }
+
+    .badge {
+        margin-block: var(--space);
+    }
 }
 
 .product-form__buttons {

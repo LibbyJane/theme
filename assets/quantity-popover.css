@@ -317,6 +317,7 @@
 }
 :root {
   --inputs-border-radius: var(--inputs-radius-large) var(--inputs-radius) var(--inputs-radius-med) var(--inputs-radius)/var(--inputs-radius) var(--inputs-radius-med) var(--inputs-radius) var(--inputs-radius-large);
+  --inputs-background-opacity: 0.5;
 }
 
 /* component-quantity */
@@ -333,7 +334,7 @@
   box-shadow: calc(var(--inputs-shadow-horizontal-offset) / 2) calc(var(--inputs-shadow-vertical-offset) / 2) calc(var(--inputs-shadow-blur-radius) / 2) rgba(var(--color-shadow), var(--inputs-shadow-opacity));
 }
 .quantity::before {
-  background: rgba(var(--color-background), 0.5);
+  background: rgba(var(--color-background), var(--inputs-background-opacity));
   pointer-events: none;
   content: "";
   position: absolute;

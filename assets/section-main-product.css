@@ -184,10 +184,6 @@ fieldset.product-form__input .form__label {
   box-shadow: none;
 }
 
-.product-form__input .select {
-  max-width: 25rem;
-}
-
 .product-form__submit {
   margin-bottom: 1rem;
 }
@@ -347,6 +343,7 @@ a.product__text {
   }
 }
 .product__info-wrapper {
+  overflow: hidden;
   padding: var(--space-lg);
 }
 
@@ -354,7 +351,6 @@ a.product__text {
   display: grid;
   grid-gap: 0 var(--space);
   position: relative;
-  overflow: hidden;
 }
 .product__info-container .caption {
   line-height: 1.1;
@@ -390,6 +386,9 @@ a.product__text {
 .product__price .price-item {
   font-size: calc(var(--price-font-scale) * 100%);
   line-height: 1;
+}
+.product__price .badge {
+  margin-block: var(--space);
 }
 
 .product-form__buttons {
@@ -1770,6 +1769,7 @@ slider-component {
 }
 :root {
   --inputs-border-radius: var(--inputs-radius-large) var(--inputs-radius) var(--inputs-radius-med) var(--inputs-radius)/var(--inputs-radius) var(--inputs-radius-med) var(--inputs-radius) var(--inputs-radius-large);
+  --inputs-background-opacity: 0.5;
 }
 
 /* component-quantity */
@@ -1786,7 +1786,7 @@ slider-component {
   box-shadow: calc(var(--inputs-shadow-horizontal-offset) / 2) calc(var(--inputs-shadow-vertical-offset) / 2) calc(var(--inputs-shadow-blur-radius) / 2) rgba(var(--color-shadow), var(--inputs-shadow-opacity));
 }
 .quantity::before {
-  background: rgba(var(--color-background), 0.5);
+  background: rgba(var(--color-background), var(--inputs-background-opacity));
   pointer-events: none;
   content: "";
   position: absolute;

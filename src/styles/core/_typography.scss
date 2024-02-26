@@ -124,7 +124,7 @@ mark {
 }
 
 a {
-    color: rgb(var(--color-link));
+    color: currentColor;
     text-decoration: none;
 }
 
