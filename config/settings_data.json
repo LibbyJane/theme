@@ -631,38 +631,6 @@
       "content_for_index": [
 
       ],
-      "blocks": {
-        "14060646107696862457": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "disabled": false,
-          "settings": {
-          }
-        },
-        "5460033060862993441": {
-          "type": "shopify:\/\/apps\/essential-announcement\/blocks\/app-embed\/93b5429f-c8d6-4c33-ae14-250fd84f361b",
-          "disabled": false,
-          "settings": {
-          }
-        },
-        "5890205134905443601": {
-          "type": "shopify:\/\/apps\/seoant-trust-badges\/blocks\/trust_core\/f42f2346-5d14-4b41-a8b9-4b6ee352262e",
-          "disabled": false,
-          "settings": {
-          }
-        },
-        "12657775114333427046": {
-          "type": "shopify:\/\/apps\/essential-countdown\/blocks\/app_embed\/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
-          "disabled": false,
-          "settings": {
-          }
-        },
-        "5061257265103808445": {
-          "type": "shopify:\/\/apps\/ra-term-condition\/blocks\/embed-block\/471882a9-9b1b-4918-8943-6c66b60c94ea",
-          "disabled": false,
-          "settings": {
-          }
-        }
-      },
       "color_schemes": {
         "background-1": {
           "settings": {
