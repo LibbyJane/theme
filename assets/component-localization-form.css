@@ -370,7 +370,7 @@
   }
 }
 
-.localization-form__currency {
+.localization-form__select {
   color: rgba(var(--color-foreground), 1);
 }
 
@@ -400,7 +400,7 @@ noscript .localization-form__select {
 .disclosure .localization-form__select {
   padding-top: var(--space-med);
 }
-.localization-form__select .icon-caret {
+.localization-form__select .icon {
   height: var(--icon-size-xs);
   width: var(--icon-size-xs);
   transition: transform var(--duration-short) var(--transition-type);

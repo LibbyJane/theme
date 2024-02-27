@@ -32,6 +32,7 @@
 
         .button,
         .localization-form__select {
+
             margin: var(--space) var(--space) 0.5rem;
             flex-grow: 1;
 
@@ -57,7 +58,7 @@
     }
 }
 
-.localization-form__currency {
+.localization-form__select {
     color: rgba(var(--color-foreground), 1);
 }
 
@@ -89,7 +90,7 @@
         padding-top: var(--space-med);
     }
 
-    .icon-caret {
+    .icon {
         height: var(--icon-size-xs);
         width: var(--icon-size-xs);
         transition: transform var(--duration-short) var(--transition-type);
