@@ -100,7 +100,11 @@
 
 .product__media-list.product__media-list {
     padding-bottom: 0;
-    justify-content: center;
+
+    @media screen and (min-width: 750px) {
+        justify-content: center;
+    }
+    // justify-content: center; // todo: confirm this can be removed? breaking layout on https://quickstart-d226f5a5.myshopify.com/products/edenvine-cabernet-sauvignon on mobile
 }
 
 slider-component {

@@ -429,7 +429,11 @@ a.product__text {
 /* Product media */
 .product__media-list.product__media-list {
   padding-bottom: 0;
-  justify-content: center;
+}
+@media screen and (min-width: 750px) {
+  .product__media-list.product__media-list {
+    justify-content: center;
+  }
 }
 
 slider-component {
