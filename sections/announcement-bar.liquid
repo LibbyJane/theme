@@ -11,7 +11,7 @@
         assign show_country_selector = true
     endif
 
-    if section.settings.enable_language_selector and localization.available_languages.size
+    if section.settings.enable_language_selector and localization.available_languages.size > 1
         assign show_language_selector = true
     endif
 
@@ -30,14 +30,6 @@
 
 
 <div class="utility-bar color-{{ section.settings.color_scheme }} {% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header-localization{% endif %}" {{ block.shopify_attributes }}>
-    <h1>TODO
-    <br><b>section.settings.enable_language_selector</b> {{ section.settings.enable_language_selector }}
-    <br><b>localization.available_languages.size</b> {{ localization.available_languages.size }}
-    <br><b>show_language_selector</b> {{ show_language_selector }}
-
-    </h1>
-
-
     <div class="{%- if section.blocks.size == 1 -%}content-padding-inline{%- endif -%}utility-bar__grid{% if announcement_bar and show_language_country_selector or section.settings.show_social and social_icons %} utility-bar__grid--3-col{% elsif show_language_country_selector or section.settings.show_social and social_icons %} utility-bar__grid--2-col{% endif %}">
         {%- if section.settings.show_social and social_icons -%}
             {%- render 'social-icons' -%}
