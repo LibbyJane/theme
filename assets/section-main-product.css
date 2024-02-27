@@ -418,6 +418,10 @@ a.product__text {
   max-width: 100%;
 }
 
+.product__accordion summary {
+  padding-inline: 0;
+}
+
 .product__media-wrapper {
   background: transparent;
 }

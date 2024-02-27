@@ -100,3 +100,9 @@
 .product__info-container iframe {
     max-width: 100%;
   }
+
+.product__accordion {
+    summary {
+        padding-inline: 0;
+    }
+}
