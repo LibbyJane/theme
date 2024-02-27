@@ -1,7 +1,25 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
 <body>
-    <h1>test</h1>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="theme-color" content="">
+        <link rel="canonical" href="{{ canonical_url }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Questrial&display=swap" rel="stylesheet">
+
+        {%- if settings.favicon != blank -%}
+            <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+        {%- endif -%}
+
+        {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+            <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+        {%- endunless -%}
+    </head>
+    <h1>test2</h1>
 </body>
 </html>
 {% comment %} <head>
