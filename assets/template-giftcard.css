@@ -689,6 +689,7 @@ button.shopify-payment-button__button--unbranded,
   align-items: center;
   justify-content: center;
   gap: var(--space);
+  font-family: inherit;
   font-size: var(--font-size-h5);
   margin: 0;
   padding: calc(var(--space) * 0.75) var(--space-med);
