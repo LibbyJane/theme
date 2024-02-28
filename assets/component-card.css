@@ -346,7 +346,6 @@
 .card__media img {
   min-width: 100%;
   min-height: 100%;
-  transform: scale(1.2);
 }
 
 .card__media-hover-image {

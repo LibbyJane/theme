@@ -101,7 +101,7 @@
                             {% render block %}
 
                         {%- when 'text' -%}
-                            <h5 class="product__lead-in {% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'body' %} text-body{% else %} {{block.settings.text_style}}{% endif %}"
+                            <h5 class="product__lead-in text-{{block.settings.text_style}}"
                                 {{ block.shopify_attributes }}
                             >
                                 {{- block.settings.text -}}

@@ -46,7 +46,6 @@
   padding-left: 0;
 }
 
-/* Product form */
 .product-form {
   display: block;
   margin-bottom: var(--space);
@@ -55,10 +54,9 @@
 .product-form__error-message-wrapper:not([hidden]) {
   display: flex;
   align-items: flex-start;
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  font-size: var(--font-size-small);
+  margin-bottom: var(--space-med);
 }
-
 .product-form__error-message-wrapper svg {
   flex-shrink: 0;
   width: 1.2rem;

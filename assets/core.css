@@ -3858,7 +3858,7 @@ input::-webkit-search-decoration {
   min-height: var(--field-height);
   min-width: calc(7rem + var(--inputs-border-width) * 2);
   outline: 2px solid transparent;
-  padding: var(--space);
+  padding-inline: var(--space);
   position: relative;
   width: 100%;
 }
