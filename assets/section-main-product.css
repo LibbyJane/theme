@@ -80,8 +80,8 @@ variant-selects {
   display: block;
 }
 
-variant-radios .checkable__highlight:first-of-type {
-  margin-left: calc(-1 * var(--space-sm));
+variant-radios .checkable__highlight {
+  transform: translateX(calc(-1 * var(--space-sm)));
 }
 
 .product-form__input--dropdown {
