@@ -32,7 +32,6 @@
 
         .button,
         .localization-form__select {
-
             margin: var(--space) var(--space) var(--space-sm);
             flex-grow: 1;
 
@@ -99,6 +98,7 @@
 
 
 .localization-selector {
+    @include text-body;
     &.link {
         text-decoration: none;
         appearance: none;

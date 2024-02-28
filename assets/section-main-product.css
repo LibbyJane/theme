@@ -369,9 +369,6 @@ a.product__text {
   margin: 0 0 var(--space-sm);
   padding: 0;
 }
-.product__lead-in.text-uppercase {
-  letter-spacing: var(--letter-spacing);
-}
 
 .product__title {
   line-height: 1.2;
@@ -383,11 +380,6 @@ a.product__text {
 .product__price {
   position: relative;
   z-index: var(--zi-base);
-}
-.product__price .subtitle .price-item {
-  font-family: var(--font-heading-family);
-  font-style: var(--font-heading-style);
-  font-weight: var(--font-heading-weight);
 }
 .product__price .price-item {
   font-size: calc(var(--price-font-scale) * 100%);
