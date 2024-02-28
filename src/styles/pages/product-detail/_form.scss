@@ -36,8 +36,16 @@ variant-selects {
     display: block;
 }
 
+variant-radios {
+    .checkable__highlight {
+        &:first-child {
+            margin-left: calc(-1 * var(--space-sm));
+        }
+    }
+}
+
 .product-form__input--dropdown {
-    margin-bottom: 1.6rem;
+    margin-bottom: var(--space-med);
 }
 
 .product-form__input .form__label {

@@ -24,8 +24,13 @@
 }
 
 .product__lead-in {
+    font-weight: normal;
     margin: 0 0 var(--space-sm);
     padding: 0;
+
+    &.text-uppercase {
+        letter-spacing: var(--letter-spacing);
+    }
 }
 
 
