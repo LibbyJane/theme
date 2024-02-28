@@ -789,6 +789,7 @@ strong {
 }
 
 .text-uppercase {
+  letter-spacing: var(--letter-spacing-large);
   text-transform: uppercase;
 }
 

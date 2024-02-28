@@ -80,7 +80,7 @@ variant-selects {
   display: block;
 }
 
-variant-radios .checkable__highlight:first-child {
+variant-radios .checkable__highlight:first-of-type {
   margin-left: calc(-1 * var(--space-sm));
 }
 

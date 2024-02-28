@@ -38,7 +38,7 @@ variant-selects {
 
 variant-radios {
     .checkable__highlight {
-        &:first-child {
+        &:first-of-type {
             margin-left: calc(-1 * var(--space-sm));
         }
     }
