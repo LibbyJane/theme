@@ -18,14 +18,14 @@
         "caption": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
+            "text": "{{ product.metafields.descriptors.subtitle.value }} sdfsdfsdf <a href=\"\/blogs\/news\" target=\"_blank\" title=\"News\">sdfsdf <\/a>",
+            "text_style": "body"
           }
         },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "dropdown"
+            "picker_type": "button"
           }
         },
         "price": {
