@@ -114,20 +114,20 @@
         "collection-0": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "argentina"
           }
         },
         "product": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "the-collection-snowboard-liquid",
             "second_image": false
           }
         },
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "new-zealand"
           }
         }
       },
