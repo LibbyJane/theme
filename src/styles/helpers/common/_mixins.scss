@@ -342,7 +342,7 @@
 }
 
 @mixin text-heading {
-    font-family: var(--font-heading-family);
+    font-family: var(--font-heading-family, 'sans-serif');
     font-style: var(--font-heading-style);
     font-weight: var(--font-heading-weight);
     // letter-spacing: calc(var(--font-heading-scale) * 0.06rem);

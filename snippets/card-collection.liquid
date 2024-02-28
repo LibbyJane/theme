@@ -108,12 +108,13 @@
                 <div class="card__information">
                     <h3 class="card__heading">
                         {%- if card_collection.title != blank -%}
-                        {{- card_collection.title | escape -}}
+                            {{- card_collection.title | escape -}}
                         {%- else -%}
-                        {{ 'onboarding.collection_title' | t }}
+                            {{ 'onboarding.collection_title' | t }}
                         {%- endif -%}
+
                         {%- if card_collection.featured_image or card_collection.description == blank -%}
-                        {% render 'icon-arrow' %}
+                            {% render 'icon-arrow' %}
                         {%- endif %}
                     </h3>
                     {%- if card_collection.featured_image == null and card_collection.description != blank -%}

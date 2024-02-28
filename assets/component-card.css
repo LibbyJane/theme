@@ -146,6 +146,14 @@
 .slider .card.card--standard .ratio {
   height: auto;
 }
+.slider .card.card--card.ratio,
+.slider .card.card--card .ratio {
+  height: 100%;
+}
+.slider .card.card--text.ratio,
+.slider .card.card--text .ratio {
+  height: 100%;
+}
 .card.card--badge-bottom-left {
   padding-bottom: calc(var(--card-padding) + var(--space-xl));
 }

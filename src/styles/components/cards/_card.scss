@@ -99,6 +99,24 @@
         }
     }
 
+    &.card--card {
+        &.ratio,
+        .ratio {
+            .slider & {
+                height: 100%; // featured collection
+            }
+        }
+    }
+
+    &.card--text {
+        &.ratio,
+        .ratio {
+            .slider & {
+                height: 100%; // featured collection
+            }
+        }
+    }
+
     &.card--badge-bottom-left {
         padding-bottom: calc(var(--card-padding) + var(--space-xl));
     }

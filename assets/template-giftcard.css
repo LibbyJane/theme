@@ -672,7 +672,7 @@ button.shopify-payment-button__button--unbranded,
   --shadow-visible: var(--button-shadow-visible);
   --border-offset: var(--button-border-offset); /* reduce radius edge artifacts */
   --border-opacity: calc(1 - var(--button-border-opacity));
-  font-family: var(--font-heading-family);
+  font-family: var(--font-heading-family, "sans-serif");
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   color: rgb(var(--color-foreground));
@@ -689,7 +689,6 @@ button.shopify-payment-button__button--unbranded,
   align-items: center;
   justify-content: center;
   gap: var(--space);
-  font-family: inherit;
   font-size: var(--font-size-h5);
   margin: 0;
   padding: calc(var(--space) * 0.75) var(--space-med);
@@ -1551,6 +1550,7 @@ button {
   outline: none;
   border: 0;
   cursor: pointer;
+  font-family: inherit;
 }
 
 * {
@@ -1601,7 +1601,7 @@ h5,
 .h3,
 .h4,
 .h5 {
-  font-family: var(--font-heading-family);
+  font-family: var(--font-heading-family, "sans-serif");
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   color: rgb(var(--color-foreground));
@@ -1646,7 +1646,7 @@ strong {
 
 .text-subtitle,
 .text-display {
-  font-family: var(--font-heading-family);
+  font-family: var(--font-heading-family, "sans-serif");
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   color: rgb(var(--color-foreground));
@@ -2159,7 +2159,7 @@ h6:empty {
 }
 
 .form__message {
-  font-family: var(--font-heading-family);
+  font-family: var(--font-heading-family, "sans-serif");
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   color: rgb(var(--color-foreground));
