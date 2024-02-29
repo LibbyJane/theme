@@ -1,52 +1,94 @@
 {
-    "sections": {
-        "image_banner": {
-            "type": "image-banner",
-            "blocks": {
-                "heading": {
-                    "type": "heading",
-                    "settings": {
-                        "heading": "Image banner",
-                        "heading_size": "h0"
-                    }
-                },
-                "text": {
-                    "type": "text",
-                    "settings": {
-                        "text": "Give customers details about the banner image(s) or content on the template.",
-                        "text_style": "body"
-                    }
-                },
-                "button": {
-                    "type": "buttons",
-                    "settings": {
-                        "button_label_1": "Shop all",
-                        "button_link_1": "shopify:\/\/collections\/all",
-                        "button_style_secondary_1": "primary",
-                        "button_label_2": "",
-                        "button_link_2": "",
-                        "button_style_secondary_2": "secondary"
-                    }
-                }
-            },
-            "block_order": [
-                "heading",
-                "text",
-                "button"
-            ],
-            "settings": {
-                "image_overlay_opacity": 40,
-                "image_height": "large",
-                "desktop_content_position": "bottom-center",
-                "desktop_content_alignment": "center",
-                "show_text_box": false,
-                "color_scheme": "scheme-3",
-                "background_texture": "paper",
-                "mobile_content_alignment": "center",
-                "stack_images_on_mobile": false,
-                "show_text_below": false,
-                "image_behavior": "none"
-            }
+  "sections": {
+    "slideshow_XTcwak": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_NLwdjc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
+            "image_overlay_opacity": 40,
+            "heading": "Welcome to Road Trip Wines",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Discover your new favourite!",
+            "link": "shopify:\/\/collections\/all",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_Wbi9tD": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677_45ab7a89-ca3c-4dad-a11d-e27e6476f285.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "10% off store-wide",
+            "heading_size": "h1",
+            "subheading": "Use discount code <strong>RTW2424<\/strong>",
+            "button_label": "Start shopping",
+            "link": "shopify:\/\/collections",
+            "button_style_secondary": "secondary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-2",
+            "background_texture": "torn",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_b7GwpW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
+            "image_overlay_opacity": 20,
+            "heading": "Latest from the blog",
+            "heading_size": "h2",
+            "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in Hawkes Bay",
+            "button_label": "Read about it",
+            "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
+            "button_style_secondary": "secondary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "lined",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_NLwdjc",
+        "slide_Wbi9tD",
+        "slide_b7GwpW"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "section_color_scheme": "inverse",
+        "slider_visual": "numbers",
+        "slider_visual_background_opacity": 80,
+        "overlay_pagination_desktop": true,
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "image_behavior": "none"
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h0"
+          }
         },
         "rich_text": {
             "type": "rich-text",
@@ -221,6 +263,7 @@
             }
         }
     },
+<<<<<<< HEAD
     "order": [
         "image_banner",
         "rich_text",
@@ -230,3 +273,88 @@
         "multicolumn"
     ]
 }
+=======
+    "video": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "enable_video_looping": false,
+        "description": "",
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "background_transparent": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "full_width": true,
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "column_link_hover_style": "hover-highlight",
+        "button_label": "",
+        "button_link": "",
+        "section_color_scheme": "",
+        "background_transparent": true,
+        "color_scheme": "scheme-1",
+        "background_texture": "paper",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "slideshow_XTcwak",
+    "image_banner",
+    "rich_text",
+    "featured_collection",
+    "collage",
+    "video",
+    "multicolumn"
+  ]
+}
+>>>>>>> 783a5c2c47a31403905ac34eca453251bb056128
