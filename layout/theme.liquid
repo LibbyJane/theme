@@ -13,9 +13,6 @@
 
         {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
             <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
-            {% comment %} <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Questrial&display=swap" rel="stylesheet"> {% endcomment %}
         {%- endunless -%}
 
         <title>
@@ -44,6 +41,13 @@
 
         {{ 'base.css' | asset_url | stylesheet_tag }}
         {{ 'core.css' | asset_url | stylesheet_tag }}
+
+        {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+            {% comment %} firefox {% endcomment %}
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Questrial&display=swap" rel="stylesheet">
+        {%- endunless -%}
 
         {%- unless settings.type_body_font.system? -%}
             <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
