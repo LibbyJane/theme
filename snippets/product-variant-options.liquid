@@ -46,7 +46,7 @@
     -%}
 
     {%- if block.settings.picker_type == 'button' -%}
-        <label class="checkable__highlight" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+        <label class="checkable__highlight {% if option_disabled %}disabled"{% endif %}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" {% if option_disabled %}title="{{ 'products.product.variant_sold_out_or_unavailable' | t }}"{% endif %}>
             <input
                 type="radio"
                 id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"

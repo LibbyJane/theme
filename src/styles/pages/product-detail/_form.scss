@@ -1,3 +1,5 @@
+@import "helpers/common";
+
 .product-form {
     display: block;
     margin-bottom: var(--space);
@@ -39,6 +41,14 @@ variant-selects {
 variant-radios {
     .checkable__highlight {
         transform: translateX(calc(-1 * var(--space-sm)));
+    }
+
+    .disabled {
+        @include disabled;
+
+        .checkable__highlight {
+            text-decoration: line-through;
+        }
     }
 }
 
