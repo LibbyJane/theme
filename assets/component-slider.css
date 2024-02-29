@@ -676,7 +676,7 @@ slider-component.slider-component-full-width {
 }
 .slider-button .icon {
   height: var(--icon-size);
-  width: var(--icon-size-xxs);
+  width: var(--icon-size-xs);
 }
 
 .slider-button--next:hover .icon {

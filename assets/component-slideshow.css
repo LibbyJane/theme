@@ -143,9 +143,10 @@ slideshow-component:not(.page-width) .slider-buttons {
 .slideshow__autoplay {
   position: relative;
   border-left: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+.slideshow__autoplay .icon {
+  position: absolute;
+  inset: 0;
 }
 
 @media screen and (max-width: 749px) {
