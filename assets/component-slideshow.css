@@ -148,8 +148,8 @@ slideshow-component:not(.page-width) .slider-buttons {
   opacity: 1;
 }
 .slideshow__autoplay.slideshow__autoplay .icon {
-  height: var(--icon-size);
-  width: var(--icon-size);
+  height: var(--icon-size-sm);
+  width: var(--icon-size-sm);
   margin: auto;
   position: absolute;
   inset: 0;

@@ -183,8 +183,8 @@ slideshow-component:not(.page-width) .slider-buttons {
     }
 
     .icon {
-        height: var(--icon-size);
-        width: var(--icon-size);
+        height: var(--icon-size-sm);
+        width: var(--icon-size-sm);
         margin: auto;
         position: absolute;
             inset: 0;
@@ -194,9 +194,7 @@ slideshow-component:not(.page-width) .slider-buttons {
     }
 }
 
-
 @media screen and (forced-colors: active) {
-
     .slideshow__autoplay .icon,
     .slideshow__autoplay:hover .icon {
         opacity: 1;
