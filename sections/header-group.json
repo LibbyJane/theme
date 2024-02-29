@@ -23,64 +23,24 @@
     "announcement_bar_CXAmBy": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_CDdxGa": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free shipping until the end of the month!",
+            "link": ""
+          }
+        },
         "announcement_AkfXFi": {
           "type": "announcement",
           "settings": {
             "text": "100% satisfaction guarantee",
             "link": "shopify:\/\/policies\/refund-policy"
           }
-        },
-        "announcement_XFCPQa": {
-          "type": "announcement",
-          "settings": {
-            "text": "External link",
-            "link": "https:\/\/www.theguardian.com\/crosswords\/"
-          }
-        },
-        "announcement_pUxenP": {
-          "type": "announcement",
-          "settings": {
-            "text": "No link",
-            "link": ""
-          }
-        },
-        "announcement_fqciVX": {
-          "type": "announcement",
-          "settings": {
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum accumsan quam, et turpis 100c.",
-            "link": "shopify:\/\/policies\/refund-policy"
-          }
-        },
-        "announcement_998FiJ": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "link": ""
-          }
-        },
-        "announcement_Hice76": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "link": ""
-          }
-        },
-        "announcement_CDdxGa": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "announcement_AkfXFi",
-        "announcement_XFCPQa",
-        "announcement_pUxenP",
-        "announcement_fqciVX",
-        "announcement_998FiJ",
-        "announcement_Hice76",
-        "announcement_CDdxGa"
+        "announcement_CDdxGa",
+        "announcement_AkfXFi"
       ],
       "settings": {
         "color_scheme": "",
