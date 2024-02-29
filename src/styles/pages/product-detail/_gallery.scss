@@ -144,7 +144,7 @@ slider-component {
         height: 100%;
         width: 100%;
     // overflow: visible !important;
-    overflow: hidden;
+    overflow: clip;
     padding: 0;
     position: relative;
     transition: all var(--duration-medium) var(--transition-type);
@@ -765,7 +765,7 @@ slider-component {
   }
 
   .product__media-list .media > * {
-    overflow: hidden;
+    overflow: clip;
   }
 
   .thumbnail-list {
@@ -934,7 +934,7 @@ slider-component {
   }
 
   .js .product__media {
-    overflow: hidden !important;
+    overflow: clip !important;
   }
 
   .thumbnail[aria-current]:focus-visible {

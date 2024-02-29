@@ -7,7 +7,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: clip;
   outline: 2px solid transparent;
 }
 .deferred-media__poster:focus, .deferred-media__poster:focus-visible {
@@ -37,7 +37,7 @@
 }
 
 .deferred-media {
-  overflow: hidden;
+  overflow: clip;
 }
 .deferred-media:not([loaded]) template {
   z-index: -1;

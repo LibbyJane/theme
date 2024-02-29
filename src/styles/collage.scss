@@ -171,7 +171,7 @@
 
     .media {
         height: 100%;
-        overflow: hidden;
+        overflow: clip;
         border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));
     }
 
@@ -398,7 +398,7 @@
 
 //   .collage-card .media {
 //     height: 100%;
-//     overflow: hidden;
+//     overflow: clip;
 //     border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));
 //   }
 

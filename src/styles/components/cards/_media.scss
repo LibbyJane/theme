@@ -12,7 +12,7 @@
         align-items: center;
         justify-content: center;
     height: 0;
-    overflow: hidden;
+    overflow: clip;
     margin: var(--card-image-offset) var(--card-image-offset) var(--card-padding);
     padding: 0;
     padding-top: var(--ratio-percent);
@@ -150,7 +150,7 @@
 //         align-items: center;
 //         justify-content: center;
 //     height: 0;
-//     overflow: hidden;
+//     overflow: clip;
 //     margin: var(--card-image-offset);
 //     margin-bottom: var(--product-card-padding);
 //     padding: 0;
@@ -159,7 +159,7 @@
 
 //     .card__inner & {
 //         // collection, article and blog cards
-//         // overflow: hidden;
+//         // overflow: clip;
 //         z-index: 0;
 //         border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));
 

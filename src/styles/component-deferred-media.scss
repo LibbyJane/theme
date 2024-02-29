@@ -7,7 +7,7 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: clip;
     outline: 2px solid transparent;
 
     &:focus,
@@ -47,7 +47,7 @@
 
 
 .deferred-media {
-    overflow: hidden;
+    overflow: clip;
 
     &:not([loaded]) {
         template {

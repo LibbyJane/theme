@@ -447,7 +447,7 @@ noscript .localization-form__select {
   border-width: var(--popup-border-width);
   border-style: solid;
   border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
-  overflow: hidden;
+  overflow: clip;
   position: absolute;
   bottom: 100%;
   transform: translateY(calc(var(--space) * -1));
@@ -604,7 +604,7 @@ noscript .localization-form__select {
   max-width: 20ch;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .header-localization:not(.menu-drawer__localization) localization-form:only-child .localization-form__select > span {

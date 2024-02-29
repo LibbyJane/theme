@@ -1,5 +1,5 @@
 .product__info-wrapper {
-    overflow: hidden; // badges causing overflow issues on ios
+    overflow: clip; // badges causing overflow issues on ios
     padding: var(--space-lg);
 }
 

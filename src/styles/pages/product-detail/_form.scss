@@ -56,7 +56,7 @@ fieldset.product-form__input .form__label {
 
 .product-form__input input[type='radio'] {
     clip: rect(0, 0, 0, 0);
-    overflow: hidden;
+    overflow: clip;
     position: absolute;
     height: 1px;
     width: 1px;

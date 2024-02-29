@@ -162,7 +162,7 @@
     box-shadow: none;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
+    overflow: clip;
     filter: none;
     min-width: auto;
     min-height: auto;

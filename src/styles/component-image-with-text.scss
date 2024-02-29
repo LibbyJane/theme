@@ -14,7 +14,7 @@
     }
 
     .image-with-text .global-media-settings {
-        overflow: hidden !important;
+        overflow: clip !important;
     }
 
     .image-with-text__button {
@@ -65,7 +65,7 @@
 
 .image-with-text__media--placeholder {
     position: relative;
-    overflow: hidden;
+    overflow: clip;
 
     > svg {
         position: absolute;

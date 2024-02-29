@@ -35,7 +35,6 @@
 @media screen and (min-width: 750px) {
   .product__column-sticky {
     display: block;
-    min-height: 100%;
     position: sticky;
     top: 0;
     z-index: 2;
@@ -98,7 +97,7 @@ fieldset.product-form__input .form__label {
 
 .product-form__input input[type=radio] {
   clip: rect(0, 0, 0, 0);
-  overflow: hidden;
+  overflow: clip;
   position: absolute;
   height: 1px;
   width: 1px;
@@ -345,7 +344,7 @@ a.product__text {
   }
 }
 .product__info-wrapper {
-  overflow: hidden;
+  overflow: clip;
   padding: var(--space-lg);
 }
 
@@ -468,7 +467,7 @@ slider-component {
   display: block;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow: clip;
   padding: 0;
   position: relative;
   transition: all var(--duration-medium) var(--transition-type);
@@ -1018,7 +1017,7 @@ slider-component {
 }
 
 .product__media-list .media > * {
-  overflow: hidden;
+  overflow: clip;
 }
 
 .thumbnail-list {
@@ -1140,7 +1139,7 @@ slider-component {
   }
 }
 .js .product__media {
-  overflow: hidden !important;
+  overflow: clip !important;
 }
 
 .thumbnail[aria-current]:focus-visible {

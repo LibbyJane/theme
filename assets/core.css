@@ -631,7 +631,7 @@
 
 .visually-hidden {
   position: absolute !important;
-  overflow: hidden;
+  overflow: clip;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -1085,7 +1085,7 @@ a {
 }
 
 .overflow-hidden {
-  overflow: hidden;
+  overflow: clip;
 }
 
 .page-width,
@@ -1301,6 +1301,7 @@ a {
 }
 .shopify-section-group-header-group {
   position: relative;
+  margin-bottom: auto;
 }
 .shopify-section-group-header-group::after {
   background: radial-gradient(ellipse at center, rgba(var(--color-shadow), 0.3) 0%, rgba(var(--color-shadow), 0) 100%);
@@ -3027,7 +3028,7 @@ details[open] > .share-button__fallback {
   box-shadow: none;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: clip;
   filter: none;
   min-width: auto;
   min-height: auto;
@@ -3782,7 +3783,7 @@ input::-webkit-search-decoration {
   border: 0;
   color: currentColor;
   cursor: pointer;
-  overflow: hidden;
+  overflow: clip;
   padding: var(--space-sm);
   min-width: 3rem;
 }
@@ -3972,7 +3973,7 @@ input::-webkit-search-decoration {
 
 .contact {
   position: relative;
-  overflow: hidden;
+  overflow: clip;
   max-width: 100%;
 }
 
@@ -4314,7 +4315,7 @@ input::-webkit-search-decoration {
   left: auto;
   transform: rotate(-5deg) translateX(5rem) translateY(2rem);
   z-index: -1;
-  overflow: hidden;
+  overflow: clip;
 }
 .postcard__reverse-face img {
   box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));

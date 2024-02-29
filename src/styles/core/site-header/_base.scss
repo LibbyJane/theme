@@ -1,5 +1,6 @@
 .shopify-section-group-header-group {
     position: relative;
+    margin-bottom: auto;;
 
     &::after {
         background: radial-gradient(ellipse at center, rgba(var(--color-shadow),0.3) 0%, rgba(var(--color-shadow),0) 100%);
@@ -148,7 +149,7 @@ header-drawer {
 // // .header__icons .shopify-app-block {
 // //   max-width: 4.4rem;
 // //   max-height: 4.4rem;
-// //   overflow: hidden;
+// //   overflow: clip;
 // // }
 
 // // .header__icon:not(.header__icon--summary),
@@ -524,7 +525,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 // .overflow-hidden-mobile,
 // .overflow-hidden-tablet,
 // .overflow-hidden-desktop {
-//   overflow: hidden;
+//   overflow: clip;
 // }
 
 // @media screen and (min-width: 750px) {

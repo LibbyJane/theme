@@ -76,7 +76,8 @@
                 grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}
     ">
         {% if product.media.size > 0 %}
-            <div class="grid__item product__media-wrapper color-{{ section.settings.color_scheme }}">
+            <div class="grid__item product__media-wrapper color-{{ section.settings.content_color_scheme }}">
+
                 {% render 'product-media-gallery', variant_images: variant_images %}
             </div>
         {% endif %}

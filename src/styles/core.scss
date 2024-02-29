@@ -271,7 +271,7 @@
 // }
 
 // .overflow-hidden {
-//   overflow: hidden;
+//   overflow: clip;
 // }
 
 // .skip-to-content-link:focus {
@@ -1119,7 +1119,7 @@
 //   display: block;
 //   background-color: rgba(var(--color-foreground), 0.1);
 //   position: relative;
-//   overflow: hidden;
+//   overflow: clip;
 // }
 
 // .media--transparent {
@@ -1547,7 +1547,7 @@
 //   box-shadow: none;
 //   text-overflow: ellipsis;
 //   white-space: nowrap;
-//   overflow: hidden;
+//   overflow: clip;
 //   filter: none;
 //   min-width: auto;
 //   min-height: auto;
@@ -1787,7 +1787,7 @@
 //   display: flex;
 //   height: 4.4rem;
 //   justify-content: center;
-//   overflow: hidden;
+//   overflow: clip;
 //   padding: 0;
 //   position: absolute;
 //   right: 0;
@@ -2540,7 +2540,7 @@
 // // .header__icons .shopify-app-block {
 // //   max-width: 4.4rem;
 // //   max-height: 4.4rem;
-// //   overflow: hidden;
+// //   overflow: clip;
 // // }
 
 // // .header__icon:not(.header__icon--summary),
@@ -2916,7 +2916,7 @@
 // .overflow-hidden-mobile,
 // .overflow-hidden-tablet,
 // .overflow-hidden-desktop {
-//   overflow: hidden;
+//   overflow: clip;
 // }
 
 // @media screen and (min-width: 750px) {
@@ -3044,7 +3044,7 @@
 // }
 
 // .global-media-settings--no-shadow {
-//   overflow: hidden !important;
+//   overflow: clip !important;
 // }
 
 // .global-media-settings--no-shadow:after {

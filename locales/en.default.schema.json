@@ -282,7 +282,7 @@
           "info": "The texture is only visible if the container is not transparent."
         },
         "container_texture": {
-          "label": "Apply texture to the section background color"
+          "label": "Apply texture to the section background color (if not transparent)"
         },
         "content_texture": {
           "label": "Apply texture to the content background color"

@@ -187,7 +187,7 @@ input::-webkit-search-decoration {
     border: 0;
     color: currentColor;
     cursor: pointer;
-    overflow: hidden;
+    overflow: clip;
     padding: var(--space-sm);
     min-width: 3rem;
 
@@ -462,7 +462,7 @@ input::-webkit-search-decoration {
 //   display: flex;
 //   height: 4.4rem;
 //   justify-content: center;
-//   overflow: hidden;
+//   overflow: clip;
 //   padding: 0;
 //   position: absolute;
 //   right: 0;

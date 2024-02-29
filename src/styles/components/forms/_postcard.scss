@@ -9,7 +9,7 @@
 
 .contact {
     position: relative;
-    overflow: hidden;
+    overflow: clip;
     max-width: 100%;
 }
 
@@ -266,7 +266,7 @@
     // transform: rotate(-5deg) translateX(1rem);
     transform: rotate(-5deg) translateX(5rem) translateY(2rem);
     z-index: -1;
-    overflow: hidden;
+    overflow: clip;
     // display: flex;
     // align-items: center;
     // justify-content: center;

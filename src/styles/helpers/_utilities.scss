@@ -186,7 +186,7 @@
 
 .visually-hidden {
     position: absolute !important;
-    overflow: hidden;
+    overflow: clip;
     width: 1px;
     height: 1px;
     margin: -1px;
