@@ -71,13 +71,48 @@
         "slide_height": "small",
         "section_color_scheme": "inverse",
         "slider_visual": "numbers",
-        "slider_visual_background_opacity": 80,
+        "slider_visual_background_opacity": 75,
         "overlay_pagination_desktop": true,
         "auto_rotate": true,
         "change_slides_speed": 7,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
         "image_behavior": "none"
+      }
+    },
+    "rich_text_XN6Rej": {
+      "type": "rich-text",
+      "blocks": {
+        "text_FYTx6B": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We’ve embarked on an adventure based on good wine, good company and new destinations. We’re always discovering something new, and there’s so much more still to discover. Please join us!<\/p>"
+          }
+        },
+        "button_fMakp9": {
+          "type": "button",
+          "settings": {
+            "button_label": "More about us",
+            "button_link": "shopify:\/\/pages\/our-story",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_FYTx6B",
+        "button_fMakp9"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "desktop_content_position": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "background_texture": "paper",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image_banner": {
@@ -126,37 +161,6 @@
         "stack_images_on_mobile": false,
         "show_text_below": false,
         "image_behavior": "none"
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "content_alignment": "center",
-        "desktop_content_position": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "background_texture": "paper",
-        "padding_top": 40,
-        "padding_bottom": 0
       }
     },
     "featured_collection": {
@@ -303,8 +307,8 @@
   },
   "order": [
     "slideshow_XTcwak",
+    "rich_text_XN6Rej",
     "image_banner",
-    "rich_text",
     "featured_collection",
     "collage",
     "video",
