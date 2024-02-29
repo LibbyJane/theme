@@ -40,11 +40,31 @@
             "background_texture": "torn",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_b7GwpW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
+            "image_overlay_opacity": 20,
+            "heading": "Latest from the blog",
+            "heading_size": "h2",
+            "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in Hawkes Bay",
+            "button_label": "Read about it",
+            "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
+            "button_style_secondary": "secondary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "lined",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
         "slide_NLwdjc",
-        "slide_Wbi9tD"
+        "slide_Wbi9tD",
+        "slide_b7GwpW"
       ],
       "settings": {
         "layout": "full_bleed",
