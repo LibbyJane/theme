@@ -287,6 +287,7 @@
 
 .card .price {
   justify-content: var(--card-justification);
+  margin-bottom: var(--space);
 }
 
 .card__inner {

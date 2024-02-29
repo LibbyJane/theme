@@ -46,12 +46,15 @@ button.shopify-payment-button__button--unbranded,
         gap: var(--space);
     font-size: var(--font-size-h6);
     margin: 0;
-    padding: calc(var(--space)*0.75) var(--space-med);
-    //opacity: 0.85;
+    padding: calc(var(--space)*0.75);
     position: relative;
     text-decoration: none;
     transition: all var(--duration-med) var(--transition-type);
     z-index: 1;
+
+    @media screen and (min-width: 750px) {
+        padding: calc(var(--space)*0.75) var(--space-med);
+    }
 
     &:hover, &:focus {
         &::before {

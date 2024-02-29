@@ -2176,11 +2176,23 @@ button.shopify-payment-button__button--unbranded,
   gap: var(--space);
   font-size: var(--font-size-h6);
   margin: 0;
-  padding: calc(var(--space) * 0.75) var(--space-med);
+  padding: calc(var(--space) * 0.75);
   position: relative;
   text-decoration: none;
   transition: all var(--duration-med) var(--transition-type);
   z-index: 1;
+}
+@media screen and (min-width: 750px) {
+  .button,
+  .shopify-challenge__button,
+  .shopify-payment-button__button,
+  .shopify-payment-button [role=button],
+  .customer button,
+  button.shopify-payment-button__button--unbranded,
+  .cart__dynamic-checkout-buttons [role=button],
+  .cart__dynamic-checkout-buttons iframe {
+    padding: calc(var(--space) * 0.75) var(--space-med);
+  }
 }
 .button:hover::before, .button:focus::before,
 .shopify-challenge__button:hover::before,
