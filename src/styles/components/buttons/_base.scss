@@ -44,7 +44,7 @@ button.shopify-payment-button__button--unbranded,
         align-items: center;
         justify-content: center;
         gap: var(--space);
-    font-size: var(--font-size-h5);
+    font-size: var(--font-size-h6);
     margin: 0;
     padding: calc(var(--space)*0.75) var(--space-med);
     //opacity: 0.85;
@@ -158,22 +158,6 @@ summary,
         --path-length: 300;
     }
 
-    .icon-reset {
-        --path-length: 46.1;
-    }
-
-    .icon-share {
-        --path-length: 59;
-    }
-
-    .icon-search {
-        --path-length: 40.3;
-    }
-
-    .icon-loading {
-        --path-length: 215;
-    }
-
     .icon-filter {
         --path-length: 46;
     }
@@ -184,6 +168,26 @@ summary,
 
     .icon-funnel-clear {
         --path-length: 45;
+    }
+
+    .icon-loading {
+        --path-length: 215;
+    }
+
+    .icon-play {
+        --path-length: 39;
+    }
+
+    .icon-reset {
+        --path-length: 46.1;
+    }
+
+    .icon-search {
+        --path-length: 40.3;
+    }
+
+    .icon-share {
+        --path-length: 59;
     }
 }
 

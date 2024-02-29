@@ -2167,7 +2167,7 @@ button.shopify-payment-button__button--unbranded,
   align-items: center;
   justify-content: center;
   gap: var(--space);
-  font-size: var(--font-size-h5);
+  font-size: var(--font-size-h6);
   margin: 0;
   padding: calc(var(--space) * 0.75) var(--space-med);
   position: relative;
@@ -2670,30 +2670,6 @@ summary .icon-clipboard,
 .draw-icon .icon-clipboard {
   --path-length: 300;
 }
-button .icon-reset,
-a .icon-reset,
-summary .icon-reset,
-.draw-icon .icon-reset {
-  --path-length: 46.1;
-}
-button .icon-share,
-a .icon-share,
-summary .icon-share,
-.draw-icon .icon-share {
-  --path-length: 59;
-}
-button .icon-search,
-a .icon-search,
-summary .icon-search,
-.draw-icon .icon-search {
-  --path-length: 40.3;
-}
-button .icon-loading,
-a .icon-loading,
-summary .icon-loading,
-.draw-icon .icon-loading {
-  --path-length: 215;
-}
 button .icon-filter,
 a .icon-filter,
 summary .icon-filter,
@@ -2711,6 +2687,36 @@ a .icon-funnel-clear,
 summary .icon-funnel-clear,
 .draw-icon .icon-funnel-clear {
   --path-length: 45;
+}
+button .icon-loading,
+a .icon-loading,
+summary .icon-loading,
+.draw-icon .icon-loading {
+  --path-length: 215;
+}
+button .icon-play,
+a .icon-play,
+summary .icon-play,
+.draw-icon .icon-play {
+  --path-length: 39;
+}
+button .icon-reset,
+a .icon-reset,
+summary .icon-reset,
+.draw-icon .icon-reset {
+  --path-length: 46.1;
+}
+button .icon-search,
+a .icon-search,
+summary .icon-search,
+.draw-icon .icon-search {
+  --path-length: 40.3;
+}
+button .icon-share,
+a .icon-share,
+summary .icon-share,
+.draw-icon .icon-share {
+  --path-length: 59;
 }
 
 .button--primary:hover::before, .button--primary:focus::before,
