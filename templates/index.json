@@ -6,12 +6,13 @@
         "slide_NLwdjc": {
           "type": "slide",
           "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "Image slide",
+            "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
+            "image_overlay_opacity": 40,
+            "heading": "Welcome to Road Trip Wines",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
+            "subheading": "",
+            "button_label": "Discover your new favourite!",
+            "link": "shopify:\/\/collections\/all",
             "button_style_secondary": "primary",
             "box_align": "middle-center",
             "text_alignment": "center",
