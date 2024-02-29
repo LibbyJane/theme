@@ -110,9 +110,10 @@
 }
 
 .announcement-bar__message {
+    @include text-heading;
     display: flex;
-    justify-content: center;
-    gap: calc(var(--space) * 0.75);
+        justify-content: center;
+        gap: calc(var(--space) * 0.75);
     margin: auto;
     padding: var(--space-sm) 0;
     text-align: center;
