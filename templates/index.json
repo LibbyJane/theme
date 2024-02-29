@@ -1,5 +1,63 @@
 {
   "sections": {
+    "slideshow_XTcwak": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_NLwdjc": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_Wbi9tD": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_NLwdjc",
+        "slide_Wbi9tD"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "section_color_scheme": "",
+        "slider_visual": "counter",
+        "slider_visual_background_opacity": 100,
+        "overlay_pagination_desktop": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "image_behavior": "none"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -222,6 +280,7 @@
     }
   },
   "order": [
+    "slideshow_XTcwak",
     "image_banner",
     "rich_text",
     "featured_collection",
