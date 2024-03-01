@@ -719,9 +719,21 @@
     "multirow_rhJJxq": {
       "type": "multirow",
       "blocks": {
+        "row_wJ8fNq": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2048-4-3.jpg",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
         "row_T9KUgC": {
           "type": "row",
           "settings": {
+            "image": "shopify:\/\/shop_images\/wine-white-sq_ac1d9d10-997d-4a6b-9b53-50739a27bac3.jpg",
             "caption": "Caption",
             "heading": "Row",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
@@ -732,6 +744,7 @@
         "row_Gxache": {
           "type": "row",
           "settings": {
+            "image": "shopify:\/\/shop_images\/leaves-5722122_1920.png",
             "caption": "Caption",
             "heading": "Row",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
@@ -742,6 +755,7 @@
         "row_bjfaFA": {
           "type": "row",
           "settings": {
+            "image": "shopify:\/\/shop_images\/vecteezy_wine-bottles-and-glasses-of-wine-over-black-background_1385592.jpg",
             "caption": "Caption",
             "heading": "Row",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
@@ -751,12 +765,13 @@
         }
       },
       "block_order": [
+        "row_wJ8fNq",
         "row_T9KUgC",
         "row_Gxache",
         "row_bjfaFA"
       ],
       "settings": {
-        "image_height": "medium",
+        "image_height": "small",
         "desktop_image_width": "medium",
         "heading_size": "h1",
         "text_style": "body",
@@ -764,7 +779,7 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "image_layout": "alternate-left",
-        "section_color_scheme": "",
+        "section_color_scheme": "scheme-d775a3dc-00b6-476b-8a2b-08d69daed06e",
         "background_transparent": true,
         "row_color_scheme": "",
         "background_texture": "paper",
