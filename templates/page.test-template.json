@@ -420,12 +420,63 @@
         "buttons_PDBXTg"
       ],
       "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image": "shopify:\/\/shop_images\/1024-3-2.jpg",
+        "image_overlay_opacity": 60,
+        "image_height": "small",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
-        "show_text_box": true,
+        "show_text_box": false,
         "color_scheme": "",
+        "background_texture": "paper",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "image_behavior": "none"
+      }
+    },
+    "image_banner_LqRq9x": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_peXHUg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_TEehP6": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_7UwDm6": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": "primary",
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_peXHUg",
+        "text_TEehP6",
+        "buttons_7UwDm6"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/vintage-van-parked.jpg",
+        "image_2": "shopify:\/\/shop_images\/front-view-of-a-vintage-camper-van-parked.jpg",
+        "image_overlay_opacity": 90,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "background-1",
         "background_texture": "paper",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
@@ -439,6 +490,7 @@
         "slide_MAaWXM": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/white-wine-cheese_a11ecbca-ea2f-40b4-8a7b-52f4f915642d.jpg",
             "image_overlay_opacity": 0,
             "heading": "Image slide",
             "heading_size": "h1",
@@ -990,6 +1042,7 @@
     "image_with_text_cDUWFH",
     "image_with_text_UkTiAm",
     "image_banner_adKMbR",
+    "image_banner_LqRq9x",
     "slideshow_jMNKkp",
     "collage_yNGyMB",
     "collage_WKDje3",
