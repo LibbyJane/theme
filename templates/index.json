@@ -8,15 +8,15 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
             "image_overlay_opacity": 40,
-            "heading": "Welcome to Road Trip Wines",
+            "heading": "",
             "heading_size": "h1",
             "subheading": "",
-            "button_label": "Discover your new favourite drop!",
+            "button_label": "",
             "link": "shopify:\/\/collections\/all",
-            "button_style_secondary": "primary",
+            "button_style_secondary": "secondary",
             "box_align": "middle-center",
             "text_alignment": "center",
-            "show_text_box": true,
+            "show_text_box": false,
             "color_scheme": "",
             "background_texture": "paper",
             "text_alignment_mobile": "center"
@@ -80,6 +80,49 @@
         "image_behavior": "none"
       }
     },
+    "rich_text_XN6Rej": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KCLW63": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome!",
+            "heading_size": "h1"
+          }
+        },
+        "text_FYTx6B": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Here at Road Trip Wines, we’ve embarked on an adventure based on good wine, good company and new destinations. We’re always discovering something new, and there’s so much more still to discover. Please join us!<\/h5>"
+          }
+        },
+        "button_fMakp9": {
+          "type": "button",
+          "settings": {
+            "button_label": "More about us",
+            "button_link": "shopify:\/\/pages\/our-story",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_KCLW63",
+        "text_FYTx6B",
+        "button_fMakp9"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "desktop_content_position": "center",
+        "color_scheme": "inverse",
+        "full_width": false,
+        "background_texture": "",
+        "padding_top": 44,
+        "padding_bottom": 44
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -107,49 +150,6 @@
         "enable_quick_add": true,
         "padding_top": 28,
         "padding_bottom": 36
-      }
-    },
-    "rich_text_XN6Rej": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_KCLW63": {
-          "type": "heading",
-          "settings": {
-            "heading": "Welcome!",
-            "heading_size": "h1"
-          }
-        },
-        "text_FYTx6B": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Here at Road Trip Wines, we’ve embarked on an adventure based on good wine, good company and new destinations. We’re always discovering something new, and there’s so much more still to discover. Please join us!<\/p>"
-          }
-        },
-        "button_fMakp9": {
-          "type": "button",
-          "settings": {
-            "button_label": "More about us",
-            "button_link": "shopify:\/\/pages\/our-story",
-            "button_style_secondary": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_KCLW63",
-        "text_FYTx6B",
-        "button_fMakp9"
-      ],
-      "settings": {
-        "content_alignment": "center",
-        "desktop_content_position": "center",
-        "color_scheme": "inverse",
-        "full_width": false,
-        "background_texture": "",
-        "padding_top": 44,
-        "padding_bottom": 44
       }
     },
     "collage": {
@@ -261,8 +261,8 @@
   },
   "order": [
     "slideshow_XTcwak",
-    "featured_collection",
     "rich_text_XN6Rej",
+    "featured_collection",
     "collage",
     "multicolumn"
   ]
