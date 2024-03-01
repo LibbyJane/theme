@@ -147,7 +147,7 @@
         "desktop_content_position": "center",
         "color_scheme": "inverse",
         "full_width": false,
-        "background_texture": "lined",
+        "background_texture": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
