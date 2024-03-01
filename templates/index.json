@@ -112,6 +112,13 @@
     "rich_text_XN6Rej": {
       "type": "rich-text",
       "blocks": {
+        "heading_KCLW63": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome!",
+            "heading_size": "h1"
+          }
+        },
         "text_FYTx6B": {
           "type": "text",
           "settings": {
@@ -123,7 +130,7 @@
           "settings": {
             "button_label": "More about us",
             "button_link": "shopify:\/\/pages\/our-story",
-            "button_style_secondary": false,
+            "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -131,13 +138,14 @@
         }
       },
       "block_order": [
+        "heading_KCLW63",
         "text_FYTx6B",
         "button_fMakp9"
       ],
       "settings": {
         "content_alignment": "center",
         "desktop_content_position": "center",
-        "color_scheme": "background-1",
+        "color_scheme": "inverse",
         "full_width": false,
         "background_texture": "lined",
         "padding_top": 36,
@@ -297,7 +305,7 @@
         "section_color_scheme": "",
         "background_transparent": true,
         "color_scheme": "scheme-1",
-        "background_texture": "paper",
+        "background_texture": "lined",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
