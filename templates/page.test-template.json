@@ -589,19 +589,20 @@
         "image_CaDzk9": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/p-2048-3-2.jpg"
           }
         },
         "product_R7CnRP": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "gift-card",
             "second_image": false
           }
         },
         "collection_rQ96cb": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "automated-collection"
           }
         }
       },
@@ -612,10 +613,10 @@
       ],
       "settings": {
         "heading": "Multimedia collage",
-        "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "product-card-wrapper",
+        "heading_size": "h0",
+        "desktop_layout": "right",
+        "mobile_layout": "collage",
+        "card_styles": "none",
         "color_scheme": "",
         "background_transparent": true,
         "padding_top": 36,
