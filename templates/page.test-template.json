@@ -370,15 +370,16 @@
         "button_xkmFyh"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/grapes-to-wine.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "overlap",
-        "color_scheme": "",
-        "background_texture": "lined",
-        "image_behavior": "none",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-d775a3dc-00b6-476b-8a2b-08d69daed06e",
+        "background_texture": "",
+        "image_behavior": "zoom-in",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
