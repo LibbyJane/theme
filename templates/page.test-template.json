@@ -143,7 +143,7 @@
         "share_pJpWmB"
       ],
       "settings": {
-        "product": "",
+        "product": "2018-edenvine-shiraz",
         "color_scheme": "",
         "background_texture": "paper",
         "full_width": false,
@@ -197,6 +197,49 @@
         "color_scheme": "",
         "full_width": true,
         "background_texture": "paper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_bhV3YW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JinnfL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_nUNwyb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "button_gYypUB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_JinnfL",
+        "text_nUNwyb",
+        "button_gYypUB"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "desktop_content_position": "center",
+        "color_scheme": "background-2",
+        "full_width": false,
+        "background_texture": "torn",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -939,6 +982,7 @@
     "collection_list_RBgpgt",
     "featured_product_h46rRC",
     "rich_text_KQQebi",
+    "rich_text_bhV3YW",
     "image_with_text_zd8kX7",
     "image_with_text_cDUWFH",
     "image_with_text_UkTiAm",
