@@ -549,19 +549,20 @@
         "image_6NKVR7": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg"
           }
         },
         "product_hceyPR": {
           "type": "product",
           "settings": {
-            "product": "",
-            "second_image": false
+            "product": "the-collection-snowboard-liquid",
+            "second_image": true
           }
         },
         "collection_Bq4beU": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "new-zealand"
           }
         }
       },
