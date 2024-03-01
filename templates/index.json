@@ -115,7 +115,7 @@
         "text_FYTx6B": {
           "type": "text",
           "settings": {
-            "text": "<p>We’ve embarked on an adventure based on good wine, good company and new destinations. We’re always discovering something new, and there’s so much more still to discover. Please join us!<\/p>"
+            "text": "<h5>We’ve embarked on an adventure based on good wine, good company and new destinations. We’re always discovering something new, and there’s so much more still to discover. Please join us!<\/h5>"
           }
         },
         "button_fMakp9": {
@@ -123,7 +123,7 @@
           "settings": {
             "button_label": "More about us",
             "button_link": "shopify:\/\/pages\/our-story",
-            "button_style_secondary": true,
+            "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -137,9 +137,9 @@
       "settings": {
         "content_alignment": "center",
         "desktop_content_position": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "background_texture": "paper",
+        "color_scheme": "background-1",
+        "full_width": false,
+        "background_texture": "lined",
         "padding_top": 36,
         "padding_bottom": 36
       }
