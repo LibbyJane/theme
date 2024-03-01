@@ -626,29 +626,23 @@
     "collage_hF6mnU": {
       "type": "collage",
       "blocks": {
-        "image_6RGUrf": {
-          "type": "image",
-          "settings": {
-          }
-        },
         "product_fzMiXD": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "2022-yarra-valley-pinot-grigio-with-video",
             "second_image": false
           }
         },
-        "collection_Gg9TNP": {
-          "type": "collection",
+        "image_wJB4c8": {
+          "type": "image",
           "settings": {
-            "collection": ""
+            "image": "shopify:\/\/shop_images\/leaves-5722122_1920.png"
           }
         }
       },
       "block_order": [
-        "image_6RGUrf",
         "product_fzMiXD",
-        "collection_Gg9TNP"
+        "image_wJB4c8"
       ],
       "settings": {
         "heading": "Multimedia collage",
@@ -668,9 +662,10 @@
         "column_FLRNjB": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/2048-4-3.jpg",
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
+            "text": "<h5>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/h5>",
+            "link_label": "Link label",
             "link": ""
           }
         },
