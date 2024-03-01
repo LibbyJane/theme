@@ -332,7 +332,7 @@
         "content_layout": "overlap",
         "color_scheme": "background-2",
         "background_texture": "torn",
-        "image_behavior": "zoom-in",
+        "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
