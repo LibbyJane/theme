@@ -10,7 +10,7 @@
     "featured_collection_hWDqrc": {
       "type": "featured-collection",
       "settings": {
-        "collection": "",
+        "collection": "frontpage",
         "title": "Featured collection",
         "heading_size": "h1",
         "description": "",
