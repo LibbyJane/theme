@@ -83,7 +83,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "collection": "all",
+        "collection": "australia",
         "title": "Our latest finds",
         "heading_size": "h1",
         "description": "",
