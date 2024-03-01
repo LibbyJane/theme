@@ -880,8 +880,8 @@
         "email_form_Kk3j6B"
       ],
       "settings": {
-        "color_scheme": "",
-        "background_texture": "paper",
+        "color_scheme": "background-1",
+        "background_texture": "lined",
         "full_width": false,
         "padding_top": 48,
         "padding_bottom": 40
@@ -898,6 +898,8 @@
         "store_message": "To:",
         "show_store_name": true,
         "show_store_contact_information": true,
+        "stamp_image": "shopify:\/\/shop_images\/1024-1-1.jpg",
+        "secondary_image": "shopify:\/\/shop_images\/wine-cantilena_9444d35d-7476-4f97-8e3a-7e0b953e2cc2.jpg",
         "padding_top": 36,
         "padding_bottom": 32
       }
