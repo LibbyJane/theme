@@ -93,6 +93,10 @@
     &.card--product {
         // product card in collage
         height: 100%;
+
+        .slider & {
+            height: auto;
+        }
     }
 
     &.card--standard {
