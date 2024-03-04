@@ -197,6 +197,7 @@
         "column_q4Unbi": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/2048-3-2.jpg",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "sdf",
@@ -206,6 +207,7 @@
         "column1": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
@@ -215,6 +217,7 @@
         "column2": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/white-wine-cheese_a11ecbca-ea2f-40b4-8a7b-52f4f915642d.jpg",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
@@ -241,8 +244,8 @@
         "title": "",
         "heading_size": "h1",
         "full_width": false,
-        "image_width": "third",
-        "image_ratio": "adapt",
+        "image_width": "full",
+        "image_ratio": "square",
         "columns_desktop": 3,
         "column_alignment": "center",
         "column_link_hover_style": "hover-highlight",
