@@ -10,7 +10,7 @@
             "image_overlay_opacity": 40,
             "heading": "Welcome to Road Trip Wines",
             "heading_size": "h1",
-            "subheading": "We’re pleased to meet you.",
+            "subheading": "We’re pleased to meet you!",
             "button_label": "Find your new favorite drop >",
             "link": "shopify:\/\/collections\/all",
             "button_style_secondary": "secondary",
@@ -101,7 +101,7 @@
           "settings": {
             "button_label": "More about us",
             "button_link": "shopify:\/\/pages\/our-story",
-            "button_style_secondary": false,
+            "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
