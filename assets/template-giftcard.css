@@ -611,6 +611,7 @@
 }
 
 .isolate {
+  overflow: clip;
   position: relative;
   z-index: 0;
 }
@@ -665,7 +666,7 @@ button.shopify-payment-button__button--unbranded,
   --button-foreground-color: rgba(var(--color-button-text), var(--alpha-link));
   --button-background-color: rgba(var(--color-button), var(--alpha-link));
   --color-svg-bg: rgb(var(--color-button));
-  --shadow-horizontal-offset: rgb(var(--button-shadow-horizontal-offset));
+  --shadow-horizontal-offset: var(--button-shadow-horizontal-offset);
   --shadow-vertical-offset: var(--button-shadow-vertical-offset);
   --shadow-blur-radius: var(--button-shadow-blur-radius);
   --shadow-opacity: var(--button-shadow-opacity);
@@ -684,6 +685,7 @@ button.shopify-payment-button__button--unbranded,
   border-width: var(--button-border-width);
   border-color: var(--button-background-color);
   border-radius: var(--button-border-radius);
+  box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
   color: var(--button-foreground-color);
   cursor: pointer;
   display: inline-flex;
@@ -709,6 +711,23 @@ button.shopify-payment-button__button--unbranded,
   .cart__dynamic-checkout-buttons iframe {
     padding: calc(var(--space) * 0.75) var(--space-med);
   }
+}
+.button:hover, .button:focus,
+.shopify-challenge__button:hover,
+.shopify-challenge__button:focus,
+.shopify-payment-button__button:hover,
+.shopify-payment-button__button:focus,
+.shopify-payment-button [role=button]:hover,
+.shopify-payment-button [role=button]:focus,
+.customer button:hover,
+.customer button:focus,
+button.shopify-payment-button__button--unbranded:hover,
+button.shopify-payment-button__button--unbranded:focus,
+.cart__dynamic-checkout-buttons [role=button]:hover,
+.cart__dynamic-checkout-buttons [role=button]:focus,
+.cart__dynamic-checkout-buttons iframe:hover,
+.cart__dynamic-checkout-buttons iframe:focus {
+  box-shadow: calc(var(--shadow-horizontal-offset) * 0.9) calc(var(--shadow-vertical-offset) * 0.9) calc(var(--shadow-blur-radius) * 0.9) rgba(var(--color-shadow), calc(var(--shadow-opacity) * 0.75));
 }
 .button:hover::before, .button:focus::before,
 .shopify-challenge__button:hover::before,
@@ -1269,6 +1288,7 @@ summary .icon-share,
 .button--secondary {
   background-color: transparent;
   border-color: var(--button-foreground-color);
+  box-shadow: none;
   color: var(--button-foreground-color);
   opacity: 1;
 }
@@ -1399,23 +1419,12 @@ summary .icon-share,
   mix-blend-mode: multiply;
 }
 
-:root {
-  --card-badge-offset: -4px;
-  --card-badge-surface-shadow-left: linear-gradient(-90deg,rgba(var(--color-shadow), 0.06) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0) 100%);
-  --card-badge-surface-shadow-right: linear-gradient(90deg,rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0.06) 100%);
-  --card-badge-drop-shadow-transform-left: skewY(-1deg) scaleY(75%) translateY(-1%);
-  --card-badge-drop-shadow-transform-right: skewY(3deg) rotate(2deg) scaleX(90%) scaleY(75%) translateY(-4%);
-  --card-badge-drop-shadow-left: 3px 3px 4px 1px rgba(var(--color-shadow), 1);
-  --card-badge-drop-shadow-right: 3px 5px 4px 1px rgba(var(--color-shadow), 1);
-  --card-badge-padding: 1.2rem;
-}
-
 .card-badge {
   --card-badge-offset: -4px;
   --card-badge-surface-shadow-left: linear-gradient(-90deg,rgba(var(--color-shadow), 0.06) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0) 100%);
-  --card-badge-surface-shadow-right: linear-gradient(90deg,rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0.06) 100%);
+  --card-badge-surface-shadow-right: linear-gradient(270deg,rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0.06) 100%);
   --card-badge-drop-shadow-transform-left: skewY(-1deg) scaleY(75%) translateY(-1%);
-  --card-badge-drop-shadow-transform-right: skewY(3deg) rotate(2deg) scaleX(90%) scaleY(75%) translateY(-4%);
+  --card-badge-drop-shadow-transform-right: skewY(-1deg) rotate(-1deg) scaleX(100%) scaleY(86%) translateY(1%) translateX(-2%);
   --card-badge-drop-shadow-left: 3px 3px 4px 1px rgba(var(--color-shadow), 1);
   --card-badge-drop-shadow-right: 3px 5px 4px 1px rgba(var(--color-shadow), 1);
   --card-badge-padding: 1.2rem;

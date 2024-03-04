@@ -1,4 +1,5 @@
 .product {
+    column-gap: calc(var(--grid-horizontal-spacing) * 2);
     margin: 0;
 }
 

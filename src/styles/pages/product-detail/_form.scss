@@ -39,14 +39,14 @@ variant-selects {
 }
 
 variant-radios {
-    .checkable__highlight {
-        transform: translateX(calc(-1 * var(--space-sm)));
-    }
+    // .checkable__highlight {
+    //     transform: translateX(calc(-1 * var(--space-sm)));
+    // }
 
     .disabled {
         @include disabled;
 
-        .checkable__highlight {
+        .checkable__highlight-text {
             text-decoration: line-through;
         }
     }

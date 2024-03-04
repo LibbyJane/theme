@@ -52,7 +52,7 @@ slider-component {
     padding-bottom: 0;
     position: relative;
     z-index: 1;
-    overflow: hidden;
+    // overflow: hidden; // product card badges get cut off - shadow too?
 
     &[aria-hidden="true"] {
         visibility: hidden;

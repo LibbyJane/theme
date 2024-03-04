@@ -1,5 +1,7 @@
 @charset "UTF-8";
 .product {
+  -moz-column-gap: calc(var(--grid-horizontal-spacing) * 2);
+       column-gap: calc(var(--grid-horizontal-spacing) * 2);
   margin: 0;
 }
 
@@ -395,15 +397,12 @@ variant-selects {
   display: block;
 }
 
-variant-radios .checkable__highlight {
-  transform: translateX(calc(-1 * var(--space-sm)));
-}
 variant-radios .disabled:not([disabled=false]) {
   filter: grayscale(1);
   pointer-events: none;
   opacity: 0.4;
 }
-variant-radios .disabled .checkable__highlight {
+variant-radios .disabled .checkable__highlight-text {
   text-decoration: line-through;
 }
 

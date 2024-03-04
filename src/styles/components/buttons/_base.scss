@@ -25,7 +25,7 @@ button.shopify-payment-button__button--unbranded,
     --color-svg-bg:  rgb(var(--color-button));
 
 // TODO: remove these?
-    --shadow-horizontal-offset: rgb(var(--button-shadow-horizontal-offset));
+    --shadow-horizontal-offset: var(--button-shadow-horizontal-offset);
     --shadow-vertical-offset: var(--button-shadow-vertical-offset);
     --shadow-blur-radius: var(--button-shadow-blur-radius);
     --shadow-opacity: var(--button-shadow-opacity);
@@ -38,6 +38,7 @@ button.shopify-payment-button__button--unbranded,
     border-width: var(--button-border-width);
     border-color:  var(--button-background-color);
     border-radius: var(--button-border-radius);
+    box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius) rgba(var(--color-shadow),var(--shadow-opacity));
     color: var(--button-foreground-color);
     cursor: pointer;
     display: inline-flex;
@@ -57,6 +58,8 @@ button.shopify-payment-button__button--unbranded,
     }
 
     &:hover, &:focus {
+        box-shadow: calc(var(--shadow-horizontal-offset) * 0.9) calc(var(--shadow-vertical-offset) * 0.9) calc(var(--shadow-blur-radius) * 0.9) rgba(var(--color-shadow), calc(var(--shadow-opacity) * 0.75));
+
         &::before {
             opacity: var(--alpha-link);
             transform: rotate(-1deg) scaleY(1.1) scaleX(1.05)
@@ -216,6 +219,7 @@ summary,
 .button--secondary {
     background-color: transparent;
     border-color:  var(--button-foreground-color);
+    box-shadow: none;
     color: var(--button-foreground-color);
     opacity: 1;
 

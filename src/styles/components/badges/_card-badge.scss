@@ -1,26 +1,12 @@
-:root {
-    --card-badge-offset: -4px;
-
-    --card-badge-surface-shadow-left: linear-gradient(-90deg,rgba(var(--color-shadow), 0.06) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0) 100%);
-    --card-badge-surface-shadow-right: linear-gradient(90deg,rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0.06) 100%);
-
-    --card-badge-drop-shadow-transform-left: skewY(-1deg) scaleY(75%) translateY(-1%);
-    --card-badge-drop-shadow-transform-right: skewY(3deg) rotate(2deg) scaleX(90%) scaleY(75%) translateY(-4%);
-
-    --card-badge-drop-shadow-left:  3px 3px 4px 1px rgba(var(--color-shadow), 1);
-    --card-badge-drop-shadow-right: 3px 5px 4px 1px rgba(var(--color-shadow), 1);
-
-    --card-badge-padding: 1.2rem;
-}
 
 .card-badge {
     --card-badge-offset: -4px;
 
     --card-badge-surface-shadow-left: linear-gradient(-90deg,rgba(var(--color-shadow), 0.06) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0) 100%);
-    --card-badge-surface-shadow-right: linear-gradient(90deg,rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0.06) 100%);
+    --card-badge-surface-shadow-right: linear-gradient(270deg,rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0.06) 100%);
 
     --card-badge-drop-shadow-transform-left: skewY(-1deg) scaleY(75%) translateY(-1%);
-    --card-badge-drop-shadow-transform-right: skewY(3deg) rotate(2deg) scaleX(90%) scaleY(75%) translateY(-4%);
+    --card-badge-drop-shadow-transform-right: skewY(-1deg) rotate(-1deg) scaleX(100%) scaleY(86%) translateY(1%) translateX(-2%);
 
     --card-badge-drop-shadow-left:  3px 3px 4px 1px rgba(var(--color-shadow), 1);
     --card-badge-drop-shadow-right: 3px 5px 4px 1px rgba(var(--color-shadow), 1);
