@@ -2,7 +2,7 @@
     --card-badge-padding: 0.8rem;
 
     @media screen and (min-width: 990px) {
-        --card-badge-padding: 1rem;
+        --card-badge-padding: 1.2rem;
     }
 }
 
@@ -23,7 +23,7 @@
         align-items: stretch;
         font-size: var(--font-size-h6);
         font-weight: bold;
-        line-height: 1.2;
+        line-height: 1;
         font-family: var(--font-heading-family);
     position: absolute;
     z-index: 1;
@@ -67,7 +67,7 @@
     // font-weight: bold;
     min-width: 10rem;
     line-height: 1;
-    padding: var(--card-badge-padding);
+    padding: calc(var(--card-badge-padding) + 2px) var(--card-badge-padding) calc(var(--card-badge-padding) - 2px);
     text-align: center;
     text-transform: uppercase;
     position: relative;
