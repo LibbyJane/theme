@@ -1,38 +1,55 @@
 @import "helpers/common";
 
 slider-component {
-    --desktop-margin-left-first-item: max(5rem, calc((100vw - var(--page-width) - var(--grid-horizontal-spacing)) / 2));
+    --desktop-margin-left-first-item: max(5rem, calc((100vw - var(--page-width) + var(--grid-horizontal-spacing)) / 2));
     position: relative;
     display: block;
-    margin-bottom: var(--space-med);
+    width: 100%;
+    max-width: var(--page-width);
+    margin: 0 auto var(--space-med);
+    padding-inline: var(--content-padding-inline);
 
-    &.page-width {
-        padding-inline: var(--content-padding-inline);
+    // &.slider-component-mobile {
+    //     @media screen and (max-width: 749px) {
+    //         padding-inline: 0;
+
+    //         .slider__slide:first-child {
+    //             margin-left: var(--content-padding-inline);
+    //         }
+
+    //         // .background-theme & {
+    //         //     margin-inline: var(--full-width-offset-margin);
+    //         // }
+    //     }
+    // }
+
+    // &.slider-component-full-width {
+    //     --desktop-margin-left-first-item: var(--space-med);
+
+    // }
+
+    // &.slider-component-desktop {
+    //     @media screen and (min-width: 750px) {
+    //         --content-padding-inline: 0;
+    //     }
+    // }
+}
+
+.slider-component-full-width {
+    max-width: none;
+}
+
+.slider-component-mobile {
+    @media screen and (max-width: 989px) {
+        max-width: none;
+        padding-inline: 0;
     }
+}
 
-    &.slider-component-mobile {
-        @media screen and (max-width: 749px) {
-            padding-inline: 0;
-
-            .slider__slide:first-child {
-                margin-left: var(--content-padding-inline);
-            }
-
-            // .background-theme & {
-            //     margin-inline: var(--full-width-offset-margin);
-            // }
-        }
-    }
-
-    &.slider-component-full-width {
-        --desktop-margin-left-first-item: var(--space-med);
-
-    }
-
-    &.slider-component-desktop {
-        @media screen and (min-width: 750px) {
-            --content-padding-inline: 0;
-        }
+.slider-component-desktop {
+    @media screen and (min-width: 990px) {
+        max-width: none;
+        padding-inline: 0;
     }
 }
 
@@ -52,7 +69,6 @@ slider-component {
     padding-bottom: 0;
     position: relative;
     z-index: 1;
-    // overflow: hidden; // product card badges get cut off - shadow too?
 
     &[aria-hidden="true"] {
         visibility: hidden;

@@ -38,6 +38,7 @@
   --icon-size: 1.5rem;
   --icon-size-sm: 1.25rem;
   --icon-size-xs: 1rem;
+  --icon-size-xxs: 0.75rem;
   --icon-size-lg: 2rem;
   --icon-size-xl: 3rem;
   --icon-size-hero: 4rem;
@@ -1419,21 +1420,29 @@ summary .icon-share,
   mix-blend-mode: multiply;
 }
 
+:root {
+  --card-badge-padding: 0.8rem;
+}
+@media screen and (min-width: 990px) {
+  :root {
+    --card-badge-padding: 1rem;
+  }
+}
+
 .card-badge {
   --card-badge-offset: -4px;
   --card-badge-surface-shadow-left: linear-gradient(-90deg,rgba(var(--color-shadow), 0.06) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0) 100%);
-  --card-badge-surface-shadow-right: linear-gradient(270deg,rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0.06) 100%);
+  --card-badge-surface-shadow-right: linear-gradient(90deg,rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), .05) 7%, rgba(var(--color-shadow), 0.06) 50%)
   --card-badge-drop-shadow-transform-left: skewY(-1deg) scaleY(75%) translateY(-1%);
   --card-badge-drop-shadow-transform-right: skewY(-1deg) rotate(-1deg) scaleX(100%) scaleY(86%) translateY(1%) translateX(-2%);
   --card-badge-drop-shadow-left: 3px 3px 4px 1px rgba(var(--color-shadow), 1);
   --card-badge-drop-shadow-right: 3px 5px 4px 1px rgba(var(--color-shadow), 1);
-  --card-badge-padding: 1.2rem;
   border-radius: 0;
   display: flex;
   align-items: stretch;
   font-size: var(--font-size-h6);
   font-weight: bold;
-  line-height: 1;
+  line-height: 1.2;
   font-family: var(--font-heading-family);
   position: absolute;
   z-index: 1;
@@ -1506,13 +1515,23 @@ summary .icon-share,
 }
 
 .card-badge--top-left {
-  top: calc(var(--card-badge-padding) / 2);
+  top: calc(var(--card-badge-padding) / -2);
   left: var(--card-badge-offset);
+}
+@media screen and (min-width: 990px) {
+  .card-badge--top-left {
+    top: calc(var(--card-badge-padding) / 2);
+  }
 }
 
 .card-badge--top-right {
-  top: calc(var(--card-badge-padding) / 2);
+  top: calc(var(--card-badge-padding) / -2);
   right: var(--card-badge-offset);
+}
+@media screen and (min-width: 990px) {
+  .card-badge--top-right {
+    top: calc(var(--card-badge-padding) / 2);
+  }
 }
 
 .card-badge--bottom-left {
