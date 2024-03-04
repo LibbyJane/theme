@@ -365,6 +365,8 @@ slider-component {
   scrollbar-color: rgb(var(--color-foreground)) rgba(var(--color-foreground), 0.04);
   -ms-overflow-style: none;
   scrollbar-width: none;
+  padding-block: var(--space-sm);
+  overflow: hidden;
 }
 @media (prefers-reduced-motion) {
   .slider {
