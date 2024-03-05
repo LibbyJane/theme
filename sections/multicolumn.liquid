@@ -180,7 +180,7 @@
         </slider-component>
 
         {%- if section.settings.button_label != blank -%}
-            <div class="center">
+            <footer class="button-bar {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %}data-cascade{% endif %} {{ block.shopify_attributes }} >
                 <a
                     class="button button--primary"
                     {% if section.settings.button_link == blank %}
@@ -191,7 +191,7 @@
                     >
                     {{ section.settings.button_label | escape }}
                 </a>
-            </div>
+            </footer>
         {%- endif -%}
     </div>
 </div>

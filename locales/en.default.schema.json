@@ -2787,7 +2787,7 @@
           "label": "Heading"
         },
         "image_width": {
-          "label": "Image width",
+          "label": "Maximum image width",
           "options__1": {
             "label": "One-third width of column"
           },

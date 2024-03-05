@@ -137,7 +137,7 @@
     </slider-component>
 
     {%- if section.settings.show_view_all and more_in_collection -%}
-        <div class="button-bar margin-top--lg{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <footer class="button-bar margin-top--lg{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
             <a
                 href="{{ section.settings.collection.url }}"
                 class="{% if section.settings.view_all_style == 'link' %}underlined-link{% elsif section.settings.view_all_style == 'solid' %}button button--primary{% else %}button button--secondary{% endif %}"
@@ -145,7 +145,7 @@
             >
                 {{ 'sections.featured_collection.view_all' | t }}
             </a>
-        </div>
+        </footer>
     {%- endif -%}
     {% if section.settings.image_shape == 'arch' %}
         {% render 'mask-arch' %}

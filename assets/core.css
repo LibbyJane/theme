@@ -33,8 +33,8 @@
   --space-xl: calc(var(--space) * 3);
   --space-xxl: calc(var(--space) * 5);
   --space-xxxl: calc(var(--space) * 7);
-  --page-width--medium: 99rem;
-  --page-width--narrow: 72.6rem;
+  --page-width-medium: 99rem;
+  --page-width-narrow: 72.6rem;
   --icon-size: 1.5rem;
   --icon-size-sm: 1.25rem;
   --icon-size-xs: 1rem;
@@ -1098,11 +1098,11 @@ a {
 }
 
 .page-width--medium {
-  max-width: var(--page-width--medium);
+  max-width: var(--page-width-medium);
 }
 
 .page-width--narrow {
-  max-width: var(--page-width--narrow);
+  max-width: var(--page-width-narrow);
 }
 
 @media screen and (min-width: 750px) {
@@ -4075,7 +4075,7 @@ input::-webkit-search-decoration {
   .postcard {
     grid-template-areas: "postcard-title postcard-title postcard-title postcard-send" "postcard-fields postcard-fields blank postcard-send";
     grid-template-columns: 1fr max-content max-content minmax(40%, max-content);
-    width: var(--page-width--narrow);
+    width: var(--page-width-narrow);
     max-width: 100%;
   }
 }
