@@ -10,7 +10,7 @@
             "image_overlay_opacity": 40,
             "heading": "Welcome to Road Trip Wines",
             "heading_size": "h1",
-            "subheading": "We’re pleased to meet you!",
+            "subheading": "",
             "button_label": "Find your new favorite drop >",
             "link": "shopify:\/\/collections\/all",
             "button_style_secondary": "secondary",
