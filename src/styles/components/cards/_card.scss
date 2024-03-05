@@ -96,6 +96,10 @@
 
         .slider & {
             height: 100%;
+
+            .ratio {
+                height: auto;
+            }
         }
     }
 

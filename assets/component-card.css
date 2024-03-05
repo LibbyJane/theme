@@ -148,6 +148,9 @@
 .slider .card.card--product {
   height: 100%;
 }
+.slider .card.card--product .ratio {
+  height: auto;
+}
 .slider .card.card--standard.ratio,
 .slider .card.card--standard .ratio {
   height: auto;

@@ -42,7 +42,7 @@
     </a>
 
     {%- if shop.customer_accounts_enabled and customer == null -%}
-      <h3 class="cart__login-title margin-top--lg">{{ 'sections.cart.login.title' | t }}</h2>
+      <h3 class="cart__login-title margin-top-lg">{{ 'sections.cart.login.title' | t }}</h2>
       <p class="rte">
         {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
       </p>

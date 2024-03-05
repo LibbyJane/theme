@@ -80,7 +80,7 @@ slider-component {
     -ms-overflow-style: none;
     scrollbar-width: none;
     // padding-block: var(--space-sm); // needs to have a more specific selector
-    overflow: clip;
+    // overflow: clip; // cutting off blog card shadow
 
     @media (prefers-reduced-motion) {
         scroll-behavior: auto;

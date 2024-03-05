@@ -39,7 +39,7 @@
         {%- endfor -%}
     {%- endif -%}
 
-    <div class="article-template__main page-width page-width--narrow default-content-style content-padding isolate {% unless article.image %}margin-top--lg {% endunless %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="article-template__main page-width page-width--narrow default-content-style content-padding isolate {% unless article.image %}margin-top-lg {% endunless %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
         {%- for block in section.blocks -%}
             {%- case block.type -%}
                 {%- when '@app' -%}
@@ -79,12 +79,12 @@
             {%- endcase -%}
         {%- endfor -%}
 
-        <div class="article-template__back {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-            <a href="{{ blog.url }}" class="article-template__link button--plain" style="--rotate-icon: 180">
+        <footer class="button-bar margin-top-lg margin-bottom-med{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            <a href="{{ blog.url }}" class="button button--plain text-display" style="--rotate-icon: 180">
                 {% render 'icon-arrow' %}
                 {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
             </a>
-        </div>
+        </footer>
     </div>
     {%- if blog.comments_enabled? -%}
         <div class="article-template__comment-wrapper page-width page-width--narrow default-content-style content-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
