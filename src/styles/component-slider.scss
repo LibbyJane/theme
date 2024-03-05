@@ -79,8 +79,8 @@ slider-component {
     scrollbar-color: rgb(var(--color-foreground)) rgba(var(--color-foreground), 0.04);
     -ms-overflow-style: none;
     scrollbar-width: none;
-    padding-block: var(--space-sm);
-    overflow: hidden;
+    // padding-block: var(--space-sm); // needs to have a more specific selector
+    overflow: clip;
 
     @media (prefers-reduced-motion) {
         scroll-behavior: auto;
