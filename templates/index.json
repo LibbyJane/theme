@@ -35,7 +35,7 @@
         "image": "shopify:\/\/shop_images\/1024-4-3.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "overlap",
@@ -160,6 +160,7 @@
         "text_FYTx6B",
         "button_fMakp9"
       ],
+      "disabled": true,
       "settings": {
         "content_alignment": "center",
         "desktop_content_position": "center",
