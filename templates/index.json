@@ -20,8 +20,8 @@
         "button_dfaM8i": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "More about us",
+            "button_link": "shopify:\/\/pages\/our-story",
             "button_style_secondary": "secondary"
           }
         }
@@ -32,7 +32,7 @@
         "button_dfaM8i"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
+        "image": "shopify:\/\/shop_images\/1024-4-3.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
