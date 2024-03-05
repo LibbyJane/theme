@@ -194,14 +194,14 @@
     "featured_blog_yj8qah": {
       "type": "featured-blog",
       "settings": {
-        "title": "Blog posts",
+        "title": "Latest from the blog",
         "heading_size": "h1",
-        "blog": "",
+        "blog": "news",
         "post_limit": 3,
         "columns_desktop": 3,
-        "color_scheme": "",
+        "color_scheme": "scheme-d775a3dc-00b6-476b-8a2b-08d69daed06e",
         "background_transparent": true,
-        "content_color_scheme": "",
+        "content_color_scheme": "background-1",
         "content_background_width": "page",
         "background_texture": "lined",
         "show_image": true,
