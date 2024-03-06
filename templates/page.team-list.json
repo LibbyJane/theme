@@ -39,12 +39,45 @@
             "link_label": "Get in touch",
             "link": "shopify:\/\/pages\/contact"
           }
+        },
+        "column_E78ga8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grey-woman-on-steps.jpg",
+            "title": "Marley Rowe",
+            "text": "<h5>Marketing<\/h5><p>Marley shines at all things social - hit her up if you'd like to do a collab.<\/p>",
+            "link_label": "Get in touch",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "column_DRmj8R": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/modern-business-woman-portrait.jpg",
+            "title": "Maizie Wise",
+            "text": "<h5>Legals<\/h5><p>Maizie takes a-maiz-ing care of all the legal nitty gritty. She's the best in the business.<\/p>",
+            "link_label": "Get in touch",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "column_XfJyrg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mens-fashion-stood-in-vineyard-shirt-and-shorts.jpg",
+            "title": "Barney Sharpe",
+            "text": "<h5>Tours & Travel<\/h5><p>Barney loves to travel and meet the makers, then turn that knowledge into fascinating tours for the public.<\/p>",
+            "link_label": "Get in touch",
+            "link": "shopify:\/\/pages\/contact"
+          }
         }
       },
       "block_order": [
         "column_dBaeEM",
         "column_EggPnK",
-        "column_hHnPrG"
+        "column_hHnPrG",
+        "column_E78ga8",
+        "column_DRmj8R",
+        "column_XfJyrg"
       ],
       "settings": {
         "title": "",
