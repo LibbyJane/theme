@@ -72,6 +72,7 @@
         },
         "column_qqtfhW": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/woman-sits-at-wooden-table-and-works-on-a-laptop.jpg",
             "title": "Dillon Sharp",
@@ -82,6 +83,7 @@
         },
         "column_LnHrr9": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/woman-in-a-blue-shirt-and-glasses-smiles-wide.jpg",
             "title": "Mari Thompson",
@@ -109,7 +111,7 @@
         "image_ratio": "square",
         "columns_desktop": 3,
         "column_alignment": "center",
-        "column_link_hover_style": "hover-highlight",
+        "column_link_hover_style": "",
         "button_label": "Contact us",
         "button_link": "shopify:\/\/pages\/contact",
         "section_color_scheme": "background-1",
