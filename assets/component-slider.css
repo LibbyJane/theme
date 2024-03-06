@@ -334,12 +334,18 @@ slider-component {
     max-width: none;
     padding-inline: 0;
   }
+  .texture-lined .slider-component-mobile {
+    padding-left: 0;
+  }
 }
 
 @media screen and (min-width: 990px) {
   .slider-component-desktop {
     max-width: none;
     padding-inline: 0;
+  }
+  .texture-lined .slider-component-desktop {
+    padding-left: 0;
   }
 }
 
@@ -348,21 +354,6 @@ slider-component {
     padding-bottom: var(--space-xl);
   }
 }
-.slider__slide {
-  --focus-outline-padding: var(--space-sm);
-  --shadow-padding-top: calc((var(--shadow-vertical-offset) * -1 + var(--shadow-blur-radius)) * var(--shadow-visible));
-  --shadow-padding-bottom: calc((var(--shadow-vertical-offset) + var(--shadow-blur-radius)) * var(--shadow-visible));
-  scroll-snap-align: start;
-  flex-shrink: 0;
-  padding-bottom: 0;
-  position: relative;
-  z-index: 1;
-  margin-block: var(--slider-block-space) !important;
-}
-.slider__slide[aria-hidden=true] {
-  visibility: hidden;
-}
-
 .slider {
   scrollbar-color: rgb(var(--color-foreground)) rgba(var(--color-foreground), 0.04);
   -ms-overflow-style: none;
@@ -415,6 +406,23 @@ slider-component {
   }
 }
 
+.slider__slide {
+  --focus-outline-padding: var(--space-sm);
+  --shadow-padding-top: calc((var(--shadow-vertical-offset) * -1 + var(--shadow-blur-radius)) * var(--shadow-visible));
+  --shadow-padding-bottom: calc((var(--shadow-vertical-offset) + var(--shadow-blur-radius)) * var(--shadow-visible));
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  padding-bottom: 0;
+  position: relative;
+  z-index: 1;
+  margin-block: var(--slider-block-space) !important;
+}
+.slider__slide[aria-hidden=true] {
+  visibility: hidden;
+}
+.texture-lined .slider__slide {
+  border-left: var(--texture-lined-border-size) solid transparent;
+}
 @media screen and (max-width: 749px) {
   .slider--mobile .slider__slide {
     margin-bottom: 0;
@@ -489,7 +497,7 @@ slider-component {
     padding-bottom: var(--focus-outline-padding);
   }
   .slider.slider--tablet.contains-content-container .slider__slide {
-    --focus-outline-padding: 0rem;
+    --focus-outline-padding: 0;
   }
 }
 .slider--everywhere {
@@ -532,12 +540,20 @@ slider-component {
     margin-left: var(--desktop-margin-left-first-item);
     scroll-margin-left: var(--desktop-margin-left-first-item);
   }
+  .texture-lined .slider--desktop .slider__slide:first-child {
+    margin-left: calc(var(--desktop-margin-left-first-item) + var(--texture-lined-border-size));
+    scroll-margin-left: calc(var(--desktop-margin-left-first-item) + var(--texture-lined-border-size));
+  }
   .slider-component-full-width .slider--desktop {
     scroll-padding-left: var(--space-med);
   }
   .slider-component-full-width .slider--desktop .slider__slide:first-child {
     margin-left: var(--space-med);
     scroll-margin-left: var(--space-med);
+  }
+  .texture-lined .slider-component-full-width .slider--desktop .slider__slide:first-child {
+    margin-left: calc(var(--space-med) + var(--texture-lined-border-size));
+    scroll-margin-left: calc(var(--space-med) + var(--texture-lined-border-size));
   }
   /* Fix to show some space at the end of our sliders in all browsers */
   .slider-component-full-width .slider--desktop:after {

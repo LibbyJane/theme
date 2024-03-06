@@ -117,6 +117,9 @@
 .banner__box.texture-torn {
   padding: calc(var(--content-padding-inline) + var(--space-sm));
 }
+.banner__box.texture-lined {
+  padding-left: calc(var(--content-padding-inline) + var(--texture-lined-border-size));
+}
 .banner__box.gradient {
   transform: perspective(0);
 }

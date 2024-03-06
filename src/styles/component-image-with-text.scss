@@ -11,6 +11,16 @@
 
     .grid__item {
         position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
     }
 
     .image-with-text .global-media-settings {
@@ -21,13 +31,9 @@
         margin-bottom: var(--space-med);
     }
 
-    .inline-richtext,
-    .rte,
-    .image-with-text__button
-    .image-with-text__text {
-        &:last-child {
-            margin-bottom: 0;
-        }
+    /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
+    .gradient {
+        transform: perspective(0);
     }
 }
 
@@ -67,7 +73,7 @@
     position: relative;
     overflow: clip;
 
-    > svg {
+    >svg {
         position: absolute;
         left: 50%;
         top: 50%;
@@ -77,7 +83,7 @@
         fill: currentColor;
     }
 
-    &:is(.animate--ambient, .animate--zoom-in) > svg {
+    &:is(.animate--ambient, .animate--zoom-in)>svg {
         top: 0;
         left: 0;
         transform: translate(0);
@@ -98,69 +104,52 @@
 .image-with-text__content {
     --translateX: 0;
     --translateY: 0;
-    --large-padding: var(--space-xxl) calc( var(--space-xxl) / var(--font-body-scale)) calc( var(--space-xxl) - var(--space));
+
+    border-radius: var(--text-boxes-radius);
+    box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset) var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+    word-break: break-word;
     align-self: center;
     display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
-    padding: var(--content-padding-lg);
+    padding: var(--space-xl) var(--space-lg) var(--space-med);
     position: relative;
     transform: translateX(var(--translateX)) translateY(var(--translateY));
     z-index: var(--zi-base);
 
-    // @media screen and (min-width: 750px) {
-    //     padding: var(--large-padding);
-    // }
+    @media screen and (min-width: 990px) {
+        padding: var(--space-xxl);
+    }
 
-    // &.texture-torn {
-    //     --padding:  calc(var(--content-padding-inline) * 2);
-    //     padding: var(--padding);
-    //     padding-bottom: calc(var(--padding) - var(--space));
+    &.texture-lined {
+        padding-left: calc(var(--space-lg) + var(--texture-lined-border-size));
 
-    //     @media screen and (min-width: 750px) {
-    //         padding: var(--large-padding);
-    //     }
-    // }
-
-    // &.texture-lined {
-    //     overflow: visible;
-
-    //     --translateX: calc(var(--texture-lined-border-size)/2);
-    //     max-width: calc(100% - var(--texture-lined-border-size));
-
-    //     @media screen and (min-width: 750px) {
-    //         --translateX: 0;
-    //     }
-    // }
+        @media screen and (min-width: 990px) {
+            padding-left: calc(var(--space-xxl) + var(--texture-lined-border-size));
+        }
+    }
 }
 
-.image-with-text .grid__item::after {
-    content : '';
-    position: absolute;
-    top     : 0;
-    left    : 0;
-    width   : 100%;
-    height  : 100%;
-    z-index : -1;
-
+.image-with-text__text {
+    margin-bottom: var(--space-sm);
 }
 
 .image-with-text:not(.image-with-text--overlap) .image-with-text__media-item:after {
     border-radius: var(--media-radius);
-    box-shadow   : var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
+    box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
 }
 
 .image-with-text:not(.image-with-text--overlap) .image-with-text__text-item:after {
     border-radius: var(--text-boxes-radius);
-    box-shadow   : var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset) var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+    box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset) var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
 }
 
 .image-with-text .image-with-text__media-item>* {
     border-radius: var(--media-radius);
-    overflow     : hidden;
-    box-shadow   : var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
+    overflow: hidden;
+    box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
 }
 
 
@@ -185,12 +174,12 @@
     .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__media img,
     .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__media .placeholder-svg {
         border-bottom-right-radius: 0;
-        border-bottom-left-radius : 0;
+        border-bottom-left-radius: 0;
     }
 
     .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__text-item:after,
     .image-with-text.collapse-corners:not(.image-with-text--overlap) .grid__item .image-with-text__content {
-        border-top-left-radius : 0;
+        border-top-left-radius: 0;
         border-top-right-radius: 0;
     }
 
@@ -214,7 +203,7 @@
     margin: calc(var(--space) * -1) auto 0;
 
     @media screen and (min-width: 750px) {
-        width : 90%;
+        width: 90%;
         margin: -3rem auto 0;
     }
 }
@@ -226,12 +215,12 @@
 
     .image-with-text__content--bottom {
         justify-content: flex-end;
-        align-self     : flex-end;
+        align-self: flex-end;
     }
 
     .image-with-text__content--top {
         justify-content: flex-start;
-        align-self     : flex-start;
+        align-self: flex-start;
     }
 
     .image-with-text__content--desktop-right>* {
@@ -255,15 +244,15 @@
     }
 
     .image-with-text--overlap .image-with-text__content {
-        height     : auto;
-        width      : calc(100% + 4rem);
-        min-width  : calc(100% + 4rem);
-        margin-top : 0;
+        height: auto;
+        width: calc(100% + 4rem);
+        min-width: calc(100% + 4rem);
+        margin-top: 0;
         margin-left: -4rem;
     }
 
     .image-with-text--overlap .image-with-text__grid--reverse .image-with-text__content {
-        margin-left : 0;
+        margin-left: 0;
         margin-right: -4rem;
     }
 
@@ -295,7 +284,7 @@
     .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__text-item:after,
     .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__content,
     .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__content:after {
-        border-top-right-radius   : 0;
+        border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
 
@@ -306,7 +295,7 @@
     .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__media,
     .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__media img,
     .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__media .placeholder-svg {
-        border-top-left-radius   : 0;
+        border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
 
@@ -321,35 +310,4 @@
 
 .image-with-text:not(.collapse-corners, .image-with-text--overlap) .image-with-text__media-item {
     z-index: 2;
-}
-
-// /* Needed for gradient continuity with or without animation so that transparent PNG images come up as we would expect */
-// .image-with-text:not(.image-with-text--overlap) .color-background-1,
-// .image-with-text.image-with-text--overlap .image-with-text__media.color-background-1 {
-//   background: transparent;
-// }
-
-/* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
-.image-with-text .gradient {
-    transform: perspective(0);
-}
-
-.image-with-text__content {
-    border-radius: var(--text-boxes-radius);
-    box-shadow   : var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset) var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
-    word-break   : break-word;
-}
-
-@media screen and (min-width: 990px) {
-    .image-with-text__content {
-        padding: 6rem 7rem 7rem;
-    }
-}
-
-
-/* check for flexbox gap in older Safari versions */
-@supports not (inset: 10px) {
-    .image-with-text .grid {
-        margin-left: 0;
-    }
 }

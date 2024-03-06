@@ -77,6 +77,11 @@
         padding: calc(var(--content-padding-inline) + var(--space-sm));
     }
 
+    &.texture-lined {
+        padding-left: calc(var(--content-padding-inline) + var(--texture-lined-border-size));
+    }
+
+
     /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
     &.gradient {
         transform: perspective(0);

@@ -3,36 +3,20 @@
     @include default-texture;
 }
 
-.texture-paper-craft {
-    background-color: rgb(var(--color-background));
-    background-blend-mode: multiply;
-    background-image: url('texture-paper-white.jpg'), var(--background-gradient);
-    background-position: top center, center;
-    background-repeat: repeat;
-    background-size: 100px auto, cover;
-    position: relative;
 
-    &::after {
-        content: '';
-        position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            filter: url(#tornPaper);
-            height: 4rem;
-    }
+:root {
+    --texture-lined-border-size: 30px;
 }
 
 .texture-lined {
     background: transparent;
     position: relative;
+
     &::before {
         content: '';
         position: absolute;
         inset: 0;
         z-index: -1;
-
-        --texture-lined-border-size: 30px;
 
         $vertical-line-offset: 12px;
         $vertical-line-offset2: $vertical-line-offset + 3px;
@@ -59,7 +43,27 @@
             mask-repeat: no-repeat repeat;
         }
     }
+}
 
+
+.texture-paper-craft {
+    background-color: rgb(var(--color-background));
+    background-blend-mode: multiply;
+    background-image: url('texture-paper-white.jpg'), var(--background-gradient);
+    background-position: top center, center;
+    background-repeat: repeat;
+    background-size: 100px auto, cover;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            filter: url(#tornPaper);
+            height: 4rem;
+    }
 }
 
 .texture-blueprint {

@@ -30,8 +30,11 @@
 }
 
 @media screen and (max-width: 749px) {
-  .blog__post.article {
-    width: calc(100% - 3rem - var(--grid-horizontal-spacing));
+  .blog__post.blog__post {
+    width: calc(100% - var(--space-lg) - var(--grid-horizontal-spacing));
+  }
+  .texture-lined .blog__post.blog__post {
+    width: calc(100% - var(--space) - var(--texture-lined-border-size) - var(--grid-horizontal-spacing));
   }
 }
 .background-secondary .blog-placeholder__content {
@@ -44,15 +47,6 @@
 @media screen and (min-width: 750px) {
   .blog__button {
     margin-top: 5rem;
-  }
-}
-
-/* check for flexbox gap in older Safari versions */
-@supports not (inset: 10px) {
-  @media screen and (min-width: 750px) {
-    .blog__posts .article + .article {
-      margin-left: var(--grid-horizontal-spacing);
-    }
   }
 }
 /*# sourceMappingURL=section-featured-blog.css.map */

@@ -1264,6 +1264,9 @@ a {
   .grid--peek.slider .grid__item:first-of-type {
     margin-left: var(--grid-horizontal-spacing);
   }
+  .texture-lined .grid--peek.slider .grid__item:first-of-type {
+    margin-left: calc(var(--grid-horizontal-spacing) + var(--texture-lined-border-size));
+  }
   .grid--peek.slider--mobile {
     margin: 0;
     width: 100%;
@@ -1302,7 +1305,10 @@ a {
     width: calc(50% - var(--grid-horizontal-spacing) - var(--space));
   }
   .slider--tablet.grid--peek .grid__item:first-of-type {
-    margin-left: 1.5rem;
+    margin-left: var(--space-med);
+  }
+  .texture-lined .slider--tablet.grid--peek .grid__item:first-of-type {
+    margin-left: calc(var(--space-med) + var(--texture-lined-border-size));
   }
   .grid--2-col-tablet-down .grid__item {
     width: calc(50% - var(--grid-horizontal-spacing) / 2);
@@ -1972,23 +1978,8 @@ html.no-js .no-js-hidden {
   box-shadow: 0 0 5px rgba(var(--color-shadow), 0.1);
 }
 
-.texture-paper-craft {
-  background-color: rgb(var(--color-background));
-  background-blend-mode: multiply;
-  background-image: url("texture-paper-white.jpg"), var(--background-gradient);
-  background-position: top center, center;
-  background-repeat: repeat;
-  background-size: 100px auto, cover;
-  position: relative;
-}
-.texture-paper-craft::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  filter: url(#tornPaper);
-  height: 4rem;
+:root {
+  --texture-lined-border-size: 30px;
 }
 
 .texture-lined {
@@ -2000,7 +1991,6 @@ html.no-js .no-js-hidden {
   position: absolute;
   inset: 0;
   z-index: -1;
-  --texture-lined-border-size: 30px;
   background-color: rgb(var(--color-background));
   background-blend-mode: multiply;
   background-image: linear-gradient(90deg, transparent 12px, rgba(171, 206, 212, 0.2) 12px, rgba(171, 206, 212, 0.2) 15px, transparent 15px), linear-gradient(#eee 0.1rem, transparent 0.1rem), var(--background-gradient);
@@ -2022,6 +2012,25 @@ html.no-js .no-js-hidden {
     -webkit-mask-repeat: no-repeat repeat;
             mask-repeat: no-repeat repeat;
   }
+}
+
+.texture-paper-craft {
+  background-color: rgb(var(--color-background));
+  background-blend-mode: multiply;
+  background-image: url("texture-paper-white.jpg"), var(--background-gradient);
+  background-position: top center, center;
+  background-repeat: repeat;
+  background-size: 100px auto, cover;
+  position: relative;
+}
+.texture-paper-craft::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: url(#tornPaper);
+  height: 4rem;
 }
 
 .texture-blueprint {
@@ -3517,6 +3526,10 @@ svg {
   vector-effect: non-scaling-stroke;
 }
 
+.global-media-settings {
+  border: var(--media-border-width) solid rgba(var(--color-media-border), var(--media-border-opacity));
+}
+
 .placeholder,
 .placeholder-svg {
   background-color: rgb(var(--color-background));
@@ -4735,11 +4748,6 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
   display: inline-flex;
   float: right;
   margin: 0 0 var(--space) var(--space-med);
-}
-@media screen and (min-width: 750px) {
-  .rte-img--pull-right {
-    margin: 0 -4rem var(--space) var(--space-med);
-  }
 }
 
 .rte.inline-richtext a {
