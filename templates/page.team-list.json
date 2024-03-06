@@ -69,16 +69,6 @@
             "link_label": "Get in touch",
             "link": "shopify:\/\/pages\/contact"
           }
-        },
-        "column_HBdCaA": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/woman-sits-at-wooden-table-and-works-on-a-laptop.jpg",
-            "title": "Dillon Sharp",
-            "text": "<h5>Development<\/h5><p>Tech was almost Dillon's first language, and she brings the know-how to all our online platform with flair and a smile.<\/p>",
-            "link_label": "",
-            "link": "shopify:\/\/pages\/contact"
-          }
         }
       },
       "block_order": [
@@ -87,8 +77,7 @@
         "column_hHnPrG",
         "column_E78ga8",
         "column_DRmj8R",
-        "column_XfJyrg",
-        "column_HBdCaA"
+        "column_XfJyrg"
       ],
       "settings": {
         "title": "Main contacts",
@@ -110,10 +99,60 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "multicolumn_w7VbAc": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_mgkphG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/woman-sits-at-wooden-table-and-works-on-a-laptop.jpg",
+            "title": "Dillon Sharp",
+            "text": "<h5>Development<\/h5><p>Tech was almost Dillon's first language, and she brings the know-how to all our online platform with flair and a smile.<\/p>",
+            "link_label": "",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "column_FpzDeQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/woman-in-a-blue-shirt-and-glasses-smiles-wide.jpg",
+            "title": "Mari Thompson",
+            "text": "<h5>Creative Designer<\/h5><p>Mari specialises in product designs that please your eyes and warm your heart.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_mgkphG",
+        "column_FpzDeQ"
+      ],
+      "settings": {
+        "title": "Other team members",
+        "heading_size": "h1",
+        "full_width": false,
+        "image_width": "half",
+        "image_ratio": "circle",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "column_link_hover_style": "hover-highlight",
+        "button_label": "",
+        "button_link": "",
+        "section_color_scheme": "background-1",
+        "background_transparent": true,
+        "color_scheme": "background-1",
+        "background_texture": "lined",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "multicolumn_JfPxTY"
+    "multicolumn_JfPxTY",
+    "multicolumn_w7VbAc"
   ]
 }
