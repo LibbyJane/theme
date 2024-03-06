@@ -83,9 +83,9 @@
         "column_LnHrr9": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/woman-sits-at-wooden-table-and-works-on-a-laptop.jpg",
-            "title": "Dillon Sharp",
-            "text": "<h5>Development<\/h5><p>Tech was almost Dillon's first language, and she brings the know-how to all our online platform with flair and a smile. <\/p>",
+            "image": "shopify:\/\/shop_images\/woman-in-a-blue-shirt-and-glasses-smiles-wide.jpg",
+            "title": "Mari Thompson",
+            "text": "<h5>Creative Designer<\/h5><p>Mari specialises in product designs that please your eyes and warm your heart.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -150,6 +150,7 @@
         "column_mgkphG",
         "column_FpzDeQ"
       ],
+      "disabled": true,
       "settings": {
         "title": "Other team members",
         "heading_size": "h1",
