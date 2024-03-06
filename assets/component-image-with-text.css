@@ -110,7 +110,7 @@
 }
 @media screen and (min-width: 990px) {
   .image-with-text__content {
-    padding: var(--space-xxl);
+    padding: var(--space-xl);
   }
 }
 .image-with-text__content.texture-lined {
@@ -118,7 +118,7 @@
 }
 @media screen and (min-width: 990px) {
   .image-with-text__content.texture-lined {
-    padding-left: calc(var(--space-xxl) + var(--texture-lined-border-size));
+    padding-left: calc(var(--space-xl) + var(--texture-lined-border-size));
   }
 }
 

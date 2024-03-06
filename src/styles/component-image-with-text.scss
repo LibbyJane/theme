@@ -120,14 +120,14 @@
     z-index: var(--zi-base);
 
     @media screen and (min-width: 990px) {
-        padding: var(--space-xxl);
+        padding: var(--space-xl);
     }
 
     &.texture-lined {
         padding-left: calc(var(--space-lg) + var(--texture-lined-border-size));
 
         @media screen and (min-width: 990px) {
-            padding-left: calc(var(--space-xxl) + var(--texture-lined-border-size));
+            padding-left: calc(var(--space-xl) + var(--texture-lined-border-size));
         }
     }
 }
