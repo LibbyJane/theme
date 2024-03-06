@@ -25,7 +25,17 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/welcome-to-my-business.jpg",
             "title": "Sebastian Perkins",
-            "text": "<p>Buyer<\/p><p>Sebastian has been building up his global network of contacts since he started travelling at the tender age of 19.<\/p>",
+            "text": "<h5>Buyer<\/h5><p>Sebastian has been building up his global network of contacts since he started travelling at the tender age of 19.<\/p>",
+            "link_label": "Get in touch",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "column_hHnPrG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/man-dressed-in-monochrome-by-white-wall.jpg",
+            "title": "Inayah Shepherd",
+            "text": "<h5>Customer Care<\/h5><p>Whatever the issue is, our fixer Inayah can handle it. They also have incredible taste in music.<\/p>",
             "link_label": "Get in touch",
             "link": "shopify:\/\/pages\/contact"
           }
@@ -33,7 +43,8 @@
       },
       "block_order": [
         "column_dBaeEM",
-        "column_EggPnK"
+        "column_EggPnK",
+        "column_hHnPrG"
       ],
       "settings": {
         "title": "",
