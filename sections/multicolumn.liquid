@@ -41,9 +41,9 @@
 
 
     <div
-        class="color-{{ section.settings.color_scheme }} texture-{{ section.settings.background_texture }} {% if section.settings.full_width %}width-full {% else %}page-width {% endif %} content-padding-inline section-{{ section.id }}-padding {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        class="color-{{ section.settings.color_scheme }} texture-{{ section.settings.background_texture }} {% if section.settings.full_width %}width-full {% else %}page-width {% endif %} content-padding-inline {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
         {% if settings.animations_reveal_on_scroll %}
-        data-cascade
+            data-cascade
         {% endif %}
     >
         <slider-component class="slider-mobile-gutter">
@@ -106,10 +106,10 @@
                                         endif
                                         -%}
                                         {% capture sizes %}
-                                        (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
-                                        (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
-                                        (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
-                                        calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
+                                        (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * 1.5 * {{ image_width }} /  {{ number_of_columns }}),
+                                        (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * 1.5 * {{ image_width }} / {{ number_of_columns }}),
+                                        (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * 1.5 * {{ image_width }} / {{ number_of_columns_mobile }}),
+                                        calc((100vw - {{ grid_space_mobile }}) * 1.5 * {{ image_width }} / {{ number_of_columns_mobile }})
                                         {% endcapture %}
                                         {{
                                         block.settings.image
