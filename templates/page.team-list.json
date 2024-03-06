@@ -69,6 +69,16 @@
             "link_label": "Get in touch",
             "link": "shopify:\/\/pages\/contact"
           }
+        },
+        "column_qqtfhW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/woman-sits-at-wooden-table-and-works-on-a-laptop.jpg",
+            "title": "Dillon Sharp",
+            "text": "<h5>Development<\/h5><p>Tech was almost Dillon's first language, and she brings the know-how to all our online platform with flair and a smile. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -77,7 +87,8 @@
         "column_hHnPrG",
         "column_E78ga8",
         "column_DRmj8R",
-        "column_XfJyrg"
+        "column_XfJyrg",
+        "column_qqtfhW"
       ],
       "settings": {
         "title": "Main contacts",
