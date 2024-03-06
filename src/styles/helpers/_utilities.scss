@@ -49,14 +49,15 @@
 .content-padding-inline {
     padding-left: var(--content-padding-inline);
     padding-right: var(--content-padding-inline);
-    // TODO
-    // outline: 5px dashed orange;
+}
+
+.content-padding-block {
+    padding-top: var(--content-padding-inline);
+    padding-bottom: var(--content-padding-inline);
 }
 
 .content-padding {
     padding: var(--content-padding);
-    // TODO
-    // outline: 5px dotted orange;
 }
 
 .content-padding-med {

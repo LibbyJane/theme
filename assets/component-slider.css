@@ -316,6 +316,7 @@
 }
 slider-component {
   --desktop-margin-left-first-item: max(5rem, calc((100vw - var(--page-width) + var(--grid-horizontal-spacing)) / 2));
+  --slider-block-space: 60px;
   position: relative;
   display: block;
   width: 100%;
@@ -356,6 +357,7 @@ slider-component {
   padding-bottom: 0;
   position: relative;
   z-index: 1;
+  margin-block: var(--slider-block-space) !important;
 }
 .slider__slide[aria-hidden=true] {
   visibility: hidden;
@@ -365,6 +367,7 @@ slider-component {
   scrollbar-color: rgb(var(--color-foreground)) rgba(var(--color-foreground), 0.04);
   -ms-overflow-style: none;
   scrollbar-width: none;
+  margin-top: calc(var(--slider-block-space) * -1) !important;
 }
 @media (prefers-reduced-motion) {
   .slider {

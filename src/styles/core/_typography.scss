@@ -45,6 +45,11 @@ h5,
     @include text-heading;
 }
 
+h0,
+.h0 {
+    font-size: var(--font-size-h0);
+}
+
 h1,
 .h1 {
     font-size: var(--font-size-h1);
