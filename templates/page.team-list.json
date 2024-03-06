@@ -72,6 +72,7 @@
         },
         "column_qqtfhW": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/woman-sits-at-wooden-table-and-works-on-a-laptop.jpg",
             "title": "Dillon Sharp",
@@ -82,6 +83,7 @@
         },
         "column_LnHrr9": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/woman-in-a-blue-shirt-and-glasses-smiles-wide.jpg",
             "title": "Mari Thompson",
