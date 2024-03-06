@@ -1,5 +1,44 @@
 {
   "sections": {
+    "collage_4LcaDd": {
+      "type": "collage",
+      "blocks": {
+        "image_axLmMC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vineyard-at-sunset.jpg"
+          }
+        },
+        "image_YRFgNm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/black-grapes-on-the-vine.jpg"
+          }
+        },
+        "image_bG7MD4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/woman-in-a-blue-shirt-and-glasses-smiles-wide.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_axLmMC",
+        "image_YRFgNm",
+        "image_bG7MD4"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "none",
+        "color_scheme": "",
+        "background_transparent": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -9,6 +48,7 @@
     }
   },
   "order": [
+    "collage_4LcaDd",
     "main"
   ]
 }
