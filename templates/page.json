@@ -1,5 +1,54 @@
 {
   "sections": {
+    "image_banner_LdykXT": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_84KiWV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_gGLTew": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_yKJDAT": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": "primary",
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_84KiWV",
+        "text_gGLTew",
+        "buttons_yKJDAT"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/recharging-at-a-lake.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "right",
+        "show_text_box": false,
+        "color_scheme": "",
+        "background_texture": "paper",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "image_behavior": "none"
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -107,6 +156,7 @@
     }
   },
   "order": [
+    "image_banner_LdykXT",
     "main",
     "collage_4LcaDd",
     "collage_eb6wb3",
