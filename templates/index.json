@@ -32,19 +32,19 @@
         "button_dfaM8i"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/1024-4-3.jpg",
+        "image": "shopify:\/\/shop_images\/road-trip-vinyard_a479fd80-bd49-4d66-9c50-0515dce908b9.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
         "content_layout": "overlap",
         "color_scheme": "",
         "background_texture": "lined",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "slideshow_XTcwak": {
@@ -160,7 +160,6 @@
         "text_FYTx6B",
         "button_fMakp9"
       ],
-      "disabled": true,
       "settings": {
         "content_alignment": "center",
         "desktop_content_position": "center",
