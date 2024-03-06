@@ -10,29 +10,22 @@
     "collage_4LcaDd": {
       "type": "collage",
       "blocks": {
-        "image_axLmMC": {
+        "image_bG7MD4": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/vineyard-at-sunset.jpg"
+            "image": "shopify:\/\/shop_images\/rows-of-a-vineyard-on-a-sunny-day.jpg"
           }
         },
         "image_YRFgNm": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pouring-red-wine.jpg"
-          }
-        },
-        "image_bG7MD4": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/woman-in-a-blue-shirt-and-glasses-smiles-wide.jpg"
+            "image": "shopify:\/\/shop_images\/mens-fashion-stood-in-vineyard-shirt-and-shorts.jpg"
           }
         }
       },
       "block_order": [
-        "image_axLmMC",
-        "image_YRFgNm",
-        "image_bG7MD4"
+        "image_bG7MD4",
+        "image_YRFgNm"
       ],
       "settings": {
         "heading": "",
