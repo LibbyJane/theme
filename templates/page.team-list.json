@@ -79,6 +79,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_LnHrr9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/woman-sits-at-wooden-table-and-works-on-a-laptop.jpg",
+            "title": "Dillon Sharp",
+            "text": "<h5>Development<\/h5><p>Tech was almost Dillon's first language, and she brings the know-how to all our online platform with flair and a smile. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -88,14 +98,15 @@
         "column_E78ga8",
         "column_DRmj8R",
         "column_XfJyrg",
-        "column_qqtfhW"
+        "column_qqtfhW",
+        "column_LnHrr9"
       ],
       "settings": {
         "title": "Main contacts",
         "heading_size": "h1",
         "full_width": false,
         "image_width": "half",
-        "image_ratio": "circle",
+        "image_ratio": "square",
         "columns_desktop": 3,
         "column_alignment": "center",
         "column_link_hover_style": "hover-highlight",
@@ -104,7 +115,7 @@
         "section_color_scheme": "background-1",
         "background_transparent": true,
         "color_scheme": "background-1",
-        "background_texture": "lined",
+        "background_texture": "paper",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
