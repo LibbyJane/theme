@@ -41,7 +41,7 @@
 
 
     <div
-        class="color-{{ section.settings.color_scheme }} texture-{{ section.settings.background_texture }} {% if section.settings.full_width %}width-full {% else %}page-width {% endif %} content-padding-inline {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        class="color-{{ section.settings.color_scheme }} texture-{{ section.settings.background_texture }} {% if section.settings.full_width %}width-full {% else %}page-width {% endif %} content-padding {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
         {% if settings.animations_reveal_on_scroll %}
             data-cascade
         {% endif %}
