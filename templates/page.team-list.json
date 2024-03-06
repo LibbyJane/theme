@@ -7,109 +7,66 @@
         "padding_bottom": 28
       }
     },
-    "collage_4LcaDd": {
-      "type": "collage",
+    "multicolumn_JfPxTY": {
+      "type": "multicolumn",
       "blocks": {
-        "image_bG7MD4": {
-          "type": "image",
+        "column_dBaeEM": {
+          "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/rows-of-a-vineyard-on-a-sunny-day.jpg"
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "image_YRFgNm": {
-          "type": "image",
+        "column_ekaAtk": {
+          "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/a-small-drink-to-cheers-the-field-of-vines-below.jpg"
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FWyiQY": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "image_bG7MD4",
-        "image_YRFgNm"
+        "column_dBaeEM",
+        "column_ekaAtk",
+        "column_FWyiQY"
       ],
       "settings": {
-        "heading": "",
+        "title": "Multicolumn",
         "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "none",
-        "color_scheme": "background-1",
+        "full_width": false,
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "column_link_hover_style": "hover-highlight",
+        "button_label": "",
+        "button_link": "",
+        "section_color_scheme": "",
         "background_transparent": true,
+        "color_scheme": "",
+        "background_texture": "paper",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "collage_eb6wb3": {
-      "type": "collage",
-      "blocks": {
-        "image_tb7haG": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/woman-in-a-blue-shirt-and-glasses-smiles-wide.jpg"
-          }
-        },
-        "image_pY8iGF": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/pouring-red-wine.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_tb7haG",
-        "image_pY8iGF"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "desktop_layout": "right",
-        "mobile_layout": "column",
-        "card_styles": "none",
-        "color_scheme": "background-1",
-        "background_transparent": true,
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "collage_Mk7JFb": {
-      "type": "collage",
-      "blocks": {
-        "image_bhm6yk": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/cheers-wine-and-cheese.jpg"
-          }
-        },
-        "image_eNNR9B": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/a-small-drink-to-cheers-the-field-of-vines-below.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_bhm6yk",
-        "image_eNNR9B"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "none",
-        "color_scheme": "background-1",
-        "background_transparent": true,
-        "padding_top": 0,
         "padding_bottom": 36
       }
     }
   },
   "order": [
     "main",
-    "collage_4LcaDd",
-    "collage_eb6wb3",
-    "collage_Mk7JFb"
+    "multicolumn_JfPxTY"
   ]
 }
