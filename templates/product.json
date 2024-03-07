@@ -18,7 +18,7 @@
         "caption": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }} sdfsdfsdf <a href=\"\/blogs\/news\" target=\"_blank\" title=\"News\">sdfsdf <\/a>",
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
             "text_style": "body"
           }
         },
