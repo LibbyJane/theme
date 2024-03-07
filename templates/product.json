@@ -58,6 +58,13 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "text_xTMNnw": {
+          "type": "text",
+          "settings": {
+            "text": "All orders are shipped <strong>carbon neutral<\/strong>. A signature may be required on delivery.",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
@@ -69,7 +76,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "text_xTMNnw"
       ],
       "settings": {
         "enable_sticky_info": true,
