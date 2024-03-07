@@ -62,7 +62,7 @@
         "text_xTMNnw": {
           "type": "text",
           "settings": {
-            "text": "All orders are shipped <strong>carbon neutral<\/strong>. A signature may be required on delivery.",
+            "text": "We only use <strong>carbon neutral <\/strong>shipping providers. A signature may be required on delivery.",
             "text_style": "body"
           }
         }
