@@ -7,7 +7,7 @@
       "settings": {
         "logo_position": "middle-center",
         "menu": "main-menu",
-        "menu_type_desktop": "dropdown",
+        "menu_type_desktop": "mega",
         "utility_menu_style": "folded",
         "sticky_header_type": "reduce-logo-size",
         "color_scheme": "background-1",
