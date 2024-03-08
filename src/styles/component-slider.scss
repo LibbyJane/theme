@@ -148,6 +148,10 @@ slider-component {
 
     .texture-lined & {
         border-left: var(--texture-lined-border-size) solid transparent;
+
+        @media screen and (min-width: var(--page-width)) {
+            border-left: 0;
+        }
     }
 
     // .slider--mobile & {

@@ -3530,6 +3530,10 @@ svg {
   border: var(--media-border-width) solid rgba(var(--color-media-border), var(--media-border-opacity));
 }
 
+.media--transparent {
+  background-color: transparent;
+}
+
 .placeholder,
 .placeholder-svg {
   background-color: rgb(var(--color-background));

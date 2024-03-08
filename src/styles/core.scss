@@ -36,8 +36,8 @@
         ,"components/highlight"
         ,"components/icons/base"
         ,"components/icons/with-text"
-        ,"components/images/base"
-        ,"components/images/placeholder"
+        ,"components/media/base"
+        ,"components/media/placeholder"
         ,"components/forms/base"
         ,"components/forms/fieldsets"
         ,"components/forms/checkable"
@@ -1122,9 +1122,6 @@
 //   overflow: clip;
 // }
 
-// .media--transparent {
-//   background-color: transparent;
-// }
 
 // .media > *:not(.zoom):not(.deferred-media__poster-button),
 // .media model-viewer {
