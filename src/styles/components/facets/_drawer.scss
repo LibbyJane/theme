@@ -1,8 +1,12 @@
 .facets-container-drawer {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    gap: 0 var(--space-lg);
+
+
+    @media screen and (min-width: 750px) {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: 0 var(--space-lg);
+    }
 
     .product-count {
         margin: 0;
@@ -238,10 +242,6 @@
 .mobile-facets__label--disabled {
     @include disabled;
 }
-
-
-
-
 
 .js {
     .mobile-facets__submenu {

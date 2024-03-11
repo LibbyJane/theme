@@ -826,11 +826,13 @@ facet-remove::before {
   inset: 0;
 }
 
-.facets-container-drawer {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  gap: 0 var(--space-lg);
+@media screen and (min-width: 750px) {
+  .facets-container-drawer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 0 var(--space-lg);
+  }
 }
 .facets-container-drawer .product-count {
   margin: 0;
