@@ -645,7 +645,6 @@ facet-remove::before {
   align-items: center;
   justify-content: center;
   margin-left: auto;
-  outline: 20px solid pink;
 }
 
 .active-facets__button {
