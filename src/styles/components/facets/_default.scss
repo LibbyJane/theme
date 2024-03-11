@@ -37,6 +37,8 @@
     }
 
     .product-count {
+        margin: auto 0;
+
         @media screen and (min-width: 750px) {
             grid-column-start: 3;
             align-self: center;

@@ -349,6 +349,9 @@
   position: static;
   transition: transform var(--duration-default) var(--transition-type);
 }
+.facets__form .product-count {
+  margin: auto 0;
+}
 @media screen and (min-width: 750px) {
   .facets__form .product-count {
     grid-column-start: 3;
@@ -1087,35 +1090,31 @@ facet-remove::before {
 }
 
 .mobile-facets__clear {
-  --underline-height: 0.2px;
   position: relative;
   z-index: 1;
 }
-.mobile-facets__clear:hover, .mobile-facets__clear:focus {
-  --alpha-link: 1;
-  --underline-height: 1px;
-}
-.mobile-facets__clear:hover::before, .mobile-facets__clear:focus::before {
-  transform: rotate(-0.25deg) scaleX(1);
-}
 .mobile-facets__clear:hover::after, .mobile-facets__clear:focus::after {
-  transform: rotate(0.25deg) scaleX(1);
+  animation: scaleX100 var(--duration-medium) var(--transition-type) forwards;
 }
-.mobile-facets__clear::before, .mobile-facets__clear::after {
-  content: "";
+.mobile-facets__clear::after {
+  animation: scaleOutX100 var(--duration-medium) var(--transition-type) forwards;
+  -webkit-mask-image: url(mask-underline.svg);
+          mask-image: url(mask-underline.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: bottom left;
+          mask-position: bottom left;
   background-color: rgba(var(--color-link), var(--alpha-link));
+  content: "";
   position: absolute;
-  bottom: calc(var(--underline-height) * -1);
+  right: 0;
+  bottom: 0;
   left: 0;
-  height: var(--underline-height);
-  width: 100%;
-  transition: transform var(--duration-medium) var(--transition-type);
-  transform: rotate(0.25deg) scaleX(0.95);
+  height: 2px;
   z-index: -1;
-}
-.mobile-facets__clear::before {
-  transition-delay: var(--duration-short);
-  transform: rotate(-0.5deg) scaleX(0);
+  transform: scaleX(0);
   transform-origin: bottom left;
 }
 

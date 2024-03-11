@@ -615,6 +615,7 @@
                                                         <facet-remove class="mobile-facets__clear-wrapper">
                                                             <a href="{{ filter.url_to_remove }}" class="mobile-facets__clear">
                                                                 {{- 'products.facets.clear' | t -}}
+                                                                {% render 'icon-reset' %}
                                                             </a>
                                                         </facet-remove>
                                                         <button
@@ -726,6 +727,7 @@
                                                     <facet-remove class="mobile-facets__clear-wrapper">
                                                         <a href="{{ filter.url_to_remove }}" class="mobile-facets__clear">
                                                             {{- 'products.facets.clear' | t -}}
+                                                            {% render 'icon-reset' %}
                                                         </a>
                                                     </facet-remove>
                                                     <button
@@ -785,6 +787,7 @@
                                 <facet-remove class="mobile-facets__clear-wrapper">
                                     <a href="{{ results_url }}" class="mobile-facets__clear">
                                         {{- 'products.facets.clear_all' | t -}}
+                                        {% render 'icon-reset' %}
                                     </a>
                                 </facet-remove>
 

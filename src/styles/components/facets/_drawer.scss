@@ -308,7 +308,7 @@
 }
 
 .mobile-facets__clear {
-    @include underlined-link;
+    @include underline-on-hover;
 }
 
 .mobile-facets__sort {
