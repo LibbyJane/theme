@@ -186,27 +186,27 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__close-button {
+    background-color: transparent;
+    display: flex;
+        align-items: center;
+        justify-content: start;
+    font-family: var(--font-body-family);
+    font-size: var(--font-size-base);
+    font-style: var(--font-body-style);
     margin-top: var(--space-med);
     padding: var(--space-med) var(--content-padding-inline);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-size: var(--font-size-base);
-    width: 100%;
-    background-color: transparent;
-    font-family: var(--font-body-family);
-    font-style: var(--font-body-style);
     text-align: left;
-}
+    text-decoration: none;
+    width: 100%;
 
-.no-js .menu-drawer__close-button {
-  display: none;
-}
+    .no-js & {
+        display: none;
+    }
 
-.menu-drawer__close-button .icon-arrow {
-    transform: rotate(180deg) translateX(calc(var(--space) * -1));
+    .icon-arrow {
+        transform: rotate(180deg);
+    }
 }
-
 
 .menu-drawer__utility-links {
     @include tape;

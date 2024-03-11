@@ -3634,6 +3634,9 @@ input[type=radio] ~ label .icon-tick-background-square {
   opacity: 1;
   animation-name: draw;
 }
+.checkable__tick input:disabled {
+  opacity: 0;
+}
 .checkable__tick .icon {
   display: block;
   height: var(--icon-size);

@@ -1009,7 +1009,7 @@ facet-remove::before {
 
 .mobile-facets__summary {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   padding: var(--content-padding);
 }
 .mobile-facets__summary:hover, .mobile-facets__summary:focus {
