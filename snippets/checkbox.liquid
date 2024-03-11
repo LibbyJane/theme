@@ -15,7 +15,7 @@
             value: value
         %}
 {% endcomment %}
-<label for="{{ id }}" class="checkable__tick{% if class != blank %} {{class}}{% endif %} {% if disabled %} facet-checkbox--disabled{% endif %}">
+<label for="{{ id }}" class="checkable__tick{% if class != blank %} {{class}}{% endif %} {% if disabled %} disabled{% endif %}">
     <input
         type="checkbox"
         name="{{ value.param_name }}"
