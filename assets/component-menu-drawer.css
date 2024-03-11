@@ -441,7 +441,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__menu-item {
-  display: inline-flex;
+  display: flex;
   font-size: var(--font-size-h6);
   padding: var(--space-sm) var(--content-padding-inline);
 }
@@ -512,13 +512,6 @@ details[open].menu-opening > .menu-drawer__submenu {
   display: none;
 }
 
-.menu-drawer__menu-item > .icon-arrow {
-  position: absolute;
-  right: var(--space-xl);
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .js .menu-drawer__submenu {
   position: absolute;
   top: 0;
@@ -554,8 +547,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__close-button .icon-arrow {
-  transform: rotate(180deg);
-  margin-right: var(--space);
+  transform: rotate(180deg) translateX(calc(var(--space) * -1));
 }
 
 .menu-drawer__utility-links {

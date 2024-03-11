@@ -1,6 +1,4 @@
 .facets-container-drawer {
-
-
     @media screen and (min-width: 750px) {
         display: flex;
         flex-flow: row wrap;
@@ -97,15 +95,8 @@
 // was .mobile-facets__close-button
 .mobile-facets__disclosure-close-button {
     @include default-texture();
-    display: flex;
-        align-items: center;
-        gap: var(--space);
-    font-size: var(--font-size-smaller);
-    font-family: inherit;
-    letter-spacing: inherit;
-    padding: 0 0 var(--space-sm);
+    justify-content: start;
     margin-bottom: var(--space);
-    text-decoration: none;
 
     .no-js & {
         display: none;
@@ -113,7 +104,6 @@
 
     .icon-arrow {
         transform: rotate(180deg);
-        // margin-right: var(--space);
     }
 }
 
@@ -233,6 +223,7 @@
 
 .mobile-facets__label {
     display: flex;
+    margin: 0;
     padding-block: var(--space);
     transition: background-color var(--duration-default) var(--transition-type);
     width: 100%;
@@ -289,6 +280,7 @@
         justify-content: space-between;
     margin-top: auto;
     padding: var(--content-padding);
+    padding-bottom: var(--space);
     position: sticky;
         bottom: 0;
     z-index: 2;
