@@ -1,6 +1,7 @@
 .checkable__highlight {
     display: inline-flex;
     align-items: center;
+
     input {
         opacity: 0;
         position: absolute;
@@ -13,6 +14,10 @@
                     transform: rotate(-2deg) scaleX(1);
                 }
             }
+        }
+
+        .no-js & {
+            z-index: 0;
         }
     }
 }
@@ -97,6 +102,13 @@ input[type="radio"] {
         height: var(--icon-size);
         width: var(--icon-size);
         margin-right: var(--space-sm);
+    }
+
+    &:hover {
+        .icon-tick-draw {
+            opacity: 1;
+            animation-name: draw;
+        }
     }
 }
 

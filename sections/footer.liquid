@@ -315,53 +315,55 @@
                         {%- if show_language_selector -%}
                             <noscript>
                                 {%- form 'localization', id: 'FooterLanguageFormNoScript', class: 'localization-form' -%}
-                                <div class="localization-form__select">
-                                    <h2 class="visually-hidden" id="FooterLanguageLabelNoScript">
-                                    {{ 'localization.language_label' | t }}
-                                    </h2>
-                                    <select
-                                    class="localization-selector link"
-                                    name="locale_code"
-                                    aria-labelledby="FooterLanguageLabelNoScript"
-                                    >
-                                    {%- for language in localization.available_languages -%}
-                                        <option
-                                        value="{{ language.iso_code }}"
-                                        lang="{{ language.iso_code }}"
-                                        {%- if language.iso_code == localization.language.iso_code %}
-                                            selected
-                                        {% endif %}
+                                    <div class="localization-form__select">
+                                        <h2 class="visually-hidden" id="FooterLanguageLabelNoScript">
+                                            {{ 'localization.language_label' | t }}
+                                        </h2>
+
+                                        <select
+                                            class="localization-selector link"
+                                            name="locale_code"
+                                            aria-labelledby="FooterLanguageLabelNoScript"
                                         >
-                                        {{ language.endonym_name | capitalize }}
-                                        </option>
-                                    {%- endfor -%}
-                                    </select>
-                                    {% render 'icon-caret' %}
-                                </div>
-                                <button class="button button--tertiary">{{ 'localization.update_language' | t }}</button>
+                                            {%- for language in localization.available_languages -%}
+                                                <option
+                                                    value="{{ language.iso_code }}"
+                                                    lang="{{ language.iso_code }}"
+                                                    {%- if language.iso_code == localization.language.iso_code %}
+                                                        selected
+                                                    {% endif %}
+                                                >
+                                                    {{ language.endonym_name | capitalize }}
+                                                </option>
+                                            {%- endfor -%}
+                                        </select>
+                                        {% render 'icon-caret' %}
+                                    </div>
+                                    <button class="button button--tertiary">{{ 'localization.update_language' | t }}</button>
                                 {%- endform -%}
                             </noscript>
 
                             <localization-form>
-                            {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
-                            <div class="no-js-hidden">
-                                <h2 class="caption-large text-body" id="FooterLanguageLabel">
-                                {{ 'localization.language_label' | t }}
-                                </h2>
-                                {%- render 'language-localization', localPosition: 'FooterLanguage' -%}
-                            </div>
-                            {%- endform -%}
-                        </localization-form>
+                                {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
+                                    <div class="no-js-hidden">
+                                        <h2 class="caption-large text-body" id="FooterLanguageLabel">
+                                            {{ 'localization.language_label' | t }}
+                                        </h2>
+                                        {%- render 'language-localization', localPosition: 'FooterLanguage' -%}
+                                    </div>
+                                {%- endform -%}
+                            </localization-form>
                         {%- endif -%}
                     </div>
                 {%- endif -%}
+
                 {%- if section.settings.payment_enable -%}
                     <div class="footer__row-item footer__row-item--payment">
                         <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
                         <ul class="list list-payment" role="list">
                             {%- for type in shop.enabled_payment_types -%}
                                 <li class="list-payment__item">
-                                {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                                    {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
                                 </li>
                             {%- endfor -%}
                         </ul>

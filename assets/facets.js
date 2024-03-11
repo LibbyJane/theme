@@ -124,7 +124,7 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   static renderActiveFacets(html) {
-    const activeFacetElementSelectors = ['.active-facets-mobile', '.active-facets-desktop'];
+    const activeFacetElementSelectors = ['.js-active-facets-mobile', '.js-active-facets-desktop'];
 
     activeFacetElementSelectors.forEach((selector) => {
       const activeFacetsElement = html.querySelector(selector);
@@ -136,7 +136,7 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   static renderAdditionalElements(html) {
-    const mobileElementSelectors = ['.mobile-facets__open', '.mobile-facets__count', '.sorting'];
+    const mobileElementSelectors = ['.js-mobile-facets__open', '.js-mobile-facets__count', '.sorting'];
 
     mobileElementSelectors.forEach((selector) => {
       if (!html.querySelector(selector)) return;
@@ -147,18 +147,18 @@ class FacetFiltersForm extends HTMLElement {
   }
 
   static renderCounts(source, target) {
-    const targetElement = target.querySelector('.facets__selected');
-    const sourceElement = source.querySelector('.facets__selected');
+    const targetElement = target.querySelector('.js-facets__selected');
+    const sourceElement = source.querySelector('.js-facets__selected');
 
-    const targetElementAccessibility = target.querySelector('.facets__summary');
-    const sourceElementAccessibility = source.querySelector('.facets__summary');
+    const targetElementAccessibility = target.querySelector('.js-facets__summary');
+    const sourceElementAccessibility = source.querySelector('.js-facets__summary');
 
     if (sourceElement && targetElement) {
-      target.querySelector('.facets__selected').outerHTML = source.querySelector('.facets__selected').outerHTML;
+      target.querySelector('.js-facets__selected').outerHTML = source.querySelector('.js-facets__selected').outerHTML;
     }
 
     if (targetElementAccessibility && sourceElementAccessibility) {
-      target.querySelector('.facets__summary').outerHTML = source.querySelector('.facets__summary').outerHTML;
+      target.querySelector('.js-facets__summary').outerHTML = source.querySelector('.js-facets__summary').outerHTML;
     }
   }
 
@@ -186,7 +186,7 @@ class FacetFiltersForm extends HTMLElement {
   onSubmitHandler(event) {
     event.preventDefault();
     const sortFilterForms = document.querySelectorAll('facet-filters-form form');
-    if (event.srcElement.className == 'mobile-facets__checkbox') {
+    if (event.srcElement.className == 'js-mobile-facets__checkbox') {
       const searchParams = this.createSearchParams(event.target.closest('form'));
       this.onSubmitForm(searchParams, event);
     } else {

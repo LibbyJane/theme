@@ -92,7 +92,7 @@
     }
 }
 
-.facets__wrapper { // groups availability / price etc
+.facets__wrapper--horizontal { // groups availability / price etc
     align-items: center;
     align-self: flex-start;
     grid-column: 1;
@@ -303,77 +303,77 @@
 }
 
 .facet-checkbox { // checkbox label / wrapper
-    cursor: pointer;
-    display: flex;
-        flex-grow: 1;
+    // cursor: pointer;
+    // display: flex;
+    //     flex-grow: 1;
         font-size: var(--font-size-smaller);
-    gap: var(--space);
-    position: relative;
-    word-break: break-word;
+    // gap: var(--space);
+    // position: relative;
+    // word-break: break-word;
 
-    &:hover,
-    &:focus {
-        .icon {
-            path {
-                stroke-dasharray: var(--path-length);
-                animation: draw var(--duration-medium) backwards;
+    // &:hover,
+    // &:focus {
+    //     .icon {
+    //         path {
+    //             stroke-dasharray: var(--path-length);
+    //             animation: draw var(--duration-medium) backwards;
 
-                &:nth-child(2) {
-                    animation-delay: var(--duration-short);
-                }
-            }
+    //             &:nth-child(2) {
+    //                 animation-delay: var(--duration-short);
+    //             }
+    //         }
 
-        }
-    }
+    //     }
+    // }
 
-    input[type='checkbox'] {
-        appearance: none;
-        position: absolute;
-        inset: 0;
-        z-index: -1;
+    // input[type='checkbox'] {
+    //     // appearance: none;
+    //     // position: absolute;
+    //     // inset: 0;
+    //     // z-index: -1;
 
-        &:checked {
-            ~ .icon-checkmark {
-                visibility: visible;
-                transform: scale(0.9);
-            }
-        }
+    //     // &:checked {
+    //     //     ~ .icon-checkmark {
+    //     //         visibility: visible;
+    //     //         transform: scale(0.9);
+    //     //     }
+    //     // }
 
-        .no-js & {
-            z-index: 0;
-        }
-    }
+    //     .no-js & {
+    //         z-index: 0;
+    //     }
+    // }
 
-    svg {
-        background-color: rgb(var(--color-background));
-        flex-shrink: 0;
-        margin: auto 0;
-    }
+    // svg {
+    //     background-color: rgb(var(--color-background));
+    //     flex-shrink: 0;
+    //     margin: auto 0;
+    // }
 
-    .icon {
-        --path-length: 30;
-        stroke-width: 1.5px;
-    }
+    // .icon {
+    //     --path-length: 30;
+    //     stroke-width: 1.5px;
+    // }
 
-    .icon-checkmark {
-        position: absolute;
-            inset: 1px;
-        transform: scale(0);
-        transition: transform var(--duration-default) var(--transition-type);
-        visibility: hidden;
-        z-index: var(--zi-base);
-    }
+    // .icon-checkmark {
+    //     position: absolute;
+    //         inset: 1px;
+    //     transform: scale(0);
+    //     transition: transform var(--duration-default) var(--transition-type);
+    //     visibility: hidden;
+    //     z-index: var(--zi-base);
+    // }
 
-    span {
-        display: inline-block;
-        line-height: 1.2;
-        margin: auto 0;
-    }
+    // span {
+    //     display: inline-block;
+    //     line-height: 1.2;
+    //     margin: auto 0;
+    // }
 }
 
-.facet-checkbox--disabled {
-    @include disabled;
-}
+// .facet-checkbox--disabled {
+//     @include disabled;
+// }
 
 .facets__price {
     display: flex;
@@ -381,9 +381,9 @@
     padding: 2rem;
 
     .field {
-    + .field-currency {
-        margin-left: 2rem;
-    }
+        + .field-currency {
+            margin-left: 2rem;
+        }
 
 
     }
@@ -416,12 +416,17 @@
     width: 100%;
     grid-column: 1 / -1;
     grid-row: 2;
-    gap: var(--space);
+    gap: var(--space-sm);
+}
 
-    facet-remove {
-        &:only-child {
-            display: none;
-        }
+facet-remove {
+    &:only-child {
+        display: none;
+    }
+
+    &::before {
+        border-radius: var(--button-border-radius);
+        transform: rotate(-0.5deg);
     }
 }
 
@@ -447,13 +452,13 @@
 
 
 .active-facets__button {
-    @include sharp-text;
+    // @include sharp-text;
     // @include underlined-link;
     display: flex;
         align-items: center;
         justify-content: space-between;
-    margin: var(--space) 0;
-    padding: 0 var(--space-xs);
+    margin: 0;
+    padding: var(--space-sm) var(--space);
 
     @media screen and (min-width: 990px) {
         font-size: var(--font-size-smaller);
@@ -465,6 +470,13 @@
 
     svg {
         pointer-events: none;
+    }
+
+    &.highlight {
+        &::before {
+            border-radius: var(--button-border-radius);
+            transform: rotate(-0.5deg);
+        }
     }
 }
 

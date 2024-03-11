@@ -3579,6 +3579,9 @@ fieldset legend {
   transition: transform var(--duration-long) var(--transition-type);
   transform: rotate(-2deg) scaleX(1);
 }
+.no-js .checkable__highlight input {
+  z-index: 0;
+}
 
 .checkable__highlight-text {
   cursor: pointer;
@@ -3636,6 +3639,10 @@ input[type=radio] ~ label .icon-tick-background-square {
   height: var(--icon-size);
   width: var(--icon-size);
   margin-right: var(--space-sm);
+}
+.checkable__tick:hover .icon-tick-draw {
+  opacity: 1;
+  animation-name: draw;
 }
 
 input[checkbox]:checked + .checkable__tick .icon-tick-draw {
