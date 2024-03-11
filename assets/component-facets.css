@@ -314,10 +314,6 @@
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
-.facets-wrapper {
-  padding: var(--content-padding);
-}
-
 .facets-container {
   --filter-color: rgba(var(--color-foreground), var(--opacity-light));
   --filter-color-active: rgb(var(--color-foreground));
@@ -329,6 +325,16 @@
   .facets-container {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
+  }
+}
+.facets-container .product-count {
+  margin: auto 0;
+  text-align: right;
+}
+@media screen and (min-width: 750px) {
+  .facets-container .product-count {
+    grid-column-start: 3;
+    align-self: center;
   }
 }
 
@@ -348,15 +354,6 @@
   margin: auto 0;
   position: static;
   transition: transform var(--duration-default) var(--transition-type);
-}
-.facets__form .product-count {
-  margin: auto 0;
-}
-@media screen and (min-width: 750px) {
-  .facets__form .product-count {
-    grid-column-start: 3;
-    align-self: center;
-  }
 }
 .facets__form .product-count .loading-overlay__spinner {
   display: none;
@@ -647,6 +644,8 @@ facet-remove::before {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: auto;
+  outline: 20px solid pink;
 }
 
 .active-facets__button {
@@ -1131,20 +1130,12 @@ facet-remove::before {
 .mobile-facets__sort .select {
   width: auto;
 }
-
 .no-js .mobile-facets__sort .select {
   position: relative;
   right: -1rem;
 }
-
 .mobile-facets__sort .select__select {
-  background-color: transparent;
-  border-radius: 0;
-  box-shadow: none;
-  filter: none;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 1.5rem;
+  margin-left: var(--space-sm);
+  margin-right: var(--space-sm);
 }
 /*# sourceMappingURL=component-facets.css.map */

@@ -122,13 +122,13 @@
                                     <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
                                 </h5>
                                 <div class="select">
-                                {%- assign sort_by = search.sort_by | default: search.default_sort_by -%}
-                                <select name="sort_by" class="facet-filters__sort select__select caption-large" id="SortBy" aria-describedby="a11y-refresh-page-message">
-                                    {%- for option in search.sort_options -%}
-                                    <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
-                                    {%- endfor -%}
-                                </select>
-                                {% render 'icon-caret' %}
+                                    {%- assign sort_by = search.sort_by | default: search.default_sort_by -%}
+                                    <select name="sort_by" class="facet-filters__sort select__select caption-large" id="SortBy" aria-describedby="a11y-refresh-page-message">
+                                        {%- for option in search.sort_options -%}
+                                        <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
+                                        {%- endfor -%}
+                                    </select>
+                                    {% render 'icon-caret' %}
                                 </div>
                             </div>
                             <noscript>
@@ -180,54 +180,54 @@
                             <div class="loading-overlay "></div>
                             <ul class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop" role="list">
                                 {%- for item in search.results -%}
-                                {% assign lazy_load = false %}
-                                {%- if forloop.index > 2 -%}
-                                    {%- assign lazy_load = true -%}
-                                {%- endif -%}
+                                    {% assign lazy_load = false %}
+                                    {%- if forloop.index > 2 -%}
+                                        {%- assign lazy_load = true -%}
+                                    {%- endif -%}
 
-                                <li class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                                    {% if settings.animations_reveal_on_scroll %}
-                                    data-cascade
-                                    {% endif %}>
-                                    {%- case item.object_type -%}
-                                    {%- when 'product' -%}
-                                        {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
-                                            {% render 'card-product',
-                                            card_product: item,
-                                            media_aspect_ratio: section.settings.image_ratio,
-                                            image_shape: section.settings.image_shape,
-                                            show_secondary_image: section.settings.show_secondary_image,
-                                            show_vendor: section.settings.show_vendor,
-                                            show_rating: section.settings.show_rating,
-                                            lazy_load: lazy_load
-                                        %}
-                                    {%- when 'article' -%}
-                                        {% render 'article-card',
-                                            article: item,
-                                            show_image: true,
-                                            show_date: section.settings.article_show_date,
-                                            show_author: section.settings.article_show_author,
-                                            show_badge: true,
-                                            media_aspect_ratio: 1,
-                                            lazy_load: lazy_load
-                                        %}
-                                    {%- when 'page' -%}
-                                        <div class="article-card-wrapper card-wrapper">
-                                            <div class="card card--card card--text ratio color-{{ settings.blog_card_color_scheme }}" style="--ratio-percent: 100%;">
-                                                <a href="{{ item.url }}" class="card__content">
-                                                    <div class="card__information">
-                                                        <h3 class="card__heading">
-                                                            {{ item.title | truncate: 50 | escape }}
-                                                        </h3>
-                                                    </div>
-                                                    <div class="card-badge {{ settings.badge_position }}">
-                                                        <span class="badge color-{{ settings.color_schemes | first }}">{{ 'templates.search.page' | t }}</span>
-                                                    </div>
-                                                </a>
+                                    <li class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                                        {% if settings.animations_reveal_on_scroll %}
+                                        data-cascade
+                                        {% endif %}>
+                                        {%- case item.object_type -%}
+                                        {%- when 'product' -%}
+                                            {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
+                                                {% render 'card-product',
+                                                card_product: item,
+                                                media_aspect_ratio: section.settings.image_ratio,
+                                                image_shape: section.settings.image_shape,
+                                                show_secondary_image: section.settings.show_secondary_image,
+                                                show_vendor: section.settings.show_vendor,
+                                                show_rating: section.settings.show_rating,
+                                                lazy_load: lazy_load
+                                            %}
+                                        {%- when 'article' -%}
+                                            {% render 'article-card',
+                                                article: item,
+                                                show_image: true,
+                                                show_date: section.settings.article_show_date,
+                                                show_author: section.settings.article_show_author,
+                                                show_badge: true,
+                                                media_aspect_ratio: 1,
+                                                lazy_load: lazy_load
+                                            %}
+                                        {%- when 'page' -%}
+                                            <div class="article-card-wrapper card-wrapper">
+                                                <div class="card card--card card--text ratio color-{{ settings.blog_card_color_scheme }}" style="--ratio-percent: 100%;">
+                                                    <a href="{{ item.url }}" class="card__content">
+                                                        <div class="card__information">
+                                                            <h3 class="card__heading">
+                                                                {{ item.title | truncate: 50 | escape }}
+                                                            </h3>
+                                                        </div>
+                                                        <div class="card-badge {{ settings.badge_position }}">
+                                                            <span class="badge color-{{ settings.color_schemes | first }}">{{ 'templates.search.page' | t }}</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    {%- endcase -%}
-                                </li>
+                                        {%- endcase -%}
+                                    </li>
                                 {%- endfor -%}
                             </ul>
                             {%- if paginate.pages > 1 -%}

@@ -2096,11 +2096,6 @@ slider-component {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
-:root {
-  --inputs-border-radius: var(--inputs-radius-large) var(--inputs-radius) var(--inputs-radius-med) var(--inputs-radius)/var(--inputs-radius) var(--inputs-radius-med) var(--inputs-radius) var(--inputs-radius-large);
-  --inputs-background-opacity: 0.5;
-}
-
 /* component-quantity */
 .quantity {
   color: rgba(var(--color-foreground), 1);
