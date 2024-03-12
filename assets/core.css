@@ -2008,9 +2008,9 @@ html.no-js .no-js-hidden {
 }
 @supports (-webkit-touch-callout: none) {
   .texture-lined::before {
-    -webkit-mask-size: auto calc(var(--texture-lined-border-size) + 6px);
-            mask-size: auto calc(var(--texture-lined-border-size) + 6px);
     /* CSS specific to iOS devices */
+    -webkit-mask-repeat: no-repeat repeat;
+            mask-repeat: no-repeat repeat;
   }
 }
 
