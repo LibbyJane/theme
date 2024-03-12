@@ -2006,13 +2006,6 @@ html.no-js .no-js-hidden {
   -webkit-mask-origin: border;
   mask-origin: border-box;
 }
-@supports (-webkit-touch-callout: none) {
-  .texture-lined::before {
-    -webkit-mask-size: auto calc(var(--texture-lined-border-size) + 2px);
-            mask-size: auto calc(var(--texture-lined-border-size) + 2px);
-    /* CSS specific to iOS devices */
-  }
-}
 
 .texture-paper-craft {
   background-color: rgb(var(--color-background));
