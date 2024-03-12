@@ -118,7 +118,37 @@ slider-component {
     }
 }
 
+.slider__slide {
+    --focus-outline-padding: 0.5rem;
+    --shadow-padding-top: calc((var(--shadow-vertical-offset) * -1 + var(--shadow-blur-radius)) * var(--shadow-visible));
+    --shadow-padding-bottom: calc((var(--shadow-vertical-offset) + var(--shadow-blur-radius)) * var(--shadow-visible));
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    padding-bottom: 0;
+}
+@media screen and (max-width: 749px) {
+.slider.slider--mobile .slider__slide {
+    margin-bottom: 0;
+    padding-top: max(var(--focus-outline-padding), var(--shadow-padding-top));
+    padding-bottom: max(var(--focus-outline-padding), var(--shadow-padding-bottom));
+  }
+}
+  @media screen and (max-width: 989px) {
+    .slider.slider--tablet .slider__slide {
+      margin-bottom: 0;
+      padding-top: max(var(--focus-outline-padding), var(--shadow-padding-top));
+      padding-bottom: max(var(--focus-outline-padding), var(--shadow-padding-bottom));
+    }
+  }
 
+@media screen and (min-width: 990px) {
+
+  .slider.slider--desktop .slider__slide {
+    margin-bottom: 0;
+    padding-top: max(var(--focus-outline-padding), var(--shadow-padding-top));
+    padding-bottom: max(var(--focus-outline-padding), var(--shadow-padding-bottom));
+  }
+}
 .slider__slide {
     // --focus-outline-padding: var(--space-sm);
     // --shadow-padding-top: calc((var(--shadow-vertical-offset) * -1 + var(--shadow-blur-radius)) * var(--shadow-visible));
@@ -130,8 +160,8 @@ slider-component {
     z-index: 1;
     // padding-block : var(--slider-block-space) !important;
     // margin-block: calc(var(--slider-block-space) * -1) !important;
-    padding-block : 60px !important;
-    margin-top: -50px !important;
+    // padding-block : 60px !important;
+    // margin-top: -50px !important;
     // margin-block: calc(var(--slider-block-space) * -1) !important;
 
     &[aria-hidden="true"] {
@@ -218,13 +248,6 @@ slider-component {
         transform: scale(1.1);
     }
 }
-
-// .slider-counter__link--active.slider-counter__link--numbers,
-// .slider-counter__link--dots:not(.slider-counter__link--active):hover .dot,
-// .slider-counter__link--numbers:hover {
-//   transform: scale(1.1);
-// }
-
 
 .slider-buttons {
     [class^='texture-'] &, div[class*=' texture-'] & {
