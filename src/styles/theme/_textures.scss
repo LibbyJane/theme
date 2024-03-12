@@ -30,18 +30,18 @@
         background-size: 100% 2.4rem, 100% 2.4rem, cover;
         border-left: var(--texture-lined-border-size) dotted transparent;
         filter: drop-shadow(0 0 5px rgba(var(--color-shadow), 0.1));
-        -webkit-mask-image: url('img-paper-hole-border-left-wide.svg?v=1');
-        mask-image: url('img-paper-hole-border-left-wide.svg?v=1');
+        -webkit-mask-image: url('img-paper-hole-border-left-wide.svg?v=5');
+        mask-image: url('img-paper-hole-border-left-wide.svg?v=5');
         -webkit-mask-repeat: no-repeat round;
         mask-repeat: no-repeat round;
-        mask-size: auto calc(var(--texture-lined-border-size) + 4px);
+        mask-size: auto calc(var(--texture-lined-border-size) + 0px);
         -webkit-mask-origin: border;
         mask-origin: border-box;
 
-        @supports (-webkit-touch-callout: none) {
-            /* CSS specific to iOS devices */
-            mask-repeat: no-repeat repeat;
-        }
+        // @supports (-webkit-touch-callout: none) {
+        //     /* CSS specific to iOS devices */
+        //     mask-repeat: no-repeat repeat;
+        // }
     }
 }
 
