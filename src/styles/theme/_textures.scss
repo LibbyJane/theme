@@ -38,11 +38,11 @@
         -webkit-mask-origin: border;
         mask-origin: border-box;
 
-        // @supports (-webkit-touch-callout: none) {
-        //     mask-size: auto calc(var(--texture-lined-border-size) + 2px);
-        //     /* CSS specific to iOS devices */
-        //     // mask-repeat: no-repeat repeat;
-        // }
+        @supports (-webkit-touch-callout: none) {
+            mask-size: auto calc(var(--texture-lined-border-size) + 6px);
+            /* CSS specific to iOS devices */
+            // mask-repeat: no-repeat repeat;
+        }
     }
 }
 
