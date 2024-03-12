@@ -323,6 +323,7 @@ slider-component {
   max-width: var(--page-width);
   margin: 0 auto var(--space-med);
   padding-inline: var(--content-padding-inline);
+  overflow: clip;
 }
 
 .slider-component-full-width {
@@ -417,22 +418,11 @@ slider-component {
 }
 
 .slider__slide {
-  --focus-outline-padding: 0.5rem;
-  --shadow-padding-top: calc(var(--space) + (var(--shadow-vertical-offset) * -1 + var(--shadow-blur-radius)) * var(--shadow-visible));
-  --shadow-padding-bottom: calc(var(--space) + (var(--shadow-vertical-offset) + var(--shadow-blur-radius)) * var(--shadow-visible));
-  --shadow-margin-top: calc((var(--shadow-vertical-offset) * -1 + var(--shadow-blur-radius)) * var(--shadow-visible) * -1 );
+  --slide-block-space: 60px;
+  --slide-margin-top: calc((var(--slide-block-space) - 10px) * -1);
   scroll-snap-align: start;
   flex-shrink: 0;
   padding-bottom: 0;
-  margin-bottom: 0;
-  padding-top: max(var(--focus-outline-padding), var(--shadow-padding-top));
-  padding-bottom: max(var(--focus-outline-padding), var(--shadow-padding-bottom));
-}
-
-.slider__slide {
-  --slide-block-space: 60px;
-  --slide-margin-top: calc((var(var(--slide-block-space)) - 10px) * -1);
-  scroll-snap-align: start;
   position: relative;
   z-index: 1;
   padding-block: var(--slide-block-space) !important;

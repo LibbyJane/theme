@@ -10,6 +10,7 @@ slider-component {
     max-width: var(--page-width);
     margin: 0 auto var(--space-med);
     padding-inline: var(--content-padding-inline);
+    overflow: clip;
 }
 
 .slider-component-full-width {
@@ -119,34 +120,15 @@ slider-component {
 }
 
 .slider__slide {
-    --focus-outline-padding: 0.5rem;
-    --shadow-padding-top: calc(var(--space) + (var(--shadow-vertical-offset) * -1 + var(--shadow-blur-radius)) * var(--shadow-visible));
-    --shadow-padding-bottom: calc(var(--space) + (var(--shadow-vertical-offset) + var(--shadow-blur-radius)) * var(--shadow-visible));
-    --shadow-margin-top: calc((var(--shadow-vertical-offset) * -1 + var(--shadow-blur-radius)) * var(--shadow-visible) * -1 );
+    --slide-block-space: 60px; // maximum shadow size + blur allowed in settings
+    --slide-margin-top: calc((var(--slide-block-space) - 10px) * -1);
     scroll-snap-align: start;
     flex-shrink: 0;
     padding-bottom: 0;
-    margin-bottom: 0;
-    padding-top: max(var(--focus-outline-padding), var(--shadow-padding-top));
-    padding-bottom: max(var(--focus-outline-padding), var(--shadow-padding-bottom));
-}
-
-.slider__slide {
-    --slide-block-space: 60px; // maximum shadow size + blur allowed in settings
-    --slide-margin-top: calc((var(var(--slide-block-space)) - 10px) * -1);
-    // --focus-outline-padding: var(--space-sm);
-    // --shadow-padding-top: calc((var(--shadow-vertical-offset) * -1 + var(--shadow-blur-radius)) * var(--shadow-visible));
-    // --shadow-padding-bottom: calc((var(--shadow-vertical-offset) + var(--shadow-blur-radius)) * var(--shadow-visible));
-    scroll-snap-align: start;
-    // flex-shrink: 0;
-    // padding-bottom: 0;
     position: relative;
     z-index: 1;
-    // padding-block : var(--slider-block-space) !important;
-    // margin-block: calc(var(--slider-block-space) * -1) !important;
     padding-block : var(--slide-block-space) !important;
     margin-top: var(--slide-margin-top) !important;
-    // margin-block: calc(var(--slider-block-space) * -1) !important;
 
     &[aria-hidden="true"] {
         visibility: hidden;
