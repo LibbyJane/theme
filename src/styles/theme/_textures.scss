@@ -27,11 +27,11 @@
             linear-gradient(#eee .1rem, transparent .1rem),
             var(--background-gradient);
         // background-origin: padding-box;
-        background-size: 100% 2.4rem, 100% 2.4rem, cover;
+        background-size: 100% var(--line-height, 26px), 100% var(--line-height, 26px), cover;
         border-left: var(--texture-lined-border-size) dotted transparent;
         filter: drop-shadow(0 0 5px rgba(var(--color-shadow), 0.1));
-        -webkit-mask-image: url('img-paper-hole-border-left-wide.svg?v=6');
-        mask-image: url('img-paper-hole-border-left-wide.svg?v=6');
+        -webkit-mask-image: url('img-paper-hole-border-left-wide.svg?v=7');
+        mask-image: url('img-paper-hole-border-left-wide.svg?v=7');
         -webkit-mask-repeat: no-repeat round;
         mask-repeat: no-repeat round;
         mask-size: auto var(--texture-lined-border-size);
