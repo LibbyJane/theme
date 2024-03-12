@@ -510,7 +510,14 @@
 
 .footer__row-item--copyright {
   display: flex;
-  gap: var(--space);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm) var(--space);
+}
+@media screen and (min-width: 750px) {
+  .footer__row-item--copyright {
+    flex-direction: row;
+  }
 }
 
 .footer__copyright-block {

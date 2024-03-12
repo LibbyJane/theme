@@ -166,10 +166,14 @@
 }
 
 .isolate {
-    // todo: test
-    overflow: clip;
     position: relative;
     z-index: 0;
+}
+
+.clip {
+     // can't be part of isolate class as cuts off select boxes etc
+     // todo: implement as separate class? just clip overflow x?
+    overflow: clip;
 }
 
 .zi-base {

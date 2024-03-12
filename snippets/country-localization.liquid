@@ -29,17 +29,17 @@
         {%- for country in localization.available_countries -%}
             <li class="disclosure__item" tabindex="-1">
                 <a
-                    class="disclosure__link focus-inset{% if country.iso_code == localization.country.iso_code %} disclosure__link--active{% endif %}"
+                    class="disclosure__link disclosure__link--country focus-inset{% if country.iso_code == localization.country.iso_code %} disclosure__link--active{% endif %}"
                     href="#"
                     {% if country.iso_code == localization.country.iso_code %}
-                    aria-current="true"
+                        aria-current="true"
                     {% endif %}
                     data-value="{{ country.iso_code }}"
                 >
                     <span class="localization-form__currency">
-                    {{- country.currency.iso_code }}
-                    {{ country.currency.symbol }}</span
-                    >
+                        {{- country.currency.iso_code }}
+                        {{ country.currency.symbol }}
+                    </span>
                     <span class="localization-form__country">
                         {{ country.name }}
                     </span>

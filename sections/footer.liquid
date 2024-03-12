@@ -374,7 +374,7 @@
 
         <div class="footer__row footer__row--small-gap content-padding-inline page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
             <div class="footer__row-item footer__row-item--copyright caption">
-                <small class="footer__copyright-block copyright__content">&copy;{{ 'now' | date: '%Y' }}&nbsp;{{ shop.name | link_to: routes.root_url -}}
+                <small class="footer__copyright-block copyright__content">&copy;&nbsp;{{ 'now' | date: '%Y' }}&nbsp;{{ shop.name | link_to: routes.root_url -}}
                 </small>
 
                 <small class="footer__copyright-block powered-by">{{ powered_by_link }}</small>

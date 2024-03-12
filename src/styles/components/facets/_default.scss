@@ -169,7 +169,8 @@
     // padding-right: 1.75rem;
     transition: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
         box-shadow: none;
         filter: none;
         transition: none;
@@ -186,7 +187,7 @@
 
 .facets__summary,
 .facet-filters .select {
-    color: var(--filter-color);
+    color: var(--filter-color, currentColor);
     cursor: pointer;
     display: flex;
         gap: 0 var(--space);
@@ -199,11 +200,12 @@
     &:hover,
     &:focus,
     .facets__disclosure[open] & {
-        color: var(--filter-color-active);
+        color: var(--filter-color-active, currentColor);
+        background-color: rgb(var(--color-background));
     }
 
     &:hover {
-        color: var(--filter-color-active);
+        color: var(--filter-color-active, currentColor);
 
         .icon-caret {
             transform: rotate(-90deg);
@@ -228,7 +230,7 @@
 .facet-filters__sort {
     appearance: none;
     box-shadow: none;
-    color: var(--filter-color);
+    color: var(--filter-color, currentColor);
     cursor: pointer;
     font-size: var(--font-size-base);
     letter-spacing: 0.04rem;
@@ -245,7 +247,7 @@
     &:focus-visible,
     &.focused,
     &:hover {
-        color: var(--filter-color-active);
+        color: var(--filter-color-active, currentColor);
     }
 }
 

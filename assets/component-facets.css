@@ -452,7 +452,7 @@
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   transition: none;
 }
-.facet-filters__sort:hover {
+.facet-filters__sort:hover, .facet-filters__sort:focus {
   box-shadow: none;
   filter: none;
   transition: none;
@@ -466,7 +466,7 @@
 
 .facets__summary,
 .facet-filters .select {
-  color: var(--filter-color);
+  color: var(--filter-color, currentColor);
   cursor: pointer;
   display: flex;
   gap: 0 var(--space);
@@ -480,11 +480,12 @@
 .facet-filters .select:hover,
 .facet-filters .select:focus,
 .facets__disclosure[open] .facet-filters .select {
-  color: var(--filter-color-active);
+  color: var(--filter-color-active, currentColor);
+  background-color: rgb(var(--color-background));
 }
 .facets__summary:hover,
 .facet-filters .select:hover {
-  color: var(--filter-color-active);
+  color: var(--filter-color-active, currentColor);
 }
 .facets__summary:hover .icon-caret,
 .facet-filters .select:hover .icon-caret {
@@ -513,7 +514,7 @@
      -moz-appearance: none;
           appearance: none;
   box-shadow: none;
-  color: var(--filter-color);
+  color: var(--filter-color, currentColor);
   cursor: pointer;
   font-size: var(--font-size-base);
   letter-spacing: 0.04rem;
@@ -529,7 +530,7 @@
 .facet-filters__sort:focus-visible,
 .facet-filters__sort.focused,
 .facet-filters__sort:hover {
-  color: var(--filter-color-active);
+  color: var(--filter-color-active, currentColor);
 }
 
 .facets__reset {
