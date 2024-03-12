@@ -1,5 +1,10 @@
 @import "helpers/common";
 
+.slider {
+    --slide-block-space: 60px; // maximum shadow size + blur allowed in settings
+    --slide-space-offset: calc((var(--slide-block-space) - 10px) * -1);
+}
+
 slider-component {
     --desktop-margin-left-first-item: max(5rem, calc((100vw - var(--page-width) + var(--grid-horizontal-spacing)) / 2));
     --slider-block-space: 60px; // maximum shadow size + blur allowed in settings
@@ -21,6 +26,22 @@ slider-component {
     @media screen and (max-width: 989px) {
         max-width: none;
         padding-inline: 0;
+
+        .texture-lined & {
+            padding-left: 0;
+        }
+    }
+}
+
+
+.slider-component-desktop {
+    @media screen and (min-width: 990px) {
+        max-width: none;
+        padding-inline: 0;
+
+        &.page-width {
+            max-width: none;
+        }
 
         .texture-lined & {
             padding-left: 0;
@@ -119,16 +140,110 @@ slider-component {
     }
 }
 
+@media screen and (max-width: 989px) {
+    .slider.slider--tablet.contains-card--standard .slider__slide:not(.collection-list__item--no-media) {
+        padding-bottom: var(--focus-outline-padding);
+    }
+
+    .slider.slider--tablet.contains-content-container .slider__slide {
+        --focus-outline-padding: 0;
+    }
+}
+
+.slider--tablet-up {
+    @media screen and (min-width: 750px) {
+        position: relative;
+        flex-wrap: inherit;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scroll-padding-left: var(--space);
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.slider--desktop {
+    @media screen and (min-width: 990px) {
+        position: relative;
+        flex-wrap: inherit;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 1rem;
+        scroll-padding-left: var(--desktop-margin-left-first-item);
+
+        .slider-component-full-width & {
+            scroll-padding-left: var(--space-med);
+
+            &::after {
+                padding-left: var(--space-med);
+            }
+        }
+
+        /* Fix to show some space at the end of our sliders in all browsers */
+        &::after {
+            content: '';
+            width: 0;
+            padding-left: 5rem;
+            margin-left: calc(-1 * var(--grid-horizontal-spacing));
+        }
+
+        &.grid--5-col-desktop {
+            .grid__item {
+                width: calc((100% - var(--desktop-margin-left-first-item)) / 5 - var(--grid-horizontal-spacing) * 2);
+            }
+        }
+
+        &.grid--4-col-desktop {
+            .grid__item {
+                width: calc((100% - var(--desktop-margin-left-first-item)) / 4 - var(--grid-horizontal-spacing) * 3);
+            }
+        }
+
+        &.grid--3-col-desktop {
+            .grid__item {
+                width: calc((100% - var(--desktop-margin-left-first-item)) / 3 - var(--grid-horizontal-spacing) * 4);
+            }
+        }
+
+        &.grid--2-col-desktop {
+            .grid__item {
+                width: calc((100% - var(--desktop-margin-left-first-item)) / 2 - var(--grid-horizontal-spacing) * 5);
+            }
+        }
+
+        &.grid--1-col-desktop {
+            .grid__item {
+                width: calc((100% - var(--desktop-margin-left-first-item)) - var(--grid-horizontal-spacing) * 9);
+            }
+        }
+    }
+}
+
+.slider--everywhere {
+    position: relative;
+    flex-wrap: inherit;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: var(--space);
+}
+
+
 .slider__slide {
-    --slide-block-space: 60px; // maximum shadow size + blur allowed in settings
-    --slide-margin-top: calc((var(--slide-block-space) - 10px) * -1);
     scroll-snap-align: start;
     flex-shrink: 0;
     padding-bottom: 0;
     position: relative;
     z-index: 1;
-    padding-block : var(--slide-block-space) !important;
-    margin-top: var(--slide-margin-top) !important;
+
+    .contains-card & {
+        padding-block : var(--slide-block-space) !important;
+        margin-top: var(--slide-space-offset) !important;
+    }
+
 
     &[aria-hidden="true"] {
         visibility: hidden;
@@ -145,6 +260,49 @@ slider-component {
     .slider--everywhere & {
         margin-bottom: 0;
         scroll-snap-align: center;
+    }
+
+    &:first-child {
+        .slider--desktop & {
+            @media screen and (min-width: 990px) {
+                margin-left: var(--desktop-margin-left-first-item);
+                scroll-margin-left: var(--desktop-margin-left-first-item);
+
+                .texture-lined & {
+                    margin-left: calc(var(--desktop-margin-left-first-item) + var(--texture-lined-border-size));
+                    scroll-margin-left: calc(var(--desktop-margin-left-first-item) + var(--texture-lined-border-size));
+                }
+
+                .slider-component-full-width & {
+                    margin-left: var(--space-med);
+                    scroll-margin-left: var(--space-med);
+
+                    .texture-lined & {
+                        margin-left: calc(var(--space-med) + var(--texture-lined-border-size));
+                        scroll-margin-left: calc(var(--space-med) + var(--texture-lined-border-size));
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+
+@media screen and (min-width: 990px) {
+    .slider.slider--desktop.contains-card--standard .slider__slide:not(.collection-list__item--no-media) {
+        padding-bottom: var(--focus-outline-padding);
+    }
+
+    .slider.slider--desktop.contains-content-container .slider__slide {
+        --focus-outline-padding: 0rem;
+    }
+}
+
+.slider.slider--mobile.contains-content-container .slider__slide {
+    @media screen and (max-width: 749px) {
+        --focus-outline-padding: 0rem;
     }
 }
 
@@ -225,8 +383,15 @@ slider-component {
     display: flex;
         align-items: center;
         justify-content: center;
-    margin: var(--space) auto;
+        margin: var(--space) auto;
     width: max-content;
+
+    .contains-card & {
+        margin-top: var(--slide-space-offset);
+        position: relative;
+        z-index: var(--zi-base);
+    }
+
 
     // WHERE Is this for - overlaid?
     // .background-transparent & {
