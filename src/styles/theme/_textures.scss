@@ -34,14 +34,15 @@
         mask-image: url('img-paper-hole-border-left-wide.svg?v=6');
         -webkit-mask-repeat: no-repeat round;
         mask-repeat: no-repeat round;
-        mask-size: auto calc(var(--texture-lined-border-size) + 0px);
+        mask-size: auto var(--texture-lined-border-size);
         -webkit-mask-origin: border;
         mask-origin: border-box;
 
-        // @supports (-webkit-touch-callout: none) {
-        //     /* CSS specific to iOS devices */
-        //     mask-repeat: no-repeat repeat;
-        // }
+        @supports (-webkit-touch-callout: none) {
+            mask-size: auto calc(var(--texture-lined-border-size) + 2px);
+            /* CSS specific to iOS devices */
+            // mask-repeat: no-repeat repeat;
+        }
     }
 }
 
