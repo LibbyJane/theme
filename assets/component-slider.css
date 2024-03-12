@@ -430,9 +430,13 @@ slider-component {
 }
 
 .slider__slide {
+  --slide-block-space: 60px;
+  --slide-margin-top: calc((var(var(--slide-block-space)) - 10px) * -1);
   scroll-snap-align: start;
   position: relative;
   z-index: 1;
+  padding-block: var(--slide-block-space) !important;
+  margin-top: var(--slide-margin-top) !important;
 }
 .slider__slide[aria-hidden=true] {
   visibility: hidden;
