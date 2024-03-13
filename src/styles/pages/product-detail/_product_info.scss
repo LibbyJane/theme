@@ -1,6 +1,6 @@
 .product__info-wrapper {
     overflow: clip; // badges causing overflow issues on ios
-    padding: var(--space-lg);
+    padding: var(--content-padding);
 }
 
 
@@ -24,6 +24,7 @@
 }
 
 .product__lead-in {
+    font-size: var(--font-size-smaller);
     font-weight: normal;
     margin: 0 0 var(--space-sm);
     padding: 0;

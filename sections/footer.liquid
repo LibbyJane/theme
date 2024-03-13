@@ -88,19 +88,19 @@
 
                                         {%- when 'text' -%}
                                             <div class="footer-block__details-content rte">
-                                            {{ block.settings.subtext }}
+                                             {{ block.settings.subtext }}
                                             </div>
 
                                         {%- when 'link_list' -%}
                                             {%- if block.settings.menu != blank -%}
-                                                <ul class="footer-block__details-content">
+                                                <ul class="footer-block__details-content list-menu list-menu--offset-item-padding">
                                                     {%- for link in block.settings.menu.links -%}
                                                     <li>
                                                         <a
-                                                        href="{{ link.url }}"
-                                                        class="list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                                                            href="{{ link.url }}"
+                                                            class="list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
                                                         >
-                                                        {{ link.title }}
+                                                            {{ link.title }}
                                                         </a>
                                                     </li>
                                                     {%- endfor -%}
@@ -110,9 +110,7 @@
                                         {%- when 'brand_information' -%}
                                             <div class="footer-block__brand-info align-image-{{ block.settings.brand_image_alignment }}">
                                                 {%- if settings.brand_image != blank -%}
-                                                    {%- assign brand_image_height = settings.brand_image_width
-                                                    | divided_by: settings.brand_image.aspect_ratio
-                                                    -%}
+                                                    {%- assign brand_image_height = settings.brand_image_width | divided_by: settings.brand_image.aspect_ratio -%}
                                                     <div
                                                         class="footer-block__image-wrapper"
                                                         style="max-width: min(100%, {{ settings.brand_image_width }}px);"
@@ -128,6 +126,7 @@
                                                         }}
                                                     </div>
                                                 {%- endif -%}
+
                                                 {%- if settings.brand_headline != blank -%}
                                                     <h5 class="rte">{{ settings.brand_headline }}</h5>
                                                 {%- endif -%}

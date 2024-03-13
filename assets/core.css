@@ -1282,7 +1282,8 @@ a {
     min-width: 35%;
   }
   .grid--peek.slider:after {
-    margin-left: calc(-1 * var(--grid-horizontal-spacing));
+    margin-left: 0;
+    padding-left: var(--content-padding-inline);
   }
   .grid--2-col-tablet-down .grid__item {
     width: calc(50% - var(--grid-horizontal-spacing) / 2);

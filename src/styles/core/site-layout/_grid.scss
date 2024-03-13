@@ -169,7 +169,9 @@
 
     // Fix to show some space at the end of our sliders in all browsers
     .grid--peek.slider:after {
-        margin-left: calc(-1 * var(--grid-horizontal-spacing));
+        //margin-left: calc(-1 * var(--grid-horizontal-spacing));
+        margin-left: 0;
+        padding-left: var(--content-padding-inline);
     }
 
     .grid--2-col-tablet-down .grid__item {

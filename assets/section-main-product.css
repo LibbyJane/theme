@@ -1,8 +1,13 @@
 @charset "UTF-8";
 .product {
-  -moz-column-gap: calc(var(--grid-horizontal-spacing) * 2);
-       column-gap: calc(var(--grid-horizontal-spacing) * 2);
+  gap: 0;
   margin: 0;
+}
+@media screen and (min-width: 750px) {
+  .product {
+    -moz-column-gap: calc(var(--grid-horizontal-spacing) * 2);
+         column-gap: calc(var(--grid-horizontal-spacing) * 2);
+  }
 }
 
 .product__media-wrapper {
@@ -592,83 +597,9 @@ a.product__text {
   content: "#";
 }
 
-/* Product-thumbnail snippet */
-.product-media-container {
-  --aspect-ratio: var(--preview-ratio);
-  --ratio-percent: calc(1 / var(--aspect-ratio) * 100%);
-  position: relative;
-  width: 100%;
-  max-width: calc(100% - var(--media-border-width) * 2);
-}
-
-.product-media-container.constrain-height {
-  /* arbitrary offset value based on average theme spacing and header height */
-  --viewport-offset: 400px;
-  --constrained-min-height: 300px;
-  --constrained-height: max(var(--constrained-min-height), calc(100vh - var(--viewport-offset)));
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.product-media-container.constrain-height.media-fit-contain {
-  --contained-width: calc(var(--constrained-height) * var(--aspect-ratio));
-  width: min(var(--contained-width), 100%);
-}
-
-.product-media-container .media {
-  padding-top: var(--ratio-percent);
-}
-
-.product-media-container.constrain-height .media {
-  padding-top: min(var(--constrained-height), var(--ratio-percent));
-}
-
-@media screen and (max-width: 749px) {
-  .product-media-container.media-fit-cover {
-    display: flex;
-    align-self: stretch;
-  }
-  .product-media-container.media-fit-cover .media {
-    /* allow media img element to scale relative to modal-opener/product-media-container */
-    position: initial;
-  }
-}
-@media screen and (min-width: 750px) {
-  .product-media-container {
-    max-width: 100%;
-  }
-  .product-media-container:not(.media-type-image) {
-    /* override to use actual media ratio (not poster ratio) for video/models on desktop */
-    --aspect-ratio: var(--ratio);
-  }
-  .product-media-container.constrain-height {
-    --viewport-offset: 170px;
-    --constrained-min-height: 500px;
-  }
-  .product-media-container.media-fit-cover,
-  .product-media-container.media-fit-cover .product__modal-opener,
-  .product-media-container.media-fit-cover .media {
-    height: 100%;
-  }
-  .product-media-container.media-fit-cover .deferred-media__poster img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 100%;
-  }
-}
-.product-media-container .product__modal-opener {
-  display: block;
-  position: relative;
-}
-
-@media screen and (min-width: 750px) {
-  .product-media-container .product__modal-opener:not(.product__modal-opener--image) {
-    display: none;
-  }
-}
 .product__info-wrapper {
   overflow: clip;
-  padding: var(--space-lg);
+  padding: var(--content-padding);
 }
 
 .product__info-container {
@@ -687,6 +618,7 @@ a.product__text {
 }
 
 .product__lead-in {
+  font-size: var(--font-size-smaller);
   font-weight: normal;
   margin: 0 0 var(--space-sm);
   padding: 0;
@@ -742,8 +674,13 @@ a.product__text {
   padding-inline: 0;
 }
 
-.product__media-wrapper {
+.product__media-wrapper.product__media-wrapper {
   background: transparent;
+  margin-inline: calc(var(--content-padding-inline) * -1);
+  max-width: none;
+}
+.product__media-wrapper.product__media-wrapper slider-component {
+  padding-inline: 0;
 }
 
 @media screen and (max-width: 749px) {
@@ -760,6 +697,10 @@ a.product__text {
 }
 .product__media-list.product__media-list {
   padding-bottom: 0;
+}
+.texture-lined .product__media-list.product__media-list {
+  -moz-column-gap: 0;
+       column-gap: 0;
 }
 @media screen and (min-width: 750px) {
   .product__media-list.product__media-list {
@@ -793,7 +734,10 @@ a.product__text {
 }
 @media screen and (max-width: 749px) {
   .product--mobile-columns .product__media-item.product__media-item {
-    width: calc(50% - 1.5rem - var(--grid-horizontal-spacing));
+    width: calc(50% - var(--content-padding-inline) - var(--grid-horizontal-spacing));
+  }
+  .texture-lined .product--mobile-columns .product__media-item.product__media-item {
+    width: calc(50% - var(--content-padding-inline) - var(--grid-horizontal-spacing) - var(--texture-lined-border-size));
   }
 }
 .product__media-item.product__media-item--variant {
@@ -1531,6 +1475,94 @@ slider-component {
 }
 .thumbnail-list__item {
   position: relative;
+}
+
+/* Product-thumbnail snippet */
+.product-media-container {
+  --aspect-ratio: var(--preview-ratio);
+  --ratio-percent: calc(1 / var(--aspect-ratio) * 100%);
+  position: relative;
+  width: 100%;
+  max-width: calc(100% - var(--media-border-width) * 2);
+}
+@media screen and (min-width: 750px) {
+  .product-media-container {
+    max-width: 100%;
+  }
+}
+.product-media-container.constrain-height {
+  /* arbitrary offset value based on average theme spacing and header height */
+  --viewport-offset: 400px;
+  --constrained-min-height: 300px;
+  --constrained-height: max(var(--constrained-min-height), calc(100vh - var(--viewport-offset)));
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 750px) {
+  .product-media-container.constrain-height {
+    --viewport-offset: 170px;
+    --constrained-min-height: 500px;
+  }
+}
+.product-media-container.constrain-height.media-fit-contain {
+  --contained-width: calc(var(--constrained-height) * var(--aspect-ratio));
+  width: min(var(--contained-width), 100%);
+  max-width: none;
+}
+.product-media-container.constrain-height .media {
+  padding-top: min(var(--constrained-height), var(--ratio-percent));
+}
+@media screen and (max-width: 749px) {
+  .product-media-container.media-fit-cover {
+    display: flex;
+    align-self: stretch;
+  }
+}
+@media screen and (min-width: 750px) {
+  .product-media-container.media-fit-cover {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 750px) {
+  .product-media-container.media-fit-cover .product__modal-opener {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 749px) {
+  .product-media-container.media-fit-cover .media {
+    /* allow media img element to scale relative to modal-opener/product-media-container */
+    position: initial;
+  }
+}
+@media screen and (min-width: 750px) {
+  .product-media-container.media-fit-cover .media {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 750px) {
+  .product-media-container.media-fit-cover .deferred-media__poster img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 750px) {
+  .product-media-container:not(.media-type-image) {
+    /* override to use actual media ratio (not poster ratio) for video/models on desktop */
+    --aspect-ratio: var(--ratio);
+  }
+}
+.product-media-container .media {
+  padding-top: var(--ratio-percent);
+}
+.product-media-container .product__modal-opener {
+  display: block;
+  position: relative;
+}
+@media screen and (min-width: 750px) {
+  .product-media-container .product__modal-opener:not(.product__modal-opener--image) {
+    display: none;
+  }
 }
 
 .product-media-modal__content > *:not(.active),

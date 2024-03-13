@@ -1,5 +1,14 @@
 .product__media-wrapper {
-    background: transparent;
+    &.product__media-wrapper {
+        // overriding grid style specificity
+        background: transparent;
+        margin-inline: calc(var(--content-padding-inline) * -1);
+        max-width: none;
+
+        slider-component {
+            padding-inline: 0;
+        }
+    }
 }
 
 .product__media-list {
@@ -15,6 +24,10 @@
 
     &.product__media-list {
         padding-bottom: 0;
+
+        .texture-lined & {
+            column-gap: 0; // the texture border space is sufficient
+        }
 
         @media screen and (min-width: 750px) {
             justify-content: center;
@@ -55,7 +68,11 @@
 
         @media screen and (max-width: 749px) {
             .product--mobile-columns & {
-                width: calc(50% - 1.5rem - var(--grid-horizontal-spacing));
+                width: calc(50% - var(--content-padding-inline) - var(--grid-horizontal-spacing));
+
+                .texture-lined & {
+                    width: calc(50% - var(--content-padding-inline) - var(--grid-horizontal-spacing) - var(--texture-lined-border-size));
+                }
             }
         }
     }
@@ -961,3 +978,102 @@ slider-component {
 //     margin-left: 1.2rem;
 //     flex-shrink: 0;
 //   }
+
+
+/* Product-thumbnail snippet */
+
+.product-media-container {
+    --aspect-ratio: var(--preview-ratio);
+    --ratio-percent: calc(1 / var(--aspect-ratio) * 100%);
+    position: relative;
+    width: 100%;
+    max-width: calc(100% - calc(var(--media-border-width) * 2));
+
+    @media screen and (min-width: 750px) {
+        max-width: 100%;
+    }
+
+    &.constrain-height {
+        /* arbitrary offset value based on average theme spacing and header height */
+        --viewport-offset: 400px;
+        --constrained-min-height: 300px;
+        --constrained-height: max(var(--constrained-min-height), calc(100vh - var(--viewport-offset)));
+        margin-right: auto;
+        margin-left: auto;
+
+        @media screen and (min-width: 750px) {
+            --viewport-offset: 170px;
+            --constrained-min-height: 500px;
+        }
+
+        &.media-fit-contain {
+            --contained-width: calc(var(--constrained-height) * var(--aspect-ratio));
+            width: min(var(--contained-width), 100%);
+            max-width: none;
+        }
+
+        .media {
+            padding-top: min(var(--constrained-height), var(--ratio-percent));
+        }
+    }
+
+    &.media-fit-cover {
+        @media screen and (max-width: 749px) {
+            display: flex;
+            align-self: stretch;
+        }
+
+        @media screen and (min-width: 750px) {
+            height: 100%;
+        }
+
+        .product__modal-opener {
+            @media screen and (min-width: 750px) {
+                height: 100%;
+            }
+        }
+
+        .media {
+            @media screen and (max-width: 749px) {
+                /* allow media img element to scale relative to modal-opener/product-media-container */
+                position: initial;
+            }
+
+            @media screen and (min-width: 750px) {
+                height: 100%;
+            }
+        }
+
+        .deferred-media__poster {
+            img {
+                @media screen and (min-width: 750px) {
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &:not(.media-type-image) {
+        @media screen and (min-width: 750px) {
+            /* override to use actual media ratio (not poster ratio) for video/models on desktop */
+            --aspect-ratio: var(--ratio);
+        }
+    }
+
+    .media {
+        padding-top: var(--ratio-percent);
+    }
+
+    .product__modal-opener {
+        display: block;
+        position: relative;
+
+        &:not(.product__modal-opener--image) {
+            @media screen and (min-width: 750px) {
+                    display: none;
+            }
+        }
+    }
+}
+

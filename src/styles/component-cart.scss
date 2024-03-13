@@ -15,11 +15,7 @@
 }
 
 .cart__footer {
-    box-shadow:  0 1px 4px rgba(var(--color-shadow), 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
-    box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
-    rgba(var(--color-shadow), var(--popup-shadow-opacity)), 0 -2px 4px rgba(var(--color-shadow), 0.06);
-    padding-left: var(--inline-padding-lg);
-    padding-right: var(--inline-padding-lg);
+    box-shadow: 0 2px 6px rgba(var(--color-shadow), 0.4), 0px 15px 30px rgba(0, 0, 0, 0.12) inset, var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity)), 0 -2px 4px rgba(var(--color-shadow), 0.06);
     position: relative;
     pointer-events: all;
     width: 100%;
@@ -28,6 +24,10 @@
         display: inline-grid;
         margin-left: auto;
         width: auto;
+    }
+
+    &:focus-within {
+        box-shadow: 0 2px 6px rgba(var(--color-shadow), 0.4), var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity)), 0 -2px 4px rgba(var(--color-shadow), 0.06);
     }
 
     .is-empty & {
@@ -51,7 +51,9 @@ cart-items {
 
     small {
         display: block;
+        font-size: var(--font-size-small);
         letter-spacing: 0;
+        line-height: 1.2;
         margin-bottom: var(--space);
     }
 

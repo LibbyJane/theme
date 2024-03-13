@@ -410,7 +410,7 @@ slider-component {
   .slider--mobile::after {
     content: "";
     width: 0;
-    padding-left: var(--space-med);
+    padding-left: var(--content-padding-inline);
   }
 }
 
