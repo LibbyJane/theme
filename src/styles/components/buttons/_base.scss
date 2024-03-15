@@ -59,6 +59,7 @@ button.shopify-payment-button__button--unbranded,
 
     &:hover, &:focus {
         box-shadow: calc(var(--shadow-horizontal-offset) * 0.9) calc(var(--shadow-vertical-offset) * 0.9) calc(var(--shadow-blur-radius) * 0.9) rgba(var(--color-shadow), calc(var(--shadow-opacity) * 0.75));
+        text-shadow: 0.2px 0 0 currentColor;
 
         &::before {
             opacity: var(--alpha-link);
@@ -245,9 +246,17 @@ summary,
 .button--tertiary,
 //.shopify-challenge__button.shopify-challenge__button,
 .shopify-payment-button__button.shopify-payment-button__button {
-    border-color:  var(--button-foreground-color);
+    border-color:  var(--button-background-color);
     background-color:  var(--button-background-color);
-    color: var(--button-foreground-color)
+    color: var(--button-foreground-color);
+
+    &:hover, &:focus {
+        &::before {
+            transform: rotate(1deg) scaleY(1.025) scaleX(1.025)
+        }
+    }
+
+
 }
 
 

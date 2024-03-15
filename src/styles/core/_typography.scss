@@ -30,7 +30,6 @@ address,
     font-size: var(--font-size-small);
 }
 
-
 h1,
 h2,
 h3,
@@ -86,8 +85,6 @@ strong {
     font-weight: 600;
 }
 
-
-
 .text-subtitle,
 .text-display {
     @include text-heading;
@@ -132,6 +129,10 @@ mark {
 a {
     color: currentColor;
     text-decoration: none;
+
+    &:active {
+        color: currentColor;
+    }
 }
 
 .underlined-link {

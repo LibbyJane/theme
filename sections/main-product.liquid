@@ -1,6 +1,6 @@
 <section
     id="MainProduct-{{ section.id }}"
-    class="page-width content-padding-inline section-{{ section.id }}-padding color-{{ section.settings.section_color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} {% if section.settings.section_background_texture != blank %}texture-{{section.settings.section_background_texture}}{% endif %}"
+    class="section-{{ section.id }}-margin page-width content-padding color-{{ section.settings.section_color_scheme }} {% if section.settings.section_background_style == 'transparent' %}background-transparent{% elsif section.settings.section_background_style != blank %}texture-{{ section.settings.section_background_style }}{% endif %}"
     data-section="{{ section.id }}"
 >
     {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
@@ -20,15 +20,15 @@
             --highlight-opacity: {% if section.settings.use_color_highlight %}0.2{% else %}0{% endif %};
         }
 
-        .section-{{ section.id }}-padding {
-            padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-            padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+        .section-{{ section.id }}-margin {
+            margin-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+            margin-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
         }
 
         @media screen and (min-width: 750px) {
-            .section-{{ section.id }}-padding {
-                padding-top: {{ section.settings.padding_top }}px;
-                padding-bottom: {{ section.settings.padding_bottom }}px;
+            .section-{{ section.id }}-margin {
+                margin-top: {{ section.settings.padding_top }}px;
+                margin-bottom: {{ section.settings.padding_bottom }}px;
             }
         }
     {%- endstyle -%}
@@ -74,6 +74,7 @@
                 product--{{ section.settings.gallery_layout }}
                 product--mobile-{{ section.settings.mobile_thumbnails }}
                 grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}
+
     ">
         {% if product.media.size > 0 %}
             <div class="grid__item product__media-wrapper color-{{ section.settings.content_color_scheme }}">
@@ -83,7 +84,7 @@
         {% endif %}
 
         <div class="grid__item product__info-wrapper margin-bottom color-{{ section.settings.content_color_scheme }}
-            {% if section.settings.background_texture != blank %}texture-{{section.settings.background_texture}}{% endif %}
+            {% if section.settings.content_background_style == 'transparent' %}content-background-transparent{% elsif section.settings.content_background_style != blank %}texture-{{ section.settings.content_background_style }} content-texture-{{ section.settings.content_background_style }}{% endif %}
             {% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}
             {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
         ">
@@ -149,8 +150,20 @@
 
                         {%- when 'description' -%}
                             {%- if product.description != blank -%}
-                                {% assign first_char = product.description | slice: 0 %}
-                                <div class="product__description rte {% unless first_char == "<" %}p{% endunless %} quick-add-hidden" {{ block.shopify_attributes }}>
+                                {%- liquid
+
+                                    assign first_char = product.description | slice: 0
+                                    if first_char != "<"
+                                        assign rte_class = " p"
+                                    endif
+
+                                    assign first_chars = product.description | slice: 0, 5 | downcase
+                                    if first_chars == "<span"
+                                        assign rte_class = " p"
+                                    endif
+                                -%}
+
+                                <div class="product__description rte quick-add-hidden{{ rte_class }}" {{ block.shopify_attributes }}>
                                     {{ product.description }}
                                 </div>
                             {%- endif -%}
@@ -269,16 +282,16 @@
             tabindex="-1"
         >
             <button
-            id="ModalClose-{{ block.id }}"
-            type="button"
-            class="product-popup-modal__toggle"
-            aria-label="{{ 'accessibility.close' | t }}"
+                id="ModalClose-{{ block.id }}"
+                type="button"
+                class="product-popup-modal__toggle"
+                aria-label="{{ 'accessibility.close' | t }}"
             >
-            {% render 'icon-cross' %}
+                {% render 'icon-cross' %}
             </button>
             <div class="product-popup-modal__content-info">
-            <h1 class="h2">{{ block.settings.page.title }}</h1>
-            {{ block.settings.page.content }}
+                <h1 class="h2">{{ block.settings.page.title }}</h1>
+                {{ block.settings.page.content }}
             </div>
         </div>
         </modal-dialog>
@@ -325,9 +338,9 @@
 
     {%- liquid
         if product.selected_or_first_available_variant.featured_media
-        assign seo_media = product.selected_or_first_available_variant.featured_media
+            assign seo_media = product.selected_or_first_available_variant.featured_media
         else
-        assign seo_media = product.featured_media
+            assign seo_media = product.featured_media
         endif
     -%}
 
@@ -1756,18 +1769,16 @@
             "default": "inverse"
         },
         {
-            "type": "checkbox",
-            "id": "background_transparent",
-            "default": true,
-            "label": "t:settings_schema.colors.settings.background_transparent.label"
-        },
-        {
             "type": "select",
-            "id": "section_background_texture",
+            "id": "section_background_style",
             "options": [
                 {
                     "value": "",
                     "label": "t:settings_schema.textures.settings.background_texture.options__1.label"
+                },
+                {
+                    "value": "transparent",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__5.label"
                 },
                 {
                     "value": "paper",
@@ -1783,7 +1794,7 @@
                 }
             ],
             "default": "paper",
-            "label": "t:settings_schema.textures.settings.container_texture.label"
+            "label": "t:settings_schema.textures.settings.container_style.label"
         },
         {
             "type": "color_scheme",
@@ -1793,11 +1804,15 @@
         },
         {
             "type": "select",
-            "id": "background_texture",
+            "id": "content_background_style",
             "options": [
                 {
                     "value": "",
                     "label": "t:settings_schema.textures.settings.background_texture.options__1.label"
+                },
+                {
+                    "value": "transparent",
+                    "label": "t:settings_schema.textures.settings.background_texture.options__5.label"
                 },
                 {
                     "value": "paper",
@@ -1813,13 +1828,13 @@
                 }
             ],
             "default": "paper",
-            "label": "t:settings_schema.textures.settings.content_texture.label"
+            "label": "t:settings_schema.textures.settings.content_style.label"
         },
         {
             "type": "checkbox",
             "id": "use_color_highlight",
             "default": false,
-            "label": "t:settings_schema.colors.settings.color_highlight.label"
+            "label": "t:settings_schema.colors.settings.use_color_highlight.label"
         },
         {
             "type": "header",
@@ -1866,7 +1881,7 @@
                     "label": "t:sections.main-product.settings.media_fit.options__2.label"
                 }
             ],
-            "default": "contain",
+            "default": "cover",
             "label": "t:sections.main-product.settings.media_fit.label"
         },
         {

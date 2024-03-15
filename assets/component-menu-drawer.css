@@ -533,6 +533,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   display: flex;
   align-items: center;
   justify-content: start;
+  gap: var(--space-sm);
   font-family: var(--font-body-family);
   font-size: var(--font-size-base);
   font-style: var(--font-body-style);

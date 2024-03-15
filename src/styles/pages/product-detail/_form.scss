@@ -180,10 +180,6 @@ fieldset.product-form__input .form__label {
     color: rgb(var(--color-foreground));
 }
 
-.shopify-payment-button__button {
-    font-size: 1.5rem;
-    letter-spacing: 0.1rem;
-}
 
 /* Product info */
 
@@ -260,9 +256,9 @@ a.product__text {
         max-width: 60rem;
     }
 
-    .product__info-container .price--on-sale .price-item--regular {
-        font-size: 1.6rem;
-    }
+    // .product__info-container .price--on-sale .price-item--regular {
+    //     font-size: 1.6rem;
+    // }
 
     // .product__info-container > *:first-child {
     //   margin-top: 0;

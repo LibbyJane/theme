@@ -146,10 +146,4 @@ product-recommendations.is-accordion + .accordion {
 .product--no-media .complementary-products__container .price {
   text-align: var(--text-alignment);
 }
-
-@media screen and (min-width: 750px) {
-  .complementary-products__container .price--on-sale .price-item--regular {
-    font-size: 1.3rem;
-  }
-}
 /*# sourceMappingURL=component-complementary-products.css.map */

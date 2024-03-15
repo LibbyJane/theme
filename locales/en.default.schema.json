@@ -247,7 +247,7 @@
           "label": "Highlight color"
         },
         "use_color_highlight": {
-          "label": "Highlight"
+          "label": "Use highlight color"
         },
         "color_ecommerce": {
           "label": "eCommerce color",
@@ -278,14 +278,14 @@
           "options__5": {
             "label": "Transparent"
           },
-          "label": "Apply a texture to the background area",
+          "label": "Apply a style to the background area",
           "info": "The texture is only visible if the container is not transparent."
         },
-        "container_texture": {
-          "label": "Apply texture to the section background color (if not transparent)"
+        "container_style": {
+          "label": "Style the section background"
         },
-        "content_texture": {
-          "label": "Apply texture to the content background color"
+        "content_style": {
+          "label": "Style the content background"
         }
       }
     },

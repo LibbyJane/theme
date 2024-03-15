@@ -142,10 +142,12 @@
 
 @media screen and (max-width: 749px) {
     .grid--peek.slider .grid__item:first-of-type {
-        margin-left: var(--grid-horizontal-spacing);
+        // margin-left: var(--grid-horizontal-spacing);
+        margin-left: var(--content-padding-inline);
 
         .texture-lined & {
-            margin-left: calc(var(--grid-horizontal-spacing) + var(--texture-lined-border-size));
+            // margin-left: calc(var(--grid-horizontal-spacing) + var(--texture-lined-border-size));
+            margin-left: calc(var(--content-padding-inline) + var(--texture-lined-border-size));
         }
     }
 
@@ -171,7 +173,8 @@
     .grid--peek.slider:after {
         //margin-left: calc(-1 * var(--grid-horizontal-spacing));
         margin-left: 0;
-        padding-left: var(--content-padding-inline);
+        // padding-left: var(--content-padding-inline);
+        padding-left: calc(var(--content-padding-inline) - var(--grid-horizontal-spacing));
     }
 
     .grid--2-col-tablet-down .grid__item {

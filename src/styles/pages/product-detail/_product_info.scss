@@ -1,8 +1,23 @@
 .product__info-wrapper {
     overflow: clip; // badges causing overflow issues on ios
     padding: var(--content-padding);
-}
 
+    &.content-background-transparent {
+        padding: 0;
+
+        @media screen and (min-width: 990px) {
+            padding: var(--content-padding);
+        }
+    }
+
+    &.texture-lined {
+        padding-left: calc(var(--content-padding-inline) + var(--texture-lined-border-size, 30px));
+    }
+
+    &.texture-torn {
+        padding: calc(var(--content-padding-inline) + var(--space-sm));
+    }
+}
 
 .product__info-container {
     // display: flex;
@@ -19,6 +34,12 @@
 
         @media screen and (min-width: 990px) {
             letter-spacing: 0;
+        }
+    }
+
+    .quantity {
+        &::before {
+            background-color: transparent;
         }
     }
 }
@@ -50,6 +71,7 @@
 }
 
 .product__price {
+    margin-bottom: var(--space); // is this ok everywhere?
     position: relative;
     z-index: var(--zi-base);
 
@@ -62,10 +84,8 @@
     // }
 
     .price-item {
-        font-size: calc(var(--price-font-scale) * 100%);
         line-height: 1;
     }
-
 
     .badge {
         margin-block: var(--space);
