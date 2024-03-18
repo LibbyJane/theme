@@ -368,7 +368,6 @@ slider-component {
 }
 .slider.contains-card--article {
   margin-bottom: 0 !important;
-  outline: 10px solid blue;
 }
 @media (prefers-reduced-motion) {
   .slider {
@@ -526,6 +525,7 @@ slider-component {
 .contains-card .slider__slide {
   padding-block: var(--slide-block-space) !important;
   margin-top: var(--slide-space-offset) !important;
+  margin-bottom: -30px !important;
 }
 .slider__slide[aria-hidden=true] {
   visibility: hidden;

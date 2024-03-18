@@ -62,9 +62,7 @@ slider-component {
 
     &.contains-card--article {
         margin-bottom: 0 !important;
-        outline: 10px solid blue;
     }
-
 
     @media (prefers-reduced-motion) {
         scroll-behavior: auto;
@@ -252,6 +250,7 @@ slider-component {
     .contains-card & {
         padding-block: var(--slide-block-space) !important;
         margin-top: var(--slide-space-offset) !important;
+        margin-bottom: -30px !important;
         // margin-bottom: calc(var(--slide-space-offset) + var(--space)) !important;
     }
 
