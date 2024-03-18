@@ -49,15 +49,22 @@ slider-component {
     }
 }
 
-
-
-
 .slider {
     scrollbar-color: rgb(var(--color-foreground)) rgba(var(--color-foreground), 0.04);
     -ms-overflow-style: none;
     scrollbar-width: none;
-    // padding-block: var(--space-sm); // careful or you'll get gaps between content sections
+       // padding-block: var(--space-sm); // careful or you'll get gaps between content sections
     // overflow: clip; // cutting off blog card shadow
+
+    &.contains-card {
+        margin-bottom: calc(var(--slide-block-space) + var(--space-med)) !important;
+    }
+
+    &.contains-card--article {
+        margin-bottom: 0 !important;
+        outline: 10px solid blue;
+    }
+
 
     @media (prefers-reduced-motion) {
         scroll-behavior: auto;
@@ -233,6 +240,9 @@ slider-component {
 
 
 .slider__slide {
+    --focus-outline-padding: .5rem;
+    --shadow-padding-top: calc((var(--shadow-vertical-offset)* -1 + var(--shadow-blur-radius))* var(--shadow-visible));
+    --shadow-padding-bottom: calc((var(--shadow-vertical-offset) + var(--shadow-blur-radius))* var(--shadow-visible));
     scroll-snap-align: start;
     flex-shrink: 0;
     padding-bottom: 0;
@@ -240,9 +250,14 @@ slider-component {
     z-index: 1;
 
     .contains-card & {
-        padding-block : var(--slide-block-space) !important;
+        padding-block: var(--slide-block-space) !important;
         margin-top: var(--slide-space-offset) !important;
+        // margin-bottom: calc(var(--slide-space-offset) + var(--space)) !important;
     }
+
+    // .contains-card--article & {
+    //     margin-bottom: var(--space) !important;
+    // }
 
 
     &[aria-hidden="true"] {
@@ -260,6 +275,14 @@ slider-component {
     .slider--everywhere & {
         margin-bottom: 0;
         scroll-snap-align: center;
+    }
+
+    .slider--mobile & {
+        @media screen and (max-width: 749px) {
+            /* margin-bottom: 0; */
+            padding-top: max(var(--focus-outline-padding),var(--shadow-padding-top));
+            padding-bottom: max(var(--focus-outline-padding),var(--shadow-padding-bottom));
+        }
     }
 
     &:first-child {

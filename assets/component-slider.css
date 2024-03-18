@@ -363,6 +363,13 @@ slider-component {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.slider.contains-card {
+  margin-bottom: calc(var(--slide-block-space) + var(--space-med)) !important;
+}
+.slider.contains-card--article {
+  margin-bottom: 0 !important;
+  outline: 10px solid blue;
+}
 @media (prefers-reduced-motion) {
   .slider {
     scroll-behavior: auto;
@@ -507,6 +514,9 @@ slider-component {
 }
 
 .slider__slide {
+  --focus-outline-padding: .5rem;
+  --shadow-padding-top: calc((var(--shadow-vertical-offset)* -1 + var(--shadow-blur-radius))* var(--shadow-visible));
+  --shadow-padding-bottom: calc((var(--shadow-vertical-offset) + var(--shadow-blur-radius))* var(--shadow-visible));
   scroll-snap-align: start;
   flex-shrink: 0;
   padding-bottom: 0;
@@ -531,6 +541,13 @@ slider-component {
 .slider--everywhere .slider__slide {
   margin-bottom: 0;
   scroll-snap-align: center;
+}
+@media screen and (max-width: 749px) {
+  .slider--mobile .slider__slide {
+    /* margin-bottom: 0; */
+    padding-top: max(var(--focus-outline-padding), var(--shadow-padding-top));
+    padding-bottom: max(var(--focus-outline-padding), var(--shadow-padding-bottom));
+  }
 }
 @media screen and (min-width: 990px) {
   .slider--desktop .slider__slide:first-child {

@@ -15,8 +15,20 @@
         }
 
         slider-component {
+            margin-bottom: var(--grid-vertical-spacing);
+            padding-bottom: 0;
             padding-inline: 0;
         }
+
+        .slider.slider--tablet-up {
+            overflow: initial;
+            padding: 0;
+
+            @media screen and (min-width: 750px) {
+                overflow-x: auto;
+            }
+        }
+
     }
 }
 
@@ -126,19 +138,6 @@
     }
 }
 
-slider-component {
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.slider.slider--tablet-up {
-    overflow: initial;
-    padding: 0;
-
-    @media screen and (min-width: 750px) {
-        overflow-x: auto;
-    }
-}
 
 .thumbnail-list.thumbnail-list.thumbnail-list {
     @media screen and (min-width: 750px) {
@@ -721,9 +720,9 @@ slider-component {
 
     .thumbnail-slider .thumbnail-list.slider {
         display: flex;
-        padding: 0.5rem;
         flex: 1;
-        scroll-padding-left: 0.5rem;
+        margin: 0;
+        padding: var(--space-sm) var(--content-padding-inline);
     }
 
     .thumbnail-list__item.slider__slide {
@@ -803,13 +802,15 @@ slider-component {
 }
 
 .thumbnail[aria-current]:focus-visible {
-    box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0rem 0.5rem rgba(var(--color-foreground), 0.5);
+    box-shadow: 0 0 0 0.3rem rgba(var(--color-background), 0.1), 0 0 0rem 0.5rem rgba(var(--color-foreground), 0.1);
+    outline: 2px solid lime;
 }
 
 .thumbnail[aria-current]:focus,
 .thumbnail.focused {
     outline: 0;
-    box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0rem 0.5rem rgba(var(--color-foreground), 0.5);
+    outline: 2px solid orange;
+    box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0rem 0.15rem rgba(var(--color-foreground), 0.15);
 }
 
 /* outline styling for Windows High Contrast Mode */
@@ -948,6 +949,8 @@ slider-component {
     }
 
     &.media-fit-cover {
+        max-width: 100%;
+
         @media screen and (max-width: 749px) {
             display: flex;
             align-self: stretch;

@@ -76,9 +76,7 @@
         &:after {
             box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0rem 0.5rem rgba(var(--color-foreground), 0.5);
             border-radius: var(--media-radius);
-            outline: 20px solid red;
         }
-
     }
 
     &::after {
@@ -123,14 +121,14 @@
 
 
 .product__media-icon {
-    background-color: rgb(var(--color-background));
+    background-color: rgba(var(--color-background), var(--opacity-light));
     border-radius: 0 0 50%;
     // border: 0.1rem solid rgba(var(--color-foreground), 0.1);
     color: rgb(var(--color-foreground));
     display: flex;
         align-items: center;
         justify-content: center;
-    padding: var(--space);
+    padding: var(--space-sm);
     position: absolute;
         left: 0;
         top: 0;

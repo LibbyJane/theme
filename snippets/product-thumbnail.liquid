@@ -51,7 +51,7 @@
 
 <div
     class="product-media-container media-type-{{ media.media_type }} media-fit-{{ media_fit }} global-media-settings {% if constrain_to_viewport %} constrain-height{% endif %}"
-    style="aspect-ratio: {{ media.preview_image.aspect_ratio | default: 1.0 }}; --ratio: {{ media.aspect_ratio | default: 1.0 }}; --preview-ratio: {{ media.preview_image.aspect_ratio | default: 1.0 }};"
+    style="{% comment %}aspect-ratio: {{ media.preview_image.aspect_ratio | default: 1.0 }};{% endcomment %} --ratio: {{ media.aspect_ratio | default: 1.0 }}; --preview-ratio: {{ media.preview_image.aspect_ratio | default: 1.0 }};"
 >
     <noscript>
         {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}

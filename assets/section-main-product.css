@@ -698,7 +698,18 @@ a.product__text {
   }
 }
 .product__media-wrapper.product__media-wrapper slider-component {
+  margin-bottom: var(--grid-vertical-spacing);
+  padding-bottom: 0;
   padding-inline: 0;
+}
+.product__media-wrapper.product__media-wrapper .slider.slider--tablet-up {
+  overflow: initial;
+  padding: 0;
+}
+@media screen and (min-width: 750px) {
+  .product__media-wrapper.product__media-wrapper .slider.slider--tablet-up {
+    overflow-x: auto;
+  }
 }
 
 @media screen and (max-width: 749px) {
@@ -789,21 +800,6 @@ a.product__text {
     width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 }
-slider-component {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.slider.slider--tablet-up {
-  overflow: initial;
-  padding: 0;
-}
-@media screen and (min-width: 750px) {
-  .slider.slider--tablet-up {
-    overflow-x: auto;
-  }
-}
-
 @media screen and (min-width: 750px) {
   .thumbnail-list.thumbnail-list.thumbnail-list {
     margin-top: calc(var(--media-border-width) * -1 / 2);
@@ -1285,9 +1281,9 @@ slider-component {
   }
   .thumbnail-slider .thumbnail-list.slider {
     display: flex;
-    padding: 0.5rem;
     flex: 1;
-    scroll-padding-left: 0.5rem;
+    margin: 0;
+    padding: var(--space-sm) var(--content-padding-inline);
   }
   .thumbnail-list__item.slider__slide {
     width: calc(33% - 0.6rem);
@@ -1327,13 +1323,15 @@ slider-component {
 }
 
 .thumbnail[aria-current]:focus-visible {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0rem 0.5rem rgba(var(--color-foreground), 0.5);
+  box-shadow: 0 0 0 0.3rem rgba(var(--color-background), 0.1), 0 0 0rem 0.5rem rgba(var(--color-foreground), 0.1);
+  outline: 2px solid lime;
 }
 
 .thumbnail[aria-current]:focus,
 .thumbnail.focused {
   outline: 0;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0rem 0.5rem rgba(var(--color-foreground), 0.5);
+  outline: 2px solid orange;
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0rem 0.15rem rgba(var(--color-foreground), 0.15);
 }
 
 /* outline styling for Windows High Contrast Mode */
@@ -1432,6 +1430,9 @@ slider-component {
 }
 .product-media-container.constrain-height .media {
   padding-top: min(var(--constrained-height), var(--ratio-percent));
+}
+.product-media-container.media-fit-cover {
+  max-width: 100%;
 }
 @media screen and (max-width: 749px) {
   .product-media-container.media-fit-cover {
@@ -1543,7 +1544,6 @@ slider-component {
 .product__media-toggle:focus-visible:after {
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0rem 0.5rem rgba(var(--color-foreground), 0.5);
   border-radius: var(--media-radius);
-  outline: 20px solid red;
 }
 .product__media-toggle::after {
   content: "";
@@ -1583,13 +1583,13 @@ slider-component {
 }
 
 .product__media-icon {
-  background-color: rgb(var(--color-background));
+  background-color: rgba(var(--color-background), var(--opacity-light));
   border-radius: 0 0 50%;
   color: rgb(var(--color-foreground));
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space);
+  padding: var(--space-sm);
   position: absolute;
   left: 0;
   top: 0;
