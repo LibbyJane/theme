@@ -200,7 +200,7 @@
       "sticky-2": {
         "settings": {
           "background": "#fbbea6",
-          "background_gradient": "",
+          "background_gradient": "linear-gradient(90deg, rgba(255, 211, 194, 0.5), rgba(251, 190, 166, 1) 66%, rgba(228, 171, 149, 1) 100%)",
           "text": "#290614",
           "button": "#290614",
           "button_label": "#f6f1ee",
