@@ -130,7 +130,8 @@
         }
     }
 
-    &.card--badge-bottom-left {
+    &.card-badge--bottom-left,
+    &.card-badge--bottom-right {
         padding-bottom: calc(var(--card-padding) + var(--space-xl));
     }
 

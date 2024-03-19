@@ -163,7 +163,7 @@
 .slider .card.card--text .ratio {
   height: 100%;
 }
-.card.card--badge-bottom-left {
+.card.card-badge--bottom-left, .card.card-badge--bottom-right {
   padding-bottom: calc(var(--card-padding) + var(--space-xl));
 }
 .grid__item:nth-child(2) .card {
