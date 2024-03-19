@@ -1448,7 +1448,7 @@ summary .icon-share,
 .card-badge {
   --card-badge-offset: -4px;
   --card-badge-surface-shadow-left: linear-gradient(-90deg,rgba(var(--color-shadow), 0.06) 0%, rgba(var(--color-shadow), 0.05) 50%, rgba(var(--color-shadow), 0) 100%);
-  --card-badge-surface-shadow-right: linear-gradient(90deg,rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), .05) 7%, rgba(var(--color-shadow), 0.05) 50%)
+  --card-badge-surface-shadow-right: linear-gradient(90deg,rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), .05) 7%, rgba(var(--color-shadow), 0.05) 50%);
   --card-badge-drop-shadow-transform-left: skewY(-1deg) scaleY(75%) translateY(-1%);
   --card-badge-drop-shadow-transform-right: skewY(-1deg) rotate(-1deg) scaleX(100%) scaleY(86%) translateY(1%) translateX(-2%);
   --card-badge-drop-shadow-left: 3px 3px 4px 1px rgba(var(--color-shadow), 1);
@@ -1465,11 +1465,11 @@ summary .icon-share,
 }
 .card-badge::before {
   background-color: rgb(var(--color-background));
-  background-image: var(--card-badge-surface-shadow-left);
-  background-blend-mode: multiply;
+  opacity: 0.1;
   content: "";
   display: inline-block;
   width: calc(var(--card-badge-padding) * 2);
+  z-index: calc(var(--zi-base) + 1);
 }
 .card-badge::after {
   background-color: rgba(var(--color-shadow), 1);
@@ -1493,6 +1493,7 @@ summary .icon-share,
   transform: translateZ(0);
   -webkit-font-smoothing: subpixel-antialiased;
   background-color: rgb(var(--color-background));
+  background-image: var(--background-gradient);
   display: inline-block;
   font-family: inherit;
   font-size: inherit;
@@ -1521,7 +1522,6 @@ summary .icon-share,
 }
 .card-badge--top-right::before,
 .card-badge--bottom-right::before {
-  background-image: var(--card-badge-surface-shadow-right);
   order: 2;
 }
 .card-badge--top-right::after,
