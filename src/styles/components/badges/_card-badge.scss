@@ -1,5 +1,7 @@
 :root {
     --card-badge-padding: 0.8rem;
+    --card-badge-padding-lg: calc(var(--card-badge-padding) * 2);
+    --card-badge-padding-sm: calc(var(--card-badge-padding) / 2);
 
     @media screen and (min-width: 990px) {
         --card-badge-padding: 1.2rem;
@@ -37,7 +39,7 @@
             top: 0;
             bottom: 0;
             left: 0;
-        width: calc(var(--card-badge-padding)*2);
+        width: var(--card-badge-padding-lg);
         z-index: calc(var(--zi-base) + 1);
     }
 
@@ -64,20 +66,27 @@
     background-color: rgb(var(--color-background));
     background-image: var(--background-gradient);
     display: inline-block;
+    filter: drop-shadow(0px 0px 2px rgba(var(--color-shadow), 0.1));
     font-family: inherit;
     font-size: inherit;
-    // font-weight: bold;
     min-width: 10rem;
     line-height: 1;
-    padding: calc(var(--card-badge-padding) + 2px) var(--card-badge-padding) calc(var(--card-badge-padding) - 2px) calc(var(--card-badge-padding)*2);
+    padding: calc(var(--card-badge-padding) + 2px) var(--card-badge-padding) calc(var(--card-badge-padding) - 2px) var(--card-badge-padding-lg);
     text-align: center;
-    // text-shadow:  0px 1px rgba(255,255,255,0.1), 0px 0px 2px rgba(255,255,255,0.2), 0px 0px 4px rgba(255,255,255,0.3), 0px 0px 8px rgba(255,255,255,0.4), 0px 0px 16px rgba(255,255,255,0.5), 0px 0px 32px rgba(255,255,255,0.6), 0px 0px 32px rgba(255,255,255,0.6), 0px 0px 32px rgba(255,255,255,0.6), 0px 0px 32px rgba(255,255,255,0.6), 0px 0px 32px rgba(255,255,255,0.6), 0px 0px 64px rgba(255,255,255,0.6);
     text-transform: uppercase;
     position: relative;
     z-index: var(--zi-base);
 
+    &::before {
+        background-image: linear-gradient(90deg, rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), 0.1, ) 100%);
+        content: '';
+        mix-blend-mode: multiply;
+        position: absolute;
+        inset: 0;
+        left: var(--card-badge-padding-lg);
+    }
+
     .card-badge--article & {
-        // font-weight: var(--font-heading-weight);
         opacity: var(--opacity-lighter);
         text-transform: none;
     }
@@ -85,7 +94,13 @@
     .card-badge--top-right &,
     .card-badge--bottom-right & {
         padding-left: var(--card-badge-padding);
-        padding-right: calc(var(--card-badge-padding)*2);
+        padding-right: var(--card-badge-padding-lg);
+
+        &::before {
+            background-image: linear-gradient(-90deg, rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), 0.1, ) 100%);
+            left: 0;
+            right: var(--card-badge-padding-lg);
+        }
     }
 }
 
@@ -107,29 +122,29 @@
 }
 
 .card-badge--top-left {
-    top: calc(var(--card-badge-padding) / -2);
+    top: calc(var(--card-badge-padding-sm) * -1);
     left: var(--card-badge-offset);
 
     @media screen and (min-width: 990px) {
-        top: calc(var(--card-badge-padding) / 2);
+        top: var(--card-badge-padding-sm);
     }
 }
 
 .card-badge--top-right {
-    top: calc(var(--card-badge-padding) / -2);
+    top: calc(var(--card-badge-padding-sm) * -1);
     right: var(--card-badge-offset);
 
     @media screen and (min-width: 990px) {
-        top: calc(var(--card-badge-padding) / 2);
+        top: var(--card-badge-padding-sm);
     }
 }
 
 .card-badge--bottom-left {
-    bottom: calc(var(--card-badge-padding)/2);
+    bottom: var(--card-badge-padding-sm);
     left: var(--card-badge-offset);
 }
 
 .card-badge--bottom-right {
-    bottom: calc(var(--card-badge-padding)/2);
+    bottom: var(--card-badge-padding-sm);
     right: var(--card-badge-offset);
 }
