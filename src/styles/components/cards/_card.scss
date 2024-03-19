@@ -133,6 +133,10 @@
     &.card-badge--bottom-left,
     &.card-badge--bottom-right {
         padding-bottom: calc(var(--card-padding) + var(--space-med));
+
+        @media screen and (min-width: 990px) {
+            padding-bottom: calc(var(--card-padding) + var(--space-lg));
+        }
     }
 
     .grid__item:nth-child(2) & {

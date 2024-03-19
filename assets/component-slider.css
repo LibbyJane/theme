@@ -532,7 +532,7 @@ slider-component {
 .texture-lined .slider__slide {
   border-left: var(--texture-lined-border-size) solid transparent;
 }
-@media screen and (min-width: var(--page-width)) {
+@media screen and (min-width: 990px) {
   .texture-lined .slider__slide {
     border-left: 0;
   }
