@@ -364,10 +364,10 @@ slider-component {
   scrollbar-width: none;
 }
 .slider.contains-card {
-  margin-bottom: calc(var(--slide-block-space) + var(--space-med)) !important;
+  margin-bottom: calc((var(--slide-block-space) - var(--space-med)) * -1) !important;
 }
 .slider.contains-card--article {
-  margin-bottom: 0 !important;
+  margin-bottom: calc(var(--slide-block-space) * -1) !important;
 }
 @media (prefers-reduced-motion) {
   .slider {
@@ -525,7 +525,6 @@ slider-component {
 .contains-card .slider__slide {
   padding-block: var(--slide-block-space) !important;
   margin-top: var(--slide-space-offset) !important;
-  margin-bottom: -30px !important;
 }
 .slider__slide[aria-hidden=true] {
   visibility: hidden;

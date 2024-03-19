@@ -57,11 +57,11 @@ slider-component {
     // overflow: clip; // cutting off blog card shadow
 
     &.contains-card {
-        margin-bottom: calc(var(--slide-block-space) + var(--space-med)) !important;
+        margin-bottom: calc((var(--slide-block-space) - var(--space-med)) * -1) !important;
     }
 
     &.contains-card--article {
-        margin-bottom: 0 !important;
+        margin-bottom: calc(var(--slide-block-space) * -1) !important;
     }
 
     @media (prefers-reduced-motion) {
@@ -250,8 +250,6 @@ slider-component {
     .contains-card & {
         padding-block: var(--slide-block-space) !important;
         margin-top: var(--slide-space-offset) !important;
-        margin-bottom: -30px !important;
-        // margin-bottom: calc(var(--slide-space-offset) + var(--space)) !important;
     }
 
     // .contains-card--article & {
