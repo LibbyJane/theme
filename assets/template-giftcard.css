@@ -1464,10 +1464,14 @@ summary .icon-share,
   z-index: 1;
 }
 .card-badge::before {
-  background-color: rgb(var(--color-background));
-  opacity: 0.1;
+  background-color: rgb(var(--color-shadow));
   content: "";
-  display: inline-block;
+  mix-blend-mode: multiply;
+  opacity: 0.07;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   width: calc(var(--card-badge-padding) * 2);
   z-index: calc(var(--zi-base) + 1);
 }
@@ -1499,7 +1503,7 @@ summary .icon-share,
   font-size: inherit;
   min-width: 10rem;
   line-height: 1;
-  padding: calc(var(--card-badge-padding) + 2px) var(--card-badge-padding) calc(var(--card-badge-padding) - 2px);
+  padding: calc(var(--card-badge-padding) + 2px) var(--card-badge-padding) calc(var(--card-badge-padding) - 2px) calc(var(--card-badge-padding) * 2);
   text-align: center;
   text-transform: uppercase;
   position: relative;
@@ -1510,9 +1514,7 @@ summary .icon-share,
   text-transform: none;
 }
 .card-badge--top-right .card-badge__inner, .card-badge--bottom-right .card-badge__inner {
-  padding-left: calc(var(--card-badge-padding) * 2);
-}
-.card-badge--top-left .card-badge__inner, .card-badge--bottom-left .card-badge__inner {
+  padding-left: var(--card-badge-padding);
   padding-right: calc(var(--card-badge-padding) * 2);
 }
 
@@ -1522,7 +1524,9 @@ summary .icon-share,
 }
 .card-badge--top-right::before,
 .card-badge--bottom-right::before {
-  order: 2;
+  background-image: var(--card-badge-surface-shadow-right);
+  left: auto;
+  right: 0;
 }
 .card-badge--top-right::after,
 .card-badge--bottom-right::after {

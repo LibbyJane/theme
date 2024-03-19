@@ -29,14 +29,14 @@
     z-index: 1;
 
     &::before {
-        background-color: rgb(var(--color-background));
-        //background-image: var(--card-badge-surface-shadow-left);
-        //background-blend-mode: multiply;
-        opacity: 0.1;
+        background-color: rgb(var(--color-shadow));
         content: '';
-        display: inline-block;
-        // opacity: 0.01;
-        // mix-blend-mode: multiply;
+        mix-blend-mode: multiply;
+        opacity: 0.07;
+        position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
         width: calc(var(--card-badge-padding)*2);
         z-index: calc(var(--zi-base) + 1);
     }
@@ -69,7 +69,7 @@
     // font-weight: bold;
     min-width: 10rem;
     line-height: 1;
-    padding: calc(var(--card-badge-padding) + 2px) var(--card-badge-padding) calc(var(--card-badge-padding) - 2px);
+    padding: calc(var(--card-badge-padding) + 2px) var(--card-badge-padding) calc(var(--card-badge-padding) - 2px) calc(var(--card-badge-padding)*2);
     text-align: center;
     // text-shadow:  0px 1px rgba(255,255,255,0.1), 0px 0px 2px rgba(255,255,255,0.2), 0px 0px 4px rgba(255,255,255,0.3), 0px 0px 8px rgba(255,255,255,0.4), 0px 0px 16px rgba(255,255,255,0.5), 0px 0px 32px rgba(255,255,255,0.6), 0px 0px 32px rgba(255,255,255,0.6), 0px 0px 32px rgba(255,255,255,0.6), 0px 0px 32px rgba(255,255,255,0.6), 0px 0px 32px rgba(255,255,255,0.6), 0px 0px 64px rgba(255,255,255,0.6);
     text-transform: uppercase;
@@ -84,11 +84,7 @@
 
     .card-badge--top-right &,
     .card-badge--bottom-right & {
-        padding-left: calc(var(--card-badge-padding)*2);
-    }
-
-    .card-badge--top-left &,
-    .card-badge--bottom-left & {
+        padding-left: var(--card-badge-padding);
         padding-right: calc(var(--card-badge-padding)*2);
     }
 }
@@ -98,8 +94,10 @@
     right: var(--card-badge-offset);
 
     &::before {
-        // background-image: var(--card-badge-surface-shadow-right);
-        order: 2;
+        background-image: var(--card-badge-surface-shadow-right);
+        left: auto;
+        right: 0;
+        // order: 2;
     }
 
     &::after {
