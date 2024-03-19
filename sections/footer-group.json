@@ -5,39 +5,11 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "text_qF3MX6": {
-          "type": "text",
-          "settings": {
-            "heading": "Heading",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
-          }
-        },
-        "text_9meyqB": {
-          "type": "text",
-          "settings": {
-            "heading": "Heading",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
-          }
-        },
-        "text_RDGxtT": {
-          "type": "text",
-          "settings": {
-            "heading": "Heading",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
-          }
-        },
-        "footer-2": {
-          "type": "text",
-          "settings": {
-            "heading": "Opening Hours",
-            "subtext": "<p>Monday 10am–3pm<br/>Tuesday 10am–6pm<br/>Wednesday 10am–6pm<br/>Thursday 10am–7pm<br/>Friday 10am–7pm<br/>Saturday 10am–7pm<br/>Sunday 10am–3pm</p>"
-          }
-        },
         "text_RDezyQ": {
           "type": "text",
           "settings": {
             "heading": "Opening Hours",
-            "subtext": "<p>Monday 10am–3pm<br/>Tuesday 10am–6pm<br/>Wednesday 10am–6pm<br/>Thursday 10am–7pm<br/>Friday 10am–7pm<br/>Saturday 10am–7pm<br/>Sunday 10am–3pm</p>"
+            "subtext": "<p>Monday 10am–3pm<br\/>Tuesday 10am–6pm<br\/>Wednesday 10am–6pm<br\/>Thursday 10am–7pm<br\/>Friday 10am–7pm<br\/>Saturday 10am–7pm<br\/>Sunday 10am–3pm<\/p>"
           }
         },
         "footer-0": {
@@ -68,18 +40,23 @@
             "heading": "Long menu",
             "menu": "main-menu"
           }
+        },
+        "image_cEyXpd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo_transparent.png",
+            "image_width": 140,
+            "alignment": "right"
+          }
         }
       },
       "block_order": [
-        "text_qF3MX6",
-        "text_9meyqB",
-        "text_RDGxtT",
-        "footer-2",
         "text_RDezyQ",
         "footer-0",
         "footer-1",
         "link_list_CK6Hf6",
-        "link_list_RVPinF"
+        "link_list_RVPinF",
+        "image_cEyXpd"
       ],
       "settings": {
         "color_scheme": "inverse",
