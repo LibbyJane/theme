@@ -460,6 +460,7 @@ noscript .localization-form__select {
 .disclosure .localization-form__select {
   display: flex;
   flex-wrap: nowrap;
+  font-size: var(--font-size-smaller);
   gap: var(--space);
   padding-top: var(--space-med);
   align-content: center;
@@ -512,12 +513,14 @@ noscript .localization-form__select {
 }
 
 .disclosure__link {
-  color: rgba(var(--color-foreground), 0.8);
+  color: rgba(var(--color-foreground), var(--opacity-lighter));
   display: grid;
   grid-template-columns: auto max-content;
+  justify-content: start;
   gap: var(--space);
   line-height: 1.2;
   padding: var(--space-sm) var(--space);
+  text-align: initial;
   text-decoration: none;
   word-break: break-word;
 }

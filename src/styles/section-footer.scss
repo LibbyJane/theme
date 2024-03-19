@@ -181,12 +181,28 @@
         }
     }
 
+    .localization-form__select.disclosure__button {
+        @media screen and (min-width: 750px) {
+            padding-left: 0;
+        }
+
+    }
+
+    .disclosure__button,
+    .disclosure__list {
+        font-size: var(--font-size-small);
+    }
+
     .localization-selector.link {
         &:not(:only-child) {
             @media screen and (min-width: 750px) {
                 padding-left: 0;
             }
         }
+    }
+
+    .disclosure__link--country {
+        grid-template-columns: 1fr 2fr;
     }
 
     h2 {

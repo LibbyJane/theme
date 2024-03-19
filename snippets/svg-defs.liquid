@@ -18,6 +18,11 @@
             <feOffset in="contrast" dy="2"/>
         </filter>
 
+        <filter id="wavy">
+            <feturbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1"></feturbulence>
+            <feDisplacementMap in="SourceGraphic" scale="20" />
+          </filter>
+
         <filter id="marker">
             <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
             <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
