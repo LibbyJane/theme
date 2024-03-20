@@ -651,6 +651,26 @@
   word-wrap: normal !important;
 }
 
+.tape {
+  position: relative;
+}
+.tape::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 8rem;
+  height: var(--tape-height);
+  background-color: var(--tape-color);
+  border-right: 1px dotted var(--tape-edge-color);
+  border-left: 1px dotted var(--tape-edge-color);
+  opacity: 0.4;
+  transform: rotate(0deg);
+  top: calc(var(--tape-height) * -0.5);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;

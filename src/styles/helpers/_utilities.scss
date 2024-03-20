@@ -202,3 +202,7 @@
     clip: rect(0 0 0 0);
     word-wrap: normal !important;
 }
+
+.tape {
+    @include tape;
+}
