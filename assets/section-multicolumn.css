@@ -334,21 +334,18 @@
 .multicolumn-card {
   position: relative;
 }
-@media screen and (min-width: 750px) {
-  .multicolumn-card {
-    margin-bottom: var(--space-med);
-  }
-}
 
 .multicolumn-list {
   margin: 0;
   padding: 0;
   width: 100%;
   --grid-horizontal-spacing: calc( var(--grid-mobile-horizontal-spacing) * 2 );
+  --grid-vertical-spacing: calc( var(--grid-mobile-vertical-spacing) * 2 );
 }
 @media screen and (min-width: 750px) {
   .multicolumn-list {
     --grid-horizontal-spacing: calc(var(--grid-desktop-horizontal-spacing) * 2);
+    --grid-vertical-spacing: calc( var(--grid-desktop-vertical-spacing) * 2 );
   }
 }
 

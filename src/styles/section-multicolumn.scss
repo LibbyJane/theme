@@ -22,9 +22,9 @@
 .multicolumn-card {
     position: relative;
 
-    @media screen and (min-width: 750px) {
-        margin-bottom: var(--space-med);
-    }
+    // @media screen and (min-width: 750px) {
+    //     margin-bottom: var(--space-med);
+    // }
 }
 
 
@@ -33,9 +33,11 @@
     padding: 0;
     width: 100%;
     --grid-horizontal-spacing: calc( var(--grid-mobile-horizontal-spacing) * 2 );
+    --grid-vertical-spacing: calc( var(--grid-mobile-vertical-spacing) * 2 );
 
     @media screen and (min-width: 750px) {
         --grid-horizontal-spacing: calc(var(--grid-desktop-horizontal-spacing) * 2);
+        --grid-vertical-spacing: calc( var(--grid-desktop-vertical-spacing) * 2 );
     }
 }
 
