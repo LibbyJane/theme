@@ -78,7 +78,7 @@
     "media_radius": 2,
     "media_border_color_custom": true,
     "media_border_color": "#ffffff",
-    "media_shadow_opacity": 7,
+    "media_shadow_opacity": 8,
     "media_shadow_horizontal_offset": 0,
     "media_shadow_vertical_offset": 2,
     "media_shadow_blur": 2,

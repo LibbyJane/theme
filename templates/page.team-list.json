@@ -118,7 +118,7 @@
         "background_transparent": true,
         "color_scheme": "background-1",
         "background_texture": "paper",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
         "padding_bottom": 0
