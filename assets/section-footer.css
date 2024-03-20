@@ -448,7 +448,7 @@
 }
 
 .footer__row-item--newsletter {
-  margin-bottom: 0;
+  margin: 0;
 }
 @media screen and (min-width: 750px) {
   .footer__row-item--newsletter {
