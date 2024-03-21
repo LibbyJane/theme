@@ -222,11 +222,11 @@
       "sticky-4": {
         "settings": {
           "background": "#fbfbfb",
-          "background_gradient": "",
-          "text": "#302901",
-          "button": "#302901",
-          "button_label": "#fffa8e",
-          "secondary_button_label": "#302901",
+          "background_gradient": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(246, 248, 250, 1) 80%, rgba(177, 168, 161, 0.26) 95%)",
+          "text": "#083921",
+          "button": "#248656",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#248656",
           "shadow": "#110f01"
         }
       },
