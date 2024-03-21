@@ -348,6 +348,7 @@
 
 .price--end {
   text-align: right;
+  justify-content: end;
 }
 
 .price__regular {

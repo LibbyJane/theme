@@ -4145,7 +4145,7 @@ input::-webkit-search-decoration {
 }
 
 .postcard {
-  --postcard-border-color: rgba(var(--color-foreground), 0.3);
+  --color-postcard-border: rgba(var(--color-foreground), 0.3);
   --input-border-width: 1px;
   aspect-ratio: var(--postcard-aspect-ratio);
   background-color: rgb(var(--color-background));
@@ -4201,13 +4201,13 @@ input::-webkit-search-decoration {
 }
 @media screen and (min-width: 750px) {
   .postcard .contact__submit {
-    border-left: 2px solid var(--postcard-border-color);
+    border-left: 2px solid var(--color-postcard-border);
     padding-left: var(--space-lg);
   }
 }
 .postcard .contact__submit::before {
   aspect-ratio: 2/3;
-  border: 2px dashed var(--postcard-border-color);
+  border: 2px dashed var(--color-postcard-border);
   content: "";
   width: 8rem;
   margin-top: var(--space-med);
@@ -4241,7 +4241,7 @@ input::-webkit-search-decoration {
   }
 }
 .postcard .field {
-  --border: var(--input-border-width) solid var(--postcard-border-color);
+  --border: var(--input-border-width) solid var(--color-postcard-border);
   border-bottom: var(--border);
   padding-top: 0;
 }
@@ -4259,7 +4259,7 @@ input::-webkit-search-decoration {
 .postcard textarea {
   --line-height: calc(var(--font-heading-scale) * 2rem);
   background-size: var(--line-height) var(--line-height);
-  background-image: repeating-linear-gradient(0deg, var(--postcard-border-color), var(--postcard-border-color) var(--input-border-width), rgba(255, 255, 255, 0) var(--input-border-width), rgba(255, 255, 255, 0));
+  background-image: repeating-linear-gradient(0deg, var(--color-postcard-border), var(--color-postcard-border) var(--input-border-width), rgba(255, 255, 255, 0) var(--input-border-width), rgba(255, 255, 255, 0));
   border: none;
   line-height: var(--line-height);
   padding-top: 0;

@@ -48,10 +48,11 @@
     }
 
     :root {
-        --font-size-base: 1.4rem;
-        --font-size-smaller: 1.3rem;
-        --font-size-small: 1.2rem;
-        --font-size-caption: 1.1rem;
+        --font-size-base: calc(var(--font-body-scale) * 1.4rem);
+        --font-size-smaller: calc(var(--font-body-scale) * 1.3rem);
+        --font-size-small: calc(var(--font-body-scale) * 1.2rem);
+        --font-size-caption: calc(var(--font-body-scale) * 1.1rem);
+        --font-size-xs: calc(var(--font-body-scale) * 0.95rem);
         --letter-spacing: 0.025rem;
         --letter-spacing-large: 0.05rem;
 
@@ -69,8 +70,8 @@
 
 
         @media screen and (min-width: 750px) {
-            --font-size-base: 1.3rem;
-            --font-size-smaller: 1.2rem;
+            --font-size-base: calc(var(--font-body-scale) * 1.3rem);
+            --font-size-smaller: calc(var(--font-body-scale) * 1.2rem);
             /* --font-size-caption: 1.2rem; */
             --font-size-h0: calc(var(--font-heading-scale) * 3.6rem);
             --font-size-h1: calc(var(--font-heading-scale) * 3.2rem);
