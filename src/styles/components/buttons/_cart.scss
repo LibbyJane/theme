@@ -1,8 +1,5 @@
 .cart__checkout-button {
-    --button-background-color: rgba(var(--color-ecommerce), 1);
-    --button-foreground-color: rgba(var(--color-ecommerce-contrast), 1);
     outline: 2px dashed transparent;
-
     transition: all var(--duration-long) var(--transition-type);
     width: 100%;
 

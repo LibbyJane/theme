@@ -101,7 +101,9 @@
                             </noscript>
 
                             <button type="submit" id="checkout" class="cart__checkout-button button" name="checkout"
-                                {% if cart == empty %} disabled {% endif %} form="cart">
+                                {% if cart == empty %} disabled {% endif %} form="cart"
+                                {% if section.settings.button_color == 'ecommerce' %}style="--button-background-color: rgb(var(--color-ecommerce)); --button-foreground-color: rgb(var(--color-ecommerce-contrast));"{% endif %}
+                            >
                                 {{ 'sections.cart.checkout' | t }}
                                 {% render 'icon-arrow' %}
                             </button>
@@ -125,6 +127,28 @@
     "class": "cart__footer-wrapper",
     "settings": [
         {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "label": "t:settings_schema.colors.settings.content_color_scheme.label",
+            "default": "background-1"
+        },
+        {
+            "type": "select",
+            "id": "button_color",
+            "options": [
+                {
+                    "value": "scheme",
+                    "label": "t:sections.main-cart-footer.settings.button_color.options__1.label"
+                },
+                {
+                    "value": "ecommerce",
+                    "label": "t:sections.main-cart-footer.settings.button_color.options__2.label"
+                }
+            ],
+            "default": "ecommerce",
+            "label": "t:sections.main-cart-footer.settings.button_color.label"
+        },
+        {
             "type": "range",
             "id": "padding_top",
             "min": 0,
@@ -132,7 +156,7 @@
             "step": 4,
             "unit": "px",
             "label": "t:sections.all.padding.padding_top",
-            "default": 36
+            "default": 0
         },
         {
             "type": "range",
@@ -142,13 +166,7 @@
             "step": 4,
             "unit": "px",
             "label": "t:sections.all.padding.padding_bottom",
-            "default": 36
-        },
-        {
-            "type": "color_scheme",
-            "id": "color_scheme",
-            "label": "t:settings_schema.colors.settings.content_color_scheme.label",
-            "default": "inverse"
+            "default": 0
         }
     ],
     "blocks": [

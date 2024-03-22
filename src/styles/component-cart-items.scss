@@ -18,6 +18,10 @@
         @media screen and (min-width: 750px) {
             display: table-header-group;
         }
+
+        tr {
+            margin-bottom: var(--space);
+        }
     }
 
     tbody {
@@ -75,7 +79,7 @@
             --border-width: var(--inputs-border-width);
             --border-color: var(--border-color-light);
             border-bottom: var(--border);
-            padding: var(--space);
+            padding: var(--space-sm) var(--space);
 
             &:first-child {
                 padding-left: 0;
@@ -93,9 +97,10 @@
 
     th {
         font-size: var(--font-size-small);
-        font-weight: normal;
+        font-weight: 600;
         text-align: left;
         text-transform: none;
+        vertical-align: bottom;
 
         @media screen and (min-width: 750px) {
             padding-top: 0;
@@ -104,6 +109,7 @@
 
     td {
         position: relative;
+        vertical-align: middle;
     }
 }
 
@@ -126,6 +132,7 @@
 
 .cart-item__image-container {
     @include corners;
+    // @include tape;
     display: inline-flex;
     align-items: flex-start;
 }
@@ -149,8 +156,9 @@
 }
 
 .cart-item__name {
-    text-decoration: none;
     display: block;
+    margin-bottom: 0;
+    text-decoration: none;
 
     &:hover,
     &:focus {

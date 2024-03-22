@@ -2050,6 +2050,17 @@
         "buttons": {
           "name": "Checkout button"
         }
+      },
+      "settings": {
+        "button_color": {
+            "label": "Button color",
+            "options__1": {
+              "label": "Color scheme"
+            },
+            "options__2": {
+              "label": "Ecommerce"
+            }
+          }
       }
     },
     "main-cart-items": {
