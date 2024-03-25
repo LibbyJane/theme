@@ -258,6 +258,77 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "featured_product_knE8ar": {
+      "type": "featured-product",
+      "blocks": {
+        "text_6ATjih": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "caption"
+          }
+        },
+        "title_EqaB67": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_4zUyDM": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_UcagdB": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector_Y3MBpT": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons_BGeYEh": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_P4CGXt": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_6ATjih",
+        "title_EqaB67",
+        "price_4zUyDM",
+        "variant_picker_UcagdB",
+        "quantity_selector_Y3MBpT",
+        "buy_buttons_BGeYEh",
+        "share_P4CGXt"
+      ],
+      "settings": {
+        "product": "",
+        "color_scheme": "",
+        "background_texture": "paper",
+        "full_width": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 28,
+        "padding_bottom": 24
+      }
     }
   },
   "order": [
@@ -266,6 +337,7 @@
     "rich_text_XN6Rej",
     "featured_collection",
     "collage",
-    "featured_blog_yj8qah"
+    "featured_blog_yj8qah",
+    "featured_product_knE8ar"
   ]
 }
