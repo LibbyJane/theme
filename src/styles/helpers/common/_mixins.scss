@@ -151,7 +151,6 @@
 
     position: relative;
     z-index: 1;
-    background-color: peach;
 
     &:hover,
     &:focus {
@@ -165,10 +164,6 @@
 
         &::after {
             transform: rotate(0.25deg) scaleX(1);
-            // transform: scaleX(0.8);
-            // animation: scaleOutX40 var(--duration-medium) var(--transition-type) forwards;
-            // transform-origin: bottom center;
-            // opacity: 1;
         }
     }
 
@@ -176,7 +171,6 @@
     &::after {
         content: '';
         background-color: rgba(var(--color-link), var(--alpha-link));
-        // border: var(--underline-height) solid rgba(var(--color-link), var(--alpha-link));
         display: block;
         position: absolute;
             bottom: calc(var(--underline-height) * -1);
@@ -186,15 +180,12 @@
         width: 100%;
         transition: transform var(--duration-medium) var(--transition-type);
         transform: rotate(0.25deg) scaleX(0.95);
-        // z-index: -1;
-        background-color: aqua;
     }
 
     &::before {
         transition-delay: var(--duration-short);
         transform: rotate(-0.5deg) scaleX(0);
         transform-origin: bottom left;
-        background-color: plum;
     }
 }
 
@@ -266,21 +257,6 @@
     }
 }
 
-// @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
-//     // For Google Chrome
-//     ::-webkit-scrollbar {
-//         width:  $size;
-//         height: $size;
-//     }
-
-//     ::-webkit-scrollbar-thumb {
-//         background: $foreground-color;
-//     }
-
-//     ::-webkit-scrollbar-track {
-//         background: $background-color;
-//     }
-// }
 
 :root {
     --sb-track-color: rgba(var(--color-shadow), 0.1 );

@@ -877,7 +877,6 @@ a:active {
   --underline-height: 1px;
   position: relative;
   z-index: 1;
-  background-color: peach;
 }
 .underlined-link:hover, .underlined-link:focus {
   --alpha-link: 1;
@@ -902,13 +901,11 @@ a:active {
   width: 100%;
   transition: transform var(--duration-medium) var(--transition-type);
   transform: rotate(0.25deg) scaleX(0.95);
-  background-color: aqua;
 }
 .underlined-link::before {
   transition-delay: var(--duration-short);
   transform: rotate(-0.5deg) scaleX(0);
   transform-origin: bottom left;
-  background-color: plum;
 }
 .underlined-linkbutton {
   background-color: transparent;
@@ -4050,7 +4047,6 @@ input::-webkit-search-decoration {
   --underline-height: 1px;
   position: relative;
   z-index: 1;
-  background-color: peach;
 }
 .form__message a:hover, .form__message a:focus {
   --alpha-link: 1;
@@ -4075,13 +4071,11 @@ input::-webkit-search-decoration {
   width: 100%;
   transition: transform var(--duration-medium) var(--transition-type);
   transform: rotate(0.25deg) scaleX(0.95);
-  background-color: aqua;
 }
 .form__message a::before {
   transition-delay: var(--duration-short);
   transform: rotate(-0.5deg) scaleX(0);
   transform-origin: bottom left;
-  background-color: plum;
 }
 .form__message a::before, .form__message a::after {
   background-color: currentColor;
@@ -4721,7 +4715,6 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
   --underline-height: 1px;
   position: relative;
   z-index: 1;
-  background-color: peach;
   color: rgba(var(--color-link), var(--alpha-link));
   display: inline-flex;
   line-height: 1.2;
@@ -4758,14 +4751,12 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
   width: 100%;
   transition: transform var(--duration-medium) var(--transition-type);
   transform: rotate(0.25deg) scaleX(0.95);
-  background-color: aqua;
 }
 .rte a::before,
 .inline-richtext a::before {
   transition-delay: var(--duration-short);
   transform: rotate(-0.5deg) scaleX(0);
   transform-origin: bottom left;
-  background-color: plum;
 }
 .rte abutton,
 .inline-richtext abutton {
