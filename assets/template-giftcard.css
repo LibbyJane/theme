@@ -1817,14 +1817,14 @@ a:active {
 }
 
 .underlined-link {
-  --underline-height: 0.2px;
+  --underline-height: 1px;
   position: relative;
   z-index: 1;
   background-color: peach;
 }
 .underlined-link:hover, .underlined-link:focus {
   --alpha-link: 1;
-  --underline-height: 1px;
+  --underline-height: 1.5px;
 }
 .underlined-link:hover::before, .underlined-link:focus::before {
   transform: rotate(-0.25deg) scaleX(1);
@@ -1832,7 +1832,6 @@ a:active {
 }
 .underlined-link:hover::after, .underlined-link:focus::after {
   transform: rotate(0.25deg) scaleX(1);
-  z-index: 100;
 }
 .underlined-link::before, .underlined-link::after {
   content: "";
@@ -1842,11 +1841,11 @@ a:active {
   bottom: calc(var(--underline-height) * -1);
   left: 0;
   right: 0;
-  height: var(--underline-height, 1px);
+  height: var(--underline-height);
   width: 100%;
   transition: transform var(--duration-medium) var(--transition-type);
   transform: rotate(0.25deg) scaleX(0.95);
-  background-color: blue;
+  background-color: aqua;
 }
 .underlined-link::before {
   transition-delay: var(--duration-short);

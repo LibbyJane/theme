@@ -147,15 +147,16 @@
 
 
 @mixin underlined-link {
-    --underline-height: 0.2px;
+    --underline-height: 1px;
 
     position: relative;
     z-index: 1;
     background-color: peach;
+
     &:hover,
     &:focus {
         --alpha-link: 1;
-        --underline-height: 1px;
+        --underline-height: 1.5px;
 
         &::before {
             transform: rotate(-0.25deg) scaleX(1);
@@ -164,7 +165,6 @@
 
         &::after {
             transform: rotate(0.25deg) scaleX(1);
-            z-index: 100;
             // transform: scaleX(0.8);
             // animation: scaleOutX40 var(--duration-medium) var(--transition-type) forwards;
             // transform-origin: bottom center;
@@ -182,12 +182,12 @@
             bottom: calc(var(--underline-height) * -1);
             left: 0;
             right: 0;
-        height: var(--underline-height, 1px);
+        height: var(--underline-height);
         width: 100%;
         transition: transform var(--duration-medium) var(--transition-type);
         transform: rotate(0.25deg) scaleX(0.95);
         // z-index: -1;
-        background-color: blue;
+        background-color: aqua;
     }
 
     &::before {
