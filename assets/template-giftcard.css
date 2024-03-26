@@ -1820,6 +1820,7 @@ a:active {
   --underline-height: 0.2px;
   position: relative;
   z-index: 1;
+  background-color: yellow;
 }
 .underlined-link:hover, .underlined-link:focus {
   --alpha-link: 1;
@@ -1842,11 +1843,13 @@ a:active {
   transition: transform var(--duration-medium) var(--transition-type);
   transform: rotate(0.25deg) scaleX(0.95);
   z-index: -1;
+  background-color: lime;
 }
 .underlined-link::before {
   transition-delay: var(--duration-short);
   transform: rotate(-0.5deg) scaleX(0);
   transform-origin: bottom left;
+  background-color: plum;
 }
 .underlined-linkbutton {
   background-color: transparent;

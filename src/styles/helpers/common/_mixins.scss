@@ -151,7 +151,7 @@
 
     position: relative;
     z-index: 1;
-
+    background-color: yellow;
     &:hover,
     &:focus {
         --alpha-link: 1;
@@ -183,37 +183,14 @@
         transition: transform var(--duration-medium) var(--transition-type);
         transform: rotate(0.25deg) scaleX(0.95);
         z-index: -1;
-
-        // --height: 3px;
-        // transform: translate3d(0px,0px,0px);
-
-        // // animation: scaleX100 var(--duration-medium) var(--transition-type) forwards;
-        // background-color: rgba(var(--color-link), var(--alpha-link));
-        // content: '';
-        // flex: 0 0 auto;
-        // mask-image: url(mask-underline.svg?v=2);
-        // mask-size: cover;
-        // mask-repeat: no-repeat;
-        // mask-position: bottom left;
-        // margin: 0 auto;
-        // position: absolute;
-        // bottom: calc(var(--height) * -1);
-        // right: 0;
-        // left: 0;
-        // width: auto;
-        // height: var(--height);
-        // opacity: 0.6;
-        // shape-rendering: crispEdges;
-        // transform: scaleX(0.5);
-        // transform-origin: bottom center;
-        // transition: transform var(--duration-medium) var(--transition-type);
-        // z-index: -1;
+        background-color: lime;
     }
 
     &::before {
         transition-delay: var(--duration-short);
         transform: rotate(-0.5deg) scaleX(0);
         transform-origin: bottom left;
+        background-color: plum;
     }
 }
 

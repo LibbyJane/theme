@@ -338,6 +338,9 @@
   display: block;
 }
 
+.cart-drawer {
+  --card-justification: center;
+}
 .cart-drawer .drawer__inner {
   overflow-x: hidden;
   overflow-y: auto;

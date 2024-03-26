@@ -877,6 +877,7 @@ a:active {
   --underline-height: 0.2px;
   position: relative;
   z-index: 1;
+  background-color: yellow;
 }
 .underlined-link:hover, .underlined-link:focus {
   --alpha-link: 1;
@@ -899,11 +900,13 @@ a:active {
   transition: transform var(--duration-medium) var(--transition-type);
   transform: rotate(0.25deg) scaleX(0.95);
   z-index: -1;
+  background-color: lime;
 }
 .underlined-link::before {
   transition-delay: var(--duration-short);
   transform: rotate(-0.5deg) scaleX(0);
   transform-origin: bottom left;
+  background-color: plum;
 }
 .underlined-linkbutton {
   background-color: transparent;
@@ -4046,6 +4049,7 @@ input::-webkit-search-decoration {
   --underline-height: 0.2px;
   position: relative;
   z-index: 1;
+  background-color: yellow;
 }
 .form__message a:hover, .form__message a:focus {
   --alpha-link: 1;
@@ -4068,11 +4072,13 @@ input::-webkit-search-decoration {
   transition: transform var(--duration-medium) var(--transition-type);
   transform: rotate(0.25deg) scaleX(0.95);
   z-index: -1;
+  background-color: lime;
 }
 .form__message a::before {
   transition-delay: var(--duration-short);
   transform: rotate(-0.5deg) scaleX(0);
   transform-origin: bottom left;
+  background-color: plum;
 }
 .form__message a::before, .form__message a::after {
   background-color: currentColor;
@@ -4712,12 +4718,11 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
   --underline-height: 0.2px;
   position: relative;
   z-index: 1;
+  background-color: yellow;
   color: rgba(var(--color-link), var(--alpha-link));
   display: inline-flex;
   line-height: 1.2;
   text-decoration: none;
-  z-index: var(--zi-base);
-  outline: 2px dashed;
 }
 .rte a:hover, .rte a:focus,
 .inline-richtext a:hover,
@@ -4748,12 +4753,14 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
   transition: transform var(--duration-medium) var(--transition-type);
   transform: rotate(0.25deg) scaleX(0.95);
   z-index: -1;
+  background-color: lime;
 }
 .rte a::before,
 .inline-richtext a::before {
   transition-delay: var(--duration-short);
   transform: rotate(-0.5deg) scaleX(0);
   transform-origin: bottom left;
+  background-color: plum;
 }
 .rte abutton,
 .inline-richtext abutton {

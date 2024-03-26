@@ -27,6 +27,8 @@
 }
 
 .cart-drawer {
+    --card-justification: center;
+
     .drawer__inner {
         @include scrollbars;
         background-color: rgb(var(--color-background));
