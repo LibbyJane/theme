@@ -53,7 +53,7 @@
         --font-size-small: calc(var(--font-body-scale) * 1.2rem);
         --font-size-caption: calc(var(--font-body-scale) * 1.1rem);
         --font-size-xs: calc(var(--font-body-scale) * 0.95rem);
-        --letter-spacing: 0.025rem;
+        --letter-spacing: 0;
         --letter-spacing-large: 0.05rem;
 
         --font-size-h0: calc(var(--font-heading-scale) * 3.4rem);
@@ -266,6 +266,7 @@
         --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
 
         --header-height: {{ settings.logo_width | divided_by: settings.logo.aspect_ratio }}px;
+        --header-height-scrolled: calc(var(--header-height) * 0.66);
         --header-brand-aspect-ratio: {{ settings.logo_width }} / {{ settings.logo_height }};
 
         --icon-stroke-size: 1px;
