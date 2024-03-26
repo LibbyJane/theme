@@ -151,7 +151,7 @@
 
     position: relative;
     z-index: 1;
-    background-color: orange;
+    background-color: peach;
     &:hover,
     &:focus {
         --alpha-link: 1;
@@ -177,10 +177,13 @@
         content: '';
         background-color: rgba(var(--color-link), var(--alpha-link));
         // border: var(--underline-height) solid rgba(var(--color-link), var(--alpha-link));
+        display: block;
         position: absolute;
             bottom: calc(var(--underline-height) * -1);
             left: 0;
+            right: 0;
         height: var(--underline-height);
+        height: 10px;
         width: 100%;
         transition: transform var(--duration-medium) var(--transition-type);
         transform: rotate(0.25deg) scaleX(0.95);

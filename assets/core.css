@@ -877,7 +877,7 @@ a:active {
   --underline-height: 0.2px;
   position: relative;
   z-index: 1;
-  background-color: orange;
+  background-color: peach;
 }
 .underlined-link:hover, .underlined-link:focus {
   --alpha-link: 1;
@@ -894,10 +894,13 @@ a:active {
 .underlined-link::before, .underlined-link::after {
   content: "";
   background-color: rgba(var(--color-link), var(--alpha-link));
+  display: block;
   position: absolute;
   bottom: calc(var(--underline-height) * -1);
   left: 0;
+  right: 0;
   height: var(--underline-height);
+  height: 10px;
   width: 100%;
   transition: transform var(--duration-medium) var(--transition-type);
   transform: rotate(0.25deg) scaleX(0.95);
@@ -4049,7 +4052,7 @@ input::-webkit-search-decoration {
   --underline-height: 0.2px;
   position: relative;
   z-index: 1;
-  background-color: orange;
+  background-color: peach;
 }
 .form__message a:hover, .form__message a:focus {
   --alpha-link: 1;
@@ -4066,10 +4069,13 @@ input::-webkit-search-decoration {
 .form__message a::before, .form__message a::after {
   content: "";
   background-color: rgba(var(--color-link), var(--alpha-link));
+  display: block;
   position: absolute;
   bottom: calc(var(--underline-height) * -1);
   left: 0;
+  right: 0;
   height: var(--underline-height);
+  height: 10px;
   width: 100%;
   transition: transform var(--duration-medium) var(--transition-type);
   transform: rotate(0.25deg) scaleX(0.95);
@@ -4719,7 +4725,7 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
   --underline-height: 0.2px;
   position: relative;
   z-index: 1;
-  background-color: orange;
+  background-color: peach;
   color: rgba(var(--color-link), var(--alpha-link));
   display: inline-flex;
   line-height: 1.2;
@@ -4748,10 +4754,13 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 .inline-richtext a::after {
   content: "";
   background-color: rgba(var(--color-link), var(--alpha-link));
+  display: block;
   position: absolute;
   bottom: calc(var(--underline-height) * -1);
   left: 0;
+  right: 0;
   height: var(--underline-height);
+  height: 10px;
   width: 100%;
   transition: transform var(--duration-medium) var(--transition-type);
   transform: rotate(0.25deg) scaleX(0.95);
