@@ -99,8 +99,9 @@
     }
 }
 
-.product__tax.product__tax  {
+.product__tax  {
     color: rgba(var(--color-foreground), var(--opacity-light));
+    font-size: var(--font-size-smaller);
     margin: var(--space-sm) 0 var(--space-med);
     padding: 0;
     opacity: 1;

@@ -21,11 +21,11 @@
     }
 
     &.status-error {
-        color: rgba(var(--color-danger), 1);
+        color: var(--color-danger-rgb);
     }
 
     &.status-success {
-        color: rgba(var(--color-success), 1);
+        color: var(--color-success-rgb);
     }
 
     a {

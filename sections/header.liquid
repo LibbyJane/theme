@@ -45,7 +45,7 @@
 -%}
 
 <{%- if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %}
-    class="header-wrapper header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} color-{{ section.settings.color_scheme }}">
+    class="js-header-wrapper header-wrapper header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} color-{{ section.settings.color_scheme }}">
 
     {%- liquid
         assign social_links = false
@@ -132,9 +132,9 @@
                         {% render block %}
                 {%- endcase -%}
             {%- endfor -%}
-            <div class="desktop-localization-wrapper">
+            <div class="desktop-localization-wrapper small-hide medium-hide">
                 {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
-                <noscript class="small-hide medium-hide">
+                <noscript>
                     {%- form 'localization', id: 'HeaderCountryMobileFormNoScript', class: 'localization-form' -%}
                     <div class="localization-form__select">
                         <h2 class="visually-hidden" id="HeaderCountryMobileLabelNoScript">
@@ -154,7 +154,7 @@
                     {%- endform -%}
                 </noscript>
 
-                <localization-form class="small-hide medium-hide no-js-hidden">
+                <localization-form class="no-js-hidden">
                     {%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
                         <h2 class="visually-hidden" id="HeaderCountryLabel">{{ 'localization.country_label' | t }}</h2>
                         {%- render 'country-localization', localPosition: 'HeaderCountry' -%}
@@ -163,7 +163,7 @@
                 {% endif %}
 
                 {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-                <noscript class="small-hide medium-hide">
+                <noscript>
                     {%- form 'localization', id: 'HeaderLanguageMobileFormNoScript', class: 'localization-form' -%}
                     <div class="localization-form__select">
                         <h2 class="visually-hidden" id="HeaderLanguageMobileLabelNoScript">
@@ -183,7 +183,7 @@
                     {%- endform -%}
                 </noscript>
 
-                <localization-form class="small-hide medium-hide no-js-hidden">
+                <localization-form class="no-js-hidden">
                     {%- form 'localization', id: 'HeaderLanguageForm', class: 'localization-form' -%}
                         <h2 class="visually-hidden" id="HeaderLanguageLabel">{{ 'localization.language_label' | t }}
                         </h2>

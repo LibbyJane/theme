@@ -537,7 +537,11 @@
 }
 
 .color--danger {
-  color: var(--color-danger) !important;
+  color: rgb(var(--color-danger)) !important;
+}
+
+.color--success {
+  color: rgb(var(--color-success)) !important;
 }
 
 .visibility-hidden {
@@ -832,7 +836,6 @@ strong {
 .caption,
 .caption-with-letter-spacing {
   font-size: var(--font-size-caption);
-  letter-spacing: calc(var(--font-size-caption) / 10 + 0.01rem);
   line-height: calc(1 + 0.2 / var(--font-body-scale));
 }
 .caption--medium,
@@ -845,12 +848,12 @@ strong {
 }
 
 .caption-with-letter-spacing {
-  letter-spacing: calc(var(--font-size-caption) / 10 + 0.04rem);
+  letter-spacing: var(--letter-spacing-large);
 }
 
 .text-caption {
   font-size: var(--font-size-caption);
-  letter-spacing: calc(var(--font-size-caption) / 10 + 0.01rem);
+  letter-spacing: var(--letter-spacing-large);
 }
 
 mark {
@@ -1486,7 +1489,7 @@ details[open] > .header__icon--menu .icon-hamburger {
   z-index: var(--zi-header);
 }
 .scrolled-past-header [data-sticky-type=reduce-logo-size] .header__brand {
-  height: calc(var(--header-height) * 0.66);
+  height: var(--header-height-scrolled);
   margin: auto;
 }
 .header--middle-left .header__brand {
@@ -1504,7 +1507,7 @@ details[open] > .header__icon--menu .icon-hamburger {
   transition: max-height var(--duration-long) ease;
 }
 .scrolled-past-header [data-sticky-type=reduce-logo-size] .header__brand-image {
-  max-height: calc(var(--header-height) * 0.66);
+  max-height: var(--header-height-scrolled);
   margin: auto;
 }
 
@@ -2999,7 +3002,7 @@ summary .icon-share,
   cursor: pointer;
   background-color: transparent;
   border: none;
-  color: rgb(var(--color-link), var(--alpha-link));
+  color: rgba(var(--color-link), var(--alpha-link));
   display: flex;
   align-items: center;
   font-size: var(--font-size-smaller);
@@ -4030,10 +4033,10 @@ input::-webkit-search-decoration {
   padding: var(--space) var(--space) 0;
 }
 .form__message.status-error {
-  color: rgba(var(--color-danger), 1);
+  color: var(--color-danger-rgb);
 }
 .form__message.status-success {
-  color: rgba(var(--color-success), 1);
+  color: var(--color-success-rgb);
 }
 .form__message a {
   --underline-height: 0.2px;
@@ -4421,7 +4424,7 @@ input::-webkit-search-decoration {
   -webkit-mask: var(--mask);
           mask: var(--mask);
   padding: 4px;
-  background-color: var(--color-white);
+  background-color: var(--color-white-rgb);
 }
 
 .postage-stamp--landscape {
@@ -4465,16 +4468,6 @@ input::-webkit-search-decoration {
   width: auto;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.shopify-product-form,
-.quick-add-form {
-  color: rgb(var(--color-foreground)) !important;
-  font-size: var(--font-size-smaller);
-}
-.shopify-product-form *,
-.quick-add-form * {
-  color: rgb(var(--color-foreground)) !important;
 }
 
 /* component-modal */

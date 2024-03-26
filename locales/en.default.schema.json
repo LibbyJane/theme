@@ -551,6 +551,10 @@
         "show_cart_note": {
           "label": "Enable cart note"
         },
+        "minimise_distractions": {
+            "label": "Minimise distractions on cart page",
+            "info": "Maximise focus on checking out by hiding distractions such as the announcement bar."
+          },
         "cart_drawer": {
           "header": "Cart drawer",
           "collection": {

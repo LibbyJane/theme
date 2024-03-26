@@ -35,7 +35,7 @@ customElements.define('details-disclosure', DetailsDisclosure);
 class HeaderMenu extends DetailsDisclosure {
   constructor() {
     super();
-    this.header = document.querySelector('.header-wrapper');
+    this.header = document.querySelector('.js-header-wrapper');
   }
 
   onToggle() {

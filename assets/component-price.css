@@ -397,21 +397,22 @@
   display: inline-block;
 }
 
-.product__tax.product__tax {
+.product__tax {
   color: rgba(var(--color-foreground), var(--opacity-light));
+  font-size: var(--font-size-smaller);
   margin: var(--space-sm) 0 var(--space-med);
   padding: 0;
   opacity: 1;
 }
-.product__tax.product__tax a {
+.product__tax a {
   position: relative;
   z-index: 1;
   color: rgb(var(--color-link));
 }
-.product__tax.product__tax a:hover::after, .product__tax.product__tax a:focus::after {
+.product__tax a:hover::after, .product__tax a:focus::after {
   animation: scaleX100 var(--duration-medium) var(--transition-type) forwards;
 }
-.product__tax.product__tax a::after {
+.product__tax a::after {
   animation: scaleOutX100 var(--duration-medium) var(--transition-type) forwards;
   -webkit-mask-image: url(mask-underline.svg);
           mask-image: url(mask-underline.svg);

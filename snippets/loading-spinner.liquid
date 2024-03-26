@@ -1,0 +1,15 @@
+{% comment %}
+    Renders loading-spinner.
+    Accepts:
+
+    Usage:
+    {% render 'loading-spinner' %}
+{% endcomment %}
+
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+
+<span class="loading-overlay js-loading-overlay hidden">
+    <span class="loading-overlay__spinner js-loading-overlay__spinner">
+        {% render 'icon-loading' %}
+    </span>
+</span>

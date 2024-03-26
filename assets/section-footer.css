@@ -495,13 +495,23 @@
   margin-bottom: 0;
 }
 
+.footer__row-item--policies {
+  align-self: start;
+}
 .footer__row-item--policies ul {
   display: flex;
   gap: var(--space);
   font-size: var(--font-size-small);
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+@media screen and (min-width: 750px) {
+  .footer__row-item--policies ul {
+    justify-content: end;
+  }
 }
 .footer__row-item--policies li {
   display: flex;
@@ -529,6 +539,8 @@
 @media screen and (min-width: 750px) {
   .footer__row-item--copyright {
     flex-direction: row;
+    flex-wrap: wrap;
+    align-self: start;
   }
 }
 

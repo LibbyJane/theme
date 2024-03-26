@@ -8,10 +8,10 @@
 
         @media screen and (max-width: 749px) {
             margin-inline: calc(var(--content-padding-inline) * -1);
-        }
 
-        @media screen and (min-width: 750px) {
-            margin-bottom: var(--space);
+            .section-featured-product & {
+                margin-inline: auto;
+            }
         }
 
         slider-component {

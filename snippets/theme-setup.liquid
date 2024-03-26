@@ -142,13 +142,13 @@
         --color-highlight: {{ settings.color_highlight.red }},{{ settings.color_highlight.green }},{{ settings.color_highlight.blue }};
         --color-ecommerce: {{ settings.color_ecommerce.red }},{{ settings.color_ecommerce.green }},{{ settings.color_ecommerce.blue }};
         --color-ecommerce-contrast: {{ settings.color_ecommerce_contrast.red }},{{ settings.color_ecommerce_contrast.green }},{{ settings.color_ecommerce_contrast.blue }};
-        --color-success: {{ settings.color_success.red }},{{ settings.color_success.green }},{{ settings.color_success.blue }};
-        --color-success-rgb: rgb(var(--color-success));
+        --color-success-rgb: rgb({{ settings.color_success.red }},{{ settings.color_success.green }},{{ settings.color_success.blue }});
         --color-warning: {{ settings.color_warning.red }},{{ settings.color_warning.green }},{{ settings.color_warning.blue }};
         --color-danger: {{ settings.color_danger.red }},{{ settings.color_danger.green }},{{ settings.color_danger.blue }};
+        --color-danger-rgb: rgb({{ settings.color_danger.red }},{{ settings.color_danger.green }},{{ settings.color_danger.blue }});
         --color-status-background: {{ settings.color_status_background.red }},{{ settings.color_status_background.green }},{{ settings.color_status_background.blue }};
 
-        --color-white: rgb(255,255,255);
+        --color-white-rgb: rgb(255,255,255);
 
         --collection-card-image-padding: {{ settings.collection_card_padding | divided_by: 10.0 }}rem;
         --collection-card-corner-radius: {{ settings.collection_card_corner_radius | divided_by: 10.0 }}rem;

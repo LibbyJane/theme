@@ -537,7 +537,11 @@
 }
 
 .color--danger {
-  color: var(--color-danger) !important;
+  color: rgb(var(--color-danger)) !important;
+}
+
+.color--success {
+  color: rgb(var(--color-success)) !important;
 }
 
 .visibility-hidden {
@@ -1775,7 +1779,6 @@ strong {
 .caption,
 .caption-with-letter-spacing {
   font-size: var(--font-size-caption);
-  letter-spacing: calc(var(--font-size-caption) / 10 + 0.01rem);
   line-height: calc(1 + 0.2 / var(--font-body-scale));
 }
 .caption--medium,
@@ -1788,12 +1791,12 @@ strong {
 }
 
 .caption-with-letter-spacing {
-  letter-spacing: calc(var(--font-size-caption) / 10 + 0.04rem);
+  letter-spacing: var(--letter-spacing-large);
 }
 
 .text-caption {
   font-size: var(--font-size-caption);
-  letter-spacing: calc(var(--font-size-caption) / 10 + 0.01rem);
+  letter-spacing: var(--letter-spacing-large);
 }
 
 mark {
@@ -2211,7 +2214,7 @@ h6:empty {
 }
 
 .gift-card__copy-success.gift-card__copy-success {
-  color: rgba(var(--color-success), 1);
+  color: var(--color-success-rgb);
 }
 .gift-card__copy-success.gift-card__copy-success:empty {
   display: none;

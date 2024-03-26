@@ -12,7 +12,7 @@
 
     [data-sticky-type="reduce-logo-size"] & {
         .scrolled-past-header & {
-            height: calc(var(--header-height) * 0.66) ;
+            height: var(--header-height-scrolled);
             margin: auto;
         }
     }
@@ -37,7 +37,7 @@
 
     [data-sticky-type="reduce-logo-size"] & {
         .scrolled-past-header & {
-            max-height: calc(var(--header-height) * 0.66) ;
+            max-height: var(--header-height-scrolled);
             //max-height: none;
             margin: auto;
         }

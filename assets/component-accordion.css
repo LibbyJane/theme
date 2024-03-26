@@ -29,6 +29,9 @@
 .accordion summary:hover .icon-caret, .accordion summary:focus .icon-caret {
   transform: rotate(-90deg);
 }
+.accordion summary .icon {
+  pointer-events: none;
+}
 .accordion .summary__title {
   flex: 1;
   display: flex;
@@ -63,6 +66,7 @@
   margin: 0;
   min-height: 1.6rem;
   word-break: break-word;
+  pointer-events: none;
 }
 
 .accordion__content {

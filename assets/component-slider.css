@@ -659,7 +659,9 @@ slider-component {
 [class^=texture-] .slider-buttons, div[class*=" texture-"] .slider-buttons {
   --slider-pagination-bg-opacity: 0;
 }
-.contains-card .slider-buttons {
+
+.contains-card .slider-buttons,
+.contains-card + .slider-buttons {
   margin-top: var(--slide-space-offset);
   position: relative;
   z-index: var(--zi-base);

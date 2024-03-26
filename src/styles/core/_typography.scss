@@ -101,7 +101,6 @@ strong {
 .caption,
 .caption-with-letter-spacing {
     font-size: var(--font-size-caption);
-    letter-spacing: calc(var(--font-size-caption) / 10 + 00.01rem);
     line-height: calc(1 + 0.2 / var(--font-body-scale));
 
     &--medium {
@@ -114,12 +113,12 @@ strong {
 }
 
 .caption-with-letter-spacing {
-    letter-spacing: calc(var(--font-size-caption) / 10 + 00.04rem);
+    letter-spacing: var(--letter-spacing-large);
 }
 
 .text-caption {
     font-size: var(--font-size-caption);
-    letter-spacing: calc(var(--font-size-caption) / 10 + 00.01rem);
+    letter-spacing: var(--letter-spacing-large);
 }
 
 mark {

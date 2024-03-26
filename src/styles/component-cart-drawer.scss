@@ -33,11 +33,16 @@
     display: flex;
         flex-direction: column;
     height: 100%;
-    max-width: calc(100vw - var(--space-lg) - var(--space-lg));
-    padding: var(--space-lg);
+    width: fit-content;
+    max-width: calc(100vw - var(--space-lg));
+    padding: var(--content-padding-inline);
     transform: translateX(100%);
     transition: transform var(--duration-default) ease;
-    width: 40rem;
+
+    @media screen and (min-width: 750px) {
+        max-width: calc(100vw - var(--space-lg) - var(--space-lg));
+        min-width: 40rem;
+    }
 
     @media screen and (min-height: 650px) {
         overflow: clip;
@@ -100,6 +105,8 @@ cart-drawer-items {
 
     @media screen and (min-height: 650px) {
         @include scrollbars;
+        padding-right: 1rem;
+        margin-right: -1rem;
     }
 }
 
@@ -122,43 +129,52 @@ cart-drawer-items {
 .cart-drawer {
     .cart-items { // table
         display: block;
-        margin-bottom: 1rem;
-        width: 100%;
-    }
-
-    tbody {
-        display: block;
-        width: 100%;
-    }
-
-    thead {
-        display: block;
+        margin-bottom: var(--space);
         width: 100%;
 
-        position: sticky;
-            top: 0;
-        z-index: 2;
-        background-color: rgb(var(--color-background));
+        tbody {
+            display: block;
+            width: 100%;
+        }
+
+        thead {
+            display: block;
+            width: 100%;
+
+            position: sticky;
+                top: 0;
+            z-index: 2;
+            background-color: rgb(var(--color-background));
+
+            tr {
+                border-bottom: var(--border);
+                display: flex;
+                    justify-content: space-between;
+            }
+        }
 
         tr {
-            display: flex;
-                justify-content: space-between;
+            margin-bottom: var(--space);
         }
-    }
 
-    tr {
-        margin-bottom: var(--space);
-    }
+        td,
+        th {
+            border-width: 0;
+            margin: 0;
+            padding: 0;
 
-    td,
-    th {
-        margin: 0;
-        padding: 0;
-    }
+            &:empty {
+                display: none;
+            }
+        }
 
-    th {
-        border-bottom: var( --border-light);
-        flex: 0 1 auto;
+        th {
+            flex: 0 1 auto;
+
+            &.right {
+                margin-left: auto;
+            }
+        }
     }
 
     .cart-items__th-product {
@@ -175,22 +191,12 @@ cart-drawer-items {
         grid-template-areas: "cart-item--image cart-item--details cart-item--totals" "cart-item--image cart-item--quantity cart-item--quantity";
         gap: var(--space-med);
         align-items: start;
+        margin-bottom: var(--space);
 
       .loading-overlay {
         right: 5px;
         padding-top: 2.5rem;
       }
-
-      cart-remove-button {
-        margin-left: 0;
-
-        @media screen and (min-width: 750px) {
-            .cart-drawer .cart-item cart-remove-button {
-                // margin-left: 0;
-            }
-        }
-    }
-
 
     .cart-item__media {  // td
         grid-area: cart-item--image;
@@ -282,7 +288,8 @@ cart-drawer-items {
     }
 
     .totals {
-        justify-content: space-between;
+        justify-content: end;
+        margin-bottom: var(--space);
     }
 
     .price {
@@ -293,7 +300,6 @@ cart-drawer-items {
         dd {
             word-break: break-word;
         }
-
     }
 }
 
@@ -329,9 +335,11 @@ cart-drawer-items {
 
     summary {
         display: flex;
+        gap: var(--space);
         position: relative;
         line-height: 1;
-        padding: var(--space-med) 0;
+        padding: var(--space) 0;
+        text-align: center;
     }
 
     .cart__dynamic-checkout-buttons {
@@ -377,8 +385,16 @@ cart-drawer-items {
     }
 }
 
+.cart-drawer__footer {
+    padding-top: var(--space);
+
+    .totals__total {
+        font-weight: normal;
+    }
+}
+
 .drawer__footer-details {
-    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.2);
+    border-bottom: var(--border-light);
     margin-bottom: var(--space);
 
     .icon-caret {
@@ -398,6 +414,7 @@ cart-drawer-items {
     }
 
     summary {
+
         &:hover,
         &:focus {
             .icon-caret {

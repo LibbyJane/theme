@@ -85,9 +85,20 @@
 }
 
 .color--danger {
-    color: var(--color-danger) !important;
+    color: rgb(var(--color-danger)) !important;
 }
 
+.color--success {
+    color: rgb(var(--color-success)) !important;
+}
+
+// .bg--danger {
+//     background-color: rgb(var(--color-danger));
+// }
+
+// .bg--success {
+//     background-color: rgb(var(--color-success));
+// }
 
 .visibility-hidden {
     visibility: hidden;

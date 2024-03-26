@@ -358,10 +358,6 @@
 }
 
 .product__view-details {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space);
   font-size: var(--font-size-smaller);
 }
 /*# sourceMappingURL=section-featured-product.css.map */

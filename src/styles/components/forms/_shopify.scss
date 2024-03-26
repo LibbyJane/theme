@@ -1,10 +1,14 @@
-// subscription app colors can be unreadable - some inline styles assume a white background
-.shopify-product-form,
-.quick-add-form {
-    color: rgb(var(--color-foreground)) !important;
-    font-size: var(--font-size-smaller);
+// // subscription app colors can be unreadable - some inline styles assume a white background
+// hard to fix though, styles below make selects unreadable
 
-    * {
-        color: rgb(var(--color-foreground)) !important;
-    }
-}
+// .shopify-product-form,
+// .quick-add-form {
+//     background-color: inherit !important;
+//     color: rgb(var(--color-foreground)) !important;
+//     font-size: var(--font-size-smaller);
+
+//     * {
+//         background-color: inherit !important;
+//         color: rgb(var(--color-foreground)) !important;
+//     }
+// }

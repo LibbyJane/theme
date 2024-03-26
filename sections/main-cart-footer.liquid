@@ -2,6 +2,7 @@
 {{ 'component-totals.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+{%- if settings.show_cart_note -%}{{ 'component-accordion.css' | asset_url | stylesheet_tag }} {%- endif -%}
 
 {%- style -%}
     .section-{{ section.id }}-padding {
@@ -40,22 +41,39 @@
 
 <div class="cart__footer-outer page-width {% if cart == empty %} is-empty {% endif %} section-{{ section.id }}-padding" id="main-cart-footer" data-id="{{ section.id }}">
     <div class="cart__footer default-content-style color-{{ section.settings.color_scheme }}">
-        {%- if settings.show_cart_note -%}
-            <cart-note class="cart__note field">
-                <textarea
-                    class="text-area field__input"
-                    name="note"
-                    form="cart"
-                    id="Cart-note"
-                    placeholder="{{ 'sections.cart.note' | t }}"
-                >
-                    {{ cart.note }}
-                </textarea>
-                <label class="field__label" for="Cart-note">{{ 'sections.cart.note' | t }}</label>
-            </cart-note>
-        {%- endif -%}
-
         <div class="cart__blocks">
+            {%- if settings.show_cart_note -%}
+                <div class="accordion">
+                    <details
+                        id="Details-cart-note-{{ section.id }}"
+                    >
+                        <summary id="Summary-cart-note-{{ section.id }}">
+                            <label for="Cart-note" class="accordion__title">
+                                {{ 'sections.cart.note' | t }}
+                            </label>
+                            {% render 'icon-caret-geometric' %}
+                        </summary>
+                        <div
+                            class="accordion__content"
+                            id="CollapsibleAccordion-cart-note-{{ section.id }}"
+                            role="region"
+                            aria-labelledby="Summary-cart-note-{{ section.id }}"
+                        >
+                            <cart-note class="cart__note field">
+                                <textarea
+                                    class="text-area field__input"
+                                    name="note"
+                                    form="cart"
+                                    id="Cart-note"
+                                    value="{{ cart.note }}"
+                                >
+                                    {{ cart.note }}
+                                </textarea>
+                            </cart-note>
+                        </div>
+                    </details>
+                </div>
+            {%- endif -%}
             {% for block in section.blocks %}
                 {%- case block.type -%}
                     {%- when '@app' -%}

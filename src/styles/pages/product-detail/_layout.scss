@@ -2,8 +2,16 @@
     gap: 0;
     margin: 0;
 
-    @media screen and (min-width: 750px) {
-        column-gap: calc(var(--grid-horizontal-spacing) * 2);
+    &,
+    .section-featured-product & {
+        @media screen and (min-width: 750px) {
+            column-gap: calc(var(--grid-horizontal-spacing) * 2);
+        }
+    }
+
+    .section-featured-product & {
+        column-gap: var(--grid-horizontal-spacing);
+        row-gap: var(--grid-vertical-spacing);
     }
 }
 

@@ -486,6 +486,11 @@
   padding: 0;
 }
 
+.cart-item__details-vendor {
+  font-size: var(--font-size-smaller);
+  margin-bottom: 0;
+}
+
 .cart-item__name {
   display: block;
   margin-bottom: 0;
@@ -574,9 +579,5 @@
 }
 .cart-remove__button:hover, .cart-remove__button:focus {
   color: rgba(var(--color-foreground), 1);
-}
-.cart-remove__button svg {
-  height: auto;
-  width: 2rem;
 }
 /*# sourceMappingURL=component-cart-items.css.map */

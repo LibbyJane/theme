@@ -407,17 +407,17 @@ slider-component {
         margin: var(--space) auto;
     width: max-content;
 
-    .contains-card & {
-        margin-top: var(--slide-space-offset);
-        position: relative;
-        z-index: var(--zi-base);
-    }
-
-
-    // WHERE Is this for - overlaid?
+    // todo WHERE Is this for - overlaid?
     // .background-transparent & {
     //     margin-bottom: calc(-1 * var(--space-sm));
     // }
+}
+
+.contains-card .slider-buttons,
+.contains-card + .slider-buttons {
+    margin-top: var(--slide-space-offset);
+    position: relative;
+    z-index: var(--zi-base);
 }
 
 @media screen and (min-width: 990px) {
