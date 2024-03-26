@@ -101,7 +101,6 @@ cart-items {
         gap: var(--space-sm);
     }
 
-
     .totals__total-value {
         @include text-heading;
         //color: rgb(var(--color-ecommerce));
@@ -111,6 +110,7 @@ cart-items {
 
 
 .tax-note {
+    color: rgba(var(--color-foreground), var(--opacity-light));
     font-size: var(--font-size-xs);
     //font-style: italic;
     margin-top: var(--space-sm);

@@ -421,6 +421,7 @@ cart-items {
 }
 
 .tax-note {
+  color: rgba(var(--color-foreground), var(--opacity-light));
   font-size: var(--font-size-xs);
   margin-top: var(--space-sm);
   text-align: end;

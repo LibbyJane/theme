@@ -26,78 +26,83 @@
     }
 }
 
-.drawer__inner {
-    @include scrollbars;
-    background-color: rgb(var(--color-background));
-    border-right: 0;
-    display: flex;
-        flex-direction: column;
-    height: 100%;
-    width: fit-content;
-    max-width: calc(100vw - var(--space-lg));
-    padding: var(--content-padding-inline);
-    transform: translateX(100%);
-    transition: transform var(--duration-default) ease;
+.cart-drawer {
+    .drawer__inner {
+        @include scrollbars;
+        background-color: rgb(var(--color-background));
+        border-right: 0;
+        display: flex;
+            flex-direction: column;
+        height: 100%;
+        width: fit-content;
+        max-width: calc(100vw - var(--space-lg));
+        padding: var(--content-padding-inline);
+        transform: translateX(100%);
+        transition: transform var(--duration-default) ease;
 
-    @media screen and (min-width: 750px) {
-        max-width: calc(100vw - var(--space-lg) - var(--space-lg));
-        min-width: 40rem;
+        @media screen and (min-width: 750px) {
+            max-width: calc(100vw - var(--space-lg) - var(--space-lg));
+            min-width: 40rem;
+        }
+
+        // @media screen and (min-height: 650px) {
+        //     overflow: clip;
+        // }
+
+        .drawer.active & {
+            transform: translateX(0);
+        }
     }
 
-    @media screen and (min-height: 650px) {
-        overflow: clip;
+    .drawer__inner-empty {
+        display: flex;
+            flex-direction: column;
+        height: 100%;
+        // overflow: clip;
     }
 
-    .drawer.active & {
-        transform: translateX(0);
-    }
-
-    .drawer.is-empty & {
-        display: grid;
-        grid-template-rows: 1fr;
+    // drawer header
+    .drawer__header {
         align-items: center;
+        background-color: rgb(var(--color-background));
+        display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: var(--space-med);
+        margin: 0 0 auto;
+        padding: 0 0 var(--space-med) 0;
+        position: relative;
+    }
+
+    // .drawer__heading {
+    //     margin: 0 0 1rem;
+    // }
+
+    .drawer__close {
+        background-color: transparent;
+        border: none;
+        box-shadow: 0 0 0 0.2rem rgba(var(--color-button), 0);
+        color: rgb(var(--color-foreground));
+        cursor: pointer;
+        display: inline-block;
+        padding: 0;
+    }
+
+    .card {
+        display: flex;
+            flex-direction: column;
+            gap: var(--space);
+    }
+
+    .card__media-image {
+        width: 100%;
+
+        .media {
+            height: 100%;
+            width: 100%;
+        }
     }
 }
-
-.drawer__inner-empty {
-    background-color: rgb(var(--color-background));
-    display: flex;
-        flex-direction: column;
-    height: 100%;
-    overflow: clip;
-    padding: 0 var(--space-med);
-}
-
-// drawer header
-.drawer__header {
-    align-items: center;
-    background-color: rgb(var(--color-background));
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 0 0 var(--space-med) 0;
-    position: relative;
-
-}
-
-// .drawer__heading {
-//     margin: 0 0 1rem;
-// }
-
-.drawer__close {
-    background-color: transparent;
-    border: none;
-    box-shadow: 0 0 0 0.2rem rgba(var(--color-button), 0);
-    color: rgb(var(--color-foreground));
-    cursor: pointer;
-    display: inline-block;
-    padding: 0;
-
-    .cart-drawer__warnings & {
-        right: 5px;
-    }
-}
-
 // drawer main content
 cart-drawer-items {
     overflow: visible;
@@ -312,12 +317,13 @@ cart-drawer-items {
         display: flex;
             flex-direction: column;
             justify-content: center;
+        margin: auto 0;
     }
 }
 
 .cart-drawer__collection {
     display: none;
-    margin: 0 2.5rem var(--space-med);
+    margin: 0 auto var(--space-med);
 
     .drawer.is-empty & {
         display: block;
@@ -327,15 +333,17 @@ cart-drawer-items {
 // drawer footer
 .drawer__footer {
     background-color: rgb(var(--color-background));
-    border-top: 0.1rem solid rgba(var(--color-foreground), 0.2);
+    border-top: var(--border-light);
 
-    cart-drawer-items.is-empty &  {
+    cart-drawer.is-empty &  {
         display: none;
     }
 
     summary {
         display: flex;
-        gap: var(--space);
+            gap: var(--space);
+            justify-content: center;
+            align-items: center;
         position: relative;
         line-height: 1;
         padding: var(--space) 0;
