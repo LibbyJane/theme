@@ -500,7 +500,6 @@ details[open].menu-opening > .menu-drawer__submenu {
   transform: rotate(-1deg) scaleX(0);
   transform-origin: center left;
   transition-delay: 100ms;
-  z-index: -1;
 }
 
 .menu-drawer__menu-item--active:hover {

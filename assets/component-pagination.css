@@ -367,7 +367,6 @@
   transform: rotate(-1deg) scaleX(0);
   transform-origin: center left;
   transition-delay: 100ms;
-  z-index: -1;
 }
 
 .pagination__item--prev {

@@ -435,7 +435,6 @@
   transform: rotate(-1deg) scaleX(0);
   transform-origin: center left;
   transition-delay: 100ms;
-  z-index: -1;
 }
 
 .mega-menu__link--level-2 {
