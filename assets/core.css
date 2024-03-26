@@ -899,12 +899,11 @@ a:active {
   bottom: calc(var(--underline-height) * -1);
   left: 0;
   right: 0;
-  height: var(--underline-height);
-  height: 10px;
+  height: var(--underline-height, 1px);
   width: 100%;
   transition: transform var(--duration-medium) var(--transition-type);
   transform: rotate(0.25deg) scaleX(0.95);
-  background-color: lime;
+  background-color: blue;
 }
 .underlined-link::before {
   transition-delay: var(--duration-short);
@@ -4074,12 +4073,11 @@ input::-webkit-search-decoration {
   bottom: calc(var(--underline-height) * -1);
   left: 0;
   right: 0;
-  height: var(--underline-height);
-  height: 10px;
+  height: var(--underline-height, 1px);
   width: 100%;
   transition: transform var(--duration-medium) var(--transition-type);
   transform: rotate(0.25deg) scaleX(0.95);
-  background-color: lime;
+  background-color: blue;
 }
 .form__message a::before {
   transition-delay: var(--duration-short);
@@ -4759,12 +4757,11 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
   bottom: calc(var(--underline-height) * -1);
   left: 0;
   right: 0;
-  height: var(--underline-height);
-  height: 10px;
+  height: var(--underline-height, 1px);
   width: 100%;
   transition: transform var(--duration-medium) var(--transition-type);
   transform: rotate(0.25deg) scaleX(0.95);
-  background-color: lime;
+  background-color: blue;
 }
 .rte a::before,
 .inline-richtext a::before {
