@@ -85,23 +85,24 @@
         color: rgb(var(--color-foreground));
         cursor: pointer;
         display: inline-block;
+        margin-left: auto;
         padding: 0;
     }
 
-    .card {
-        display: flex;
-            flex-direction: column;
-            gap: var(--space);
-    }
+    // .card {
+    //     display: flex;
+    //         flex-direction: column;
+    //         gap: var(--space);
+    // }
 
-    .card__media-image {
-        width: 100%;
+    // .card__media-image {
+    //     width: 100%;
 
-        .media {
-            height: 100%;
-            width: 100%;
-        }
-    }
+    //     .media {
+    //         height: 100%;
+    //         width: 100%;
+    //     }
+    // }
 }
 // drawer main content
 cart-drawer-items {
@@ -317,16 +318,16 @@ cart-drawer-items {
         display: flex;
             flex-direction: column;
             justify-content: center;
-        margin: auto 0;
+        margin: 0 0 var(--space-med);
     }
 }
 
 .cart-drawer__collection {
     display: none;
-    margin: 0 auto var(--space-med);
 
     .drawer.is-empty & {
         display: block;
+        margin: auto 0 var(--space);
     }
 }
 

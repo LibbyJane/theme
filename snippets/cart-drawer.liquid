@@ -6,6 +6,7 @@
 {% endcomment %}
 
 {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
@@ -40,7 +41,7 @@
                     onclick="this.closest('cart-drawer').close()"
                     aria-label="{{ 'accessibility.close' | t }}"
                 >
-                    {% render 'icon-cross' %}
+                    {% render 'icon-cross-small' %}
                 </button>
             </header>
 
@@ -48,12 +49,12 @@
                 <div class="drawer__inner-empty">
                     <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
                         <div class="cart-drawer__empty-content">
-                            <a href="{{ routes.all_products_collection_url }}" class="button button-primary margin-bottom">
+                            <a href="{{ routes.all_products_collection_url }}" class="button button--primary margin-bottom-lg">
                                 {{ 'general.continue_shopping' | t }}
                             </a>
 
                             {%- if shop.customer_accounts_enabled and customer == null -%}
-                                <h5 class="cart__login-title">{{ 'sections.cart.login.title' | t }}</h5>
+                                <h6 class="margin-bottom-0">{{ 'sections.cart.login.title' | t }}</h6>
                                 <p class="inline-richtext">
                                     {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
                                 </p>
@@ -474,7 +475,7 @@
                 <!-- Start blocks -->
                 <!-- Subtotals -->
 
-                <footer class="cart-drawer__footer" {{ block.shopify_attributes }}>
+                <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
                     {%- if cart.cart_level_discount_applications.size > 0 -%}
                         <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
                             {%- for discount in cart.cart_level_discount_applications -%}
@@ -503,7 +504,7 @@
                             {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
                         {%- endif -%}
                     </p>
-                </footer>
+                </div>
 
                 <!-- CTAs -->
                 <div class="cart__ctas" {{ block.shopify_attributes }}>

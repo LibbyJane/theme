@@ -473,6 +473,10 @@
   margin-bottom: var(--space-med) !important;
 }
 
+.margin-bottom-lg {
+  margin-bottom: var(--space-lg) !important;
+}
+
 .margin-bottom-0 {
   margin-bottom: 0 !important;
 }

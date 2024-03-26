@@ -402,19 +402,8 @@
   color: rgb(var(--color-foreground));
   cursor: pointer;
   display: inline-block;
+  margin-left: auto;
   padding: 0;
-}
-.cart-drawer .card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space);
-}
-.cart-drawer .card__media-image {
-  width: 100%;
-}
-.cart-drawer .card__media-image .media {
-  height: 100%;
-  width: 100%;
 }
 
 cart-drawer-items {
@@ -611,15 +600,15 @@ cart-drawer-items {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: auto 0;
+  margin: 0 0 var(--space-med);
 }
 
 .cart-drawer__collection {
   display: none;
-  margin: 0 auto var(--space-med);
 }
 .drawer.is-empty .cart-drawer__collection {
   display: block;
+  margin: auto 0 var(--space);
 }
 
 .drawer__footer {
