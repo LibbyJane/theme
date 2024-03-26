@@ -6,6 +6,8 @@
         display: inline-flex;
         line-height: 1.2;
         text-decoration: none;
+        z-index: var(--zi-base);
+        outline: 2px dashed;
 
         &button {
             background-color: transparent;

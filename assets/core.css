@@ -4716,6 +4716,8 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
   display: inline-flex;
   line-height: 1.2;
   text-decoration: none;
+  z-index: var(--zi-base);
+  outline: 2px dashed;
 }
 .rte a:hover, .rte a:focus,
 .inline-richtext a:hover,
