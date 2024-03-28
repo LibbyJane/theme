@@ -359,13 +359,13 @@
 .quantity__input {
   color: currentColor;
   font-family: var(--font-heading-family);
-  font-size: 1.6rem;
+  font-size: var(--font-size-h5);
   font-weight: 600;
   opacity: 1;
   text-align: center;
   background-color: transparent;
   border: 0;
-  padding: 0 0.5rem;
+  padding: 0 var(--space-sm);
   width: 100%;
   flex-grow: 1;
   -webkit-appearance: none;
@@ -487,7 +487,7 @@
 
 .quantity__rules .divider + .divider::before {
   content: "•";
-  margin: 0 0.5rem;
+  margin: 0 var(--space-sm);
 }
 
 .quantity__rules-cart {

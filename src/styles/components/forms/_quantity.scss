@@ -2,10 +2,9 @@
 /* component-quantity */
 .quantity {
     color: rgba(var(--color-foreground), 1);
-    // width: calc(14rem / var(--font-heading-scale) + var(--inputs-border-width) * 2);
     display: flex;
-    min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
-    width: 100%;
+        min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
+        width: 100%;
     position: relative;
     transition: transform var(--duration-short) var(--transition-type);
     z-index: 1;
@@ -42,51 +41,20 @@
     margin-top: var(--space);
 }
 
-//   .quantity:after {
-//     pointer-events: none;
-//     content: '';
-//     position: absolute;
-//     top: var(--inputs-border-width);
-//     right: var(--inputs-border-width);
-//     bottom: var(--inputs-border-width);
-//     left: var(--inputs-border-width);
-//     border: 0.1rem solid transparent;
-//     border-radius: var(--inputs-radius);
-//     // box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
-//     transition: box-shadow var(--duration-short) ease;
-//     z-index: 1;
-//     outline: 2px solid red;
-//   }
-
-//   .quantity:before {
-//     background: rgb(var(--color-background));
-//     pointer-events: none;
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     border-radius: var(--inputs-radius-outset);
-//     box-shadow: var(--inputs-shadow-horizontal-offset) var(--inputs-shadow-vertical-offset)
-//       var(--inputs-shadow-blur-radius) rgba(var(--color-shadow), var(--inputs-shadow-opacity));
-//     z-index: -1;
-//   }
-
-  .quantity__input {
+.quantity__input {
     color: currentColor;
     font-family: var(--font-heading-family);
-    font-size: 1.6rem;
+    font-size: var(--font-size-h5);
     font-weight: 600;
     opacity: 1;
     text-align: center;
     background-color: transparent;
     border: 0;
-    padding: 0 0.5rem;
+    padding: 0 var(--space-sm);
     width: 100%;
     flex-grow: 1;
     appearance: none;
-  }
+}
 
 .quantity__button {
     background-color: rgba(var(--color-background), 0.5);
@@ -211,8 +179,8 @@
 }
 
 .quantity__rules .divider + .divider::before {
-content: '\2022';
-margin: 0 0.5rem;
+    content: '\2022';
+    margin: 0 var(--space-sm);
 }
 
 .quantity__rules-cart {
