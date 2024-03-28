@@ -150,14 +150,14 @@
         "layout": "full_bleed",
         "slide_height": "medium",
         "section_color_scheme": "",
-        "slider_visual": "counter",
-        "slider_visual_background_opacity": 100,
-        "overlay_pagination_desktop": false,
+        "slider_visual": "numbers",
+        "slider_visual_background_opacity": 0,
+        "overlay_pagination_desktop": true,
         "auto_rotate": false,
         "change_slides_speed": 6,
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand",
-        "image_behavior": "none"
+        "image_behavior": "ambient"
       }
     },
     "featured_product_knE8ar": {
