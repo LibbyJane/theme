@@ -22,7 +22,7 @@
           "settings": {
             "button_label": "More about us",
             "button_link": "shopify:\/\/pages\/our-story",
-            "button_style_secondary": "secondary"
+            "button_style_secondary": "primary"
           }
         }
       },
@@ -32,15 +32,14 @@
         "button_dfaM8i"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/road-trip-vinyard_a479fd80-bd49-4d66-9c50-0515dce908b9.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "center",
         "content_layout": "overlap",
-        "color_scheme": "",
-        "background_texture": "lined",
+        "color_scheme": "background-2",
+        "background_texture": "torn",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 20,
@@ -53,7 +52,6 @@
         "slide_NLwdjc": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
             "image_overlay_opacity": 40,
             "heading": "Welcome to Road Trip Wines",
             "heading_size": "h1",
@@ -72,7 +70,6 @@
         "slide_Wbi9tD": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677_45ab7a89-ca3c-4dad-a11d-e27e6476f285.jpg",
             "image_overlay_opacity": 0,
             "heading": "10% off store-wide",
             "heading_size": "h1",
@@ -91,7 +88,6 @@
         "slide_b7GwpW": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
             "image_overlay_opacity": 20,
             "heading": "Latest from the blog",
             "heading_size": "h2",
@@ -316,7 +312,7 @@
       ],
       "settings": {
         "product": "2018-edenvine-shiraz",
-        "color_scheme": "",
+        "color_scheme": "sticky-3",
         "background_texture": "paper",
         "full_width": false,
         "media_size": "medium",

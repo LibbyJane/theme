@@ -3,7 +3,8 @@
     "logo": "{{ shop.brand.logo }}",
     "logo_width": 120,
     "favicon": "shopify:\/\/shop_images\/logo_transparent.png",
-    "site_background_style": "tile",
+    "site_background": "shopify:\/\/shop_images\/treasure-background.jpg",
+    "site_background_style": "cover",
     "type_header_font": "kalam_n4",
     "heading_scale": 120,
     "type_body_font": "questrial_n4",
@@ -211,8 +212,8 @@
       "sticky-3": {
         "settings": {
           "background": "#84e8e1",
-          "background_gradient": "",
-          "text": "#000c0b",
+          "background_gradient": "radial-gradient(rgba(78, 182, 152, 1), rgba(53, 151, 144, 1) 100%)",
+          "text": "#ffffff",
           "button": "#ffffff",
           "button_label": "#359790",
           "secondary_button_label": "#ffffff",

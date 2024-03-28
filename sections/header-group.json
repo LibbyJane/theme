@@ -8,7 +8,7 @@
         "logo_position": "middle-center",
         "menu": "main-menu",
         "menu_type_desktop": "mega",
-        "utility_menu_style": "folded",
+        "utility_menu_style": "plain",
         "sticky_header_type": "reduce-logo-size",
         "color_scheme": "sticky-3",
         "menu_color_scheme": "",
@@ -43,7 +43,7 @@
         "announcement_AkfXFi"
       ],
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "sticky-3",
         "show_social": true,
         "auto_rotate": true,
         "change_slides_speed": 5,
