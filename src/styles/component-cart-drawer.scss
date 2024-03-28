@@ -155,13 +155,13 @@ cart-drawer-items {
             background-color: rgb(var(--color-background));
 
             tr {
-                border-bottom: var(--border);
                 display: flex;
                     justify-content: space-between;
             }
         }
 
         tr {
+            border-bottom: var(--border);
             margin-bottom: var(--space);
         }
 
@@ -329,7 +329,7 @@ cart-drawer-items {
 
     .drawer.is-empty & {
         display: block;
-        margin: auto 0 var(--space);
+        margin: auto auto var(--space);
     }
 }
 
@@ -397,7 +397,7 @@ cart-drawer-items {
 }
 
 .cart-drawer__footer {
-    padding-top: var(--space);
+    // padding-top: var(--space);
 
     .totals__total {
         font-weight: normal;

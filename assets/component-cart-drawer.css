@@ -473,11 +473,11 @@ cart-drawer-items {
   background-color: rgb(var(--color-background));
 }
 .cart-drawer .cart-items thead tr {
-  border-bottom: var(--border);
   display: flex;
   justify-content: space-between;
 }
 .cart-drawer .cart-items tr {
+  border-bottom: var(--border);
   margin-bottom: var(--space);
 }
 .cart-drawer .cart-items td,
@@ -611,7 +611,7 @@ cart-drawer-items {
 }
 .drawer.is-empty .cart-drawer__collection {
   display: block;
-  margin: auto 0 var(--space);
+  margin: auto auto var(--space);
 }
 
 .drawer__footer {
@@ -664,9 +664,6 @@ cart-drawer.is-empty .drawer__footer {
   flex-basis: calc(50% - 0.5rem) !important;
 }
 
-.cart-drawer__footer {
-  padding-top: var(--space);
-}
 .cart-drawer__footer .totals__total {
   font-weight: normal;
 }

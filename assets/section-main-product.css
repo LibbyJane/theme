@@ -2225,13 +2225,13 @@ a.product__text {
 .quantity__input {
   color: currentColor;
   font-family: var(--font-heading-family);
-  font-size: 1.6rem;
+  font-size: var(--font-size-h5);
   font-weight: 600;
   opacity: 1;
   text-align: center;
   background-color: transparent;
   border: 0;
-  padding: 0 0.5rem;
+  padding: 0 var(--space-sm);
   width: 100%;
   flex-grow: 1;
   -webkit-appearance: none;
@@ -2240,17 +2240,17 @@ a.product__text {
 }
 
 .quantity__button {
-  width: calc(4.5rem / var(--font-heading-scale));
-  flex-shrink: 0;
-  font-size: 1.8rem;
-  border: 0;
   background-color: rgba(var(--color-background), 0.5);
+  border: 0;
+  color: rgb(var(--color-foreground));
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(var(--color-foreground));
+  flex-shrink: 0;
+  font-size: var(--font-size-h6);
   padding: 0;
+  width: calc(4.5rem / var(--font-heading-scale));
 }
 @media screen and (min-width: 990px) {
   .quantity__button {
@@ -2310,11 +2310,7 @@ a.product__text {
 }
 
 .quantity__button:focus-visible,
-.quantity__input:focus-visible {
-  background-color: rgb(var(--color-background));
-  z-index: 2;
-}
-
+.quantity__input:focus-visible,
 .quantity__button:focus,
 .quantity__input:focus {
   background-color: rgb(var(--color-background));
@@ -2345,11 +2341,10 @@ a.product__text {
 }
 
 .quantity__rules {
-  margin-top: 0.5rem;
+  margin-top: var(--space-sm);
   position: relative;
-  font-size: 1.2rem;
+  font-size: var(--font-size-smaller);
 }
-
 .quantity__rules .caption {
   display: inline-block;
   margin-top: 0;
@@ -2358,7 +2353,7 @@ a.product__text {
 
 .quantity__rules .divider + .divider::before {
   content: "•";
-  margin: 0 0.5rem;
+  margin: 0 var(--space-sm);
 }
 
 .quantity__rules-cart {

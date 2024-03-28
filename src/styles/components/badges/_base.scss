@@ -29,7 +29,7 @@
     padding: var(--space-sm) var(--space-med);
     position: relative;
    // background: rgb(var(--color-background)) radial-gradient(ellipse farthest-corner at center center, rgb(var(--color-background)) 50%, rgba(var(--color-shadow),0.15) 100%);
-    background: var(--background-gradient);
+    background: var(--gradient-background);
     background-attachment: fixed;
     background-color: rgb(var(--color-background));
     transform: skewX(1deg);
