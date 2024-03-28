@@ -22,8 +22,7 @@
         {%- endif %}
         .color-{{ scheme.id }} {
             --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
-            --background-opacity: 1;
-            --background-gradient: {% if scheme.settings.background_gradient != blank %}{{ scheme.settings.background_gradient }}{% else %}linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)){% endif %};
+            --gradient-background: {% if scheme.settings.background_gradient != blank %}{{ scheme.settings.background_gradient }}{% else %}linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)){% endif %};
             --color-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
             --color-shadow: {{ scheme.settings.shadow.red }},{{ scheme.settings.shadow.green }},{{ scheme.settings.shadow.blue }};
             --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
@@ -42,9 +41,10 @@
     {% endfor %}
 
     {{ scheme_classes | prepend: 'body' }} {
+        --background-opacity: 1;
         color: rgba(var(--color-foreground), 1);
         background-color: rgba(var(--color-background),var(--background-opacity));
-        background-image: var(--background-gradient);
+        background-image: var(--gradient-background);
     }
 
     :root {

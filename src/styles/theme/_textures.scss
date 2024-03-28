@@ -25,7 +25,7 @@
         background-image:
             linear-gradient(90deg, transparent $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset, rgba(171, 206, 212, 0.2) $vertical-line-offset2, transparent $vertical-line-offset2),
             linear-gradient(#eee .1rem, transparent .1rem),
-            var(--background-gradient);
+            var(--gradient-background);
         // background-origin: padding-box;
         background-size: 100% var(--line-height, 26px), 100% var(--line-height, 26px), cover;
         border-left: var(--texture-lined-border-size) dotted transparent;
@@ -50,7 +50,7 @@
 .texture-paper-craft {
     background-color: rgb(var(--color-background));
     background-blend-mode: multiply;
-    background-image: url('texture-paper-white.jpg'), var(--background-gradient);
+    background-image: url('texture-paper-white.jpg'), var(--gradient-background);
     background-position: top center, center;
     background-repeat: repeat;
     background-size: 100px auto, cover;
@@ -87,7 +87,7 @@
             background-color: rgb(var(--color-background));
             background-size: 12rem auto, cover;
             background-blend-mode: multiply;
-            background-image: url('texture-paper.jpg?v=2'), var(--background-gradient);
+            background-image: url('texture-paper.jpg?v=2'), var(--gradient-background);
             box-shadow: 0 0 9rem rgba(var(--color-shadow), 0.05) inset;
 
         filter: url(#tornPaper);
@@ -104,7 +104,7 @@
     background-image:
         url('texture-paper-white.jpg'),
         linear-gradient(to bottom, rgba(var(--color-shadow), 0) 70%, rgba(var(--color-shadow), 0.15) 100%),
-        var(--background-gradient);
+        var(--gradient-background);
     background-position: top center, bottom center, center;
     background-repeat: repeat;
     background-size: 100px auto, cover, cover;

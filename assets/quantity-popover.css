@@ -374,17 +374,17 @@
 }
 
 .quantity__button {
-  width: calc(4.5rem / var(--font-heading-scale));
-  flex-shrink: 0;
-  font-size: 1.8rem;
-  border: 0;
   background-color: rgba(var(--color-background), 0.5);
+  border: 0;
+  color: rgb(var(--color-foreground));
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(var(--color-foreground));
+  flex-shrink: 0;
+  font-size: var(--font-size-h6);
   padding: 0;
+  width: calc(4.5rem / var(--font-heading-scale));
 }
 @media screen and (min-width: 990px) {
   .quantity__button {
@@ -444,11 +444,7 @@
 }
 
 .quantity__button:focus-visible,
-.quantity__input:focus-visible {
-  background-color: rgb(var(--color-background));
-  z-index: 2;
-}
-
+.quantity__input:focus-visible,
 .quantity__button:focus,
 .quantity__input:focus {
   background-color: rgb(var(--color-background));
@@ -479,11 +475,10 @@
 }
 
 .quantity__rules {
-  margin-top: 0.5rem;
+  margin-top: var(--space-sm);
   position: relative;
-  font-size: 1.2rem;
+  font-size: var(--font-size-smaller);
 }
-
 .quantity__rules .caption {
   display: inline-block;
   margin-top: 0;

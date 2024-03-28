@@ -106,24 +106,11 @@
     // }
 }
 
-// .header__icon--cart {
-//     position: relative;
-//     &.has-items {
-//         // color: rgba(var(--color-ecommerce), 0.8);
-
-//         &:hover,
-//         &:focus {
-//             svg {
-//                 // color: rgb(var(--color-ecommerce));
-//             }
-//         }
-//     }
-
-//     svg {
-//         width: 100%;
-//         height: auto;
-//     }
-// }
+.header__icon--cart {
+    .pg-cart & {
+        display: none;
+    }
+}
 
 .cart-count-bubble {
     background-color: rgb(var(--color-ecommerce));

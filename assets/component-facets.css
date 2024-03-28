@@ -911,7 +911,7 @@ facet-remove::before {
 .mobile-facets__disclosure-close-button {
   background-color: rgb(var(--color-background));
   background-blend-mode: multiply;
-  background-image: url("texture-paper.jpg?v=3"), var(--background-gradient);
+  background-image: url("texture-paper.jpg?v=3"), var(--gradient-background);
   background-position: top center, center;
   background-repeat: repeat;
   background-size: 12rem auto, cover;

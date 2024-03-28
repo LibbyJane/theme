@@ -477,9 +477,7 @@
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: cart-item-details;
-  font-size: 1.6rem;
-  line-height: 1.4;
-  max-width: 30rem;
+  font-size: var(--font-size-smaller);
 }
 .cart-item__details dl {
   margin: 0;
@@ -487,7 +485,7 @@
 }
 
 .cart-item__details-vendor {
-  font-size: var(--font-size-smaller);
+  font-size: var(--font-size-small);
   margin-bottom: 0;
 }
 
