@@ -149,6 +149,177 @@
         "image_behavior": "none"
       }
     },
+    "slideshow_4tMfq7": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_acYADC": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kjRTIM.webp",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "top-left",
+            "text_alignment": "center",
+            "show_text_box": false,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_Xigxy9": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2GF6Tc.webp",
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-2",
+            "background_texture": "torn",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_acYADC",
+        "slide_Xigxy9"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "section_color_scheme": "",
+        "slider_visual": "counter",
+        "slider_visual_background_opacity": 100,
+        "overlay_pagination_desktop": false,
+        "auto_rotate": false,
+        "change_slides_speed": 6,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "image_behavior": "none"
+      }
+    },
+    "slideshow_tadkY9": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_xYXAFj": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kjRTIM.webp",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "top-left",
+            "text_alignment": "center",
+            "show_text_box": false,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_xYXAFj"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "section_color_scheme": "",
+        "slider_visual": "counter",
+        "slider_visual_background_opacity": 100,
+        "overlay_pagination_desktop": false,
+        "auto_rotate": false,
+        "change_slides_speed": 6,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "image_behavior": "none"
+      }
+    },
+    "featured_product_knE8ar": {
+      "type": "featured-product",
+      "blocks": {
+        "text_6ATjih": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "caption"
+          }
+        },
+        "title_EqaB67": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_4zUyDM": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_UcagdB": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector_Y3MBpT": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons_BGeYEh": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_P4CGXt": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_6ATjih",
+        "title_EqaB67",
+        "price_4zUyDM",
+        "variant_picker_UcagdB",
+        "quantity_selector_Y3MBpT",
+        "buy_buttons_BGeYEh",
+        "share_P4CGXt"
+      ],
+      "settings": {
+        "product": "amazing-aluminum-bag-collection1",
+        "color_scheme": "background-1",
+        "background_texture": "paper",
+        "full_width": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 28,
+        "padding_bottom": 24
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -237,86 +408,17 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "featured_product_knE8ar": {
-      "type": "featured-product",
-      "blocks": {
-        "text_6ATjih": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "caption"
-          }
-        },
-        "title_EqaB67": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_4zUyDM": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "variant_picker_UcagdB": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "quantity_selector_Y3MBpT": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "buy_buttons_BGeYEh": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_P4CGXt": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_6ATjih",
-        "title_EqaB67",
-        "price_4zUyDM",
-        "variant_picker_UcagdB",
-        "quantity_selector_Y3MBpT",
-        "buy_buttons_BGeYEh",
-        "share_P4CGXt"
-      ],
-      "settings": {
-        "product": "2018-edenvine-shiraz",
-        "color_scheme": "sticky-3",
-        "background_texture": "paper",
-        "full_width": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 28,
-        "padding_bottom": 24
-      }
     }
   },
   "order": [
     "image_with_text_QHwgtP",
     "rich_text_XN6Rej",
     "slideshow_KHhF7R",
+    "slideshow_4tMfq7",
+    "slideshow_tadkY9",
+    "featured_product_knE8ar",
     "featured_collection",
     "collage",
-    "featured_blog_yj8qah",
-    "featured_product_knE8ar"
+    "featured_blog_yj8qah"
   ]
 }
