@@ -46,83 +46,6 @@
         "padding_bottom": 20
       }
     },
-    "slideshow_XTcwak": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_NLwdjc": {
-          "type": "slide",
-          "settings": {
-            "image_overlay_opacity": 40,
-            "heading": "Welcome to Road Trip Wines",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "Find your new favorite drop >",
-            "link": "shopify:\/\/collections\/all",
-            "button_style_secondary": "secondary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "background_texture": "paper",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_Wbi9tD": {
-          "type": "slide",
-          "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "10% off store-wide",
-            "heading_size": "h1",
-            "subheading": "Use discount code <strong>RTW2424<\/strong>",
-            "button_label": "Start shopping >",
-            "link": "shopify:\/\/collections",
-            "button_style_secondary": "primary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "background-2",
-            "background_texture": "torn",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_b7GwpW": {
-          "type": "slide",
-          "settings": {
-            "image_overlay_opacity": 20,
-            "heading": "Latest from the blog",
-            "heading_size": "h2",
-            "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in Hawkes Bay",
-            "button_label": "Read about it",
-            "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
-            "button_style_secondary": "secondary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "background-1",
-            "background_texture": "lined",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_NLwdjc",
-        "slide_Wbi9tD",
-        "slide_b7GwpW"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "small",
-        "section_color_scheme": "inverse",
-        "slider_visual": "numbers",
-        "slider_visual_background_opacity": 75,
-        "overlay_pagination_desktop": true,
-        "auto_rotate": true,
-        "change_slides_speed": 7,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
-        "image_behavior": "none"
-      }
-    },
     "rich_text_XN6Rej": {
       "type": "rich-text",
       "blocks": {
@@ -164,6 +87,66 @@
         "background_texture": "",
         "padding_top": 44,
         "padding_bottom": 44
+      }
+    },
+    "slideshow_KHhF7R": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_h9BMdE": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2GF6Tc.webp",
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-2",
+            "background_texture": "torn",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_TBhKTY": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kjRTIM.webp",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "top-left",
+            "text_alignment": "center",
+            "show_text_box": false,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_h9BMdE",
+        "slide_TBhKTY"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "section_color_scheme": "",
+        "slider_visual": "counter",
+        "slider_visual_background_opacity": 100,
+        "overlay_pagination_desktop": false,
+        "auto_rotate": false,
+        "change_slides_speed": 6,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "image_behavior": "none"
       }
     },
     "featured_collection": {
@@ -329,8 +312,8 @@
   },
   "order": [
     "image_with_text_QHwgtP",
-    "slideshow_XTcwak",
     "rich_text_XN6Rej",
+    "slideshow_KHhF7R",
     "featured_collection",
     "collage",
     "featured_blog_yj8qah",
