@@ -107,6 +107,11 @@
     }
 }
 
+// eg blog article card
+.card__heading--text {
+    flex: 1;
+}
+
 .card {
     .price {
         justify-content: var(--card-justification);

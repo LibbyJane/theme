@@ -296,6 +296,10 @@
   flex: 0 0 auto;
 }
 
+.card__heading--text {
+  flex: 1;
+}
+
 .card .price {
   justify-content: var(--card-justification);
   margin-bottom: var(--space);
