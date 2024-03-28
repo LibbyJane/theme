@@ -266,19 +266,19 @@
         "collection-0": {
           "type": "collection",
           "settings": {
-            "collection": "australia"
+            "collection": "collection1"
           }
         },
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "new-zealand"
+            "collection": "collection18"
           }
         },
         "collection_MpF9m4": {
           "type": "collection",
           "settings": {
-            "collection": "south-africa"
+            "collection": "collection17"
           }
         }
       },
