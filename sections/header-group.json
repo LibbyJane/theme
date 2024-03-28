@@ -10,7 +10,7 @@
         "menu_type_desktop": "mega",
         "utility_menu_style": "plain",
         "sticky_header_type": "reduce-logo-size",
-        "color_scheme": "sticky-3",
+        "color_scheme": "background-1",
         "menu_color_scheme": "",
         "enable_country_selector": true,
         "enable_language_selector": true,
@@ -43,7 +43,7 @@
         "announcement_AkfXFi"
       ],
       "settings": {
-        "color_scheme": "sticky-3",
+        "color_scheme": "accent-1",
         "show_social": true,
         "auto_rotate": true,
         "change_slides_speed": 5,

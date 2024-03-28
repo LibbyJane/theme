@@ -1,343 +1,343 @@
 {
-    "sections": {
-      "image_with_text_QHwgtP": {
-        "type": "image-with-text",
-        "blocks": {
-          "heading_Gfergh": {
-            "type": "heading",
-            "settings": {
-              "heading": "Welcome!",
-              "heading_size": "h0"
-            }
-          },
-          "text_YJ4iFj": {
-            "type": "text",
-            "settings": {
-              "text": "<p>Here at Road Trip Wines, we’ve embarked on an adventure based on good wine, good company and new destinations. We’re always discovering something new, and there’s so much more still to discover. Please join us!<\/p>",
-              "text_style": "display"
-            }
-          },
-          "button_dfaM8i": {
-            "type": "button",
-            "settings": {
-              "button_label": "More about us",
-              "button_link": "shopify:\/\/pages\/our-story",
-              "button_style_secondary": "secondary"
-            }
+  "sections": {
+    "image_with_text_QHwgtP": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Gfergh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome!",
+            "heading_size": "h0"
           }
         },
-        "block_order": [
-          "heading_Gfergh",
-          "text_YJ4iFj",
-          "button_dfaM8i"
-        ],
-        "settings": {
-          "image": "shopify:\/\/shop_images\/road-trip-vinyard_a479fd80-bd49-4d66-9c50-0515dce908b9.jpg",
-          "height": "adapt",
-          "desktop_image_width": "medium",
-          "layout": "text_first",
-          "desktop_content_position": "middle",
-          "desktop_content_alignment": "center",
-          "content_layout": "overlap",
-          "color_scheme": "",
-          "background_texture": "lined",
-          "image_behavior": "none",
-          "mobile_content_alignment": "left",
-          "padding_top": 20,
-          "padding_bottom": 20
-        }
-      },
-      "slideshow_XTcwak": {
-        "type": "slideshow",
-        "blocks": {
-          "slide_NLwdjc": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
-              "image_overlay_opacity": 40,
-              "heading": "Welcome to Road Trip Wines",
-              "heading_size": "h1",
-              "subheading": "",
-              "button_label": "Find your new favorite drop >",
-              "link": "shopify:\/\/collections\/all",
-              "button_style_secondary": "secondary",
-              "box_align": "middle-center",
-              "text_alignment": "center",
-              "show_text_box": true,
-              "color_scheme": "background-1",
-              "background_texture": "paper",
-              "text_alignment_mobile": "center"
-            }
-          },
-          "slide_Wbi9tD": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677_45ab7a89-ca3c-4dad-a11d-e27e6476f285.jpg",
-              "image_overlay_opacity": 0,
-              "heading": "10% off store-wide",
-              "heading_size": "h1",
-              "subheading": "Use discount code <strong>RTW2424<\/strong>",
-              "button_label": "Start shopping >",
-              "link": "shopify:\/\/collections",
-              "button_style_secondary": "primary",
-              "box_align": "middle-center",
-              "text_alignment": "center",
-              "show_text_box": true,
-              "color_scheme": "background-2",
-              "background_texture": "torn",
-              "text_alignment_mobile": "center"
-            }
-          },
-          "slide_b7GwpW": {
-            "type": "slide",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
-              "image_overlay_opacity": 20,
-              "heading": "Latest from the blog",
-              "heading_size": "h2",
-              "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in Hawkes Bay",
-              "button_label": "Read about it",
-              "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
-              "button_style_secondary": "secondary",
-              "box_align": "middle-center",
-              "text_alignment": "center",
-              "show_text_box": true,
-              "color_scheme": "background-1",
-              "background_texture": "lined",
-              "text_alignment_mobile": "center"
-            }
+        "text_YJ4iFj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Here at Road Trip Wines, we’ve embarked on an adventure based on good wine, good company and new destinations. We’re always discovering something new, and there’s so much more still to discover. Please join us!<\/p>",
+            "text_style": "display"
           }
         },
-        "block_order": [
-          "slide_NLwdjc",
-          "slide_Wbi9tD",
-          "slide_b7GwpW"
-        ],
-        "settings": {
-          "layout": "full_bleed",
-          "slide_height": "small",
-          "section_color_scheme": "inverse",
-          "slider_visual": "numbers",
-          "slider_visual_background_opacity": 75,
-          "overlay_pagination_desktop": true,
-          "auto_rotate": true,
-          "change_slides_speed": 7,
-          "show_text_below": true,
-          "accessibility_info": "Slideshow about our brand",
-          "image_behavior": "none"
-        }
-      },
-      "rich_text_XN6Rej": {
-        "type": "rich-text",
-        "blocks": {
-          "heading_KCLW63": {
-            "type": "heading",
-            "settings": {
-              "heading": "Welcome!",
-              "heading_size": "h1"
-            }
-          },
-          "text_FYTx6B": {
-            "type": "text",
-            "settings": {
-              "text": "<h5>Here at Road Trip Wines, we’ve embarked on an adventure based on good wine, good company and new destinations. We’re always discovering something new, and there’s so much more still to discover. Please join us!<\/h5>"
-            }
-          },
-          "button_fMakp9": {
-            "type": "button",
-            "settings": {
-              "button_label": "More about us",
-              "button_link": "shopify:\/\/pages\/our-story",
-              "button_style_secondary": true,
-              "button_label_2": "",
-              "button_link_2": "",
-              "button_style_secondary_2": false
-            }
+        "button_dfaM8i": {
+          "type": "button",
+          "settings": {
+            "button_label": "More about us",
+            "button_link": "shopify:\/\/pages\/our-story",
+            "button_style_secondary": "secondary"
           }
-        },
-        "block_order": [
-          "heading_KCLW63",
-          "text_FYTx6B",
-          "button_fMakp9"
-        ],
-        "settings": {
-          "content_alignment": "center",
-          "desktop_content_position": "center",
-          "color_scheme": "inverse",
-          "full_width": true,
-          "background_texture": "",
-          "padding_top": 44,
-          "padding_bottom": 44
         }
       },
-      "featured_collection": {
-        "type": "featured-collection",
-        "settings": {
-          "collection": "hydrogen",
-          "title": "Our latest finds…",
-          "heading_size": "h1",
-          "description": "",
-          "show_collection_description": false,
-          "description_style": "body",
-          "products_to_show": 4,
-          "columns_desktop": 4,
-          "full_width": false,
-          "show_view_all": true,
-          "view_all_style": "solid",
-          "enable_desktop_slider": false,
-          "columns_mobile": "2",
-          "swipe_on_mobile": false,
-          "color_scheme": "background-3",
-          "background_transparent": true,
-          "image_ratio": "square",
-          "image_shape": "default",
-          "show_secondary_image": true,
-          "show_vendor": false,
-          "show_rating": false,
-          "enable_quick_add": true,
-          "padding_top": 28,
-          "padding_bottom": 36
-        }
-      },
-      "collage": {
-        "type": "collage",
-        "blocks": {
-          "collection-0": {
-            "type": "collection",
-            "settings": {
-              "collection": "australia"
-            }
-          },
-          "collection-1": {
-            "type": "collection",
-            "settings": {
-              "collection": "new-zealand"
-            }
-          },
-          "collection_MpF9m4": {
-            "type": "collection",
-            "settings": {
-              "collection": "south-africa"
-            }
-          }
-        },
-        "block_order": [
-          "collection-0",
-          "collection-1",
-          "collection_MpF9m4"
-        ],
-        "settings": {
-          "heading": "",
-          "heading_size": "h2",
-          "desktop_layout": "left",
-          "mobile_layout": "collage",
-          "card_styles": "product-card-wrapper",
-          "color_scheme": "scheme-1",
-          "background_transparent": true,
-          "padding_top": 36,
-          "padding_bottom": 36
-        }
-      },
-      "featured_blog_yj8qah": {
-        "type": "featured-blog",
-        "settings": {
-          "title": "Latest from the blog",
-          "heading_size": "h1",
-          "blog": "news",
-          "post_limit": 3,
-          "columns_desktop": 3,
-          "color_scheme": "scheme-d775a3dc-00b6-476b-8a2b-08d69daed06e",
-          "background_transparent": true,
-          "content_color_scheme": "background-1",
-          "content_background_width": "page",
-          "background_texture": "lined",
-          "show_image": true,
-          "show_date": true,
-          "show_author": false,
-          "show_view_all": true,
-          "padding_top": 36,
-          "padding_bottom": 36
-        }
-      },
-      "featured_product_knE8ar": {
-        "type": "featured-product",
-        "blocks": {
-          "text_6ATjih": {
-            "type": "text",
-            "settings": {
-              "text": "{{ section.settings.product.vendor }}",
-              "text_style": "caption"
-            }
-          },
-          "title_EqaB67": {
-            "type": "title",
-            "settings": {
-              "heading_size": "h1"
-            }
-          },
-          "price_4zUyDM": {
-            "type": "price",
-            "settings": {
-            }
-          },
-          "variant_picker_UcagdB": {
-            "type": "variant_picker",
-            "settings": {
-              "picker_type": "button"
-            }
-          },
-          "quantity_selector_Y3MBpT": {
-            "type": "quantity_selector",
-            "settings": {
-            }
-          },
-          "buy_buttons_BGeYEh": {
-            "type": "buy_buttons",
-            "settings": {
-              "show_dynamic_checkout": true,
-              "show_gift_card_recipient": true
-            }
-          },
-          "share_P4CGXt": {
-            "type": "share",
-            "settings": {
-              "share_label": "Share"
-            }
-          }
-        },
-        "block_order": [
-          "text_6ATjih",
-          "title_EqaB67",
-          "price_4zUyDM",
-          "variant_picker_UcagdB",
-          "quantity_selector_Y3MBpT",
-          "buy_buttons_BGeYEh",
-          "share_P4CGXt"
-        ],
-        "settings": {
-          "product": "2018-edenvine-shiraz",
-          "color_scheme": "",
-          "background_texture": "paper",
-          "full_width": false,
-          "media_size": "medium",
-          "constrain_to_viewport": true,
-          "media_fit": "contain",
-          "media_position": "left",
-          "image_zoom": "lightbox",
-          "hide_variants": false,
-          "enable_video_looping": false,
-          "padding_top": 28,
-          "padding_bottom": 24
-        }
+      "block_order": [
+        "heading_Gfergh",
+        "text_YJ4iFj",
+        "button_dfaM8i"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/road-trip-vinyard_a479fd80-bd49-4d66-9c50-0515dce908b9.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "overlap",
+        "color_scheme": "",
+        "background_texture": "lined",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
-    "order": [
-      "image_with_text_QHwgtP",
-      "slideshow_XTcwak",
-      "rich_text_XN6Rej",
-      "featured_collection",
-      "collage",
-      "featured_blog_yj8qah",
-      "featured_product_knE8ar"
-    ]
-  }
+    "slideshow_XTcwak": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_NLwdjc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
+            "image_overlay_opacity": 40,
+            "heading": "Welcome to Road Trip Wines",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Find your new favorite drop >",
+            "link": "shopify:\/\/collections\/all",
+            "button_style_secondary": "secondary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_Wbi9tD": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677_45ab7a89-ca3c-4dad-a11d-e27e6476f285.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "10% off store-wide",
+            "heading_size": "h1",
+            "subheading": "Use discount code <strong>RTW2424<\/strong>",
+            "button_label": "Start shopping >",
+            "link": "shopify:\/\/collections",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-2",
+            "background_texture": "torn",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_b7GwpW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
+            "image_overlay_opacity": 20,
+            "heading": "Latest from the blog",
+            "heading_size": "h2",
+            "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in Hawkes Bay",
+            "button_label": "Read about it",
+            "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
+            "button_style_secondary": "secondary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "lined",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_NLwdjc",
+        "slide_Wbi9tD",
+        "slide_b7GwpW"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "small",
+        "section_color_scheme": "inverse",
+        "slider_visual": "numbers",
+        "slider_visual_background_opacity": 75,
+        "overlay_pagination_desktop": true,
+        "auto_rotate": true,
+        "change_slides_speed": 7,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "image_behavior": "none"
+      }
+    },
+    "rich_text_XN6Rej": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KCLW63": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome!",
+            "heading_size": "h1"
+          }
+        },
+        "text_FYTx6B": {
+          "type": "text",
+          "settings": {
+            "text": "<h5>Here at Road Trip Wines, we’ve embarked on an adventure based on good wine, good company and new destinations. We’re always discovering something new, and there’s so much more still to discover. Please join us!<\/h5>"
+          }
+        },
+        "button_fMakp9": {
+          "type": "button",
+          "settings": {
+            "button_label": "More about us",
+            "button_link": "shopify:\/\/pages\/our-story",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_KCLW63",
+        "text_FYTx6B",
+        "button_fMakp9"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "desktop_content_position": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "background_texture": "",
+        "padding_top": 44,
+        "padding_bottom": 44
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "hydrogen",
+        "title": "Our latest finds…",
+        "heading_size": "h1",
+        "description": "",
+        "show_collection_description": false,
+        "description_style": "body",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "color_scheme": "background-3",
+        "background_transparent": true,
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "collage": {
+      "type": "collage",
+      "blocks": {
+        "collection-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "australia"
+          }
+        },
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-zealand"
+          }
+        },
+        "collection_MpF9m4": {
+          "type": "collection",
+          "settings": {
+            "collection": "south-africa"
+          }
+        }
+      },
+      "block_order": [
+        "collection-0",
+        "collection-1",
+        "collection_MpF9m4"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "scheme-1",
+        "background_transparent": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_yj8qah": {
+      "type": "featured-blog",
+      "settings": {
+        "title": "Latest from the blog",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-d775a3dc-00b6-476b-8a2b-08d69daed06e",
+        "background_transparent": true,
+        "content_color_scheme": "background-1",
+        "content_background_width": "page",
+        "background_texture": "lined",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_knE8ar": {
+      "type": "featured-product",
+      "blocks": {
+        "text_6ATjih": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "caption"
+          }
+        },
+        "title_EqaB67": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_4zUyDM": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_UcagdB": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector_Y3MBpT": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons_BGeYEh": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_P4CGXt": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_6ATjih",
+        "title_EqaB67",
+        "price_4zUyDM",
+        "variant_picker_UcagdB",
+        "quantity_selector_Y3MBpT",
+        "buy_buttons_BGeYEh",
+        "share_P4CGXt"
+      ],
+      "settings": {
+        "product": "2018-edenvine-shiraz",
+        "color_scheme": "",
+        "background_texture": "paper",
+        "full_width": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 28,
+        "padding_bottom": 24
+      }
+    }
+  },
+  "order": [
+    "image_with_text_QHwgtP",
+    "slideshow_XTcwak",
+    "rich_text_XN6Rej",
+    "featured_collection",
+    "collage",
+    "featured_blog_yj8qah",
+    "featured_product_knE8ar"
+  ]
+}
