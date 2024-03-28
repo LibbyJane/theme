@@ -210,13 +210,13 @@
       },
       "sticky-3": {
         "settings": {
-          "background": "#cee884",
+          "background": "#84e8e1",
           "background_gradient": "",
-          "text": "#354606",
-          "button": "#354606",
-          "button_label": "#e7f4a4",
-          "secondary_button_label": "#354606",
-          "shadow": "#141b01"
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#359790",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#0b413d"
         }
       },
       "sticky-4": {
