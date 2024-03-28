@@ -138,7 +138,7 @@
                                 </summary>
                                 <div
                                     id="Facet-{{ forloop.index }}-{{ section.id }}"
-                                    class="parent-display {% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}"
+                                    class="parent-display js-parent-display {% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}"
                                 >
                                     {%- if filter_type != 'vertical' -%}
                                         <div class="facets__header">
@@ -161,7 +161,7 @@
                                             role="list"
                                         >
                                             {%- for value in filter.values -%}
-                                                <li class="list-menu__item facets__item{% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
+                                                <li class="list-menu__item facets__item{% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item js-show-more-item hidden{% endif %}">
                                                     {%- liquid
                                                         assign disabled = false
 
@@ -214,10 +214,10 @@
                                                 id="Show-More-{{ forloop.index }}-{{ section.id }}"
                                                 type="button"
                                             >
-                                                <span class="label-show-more label-text">
+                                                <span class="label-show-more label-text js-label-text">
                                                     <span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t -}}
                                                 </span>
-                                                <span class="label-show-less label-text hidden">
+                                                <span class="label-show-less label-text js-label-text js-label-show-less hidden">
                                                     <span aria-hidden="true">- </span>{{ 'products.facets.show_less' | t -}}
                                                 </span>
                                             </button>

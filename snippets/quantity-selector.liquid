@@ -151,7 +151,7 @@
     {%- endif -%}
 </div>
 {%- if product.quantity_price_breaks_configured? -%}
-    <volume-pricing class="parent-display no-js-hidden" id="Volume-{{ section.id }}">
+    <volume-pricing class="parent-display js-parent-display no-js-hidden" id="Volume-{{ section.id }}">
         {%- if product.selected_or_first_available_variant.quantity_price_breaks.size > 0 -%}
         <span class="caption-large">{{ 'products.product.volume_pricing.title' | t }}</span>
         <ul class="list-unstyled no-js-hidden">
@@ -162,7 +162,7 @@
             </li>
             {%- for price_break in product.selected_or_first_available_variant.quantity_price_breaks -%}
             {%- assign price_break_price = price_break.price | money_with_currency -%}
-            <li class="{%- if forloop.index >= 3 -%}show-more-item hidden{%- endif -%}">
+            <li class="{%- if forloop.index >= 3 -%}show-more-item js-show-more-item hidden{%- endif -%}">
                 <span>{{ price_break.minimum_quantity }}<span aria-hidden="true">+</span></span>
                 <span data-text="{{ 'products.product.volume_pricing.price_at_each' | t: price: price_break_price }}">{{ 'sections.quick_order_list.each' | t: money: price_break_price }}</span>
             </li>
@@ -175,7 +175,7 @@
                 id="Show-More-{{ section.id }}"
                 type="button"
             >
-                <span class="label-show-more label-text"
+                <span class="label-show-more label-text js-label-text"
                 ><span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t }}
                 </span>
             </button>
