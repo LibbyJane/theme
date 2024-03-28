@@ -3,10 +3,12 @@
     "logo": "{{ shop.brand.logo }}",
     "logo_width": 120,
     "favicon": "shopify:\/\/shop_images\/logo_transparent.png",
-    "site_background_style": "tile",
-    "type_header_font": "kalam_n4",
-    "heading_scale": 120,
-    "type_body_font": "questrial_n4",
+    "site_background": "shopify:\/\/shop_images\/treasure-background.jpg",
+    "site_background_style": "cover",
+    "color_highlight": "#ffffff",
+    "type_header_font": "linotype_syntax_serif_i5",
+    "heading_scale": 100,
+    "type_body_font": "linotype_syntax_serif_n4",
     "body_scale": 115,
     "page_width": 1200,
     "spacing_sections": 0,
@@ -210,13 +212,13 @@
       },
       "sticky-3": {
         "settings": {
-          "background": "#cee884",
-          "background_gradient": "",
-          "text": "#354606",
-          "button": "#354606",
-          "button_label": "#e7f4a4",
-          "secondary_button_label": "#354606",
-          "shadow": "#141b01"
+          "background": "#359790",
+          "background_gradient": "radial-gradient(rgba(78, 182, 152, 1), rgba(53, 151, 144, 1) 100%)",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#359790",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#0b413d"
         }
       },
       "sticky-4": {
