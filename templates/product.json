@@ -65,6 +65,21 @@
             "text": "We only use <strong>carbon neutral <\/strong>shipping providers. A signature may be required on delivery.",
             "text_style": "body"
           }
+        },
+        "inventory_3WkEjU": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
+          }
+        },
+        "popup_JY7gpX": {
+          "type": "popup",
+          "settings": {
+            "text": "Pop-up link text",
+            "page": "faq"
+          }
         }
       },
       "block_order": [
@@ -77,7 +92,9 @@
         "buy_buttons",
         "description",
         "share",
-        "text_xTMNnw"
+        "text_xTMNnw",
+        "inventory_3WkEjU",
+        "popup_JY7gpX"
       ],
       "settings": {
         "enable_sticky_info": true,
