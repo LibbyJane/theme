@@ -80,6 +80,70 @@
             "text": "Pop-up link text",
             "page": "faq"
           }
+        },
+        "complementary_pWhipL": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": false
+          }
+        },
+        "rating_JX7YJ4": {
+          "type": "rating",
+          "settings": {
+          }
+        },
+        "sku_dyNLRN": {
+          "type": "sku",
+          "settings": {
+            "text_style": "body"
+          }
+        },
+        "custom_liquid_rQUM77": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": ""
+          }
+        },
+        "collapsible_tab_KaTk9L": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "content": "",
+            "page": ""
+          }
+        },
+        "icon_with_text_E943Wr": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "image_1": "shopify:\/\/shop_images\/DALL_E2024-03-0716.44.46-Abottleofwinesetonarusticwoodentable_framedbythebreathtakingAustralianlandscape.Inthebackground_thedistinctivesilhouetteofUluru.webp",
+            "heading_1": "Heading",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "icon_3": "truck",
+            "heading_3": "Heading"
+          }
+        },
+        "icon_with_text_n98zTj": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "heading_1": "Heading",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "icon_3": "truck",
+            "heading_3": "Heading"
+          }
         }
       },
       "block_order": [
@@ -94,7 +158,14 @@
         "share",
         "text_xTMNnw",
         "inventory_3WkEjU",
-        "popup_JY7gpX"
+        "popup_JY7gpX",
+        "complementary_pWhipL",
+        "rating_JX7YJ4",
+        "sku_dyNLRN",
+        "custom_liquid_rQUM77",
+        "collapsible_tab_KaTk9L",
+        "icon_with_text_E943Wr",
+        "icon_with_text_n98zTj"
       ],
       "settings": {
         "enable_sticky_info": true,
