@@ -266,7 +266,7 @@
 }
 
 
-@mixin scrollbars() {
+@mixin scrollbars($overflowX: hidden) {
     overflow-x: hidden;
     overflow-y: auto;
 

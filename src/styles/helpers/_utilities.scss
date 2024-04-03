@@ -108,6 +108,11 @@
     visibility: hidden;
 }
 
+.overflow-hidden {
+    overflow: clip;
+}
+
+
 .break {
     word-break: break-word !important;
 }

@@ -50,30 +50,35 @@
     .grid--2-col & {
         @media screen and (min-width: 750px) {
             width: calc(50% - var(--grid-horizontal-spacing) / 2);
+            max-width: calc(50% - var(--grid-horizontal-spacing) / 2);
         }
     }
 
     .grid--3-col & {
         @media screen and (min-width: 750px) {
             width: calc(33.33% - var(--grid-horizontal-spacing) * 2 / 3);
+            max-width: calc(33.33% - var(--grid-horizontal-spacing) * 2 / 3);
         }
     }
 
     .grid--2-col-tablet & {
         @media screen and (min-width: 750px) {
             width: calc(50% - var(--grid-horizontal-spacing) / 2);
+            max-width: calc(50% - var(--grid-horizontal-spacing) / 2);
         }
     }
 
     .grid--3-col-tablet & {
         @media screen and (min-width: 750px) {
             width: calc(33.33% - var(--grid-horizontal-spacing) * 2 / 3);
+            max-width: calc(33.33% - var(--grid-horizontal-spacing) * 2 / 3);
         }
     }
 
     .grid--4-col-tablet & {
         @media screen and (min-width: 750px) {
             width: calc(25% - var(--grid-horizontal-spacing) * 3 / 4);
+            max-width: calc(25% - var(--grid-horizontal-spacing) * 3 / 4);
         }
     }
 

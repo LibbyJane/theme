@@ -406,11 +406,6 @@ slider-component {
         justify-content: center;
         margin: var(--space) auto;
     width: max-content;
-
-    // todo WHERE Is this for - overlaid?
-    // .background-transparent & {
-    //     margin-bottom: calc(-1 * var(--space-sm));
-    // }
 }
 
 .contains-card .slider-buttons,
@@ -449,6 +444,7 @@ slider-component {
         width: 44px;
         height: 44px;
     opacity: var(--opacity-light);
+    z-index: var(--zi-base);
 
     &:hover {
         opacity: 1;

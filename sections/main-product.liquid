@@ -219,14 +219,15 @@
                                 >
                                     <button
                                         id="ProductPopup-{{ block.id }}"
-                                        class="product-popup-modal__button link"
+                                        class="button button--plain product-popup-modal__button"
                                         type="button"
                                         aria-haspopup="dialog"
                                     >
                                     {{ block.settings.text | default: block.settings.page.title }}
+                                    {%- render 'icon-arrow' -%}
                                     </button>
                                 </modal-opener>
-                                <a href="{{ block.settings.page.url }}" class="product-popup-modal__button link no-js">
+                                <a href="{{ block.settings.page.url }}" class="button button--plain product-popup-modal__button no-js">
                                     {{- block.settings.text -}}
                                 </a>
 

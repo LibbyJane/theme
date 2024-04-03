@@ -1,24 +1,2 @@
-.list-payment {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0;
-  padding: var(--space);
-}
-@media screen and (min-width: 750px) {
-  .list-payment {
-    justify-content: flex-end;
-    margin: -0.5rem;
-    padding-top: 0;
-  }
-}
-.list-payment svg {
-  width: 38px;
-}
-
-.list-payment__item {
-  display: flex;
-  align-items: center;
-  padding: var(--space-sm);
-}
+.list-payment{display:flex;flex-wrap:wrap;justify-content:center;margin:0;padding:var(--space)}@media screen and (min-width: 750px){.list-payment{justify-content:flex-end;margin:-0.5rem;padding-top:0}}.list-payment svg{width:38px}.list-payment__item{display:flex;align-items:center;padding:var(--space-sm)}
 /*# sourceMappingURL=component-list-payment.css.map */
