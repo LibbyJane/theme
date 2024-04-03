@@ -174,17 +174,6 @@
             "pay": "Pay",
             "price_save_up_to": "save up to"
           }
-        },
-        "trustreviews_reviews_widget_3xDw4w": {
-          "type": "shopify:\/\/apps\/trustreviews\/blocks\/reviews_widget\/56d0fe1b-e701-4cff-8f84-466a26e09adb",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
-        "trustreviews_shop_reviews_widget_pHGyN7": {
-          "type": "shopify:\/\/apps\/trustreviews\/blocks\/shop_reviews_widget\/56d0fe1b-e701-4cff-8f84-466a26e09adb",
-          "settings": {
-          }
         }
       },
       "block_order": [
@@ -207,9 +196,7 @@
         "collapsible_tab_KaTk9L",
         "icon_with_text_E943Wr",
         "icon_with_text_n98zTj",
-        "subify_subscriptions_app_app_block_hLjPp7",
-        "trustreviews_reviews_widget_3xDw4w",
-        "trustreviews_shop_reviews_widget_pHGyN7"
+        "subify_subscriptions_app_app_block_hLjPp7"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -221,7 +208,7 @@
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "cover",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "columns",
