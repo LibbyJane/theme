@@ -2,6 +2,13 @@
     overflow: clip; // badges causing overflow issues on ios
     padding: var(--content-padding);
 
+    &.product__info-wrapper {
+        @media screen and (max-width: 749px) {
+            margin-inline: var(--full-width-offset-margin);
+            max-width: none;
+        }
+    }
+
     &.content-background-transparent {
         padding: 0;
 
@@ -44,18 +51,7 @@
     padding: 0;
 }
 
-
-// .product__lead-in,
-// variant-radios,
-// .product__description,
-// // .product-form,
-// .product__price,
-// .product__accordion {
-//     grid-column: 1/-1;
-// }
-
 .product__title {
-    // grid-column: 1/-1;
     line-height: 1.2;
 
     >a {
