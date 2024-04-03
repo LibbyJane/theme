@@ -28,7 +28,6 @@
     flex: 0 0 100%;
     padding: 0;
     margin: 0 0 1.2rem 0;
-    //max-width: 44rem;
     min-width: fit-content;
     border: none;
 }
@@ -39,10 +38,6 @@ variant-selects {
 }
 
 variant-radios {
-    // .checkable__highlight {
-    //     transform: translateX(calc(-1 * var(--space-sm)));
-    // }
-
     .disabled {
         @include disabled;
 
@@ -173,31 +168,18 @@ fieldset.product-form__input .form__label {
     .product-form__submit[aria-disabled='true'] {
         color: Window;
     }
+
+    .product-form__input input[type='radio']:focus-visible+label {
+        outline: transparent solid 1px;
+        outline-offset: 2px;
+    }
 }
+
 
 /* Overrides */
 .shopify-payment-button__more-options {
     color: rgb(var(--color-foreground));
 }
-
-
-/* Product info */
-
-//   .product__info-container > * + * {
-//     margin: 1.5rem 0;
-//   }
-
-
-
-//   .product__info-container .product-form,
-//   .product__info-container .product__description,
-//   .product__info-container .icon-with-text {
-//     margin: 2.5rem 0;
-//   }
-
-//   .product__text {
-//     margin-bottom: 0;
-//   }
 
 a.product__text {
     display: block;
@@ -209,38 +191,6 @@ a.product__text {
     text-transform: uppercase;
 }
 
-//   .product__title {
-//     word-break: break-word;
-//     margin-bottom: 1.5rem;
-//   }
-
-//   .product__title > * {
-//     margin: 0;
-//   }
-
-//   .product__title > a {
-//     display: none;
-//   }
-
-//   .product__title + .product__text.caption-with-letter-spacing {
-//     margin-top: -1.5rem;
-//   }
-
-//   .product__text.caption-with-letter-spacing + .product__title {
-//     margin-top: 0;
-//   }
-
-//   .product__accordion .accordion__content {
-//     padding: 0 1rem;
-//   }
-
-//   .product .price .badge {
-//     margin-bottom: 0.5rem;
-//   }
-
-//   .product .price__container {
-//     margin-bottom: 0.5rem;
-//   }
 
 .product .price dl {
     margin-top: 0.5rem;
@@ -251,108 +201,48 @@ a.product__text {
     display: none;
 }
 
-@media screen and (min-width: 750px) {
-    .product__info-container {
-        max-width: 60rem;
-    }
-
-    // .product__info-container .price--on-sale .price-item--regular {
-    //     font-size: 1.6rem;
-    // }
-
-    // .product__info-container > *:first-child {
-    //   margin-top: 0;
-    // }
-}
-
 .product__description-title {
     font-weight: 600;
 }
 
-//   .product--no-media .product__title,
-//   .product--no-media .product__text,
-//   .product--no-media noscript .product-form__input,
-//   .product--no-media .product__tax,
-//   .product--no-media .product__sku,
-//   .product--no-media shopify-payment-terms {
-//     text-align: center;
-//   }
 
-//   .product--no-media .product__media-wrapper,
-//   .product--no-media .product__info-wrapper {
-//     padding: 0;
-//   }
+.product-form__buttons {
+    display: flex;
+    flex-direction: column;
+        row-gap: var(--space);
+    margin-bottom: var(--space);
 
-//   .product__tax {
-//     margin-top: -1.4rem;
-//   }
+    .button {
+        flex: 0 0 auto;
+        margin: 0 0 var(--space);
+    }
 
-//   .product--no-media noscript .product-form__input,
-//   .product--no-media .share-button {
-//     max-width: 100%;
-//   }
+    .shopify-payment-button {
+        margin: 0;
+    }
+}
 
-//   .product--no-media fieldset.product-form__input,
-//   .product--no-media .product-form__quantity,
-//   .product--no-media .product-form__input--dropdown,
-//   .product--no-media .share-button,
-//   .product--no-media .product__view-details,
-//   .product--no-media .product__pickup-availabilities,
-//   .product--no-media .product-form {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     text-align: center;
-//   }
+.product-form__buttons-button-pre-text {
+    font-family: var(--font-heading-family);
+    font-style: var(--font-heading-style);
+    font-weight: var(--font-heading-weight);
+    display: flex;
+    justify-content: center;
 
-//   .product--no-media .product-form {
-//     flex-direction: column;
-//   }
-
-//   .product--no-media .product-form > .form {
-//     max-width: 30rem;
-//     width: 100%;
-//   }
-
-//   .product--no-media .product-form__quantity,
-//   .product--no-media .product-form__input--dropdown {
-//     flex-direction: column;
-//     max-width: 100%;
-//   }
-
-//   .product-form__quantity .form__label {
-//     margin-bottom: 0.6rem;
-//   }
-
-//   .price-per-item__label.form__label {
-//     margin-bottom: 0rem;
-//   }
-
-//   .product-form__quantity-top .form__label {
-//     margin-bottom: 1.2rem;
-//   }
-
-//   .product--no-media fieldset.product-form__input {
-//     flex-wrap: wrap;
-//    // margin: 0 auto 1.2rem auto;
-//   }
-
-//   .product-form__buttons {
-//     max-width: 44rem;
-//   }
-
+    &::before,
+    &::after {
+        content: '~';
+    }
+}
 
 /* Inventory status */
 
 .product__inventory {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+        align-items: center;
+        gap: var(--space-sm);
+    font-size: var(--font-size-smaller);
 }
-
-//   .product--no-media .product__inventory {
-//     justify-content: center;
-//   }
 
 /* This keeps the container from getting display: none; applied to it and to make sure we're not introducing some layout shift when switching to an unavailable variant */
 .product__inventory.visibility-hidden:empty {
@@ -362,77 +252,6 @@ a.product__text {
 .product__inventory.visibility-hidden:empty::after {
     content: '#';
 }
-
-//   /* Icon with text */
-//   .icon-with-text {
-//     --icon-size: calc(var(--font-heading-scale) * 3rem);
-//     --icon-spacing: calc(var(--font-heading-scale) * 1rem);
-//   }
-
-//   .icon-with-text--horizontal {
-//     display: flex;
-//     justify-content: center;
-//     column-gap: 3rem;
-//     flex-direction: row;
-//   }
-
-//   .icon-with-text--vertical {
-//     --icon-size: calc(var(--font-heading-scale) * 2rem);
-//   }
-
-//   .icon-with-text .icon {
-//     fill: rgb(var(--color-foreground));
-//     height: var(--icon-size);
-//     width: var(--icon-size);
-//   }
-
-//   .icon-with-text--horizontal .icon,
-//   .icon-with-text--horizontal img {
-//     margin-bottom: var(--icon-spacing);
-//   }
-
-//   .icon-with-text--vertical .icon {
-//     min-height: var(--icon-size);
-//     min-width: var(--icon-size);
-//     margin-right: var(--icon-spacing);
-//   }
-
-//   .icon-with-text img {
-//     height: var(--icon-size);
-//     width: var(--icon-size);
-//     object-fit: contain;
-//   }
-
-//   .icon-with-text--vertical img {
-//     margin-right: var(--icon-spacing);
-//   }
-
-//   .icon-with-text--horizontal .h4 {
-//     padding-top: calc(var(--icon-size) + var(--icon-spacing));
-//     text-align: center;
-//   }
-
-//   .icon-with-text--horizontal svg + .h4,
-//   .icon-with-text--horizontal img + .h4,
-//   .icon-with-text--horizontal.icon-with-text--text-only .h4 {
-//     padding-top: 0;
-//   }
-
-//   .icon-with-text__item {
-//     display: flex;
-//     align-items: center;
-//   }
-
-//   .icon-with-text--horizontal .icon-with-text__item {
-//     flex-direction: column;
-//     width: 33%;
-//   }
-
-//   .icon-with-text--vertical .icon-with-text__item {
-//     margin-bottom: var(--icon-size);
-//   }
-
-/* SKU block */
 
 .product__sku.visibility-hidden::after {
     content: '#';

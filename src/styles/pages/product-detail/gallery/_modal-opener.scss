@@ -2,9 +2,10 @@
     border: 0.1rem solid rgba(var(--color-foreground), 0.1);
 }
 
+
 .product__modal-opener {
     @media screen and (max-width: 749px) {
-          width: 100%;
+        width: 100%;
     }
 
     .product-media-container & {
@@ -107,12 +108,6 @@
     cursor: zoom-in;
 }
 
-@media screen and (max-width: 749px) {
-    .product--thumbnail .is-active .product__modal-opener:not(.product__modal-opener--image),
-    .product--thumbnail_slider .is-active .product__modal-opener:not(.product__modal-opener--image) {
-        display: none;
-    }
-}
 
 .product__modal-opener--image .product__media-zoom-none,
 .product__media-icon--none {
