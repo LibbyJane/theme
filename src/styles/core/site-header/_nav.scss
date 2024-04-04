@@ -8,7 +8,7 @@
         margin-left: 0;
         margin-right: auto;
     }
-// todo: clean up the different menu type selectors
+
     >ul:first-of-type {
         display: inline-flex;
         flex-wrap: wrap;
@@ -19,22 +19,6 @@
         padding: 0;
         margin: 0;
     }
-
-    // .list-menu {
-    //     >li {
-    //         &:first-of-type {
-    //             .header__menu-item {
-    //                 .header--top-left & {
-    //                     @include breakpoint(medium) {
-    //                         padding-left: 0;
-    //                         margin-left: 0;
-    //                     }
-
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
 }
 
 
@@ -149,5 +133,20 @@ details[open]>.header__submenu {
     details[open]>.header__submenu {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.header--top-level-text-display {
+    .header__menu-item--top-level,
+    .disclosure__button {
+        @include text-heading;
+    }
+
+    .header__menu-item--top-level {
+        background: lightcyan !important;
+    }
+
+    .header__menu-item--top-level2 {
+        background: peachpuff !important;
     }
 }
