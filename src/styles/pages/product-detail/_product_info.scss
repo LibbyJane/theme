@@ -9,13 +9,13 @@
         }
     }
 
-    &.content-background-transparent {
-        padding: 0;
+    // &.content-background-transparent {
+    //     padding: 0;
 
-        @media screen and (min-width: 990px) {
-            padding: var(--content-padding);
-        }
-    }
+    //     @media screen and (min-width: 990px) {
+    //         padding: var(--content-padding);
+    //     }
+    // }
 
     &.texture-lined {
         padding-left: calc(var(--content-padding-inline) + var(--texture-lined-border-size, 30px));
