@@ -203,7 +203,7 @@
         "section_color_scheme": "accent-1",
         "section_background_style": "torn",
         "content_color_scheme": "background-2",
-        "content_background_style": "transparent",
+        "content_background_style": "",
         "use_color_highlight": true,
         "media_size": "large",
         "constrain_to_viewport": true,
