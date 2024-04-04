@@ -96,6 +96,10 @@
     color: rgb(var(--color-success)) !important;
 }
 
+.color--warning {
+    color: rgb(var(--color-warning)) !important;
+}
+
 // .bg--danger {
 //     background-color: rgb(var(--color-danger));
 // }
@@ -111,7 +115,6 @@
 .overflow-hidden {
     overflow: clip;
 }
-
 
 .break {
     word-break: break-word !important;
@@ -145,6 +148,14 @@
 .disabled,
 [disabled] {
     @include disabled;
+}
+
+.visually-disabled {
+    @include disabled;
+
+    &:not([disabled="false"]) { // shopify-buy-it-now button needs the :not
+        pointer-events: initial;
+    }
 }
 
 @media (prefers-reduced-motion) {

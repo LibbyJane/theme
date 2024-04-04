@@ -1,5 +1,6 @@
 :root {
     --rotate-icon: 0;
+    --fill-color: transparent;
 }
 
 .icon {
@@ -17,4 +18,45 @@
 
 .icon-xs {
     --icon-size: var(--icon-size-xs);
+}
+
+.icon-bg-color--success {
+    --fill-color: rgb(var(--color-success));
+}
+
+.icon-bg-color--warning {
+    --fill-color: rgb(var(--color-warning));
+}
+
+.icon-bg-color--danger {
+    --fill-color: rgb(var(--color-danger));
+}
+
+.icon-bg-color--unavailable {
+    --fill-color: silver;
+}
+
+.icon-indicator {
+    .indicator {
+        transform-origin: bottom;
+    }
+}
+
+.icon-indicator--danger {
+    .indicator {
+        transform: rotate(-103deg) translateX(5px) translateY(4px);
+    }
+}
+
+.icon-indicator--warning {
+    .indicator {
+        transform: rotate(-80deg) translateX(4px) translateY(3px);
+    }
+}
+
+.icon-indicator--unavailable {
+    .indicator {
+        opacity: 0.5;
+        transform: rotate(-103deg) translateX(5px) translateY(4px);
+    }
 }
