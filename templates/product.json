@@ -162,10 +162,10 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "section_color_scheme": "accent-1",
+        "section_color_scheme": "background-2",
         "section_background_style": "torn",
-        "content_color_scheme": "background-2",
-        "content_background_style": "",
+        "content_color_scheme": "background-1",
+        "content_background_style": "paper",
         "use_color_highlight": true,
         "media_size": "large",
         "constrain_to_viewport": true,
