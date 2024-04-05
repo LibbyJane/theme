@@ -19,14 +19,6 @@
             "menu": "footer"
           }
         },
-        "brand_information_HzJQTi": {
-          "type": "brand_information",
-          "disabled": true,
-          "settings": {
-            "show_social": true,
-            "brand_image_alignment": "center"
-          }
-        },
         "image_cEyXpd": {
           "type": "image",
           "settings": {
@@ -39,7 +31,6 @@
       "block_order": [
         "text_RDezyQ",
         "footer-0",
-        "brand_information_HzJQTi",
         "image_cEyXpd"
       ],
       "settings": {
