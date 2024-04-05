@@ -35,6 +35,7 @@
 
 /* Main Header Layout */
 .header-wrapper {
+    @include default-texture;
     display: block;
     position: relative;
     z-index: var(--zi-header);
@@ -43,10 +44,10 @@
 // middle left is default desktop layout
 .header {
     display: grid;
-    grid-template-areas: 'header-nav header-brand header-utility';
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-    column-gap: var(--space);
+        grid-template-areas: 'header-nav header-brand header-utility';
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        column-gap: var(--space);
 
     @media screen and (min-width: 990px) {
         grid-template-areas: 'header-brand header-nav header-utility';

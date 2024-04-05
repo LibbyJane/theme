@@ -122,12 +122,13 @@
                         {%- when 'price' -%}
                             <div class="product__price no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                                 {% assign taxes_included_message = 'products.product.include_taxes' | t %}
+                                {% assign price_class = block.settings.text_style | prepend: 'text-' %}
 
                                 {%- render 'price',
                                     product: product,
                                     use_variant: true,
                                     show_badges: true,
-                                    price_class: block.settings.text_style,
+                                    price_class: price_class,
                                     price_font_scale: block.settings.price_font_scale,
                                     use_color_highlight: block.settings.use_price_color_highlight,
                                     taxes_included: cart.taxes_included,

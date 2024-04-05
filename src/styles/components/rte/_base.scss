@@ -1,5 +1,9 @@
 .rte,
 .inline-richtext {
+    h2 {
+        margin-top: var(--space-sm);
+    }
+
     a {
         @include underlined-link;
         color: rgba(var(--color-link), var(--alpha-link));

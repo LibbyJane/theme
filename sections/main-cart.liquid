@@ -13,8 +13,8 @@
 
     @media screen and (min-width: 750px) {
         .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
         }
     }
 {%- endstyle -%}
@@ -25,7 +25,7 @@
 
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 
-<cart-items class="page-width default-content-style content-padding color-{{ section.settings.color_scheme }}{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %} " >
+<cart-items class="page-width default-content-style {% if cart == empty %}is-empty {% endif %} color-{{ section.settings.color_scheme }} content-padding-inline section-{{ section.id }}-padding">
     <div class="title-wrapper-with-link">
         <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
         <a href="{{ routes.all_products_collection_url }}" class="link-with-icon">
@@ -469,7 +469,7 @@
             "step": 4,
             "unit": "px",
             "label": "t:sections.all.padding.padding_bottom",
-            "default": 36
+            "default": 0
         }
     ]
 }

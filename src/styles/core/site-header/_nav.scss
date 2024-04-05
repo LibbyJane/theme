@@ -141,12 +141,4 @@ details[open]>.header__submenu {
     .disclosure__button {
         @include text-heading;
     }
-
-    .header__menu-item--top-level {
-        background: lightcyan !important;
-    }
-
-    .header__menu-item--top-level2 {
-        background: peachpuff !important;
-    }
 }

@@ -11,6 +11,27 @@
         margin: 0 0 var(--space-med);
         padding: 0;
     }
+
+    .list-menu__item {
+        display: inline-flex;
+        gap: var(--space-sm);
+
+        &:hover,
+        &:focus {
+            .icon {
+                opacity: 1;
+            }
+        }
+
+        .icon {
+            opacity: 0;
+            width: var(--icon-size-sm);
+        }
+    }
+
+    .list-menu__item--link {
+        padding-top: 0;
+    }
 }
 
 // blocks with content added via the theme editor - menu, brand information, text, image, or app blocks
@@ -115,6 +136,7 @@
 }
 
 .footer__row-item {
+    line-height: 1.2;
     margin-bottom: var(--space-sm);
     margin-left: auto;
     margin-right: auto;
@@ -259,7 +281,17 @@
         align-self: start;
     }
 }
+.footer__row-item--copyright,
+.footer__row-item--policies {
+    font-size: var(--font-size-caption);
+}
 
 .footer__copyright-block {
     display: inline-flex;
+
+    &.powered-by {
+        a {
+            @include underline-on-hover;
+        }
+    }
 }
