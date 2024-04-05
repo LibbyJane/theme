@@ -15,13 +15,6 @@
           "settings": {
           }
         },
-        "caption": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "body"
-          }
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -31,7 +24,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "text_style": "body",
+            "text_style": "display",
             "price_font_scale": 120,
             "use_price_color_highlight": false
           }
@@ -53,12 +46,6 @@
           "settings": {
           }
         },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
         "text_xTMNnw": {
           "type": "text",
           "settings": {
@@ -74,13 +61,6 @@
             "show_inventory_quantity": true
           }
         },
-        "popup_JY7gpX": {
-          "type": "popup",
-          "settings": {
-            "text": "Pop-up link text",
-            "page": "faq"
-          }
-        },
         "complementary_pWhipL": {
           "type": "complementary",
           "settings": {
@@ -94,25 +74,29 @@
             "enable_quick_add": false
           }
         },
-        "rating_JX7YJ4": {
-          "type": "rating",
+        "share": {
+          "type": "share",
           "settings": {
+            "share_label": "Share"
           }
         },
         "sku_dyNLRN": {
           "type": "sku",
+          "disabled": true,
           "settings": {
             "text_style": "body"
           }
         },
         "custom_liquid_rQUM77": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": ""
           }
         },
         "collapsible_tab_KaTk9L": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Collapsible row",
             "icon": "check_mark",
@@ -122,6 +106,7 @@
         },
         "icon_with_text_E943Wr": {
           "type": "icon-with-text",
+          "disabled": true,
           "settings": {
             "layout": "horizontal",
             "icon_1": "heart",
@@ -135,6 +120,7 @@
         },
         "icon_with_text_n98zTj": {
           "type": "icon-with-text",
+          "disabled": true,
           "settings": {
             "layout": "vertical",
             "icon_1": "heart",
@@ -146,57 +132,33 @@
             "heading_3": "Heading"
           }
         },
-        "subify_subscriptions_app_app_block_hLjPp7": {
-          "type": "shopify:\/\/apps\/subify-subscriptions-app\/blocks\/app-block\/bc0dba25-cd46-4841-bea4-6bdfe9ac815f",
+        "popup_JY7gpX": {
+          "type": "popup",
+          "disabled": true,
           "settings": {
-            "product": "",
-            "use_app_block_wording": false,
-            "widget_label": "Purchase options",
-            "one_time_purchase_text": "One-Time Purchase",
-            "subscription_text": "Subscribe and save",
-            "delivery_frequency_text": "Delivery frequency",
-            "prepaid_subscription_text": "Subscription with prepaid",
-            "skin1_priceSuffix": "each",
-            "skin1_save": "Save(skin1)",
-            "skin1_prepaid_payment_title": "prepaid",
-            "skin1_normal_payment_title": "pay as you go",
-            "skin2_discountSuffix": "Save",
-            "skin3_fullPrice": "Full price",
-            "skin3_priceSuffix": "each",
-            "skin3_discountSuffix": "Off",
-            "skin4_justOnce": "Just once",
-            "skin4_discountSuffix": "Off",
-            "skin4_priceSuffix": "each",
-            "skin4_fullPrice": "(Full price)",
-            "skin4_sellingPlansTitle": "Renews every:",
-            "from": "from",
-            "max_discount_badge_title": "UP To",
-            "pay": "Pay",
-            "price_save_up_to": "save up to"
+            "text": "Pop-up link text",
+            "page": "faq"
           }
         }
       },
       "block_order": [
         "vendor",
         "title",
-        "caption",
         "variant_picker",
         "price",
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share",
         "text_xTMNnw",
         "inventory_3WkEjU",
-        "popup_JY7gpX",
         "complementary_pWhipL",
-        "rating_JX7YJ4",
+        "share",
         "sku_dyNLRN",
         "custom_liquid_rQUM77",
         "collapsible_tab_KaTk9L",
         "icon_with_text_E943Wr",
         "icon_with_text_n98zTj",
-        "subify_subscriptions_app_app_block_hLjPp7"
+        "popup_JY7gpX"
       ],
       "settings": {
         "enable_sticky_info": true,
