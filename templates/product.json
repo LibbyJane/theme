@@ -46,13 +46,6 @@
           "settings": {
           }
         },
-        "text_xTMNnw": {
-          "type": "text",
-          "settings": {
-            "text": "We only use <strong>carbon neutral <\/strong>shipping providers. A signature may be required on delivery.",
-            "text_style": "body"
-          }
-        },
         "inventory_3WkEjU": {
           "type": "inventory",
           "settings": {
@@ -72,6 +65,13 @@
             "pagination_style": "counter",
             "image_ratio": "square",
             "enable_quick_add": false
+          }
+        },
+        "text_xTMNnw": {
+          "type": "text",
+          "settings": {
+            "text": "We only use <strong>carbon neutral <\/strong>shipping providers. A signature may be required on delivery.",
+            "text_style": "body"
           }
         },
         "share": {
@@ -149,9 +149,9 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "text_xTMNnw",
         "inventory_3WkEjU",
         "complementary_pWhipL",
+        "text_xTMNnw",
         "share",
         "sku_dyNLRN",
         "custom_liquid_rQUM77",
