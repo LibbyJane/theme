@@ -234,9 +234,6 @@ summary,
     }
 
     &:hover, &:focus {
-        // box-shadow: 0 0 3px 1px rgba(var(--color-button-text), 0.75), 0 0 0 1px var(--button-foreground-color);
-        // opacity: 1;
-
         &::before {
             transform: rotate(1deg) scale(1.02);
         }
@@ -255,15 +252,13 @@ summary,
             transform: rotate(1deg) scaleY(1.025) scaleX(1.025)
         }
     }
-
-
 }
 
-
 .button--link {
+    @include underlined-link;
     background-color: transparent;
-    border-color:  var(--button-background-color);
-    border-width: 0 0 var(--button-border-width);
+    border-color: transparent;
+    border-width: 0;
     color: var(--button-background-color);
     opacity: 1;
     padding-left: 0;

@@ -1,16 +1,8 @@
 .accordion {
-    // background-image: var( --crease);
-    // margin-inline: var(--full-width-offset-margin);
-    // margin-top: var(--space-lg);
-    // margin-bottom: 0;
-    // border-top: thin solid rgba(255,255,255,0.1);
-    // border-top: var( --border-light);
-    // border-bottom: var( --border-light);
     background: transparent;
     border: 0;
     margin: initial;
     position: relative;
-
 
     .texture-lined & {
         --underline-height: 0;
@@ -103,4 +95,3 @@
         max-width: 100%;
     }
 }
-

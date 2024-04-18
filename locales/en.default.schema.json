@@ -646,6 +646,15 @@
                     "label": "Page width"
                 }
             },
+            "layout": {
+                "label": "Content layout",
+                "options__1": {
+                    "label": "Column"
+                },
+                "options__2": {
+                    "label": "Row"
+                }
+            },
             "heading_size": {
                 "label": "Heading size",
                 "options__1": {

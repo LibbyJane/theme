@@ -170,15 +170,15 @@
         </ul>
         {%- if product.selected_or_first_available_variant.quantity_price_breaks.size >= 3 -%}
             <show-more-button>
-            <button
-                class="button-show-more underlined-link"
-                id="Show-More-{{ section.id }}"
-                type="button"
-            >
-                <span class="label-show-more label-text"
-                ><span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t }}
-                </span>
-            </button>
+                <button
+                    class="button button--plain margin-top"
+                    id="Show-More-{{ section.id }}"
+                    type="button"
+                >
+                    <span class="label-show-more label-text"
+                    ><span aria-hidden="true">+ </span>{{ 'products.facets.show_more' | t }}
+                    </span>
+                </button>
             </show-more-button>
         {%- endif -%}
     {%- endif -%}

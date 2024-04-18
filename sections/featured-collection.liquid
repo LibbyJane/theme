@@ -140,7 +140,7 @@
         <footer class="button-bar margin-top-lg{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
             <a
                 href="{{ section.settings.collection.url }}"
-                class="{% if section.settings.view_all_style == 'link' %}underlined-link{% elsif section.settings.view_all_style == 'solid' %}button button--primary{% else %}button button--secondary{% endif %}"
+                class="button button--{{ section.settings.view_all_style }}"
                 aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
             >
                 {{ 'sections.featured_collection.view_all' | t }}
@@ -267,15 +267,15 @@
                     "label": "t:sections.featured-collection.settings.view_all_style.options__1.label"
                 },
                 {
-                    "value": "outline",
+                    "value": "secondary",
                     "label": "t:sections.featured-collection.settings.view_all_style.options__2.label"
                 },
                 {
-                    "value": "solid",
+                    "value": "primary",
                     "label": "t:sections.featured-collection.settings.view_all_style.options__3.label"
                 }
             ],
-            "default": "solid"
+            "default": "primary"
         },
         {
             "type": "checkbox",
