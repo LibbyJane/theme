@@ -269,11 +269,9 @@
         --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
 
         --header-height: {{ settings.logo_width | divided_by: settings.logo.aspect_ratio }}px;
-        --header-height-scrolled: calc(var(--header-height) * 0.66);
+        --header-height-scrolled: calc({{ settings.logo_width | divided_by: settings.logo.aspect_ratio }}px * 0.66);
         --header-brand-aspect-ratio: {{ settings.logo_width }} / {{ settings.logo_height }};
-
         --icon-stroke-size: 1px;
-
     }
 
 
