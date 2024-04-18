@@ -646,15 +646,6 @@
                     "label": "Page width"
                 }
             },
-            "layout": {
-                "label": "Content layout",
-                "options__1": {
-                    "label": "Column"
-                },
-                "options__2": {
-                    "label": "Row"
-                }
-            },
             "heading_size": {
                 "label": "Heading size",
                 "options__1": {
@@ -1065,13 +1056,13 @@
                 "view_all_style": {
                     "label": "\"View all\" style",
                     "options__1": {
-                        "label": "Link"
+                        "label": "Arrow"
                     },
                     "options__2": {
-                        "label": "Outline button"
+                        "label": "Outline"
                     },
                     "options__3": {
-                        "label": "Solid button"
+                        "label": "Solid"
                     }
                 },
                 "enable_desktop_slider": {

@@ -254,17 +254,6 @@ summary,
     }
 }
 
-.button--link {
-    @include underlined-link;
-    background-color: transparent;
-    border-color: transparent;
-    border-width: 0;
-    color: var(--button-background-color);
-    opacity: 1;
-    padding-left: 0;
-    padding-right: 0;
-}
-
 .button--plain {
     @include text-body;
     background: transparent;

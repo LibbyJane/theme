@@ -144,6 +144,10 @@
                 aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
             >
                 {{ 'sections.featured_collection.view_all' | t }}
+
+                {%- if section.settings.view_all_style == 'plain' -%}
+                    {%- render 'icon-arrow' -%}
+                {%- endif -%}
             </a>
         </footer>
     {%- endif -%}
@@ -263,7 +267,7 @@
             "label": "t:sections.featured-collection.settings.view_all_style.label",
             "options": [
                 {
-                    "value": "link",
+                    "value": "plain",
                     "label": "t:sections.featured-collection.settings.view_all_style.options__1.label"
                 },
                 {
