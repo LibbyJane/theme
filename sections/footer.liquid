@@ -247,13 +247,7 @@
         {%- endunless -%}
     {%- endif -%}
 
-    <div
-        class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-        {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-        {% endif %}
-    >
-
+    <div class="footer__content-bottom">
         {%- liquid
             assign show_country_selector = false
             if section.settings.enable_country_selector and localization.available_countries.size > 1

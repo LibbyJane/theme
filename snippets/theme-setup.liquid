@@ -50,7 +50,7 @@
     :root {
         --font-size-base: calc(var(--font-body-scale) * 1.4rem);
         --font-size-smaller: calc(var(--font-body-scale) * 1.3rem);
-        --font-size-small: calc(var(--font-body-scale) * 1.2rem);
+        --font-size-small: calc(var(--font-body-scale) * 1.15rem);
         --font-size-caption: calc(var(--font-body-scale) * 1.05rem);
         --font-size-xs: calc(var(--font-body-scale) * 0.95rem);
         --letter-spacing: 0;
@@ -70,16 +70,17 @@
 
 
         @media screen and (min-width: 750px) {
-            --font-size-base: calc(var(--font-body-scale) * 1.3rem);
-            --font-size-smaller: calc(var(--font-body-scale) * 1.2rem);
-            /* --font-size-caption: 1.2rem; */
+            --font-size-base: calc(var(--font-body-scale) * 1.25rem);
+            --font-size-smaller: calc(var(--font-body-scale) * 1.15rem);
+            --font-size-small: calc(var(--font-body-scale) * 1.05rem);
+            --font-size-caption: calc(var(--font-body-scale) * 1rem);
             --font-size-h0: calc(var(--font-heading-scale) * 3.6rem);
             --font-size-h1: calc(var(--font-heading-scale) * 3.2rem);
             --font-size-h2: calc(var(--font-heading-scale) * 3rem);
             --font-size-h3: calc(var(--font-heading-scale) * 2.2rem);
             --font-size-h4: calc(var(--font-heading-scale) * 1.8rem);
             --font-size-h5: calc(var(--font-heading-scale) * 1.6rem);
-            --font-size-h6: calc(var(--font-heading-scale) * 1.5rem);
+            --font-size-h6: calc(var(--font-heading-scale) * 1.4rem);
         }
 
         --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};

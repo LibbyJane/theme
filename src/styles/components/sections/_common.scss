@@ -3,6 +3,16 @@
 //     display: flex;
 // }
 
+.section {
+    +.section {
+        margin-top: var(--spacing-sections-mobile);
+
+        @media screen and (min-width: 750px) {
+            margin-top: var(--spacing-sections-desktop);
+        }
+    }
+}
+
 .section__content {
     margin: auto;
 }
