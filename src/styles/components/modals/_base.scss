@@ -20,8 +20,6 @@
         top: 0;
         left: 0;
         right: 0;
-    // bottom: 0;
-    // background-color: rgb(var(--color-background));
     z-index: var(--zi-modal);
 
     details[open] & {
@@ -41,13 +39,11 @@
 }
 
 .modal__inner {
-    // border-radius: var(--space);
     box-shadow: 0 0 3rem rgba(var(--color-shadow),0.5);
-    margin: 0 auto;
+    margin: var(--space-lg) auto;
     padding: var(--content-padding-med);
     outline: 4px solid rgba(var(--color-background), 1);
     outline-offset: -1px;
-    // filter: url(#tornPaper);
 }
 
 .modal__close-button {
@@ -80,21 +76,6 @@
     .icon {
         width: var(--icon-size-sm);
     }
-
-    // .icon path {
-    //     --path-length: 18;
-    //     stroke-width: 1.5px;
-    //     max-width: 1rem;
-    // }
-
-    // @media screen and (min-width: 750px) {
-    //     right: 1rem;
-    // }
-
-    // @media screen and (min-width: 990px) {
-    //     position: initial;
-    //     margin-left: 0.5rem;
-    // }
 }
 
 .media-modal {
