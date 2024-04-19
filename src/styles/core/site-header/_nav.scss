@@ -5,7 +5,7 @@
 
 .header__nav {
     @media screen and (min-width: 990px) {
-        margin-left: 0;
+        margin-left: var(--menu-item-padding-inverse);
         margin-right: auto;
     }
 
@@ -19,11 +19,6 @@
         padding: 0;
         margin: 0;
     }
-}
-
-
-header__menu {
-    margin-left: var(--menu-item-padding-inverse);
 }
 
 .header__menu-item {

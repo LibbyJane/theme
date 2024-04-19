@@ -47,7 +47,7 @@
         grid-template-areas: 'header-nav header-brand header-utility';
         grid-template-columns: 1fr 2fr 1fr;
         align-items: center;
-        column-gap: var(--space);
+        gap: var(--space);
 
     @media screen and (min-width: 990px) {
         grid-template-areas: 'header-brand header-nav header-utility';
@@ -68,7 +68,6 @@
             'header-brand header-utility'
             'header-nav header-nav';
             grid-template-columns: auto 1fr;
-            row-gap: var(--space);
         }
     }
 
@@ -78,7 +77,6 @@
             'blank header-brand header-utility'
             'header-nav header-nav header-nav';
             grid-template-columns: 1fr auto 1fr;
-            row-gap: var(--space);
         }
     }
 
