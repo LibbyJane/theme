@@ -1313,6 +1313,9 @@
         "show_social": {
           "label": "Show social media icons"
         },
+        "social_heading": {
+          "label": "Heading"
+        },
         "header__3": {
           "content": "Country\/region selector"
         },

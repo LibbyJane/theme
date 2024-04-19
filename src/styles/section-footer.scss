@@ -143,8 +143,7 @@
     text-align: center;
 
     @media screen and (min-width: 750px) {
-        margin-left: 0;
-        margin-right: 0;
+        margin: 0 auto auto;
         text-align: left;
     }
 
