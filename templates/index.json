@@ -160,6 +160,7 @@
         "text_FYTx6B",
         "button_fMakp9"
       ],
+      "disabled": true,
       "settings": {
         "content_alignment": "center",
         "desktop_content_position": "center",
@@ -227,7 +228,7 @@
         "collection_MpF9m4"
       ],
       "settings": {
-        "heading": "",
+        "heading": "Wines by location",
         "heading_size": "h2",
         "desktop_layout": "left",
         "mobile_layout": "collage",
