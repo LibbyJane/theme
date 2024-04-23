@@ -185,20 +185,26 @@
 .facet-filters .select {
     color: var(--filter-color, currentColor);
     cursor: pointer;
-    display: flex;
-        gap: 0 var(--space);
     font-size: var(--font-size-smaller);
 
-    &.facets__summary {
-        padding: var(--space);
+    select {
+        padding-right: calc(var(--icon-size) + var(--space));
+    }
 
-        .facets__wrapper & {
-            padding-top: 0;
-        }
+}
+
+.facets__summary {
+    padding: var(--space);
+
+    .facets__wrapper & {
+        padding-top: 0;
+    }
+
+    span {
+        transition: all var(--duration-short) var(--transition-type);
     }
 
     &:hover,
-    &:focus,
     .facets__disclosure[open] & {
         color: var(--filter-color-active, currentColor);
         background-color: rgb(var(--color-background));
@@ -209,8 +215,6 @@
     }
 
     &:hover {
-        color: var(--filter-color-active, currentColor);
-
         .icon-caret {
             transform: rotate(-90deg);
         }
@@ -224,9 +228,14 @@
             transform: rotate(-180deg) !important;
         }
     }
+}
 
-    span {
-        transition: all var(--duration-short) var(--transition-type);
+.facet-filters .select {
+    &:hover,
+    &:focus,
+    .facets__disclosure[open] & {
+        color: var(--filter-color-active, currentColor);
+        background-color: rgb(var(--color-background));
     }
 }
 
