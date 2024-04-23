@@ -27,7 +27,7 @@
         {%- capture contact_form_class -%} postcard {{ postcard_color_scheme }} {{ scroll_classes }}{% endcapture %}
 
         {%- if section.settings.secondary_image != blank -%}
-            <div class="postcard__reverse-face {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %}data-cascade{% endif %}>
+            <div class="postcard__reverse-face">
                 {%- capture sizes -%}
                     (min-width: {{ settings.page_width }}px) 1200px,
                     800px
