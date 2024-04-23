@@ -171,6 +171,10 @@
         filter: none;
         transition: none;
     }
+
+    [selected = "selected"] {
+        @include disabled;
+    }
 }
 
 .facets__disclosure {
