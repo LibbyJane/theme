@@ -212,10 +212,12 @@
     .facets__disclosure[open] & {
         color: var(--filter-color-active, currentColor);
     }
+    .select__select {
+        &:hover,
+        &:focus {
+            background-color: rgb(var(--color-background));
+        }
 
-    &:hover,
-    &:focus {
-        background-color: rgb(var(--color-background));
     }
 
     option {
