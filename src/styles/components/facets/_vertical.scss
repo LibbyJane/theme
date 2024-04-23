@@ -182,6 +182,10 @@
             pointer-events: none;
             z-index: -1;
         }
+
+        show-more-button {
+            margin-bottom: var(--space);
+        }
     }
 
     .facets__header-vertical {
