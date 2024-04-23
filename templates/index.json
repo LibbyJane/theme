@@ -271,7 +271,7 @@
         "color_scheme": "scheme-d775a3dc-00b6-476b-8a2b-08d69daed06e",
         "background_transparent": true,
         "content_color_scheme": "background-1",
-        "content_background_width": "page",
+        "content_background_width": "full",
         "background_texture": "torn",
         "show_image": true,
         "show_date": true,
