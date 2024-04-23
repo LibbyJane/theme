@@ -213,11 +213,12 @@
         color: var(--filter-color-active, currentColor);
     }
 
-    option {
-        color: var(--filter-color-active, currentColor);
+    &:hover,
+    &:focus {
         background-color: rgb(var(--color-background));
+    }
 
-        &:hover,
+    option {
         &:checked {
             background: rgb(var(--color-foreground));
             color: rgb(var(--color-background));
