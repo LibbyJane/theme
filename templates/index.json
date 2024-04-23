@@ -272,7 +272,7 @@
         "background_transparent": true,
         "content_color_scheme": "background-1",
         "content_background_width": "page",
-        "background_texture": "lined",
+        "background_texture": "torn",
         "show_image": true,
         "show_date": true,
         "show_author": false,
