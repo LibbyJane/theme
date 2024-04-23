@@ -82,9 +82,9 @@
             "link": "shopify:\/\/collections\/all",
             "button_style_secondary": "secondary",
             "box_align": "bottom-left",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "background-1",
+            "text_alignment": "left",
+            "show_text_box": false,
+            "color_scheme": "inverse",
             "background_texture": "paper",
             "text_alignment_mobile": "center"
           }
