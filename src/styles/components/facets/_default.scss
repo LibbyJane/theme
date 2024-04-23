@@ -218,8 +218,11 @@
         background-color: rgb(var(--color-background));
 
         &:checked {
-            background: rgb(var(--color-button));
-            color: rgb(var(--color-button-text));
+            &,
+            &:hover {
+                background: rgb(var(--color-foreground));
+                color: rgb(var(--color-background));
+            }
         }
     }
 }
