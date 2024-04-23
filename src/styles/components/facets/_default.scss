@@ -212,18 +212,17 @@
     .facets__disclosure[open] & {
         color: var(--filter-color-active, currentColor);
     }
-    .select__select {
-        &:hover,
-        &:focus {
-            background-color: rgb(var(--color-background));
-        }
-
-    }
 
     option {
+        color: var(--filter-color-active, currentColor);
+        background-color: rgb(var(--color-background));
+
         &:checked {
-            background: rgb(var(--color-foreground));
-            color: rgb(var(--color-background));
+            &,
+            &:hover {
+                background: rgb(var(--color-foreground));
+                color: rgb(var(--color-background));
+            }
         }
     }
 }
