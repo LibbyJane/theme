@@ -139,7 +139,7 @@
         "slide_height": "small",
         "section_color_scheme": "inverse",
         "slider_visual": "numbers",
-        "slider_visual_background_opacity": 25,
+        "slider_visual_background_opacity": 0,
         "overlay_pagination_desktop": true,
         "auto_rotate": true,
         "change_slides_speed": 7,
