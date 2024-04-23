@@ -95,7 +95,7 @@
             "image_overlay_opacity": 20,
             "heading": "Latest from the blog",
             "heading_size": "h2",
-            "subheading": "Read all about our recent adventure: a working holiday at a gorgeous vineyard in beautiful in Hawkes Bay",
+            "subheading": "Read all about our recent adventure: a working holiday at a vineyard in beautiful in Hawkes Bay",
             "button_label": "Read about it",
             "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
             "button_style_secondary": "secondary",
@@ -160,6 +160,7 @@
         "text_FYTx6B",
         "button_fMakp9"
       ],
+      "disabled": true,
       "settings": {
         "content_alignment": "center",
         "desktop_content_position": "center",
