@@ -74,7 +74,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/grapes-on-the-vine.jpg",
-            "image_overlay_opacity": 0,
+            "image_overlay_opacity": 30,
             "heading": "Explore our range",
             "heading_size": "h1",
             "subheading": "“The discovery of a good wine is increasingly better for mankind than the discovery of a new star.” <em>— Leonardo da Vinci<\/em>",
