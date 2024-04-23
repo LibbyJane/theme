@@ -152,13 +152,6 @@
         filter: none;
         transition: none;
     }
-
-    .select {
-        [selected = "selected"] {
-            background: rgb(var(--color-button));
-            color: rgb(var(--color-button-text));
-        }
-    }
 }
 
 .facets__disclosure {
@@ -223,6 +216,11 @@
     option {
         color: var(--filter-color-active, currentColor);
         background-color: rgb(var(--color-background));
+
+        &:checked {
+            background: rgb(var(--color-button));
+            color: rgb(var(--color-button-text));
+        }
     }
 }
 
