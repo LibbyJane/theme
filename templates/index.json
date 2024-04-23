@@ -52,6 +52,7 @@
       "blocks": {
         "slide_NLwdjc": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
             "image_overlay_opacity": 40,
@@ -62,6 +63,25 @@
             "link": "shopify:\/\/collections\/all",
             "button_style_secondary": "secondary",
             "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "background-1",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_i69Rmy": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DALL_E2024-03-1511.04.51-Createarealisticimageofabottleofredwinelabeled_EdenVine_nexttoaglassofredwine_placedinanoutdoorsettinginNewZealand.Thescen.webp",
+            "image_overlay_opacity": 0,
+            "heading": "Welcome to Road Trip Wines",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "Find your new favorite drop >",
+            "link": "shopify:\/\/collections\/all",
+            "button_style_secondary": "secondary",
+            "box_align": "bottom-left",
             "text_alignment": "center",
             "show_text_box": true,
             "color_scheme": "background-1",
@@ -110,6 +130,7 @@
       },
       "block_order": [
         "slide_NLwdjc",
+        "slide_i69Rmy",
         "slide_Wbi9tD",
         "slide_b7GwpW"
       ],
