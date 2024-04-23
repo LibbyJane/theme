@@ -35,8 +35,7 @@
         {%- endif -%}
     </header>
 
-
-    <div class="isolate color-{{ section.settings.content_color_scheme }} {% if section.settings.background_texture == 'transparent' %}content-background-transparent {% else %}content-padding-block texture-{{section.settings.background_texture}} {% endif %}">
+    <div class="isolate {%- unless section.settings.content_background_width == 'full' %} page-width{% endunless %} color-{{ section.settings.content_color_scheme }} {% if section.settings.background_texture == 'transparent' %}content-background-transparent {% else %}content-padding-block texture-{{section.settings.background_texture}} {% endif %} blog__posts--wrapper">
         <slider-component class="slider-mobile-gutter slider-component-mobile {% if section.settings.content_background_width == 'full' %} slider-component-full-width{% else %} slider-component-page-width{% endif %} margin-bottom {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 <ul
                 id="Slider-{{ section.id }}"
@@ -109,36 +108,37 @@
                         {%- endfor -%}
                     {%- endif -%}
                 </ul>
+
                 {%- if posts_exceed_limit -%}
                     <div class="slider-buttons no-js-hidden{% if section.settings.post_limit < 3 %} medium-hide{% endif %}{% if section.settings.post_limit < 2 %} small-hide{% endif %}">
-                      <button
-                        type="button"
-                        class="slider-button slider-button--prev"
-                        name="previous"
-                        aria-label="{{ 'general.slider.previous_slide' | t }}"
-                      >
-                        {% render 'icon-caret' %}
-                      </button>
-                      <div class="slider-counter caption">
-                        <span class="slider-counter--current js-slider-counter--current">1</span>
-                        <span aria-hidden="true"> / </span>
-                        <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-                        <span class="slider-counter--total js-slider-counter--total">{{ section.settings.post_limit }}</span>
-                      </div>
-                      <button
-                        type="button"
-                        class="slider-button slider-button--next"
-                        name="next"
-                        aria-label="{{ 'general.slider.next_slide' | t }}"
-                      >
-                        {% render 'icon-caret' %}
-                      </button>
+                        <button
+                            type="button"
+                            class="slider-button slider-button--prev"
+                            name="previous"
+                            aria-label="{{ 'general.slider.previous_slide' | t }}"
+                        >
+                            {% render 'icon-caret' %}
+                        </button>
+                        <div class="slider-counter caption">
+                            <span class="slider-counter--current js-slider-counter--current">1</span>
+                            <span aria-hidden="true"> / </span>
+                            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+                            <span class="slider-counter--total js-slider-counter--total">{{ section.settings.post_limit }}</span>
+                        </div>
+                        <button
+                            type="button"
+                            class="slider-button slider-button--next"
+                            name="next"
+                            aria-label="{{ 'general.slider.next_slide' | t }}"
+                        >
+                            {% render 'icon-caret' %}
+                        </button>
                     </div>
-                  {%- endif -%}
+                {%- endif -%}
                 </slider-component>
 
             {%- if section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
-                <footer class="button-bar margin-top-lg margin-bottom-med {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %}data-cascade{% endif %} {{ block.shopify_attributes }} >
+                <footer class="button-bar margin-top-lg margin-bottom-med" {{ block.shopify_attributes }}>
                     <a
                         href="{{ section.settings.blog.url }}"
                         id="ViewAll-{{ section.id }}"
@@ -150,10 +150,6 @@
                 </footer>
             {%- endif -%}
     </div>
-
-
-
-
 </div>
 
 {% schema %}

@@ -9,6 +9,16 @@
     }
 }
 
+.blog__posts--wrapper {
+    &.texture-lined {
+        @media screen and (min-width: 990px) {
+            &::before {
+                left: var(--texture-lined-border-size);
+            }
+        }
+    }
+}
+
 .blog__posts {
     &.articles-wrapper {
         @media screen and (min-width: 750px) {
