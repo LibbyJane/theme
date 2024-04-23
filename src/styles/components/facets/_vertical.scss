@@ -187,7 +187,6 @@
             .button--plain {
                 margin-bottom: var(--space);
             }
-
         }
     }
 
@@ -205,10 +204,9 @@
         padding: 0;
     }
 
-
-
     .facets__summary {
         padding-inline: 0;
+        padding-top: 0;
     }
 }
 

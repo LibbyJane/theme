@@ -35,7 +35,8 @@
     .icon-caret {
         cursor: pointer;
         height: 0.6rem;
-        margin: auto 0;
+        margin-top: auto;
+        margin-bottom: auto;
         position: static;
         transition: transform var(--duration-default) var(--transition-type);
     }
@@ -174,10 +175,6 @@
 .facets__summary {
     padding: var(--space);
 
-    .facets__wrapper & {
-        padding-top: 0;
-    }
-
     span {
         transition: all var(--duration-short) var(--transition-type);
     }
@@ -270,10 +267,6 @@
 
     .facets__disclosure[open] & {
         animation: animateMenuOpen var(--duration-default) var(--transition-type);
-    }
-
-    .background-transparent & {
-        background-color: rgba(var(--color-background), 0);
     }
 }
 
