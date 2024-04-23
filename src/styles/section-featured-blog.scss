@@ -13,7 +13,7 @@
     &.texture-lined {
         @media screen and (min-width: 990px) {
             &::before {
-                left: var(--texture-lined-border-size);
+                left: calc(var(--texture-lined-border-size) * -1) ;
             }
         }
     }
