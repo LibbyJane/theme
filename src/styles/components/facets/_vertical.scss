@@ -184,7 +184,10 @@
         }
 
         show-more-button {
-            margin-bottom: var(--space);
+            .button--plain {
+                margin-bottom: var(--space);
+            }
+
         }
     }
 

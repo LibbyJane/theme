@@ -235,6 +235,10 @@
     &:focus,
     .facets__disclosure[open] & {
         color: var(--filter-color-active, currentColor);
+    }
+
+    option {
+        color: var(--filter-color-active, currentColor);
         background-color: rgb(var(--color-background));
     }
 }
