@@ -217,12 +217,10 @@
         color: var(--filter-color-active, currentColor);
         background-color: rgb(var(--color-background));
 
+        &:hover,
         &:checked {
-            &,
-            &:hover {
-                background: rgb(var(--color-foreground));
-                color: rgb(var(--color-background));
-            }
+            background: rgb(var(--color-foreground));
+            color: rgb(var(--color-background));
         }
     }
 }
