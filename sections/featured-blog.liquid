@@ -36,7 +36,7 @@
     </header>
 
     <div class="isolate {%- unless section.settings.content_background_width == 'full' %} page-width{% endunless %} color-{{ section.settings.content_color_scheme }} {% if section.settings.background_texture == 'transparent' %}content-background-transparent {% else %}content-padding-block texture-{{section.settings.background_texture}} {% endif %} blog__posts--wrapper">
-        <slider-component class="slider-mobile-gutter slider-component-mobile {% if section.settings.content_background_width == 'full' %} slider-component-full-width{% else %} slider-component-page-width{% endif %} margin-bottom {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <slider-component class="slider-mobile-gutter slider-component-mobile slider-component-page-width margin-bottom {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 <ul
                 id="Slider-{{ section.id }}"
                 class="blog__posts articles-wrapper contains-card contains-card--article{% if settings.blog_card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
