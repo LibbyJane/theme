@@ -143,7 +143,7 @@
         "overlay_pagination_desktop": true,
         "auto_rotate": true,
         "change_slides_speed": 7,
-        "show_text_below": true,
+        "show_text_below": false,
         "accessibility_info": "Slideshow about our brand",
         "image_behavior": "none"
       }
@@ -208,7 +208,7 @@
         "view_all_style": "secondary",
         "enable_desktop_slider": false,
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "color_scheme": "inverse",
         "background_transparent": true,
         "image_ratio": "square",
@@ -252,7 +252,7 @@
         "heading": "",
         "heading_size": "h2",
         "desktop_layout": "left",
-        "mobile_layout": "collage",
+        "mobile_layout": "column",
         "card_styles": "product-card-wrapper",
         "color_scheme": "accent-1",
         "background_transparent": true,
