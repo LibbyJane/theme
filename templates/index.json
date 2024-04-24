@@ -263,7 +263,7 @@
     "featured_blog_yj8qah": {
       "type": "featured-blog",
       "settings": {
-        "title": "Latest from the blog",
+        "title": "Latest from the blog",
         "heading_size": "h1",
         "blog": "news",
         "post_limit": 3,
