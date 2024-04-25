@@ -33,7 +33,7 @@
         "desktop_layout": "left",
         "mobile_layout": "column",
         "card_styles": "none",
-        "color_scheme": "background-1",
+        "color_scheme": "scheme-background",
         "background_transparent": true,
         "padding_top": 36,
         "padding_bottom": 36
@@ -66,7 +66,7 @@
         "desktop_layout": "right",
         "mobile_layout": "column",
         "card_styles": "none",
-        "color_scheme": "background-1",
+        "color_scheme": "scheme-background",
         "background_transparent": true,
         "padding_top": 0,
         "padding_bottom": 36
@@ -99,7 +99,7 @@
         "desktop_layout": "left",
         "mobile_layout": "column",
         "card_styles": "none",
-        "color_scheme": "background-1",
+        "color_scheme": "scheme-background",
         "background_transparent": true,
         "padding_top": 0,
         "padding_bottom": 36
