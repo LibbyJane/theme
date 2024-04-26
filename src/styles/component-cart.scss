@@ -104,7 +104,6 @@ cart-items {
 
     .totals__total-value {
         @include text-heading;
-        //color: rgb(var(--color-ecommerce));
         font-size: var(--font-size-h5);
     }
 }
@@ -118,7 +117,6 @@ cart-items {
 }
 
 .totals__total {
-    //color: rgb(var(--color-ecommerce));
     font-size: var(--font-size-small);
     font-weight: bold;
     letter-spacing: 0;
@@ -133,6 +131,7 @@ cart-items {
 
 .cart__contents {
     margin-bottom: var(--space);
+
     .is-empty & {
         display: none;
     }
@@ -153,6 +152,7 @@ cart-items {
     &:focus {
         opacity: 1;
     }
+
     &,
     &:only-child {
 
