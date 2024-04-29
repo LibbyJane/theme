@@ -84,7 +84,7 @@
             "box_align": "bottom-left",
             "text_alignment": "left",
             "show_text_box": false,
-            "color_scheme": "scheme-inverse",
+            "color_scheme": "inverse",
             "background_texture": "paper",
             "text_alignment_mobile": "center"
           }
