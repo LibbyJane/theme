@@ -1,6 +1,6 @@
 .header__utility {
     --header-icon-alpha: var(--opacity-light);
-    --icon-inline-padding: var(--space);
+    --icon-inline-padding: var(--space-sm);
 
     display: flex;
         justify-self: end;
@@ -8,6 +8,11 @@
     padding: 0 var(--content-padding-inline);
     position: relative;
     z-index: calc(var(--zi-header) + 1); // needs to be above the logo, otherwise site search is obscured
+
+    @media screen and (min-width: 990px) {
+        margin-right: 0;
+        padding-right: 0;
+    }
 
     .header__icon  {
         &:hover,
@@ -20,6 +25,7 @@
 .header__utility--folded {
     --header-fold-alpha: 0.025;
     margin-right: 0;
+    padding: 0;
 
     &::before,
     &::after {
@@ -72,12 +78,12 @@
         align-items: center;
         justify-content: center;
     min-height: var(--icon-size-lg);
-    width: var(--icon-size-lg);
+    width: calc(var(--icon-size-lg) + var(--icon-inline-padding) + var(--icon-inline-padding));
     //min-height: 4rem;
     //width: 4.6rem;
     // mix-blend-mode: multiply; // won't work on reversed color schemes
     margin: auto 0;
-    padding: var(--space-med) var(--icon-inline-padding, --space);
+    padding: var(--space-med) 0;
     position: relative;
     transition: all var(--duration-default) var(--transition-type);
     transition-delay: var(--duration-short);
@@ -90,6 +96,10 @@
     }
 
     .header__utility--folded & {
+        .scrolled-past-header & {
+            padding-block: var(--space);
+        }
+
         &:hover,
         &:focus {
             --header-fold-alpha: 0.005;
@@ -99,11 +109,6 @@
     .icon {
         flex: 0 0 auto;
     }
-
-
-    // &.has-items {
-    //     color: rgb(var(--color-ecommerce));
-    // }
 }
 
 .header__icon--cart {

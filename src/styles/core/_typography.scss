@@ -19,7 +19,8 @@ address,
 .title-wrapper-with-link {
     margin: 0 0 var(--space);
     padding: 0;
-    orphans: 2;
+    text-wrap-mode: balance;
+    text-wrap: balance;
 }
 
 .text-body {
@@ -45,7 +46,6 @@ h5,
     @include text-heading;
 }
 
-h0,
 .h0 {
     font-size: var(--font-size-h0);
 }

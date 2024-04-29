@@ -77,7 +77,7 @@
 
     ">
         {% if product.media.size > 0 %}
-            <div class="grid__item product__media-wrapper color-{{ section.settings.content_color_scheme }}">
+            <div class="grid__item product__media-wrapper color-{{ section.settings.section_color_scheme }}">
 
                 {% render 'product-media-gallery', variant_images: variant_images %}
             </div>
@@ -122,12 +122,13 @@
                         {%- when 'price' -%}
                             <div class="product__price no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                                 {% assign taxes_included_message = 'products.product.include_taxes' | t %}
+                                {% assign price_class = block.settings.text_style | prepend: 'text-' %}
 
                                 {%- render 'price',
                                     product: product,
                                     use_variant: true,
                                     show_badges: true,
-                                    price_class: block.settings.text_style,
+                                    price_class: price_class,
                                     price_font_scale: block.settings.price_font_scale,
                                     use_color_highlight: block.settings.use_price_color_highlight,
                                     taxes_included: cart.taxes_included,
@@ -219,14 +220,15 @@
                                 >
                                     <button
                                         id="ProductPopup-{{ block.id }}"
-                                        class="product-popup-modal__button link"
+                                        class="button button--plain product-popup-modal__button"
                                         type="button"
                                         aria-haspopup="dialog"
                                     >
                                     {{ block.settings.text | default: block.settings.page.title }}
+                                    {%- render 'icon-arrow' -%}
                                     </button>
                                 </modal-opener>
-                                <a href="{{ block.settings.page.url }}" class="product-popup-modal__button link no-js">
+                                <a href="{{ block.settings.page.url }}" class="button button--plain product-popup-modal__button no-js">
                                     {{- block.settings.text -}}
                                 </a>
 
@@ -254,16 +256,6 @@
                                 </p>
                     {%- endcase -%}
                 {%- endfor -%}
-                <!-- <h1>TODO: remove this view detail link?</h1>
-                <a href="{{ product.url }}" class="link product__view-details animate-arrow">
-                    {{ 'products.product.view_full_details' | t }}
-                    {% render 'icon-arrow' %}
-                </a> -->
-                <!-- <div class="product__tax caption rte">
-                    {%- if shop.shipping_policy.body != blank -%}
-                        {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                    {%- endif -%}
-                </div> -->
             </product-info>
         </div>
     </div>
@@ -1800,7 +1792,7 @@
             "type": "color_scheme",
             "id": "content_color_scheme",
             "label": "t:settings_schema.colors.settings.content_color_scheme.label",
-            "default": "background-1"
+            "default": "scheme-background"
         },
         {
             "type": "select",

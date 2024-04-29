@@ -615,7 +615,7 @@
         "type": "color_scheme",
         "id": "title_color_scheme",
         "label": "t:sections.all.colors.label",
-        "default": "background-1"
+        "default": "scheme-background"
       }
     ]
   },
@@ -678,7 +678,7 @@
         "type": "color_scheme",
         "id": "card_color_scheme",
         "label": "t:sections.all.colors.label",
-        "default": "background-1"
+        "default": "scheme-background"
       },
       {
         "type": "checkbox",
@@ -825,7 +825,7 @@
         "type": "color_scheme",
         "id": "collection_card_color_scheme",
         "label": "t:sections.all.colors.label",
-        "default": "background-2"
+        "default": "scheme-background-2"
       },
       {
         "type": "header",
@@ -966,7 +966,7 @@
         "type": "color_scheme",
         "id": "blog_card_color_scheme",
         "label": "t:sections.all.colors.label",
-        "default": "background-2"
+        "default": "scheme-background-2"
       },
       {
         "type": "header",

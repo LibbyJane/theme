@@ -1,14 +1,9 @@
-.facets-wrapper {
-
-}
-
 .facets-container {
     --filter-color: rgba(var(--color-foreground), var(--opacity-light));
     --filter-color-active: rgb(var(--color-foreground));
 
     display: grid;
         grid-template-columns: auto minmax(0, max-content);
-        // column-gap: var(--space-lg);
     margin-bottom: var(--space-med);
 
     @media screen and (min-width: 990px) {
@@ -34,34 +29,17 @@
 
 .facets__form {
     display: grid;
-    gap: 0 var(--space-xl);
-    grid-template-columns: 1fr max-content max-content;
-
+        gap: 0 var(--space-xl);
+        grid-template-columns: 1fr max-content max-content;
 
     .icon-caret {
         cursor: pointer;
         height: 0.6rem;
-        margin: auto 0;
+        margin-top: auto;
+        margin-bottom: auto;
         position: static;
         transition: transform var(--duration-default) var(--transition-type);
     }
-
-
-
-
-    // .product-count {
-    //     align-self: center;
-    //     position: relative;
-    //     text-align: right;
-    // }
-
-    // .product-count__text {
-    //     font-size: var(--font-size-smaller);
-    //     line-height: calc(1 + 0.5 / var(--font-body-scale));
-    //     margin: 0;
-
-
-    // }
 
     .product-count .loading-overlay__spinner {
         display: none;
@@ -96,6 +74,12 @@
     }
 }
 
+.facets__wrapper {
+    > * {
+        line-height: 1;
+    }
+}
+
 .facets__wrapper--horizontal { // groups availability / price etc
     align-items: center;
     align-self: flex-start;
@@ -105,7 +89,6 @@
     flex-wrap: wrap;
     gap: 0 var(--space-med);
 }
-
 
 .facets__heading {
     display: block;
@@ -126,7 +109,6 @@
     color: rgba(var(--color-foreground), 0.85);
     margin: 0;
     padding: 0;
-//   font-size: var(--font-size-smaller);
 }
 
 .facet-filters__field {
@@ -134,7 +116,6 @@
         align-items: center;
         flex-grow: 1;
         justify-content: flex-end;
-    // gap: var(--space);
 
     .select { // select wrapper
         width: auto;
@@ -160,13 +141,9 @@
     border-radius: 0;
     box-shadow: none;
     filter: none;
-
     font-size: var(--font-size-smaller);
     height: auto;
     line-height: calc(1 + 0.5 / var(--font-body-scale));
-    // margin: 0;
-    // padding-left: 0;
-    // padding-right: 1.75rem;
     transition: none;
 
     &:hover,
@@ -189,24 +166,31 @@
 .facet-filters .select {
     color: var(--filter-color, currentColor);
     cursor: pointer;
-    display: flex;
-        gap: 0 var(--space);
     font-size: var(--font-size-smaller);
 
-    &.facets__summary {
-        padding: var(--space);
+    select {
+        padding-right: calc(var(--icon-size) + var(--space));
+    }
+}
+
+.facets__summary {
+    padding: var(--space);
+
+    span {
+        transition: all var(--duration-short) var(--transition-type);
     }
 
     &:hover,
-    &:focus,
     .facets__disclosure[open] & {
         color: var(--filter-color-active, currentColor);
         background-color: rgb(var(--color-background));
+
+        .background-transparent & {
+            background-color: rgba(var(--color-background), 0);
+        }
     }
 
     &:hover {
-        color: var(--filter-color-active, currentColor);
-
         .icon-caret {
             transform: rotate(-90deg);
         }
@@ -220,9 +204,26 @@
             transform: rotate(-180deg) !important;
         }
     }
+}
 
-    span {
-        transition: all var(--duration-short) var(--transition-type);
+.facet-filters .select {
+    &:hover,
+    &:focus,
+    .facets__disclosure[open] & {
+        color: var(--filter-color-active, currentColor);
+    }
+
+    option {
+        color: var(--filter-color-active, currentColor);
+        background-color: rgb(var(--color-background));
+
+        &:checked {
+            &,
+            &:hover {
+                background: rgb(var(--color-foreground));
+                color: rgb(var(--color-background));
+            }
+        }
     }
 }
 
@@ -253,7 +254,6 @@
 
 
 .facets__reset {
-    // @include underline-on-hover;
     display: flex;
         align-items: center;
         gap: var(--space-sm);
@@ -261,6 +261,7 @@
 }
 
 .facets__display {
+    @include scrollbars;
     border-width: var(--popup-border-width);
     border-style: solid;
     border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
@@ -309,77 +310,8 @@
 }
 
 .facet-checkbox { // checkbox label / wrapper
-    // cursor: pointer;
-    // display: flex;
-    //     flex-grow: 1;
-        font-size: var(--font-size-smaller);
-    // gap: var(--space);
-    // position: relative;
-    // word-break: break-word;
-
-    // &:hover,
-    // &:focus {
-    //     .icon {
-    //         path {
-    //             stroke-dasharray: var(--path-length);
-    //             animation: draw var(--duration-medium) backwards;
-
-    //             &:nth-child(2) {
-    //                 animation-delay: var(--duration-short);
-    //             }
-    //         }
-
-    //     }
-    // }
-
-    // input[type='checkbox'] {
-    //     // appearance: none;
-    //     // position: absolute;
-    //     // inset: 0;
-    //     // z-index: -1;
-
-    //     // &:checked {
-    //     //     ~ .icon-checkmark {
-    //     //         visibility: visible;
-    //     //         transform: scale(0.9);
-    //     //     }
-    //     // }
-
-    //     .no-js & {
-    //         z-index: 0;
-    //     }
-    // }
-
-    // svg {
-    //     background-color: rgb(var(--color-background));
-    //     flex-shrink: 0;
-    //     margin: auto 0;
-    // }
-
-    // .icon {
-    //     --path-length: 30;
-    //     stroke-width: 1.5px;
-    // }
-
-    // .icon-checkmark {
-    //     position: absolute;
-    //         inset: 1px;
-    //     transform: scale(0);
-    //     transition: transform var(--duration-default) var(--transition-type);
-    //     visibility: hidden;
-    //     z-index: var(--zi-base);
-    // }
-
-    // span {
-    //     display: inline-block;
-    //     line-height: 1.2;
-    //     margin: auto 0;
-    // }
+    font-size: var(--font-size-smaller);
 }
-
-// .facet-checkbox--disabled {
-//     @include disabled;
-// }
 
 .facets__price {
     display: flex;
@@ -390,8 +322,6 @@
         + .field-currency {
             margin-left: 2rem;
         }
-
-
     }
 
     .field-currency {
@@ -407,9 +337,6 @@
 .facets__button {
     margin: 0 0 0 var(--space-sm);
     min-height: 0;
-    // box-shadow: none;
-    // padding-top: 1.4rem;
-    // padding-bottom: 1.4rem;
 }
 
 .facets__button-no-js {
@@ -441,8 +368,6 @@ facet-remove {
     display: flex;
         align-items: center;
     margin-left: var(--space-med);
-    // @include underlined-link;
-    // font-size: var(--font-size-smaller);
 }
 
 
@@ -451,16 +376,10 @@ facet-remove {
         align-items: center;
         justify-content: center;
     margin-left: auto;
-
-    // * {
-    //     font-size: 1rem;
-    // }
 }
 
 
 .active-facets__button {
-    // @include sharp-text;
-    // @include underlined-link;
     display: flex;
         align-items: center;
         justify-content: space-between;
@@ -491,16 +410,6 @@ facet-remove {
     font-size: inherit;
 
 }
-
-
-
-
-// @media screen and (min-width: 990px) {
-//     .active-facets__button-wrapper *, span.active-facets__button-inner {
-//     font-size: var(--font-size-smaller);
-//     }
-// }
-
 
 .no-js a.active-facets__button:focus {
     outline: none;

@@ -182,6 +182,12 @@
             pointer-events: none;
             z-index: -1;
         }
+
+        show-more-button {
+            .button--plain {
+                margin-bottom: var(--space);
+            }
+        }
     }
 
     .facets__header-vertical {
@@ -198,10 +204,9 @@
         padding: 0;
     }
 
-
-
     .facets__summary {
         padding-inline: 0;
+        padding-top: 0;
     }
 }
 

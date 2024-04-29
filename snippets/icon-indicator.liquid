@@ -1,0 +1,33 @@
+{% comment %}
+    Renders indicator icon.
+    Accepts:
+        - class: {string} (optional) additional css classes
+
+    Usage:
+    {% render 'icon-indicator' class: 'icon-indicator--success icon-bg-color--success' %}
+{% endcomment %}
+
+<svg
+    class="icon icon-indicator {{ class }}"
+    aria-hidden="true"
+    focusable="false"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 16 16"
+    fill="none"
+>
+    <path fill="var(--fill-color)" opacity="0.66" enable-background="new" d="M7.7,1C6.6,1,5,1.3,3.6,2.3C2.2,3.3,1,5.2,1,8.2c0,6.1,13.7,5.5,14-0.1
+        C14.6,1.5,9.6,1,7.7,1z"/>
+    <path fill="none" stroke=" currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8,11.2c-0.1,0-0.3,0-0.4,0.1
+        c-0.1,0.1-0.2,0.3-0.2,0.6c0,0.6,0.4,0.6,0.6,0.6c0,0,0,0,0,0h0c0.3,0,0.6-0.1,0.6-0.7C8.6,11.2,8.2,11.2,8,11.2z"/>
+    <path class="indicator" fill="none" stroke=" currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8.1,11.8
+        c0.3,0,3-1.5,3.3-1.9"/>
+    <path fill="none" stroke=" currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8,6.6C8,6.3,8,5.3,8,4.8"/>
+    <path fill="none" stroke=" currentColor" stroke-linecap="round" stroke-linejoin="round" d="M5.6,7.1c0-0.3,0.1-1.6,0-2.1"/>
+    <path fill="none" stroke=" currentColor" stroke-linecap="round" stroke-linejoin="round" d="M10.3,7.2c0.1-0.2,0.1-1.2,0.1-1.6"/>
+    <path fill="none" stroke=" currentColor" stroke-linecap="round" stroke-linejoin="round" d="M12.7,8.5c0.1-0.2,0-1.2-0.1-1.6"/>
+    <path fill="none" stroke=" currentColor" stroke-linecap="round" stroke-linejoin="round" d="M3.2,8.5c-0.1-0.4,0.1-1.2,0-1.7"/>
+    <path fill="none" stroke=" currentColor" stroke-linecap="round" stroke-linejoin="round" d="M3.3,6.8c1.2-1.3,2.5-2.1,4.5-2.1
+        c1.7,0,3.3,0.6,4.7,2.1"/>
+    <path fill="none" stroke=" currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8.3,2.9c3-0.1,6.3,2.6,6.7,6s-1.6,5-1.6,5
+        L2.3,13.9c0,0-2-1.8-1.1-5.7C2.2,4.2,5,3,8.3,2.9z"/>
+</svg>

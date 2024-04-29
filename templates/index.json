@@ -1,51 +1,109 @@
 {
     "sections": {
-      "image_banner": {
-        "type": "image-banner",
-        "blocks": {
-          "heading": {
-            "type": "heading",
-            "settings": {
-              "heading": "Image banner",
-              "heading_size": "h0"
+      "image_with_text": {
+          "type": "image-with-text",
+          "blocks": {
+            "heading": {
+              "type": "heading",
+              "settings": {
+                "heading": "Image with text",
+                "heading_size": "h0"
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+                "text_style": "display"
+              }
+            },
+            "button": {
+              "type": "button",
+              "settings": {
+                "button_label": "Shop all",
+                "button_link": "shopify://collections/all",
+                "button_style_secondary": "secondary"
+              }
             }
           },
-          "text": {
-            "type": "text",
-            "settings": {
-              "text": "Give customers details about the banner image(s) or content on the template.",
-              "text_style": "body"
-            }
-          },
-          "button": {
-            "type": "buttons",
-            "settings": {
-              "button_label_1": "Shop all",
-              "button_link_1": "shopify://collections/all",
-              "button_style_secondary_1": true,
-              "button_label_2": "",
-              "button_link_2": "",
-              "button_style_secondary_2": false
-            }
+          "block_order": [
+            "heading",
+            "text",
+            "button"
+          ],
+          "settings": {
+            "height": "adapt",
+            "desktop_image_width": "medium",
+            "layout": "text_first",
+            "desktop_content_position": "middle",
+            "desktop_content_alignment": "center",
+            "content_layout": "overlap",
+            "color_scheme": "",
+            "background_texture": "lined",
+            "image_behavior": "none",
+            "mobile_content_alignment": "left",
+            "padding_top": 20,
+            "padding_bottom": 20
           }
         },
-        "block_order": [
-          "heading",
-          "text",
-          "button"
-        ],
-        "settings": {
-          "image_overlay_opacity": 40,
-          "image_height": "large",
-          "desktop_content_position": "bottom-center",
-          "show_text_box": false,
-          "desktop_content_alignment": "center",
-          "color_scheme": "scheme-3",
-          "mobile_content_alignment": "center",
-          "stack_images_on_mobile": false,
-          "show_text_below": false
-        }
-      },
+        "featured_collection": {
+          "type": "featured-collection",
+          "settings": {
+            "title": "Featured products",
+            "heading_size": "h2",
+            "collection": "all",
+            "products_to_show": 8,
+            "columns_desktop": 4,
+            "color_scheme": "scheme-1",
+            "show_view_all": false,
+            "swipe_on_mobile": false,
+            "image_ratio": "adapt",
+            "show_secondary_image": true,
+            "show_vendor": false,
+            "show_rating": false,
+            "columns_mobile": "2",
+            "padding_top": 28,
+            "padding_bottom": 36
+          }
+        },
+        "collage": {
+          "type": "collage",
+          "blocks": {
+            "collection-0": {
+              "type": "collection",
+              "settings": {
+                "collection": ""
+              }
+            },
+            "product": {
+              "type": "product",
+              "settings": {
+                "product": "",
+                "second_image": false
+              }
+            },
+            "collection-1": {
+              "type": "collection",
+              "settings": {
+                "collection": ""
+              }
+            }
+          },
+          "block_order": [
+            "collection-0",
+            "product",
+            "collection-1"
+          ],
+          "settings": {
+            "heading": "Multimedia collage",
+            "heading_size": "h2",
+            "desktop_layout": "left",
+            "mobile_layout": "collage",
+            "color_scheme": "scheme-1",
+            "padding_top": 36,
+            "padding_bottom": 36
+          }
+        },
       "rich_text": {
         "type": "rich-text",
         "blocks": {
@@ -68,81 +126,10 @@
           "text"
         ],
         "settings": {
-          "color_scheme": "scheme-1",
+          "color_scheme": "scheme-inverse",
           "full_width": true,
-          "padding_top": 40,
-          "padding_bottom": 0
-        }
-      },
-      "featured_collection": {
-        "type": "featured-collection",
-        "settings": {
-          "title": "Featured products",
-          "heading_size": "h2",
-          "collection": "all",
-          "products_to_show": 8,
-          "columns_desktop": 4,
-          "color_scheme": "scheme-1",
-          "show_view_all": false,
-          "swipe_on_mobile": false,
-          "image_ratio": "adapt",
-          "show_secondary_image": true,
-          "show_vendor": false,
-          "show_rating": false,
-          "columns_mobile": "2",
-          "padding_top": 28,
-          "padding_bottom": 36
-        }
-      },
-      "collage": {
-        "type": "collage",
-        "blocks": {
-          "collection-0": {
-            "type": "collection",
-            "settings": {
-              "collection": ""
-            }
-          },
-          "product": {
-            "type": "product",
-            "settings": {
-              "product": "",
-              "second_image": false
-            }
-          },
-          "collection-1": {
-            "type": "collection",
-            "settings": {
-              "collection": ""
-            }
-          }
-        },
-        "block_order": [
-          "collection-0",
-          "product",
-          "collection-1"
-        ],
-        "settings": {
-          "heading": "Multimedia collage",
-          "heading_size": "h2",
-          "desktop_layout": "left",
-          "mobile_layout": "collage",
-          "color_scheme": "scheme-1",
           "padding_top": 36,
-          "padding_bottom": 36
-        }
-      },
-      "video": {
-        "type": "video",
-        "settings": {
-          "heading": "",
-          "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-          "heading_size": "h1",
-          "description": "",
-          "full_width": false,
-          "color_scheme": "scheme-1",
-          "padding_top": 36,
-          "padding_bottom": 36
+          "padding_bottom": 20
         }
       },
       "multicolumn": {
@@ -184,27 +171,30 @@
         "settings": {
           "title": "",
           "heading_size": "h1",
-          "image_width": "third",
-          "image_ratio": "adapt",
+          "full_width": false,
+          "image_width": "full",
+          "image_ratio": "square",
           "columns_desktop": 3,
           "column_alignment": "center",
-          "background_style": "none",
-          "button_label": "",
+          "column_link_hover_style": "hover-highlight",
+          "button_label": "Button label",
           "button_link": "",
-          "swipe_on_mobile": false,
-          "color_scheme": "scheme-1",
+          "section_color_scheme": "scheme-inverse",
+          "background_transparent": true,
+          "color_scheme": "scheme-background",
+          "background_texture": "paper",
           "columns_mobile": "1",
+          "swipe_on_mobile": false,
           "padding_top": 36,
           "padding_bottom": 36
         }
       }
     },
     "order": [
-      "image_banner",
+      "image_with_text",
       "rich_text",
       "featured_collection",
       "collage",
-      "video",
       "multicolumn"
     ]
   }

@@ -48,8 +48,6 @@
         or section.settings.enable_follow_on_shop
     -%}
         {%- unless only_empty_brand -%}
-
-
             <div class="footer__content-top page-width content-padding-inline ">
                 {%- if section.blocks.size > 0 -%}
                     {%- liquid
@@ -88,7 +86,7 @@
 
                                         {%- when 'text' -%}
                                             <div class="footer-block__details-content rte">
-                                             {{ block.settings.subtext }}
+                                                {{ block.settings.subtext }}
                                             </div>
 
                                         {%- when 'link_list' -%}
@@ -101,6 +99,7 @@
                                                             class="list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
                                                         >
                                                             {{ link.title }}
+                                                            {% render 'icon-arrow' %}
                                                         </a>
                                                     </li>
                                                     {%- endfor -%}
@@ -239,20 +238,19 @@
                 {%- endif -%}
 
                 {%- if section.settings.show_social and has_social_icons -%}
-                    {%- render 'social-icons', class: 'footer__row-item footer__row-item--list-social' -%}
+                    <div class="footer__row-item footer__row-item--list-social">
+                        {%- if section.settings.social_heading != blank -%}
+                            <h5 class="inline-richtext">{{ section.settings.social_heading }}</h5>
+                        {%- endif -%}
+                        {%- render 'social-icons' -%}
+                    </div>
                 {%- endif -%}
                 </div>
             </div>
         {%- endunless -%}
     {%- endif -%}
 
-    <div
-        class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-        {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-        {% endif %}
-    >
-
+    <div class="footer__content-bottom">
         {%- liquid
             assign show_country_selector = false
             if section.settings.enable_country_selector and localization.available_countries.size > 1
@@ -528,7 +526,7 @@
             "type": "color_scheme",
             "id": "color_scheme",
             "label": "t:sections.all.colors.label",
-            "default": "background-1"
+            "default": "scheme-inverse"
         },
         {
             "type": "header",
@@ -568,6 +566,12 @@
             "id": "show_social",
             "default": true,
             "label": "t:sections.footer.settings.show_social.label"
+        },
+        {
+            "type": "inline_richtext",
+            "id": "social_heading",
+            "default": "Connect with us",
+            "label": "t:sections.footer.settings.social_heading.label"
         },
         {
             "type": "header",

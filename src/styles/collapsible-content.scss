@@ -10,51 +10,7 @@
 
     .accordion {
         margin: initial;
-
-        // &:first-child {
-        //     &::before {
-        //         content: none;
-        //     }
-        // }
-
-
-        // &:nth-child(2) {
-        //     &::before {
-        //         transform: rotate(0.15deg);
-        //     }
-        // }
-
-        // &::before {
-        //     --underline-height: 1px;
-        //     content: '';
-        //     background-color: rgba(var(--color-link), var(--opacity-quarter));
-        //     height: var(--underline-height);
-        //     pointer-events: none;
-        //     position: absolute;
-        //         top: calc(var(--underline-height) * -1);
-        //         left: 0;
-        //         right: var(--space);
-        //     transform: rotate(-0.15deg);
-        //     transition: transform var(--duration-medium) var(--transition-type);
-        //     width: auto;
-        // }
     }
-
-    // details {
-    //     &[open] {
-    //         summary {
-    //             // background: rgba(var(--color-foreground), 0.05);
-    //         }
-    //     }
-    // }
-
-    //summary {
-        //padding-right: var(--space-sm); // needed? spacing incorrect on home page
-
-        // &:hover {
-        //     // background: rgba(var(--color-foreground), 0.05);
-        // }
-    //}
 }
 
 .collapsible-content__grid {
@@ -62,7 +18,7 @@
     margin-inline: auto;
 }
 
-.collapsible-content__grid-item {
+.collapsible-content__grid-item.collapsible-content__grid-item {
     margin: 0 auto auto;
     max-width: none;
 
@@ -72,14 +28,6 @@
 }
 
 .collapsible-content__grid-item--accordion-wrapper {
-    // .collapsible-content__grid--has-media & {
-    //     margin-top: 2px;
-
-    //     &:first-child {
-    //         margin-top: -2px;
-    //     }
-    // }
-
     &.texture-torn {
         padding: var(--space);
     }
@@ -87,7 +35,7 @@
 
 /* Needed for gradient continuity with or without animation so that transparent PNG images come up as we would expect */
 .collapsible-content__media {
-  background: transparent;
+    background: transparent;
 }
 
 .collapsible-content__media--small {
@@ -99,20 +47,20 @@
 }
 
 @media screen and (min-width: 750px) {
-  .collapsible-content__grid--reverse {
-    flex-direction: row-reverse;
-  }
+    .collapsible-content__grid--reverse {
+        flex-direction: row-reverse;
+    }
 }
 
 .collapsible-content-wrapper-narrow {
-  margin: 0 auto;
-  padding-right: var(--content-padding-inline);
-  padding-left: var(--content-padding-inline);
-  max-width: 73.4rem;
+    margin: 0 auto;
+    padding-right: var(--content-padding-inline);
+    padding-left: var(--content-padding-inline);
+    max-width: 73.4rem;
 }
 
 .collapsible-content__header {
-  word-break: break-word;
+    word-break: break-word;
 }
 
 .collapsible-content__heading {
@@ -133,6 +81,6 @@
 
 .collapsible-row-layout .accordion {
   /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
-  transform: perspective(0);
+    transform: perspective(0);
 }
 

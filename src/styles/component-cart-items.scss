@@ -1,8 +1,5 @@
 @import "helpers/common";
 
-
-// $color_1: rgb(var(--color-foreground));
-
 .cart-items {
     display: block;
 
@@ -132,7 +129,6 @@
 
 .cart-item__image-container {
     @include corners;
-    // @include tape;
     display: inline-flex;
     align-items: flex-start;
 }
@@ -146,9 +142,6 @@
 .cart-item__details {
     grid-area: cart-item-details;
     font-size: var(--font-size-smaller);
-    // font-size: 1.6rem;
-    // line-height: 1.4;
-    // max-width: 30rem;
 
     dl {
         margin: 0;
@@ -193,12 +186,15 @@
         font-size: var(--font-size-smaller);
     }
 }
+
 .cart-item__old-price {
     opacity: var(--opacity-light);
 }
+
 .cart-item__final-price {
     font-weight: 400;
 }
+
 .product-option {
     font-size: var(--font-size-smaller);
     word-break: break-word;
@@ -246,6 +242,7 @@
     &.disabled {
         pointer-events: none;
     }
+
     &:hover,
     &:focus {
         color: rgba(var(--color-foreground), 1);

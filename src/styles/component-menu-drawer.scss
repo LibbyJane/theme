@@ -1,86 +1,95 @@
 @import "helpers/common";
 
 .header__icon--menu {
-  position: initial;
+    position: initial;
 }
 
 .js menu-drawer > details > summary::before,
 .js menu-drawer > details[open]:not(.menu-opening) > summary::before {
-  content: '';
-  position: absolute;
-  cursor: default;
-  width: 100%;
-  height: calc(100vh - 100%);
-  height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
-  top: 100%;
-  left: 0;
-  background: rgba(var(--color-foreground), 0.5);
-  opacity: 0;
-  visibility: hidden;
-  z-index: 2;
-  transition: opacity 0s, visibility 0s;
+    content: '';
+    position: absolute;
+    cursor: default;
+    width: 100%;
+    height: calc(100vh - 100%);
+    //height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
+    top: 100%;
+    left: 0;
+    background: rgba(var(--color-foreground), 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    transition: opacity 0, visibility 0;
 }
 
 menu-drawer > details[open] > summary::before {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity var(--duration-default) ease, visibility var(--duration-default) ease;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity var(--duration-default) ease, visibility var(--duration-default) ease;
 }
 
 .menu-drawer {
-  position: absolute;
-  transform: translateX(-100%);
-  visibility: hidden;
-  z-index: 3;
-  left: 0;
-  top: 100%;
-  width: 100%;
-  padding: 0;
-  background-color: rgb(var(--color-background));
-  overflow-x: hidden;
-  filter: drop-shadow(
-    var(--drawer-shadow-horizontal-offset) var(--drawer-shadow-vertical-offset) var(--drawer-shadow-blur-radius)
-      rgba(var(--color-shadow), var(--drawer-shadow-opacity))
-  );
+    position: absolute;
+    transform: translateX(-100%);
+    visibility: hidden;
+    z-index: 3;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    padding: 0;
+    background-color: rgb(var(--color-background));
+    overflow-x: hidden;
+    filter: drop-shadow(var(--drawer-shadow-horizontal-offset) var(--drawer-shadow-vertical-offset) var(--drawer-shadow-blur-radius) rgba(var(--color-shadow), var(--drawer-shadow-opacity)));
+
+    @media screen and (min-width: 750px) {
+        width: 40rem;
+        border-width: 0 var(--drawer-border-width) 0 0;
+        border-style: solid;
+        border-color: rgba(var(--color-foreground), var(--drawer-border-opacity));
+    }
+
+    .js & {
+        height: calc(100vh - 100%);
+        height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
+    }
+
+    .no-js & {
+        @media screen and (min-width: 750px) {
+            height: auto;
+        }
+    }
+
+    .list-social {
+        justify-content: flex-start;
+        margin-left: calc(var(--content-padding-inline) * -1);
+
+        &:empty {
+            display: none;
+        }
+    }
 }
 
-.js .menu-drawer {
-  height: calc(100vh - 100%);
-  height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
-}
+
 
 .js details[open] > .menu-drawer,
 .js details[open] > .menu-drawer__submenu {
-  transition: transform var(--duration-default) ease, visibility var(--duration-default) ease;
+    transition: transform var(--duration-default) ease, visibility var(--duration-default) ease;
 }
 
 .no-js details[open] > .menu-drawer,
 .js details[open].menu-opening > .menu-drawer,
 details[open].menu-opening > .menu-drawer__submenu {
-  transform: translateX(0);
-  visibility: visible;
+    transform: translateX(0);
+    visibility: visible;
 }
 
 .js .menu-drawer__navigation .submenu-open {
-  visibility: hidden; /* hide menus from screen readers when hidden by submenu */
+    visibility: hidden; /* hide menus from screen readers when hidden by submenu */
 }
 
-@media screen and (min-width: 750px) {
-  .menu-drawer {
-    width: 40rem;
-    border-width: 0 var(--drawer-border-width) 0 0;
-    border-style: solid;
-    border-color: rgba(var(--color-foreground), var(--drawer-border-opacity));
-  }
-
-  .no-js .menu-drawer {
-    height: auto;
-  }
-}
 
 .menu-drawer__inner-container {
-  position: relative;
-  height: 100%;
+    position: relative;
+    height: 100%;
 }
 
 .menu-drawer__navigation-container {
@@ -118,8 +127,10 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__menu-item {
+    @include hover-highlight;
+    color: rgb(var(--color-foreground));
     display: flex;
-    font-size: var(--font-size-h6);
+    // font-size: var(--font-size-h6);
     padding: var(--space-sm) var(--content-padding-inline);
 
     &:first-child {
@@ -145,55 +156,47 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__menu-item--active,
 .menu-drawer__menu-item:focus,
-.menu-drawer__close-button:focus,
 .menu-drawer__menu-item:hover,
+.menu-drawer__close-button:focus,
 .menu-drawer__close-button:hover {
-    @include hover-highlight;
-  color: rgb(var(--color-foreground));
-  background-color: rgba(var(--color-foreground), 0.04);
+
+
+    //background-color: rgba(var(--color-foreground), 0.04);
 }
 
 .menu-drawer__menu-item--active:hover {
-  background-color: rgba(var(--color-foreground), 0.08);
+    //background-color: rgba(var(--color-foreground), 0.08);
 }
 
 .js .menu-drawer__menu-item .icon-caret,
 .no-js .menu-drawer .icon-arrow {
-  display: none;
+    display: none;
 }
 
-// .menu-drawer__menu-item > .icon-arrow {
-//   position: absolute;
-//   right: var(--space-xl);
-//   top: 50%;
-//   transform: translateY(-50%);
-// }
-
 .js .menu-drawer__submenu {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  background-color: rgb(var(--color-background));
-  z-index: 1;
-  transform: translateX(100%);
-  visibility: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(var(--color-background));
+    z-index: var(--zi-base);
+    transform: translateX(100%);
+    visibility: hidden;
 }
 
 .js .menu-drawer__submenu .menu-drawer__submenu {
-  overflow-y: auto;
+    overflow-y: auto;
 }
 
 .menu-drawer__close-button {
+    @include text-heading;
     background-color: transparent;
     display: flex;
         align-items: center;
         justify-content: start;
         gap: var(--space-sm);
-    font-family: var(--font-body-family);
-    font-size: var(--font-size-base);
-    font-style: var(--font-body-style);
+    font-size: var(--font-size-h6);
     margin-top: var(--space-med);
     padding: var(--space-med) var(--content-padding-inline);
     text-align: left;
@@ -217,19 +220,19 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .header--has-social .menu-drawer__utility-links {
-  padding: var(--content-padding);
+    padding: var(--content-padding);
 }
 
 @media screen and (max-width: 749px) {
-  .header--has-account:where(:not(.header--has-social):not(.header--has-localizations)) .menu-drawer__utility-links {
-    padding: var(--space-lg) var(--space-xl);
-  }
+    .header--has-account:where(:not(.header--has-social):not(.header--has-localizations)) .menu-drawer__utility-links {
+        padding: var(--space-lg) var(--space-xl);
+    }
 }
 
 @media screen and (max-width: 989px) {
-  .header--has-localizations:where(:not(.header--has-social)) .menu-drawer__utility-links {
-    padding: var(--space-lg) var(--space-xl);
-  }
+    .header--has-localizations:where(:not(.header--has-social)) .menu-drawer__utility-links {
+        padding: var(--space-lg) var(--space-xl);
+    }
 }
 
 .menu-drawer__account {
@@ -255,18 +258,3 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__utility-links:has(.menu-drawer__localization) .menu-drawer__account {
   margin: 0;
 }
-
-
-.menu-drawer .list-social {
-  justify-content: flex-start;
-  margin-left: -1.25rem
-}
-
-.menu-drawer .list-social:empty {
-  display: none;
-}
-
-.menu-drawer .list-social__link {
-  padding: var(--space);
-}
-

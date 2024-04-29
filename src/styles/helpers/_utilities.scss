@@ -14,11 +14,12 @@
     margin-bottom: 0 !important;
 }
 
-// enable if required
-// margin-top {
-//     margin-top: var(--space) !important;
-// }
+.margin-top {
+    margin-top: var(--space) !important;
+}
 
+
+// enable if required
 // .margin-top--med {
 //     margin-top: var(--space-med) !important;
 // }
@@ -96,6 +97,10 @@
     color: rgb(var(--color-success)) !important;
 }
 
+.color--warning {
+    color: rgb(var(--color-warning)) !important;
+}
+
 // .bg--danger {
 //     background-color: rgb(var(--color-danger));
 // }
@@ -106,6 +111,10 @@
 
 .visibility-hidden {
     visibility: hidden;
+}
+
+.overflow-hidden {
+    overflow: clip;
 }
 
 .break {
@@ -140,6 +149,14 @@
 .disabled,
 [disabled] {
     @include disabled;
+}
+
+.visually-disabled {
+    @include disabled;
+
+    &:not([disabled="false"]) { // shopify-buy-it-now button needs the :not
+        pointer-events: initial;
+    }
 }
 
 @media (prefers-reduced-motion) {

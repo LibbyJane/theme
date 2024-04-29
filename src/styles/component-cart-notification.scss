@@ -40,13 +40,13 @@
     }
 
     &.animate {
-        transition: transform var(--duration-short) ease, visibility 0s var(--duration-short) ease;
+        transition: transform var(--duration-short) ease, visibility 0 var(--duration-short) ease;
     }
 
     &.active {
         display: flex;
         transform: translateY(0);
-        transition: transform var(--duration-default) ease, visibility 0s;
+        transition: transform var(--duration-default) ease, visibility 0;
         visibility: visible;
         z-index: var(--zi-header);
     }

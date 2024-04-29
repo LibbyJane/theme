@@ -206,12 +206,12 @@
         {% if showBadge %}
             <div class="card-badge
                 {% if card_product.available -%}
-                    {{ }}card-badge--{{ settings.badge_position | replace: " ", "-" }}
+                    card-badge--{{ settings.badge_position | replace: " ", "-" }}
                     {% if card_product.compare_at_price > card_product.price -%}
-                        {{ }}color-{{ settings.sale_badge_color_scheme }}
+                        color-{{ settings.sale_badge_color_scheme }}
                     {%- endif -%}
                 {% else -%}
-                    {{ }}color-{{ settings.sold_out_badge_color_scheme }} card-badge--bottom-left
+                    color-{{ settings.sold_out_badge_color_scheme }} card-badge--bottom-left
                 {%- endif -%}
             ">
                 <span
@@ -233,43 +233,19 @@
             </div>
         {%- endif -%}
     </a>
-    <!-- {%- if card_product.featured_media and show_secondary_image and card_product.media[1] != null -%}
-        <div class="card__media media--hover-effect {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} {% endif %}">
-            {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
-            <img
-                srcset="
-                {%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
-                {%- if card_product.media[1].width >= 360 -%}{{ card_product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
-                {%- if card_product.media[1].width >= 533 -%}{{ card_product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
-                {%- if card_product.media[1].width >= 720 -%}{{ card_product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
-                {%- if card_product.media[1].width >= 940 -%}{{ card_product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
-                {%- if card_product.media[1].width >= 1066 -%}{{ card_product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
-                {{ card_product.media[1] | image_url }} {{ card_product.media[1].width }}w
-                "
-                src="{{ card_product.media[1] | image_url: width: 533 }}"
-                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                alt=""
-                class="motion-reduce"
-                loading="lazy"
-                width="{{ card_product.media[1].width }}"
-                height="{{ card_product.media[1].height }}"
-            >
-                {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
-        </div>
-    {%- endif -%} -->
 {%- else -%}
     <div class="card-wrapper product-card-wrapper">
         <div class="card card--{{ settings.card_style }} {% if extend_height %} card--extend-height{% endif %} {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}" style="--ratio-percent: 100%;">
-            <div class="card__inner {% if settings.card_style == 'standard' %} color-{{ settings.card_color_scheme }} gradient{% endif %} {% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
+            <div class="card__inner {% if settings.card_style == 'standard' %} color-{{ settings.card_color_scheme }} gradient{% endif %} {% if card_product.featured_media or placeholder_image or settings.card_style == 'standard' %} ratio{% endif %}"
             style="--ratio-percent: 100%;"
             >
                 <div class="card__media">
                     <div class="media media--transparent">
-                    {%- if placeholder_image -%}
-                        {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
-                    {%- else -%}
-                        {{ 'product-2' | placeholder_svg_tag: 'placeholder-svg' }}
-                    {% endif %}
+                        {%- if placeholder_image -%}
+                            {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
+                        {%- else -%}
+                            {{ 'product-2' | placeholder_svg_tag: 'placeholder-svg' }}
+                        {% endif %}
                     </div>
                 </div>
             </div>

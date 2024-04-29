@@ -1,0 +1,18 @@
+.subify-css-variables.subify-css-variables {
+    // --textPrimaryColor: 36, 40, 51;
+    // --textSecondaryColor: 57, 63, 81;
+    // --backgroundSecondaryColor: 225, 227, 234;
+    // --borderRadius: NaNpx;
+    // --backgroundPrimaryColor: 255, 255, 255;
+
+    --textPrimaryColor: var(--color-foreground);
+    --textSecondaryColor: var(--color-link);
+    --backgroundPrimaryColor: var(--color-background);
+    --backgroundSecondaryColor: var(--color-background);
+    --borderRadius: 0
+
+    a {
+        --textSecondaryColor: var(--color-link);
+        margin-bottom: var(--space);
+    }
+}

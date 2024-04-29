@@ -11,6 +11,27 @@
         margin: 0 0 var(--space-med);
         padding: 0;
     }
+
+    .list-menu__item {
+        display: inline-flex;
+        gap: var(--space-sm);
+
+        &:hover,
+        &:focus {
+            .icon {
+                opacity: 1;
+            }
+        }
+
+        .icon {
+            opacity: 0;
+            width: var(--icon-size-sm);
+        }
+    }
+
+    .list-menu__item--link {
+        padding-top: 0;
+    }
 }
 
 // blocks with content added via the theme editor - menu, brand information, text, image, or app blocks
@@ -20,7 +41,7 @@
     margin-bottom: var(--space-lg);
 
     @media screen and (min-width: 750px) {
-        grid-template-columns: repeat(var(--footer-grid-cols), 1fr);
+        grid-template-columns: repeat(var(--footer-grid-cols), minmax(max-content, 1fr));
         justify-content: start;
     }
 }
@@ -30,6 +51,7 @@
 
     .list-social {
         justify-content: center;
+        margin-inline: calc(var(--content-padding-inline) * -1);
         margin-bottom: var(--space-med);
     }
 }
@@ -115,14 +137,15 @@
 }
 
 .footer__row-item {
+    line-height: 1.2;
     margin-bottom: var(--space-sm);
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 
     @media screen and (min-width: 750px) {
-        margin-left: 0;
-        margin-right: 0;
+        flex: 0 1 auto;
+        margin: 0 0 auto;
         text-align: left;
     }
 
@@ -132,6 +155,10 @@
             margin-right: auto;
             text-align: center;
         }
+    }
+
+    .footer__content-bottom & {
+        opacity: var(--opacity-light);
     }
 
 
@@ -259,7 +286,17 @@
         align-self: start;
     }
 }
+.footer__row-item--copyright,
+.footer__row-item--policies {
+    font-size: var(--font-size-caption);
+}
 
 .footer__copyright-block {
     display: inline-flex;
+
+    &.powered-by {
+        a {
+            @include underline-on-hover;
+        }
+    }
 }
