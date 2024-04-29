@@ -137,7 +137,7 @@
             "settings": {
                 "layout": "full_bleed",
                 "slide_height": "small",
-                "section_color_scheme": "inverse",
+                "section_color_scheme": "scheme-inverse",
                 "slider_visual": "numbers",
                 "slider_visual_background_opacity": 50,
                 "overlay_pagination_desktop": true,
