@@ -179,9 +179,9 @@
         </slider-component>
 
         {%- if section.settings.button_label != blank -%}
-            <footer class="button-bar {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %}data-cascade{% endif %} {{ block.shopify_attributes }} >
+            <footer class="button-bar {%- if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {% if settings.animations_reveal_on_scroll %}data-cascade{% endif %} {{ block.shopify_attributes }} >
                 <a
-                    class="button button--primary"
+                    class="button button--primary margin-bottom"
                     {% if section.settings.button_link == blank %}
                         role="link" aria-disabled="true"
                     {% else %}
