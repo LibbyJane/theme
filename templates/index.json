@@ -1,5 +1,36 @@
 {
   "sections": {
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "desktop_content_position": "center",
+        "color_scheme": "scheme-inverse",
+        "full_width": true,
+        "background_texture": "paper",
+        "padding_top": 36,
+        "padding_bottom": 20
+      }
+    },
     "image_with_text": {
       "type": "image-with-text",
       "blocks": {
@@ -43,37 +74,6 @@
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "content_alignment": "center",
-        "desktop_content_position": "center",
-        "color_scheme": "scheme-inverse",
-        "full_width": false,
-        "background_texture": "paper",
-        "padding_top": 36,
         "padding_bottom": 20
       }
     },
@@ -205,8 +205,8 @@
     }
   },
   "order": [
-    "image_with_text",
     "rich_text",
+    "image_with_text",
     "featured_collection",
     "collage",
     "multicolumn"
