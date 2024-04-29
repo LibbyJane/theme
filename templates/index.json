@@ -6,22 +6,21 @@
                 "heading": {
                     "type": "heading",
                     "settings": {
-                        "heading": "Welcome!",
+                        "heading": "Image with text",
                         "heading_size": "h0"
                     }
                 },
                 "text": {
                     "type": "text",
                     "settings": {
-                        "text": "<p>Here at Road Trip Wines, we’ve embarked on an adventure based on good wine, good company and new destinations. We’re always discovering something new, and we’re enjoying the journey. Please join us!<\/p>",
+                        "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
                         "text_style": "display"
                     }
                 },
                 "button": {
                     "type": "button",
                     "settings": {
-                        "button_label": "More about us",
-                        "button_link": "shopify:\/\/pages\/our-story",
+                        "button_label": "More",
                         "button_style_secondary": "secondary"
                     }
                 }
