@@ -37,6 +37,10 @@
 }
 
 .announcement-bar {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+
     .slider--everywhere {
         margin-bottom: 0;
         scroll-behavior: auto;
