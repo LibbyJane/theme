@@ -31,7 +31,6 @@
                 "button"
             ],
             "settings": {
-                "image": "shopify:\/\/shop_images\/road-trip-vinyard_a479fd80-bd49-4d66-9c50-0515dce908b9.jpg",
                 "height": "adapt",
                 "desktop_image_width": "medium",
                 "layout": "text_first",
@@ -42,8 +41,8 @@
                 "background_texture": "lined",
                 "image_behavior": "none",
                 "mobile_content_alignment": "left",
-                "padding_top": 20,
-                "padding_bottom": 20
+                "padding_top": 72,
+                "padding_bottom": 64
             }
         },
         "slideshow": {
@@ -53,7 +52,7 @@
                     "type": "slide",
                     "settings": {
                         "image": "",
-                        "image_overlay_opacity": 30,
+                        "image_overlay_opacity": 80,
                         "heading_size": "h1",
                         "button_style_secondary": "secondary",
                         "box_align": "bottom-left",
@@ -67,13 +66,13 @@
                 "slide_2": {
                     "type": "slide",
                     "settings": {
-                        "image_overlay_opacity": 0,
+                        "image_overlay_opacity": 60,
                         "button_style_secondary": "primary",
                         "box_align": "middle-center",
                         "text_alignment": "center",
                         "show_text_box": true,
                         "color_scheme": "scheme-background-2",
-                        "background_texture": "torn",
+                        "background_texture": "paper",
                         "text_alignment_mobile": "center"
                     }
                 }
@@ -121,8 +120,8 @@
                 "show_vendor": false,
                 "show_rating": false,
                 "enable_quick_add": true,
-                "padding_top": 48,
-                "padding_bottom": 36
+                "padding_top": 96,
+                "padding_bottom": 60
             }
         },
         "collage": {
