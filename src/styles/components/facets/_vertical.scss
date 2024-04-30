@@ -58,6 +58,7 @@
 
     .facets-vertical-sort {
         padding-inline: var(--content-padding-inline);
+        padding-top: var(--space);
     }
 
     .facets__heading--vertical {
@@ -68,6 +69,7 @@
         display: flex;
             align-items: flex-start;
         gap: 0 var(--space-xl);
+        padding-top: var(--space);
     }
 
     .product-grid-container {
@@ -75,7 +77,6 @@
         .facets-vertical & {
             width: 100%;
         }
-
     }
 
     // .active-facets-vertical-filter:only-child {
@@ -154,8 +155,6 @@
             justify-content: flex-end;
             gap: 0 var(--space-xl);
     }
-
-
 
     .facets__form-vertical {
         display: flex;
