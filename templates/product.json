@@ -21,7 +21,12 @@
                     }
                 },
                 "price": {
-                    "type": "price"
+                    "type": "price",
+                    "settings": {
+                        "text_style": "display",
+                        "price_font_scale": 120,
+                        "use_price_color_highlight": false
+                    }
                 },
                 "variant_picker": {
                     "type": "variant_picker",
@@ -62,11 +67,19 @@
             ],
             "settings": {
                 "enable_sticky_info": true,
-                "gallery_layout": "stacked",
+                "section_color_scheme": "scheme-background-2",
+                "section_background_style": "torn",
+                "content_color_scheme": "scheme-background",
+                "content_background_style": "paper",
+                "use_color_highlight": true,
                 "media_size": "large",
                 "constrain_to_viewport": true,
-                "mobile_thumbnails": "hide",
-                "hide_variants": true,
+                "media_fit": "cover",
+                "gallery_layout": "thumbnail_slider",
+                "media_position": "left",
+                "image_zoom": "lightbox",
+                "mobile_thumbnails": "show",
+                "hide_variants": false,
                 "enable_video_looping": false,
                 "padding_top": 36,
                 "padding_bottom": 12
