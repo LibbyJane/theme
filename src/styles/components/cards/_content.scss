@@ -41,6 +41,7 @@
 // }
 
 .card__content {
+    margin-top: auto;
     margin-bottom: auto;
     width: 100%;
 }
@@ -67,6 +68,10 @@
         @media screen and (min-width: 750px) {
             padding: 0 0 var(--space);
         }
+    }
+
+    .card--card & {
+        padding-bottom: 0;
     }
 
     // .card--standard & {
@@ -116,6 +121,12 @@
     .price {
         justify-content: var(--card-justification);
         margin-bottom: var(--space);
+    }
+}
+
+.card--card {
+    .price {
+        margin-bottom: 0;
     }
 }
 

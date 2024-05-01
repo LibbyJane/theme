@@ -36,8 +36,8 @@ h6:empty {
     display: block;
     background-color: rgb(var(--color-background));
     color: rgb(var(--color-foreground));
-    max-width: var(--page-width);
-    margin: 0 auto;
+    max-width: var(--page-width-narrow);
+    margin: var(--space-med) auto;
     text-align: center;
 }
 

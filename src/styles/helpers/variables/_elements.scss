@@ -5,20 +5,18 @@
     --alpha-badge-border: 0.1;
 
     --card-padding: var(--product-card-padding);
-    --card-image-padding: var(--product-card-padding);
     --card-corner-radius: var(--product-card-corner-radius);
     --card-text-alignment: var(--product-card-text-alignment);
     --card-justification: var(--product-card-justification);
     --card-border-width: var(--product-card-border-width);
     --card-border-opacity: var(--product-card-border-opacity);
     --card-shadow-opacity:var(--product-card-shadow-opacity);
-    --card-shadow-visible: var(--product-card-shadow-visible); // TODO: check if this is used?
     --card-shadow-horizontal-offset: var(--product-card-shadow-horizontal-offset);
     --card-shadow-vertical-offset: var(--product-card-shadow-vertical-offset);
     --card-shadow-blur-radius: var(--product-card-shadow-blur-radius);
     --card-media-box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
     rgba(var(--color-shadow), var(--media-shadow-opacity));
-    --card-image-offset: var(--product-card-image-offset);
+    --card-image-offset: calc(var(--collection-card-image-offset) - 1px);
     --crease-alpha: 0.05;
     --crease-direction: bottom;
     --crease: linear-gradient(to var(--crease-direction), rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), var(--crease-alpha)) 100%);
@@ -29,79 +27,32 @@
 .collection-card-wrapper .card,
 .contains-card--collection {
     --card-padding: var(--collection-card-image-padding);
-    --card-image-padding: var(--collection-card-image-padding);  // deprecated
     --card-corner-radius: var(--collection-card-corner-radius);
     --card-text-alignment: var(--collection-card-text-alignment);
     --card-border-width: var(--collection-card-border-width);
     --card-border-opacity: var(--collection-card-border-opacity);
     --card-shadow-opacity:var(--collection-card-shadow-opacity);
-    --card-shadow-visible: var(--collection-card-shadow-visible); // TODO: check if this is used?
     --card-shadow-horizontal-offset: var(--collection-card-shadow-horizontal-offset);
     --card-shadow-vertical-offset: var(--collection-card-shadow-vertical-offset);
     --card-shadow-blur-radius: var(--collection-card-shadow-blur-radius);
-    --card-image-offset: var(--collection-card-image-offset);
+    --card-image-offset: calc(var(--collection-card-image-offset) - 1px);
+    --card-justification: var(--collection-card-justification);
 }
 
 .article-card-wrapper .card,
 .contains-card--article {
     --card-padding: var(--blog-card-image-padding);
-    --card-image-padding: var(--blog-card-image-padding); // deprecated
     --card-corner-radius: var(--blog-card-corner-radius);
     --card-text-alignment: var(--blog-card-text-alignment);
     --card-border-width: var(--blog-card-border-width);
     --card-border-opacity: var(--blog-card-border-opacity);
     --card-shadow-opacity:var(--blog-card-shadow-opacity);
-    --card-shadow-visible: var(--blog-card-shadow-visible); // TODO: check if this is used?
     --card-shadow-horizontal-offset: var(--blog-card-shadow-horizontal-offset);
     --card-shadow-vertical-offset: var(--blog-card-shadow-vertical-offset);
     --card-shadow-blur-radius: var(--blog-card-shadow-blur-radius);
-    --card-image-offset: var(--blog-card-image-offset);
+    --card-image-offset: calc(var(--blog-card-image-offset) - 1px);
+    --card-justification: var(--blog-card-justification);
 }
-
-
-
-// .product-card-wrapper .card,
-// .contains-card--product {
-//   --border-radius: var(--product-card-corner-radius);
-//   --border-width: var(--product-card-border-width);
-//   --border-opacity: var(--product-card-border-opacity);
-//   --shadow-horizontal-offset: var(--product-card-shadow-horizontal-offset);
-//   --shadow-vertical-offset: var(--product-card-shadow-vertical-offset);
-//   --shadow-blur-radius: var(--product-card-shadow-blur-radius);
-//   --shadow-opacity: var(--product-card-shadow-opacity);
-//   --shadow-visible: var(--product-card-shadow-visible);
-//   --image-padding: var(--product-card-padding);
-//   --card-padding: var(--product-card-padding);
-//   --text-alignment: var(--product-card-text-alignment);
-// }
-
-// .collection-card-wrapper .card,
-// .contains-card--collection {
-//   --border-radius: var(--collection-card-corner-radius);
-//   --border-width: var(--collection-card-border-width);
-//   --border-opacity: var(--collection-card-border-opacity);
-//   --shadow-horizontal-offset: var(--collection-card-shadow-horizontal-offset);
-//   --shadow-vertical-offset: var(--collection-card-shadow-vertical-offset);
-//   --shadow-blur-radius: var(--collection-card-shadow-blur-radius);
-//   --shadow-opacity: var(--collection-card-shadow-opacity);
-//   --shadow-visible: var(--collection-card-shadow-visible);
-//   --image-padding: var(--collection-card-image-padding);
-//   --text-alignment: var(--collection-card-text-alignment);
-// }
-
-// .article-card-wrapper .card,
-// .contains-card--article {
-//   --border-radius: var(--blog-card-corner-radius);
-//   --border-width: var(--blog-card-border-width);
-//   --border-opacity: var(--blog-card-border-opacity);
-//   --shadow-horizontal-offset: var(--blog-card-shadow-horizontal-offset);
-//   --shadow-vertical-offset: var(--blog-card-shadow-vertical-offset);
-//   --shadow-blur-radius: var(--blog-card-shadow-blur-radius);
-//   --shadow-opacity: var(--blog-card-shadow-opacity);
-//   --shadow-visible: var(--blog-card-shadow-visible);
-//   --image-padding: var(--blog-card-image-padding);
-//   --text-alignment: var(--blog-card-text-alignment);
-// }
 
 .contains-content-container,
 .content-container {
