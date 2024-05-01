@@ -70,6 +70,10 @@
         }
     }
 
+    .card--card & {
+        padding-bottom: 0;
+    }
+
     // .card--standard & {
     //     padding: 0 0 var(--space);
     // }
@@ -117,6 +121,12 @@
     .price {
         justify-content: var(--card-justification);
         margin-bottom: var(--space);
+    }
+}
+
+.card--card {
+    .price {
+        margin-bottom: 0;
     }
 }
 
