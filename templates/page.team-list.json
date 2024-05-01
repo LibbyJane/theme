@@ -1,183 +1,78 @@
 {
-  "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
-    "multicolumn_JfPxTY": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_dBaeEM": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/hard-work-pays-off.jpg",
-            "title": "Miya Crosby",
-            "text": "<h5>Founder<\/h5><p>Miya fell in love with the industry during her gap year and has ever looked back.<\/p>",
-            "link_label": "Get in touch",
-            "link": "shopify:\/\/pages\/contact"
-          }
+    "sections": {
+        "main": {
+            "type": "main-page",
+            "settings": {
+                "padding_top": 28,
+                "padding_bottom": 28
+            }
         },
-        "column_EggPnK": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/welcome-to-my-business.jpg",
-            "title": "Sebastian Perkins",
-            "text": "<h5>Buyer<\/h5><p>Sebastian has been building up his global network of contacts since he started travelling at the tender age of 19.<\/p>",
-            "link_label": "Get in touch",
-            "link": "shopify:\/\/pages\/contact"
-          }
-        },
-        "column_hHnPrG": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/man-dressed-in-monochrome-by-white-wall.jpg",
-            "title": "Inayah Shepherd",
-            "text": "<h5>Customer Care<\/h5><p>Whatever the issue is, our fixer Inayah can handle it. They also have incredible taste in music.<\/p>",
-            "link_label": "Get in touch",
-            "link": "shopify:\/\/pages\/contact"
-          }
-        },
-        "column_E78ga8": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/grey-woman-on-steps.jpg",
-            "title": "Marley Rowe",
-            "text": "<h5>Marketing<\/h5><p>Marley shines at all things social - hit her up if you'd like to do a collab.<\/p>",
-            "link_label": "Get in touch",
-            "link": "shopify:\/\/pages\/contact"
-          }
-        },
-        "column_DRmj8R": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/modern-business-woman-portrait.jpg",
-            "title": "Maizie Wise",
-            "text": "<h5>Legals<\/h5><p>Maizie takes a-maiz-ing care of all the legal nitty gritty. She's the best in the business.<\/p>",
-            "link_label": "Get in touch",
-            "link": "shopify:\/\/pages\/contact"
-          }
-        },
-        "column_XfJyrg": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/mens-fashion-stood-in-vineyard-shirt-and-shorts.jpg",
-            "title": "Barney Sharpe",
-            "text": "<h5>Tours & Travel<\/h5><p>Barney loves to travel and meet the makers, then turn that knowledge into fascinating tours for the public.<\/p>",
-            "link_label": "Get in touch",
-            "link": "shopify:\/\/pages\/contact"
-          }
-        },
-        "column_qqtfhW": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/woman-sits-at-wooden-table-and-works-on-a-laptop.jpg",
-            "title": "Dillon Sharp",
-            "text": "<h5>Development<\/h5><p>Tech was almost Dillon's first language, and she brings the know-how to all our online platform with flair and a smile. <\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_LnHrr9": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/woman-in-a-blue-shirt-and-glasses-smiles-wide.jpg",
-            "title": "Mari Thompson",
-            "text": "<h5>Creative Designer<\/h5><p>Mari specialises in product designs that please your eyes and warm your heart.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
+        "multicolumn_team-list": {
+            "type": "multicolumn",
+            "blocks": {
+                "column_1": {
+                    "type": "column",
+                    "settings": {
+                        "title": "Team Member Name",
+                        "text": "<h5>Team Member Role<\/h5><p>Team member profile text.<\/p>",
+                        "link_label": "Get in touch",
+                        "link": "shopify:\/\/pages\/contact"
+                    }
+                },
+                "column_2": {
+                    "type": "column",
+                    "settings": {
+                        "title": "Team Member Name",
+                        "text": "<h5>Team Member Role<\/h5><p>Team member profile text.<\/p>",
+                        "link_label": "Get in touch",
+                        "link": "shopify:\/\/pages\/contact"
+                    }
+                },
+                "column_3": {
+                    "type": "column",
+                    "settings": {
+                        "title": "Team Member Name",
+                        "text": "<h5>Team Member Role<\/h5><p>Team member profile text.<\/p>"
+                    }
+                },
+                "column_4": {
+                    "type": "column",
+                    "settings": {
+                        "title": "Team Member Name",
+                        "text": "<h5>Team Member Role<\/h5><p>Team member profile text.<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "column_1",
+                "column_2",
+                "column_3",
+                "column_4"
+            ],
+            "settings": {
+                "title": "",
+                "heading_size": "h1",
+                "full_width": false,
+                "image_width": "half",
+                "image_ratio": "square",
+                "columns_desktop": 3,
+                "column_alignment": "center",
+                "column_link_hover_style": "",
+                "button_label": "Contact us",
+                "button_link": "shopify:\/\/pages\/contact",
+                "section_color_scheme": "scheme-background",
+                "background_transparent": true,
+                "color_scheme": "scheme-background",
+                "background_texture": "paper",
+                "columns_mobile": "1",
+                "swipe_on_mobile": false,
+                "padding_top": 0,
+                "padding_bottom": 0
+            }
         }
-      },
-      "block_order": [
-        "column_dBaeEM",
-        "column_EggPnK",
-        "column_hHnPrG",
-        "column_E78ga8",
-        "column_DRmj8R",
-        "column_XfJyrg",
-        "column_qqtfhW",
-        "column_LnHrr9"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "full_width": false,
-        "image_width": "half",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "column_link_hover_style": "",
-        "button_label": "Contact us",
-        "button_link": "shopify:\/\/pages\/contact",
-        "section_color_scheme": "scheme-background",
-        "background_transparent": true,
-        "color_scheme": "scheme-background",
-        "background_texture": "paper",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     },
-    "multicolumn_w7VbAc": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_mgkphG": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/woman-sits-at-wooden-table-and-works-on-a-laptop.jpg",
-            "title": "Dillon Sharp",
-            "text": "<h5>Development<\/h5><p>Tech was almost Dillon's first language, and she brings the know-how to all our online platform with flair and a smile.<\/p>",
-            "link_label": "",
-            "link": "shopify:\/\/pages\/contact"
-          }
-        },
-        "column_FpzDeQ": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/woman-in-a-blue-shirt-and-glasses-smiles-wide.jpg",
-            "title": "Mari Thompson",
-            "text": "<h5>Creative Designer<\/h5><p>Mari specialises in product designs that please your eyes and warm your heart.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_mgkphG",
-        "column_FpzDeQ"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Other team members",
-        "heading_size": "h1",
-        "full_width": false,
-        "image_width": "half",
-        "image_ratio": "circle",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "column_link_hover_style": "hover-highlight",
-        "button_label": "",
-        "button_link": "",
-        "section_color_scheme": "scheme-background",
-        "background_transparent": true,
-        "color_scheme": "scheme-background",
-        "background_texture": "lined",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    }
-  },
-  "order": [
-    "main",
-    "multicolumn_JfPxTY",
-    "multicolumn_w7VbAc"
-  ]
+    "order": [
+        "main",
+        "multicolumn_team-list"
+    ]
 }
