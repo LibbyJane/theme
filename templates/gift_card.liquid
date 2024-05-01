@@ -78,6 +78,7 @@
                         {{ settings.logo | image_url: width: 570 | image_tag: class: 'gift-card__image', alt: logo_alt }}
                     {%- else %}
                         <img
+                            loading="eager"
                             class="gift-card__image"
                             src="{{ 'gift-card/card.svg' | shopify_asset_url }}"
                             alt=""
