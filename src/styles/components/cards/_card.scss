@@ -9,6 +9,14 @@
 // --image-padding: var(--collection-card-image-padding);
 // --text-alignment: var(--collection-card-text-alignment);
 
+:root {
+    --card-vert-offset: var(--space-sm);
+}
+
+.product-grid.contains-card {
+    margin-block: calc(var(--card-vert-offset) * -1);
+}
+
 .card {
         // padding-bottom: calc(var(--card-padding) - var(--space));
     // margin-bottom: var(--space-lg);
@@ -45,6 +53,8 @@
     }
 
     .grid__item & {
+        margin-block: var(--card-vert-offset);
+
         &:hover,
         &:focus {
             @media (prefers-reduced-motion: no-preference) {

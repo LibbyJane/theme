@@ -788,7 +788,7 @@
       {
         "type": "range",
         "id": "collection_card_padding",
-        "min": 6,
+        "min": 0,
         "max": 40,
         "step": 2,
         "unit": "px",
