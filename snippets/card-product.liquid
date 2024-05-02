@@ -136,12 +136,14 @@
                 </div>
             {%- elsif settings.card_style == 'standard' -%}
                 <div class="card__media card__media-fallback">
-                        <h3
-                            class="card__heading"
-                            id="title-{{ section_id }}-{{ card_product.id }}"
-                        >
-                            {{ card_product.title | escape }}
-                        </h3>
+                    <div class="media media--transparent">
+                    <h3
+                        class="card__heading"
+                        id="title-{{ section_id }}-{{ card_product.id }}"
+                    >
+                        {{ card_product.title | escape }}
+                    </h3>
+                    <div>
                 </div>
             {%- endif -%}
         </div>
