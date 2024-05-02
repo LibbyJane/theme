@@ -961,7 +961,7 @@
       ],
       "settings": {
         "product": "2022-yarra-valley-pinot-grigio-with-video",
-        "color_scheme": "scheme-background-3",
+        "color_scheme": "scheme-sticky-ecom",
         "background_texture": "paper",
         "full_width": false,
         "media_size": "medium",
@@ -1066,6 +1066,46 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collage_VrmC89": {
+      "type": "collage",
+      "blocks": {
+        "product_V4WUjA": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "second_image": false
+          }
+        },
+        "collection_KDVdgX": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection_ncPqJj": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_V4WUjA",
+        "collection_KDVdgX",
+        "collection_ncPqJj"
+      ],
+      "settings": {
+        "heading": "Multimedia collage",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "background_transparent": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -1091,6 +1131,7 @@
     "contact_form_QEeFag",
     "featured_product_qpjUxH",
     "featured_product_CdXwAL",
-    "featured_blog_ygP9a9"
+    "featured_blog_ygP9a9",
+    "collage_VrmC89"
   ]
 }
