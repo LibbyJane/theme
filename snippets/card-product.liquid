@@ -134,6 +134,17 @@
                         {%- endif -%}
                     </div>
                 </div>
+            {%- elsif settings.card_style == 'standard' -%}
+                <div class="card__media">
+                    <div class="media">
+                        <h3
+                            class="card__heading"
+                            id="title-{{ section_id }}-{{ card_product.id }}"
+                        >
+                            {{ card_product.title | escape }}
+                        </h3>
+                    </div>
+                </div>
             {%- endif -%}
         </div>
 
