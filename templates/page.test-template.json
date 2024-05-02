@@ -586,10 +586,10 @@
     "collage_WKDje3": {
       "type": "collage",
       "blocks": {
-        "image_CaDzk9": {
-          "type": "image",
+        "collection_tEFmDm": {
+          "type": "collection",
           "settings": {
-            "image": "shopify:\/\/shop_images\/p-2048-3-2.jpg"
+            "collection": "australia"
           }
         },
         "product_R7CnRP": {
@@ -607,7 +607,7 @@
         }
       },
       "block_order": [
-        "image_CaDzk9",
+        "collection_tEFmDm",
         "product_R7CnRP",
         "collection_rQ96cb"
       ],
