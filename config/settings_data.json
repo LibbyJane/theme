@@ -32,12 +32,12 @@
     "inputs_shadow_vertical_offset": 4,
     "inputs_shadow_blur": 5,
     "card_style": "card",
-    "card_padding": 10,
-    "card_image_full_width": true,
+    "card_padding": 6,
+    "card_image_full_width": false,
     "card_text_alignment": "left",
     "card_color_scheme": "scheme-background-3",
-    "card_border_thickness": 0,
-    "card_border_opacity": 10,
+    "card_border_thickness": 15,
+    "card_border_opacity": 100,
     "card_corner_radius": 0,
     "card_shadow_opacity": 0,
     "card_shadow_horizontal_offset": 0,
@@ -168,21 +168,21 @@
       },
       "scheme-accent": {
         "settings": {
-          "background": "#820030",
+          "background": "#3a8386",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#820030",
+          "button_label": "#457b9d",
           "secondary_button_label": "#ffffff",
           "shadow": "#000000"
         }
       },
       "scheme-accent-light": {
         "settings": {
-          "background": "#bd3247",
-          "background_gradient": "radial-gradient(rgba(189, 50, 71, 1) 29%, rgba(130, 0, 48, 1) 100%)",
+          "background": "#6aa6a9",
+          "background_gradient": "radial-gradient(rgba(106, 166, 169, 1) 29%, rgba(58, 131, 134, 1) 100%)",
           "text": "#ffffff",
-          "button": "#820030",
+          "button": "#3a8386",
           "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
           "shadow": "#160109"
@@ -190,8 +190,8 @@
       },
       "scheme-sticky-highlight": {
         "settings": {
-          "background": "#fbbea6",
-          "background_gradient": "linear-gradient(90deg, rgba(255, 211, 194, 0.5), rgba(251, 190, 166, 1) 66%, rgba(228, 171, 149, 1) 100%)",
+          "background": "#fbdca6",
+          "background_gradient": "linear-gradient(90deg, rgba(255, 236, 194, 0.5), rgba(251, 224, 166, 1) 66%, rgba(228, 203, 149, 1) 100%)",
           "text": "#290614",
           "button": "#290614",
           "button_label": "#f6f1ee",
