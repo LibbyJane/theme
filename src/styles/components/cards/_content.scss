@@ -136,6 +136,5 @@
     .card--standard & {
         @include card-container;
         margin-bottom: var(--space);
-        padding-bottom: 0;
     }
 }
