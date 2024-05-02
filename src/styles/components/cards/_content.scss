@@ -74,9 +74,9 @@
         padding-bottom: 0;
     }
 
-    // .card--standard & {
-    //     padding: 0 0 var(--space);
-    // }
+    .card--standard & {
+        padding-top: 0;
+    }
 
     .collection-list .card__inner &,
     .collage .card__inner & {
