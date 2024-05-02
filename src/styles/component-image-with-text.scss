@@ -28,7 +28,7 @@
     }
 
     .image-with-text__button {
-        margin-bottom: var(--space-med);
+        margin-bottom: var(--space);
     }
 
     /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
