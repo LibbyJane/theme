@@ -10,9 +10,14 @@
 .quick-add {
     position: relative;
     grid-row-start: 4;
-    margin: 0 0 1rem;
+    margin: auto 0 0;
+    padding: 0;
     width: 100%;
     z-index: 1;
+
+    .card--card & {
+        padding: var(--space) 0;
+    }
   }
 
 .card--card .quick-add {
