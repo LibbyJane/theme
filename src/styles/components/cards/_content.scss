@@ -44,6 +44,10 @@
     margin-top: auto;
     margin-bottom: auto;
     width: 100%;
+
+    &:not(:first-child) {
+        padding-top: var(--space-sm);
+    }
 }
 
 .card--text {
