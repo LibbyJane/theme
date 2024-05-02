@@ -44,6 +44,10 @@
     margin-top: auto;
     margin-bottom: auto;
     width: 100%;
+
+    &:not(:first-child) {
+        padding-top: var(--space-sm);
+    }
 }
 
 .card--text {
@@ -74,9 +78,9 @@
         padding-bottom: 0;
     }
 
-    // .card--standard & {
-    //     padding: 0 0 var(--space);
-    // }
+    .card--standard & {
+        padding-top: 0;
+    }
 
     .collection-list .card__inner &,
     .collage .card__inner & {
@@ -93,6 +97,15 @@
 
     &:last-child {
         padding-bottom: 0;
+    }
+
+
+    // fallback class is applied to product cards when the card style is 'standard' and no image is available - in this case the product heading is displayed instead
+    .card__media-fallback & {
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+        padding: var(--space) var(--content-padding-inline);
     }
 
     // .card--standard & {
@@ -136,6 +149,5 @@
     .card--standard & {
         @include card-container;
         margin-bottom: var(--space);
-        padding-bottom: 0;
     }
 }

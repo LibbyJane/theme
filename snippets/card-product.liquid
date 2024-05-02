@@ -63,8 +63,6 @@
             assign showBadge = true
         endif
 
-        if showBadge
-        endif
     -%}
 
     <a
@@ -85,6 +83,10 @@
             class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
             style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
         >
+            {% if showBadge and settings.card_style == 'standard' %}
+                {% render 'card-badge', card_product: card_product, section_id: section_id %}
+            {%- endif -%}
+
             {%- if card_product.featured_media -%}
                 <div class="card__media">
                     <div class="media media--transparent media--hover-effect">
@@ -131,6 +133,15 @@
                             >
                         {%- endif -%}
                     </div>
+                </div>
+            {%- elsif settings.card_style == 'standard' -%}
+                <div class="card__media card__media-fallback">
+                    <h3
+                        class="card__heading media"
+                        id="title-{{ section_id }}-{{ card_product.id }}"
+                    >
+                        {{ card_product.title | escape }}
+                    </h3>
                 </div>
             {%- endif -%}
         </div>
@@ -203,34 +214,8 @@
             {% render 'quick-add', card_product: card_product, horizontal_quick_add: horizontal_quick_add, section_id: section_id %}
         {%- endif -%}
 
-        {% if showBadge %}
-            <div class="card-badge
-                {% if card_product.available -%}
-                    card-badge--{{ settings.badge_position | replace: " ", "-" }}
-                    {% if card_product.compare_at_price > card_product.price -%}
-                        color-{{ settings.sale_badge_color_scheme }}
-                    {%- endif -%}
-                {% else -%}
-                    color-{{ settings.sold_out_badge_color_scheme }} card-badge--bottom-left
-                {%- endif -%}
-            ">
-                <span
-                    class="card-badge__inner"
-                    id="
-                    {%- if card_product.available == false -%}
-                        NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}
-                    {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
-                        NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}
-                    {%- endif -%}
-                    "
-                >
-                    {%- if card_product.available == false -%}
-                        {{- 'products.product.sold_out' | t -}}
-                    {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
-                        {{- 'products.product.on_sale' | t -}}
-                    {%- endif -%}
-                </span>
-            </div>
+        {% if showBadge and settings.card_style != 'standard' %}
+            {% render 'card-badge', card_product: card_product, section_id: section_id %}
         {%- endif -%}
     </a>
 {%- else -%}
