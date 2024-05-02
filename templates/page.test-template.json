@@ -961,7 +961,7 @@
       ],
       "settings": {
         "product": "2022-yarra-valley-pinot-grigio-with-video",
-        "color_scheme": "scheme-background-3",
+        "color_scheme": "scheme-sticky-ecom",
         "background_texture": "paper",
         "full_width": false,
         "media_size": "medium",
@@ -1067,41 +1067,40 @@
         "padding_bottom": 36
       }
     },
-    "collage_fz6whC": {
+    "collage_VrmC89": {
       "type": "collage",
       "blocks": {
-        "product_JHyLTE": {
+        "product_V4WUjA": {
           "type": "product",
           "settings": {
-            "product": "2018-heathcote-shiraz",
+            "product": "",
             "second_image": false
           }
         },
-        "collection_hpY96e": {
+        "collection_KDVdgX": {
           "type": "collection",
           "settings": {
-            "collection": "merch"
+            "collection": ""
           }
         },
-        "product_eJxhRR": {
-          "type": "product",
+        "collection_ncPqJj": {
+          "type": "collection",
           "settings": {
-            "product": "2023-vinot-vibe-pinot-gris",
-            "second_image": false
+            "collection": ""
           }
         }
       },
       "block_order": [
-        "product_JHyLTE",
-        "collection_hpY96e",
-        "product_eJxhRR"
+        "product_V4WUjA",
+        "collection_KDVdgX",
+        "collection_ncPqJj"
       ],
       "settings": {
         "heading": "Multimedia collage",
         "heading_size": "h1",
         "desktop_layout": "left",
         "mobile_layout": "column",
-        "card_styles": "none",
+        "card_styles": "product-card-wrapper",
         "color_scheme": "",
         "background_transparent": true,
         "padding_top": 36,
@@ -1133,6 +1132,6 @@
     "featured_product_qpjUxH",
     "featured_product_CdXwAL",
     "featured_blog_ygP9a9",
-    "collage_fz6whC"
+    "collage_VrmC89"
   ]
 }
