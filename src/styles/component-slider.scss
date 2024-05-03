@@ -13,7 +13,7 @@ slider-component {
     display: block;
     width: 100%;
     max-width: var(--page-width);
-    margin: 0 auto var(--space-med);
+    margin: calc(var(--slider-block-space) * -1 - var(--space-sm)) auto var(--space-med);
     padding-inline: var(--content-padding-inline);
     overflow: clip;
 }
@@ -248,9 +248,8 @@ slider-component {
     z-index: 1;
 
     .contains-card & {
-        // removing !important
-        padding-block: var(--slide-block-space);
-        margin-top: var(--slide-space-offset);
+        padding-block: var(--slide-block-space) !important;
+        margin-top: var(--slide-space-offset) !important;
     }
 
     // .contains-card--article & {
