@@ -227,27 +227,26 @@
                 "collection-0": {
                     "type": "collection",
                     "settings": {
-                        "collection": ""
+                      "collection": "australia"
                     }
-                },
-                "product": {
-                    "type": "product",
-                    "settings": {
-                        "product": "",
-                        "second_image": false
-                    }
-                },
-                "collection-1": {
+                  },
+                  "collection-1": {
                     "type": "collection",
                     "settings": {
-                        "collection": ""
+                      "collection": "new-zealand"
                     }
-                }
+                  },
+                  "collection-2": {
+                    "type": "collection",
+                    "settings": {
+                      "collection": "south-africa"
+                    }
+                  }
             },
             "block_order": [
                 "collection-0",
-                "product",
-                "collection-1"
+                "collection-1",
+                "collection-2"
             ],
             "settings": {
                 "heading": "",
@@ -363,6 +362,8 @@
                 "store_message": "To:",
                 "show_store_name": true,
                 "show_store_contact_information": true,
+                "stamp_image": "shopify:\/\/shop_images\/a-small-drink-to-cheers-the-field-of-vines-below.jpg",
+                "secondary_image": "shopify:\/\/shop_images\/vineyard-at-sunset.jpg",
                 "padding_top": 36,
                 "padding_bottom": 32
             }
