@@ -209,12 +209,12 @@
             </div>
         </div>
 
-        {%- if show_quick_add -%}
-            {% render 'quick-add', card_product: card_product, horizontal_quick_add: horizontal_quick_add, section_id: section_id %}
-        {%- endif -%}
-
         {% if showBadge and settings.card_style != 'standard' %}
             {% render 'card-badge', card_product: card_product, section_id: section_id %}
+        {%- endif -%}
+
+        {%- if show_quick_add -%}
+            {% render 'quick-add', card_product: card_product, horizontal_quick_add: horizontal_quick_add, section_id: section_id %}
         {%- endif -%}
     </a>
 {%- else -%}
