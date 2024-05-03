@@ -1,15 +1,17 @@
 .card--product {
-    &.card--text {
-        // ie no images
+    &.card--card {
+        &.card--text {
+            // ie no images
 
-        &.card-badge--top-left,
-        &.card-badge--top-right {
-            padding-top: var(--space-xl);
-        }
+            &.card-badge--top-left,
+            &.card-badge--top-right {
+                padding-top: var(--space-xl);
+            }
 
-        &.card-badge--bottom-left,
-        &.card-badge--bottom-right {
-            padding-bottom: var(--space-xl);
+            &.card-badge--bottom-left,
+            &.card-badge--bottom-right {
+                padding-bottom: var(--space-xl);
+            }
         }
     }
 }
