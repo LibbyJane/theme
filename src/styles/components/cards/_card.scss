@@ -10,11 +10,11 @@
 // --text-alignment: var(--collection-card-text-alignment);
 
 :root {
-    --card-vert-offset: var(--space-sm);
+    --card-top-offset: var(--space-sm);
 }
 
 .product-grid.contains-card {
-    margin-block: calc(var(--card-vert-offset) * -1);
+    margin-top: calc(var(--space-sm) * -1);
 }
 
 .card {
@@ -53,7 +53,7 @@
     }
 
     .grid__item & {
-        margin-block: var(--card-vert-offset);
+        margin-top: var(--space-sm);
 
         &:hover,
         &:focus {
@@ -163,6 +163,19 @@
 
     .price-item--actual {
         position: relative;
+        z-index: var(--zi-base);
+
+        &::before {
+            background: rgba(var(--color-highlight), var(--card-highlight-opacity));
+            border-radius: var(--button-border-radius);
+            content: '';
+            margin: -2px;
+            position: absolute;
+                inset: 0;
+            transform: rotate(-1deg);
+            transform-origin: center left;
+            z-index: calc(var(--zi-base) - 1);
+        }
     }
 }
 

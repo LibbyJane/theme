@@ -1,5 +1,10 @@
 .card--product {
     &.card--card {
+        .quick-add {
+            margin: auto 0 var(--space);
+            padding: var(--space) 0 0;
+        }
+
         &.card--text {
             .card__content {
                 margin-bottom: var(--space);
