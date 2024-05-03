@@ -13,7 +13,7 @@ slider-component {
     display: block;
     width: 100%;
     max-width: var(--page-width);
-    margin: calc(var(--slider-block-space) * -1 ) auto var(--space-med);
+    margin: 0 auto var(--space-med);
     padding-inline: var(--content-padding-inline);
     overflow: clip;
 }
@@ -406,6 +406,11 @@ slider-component {
         justify-content: center;
         margin: var(--space) auto;
     width: max-content;
+
+    // todo WHERE Is this for - overlaid?
+    // .background-transparent & {
+    //     margin-bottom: calc(-1 * var(--space-sm));
+    // }
 }
 
 .contains-card .slider-buttons,
@@ -444,7 +449,6 @@ slider-component {
         width: 44px;
         height: 44px;
     opacity: var(--opacity-light);
-    z-index: var(--zi-base);
 
     &:hover {
         opacity: 1;
