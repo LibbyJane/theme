@@ -87,6 +87,18 @@
         padding-bottom: 0;
     }
 
+    // fallback class is applied to product cards when the card style is 'standard' and no image is available - in this case the product heading is displayed instead
+    .card__media-fallback & {
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+        padding: var(--space) var(--content-padding-inline);
+    }
+
+    // .card--standard & {
+    //     padding-bottom: var(--space);
+    // }
+
     .grid--2-col-tablet-down & {
         @media screen and (max-width: 749px) {
             // smaller font size, spacing when using two column layout on mobile

@@ -1,0 +1,38 @@
+{% comment %}
+    Renders a product badge
+
+    Accepts:
+    - card_product: {Object} Product Liquid object
+    - section_id: {String} The ID of the section that contains this card.
+
+    Usage:
+    {% render 'card-badge', product: card_product, section_id: section_id %}
+{% endcomment %}
+
+<div class="card-badge
+    {% if card_product.available -%}
+        card-badge--{{ settings.badge_position | replace: " ", "-" }}
+        {% if card_product.compare_at_price > card_product.price -%}
+            color-{{ settings.sale_badge_color_scheme }}
+        {%- endif -%}
+    {% else -%}
+        color-{{ settings.sold_out_badge_color_scheme }}
+    {%- endif -%}
+">
+    <span
+        class="card-badge__inner"
+        id="
+            {%- if card_product.available == false -%}
+                NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}
+            {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+                NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}
+            {%- endif -%}
+        "
+    >
+        {%- if card_product.available == false -%}
+            {{- 'products.product.sold_out' | t -}}
+        {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+            {{- 'products.product.on_sale' | t -}}
+        {%- endif -%}
+    </span>
+</div>

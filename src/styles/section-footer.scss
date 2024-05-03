@@ -77,7 +77,7 @@
         flex-direction: column;
 }
 
-.footer-block-image {
+.footer-block--image {
     display: flex;
         flex-direction: column;
 }
@@ -113,7 +113,8 @@
 
     img {
         display: block;
-        height: auto;
+            height: auto;
+            width: auto;
         max-width: 100%;
     }
 }
