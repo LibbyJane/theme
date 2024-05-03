@@ -195,6 +195,35 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "collection": "argentina",
+        "title": "Our latest finds…",
+        "heading_size": "h1",
+        "description": "",
+        "show_collection_description": false,
+        "description_style": "body",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "primary",
+        "enable_desktop_slider": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "color_scheme": "scheme-background",
+        "background_transparent": true,
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "padding_top": 48,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_nQkb7w": {
+      "type": "featured-collection",
+      "settings": {
         "collection": "hydrogen",
         "title": "Our latest finds…",
         "heading_size": "h1",
@@ -376,6 +405,7 @@
     "slideshow",
     "rich_text",
     "featured_collection",
+    "featured_collection_nQkb7w",
     "collage",
     "featured_blog",
     "featured_product",
