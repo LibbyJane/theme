@@ -162,8 +162,9 @@
     }
 
     .price-item--actual {
+        display: inline-flex;
         position: relative;
-        z-index: var(--zi-base);
+        z-index: 1;
 
         &::before {
             background: rgba(var(--color-highlight), var(--card-highlight-opacity));
@@ -174,7 +175,7 @@
                 inset: 0;
             transform: rotate(-1deg);
             transform-origin: center left;
-            z-index: calc(var(--zi-base) - 1);
+            z-index: 0;
         }
     }
 }
