@@ -248,8 +248,9 @@ slider-component {
     z-index: 1;
 
     .contains-card & {
-        padding-block: var(--slide-block-space) !important;
-        margin-top: var(--slide-space-offset) !important;
+        // removing !important
+        padding-block: var(--slide-block-space);
+        margin-top: var(--slide-space-offset);
     }
 
     // .contains-card--article & {
