@@ -16,6 +16,13 @@ slider-component {
     margin: 0 auto var(--space-med);
     padding-inline: var(--content-padding-inline);
     overflow: clip;
+
+    .contains-card {
+        .grid__item {
+            padding-block: var(--slide-block-space) !important;
+            margin-top: var(--slide-space-offset) !important;
+        }
+    }
 }
 
 .slider-component-full-width {
@@ -247,10 +254,6 @@ slider-component {
     position: relative;
     z-index: 1;
 
-    .contains-card & {
-        padding-block: var(--slide-block-space) !important;
-        margin-top: var(--slide-space-offset) !important;
-    }
 
     // .contains-card--article & {
     //     margin-bottom: var(--space) !important;
