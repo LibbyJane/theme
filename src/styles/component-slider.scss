@@ -1,13 +1,15 @@
 @import "helpers/common";
 
-.slider {
-    --slide-block-space: 60px; // maximum shadow size + blur allowed in settings
-    --slide-space-offset: calc((var(--slide-block-space) - 10px) * -1);
+.title-wrapper {
+    + slider-component {
+        margin-top: calc(var(--space-lg) * -1);
+    }
 }
 
 slider-component {
+    --slide-block-space: 60px; // maximum shadow size + blur allowed in settings
+    --slide-space-offset: calc((var(--slide-block-space) - 10px) * -1);
     --desktop-margin-left-first-item: max(5rem, calc((100vw - var(--page-width) + var(--grid-horizontal-spacing)) / 2));
-    --slider-block-space: 60px; // maximum shadow size + blur allowed in settings
 
     position: relative;
     display: block;
