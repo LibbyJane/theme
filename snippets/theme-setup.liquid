@@ -276,9 +276,8 @@
         --icon-stroke-size: 1px;
     }
 
-
     .card {
-        --color-highlight: {% if settings.card_highlight_price %}0.9{% else %}0{% endif %};
+        --card-highlight-opacity: {% if settings.card_highlight_price %}0.9{% else %}0{% endif %};
     }
 
     *,
