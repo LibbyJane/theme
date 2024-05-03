@@ -1,6 +1,9 @@
 .card--product {
     &.card--card {
         &.card--text {
+            .card__content {
+                margin-bottom: var(--space);
+            }
             // ie no images
 
             &.card-badge--top-left,
