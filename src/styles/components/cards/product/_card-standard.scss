@@ -1,0 +1,8 @@
+.card--product {
+    &.card--standard {
+        &.card--text {
+            // ie no images
+padding-top: 0;
+        }
+    }
+}
