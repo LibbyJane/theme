@@ -58,7 +58,7 @@
 
         if card_product.compare_at_price > card_product.price and card_product.available
             assign showBadge = true
-            assign badgePosition = settings.badge_position | replace: " ", "-"
+            assign badgePosition = settings.badge_position
         elsif card_product.available == false
             assign showBadge = true
         endif

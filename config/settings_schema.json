@@ -1394,23 +1394,23 @@
         "id": "badge_position",
         "options": [
           {
-            "value": "bottom left",
+            "value": "bottom-left",
             "label": "t:settings_schema.badges.settings.position.options__1.label"
           },
           {
-            "value": "bottom right",
+            "value": "bottom-right",
             "label": "t:settings_schema.badges.settings.position.options__2.label"
           },
           {
-            "value": "top left",
+            "value": "top-left",
             "label": "t:settings_schema.badges.settings.position.options__3.label"
           },
           {
-            "value": "top right",
+            "value": "top-right",
             "label": "t:settings_schema.badges.settings.position.options__4.label"
           }
         ],
-        "default": "bottom left",
+        "default": "bottom-left",
         "label": "t:settings_schema.badges.settings.position.label"
       },
       {
