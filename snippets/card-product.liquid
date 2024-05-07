@@ -54,15 +54,12 @@
         endif
 
         assign showBadge = false
-        assign badgePosition = "bottom-left"
 
         if card_product.compare_at_price > card_product.price and card_product.available
             assign showBadge = true
-            assign badgePosition = settings.badge_position
         elsif card_product.available == false
             assign showBadge = true
         endif
-
     -%}
 
     <a
@@ -74,7 +71,7 @@
         {%- if image_shape and image_shape != 'default' %} card--shape{% endif -%}
         {%- if extend_height %} card--extend-height{% endif -%}
         {%- if horizontal_class %} card--horizontal{% endif -%}
-        {%- if showBadge %} card-badge--{{ badgePosition }}{% endif -%}"
+        {%- if showBadge %} card-badge--{{ settings.badge_position }}{% endif -%}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%; --aspect-ratio: {{ aspect-ratio-width }} / {{ aspect-ratio-height }};"
         aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
     >
