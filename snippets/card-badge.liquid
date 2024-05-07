@@ -9,14 +9,9 @@
     {% render 'card-badge', product: card_product, section_id: section_id %}
 {% endcomment %}
 
-<div class="card-badge
-    {% if card_product.available -%}
-        card-badge--{{ settings.badge_position }}
-        {% if card_product.compare_at_price > card_product.price -%}
-            color-{{ settings.sale_badge_color_scheme }}
-        {%- endif -%}
-    {% else -%}
-        color-{{ settings.sold_out_badge_color_scheme }}
+<div class="card-badge card-badge--{{ settings.badge_position }}
+    {%- if card_product.available == false %} color-{{ settings.sold_out_badge_color_scheme }}
+    {%- elsif card_product.compare_at_price > card_product.price %} color-{{ settings.sale_badge_color_scheme }}
     {%- endif -%}
 ">
     <span
