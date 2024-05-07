@@ -195,7 +195,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "collection": "hydrogen",
+        "collection": "white-wine",
         "title": "Our latest finds…",
         "heading_size": "h1",
         "description": "",
