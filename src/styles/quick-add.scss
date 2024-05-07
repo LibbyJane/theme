@@ -14,15 +14,7 @@
     padding: 0;
     width: 100%;
     z-index: 1;
-
-    .card--card & {
-        padding: var(--space) 0;
-    }
   }
-
-.card--card .quick-add {
-    margin: auto 0 var(--space);
-}
 
   .quick-add-modal {
     box-sizing: border-box;

@@ -195,6 +195,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+<<<<<<< HEAD
         "collection": "argentina",
         "title": "Our latest finds…",
         "heading_size": "h1",
@@ -225,6 +226,9 @@
       "type": "featured-collection",
       "settings": {
         "collection": "hydrogen",
+=======
+        "collection": "white-wine",
+>>>>>>> origin
         "title": "Our latest finds…",
         "heading_size": "h1",
         "description": "",
