@@ -103,7 +103,7 @@
                 {%- endif -%}
                 </div>
                 {%- if show_badge -%}
-                    <div class="card-badge card-badge--article card-badge--{{ settings.badge_position | replace: " ", "-" }} color-{{ settings.color_schemes | first }}">
+                    <div class="card-badge card-badge--article card-badge--{{ settings.badge_position }} color-{{ settings.color_schemes | first }}">
                         <span class="card-badge__inner">{{ 'blogs.article.blog' | t }}</span>
                     </div>
                 {%- endif -%}
