@@ -42,7 +42,6 @@ slider-component {
     }
 }
 
-
 .slider-component-desktop {
     @media screen and (min-width: 990px) {
         max-width: none;
@@ -110,7 +109,6 @@ slider-component {
     }
 }
 
-
 .slider--mobile {
     @media screen and (max-width: 749px) {
         position: relative;
@@ -130,7 +128,6 @@ slider-component {
         }
     }
 }
-
 
 .slider--tablet {
     @media screen and (max-width: 989px) {
@@ -256,12 +253,6 @@ slider-component {
     position: relative;
     z-index: 1;
 
-
-    // .contains-card--article & {
-    //     margin-bottom: var(--space) !important;
-    // }
-
-
     &[aria-hidden="true"] {
         visibility: hidden;
     }
@@ -310,8 +301,6 @@ slider-component {
                 }
             }
         }
-
-
     }
 }
 
