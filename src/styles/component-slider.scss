@@ -15,7 +15,7 @@ slider-component {
     display: block;
     width: 100%;
     max-width: var(--page-width);
-    margin: 0 auto var(--space-med);
+    margin: 0 auto;
     padding-inline: var(--content-padding-inline);
     overflow: clip;
 
@@ -65,7 +65,8 @@ slider-component {
     // overflow: clip; // cutting off blog card shadow
 
     &.contains-card {
-        margin-bottom: calc((var(--slide-block-space) - var(--space-med)) * -1) !important;
+        margin-bottom: var(--slide-space-offset) !important;
+        // margin-bottom: calc((var(--slide-block-space) - var(--space-med)) * -1) !important;
     }
 
     &.contains-card--article {
