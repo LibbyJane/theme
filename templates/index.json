@@ -135,7 +135,7 @@
         "slide_4"
       ],
       "settings": {
-        "layout": "full_bleed",
+        "layout": "grid",
         "slide_height": "small",
         "section_color_scheme": "scheme-inverse",
         "slider_visual": "numbers",
@@ -195,8 +195,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-<<<<<<< HEAD
-        "collection": "argentina",
+        "collection": "new-zealand",
         "title": "Our latest finds…",
         "heading_size": "h1",
         "description": "",
@@ -210,8 +209,8 @@
         "enable_desktop_slider": false,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "color_scheme": "scheme-background",
-        "background_transparent": true,
+        "color_scheme": "scheme-inverse",
+        "background_transparent": false,
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -219,16 +218,13 @@
         "show_rating": false,
         "enable_quick_add": true,
         "padding_top": 48,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "featured_collection_nQkb7w": {
       "type": "featured-collection",
       "settings": {
         "collection": "hydrogen",
-=======
-        "collection": "white-wine",
->>>>>>> origin
         "title": "Our latest finds…",
         "heading_size": "h1",
         "description": "",
@@ -237,21 +233,21 @@
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "primary",
         "enable_desktop_slider": false,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "color_scheme": "scheme-background",
-        "background_transparent": true,
+        "color_scheme": "scheme-accent-light",
+        "background_transparent": false,
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": true,
-        "padding_top": 48,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "collage": {
