@@ -45,12 +45,7 @@ slideshow-component .slideshow.banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-inline: var(--content-padding-inline);
     max-width: 54.5rem;
-
-    @media screen and (min-width: 990px) {
-        padding-inline: 0;
-    }
 
     // &.texture-lined {
     //     max-width: calc( 54.5rem - var(--texture-lined-border-size));
@@ -121,12 +116,17 @@ slideshow-component .slideshow.banner {
     height: 100%;
 }
 
-@media screen and (min-width: 750px) {
-    .slideshow__text-wrapper.banner__content {
-        height: 100%;
-        padding: var(--space-xxl);
+.slideshow__text-wrapper.slideshow__text-wrapper {
+    padding-inline: var(--content-padding-inline);
+
+    @media screen and (min-width: 750px) {
+        .slideshow__text-wrapper.banner__content {
+            height: 100%;
+            padding: var(--space-xxl);
+        }
     }
 }
+
 
 // .slideshow__controls {
 //   border: var( --border-light);
