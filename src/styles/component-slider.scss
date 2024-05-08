@@ -17,14 +17,7 @@ slider-component {
     max-width: var(--page-width);
     margin: 0 auto;
     padding-inline: var(--content-padding-inline);
-    overflow: clip;
-
-    .contains-card {
-        .grid__item {
-            padding-block: var(--slide-block-space) !important;
-            margin-top: var(--slide-space-offset) !important;
-        }
-    }
+    // overflow: clip;
 }
 
 .slider-component-full-width {
@@ -41,6 +34,7 @@ slider-component {
         }
     }
 }
+
 
 .slider-component-desktop {
     @media screen and (min-width: 990px) {
@@ -65,8 +59,7 @@ slider-component {
     // overflow: clip; // cutting off blog card shadow
 
     &.contains-card {
-        margin-bottom: var(--slide-space-offset) !important;
-        // margin-bottom: calc((var(--slide-block-space) - var(--space-med)) * -1) !important;
+        margin-bottom: calc((var(--slide-block-space) - var(--space-med)) * -1) !important;
     }
 
     &.contains-card--article {
@@ -110,6 +103,7 @@ slider-component {
     }
 }
 
+
 .slider--mobile {
     @media screen and (max-width: 749px) {
         position: relative;
@@ -129,6 +123,7 @@ slider-component {
         }
     }
 }
+
 
 .slider--tablet {
     @media screen and (max-width: 989px) {
@@ -254,6 +249,16 @@ slider-component {
     position: relative;
     z-index: 1;
 
+    .contains-card & {
+        padding-block: var(--slide-block-space) !important;
+        margin-top: var(--slide-space-offset) !important;
+    }
+
+    // .contains-card--article & {
+    //     margin-bottom: var(--space) !important;
+    // }
+
+
     &[aria-hidden="true"] {
         visibility: hidden;
     }
@@ -302,6 +307,8 @@ slider-component {
                 }
             }
         }
+
+
     }
 }
 
@@ -401,11 +408,6 @@ slider-component {
         justify-content: center;
         margin: var(--space) auto;
     width: max-content;
-
-    // todo WHERE Is this for - overlaid?
-    // .background-transparent & {
-    //     margin-bottom: calc(-1 * var(--space-sm));
-    // }
 }
 
 .contains-card .slider-buttons,
@@ -444,6 +446,7 @@ slider-component {
         width: 44px;
         height: 44px;
     opacity: var(--opacity-light);
+    z-index: var(--zi-base);
 
     &:hover {
         opacity: 1;
