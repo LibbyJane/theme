@@ -12,7 +12,8 @@ slider-component {
     --desktop-margin-left-first-item: max(5rem, calc((100vw - var(--page-width) + var(--grid-horizontal-spacing)) / 2));
 
     position: relative;
-    display: block;
+    display: flex;
+        flex-direction: column;
     width: 100%;
     max-width: var(--page-width);
     margin: 0 auto;
@@ -58,13 +59,13 @@ slider-component {
        // padding-block: var(--space-sm); // careful or you'll get gaps between content sections
     // overflow: clip; // cutting off blog card shadow
 
-    &.contains-card {
-        margin-bottom: calc((var(--slide-block-space) - var(--space-med)) * -1) !important;
-    }
+    // &.contains-card {
+    //     margin-bottom: calc((var(--slide-block-space) - var(--space-med)) * -1) !important;
+    // }
 
-    &.contains-card--article {
-        margin-bottom: calc(var(--slide-block-space) * -1) !important;
-    }
+    // &.contains-card--article {
+    //     margin-bottom: calc(var(--slide-block-space) * -1) !important;
+    // }
 
     @media (prefers-reduced-motion) {
         scroll-behavior: auto;
@@ -249,10 +250,10 @@ slider-component {
     position: relative;
     z-index: 1;
 
-    .contains-card & {
-        padding-block: var(--slide-block-space) !important;
-        margin-top: var(--slide-space-offset) !important;
-    }
+    // .contains-card & {
+    //     padding-block: var(--slide-block-space) !important;
+    //     margin-top: var(--slide-space-offset) !important;
+    // }
 
     // .contains-card--article & {
     //     margin-bottom: var(--space) !important;

@@ -72,9 +72,10 @@
 
 .price--on-sale {
     .price__sale {
-        display: initial;
+        display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            gap: var(--space-sm);
     }
 
     .price__regular {
