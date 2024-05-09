@@ -212,7 +212,7 @@
         "color_scheme": "scheme-background-3",
         "background_transparent": true,
         "image_ratio": "square",
-        "image_shape": "default",
+        "image_shape": "diamond",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
