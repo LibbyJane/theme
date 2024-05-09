@@ -195,7 +195,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "collection": "new-zealand",
+        "collection": "frontpage",
         "title": "Our latest finds…",
         "heading_size": "h1",
         "description": "",
@@ -212,7 +212,7 @@
         "color_scheme": "scheme-background-3",
         "background_transparent": true,
         "image_ratio": "square",
-        "image_shape": "diamond",
+        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
