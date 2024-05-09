@@ -40,7 +40,7 @@
     "card_highlight_price": true,
     "card_border_thickness": 0,
     "card_border_opacity": 10,
-    "card_corner_radius": 2,
+    "card_corner_radius": 0,
     "card_shadow_opacity": 15,
     "card_shadow_horizontal_offset": 0,
     "card_shadow_vertical_offset": 4,
