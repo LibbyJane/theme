@@ -626,13 +626,13 @@
         "type": "select",
         "id": "card_style",
         "options": [
+            {
+                "value": "standard",
+                "label": "t:settings_schema.cards.settings.style.options__1.label"
+            },
           {
             "value": "card",
             "label": "t:settings_schema.cards.settings.style.options__2.label"
-          },
-          {
-            "value": "standard",
-            "label": "t:settings_schema.cards.settings.style.options__1.label"
           }
         ],
         "default": "card",

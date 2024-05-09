@@ -16,7 +16,7 @@
     --card-shadow-blur-radius: var(--product-card-shadow-blur-radius);
     --card-media-box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
     rgba(var(--color-shadow), var(--media-shadow-opacity));
-    --card-image-offset: calc(var(--collection-card-image-offset) - 1px);
+    --card-image-offset: calc(var(--product-card-image-offset) - 1px);
     --crease-alpha: 0.05;
     --crease-direction: bottom;
     --crease: linear-gradient(to var(--crease-direction), rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), var(--crease-alpha)) 100%);

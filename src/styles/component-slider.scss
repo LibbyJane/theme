@@ -1,10 +1,10 @@
 @import "helpers/common";
 
-.title-wrapper {
-    + slider-component {
-        margin-top: calc(var(--space-lg) * -1);
-    }
-}
+// .title-wrapper {
+//     + slider-component {
+//         margin-top: calc(var(--space-lg) * -1);
+//     }
+// }
 
 slider-component {
     --slide-block-space: 60px; // maximum shadow size + blur allowed in settings
