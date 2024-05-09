@@ -114,7 +114,7 @@
           "label": "Style"
         },
         "image_full_width": {
-          "label": "Card image spans full width"
+          "label": "Default card image spans full width"
         },
         "highlight_price": {
           "label": "Highlight price"
@@ -134,7 +134,7 @@
           "label": "Style"
         },
         "image_full_width": {
-          "label": "Card image spans full width"
+          "label": "Default card image spans full width"
         }
       }
     },
