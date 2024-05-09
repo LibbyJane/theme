@@ -209,8 +209,8 @@
         "enable_desktop_slider": false,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "color_scheme": "scheme-inverse",
-        "background_transparent": false,
+        "color_scheme": "scheme-background-3",
+        "background_transparent": true,
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -218,7 +218,7 @@
         "show_rating": false,
         "enable_quick_add": true,
         "padding_top": 48,
-        "padding_bottom": 0
+        "padding_bottom": 48
       }
     },
     "collage": {
