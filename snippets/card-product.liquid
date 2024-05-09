@@ -84,7 +84,7 @@
             {%- endif -%}
 
             {%- if card_product.featured_media -%}
-                <div class="card__media">
+                <div class="card__media {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }}{%- endif -%}">
                     <div class="media media--transparent media--hover-effect">
                         {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
                         <img
