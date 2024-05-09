@@ -85,6 +85,11 @@
     </head>
 
     <body class="site-outer pg-{{ request.page_type }} {%- if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+        <div style="background: pink; color: black; ">
+            <h1>todo: </h1>
+            <h2>--collection-card-image-offset  {% if settings.collection_card_image_full_width and settings.collection_card_style == 'card' %}{{ settings.collection_card_padding | divided_by: -10.0 }}rem;{% else %}0{% endif %}</h2>
+            <h2>{{ settings.collection_card_style }}</h2>
+        </div>
         <div class="main-content-wrapper">
             {% render 'svg-defs' %}
 
@@ -100,11 +105,7 @@
 
 
             <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-                <div style="background: pink; color: black; ">
-                    <h1>todo: </h1>
-                    <h2>--collection-card-image-offset  {% if settings.collection_card_image_full_width and settings.collection_card_style == 'card' %}{{ settings.collection_card_padding | divided_by: -10.0 }}rem;{% else %}0{% endif %}</h2>
-                    <h2>{{ settings.collection_card_style }}</h2>
-                </div>
+
 
                 {{ content_for_layout }}
             </main>
