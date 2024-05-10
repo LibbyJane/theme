@@ -413,7 +413,7 @@ slider-component {
 
 .contains-card .slider-buttons,
 .contains-card + .slider-buttons {
-    margin-top: var(--slide-space-offset);
+    // margin-top: var(--slide-space-offset);
     position: relative;
     z-index: var(--zi-base);
 }
