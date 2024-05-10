@@ -229,6 +229,11 @@ slider-component {
     }
 }
 
+.slider {
+    overflow-y: clip; /* required */
+    overflow-clip-margin: 60px;
+}
+
 .slider--everywhere {
     position: relative;
     flex-wrap: inherit;
