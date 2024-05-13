@@ -9,13 +9,10 @@
 // --image-padding: var(--collection-card-image-padding);
 // --text-alignment: var(--collection-card-text-alignment);
 
-:root {
-    --card-top-offset: var(--space-sm);
-}
 
-.product-grid.contains-card {
-    margin-top: calc(var(--space-sm) * -1);
-}
+// .product-grid.contains-card {
+//     margin-top: calc(var(--space-sm) * -1);
+// }
 
 .card {
         // padding-bottom: calc(var(--card-padding) - var(--space));
