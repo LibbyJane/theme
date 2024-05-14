@@ -44,7 +44,7 @@
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "padding_top": 28,
-        "padding_bottom": 24
+        "padding_bottom": 28
       }
     },
     "slideshow": {
@@ -77,8 +77,8 @@
             "image_overlay_opacity": 30,
             "heading": "Explore our range",
             "heading_size": "h1",
-            "subheading": "“The discovery of a good wine is increasingly better for mankind than the discovery of a new star.” <em>— Leonardo da Vinci<\/em>",
-            "button_label": "Find your new favorite drop >",
+            "subheading": "“The discovery of a good wine is increasingly better for mankind than the discovery of a new star.” <em>— Leonardo da Vinci<\/em>“The discovery of a good wine is increasingly better for mankind than the discovery of a new star.” <em>— Leonardo da Vinci<\/em>“The discovery of a good wine is increasingly better for mankind than the discovery of a new star.” <em>— Leonardo da Vinci<\/em>“The discovery of a good wine is increasingly better for mankind than the discovery of a new star.” <em>— Leonardo da Vinci<\/em>",
+            "button_label": "Find your new favorite drop > Find your new favorite drop >Find your new favorite drop >Find your new favorite drop >Find your new favorite drop >Find your new favorite drop >vFind your new favorite drop >Find your new favorite drop >",
             "link": "shopify:\/\/collections\/all",
             "button_style_secondary": "secondary",
             "box_align": "bottom-left",
