@@ -250,9 +250,10 @@ slider-component {
     --shadow-padding-bottom: calc((var(--shadow-vertical-offset) + var(--shadow-blur-radius))* var(--shadow-visible));
 
     --shadow-padding-top: 10rem;
-    --shadow-padding-bottom: var(--shadow-vertical-offset);
-    --test2: var(--shadow-blur-radius);
+    --shadow-padding-bottom: var(--card-shadow-vertical-offset);
+    --test2: var(--card-shadow-blur-radius);
     --test3: var(--shadow-visible);
+    --test4: var(--card-shadow-visible);
     scroll-snap-align: start;
     flex-shrink: 0;
     padding-bottom: 0;
