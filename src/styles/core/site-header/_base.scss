@@ -27,9 +27,13 @@
     }
 }
 
-.section-header ~ .shopify-section-group-header-group {
-    &::after {
-        content: none;
+.section-header {
+    position: sticky; // * This is for fixing a Safari z-index issue. PR #2147 *
+
+    ~ .shopify-section-group-header-group {
+        &::after {
+            content: none;
+        }
     }
 }
 
