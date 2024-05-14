@@ -10,9 +10,6 @@ slider-component {
     --slide-block-space: 60px; // maximum shadow size + blur allowed in settings
     --slide-space-offset: calc((var(--slide-block-space) - 10px) * -1);
     --desktop-margin-left-first-item: max(5rem, calc((100vw - var(--page-width) + var(--grid-horizontal-spacing)) / 2));
-    --focus-outline-padding: .5rem;
-    --shadow-padding-top: calc((var(--shadow-vertical-offset)* -1 + var(--shadow-blur-radius))* var(--shadow-visible));
-    --shadow-padding-bottom: calc((var(--shadow-vertical-offset) + var(--shadow-blur-radius))* var(--shadow-visible));
 
     position: relative;
     display: flex;
@@ -247,12 +244,14 @@ slider-component {
     margin-bottom: var(--space);
 }
 
-slider-component {
-
-}
-
 .slider__slide {
-  scroll-snap-align: start;
+    --focus-outline-padding: .5rem;
+    --shadow-padding-top: calc((var(--shadow-vertical-offset)* -1 + var(--shadow-blur-radius))* var(--shadow-visible));
+    --shadow-padding-bottom: calc((var(--shadow-vertical-offset) + var(--shadow-blur-radius))* var(--shadow-visible));
+
+    --shadow-padding-top: 10rem;
+    --shadow-padding-bottom: var(--shadow-vertical-offset);
+    scroll-snap-align: start;
     flex-shrink: 0;
     padding-bottom: 0;
     position: relative;
