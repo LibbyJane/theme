@@ -246,14 +246,8 @@ slider-component {
 
 .slider__slide {
     --focus-outline-padding: .5rem;
-    --shadow-padding-top: calc((var(--shadow-vertical-offset)* -1 + var(--shadow-blur-radius))* var(--shadow-visible));
-    --shadow-padding-bottom: calc((var(--shadow-vertical-offset) + var(--shadow-blur-radius))* var(--shadow-visible));
-
-    --shadow-padding-top: 10rem;
-    --shadow-padding-bottom: var(--card-shadow-vertical-offset);
-    --test2: var(--card-shadow-blur-radius);
-    --test3: var(--shadow-visible);
-    --test4: var(--card-shadow-visible);
+    --shadow-padding-top: calc((var(--card-shadow-vertical-offset)* -1 + var(--card-shadow-blur-radius))* var(--shadow-visible));
+    --shadow-padding-bottom: calc((var(--card-shadow-vertical-offset) + var(--card-shadow-blur-radius))* var(--shadow-visible));
     scroll-snap-align: start;
     flex-shrink: 0;
     padding-bottom: 0;
