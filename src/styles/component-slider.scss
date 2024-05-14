@@ -9,8 +9,7 @@
 slider-component {
     --slide-block-space: 60px; // maximum shadow size + blur allowed in settings
     --slide-space-offset: calc((var(--slide-block-space) - 10px) * -1);
-    --desktop-margin-left-first-item: max(5rem, calc((100vw - var(--page-width) + var(--grid-horizontal-spacing)) / 2));
-
+    --desktop-margin-left-first-item: max(var(--content-padding-inline), calc((100vw - var(--page-width) + var(--grid-horizontal-spacing)) / 2));
     position: relative;
     display: flex;
         flex-direction: column;
