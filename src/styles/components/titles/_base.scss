@@ -1,5 +1,4 @@
 .title-wrapper {
-
     display: flex;
         flex-direction: column;
     margin-bottom: var(--title-margin-bottom);
@@ -15,6 +14,7 @@
 }
 
 .title {
+    box-shadow: var(--card-shadow-horizontal-offset) var(--card-shadow-vertical-offset) var(--card-shadow-blur-radius) rgba(var(--color-shadow), var(--card-shadow-opacity));
     display: flex;
         align-items: center;
         gap: var(--space-xl);
@@ -70,7 +70,7 @@
 }
 
 .title--multiline {
-    flex-wrap: wrap;;
+    flex-wrap: wrap;
 }
 
 .title--additional {
