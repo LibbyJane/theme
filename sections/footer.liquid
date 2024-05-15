@@ -63,8 +63,8 @@
                     -%}
                         <div
                             class="footer__blocks-wrapper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                            {% if settings.animations_reveal_on_scroll %} data-cascade {% endif %}
                             style="--footer-grid-cols: {{ footer_desktop_cols }}"
+                            {% if settings.animations_reveal_on_scroll %} data-cascade {% endif %}
                         >
                             {%- for block in section.blocks -%}
                                 <div
