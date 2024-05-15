@@ -26,6 +26,8 @@
     &::before {
         box-shadow: var(--card-shadow-horizontal-offset) var(--card-shadow-vertical-offset) var(--card-shadow-blur-radius) rgba(var(--color-shadow), var(--card-shadow-opacity));
         content: "";
+        height: 100%;
+        width: 100%;
         position: absolute;
         inset: 0;
         pointer-events: none;
