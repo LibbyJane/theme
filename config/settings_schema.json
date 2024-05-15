@@ -880,7 +880,7 @@
         "id": "collection_card_shadow_horizontal_offset",
         "min": -40,
         "max": 40,
-        "step": 2,
+        "step": 1,
         "unit": "px",
         "label": "t:settings_schema.global.settings.horizontal_offset.label",
         "default": 0
@@ -890,7 +890,7 @@
         "id": "collection_card_shadow_vertical_offset",
         "min": -40,
         "max": 40,
-        "step": 2,
+        "step": 1,
         "unit": "px",
         "label": "t:settings_schema.global.settings.vertical_offset.label",
         "default": 0
@@ -900,7 +900,7 @@
         "id": "collection_card_shadow_blur",
         "min": 0,
         "max": 40,
-        "step": 5,
+        "step": 1,
         "unit": "px",
         "label": "t:settings_schema.global.settings.blur.label",
         "default": 0
@@ -1021,7 +1021,7 @@
         "id": "blog_card_shadow_horizontal_offset",
         "min": -40,
         "max": 40,
-        "step": 2,
+        "step": 1,
         "unit": "px",
         "label": "t:settings_schema.global.settings.horizontal_offset.label",
         "default": 0
@@ -1031,7 +1031,7 @@
         "id": "blog_card_shadow_vertical_offset",
         "min": -40,
         "max": 40,
-        "step": 2,
+        "step": 1,
         "unit": "px",
         "label": "t:settings_schema.global.settings.vertical_offset.label",
         "default": 0
@@ -1041,7 +1041,7 @@
         "id": "blog_card_shadow_blur",
         "min": 0,
         "max": 40,
-        "step": 5,
+        "step": 1,
         "unit": "px",
         "label": "t:settings_schema.global.settings.blur.label",
         "default": 0
