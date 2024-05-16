@@ -1,22 +1,22 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
 {% liquid
-    assign overlap = 0
+    assign content_top_padding = 0
     if section.settings.content_layout == 'overlap'
-        assign overlap = 3
+        assign content_top_padding = 3
     endif
 %}
 
 {%- style -%}
     .section-{{ section.id }}-padding {
-        --padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-        --padding-overlap: {{ overlap }}rem;
+        --content-top-padding: {{ content_top_padding }}rem;
+        padding-top: calc({{ section.settings.padding_top | times: 0.75 | round: 0 }}px) - {{ content_top_padding }}rem);
         padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
 
     @media screen and (min-width: 750px) {
         .section-{{ section.id }}-padding {
-            --padding-top: {{ section.settings.padding_top }}px;
+            padding-top: calc({{ section.settings.padding_top }} - {{ content_top_padding }}rem);
             padding-bottom: {{ section.settings.padding_bottom }}px;
         }
     }

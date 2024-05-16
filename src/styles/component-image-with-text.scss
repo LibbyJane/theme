@@ -1,6 +1,4 @@
 .image-with-text {
-    padding-top: calc(var(--padding-top) - var(--overlap));
-
     @media screen and (min-width: 750px) {
         padding-inline: var(--content-padding-inline);
     }
