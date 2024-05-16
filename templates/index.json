@@ -209,7 +209,7 @@
         "enable_desktop_slider": true,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "color_scheme": "scheme-inverse",
+        "color_scheme": "scheme-accent-light",
         "background_transparent": true,
         "image_ratio": "square",
         "image_shape": "default",
