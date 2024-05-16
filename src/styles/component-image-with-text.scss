@@ -1,4 +1,6 @@
 .image-with-text {
+    padding-top: calc(var(--padding-top) - var(--overlap));
+
     @media screen and (min-width: 750px) {
         padding-inline: var(--content-padding-inline);
     }
@@ -234,7 +236,7 @@
 
     .image-with-text--overlap .image-with-text__text-item {
         display: flex;
-        padding: var(--space-xl) 0 0;
+        padding: var(--padding-overlap, --space-xl) 0 0;
     }
 
     .image-with-text--overlap .image-with-text__content {
