@@ -1,23 +1,23 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
 {% liquid
-    assign content_top_padding = 0
+    assign content_block_padding = 0
     if section.settings.content_layout == 'overlap'
-        assign content_top_padding = 3
+        assign content_block_padding = 3
     endif
 %}
 
 {%- style -%}
     .section-{{ section.id }}-padding {
-        --content-top-padding: {{ content_top_padding }}rem;
-        padding-top: calc({{ section.settings.padding_top | times: 0.75 | round: 0 }}px) - {{ content_top_padding }}rem);
-        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+        --content-top-padding: {{ content_block_padding }}rem;
+        padding-top: calc({{ section.settings.padding_top | times: 0.75 | round: 0 }}px) - {{ content_block_padding }}rem);
+        padding-bottom: calc({{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px - {{ content_block_padding }}rem);
     }
 
     @media screen and (min-width: 750px) {
         .section-{{ section.id }}-padding {
-            padding-top: calc({{ section.settings.padding_top }} - {{ content_top_padding }}rem);
-            padding-bottom: {{ section.settings.padding_bottom }}px;
+            padding-top: calc({{ section.settings.padding_top }} - {{ content_block_padding }}rem);
+            padding-bottom: calc({{ section.settings.padding_bottom }}px - {{ content_block_padding }}rem);
         }
     }
 {%- endstyle -%}
