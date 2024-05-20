@@ -18,7 +18,7 @@
     {%- if section.settings.heading != blank -%}
         <header class="title-wrapper align-{{ settings.title_alignment }} page-width page-width--narrow">
             <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-                {{ section.settings.title }}
+                {{ section.settings.heading }}
             </h2>
         </header>
     {%- else -%}
