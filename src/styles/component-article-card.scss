@@ -9,7 +9,11 @@
 
     &.card--standard {
         &.card--text {
-            padding-top: var(--space)
+            padding-top: var(--space);
+
+            .card__content {
+                margin-top: 0;
+            }
         }
     }
 }
@@ -17,3 +21,4 @@
 .article-card__excerpt {
     margin-bottom: 0;
 }
+
