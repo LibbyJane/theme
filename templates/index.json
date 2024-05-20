@@ -135,7 +135,7 @@
         "slide_4"
       ],
       "settings": {
-        "layout": "grid",
+        "layout": "full_bleed",
         "slide_height": "small",
         "section_color_scheme": "scheme-inverse",
         "slider_visual": "numbers",
@@ -356,12 +356,12 @@
     "contact_form": {
       "type": "contact-form",
       "settings": {
-        "heading": "",
+        "heading": "Get in touch",
         "heading_size": "h2",
         "section_color_scheme": "",
         "background_transparent": true,
         "content_color_scheme": "",
-        "store_message": "Send to:",
+        "store_message": "To:",
         "show_store_name": true,
         "show_store_contact_information": true,
         "stamp_image": "shopify:\/\/shop_images\/a-small-drink-to-cheers-the-field-of-vines-below.jpg",
