@@ -6,6 +6,19 @@
 {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+        assign footer_desktop_cols = section.blocks.size
+
+        if section.blocks.size == 9
+            assign footer_desktop_cols = 3
+        elsif section.blocks.size > 6
+            assign footer_desktop_cols = 4
+        elsif section.blocks.size > 4
+            assign footer_desktop_cols = 3
+        endif
+    :root {
+        --footer-grid-cols: {{ footer_desktop_cols }};
+    }
+
     .footer {
         margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
     }
@@ -28,6 +41,7 @@
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} default-content-style section-{{ section.id }}-padding isolate">
+    <h1>todo: section.blocks.size {{ section.blocks.size }}</h1>
     {%- liquid
         assign has_social_icons = true
         if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -61,6 +75,7 @@
                             assign footer_desktop_cols = 3
                         endif
                     -%}
+                    <h1>todo: footer_desktop_cols {{ footer_desktop_cols }}</h1>
                         <div
                             class="footer__blocks-wrapper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                             style="--footer-grid-cols: {{ footer_desktop_cols }}"
