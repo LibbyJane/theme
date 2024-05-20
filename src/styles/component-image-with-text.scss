@@ -88,9 +88,10 @@
     }
 }
 
+
 .image-with-text__text-item {
     .image-with-text--overlap & {
-        padding: var(--content-block-padding, 3rem) var(--content-padding-inline);
+        padding-inline: var(--content-padding-inline);
 
         @media screen and (min-width: 750px) {
             padding-inline: 0;
@@ -107,9 +108,9 @@
     word-break: break-word;
     align-self: center;
     display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
     padding: var(--space-xl) var(--space-lg) var(--space-med);
     position: relative;
@@ -125,17 +126,6 @@
 
         @media screen and (min-width: 990px) {
             padding-left: calc(var(--space-xl) + var(--texture-lined-border-size));
-        }
-    }
-
-    .image-with-text--overlap & {
-        // width: calc(100% - var(--texture-lined-border-size) - var(--content-padding-inline) - var(--content-padding-inline));
-        // margin: calc(var(--space) * -1) auto 0;
-        margin: auto;
-
-        @media screen and (min-width: 750px) {
-            width: 90%;
-            //margin: calc(var(--space-xl) * -1) auto;
         }
     }
 }
@@ -160,10 +150,15 @@
     box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
 }
 
+
+
 .image-with-text .image-with-text__text-item>* {
     border-radius: var(--text-boxes-radius);
+
     box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset) var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
 }
+
+
 
 .image-with-text:not(.image-with-text--overlap) .image-with-text__media-item>*,
 .image-with-text:not(.image-with-text--overlap) .image-with-text__text-item>* {
@@ -201,6 +196,15 @@
     text-align: center;
 }
 
+.image-with-text--overlap .image-with-text__content {
+    // width: calc(100% - var(--texture-lined-border-size) - var(--content-padding-inline) - var(--content-padding-inline));
+    margin: calc(var(--space) * -1) auto 0;
+
+    @media screen and (min-width: 750px) {
+        width: 90%;
+        margin: calc(var(--space-xl) * -1) auto;
+    }
+}
 
 @media screen and (min-width: 750px) {
     .image-with-text__grid--reverse .image-with-text__content {
@@ -234,14 +238,14 @@
 
     .image-with-text--overlap .image-with-text__text-item {
         display: flex;
-        padding: var(--padding-overlap, --space-xl) 0 0;
+        padding: var(--space-xl) 0 0;
     }
 
     .image-with-text--overlap .image-with-text__content {
         height: auto;
         width: calc(100% + 4rem);
         min-width: calc(100% + 4rem);
-        margin-top: auto;
+        margin-top: 0;
         margin-left: -4rem;
     }
 

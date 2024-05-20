@@ -1,32 +1,22 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
-{% liquid
-    assign content_block_padding = 0
-    if section.settings.content_layout == 'overlap'
-        assign content_block_padding = 3
-    endif
-%}
-
 {%- style -%}
     .section-{{ section.id }}-padding {
-
-        padding-top: calc({{ section.settings.padding_top | times: 0.75 | round: 0 }}px) - {{ content_block_padding }}rem);
-        padding-bottom: calc({{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px - {{ content_block_padding }}rem);
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
 
     @media screen and (min-width: 750px) {
         .section-{{ section.id }}-padding {
-            padding-top: calc({{ section.settings.padding_top }} - {{ content_block_padding }}rem);
-            padding-bottom: calc({{ section.settings.padding_bottom }}px - {{ content_block_padding }}rem);
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
         }
     }
 {%- endstyle -%}
 
 {% assign scheme1 = settings.color_schemes | first %}
-<h1 class="color-inverse">todo {{ section.settings.content_layout }}</h1>
-<div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-style=" --content-block-padding: {{ content_block_padding }}rem;"
->
+
+<div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
         <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
             <div
