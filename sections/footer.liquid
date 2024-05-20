@@ -5,16 +5,19 @@
 {{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 
-{%- style -%}
-        assign footer_desktop_cols = section.blocks.size
+{%- liquid
+    assign footer_desktop_cols = section.blocks.size
 
-        if section.blocks.size == 9
-            assign footer_desktop_cols = 3
-        elsif section.blocks.size > 6
-            assign footer_desktop_cols = 4
-        elsif section.blocks.size > 4
-            assign footer_desktop_cols = 3
-        endif
+    if section.blocks.size == 9
+        assign footer_desktop_cols = 3
+    elsif section.blocks.size > 6
+        assign footer_desktop_cols = 4
+    elsif section.blocks.size > 4
+        assign footer_desktop_cols = 3
+    endif
+-%}
+
+{%- style -%}
     :root {
         --footer-grid-cols: {{ footer_desktop_cols }};
     }
