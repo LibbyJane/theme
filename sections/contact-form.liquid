@@ -15,6 +15,15 @@
 {%- endstyle -%}
 
 <div class="contact color-{{ section.settings.section_color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} section-{{ section.id }}-padding isolate">
+    {%- if section.settings.heading != blank -%}
+        <header class="title-wrapper align-{{ settings.title_alignment }} page-width page-width--narrow">
+            <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                {{ section.settings.title }}
+            </h2>
+        </header>
+    {%- else -%}
+        <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
+    {%- endif -%}
 
     <div class="postcard-container">
         {%- capture postcard_color_scheme -%}color-{{ section.settings.content_color_scheme }}{% endcapture %}
@@ -41,13 +50,6 @@
         {%- endif -%}
 
         {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
-            {%- if section.settings.heading != blank -%}
-                <h2 class="postcard-title inline-richtext {{ section.settings.heading_size }}">
-                    {{ section.settings.heading }}
-                </h2>
-            {%- else -%}
-            <h1 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h1>
-            {%- endif -%}
             <fieldset class="contact__fields">
                 <div class="field">
                     <input
