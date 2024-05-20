@@ -366,7 +366,7 @@
         "show_store_contact_information": true,
         "stamp_image": "shopify:\/\/shop_images\/a-small-drink-to-cheers-the-field-of-vines-below.jpg",
         "secondary_image": "shopify:\/\/shop_images\/vineyard-at-sunset.jpg",
-        "padding_top": 44,
+        "padding_top": 64,
         "padding_bottom": 32
       }
     }
