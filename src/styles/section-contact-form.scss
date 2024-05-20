@@ -1,3 +1,287 @@
+:root {
+    --postcard-aspect-ratio: 3/2;
+    --postcard-padding: var(--content-padding-inline);
+
+    @media screen and (min-width: 750px) {
+        --postcard-padding: var(--space-lg);
+    }
+}
+
+.contact {
+    position: relative;
+    overflow: clip;
+    max-width: 100%;
+}
+
+.postcard-container {
+    margin: auto;
+    position: relative;
+    width: calc(100% - var(--content-padding-inline) - var(--content-padding-inline));
+    max-width: 100%;
+    z-index: var(--zi-base);
+
+    @media screen and (min-width: 750px) {
+        width: max-content;
+    }
+
+    form {
+        @media screen and (min-width: 750px) {
+            margin-top: -2px;
+            margin-left: 2px;
+        }
+    }
+
+    .form__message {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+.postcard {
+    --color-postcard-border: rgba(var(--color-foreground), 0.3);
+    --input-border-width: 1px;
+    aspect-ratio: var(--postcard-aspect-ratio);
+    background-color: rgb(var(--color-background));
+    background-image: radial-gradient(hsl(50, 0%, 96%), hsl(50, 0%, 94%), hsl(450, 0%, 85%));
+    background-blend-mode: multiply;
+    background-repeat: repeat;
+    background-size: cover;
+    box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
+    display: grid;
+        grid-template-areas: "postcard-title" "postcard-fields" "postcard-send";
+    //max-width: 100%;
+
+    margin: 0 auto;
+    padding: var(--postcard-padding);
+    padding-bottom: 0;
+    position: relative;
+
+    @media screen and (min-width: 750px) {
+        grid-template-areas: "postcard-title postcard-title postcard-title postcard-send" "postcard-fields postcard-fields blank postcard-send";
+        grid-template-columns: 1fr max-content max-content minmax(40%, max-content);
+        grid-template-rows:  minmax(var(--space), max-content) 1fr;
+        width: var(--page-width-narrow);
+        max-width: 100%;
+    }
+
+    fieldset {
+        display: flex;
+            flex-direction: column;
+        // margin: var(--content-padding) 0;
+        margin: 0;
+        padding: 0 0 var(--postcard-padding);
+        position: relative;
+
+        @media screen and (min-width: 750px) {
+            padding-bottom: 0;
+            padding-right: var(--space-lg);
+        }
+    }
+
+    // fieldset type
+    .contact__fields {
+        grid-area: postcard-fields;
+
+        @media screen and (min-width: 750px) {
+            padding-top: var(--space-xs);
+        }
+    }
+
+    // fieldset type
+    .contact__submit {
+        grid-area: postcard-send;
+        padding-right: 0;
+        padding-bottom: var(--space);
+
+        @media screen and (min-width: 750px) {
+            border-left: 2px solid var(--color-postcard-border);
+            padding-left: var(--space-lg);
+        }
+
+        // @media screen and (min-width: 750px) {
+        //     padding-bottom: var(--space);
+        // }
+
+        // stamp placement outline
+        &::before {
+            aspect-ratio: 2/3;
+            border: 2px dashed var(--color-postcard-border);
+            content: '';
+            width: 8rem;
+            margin-top: var(--space-med);
+            margin-left: auto;
+            transform: scale(0.9);
+            opacity: var(--opacity-light);
+
+            @media screen and (min-width: 750px) {
+                margin-top: 0;
+                margin-bottom: var(--space);
+                // transform: translateY(calc(var(--space-med) * -1)) translateX(calc(var(--space-lg) * -1)) scale(0.9);
+            }
+        }
+
+        &::after {
+            @include default-texture;
+            box-shadow: 0 0 2px rgba(var(--color-shadow), 1);
+            content: '';
+            position: absolute;
+            inset: 0 calc(var(--postcard-padding) * -1);
+            z-index: -1;
+
+            @media screen and (min-width: 750px) {
+                content: none;
+            }
+        }
+    }
+
+    .field {
+        --border: var(--input-border-width) solid var(--color-postcard-border);
+        border-bottom: var(--border);
+        padding-top: 0;
+
+        &.status-error {
+            --border: var(--input-border-width) solid currentColor; // inherited by the status div
+            border-bottom: none;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .field__label {
+        font-family: var(--font-heading-family);
+        font-style: var(--font-heading-style);
+    }
+
+    textarea {
+        --line-height: calc(var(--font-heading-scale) * 2rem);
+        background-size: var(--line-height) var(--line-height);
+        background-image: repeating-linear-gradient(0deg, var(--color-postcard-border), var(--color-postcard-border) var(--input-border-width), rgba(255,255,255,0) var(--input-border-width), rgba(255,255,255,0));
+        border: none;
+        line-height: var(--line-height);
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .contact__store-message {
+        @include text-heading;
+        font-size: var(--font-size-h5);
+        margin-bottom: var(--space-med);
+    }
+
+    .contact__store-details {
+        padding-left: var(--space);
+
+        p,
+        address {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+    }
+
+    button[type="submit"] {
+        margin: 0 auto;
+        width: 100%;
+
+        @media screen and (min-width: 750px) {
+            margin-top: auto;
+        }
+    }
+}
+
+// .postcard-title {
+//     grid-area: postcard-title;
+//     padding-top: var(--space-xs);
+//     transform: rotate(-0.5deg) translateX(-3px) translateY(-2px);
+// }
+
+.postage-stamp {
+    filter: drop-shadow(0 0 1px rgba(var(--color-shadow), 0.2));
+    width: 9rem;
+    transform: rotate(-1deg);
+    backface-visibility: hidden;
+    position: absolute;
+        top: var(--space-lg);
+        right: 0;
+    z-index: 1;
+
+    @media screen and (min-width: 750px) {
+        // top: var(--space-med);
+        // right: var(--space-xl);
+        top: 0;
+        right: var(--space-sm);
+    }
+
+    img {
+        display: block;
+            height: auto;
+            width: 100%;
+        --mask:
+            linear-gradient(#000 0 0) 50%/calc(100% - 6px) calc(100% - 6px) no-repeat,
+            radial-gradient(3px,#0000 98%,#000) 0 -3px/5.55px 6px round no-repeat,
+            radial-gradient(3px,#0000 98%,#000) 0 calc(100% + 3px)/5.55px 6px round no-repeat,
+            radial-gradient(3px,#0000 98%,#000) -3px 0/6px 5.55px no-repeat round,
+            radial-gradient(3px,#0000 98%,#000) calc(100% + 3px) 0/6px 5.55px no-repeat round;
+            clip-path: polygon(6px 0,calc(100% - 6px) 0,100% 6px,100% calc(100% - 6px),calc(100% - 6px) 100%,6px 100%,0 calc(100% - 6px),0 6px);
+        // -webkit-mask: var(--mask);
+        mask: var(--mask);
+        padding: 4px;
+        background-color: var(--color-white-rgb);
+    }
+}
+
+.postage-stamp--landscape {
+    width: 14rem;
+    top: 2.5rem;
+    right: -0.5rem;
+
+    @media screen and (min-width: 750px) {
+        top: 1.2rem;
+        right: var(--space-xs);
+    }
+
+    // @media screen and (min-width: 990px) {
+    //     right: var(--space-lg);
+    // }
+}
+
+.postage-stamp--square {
+    top: 2.75rem;
+    right: -0.5rem;
+
+    @media screen and (min-width: 750px) {
+        top: var(--space);
+        right: var(--space-xs);
+    }
+}
+
+.postcard__reverse-face {
+    aspect-ratio: var(--postcard-aspect-ratio);
+    position: absolute;
+        top: 0;
+        right: auto;
+        bottom: 0;
+        left: auto;
+    // transform: rotate(-5deg) translateX(1rem);
+    transform: rotate(-5deg) translateX(5rem) translateY(2rem);
+    z-index: -1;
+    overflow: clip;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+
+    img {
+        box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
+        rgba(var(--color-shadow), var(--media-shadow-opacity));
+        display: block;
+            height:auto;
+            width:auto;
+            object-fit: cover;
+    }
+}
+
 // .contact img {
 //   max-width: 100%;
 // }
