@@ -277,8 +277,8 @@
         "show_date": true,
         "show_author": false,
         "show_view_all": true,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 44,
+        "padding_bottom": 0
       }
     },
     "featured_product": {
@@ -357,16 +357,16 @@
       "type": "contact-form",
       "settings": {
         "heading": "",
-        "heading_size": "h3",
+        "heading_size": "h2",
         "section_color_scheme": "",
         "background_transparent": true,
         "content_color_scheme": "",
-        "store_message": "To:",
+        "store_message": "Send to:",
         "show_store_name": true,
         "show_store_contact_information": true,
         "stamp_image": "shopify:\/\/shop_images\/a-small-drink-to-cheers-the-field-of-vines-below.jpg",
         "secondary_image": "shopify:\/\/shop_images\/vineyard-at-sunset.jpg",
-        "padding_top": 36,
+        "padding_top": 64,
         "padding_bottom": 32
       }
     }
