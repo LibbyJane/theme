@@ -7,6 +7,10 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    &.texture-lined {
+        padding-left: 5rem;
+    }
+
     .card--text {
         .card__heading {
             padding-top: var(--space-sm);
