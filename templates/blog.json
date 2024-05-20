@@ -4,6 +4,9 @@
       "type": "main-blog",
       "settings": {
         "layout": "collage",
+        "content_color_scheme": "scheme-background",
+        "background_transparent": false,
+        "background_texture": "paper",
         "show_image": true,
         "image_height": "small",
         "show_date": true,
