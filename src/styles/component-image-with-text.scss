@@ -59,6 +59,7 @@
     height: var(--content-area-height-large);
 }
 
+
 .image-with-text__media--adapt {
     height: 20rem;
 
@@ -202,7 +203,7 @@
 
     @media screen and (min-width: 750px) {
         width: 90%;
-        margin: calc(var(--space-xl) * -1) auto;
+        margin: -3rem auto 0;
     }
 }
 
@@ -238,7 +239,7 @@
 
     .image-with-text--overlap .image-with-text__text-item {
         display: flex;
-        padding: var(--space-xl) 0 0;
+        padding: 3rem 0;
     }
 
     .image-with-text--overlap .image-with-text__content {
