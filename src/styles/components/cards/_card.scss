@@ -164,6 +164,19 @@
     @include card-container;
 }
 
+.card--standard {
+    .card__inner {
+        @include card-container;
+        margin-bottom: var(--space);
+
+        &.ratio {
+            &::before {
+                padding: 0;
+            }
+        }
+    }
+}
+
 .card--extend-height {
     height: 100%;
 

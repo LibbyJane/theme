@@ -21,11 +21,11 @@
         width: 100%;
     }
 
-    .card__inner {
-        &::before {
-            content: none;
-        }
-    }
+    // .card__inner {
+    //     &::before {
+    //         content: none;
+    //     }
+    // }
 
     .article-card__image--small {
         .card__media {

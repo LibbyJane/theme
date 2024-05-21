@@ -22,19 +22,20 @@
         if media_aspect_ratio != null
             assign ratio = media_aspect_ratio
         endif
+
+        assign ratio_percent = 1 | divided_by: ratio | times: 100 | append: '%'
     -%}
     <div class="article-card-wrapper card-wrapper">
-        <a href="{{ article.url }}" class="card article-card card--{{ settings.blog_card_style }}
-            article-card__image--{%- if media_height and media_height != 'adapt' %}{{ media_height }}{% else %}adapt{% endif %}
+        <a href="{{ article.url }}" class="card article-card card--{{ settings.blog_card_style }} article-card__image--{%- if media_height and media_height != 'adapt' %}{{ media_height }}{% else %}adapt{% endif %}
             {%- if article.image and show_image %} card--media{% else %} card--text{% endif %}
             {%- if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} {% endif %}
             {%- if settings.blog_card_style == 'card' and media_height == nil and article.image == empty or show_image == false %} ratio{% endif %}
             "
-            style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+            style="--ratio-percent: {{ ratio_percent }}"
         >
             <div
                 class="card__inner {% if settings.blog_card_style == 'standard' %} color-{{ settings.blog_card_color_scheme }} {% endif %}{% if article.image and show_image or settings.blog_card_style == 'standard' %} ratio{% endif %}"
-                style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+                style="--ratio-percent: {{ ratio_percent }}"
             >
                 {%- if show_image == true and article.image -%}
                     <div class="article-card__image-wrapper card__media">
