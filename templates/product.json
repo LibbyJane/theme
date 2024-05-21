@@ -89,7 +89,7 @@
       "settings": {
         "enable_sticky_info": true,
         "section_color_scheme": "scheme-background-2",
-        "section_background_style": "transparent",
+        "section_background_style": "torn",
         "content_color_scheme": "scheme-background",
         "content_background_style": "paper",
         "use_color_highlight": true,
