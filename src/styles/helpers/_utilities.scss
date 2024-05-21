@@ -18,7 +18,6 @@
     margin-top: var(--space) !important;
 }
 
-
 // enable if required
 // .margin-top--med {
 //     margin-top: var(--space-med) !important;
@@ -28,6 +27,9 @@
     margin-top: var(--space-lg) !important;
 }
 
+.padding-bottom {
+    padding-bottom: var(--space) !important;
+}
 
 @media screen and (max-width: 749px) {
     .small-hide {
