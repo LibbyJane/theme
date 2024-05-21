@@ -104,12 +104,12 @@
         "column_LnHrr9"
       ],
       "settings": {
-        "title": "",
+        "title": "Team leads",
         "heading_size": "h1",
         "full_width": false,
         "image_width": "half",
         "image_ratio": "circle",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "column_alignment": "center",
         "column_link_hover_style": "",
         "button_label": "Contact us",
