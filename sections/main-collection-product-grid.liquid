@@ -164,7 +164,7 @@
                                 {%- if forloop.index > 2 -%}
                                     {%- assign lazy_load = true -%}
                                 {%- endif -%}
-                                <li>TODO: {{ forloop.index }}</li>
+                                <li>TODO: {{ forloop.index }} {% if lazy_load %}ll{% endif %} </li>
                                 <li
                                     class="grid__item{% if settings.animations_reveal_on_scroll and forloop.index > 0 %} scroll-trigger animate--slide-in{% endif %}"
                                     {% if settings.animations_reveal_on_scroll %}
@@ -172,7 +172,6 @@
                                         style="--animation-order: {{ forloop.index }};"
                                     {% endif %}
                                 >
-                                    <h1>todo: {{ forloop.index }}</h1>
                                     {% render 'card-product',
                                         card_product: product,
                                         media_aspect_ratio: section.settings.image_ratio,
