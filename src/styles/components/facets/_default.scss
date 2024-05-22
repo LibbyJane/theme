@@ -34,7 +34,8 @@
 
     .icon-caret {
         cursor: pointer;
-        height: 0.6rem;
+        height: var(--icon-size-xs);
+        width: var(--icon-size-sm);
         margin-top: auto;
         margin-bottom: auto;
         position: static;
