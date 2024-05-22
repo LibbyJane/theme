@@ -196,8 +196,7 @@
         --drawer-shadow-vertical-offset: {{ settings.drawer_shadow_vertical_offset }}px;
         --drawer-shadow-blur-radius: {{ settings.drawer_shadow_blur }}px;
 
-        --spacing-sections-desktop: {{ settings.spacing_sections }}px;
-        --spacing-sections-mobile: {% if settings.spacing_sections < 24 %}{{ settings.spacing_sections }}{% else %}{{ settings.spacing_sections | times: 0.7 | round | at_least: 20 }}{% endif %}px;
+        --spacing-sections: {% if settings.spacing_sections < 24 %}{{ settings.spacing_sections }}{% else %}{{ settings.spacing_sections | times: 0.7 | round | at_least: 20 }}{% endif %}px;
 
         --grid-desktop-vertical-spacing: {{ settings.spacing_grid_vertical }}px;
         --grid-desktop-horizontal-spacing: {{ settings.spacing_grid_horizontal }}px;
@@ -212,6 +211,7 @@
         --content-area-height-large: 43.5rem;
 
         @media screen and (min-width: 750px) {
+            --spacing-sections: {{ settings.spacing_sections }}px;
             --grid-horizontal-spacing: var(--grid-desktop-horizontal-spacing, 1rem);
             --grid-vertical-spacing: var(--grid-desktop-vertical-spacing, 1rem);
             --content-area-height-small: 31.4rem;
