@@ -165,14 +165,14 @@
                                     if forloop.index > 2
                                         assign lazy_load = true
                                     endif
-
-                                    assign animate_with_order = nil
-                                    if settings.animations_reveal_on_scroll
-                                        assign animate_with_order = forloop.index
-                                    endif
                                 %}
 
-                                <li class="grid__item">
+                                <li
+                                    class="grid__item{% if settings.animations_reveal_on_scroll and forloop.index <= section.settings.columns_mobile %} scroll-trigger animate--slide-in{% endif %}"
+                                    {% if settings.animations_reveal_on_scroll %}
+                                        data-cascade style="--animation-order: {{ forloop.index }};"
+                                    {% endif %}
+                                >
                                     {% render 'card-product',
                                         card_product: product,
                                         media_aspect_ratio: section.settings.image_ratio,
@@ -182,8 +182,7 @@
                                         show_rating: section.settings.show_rating,
                                         lazy_load: lazy_load,
                                         show_quick_add: section.settings.enable_quick_add,
-                                        section_id: section.id,
-                                        animate_with_order: animate_with_order
+                                        section_id: section.id
                                     %}
                                 </li>
                             {%- endfor -%}

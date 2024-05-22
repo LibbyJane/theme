@@ -15,7 +15,6 @@
     - horizontal_class: {Boolean} Add a card--horizontal class if set to true. Default: false (optional)
     - horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
     - placeholder_image: {String} The placeholder image to use when no product exists. Default: 'product-2' (optional)
-    - animate_with_order: {Integer} If a value is supplied, add animation classes, attibutes and --animation-order variable value (optional)
 
     Usage:
     {% render 'card-product', show_vendor: section.settings.show_vendor %}
@@ -72,10 +71,8 @@
         {%- if image_shape and image_shape != 'default' %} card--shape{% endif -%}
         {%- if extend_height %} card--extend-height{% endif -%}
         {%- if horizontal_class %} card--horizontal{% endif -%}
-        {%- if showBadge %} card-badge--{{ settings.badge_position }}{% endif -%}
-        {%- if animate_with_order %} scroll-trigger animate--slide-in {% endif -%}
-        "
-        style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%; --aspect-ratio: {{ aspect-ratio-width }} / {{ aspect-ratio-height }}; {%- if animate_with_order %} data-cascade style="--animation-order: {{ animate_with_order }}; {% endif -%}"
+        {%- if showBadge %} card-badge--{{ settings.badge_position }}{% endif -%}"
+        style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%; --aspect-ratio: {{ aspect-ratio-width }} / {{ aspect-ratio-height }};"
         aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
     >
         <div
