@@ -169,6 +169,7 @@
                                     assign animate_with_order = nil
                                     if settings.animations_reveal_on_scroll
                                         assign animate_with_order = forloop.index
+                                    endif
                                 %}
 
                                 <li class="grid__item">
@@ -182,7 +183,7 @@
                                         lazy_load: lazy_load,
                                         show_quick_add: section.settings.enable_quick_add,
                                         section_id: section.id,
-                                        animate_with_order: animation_order
+                                        animate_with_order: animate_with_order
                                     %}
                                 </li>
                             {%- endfor -%}
