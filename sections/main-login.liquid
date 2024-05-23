@@ -88,7 +88,7 @@
 
             <h1>TODO: </h1>
             <div class="form__message color--success flex-col" tabindex="-1" autofocus>
-                <h3 class="form__message" tabindex="-1" autofocus>
+                <h3 class="form__status-heading" tabindex="-1" autofocus>
                     {%- render 'icon-success' -%}
                     {{ 'customer.recover_password.success' | t }}
                 </h3>
@@ -101,9 +101,6 @@
 
             {%- form 'customer_login', novalidate: 'novalidate' -%}
                 {%- if form.errors -%}
-
-                    </div>
-
                     <div class="form__message color--danger flex-col" tabindex="-1" autofocus>
                         <h2 class="form__status-heading">
                             <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
