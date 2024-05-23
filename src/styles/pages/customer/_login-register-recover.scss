@@ -1,6 +1,10 @@
 #recover,
 #login {
     scroll-margin-top: 20rem;
+
+    &:target {
+        outline: 2px solid transparent;
+    }
 }
 
 .login,
@@ -22,7 +26,6 @@
 
     &:target {
         display: block;
-        outline: 2px solid transparent;
 
         ~ #login {
             display: none;
