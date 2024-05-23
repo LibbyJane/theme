@@ -25,7 +25,7 @@
             </h1>
         </header>
 
-        {% comment %} <section class="customer__page-content default-content-style content-padding-med">
+        <section class="customer__page-content default-content-style content-padding-med">
             <p>
                 {{ 'customer.recover_password.subtext' | t }}
             </p>
@@ -71,10 +71,10 @@
                     </a>
                 </footer>
             {%- endform -%}
-        </section> {% endcomment %}
+        </section>
     </div>
 
-    {% comment %} <div id="login" tabindex="-1" style="background: aqua">
+    <div id="login" tabindex="-1" style="background: aqua">
         <header class="title-wrapper align-{{ settings.title_alignment }}">
             <h1 class="title texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }}">
                 {{ 'customer.login_page.title' | t }}
@@ -153,7 +153,7 @@
                 </footer>
             {%- endform -%}
         </section>
-    </div> {% endcomment %}
+    </div>
 
     {%- if shop.checkout.guest_login -%}
         <div class="content-padding-inline">
