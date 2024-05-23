@@ -15,14 +15,14 @@
 {%- endstyle -%}
 
 <div class="pg-customer page-width login section-{{ section.id }}-padding" style="background: white">
-    <div id="recover" tabindex="-1" style="background: pink">
-        <header class="title-wrapper align-{{ settings.title_alignment }}">
+    <div id="recover" tabindex="-1" style="background: silver">
+        {% comment %} <header class="title-wrapper align-{{ settings.title_alignment }}">
             <h1 class="title texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }}">
                 {{ 'customer.recover_password.title' | t }}
             </h1>
-        </header>
+        </header> {% endcomment %}
 
-        <section class="custo mer__page-content defa ult-content-style content-padding-med">
+        {% comment %} <section class="customer__page-content default-content-style content-padding-med">
             <p>
                 {{ 'customer.recover_password.subtext' | t }}
             </p>
@@ -68,7 +68,7 @@
                     </a>
                 </footer>
             {%- endform -%}
-        </section>
+        </section> {% endcomment %}
     </div>
 
     {% comment %} <div id="login" tabindex="-1" style="background: aqua">
