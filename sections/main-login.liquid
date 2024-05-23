@@ -92,6 +92,13 @@
                     {%- render 'icon-success' -%}
                     {{ 'customer.recover_password.success' | t }}
                 </h3>
+            </div>
+
+            <h3 class="form__message" tabindex="-1" autofocus>
+                {%- render 'icon-success' -%}
+                {{ 'customer.recover_password.success' | t }}
+            </h3>
+
             {%- form 'customer_login', novalidate: 'novalidate' -%}
                 {%- if form.errors -%}
 
