@@ -8,7 +8,7 @@
      // eg email signup form success message
     // todo - test if too specific
     display: inline-flex;
-    align-items: center;
+        align-items: baseline;
     gap: var(--space);
 
     &[hidden] {
