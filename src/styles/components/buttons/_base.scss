@@ -267,14 +267,11 @@ summary,
     gap: var(--space-sm);
     padding: 0;
 
-    &:has(.underline-on-hover__text) {
-        @include underline-on-hover($selector: ".underline-on-hover__text")
-    }
-
     &::before {
         content: none;
     }
 }
+
 
 
 /* outline and border styling for Windows High Contrast Mode */

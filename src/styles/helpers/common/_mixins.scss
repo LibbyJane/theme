@@ -227,18 +227,18 @@
     }
 }
 
-@mixin underline-on-hover($underline-inline-offset: 0, $underline-bottom-offset: 0, $selector: "::after") {
+@mixin underline-on-hover($underline-inline-offset: 0, $underline-bottom-offset: 0) {
     position: relative;
     z-index: 1;
 
     &:hover,
     &:focus {
-        &#{$selector} {
+        &::after {
             animation: scaleX100 var(--duration-medium) var(--transition-type) forwards;
         }
     }
 
-    &#{$selector} {
+    &::after {
         animation: scaleOutX100 var(--duration-medium) var(--transition-type) forwards;
         mask-image: url(mask-underline.svg);
         mask-size: cover;

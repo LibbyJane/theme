@@ -148,6 +148,10 @@ a {
     @include underline-on-hover;
 }
 
+.underline-child-on-hover {
+    @include underline-child-on-hover;
+}
+
 .hover-highlight {
     @include hover-highlight;
 }
