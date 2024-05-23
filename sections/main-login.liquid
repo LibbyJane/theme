@@ -146,10 +146,8 @@
                         {{ 'customer.login_page.sign_in' | t }}
                     </button>
 
-                    <a href="{{ routes.account_register_url }}" class="button button--plain">
-                        <span class="underline-on-hover__text">
-                            {{ 'customer.login_page.create_account' | t }}
-                        </span>
+                    <a href="{{ routes.account_register_url }}" class="button button--plain underline-child-on-hover">
+                        <span>{{ 'customer.login_page.create_account' | t }}</span>
                     </a>
                 </footer>
             {%- endform -%}
