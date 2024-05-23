@@ -14,7 +14,7 @@
     }
 {%- endstyle -%}
 
-<div class="pg-customer page-width login section-{{ section.id }}-padding">
+<div class="pg-customer page-width login section-{{ section.id }}-padding" style="background: purple">
     <div id="recover" tabindex="-1" style="background: pink">
         <header class="title-wrapper align-{{ settings.title_alignment }}">
             <h1 class="title texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }}">
@@ -150,6 +150,18 @@
                 </footer>
             {%- endform -%}
         </section>
+    </div>
+
+    {% comment %} todo: remove this {% endcomment %}
+    <div>
+        <hr>
+        <h2>{{ 'customer.login_page.guest_title' | t }}</h2>
+
+        {%- form 'guest_login' -%}
+            <button>
+            {{ 'customer.login_page.guest_continue' | t }}
+            </button>
+        {%- endform -%}
     </div>
 
     {%- if shop.checkout.guest_login -%}
