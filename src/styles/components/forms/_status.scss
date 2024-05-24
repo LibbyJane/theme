@@ -64,8 +64,7 @@
 .form__status-list {
     font-size: var(--font-size-smaller);
     list-style: disc;
-    //padding: 0 0 0 var(--space-med);
-    padding: 0 0  var(--space) 2.25rem;
+    padding: 0 0 var(--space) 2.25rem;
     width: 100%;
 
     &.form__status-list {
@@ -74,9 +73,7 @@
         }
     }
 
-    // li {
-    //     &::marker {
-    //         color: rgba(var(--color-foreground), var(--opacity-light));
-    //     }
-    // }
+    .form__message & {
+        padding-bottom: 0;
+    }
 }
