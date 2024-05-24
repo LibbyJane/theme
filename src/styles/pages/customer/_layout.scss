@@ -15,14 +15,14 @@
     h1 {
         flex: 0 0 auto;
         margin: 0;
-        margin-block-end: auto;
+        margin-inline-end: auto;
         padding: 0;
     }
 
     a {
         display: flex;
         flex: 0 0 auto;
-        margin-block-start: auto;
+        margin-inline-start: auto;
     }
 }
 
