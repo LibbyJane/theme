@@ -31,6 +31,10 @@
     padding-bottom: var(--space) !important;
 }
 
+.padding-top-med {
+    padding-top: var(--space-med) !important;
+}
+
 @media screen and (max-width: 749px) {
     .small-hide {
         display: none !important;
