@@ -28,8 +28,9 @@
       ],
       "settings": {
         "color_scheme": "scheme-sticky-ecom",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "button_color": "ecommerce",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "featured-collection": {
