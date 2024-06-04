@@ -90,13 +90,13 @@
             {%- for availability in pick_up_availabilities -%}
                 <li class="pickup-availability-list__item">
                     <h4>{{ availability.location.name | escape }}</h4>
-                    <p class="pickup-availability-preview">
-                        {%- if availability.available -%}
+                    {%- if availability.available -%}
+                        <p class="pickup-availability-preview">
                             {% render 'icon-success' %}
                             {{ 'products.product.pickup_availability.pick_up_available' | t }},
                             {{ availability.pick_up_time | downcase }}
-                        {%- endif -%}
-                    </p>
+                        </p>
+                    {%- endif -%}
 
                     {%- assign address = availability.location.address -%}
                     <address class="pickup-availability-address">
