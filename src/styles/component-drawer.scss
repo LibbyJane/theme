@@ -1,0 +1,41 @@
+@import "helpers/common";
+
+.drawer { // component name 'cart-drawer'
+    background-color: rgba(var(--color-foreground), 0.5);
+    display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        width: 100vw;
+    position: fixed;
+        top: 0;
+        left: 0;
+    transition: visibility var(--duration-default) ease;
+    z-index: 1000;
+
+    &.active {
+        visibility: visible;
+    }
+}
+
+// drawer header
+.drawer__header {
+    background-color: rgb(var(--color-background));
+    display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: var(--space-med);
+    margin: 0 0 auto;
+    padding: 0 0 var(--space-med) 0;
+    position: relative;
+}
+
+.drawer__close {
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 0 0 0.2rem rgba(var(--color-button), 0);
+    color: rgb(var(--color-foreground));
+    cursor: pointer;
+    display: inline-block;
+    margin-left: auto;
+    padding: 0;
+}

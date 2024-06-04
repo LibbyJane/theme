@@ -70,19 +70,6 @@
             </button>
         </div>
 
-        <h1>TODO: </h1>
-        <p class="pickup-availability-variant">
-            {%- for product_option in product_variant.product.options_with_values -%}
-                {{ product_option.name | escape }}:&nbsp;
-                {%- for value in product_option.values -%}
-                    {%- if product_option.selected_value == value -%}
-                        <span>{{ value | escape }}</span>
-                    {%- endif -%}
-                {%- endfor -%}
-                {%- unless forloop.last -%},&nbsp;{%- endunless -%}
-            {%- endfor -%}
-        </p>
-
         {%- unless product_variant.product.has_only_default_variant -%}
             <p class="pickup-availability-variant">
                 {%- for product_option in product_variant.product.options_with_values -%}

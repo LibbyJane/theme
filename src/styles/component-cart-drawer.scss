@@ -1,22 +1,5 @@
 @import "helpers/common";
 
-.drawer { // component name 'cart-drawer'
-    background-color: rgba(var(--color-foreground), 0.5);
-    display: flex;
-        justify-content: flex-end;
-        height: 100%;
-        width: 100vw;
-    position: fixed;
-        top: 0;
-        left: 0;
-    transition: visibility var(--duration-default) ease;
-    z-index: 1000;
-
-    &.active {
-        visibility: visible;
-    }
-}
-
 .cart-drawer__overlay {
     position: fixed;
         offset: 0;
