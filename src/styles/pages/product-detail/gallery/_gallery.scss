@@ -160,6 +160,12 @@
     }
 }
 
+.thumbnail-list {
+    &:has(:nth-child(3)) {
+        outline: 10px dotted red;
+    }
+}
+
 .thumbnail {
     --hover-scale: 1.1;
     --hover-transform: scale(var(--hover-scale)) rotate(0deg);
