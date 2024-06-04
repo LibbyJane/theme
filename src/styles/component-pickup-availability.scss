@@ -11,7 +11,7 @@ pickup-availability {
         align-items: flex-start;
         gap: var(--space-sm);
     margin: 0;
-    padding: var(--space-sm) 0 var(--space-med);
+    padding: 0 0 var(--space-med);
 
     // .icon-unavailable {
     //     height: 1.6rem;
@@ -76,7 +76,7 @@ pickup-availability-drawer[open] {
 }
 
 .pickup-availability-header {
-    margin-bottom: var(--space-med);
+    margin-bottom: 0;
 }
 
 .pickup-availability-variant {
@@ -97,8 +97,6 @@ pickup-availability-drawer[open] {
     }
 }
 
-
-
 .pickup-availability-address {
     font-style: normal;
     font-size: var(--font-size-small);
@@ -106,6 +104,10 @@ pickup-availability-drawer[open] {
 
 .pickup-availability-address p {
     margin: 0;
+
+    + p {
+        margin-top: var(--space);
+    }
 }
 
 @keyframes animateDrawerOpen {
