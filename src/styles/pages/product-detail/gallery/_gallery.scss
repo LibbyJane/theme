@@ -162,7 +162,41 @@
 
 .thumbnail-list {
     &:has(:nth-child(3)) {
-        outline: 10px dotted red;
+        .thumbnail-list__item:nth-child(2n) & {
+            transform: rotate(-1deg) translateY(-2px);
+
+            &:hover,
+            &:focus {
+                transform: var(--hover-transform);
+            }
+        }
+
+        .thumbnail-list__item:nth-child(3n) & {
+            transform: rotate(1deg);
+
+            &:hover,
+            &:focus {
+                transform: var(--hover-transform);
+            }
+        }
+
+        .thumbnail-list__item:nth-child(4n) & {
+            transform: rotate(-0.5deg);
+
+            &:hover,
+            &:focus {
+                transform: var(--hover-transform);
+            }
+        }
+
+        .thumbnail-list__item:nth-child(3n + 1) & {
+            transform: rotate(0.5deg) translateY(2px);
+
+            &:hover,
+            &:focus {
+                transform: var(--hover-transform);
+            }
+        }
     }
 }
 
@@ -184,42 +218,6 @@
     padding: 0;
     position: relative;
     transition: all var(--duration-medium) var(--transition-type);
-
-    .thumbnail-list__item:nth-child(2n) & {
-        transform: rotate(-1deg) translateY(-2px);
-
-        &:hover,
-        &:focus {
-            transform: var(--hover-transform);
-        }
-    }
-
-    .thumbnail-list__item:nth-child(3n) & {
-        transform: rotate(1deg);
-
-        &:hover,
-        &:focus {
-            transform: var(--hover-transform);
-        }
-    }
-
-    .thumbnail-list__item:nth-child(4n) & {
-        transform: rotate(-0.5deg);
-
-        &:hover,
-        &:focus {
-            transform: var(--hover-transform);
-        }
-    }
-
-    .thumbnail-list__item:nth-child(3n + 1) & {
-        transform: rotate(0.5deg) translateY(2px);
-
-        &:hover,
-        &:focus {
-            transform: var(--hover-transform);
-        }
-    }
 
     &:hover,
     &:focus {
