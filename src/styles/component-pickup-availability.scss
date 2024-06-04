@@ -21,14 +21,14 @@ pickup-availability {
 
 .pickup-availability-info {
     p {
-        color: rgba(var(--color-foreground), var(--opacity-light));
+        color: rgba(var(--color-foreground), var(--opacity-lighter));
         font-size: var(--font-size-smaller);
         margin: 0 0 var(--space-xs);
     }
 }
 
 .pickup-availability-button {
-    color: rgba(var(--color-foreground), var(--opacity-light));
+    color: rgba(var(--color-foreground), var(--opacity-lighter));
     padding: 0;
 
     &:hover,
@@ -75,35 +75,9 @@ pickup-availability-drawer[open] {
     }
 }
 
-// .pickup-availability-header {
-//     align-items: flex-start;
-//     display: flex;
-//     justify-content: space-between;
-//     margin-bottom: 1.2rem;
-// }
-
-// .pickup-availability-drawer-title {
-//     margin: 0.5rem 0 0;
-// }
-
-// .pickup-availability-header .icon {
-//     width: 2rem;
-// }
-
-// .pickup-availability-drawer-button {
-//     background-color: transparent;
-//     border: none;
-//     color: rgb(var(--color-foreground));
-//     cursor: pointer;
-//     display: block;
-//     height: 4.4rem;
-//     padding: 1.2rem;
-//     width: 4.4rem;
-// }
-
-// .pickup-availability-drawer-button:hover {
-//     color: rgba(var(--color-foreground), var(--opacity-light));
-// }
+.pickup-availability-header {
+    margin-bottom: var(--space-med);
+}
 
 .pickup-availability-variant {
     font-size: var(--font-size-smaller);

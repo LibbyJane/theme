@@ -87,18 +87,21 @@
         <ul class="pickup-availability-list list-unstyled" role="list" data-store-availability-drawer-content>
             {%- for availability in pick_up_availabilities -%}
                 <li class="pickup-availability-list__item">
-                    <h3 class="h4">{{ availability.location.name | escape }}</h3>
+                    <h4>{{ availability.location.name | escape }}</h4>
                     <p class="pickup-availability-preview caption-large">
                         {%- if availability.available -%}
-                        {% render 'icon-tick' %}
-                        {{ 'products.product.pickup_availability.pick_up_available' | t }},
-                        {{ availability.pick_up_time | downcase }}
+                            {% render 'icon-success' %}
+                            {{ 'products.product.pickup_availability.pick_up_available' | t }},
+                            {{ availability.pick_up_time | downcase }}
                         {%- endif -%}
                     </p>
 
                     {%- assign address = availability.location.address -%}
                     <address class="pickup-availability-address">
                         {{ address | format_address }}
+
+                        {% comment %} TODO {% endcomment %}
+                        <p>0000 123 456{{ address.phone }}</p>
 
                         {%- if address.phone.size > 0 -%}
                             <p>{{ address.phone }}</p>
