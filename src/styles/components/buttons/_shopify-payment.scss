@@ -48,13 +48,12 @@
 
 .shopify-payment-button__more-options {
     @include underlined-link;
+    color: rgb(var(--color-foreground));
     font-size: var(--font-size-small);
-    // margin: 1.6rem 0 1rem;
-    // font-size: 1.2rem;
-    // line-height: calc(1 + 0.5 / var(--font-body-scale));
-    // letter-spacing: 0.05rem;
-    // text-decoration: underline;
-    // text-underline-offset: 0.3rem;
+    text-decoration: none;
+    width: auto;
+    line-height: 1;
+    margin: var(--space) auto;
 }
 
 
@@ -66,5 +65,17 @@
     &::before,
     &::after {
         content: none;
+    }
+}
+
+// cart page shopify pay button
+.cart__dynamic-checkout-buttons {
+    .shopify-cleanslate {
+        [role="button"] {
+            &::before,
+            &::after {
+                content: none;
+            }
+        }
     }
 }
