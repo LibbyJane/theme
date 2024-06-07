@@ -20,9 +20,8 @@
                     }}
                 </p>
 
-                <p class="caption">{{ closest_location.pick_up_time }}</p>
-
-                <p>
+                <p class="pickup-availability-info__location caption">
+                    <span>{{ closest_location.pick_up_time }}</span>
                     <button
                         id="ShowPickupAvailabilityDrawer"
                         class="pickup-availability-button underlined-link"
@@ -34,8 +33,7 @@
                             {{ 'products.product.pickup_availability.check_other_stores' | t }}
                         {%- endif -%}
                     </button>
-                <p>
-
+                </p>
             {%- else -%}
                 <p>
                     {{

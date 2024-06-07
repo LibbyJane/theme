@@ -6,7 +6,7 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        gap: var(--space);
+        gap: var(--space-xs);
 
     &.price--unavailable {
         visibility: hidden;
@@ -90,6 +90,14 @@
         text-decoration: line-through;
     }
 }
+
+.volume-pricing-note {
+    @include text-body;
+    font-size: var(--font-size-caption);
+    font-style: italic;
+    // width: 100%;
+}
+
 .volume-pricing--sale-badge {
     .price__badge-sale {
         display: inline-block;

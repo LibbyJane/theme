@@ -7,8 +7,8 @@ SchemaJsonFormat:
   start_level: 0
   indent: '    '
 UnusedSnippet:
-  enabled: false
-NestedSnippet:
   enabled: true
+NestedSnippet:
+  enabled: false
   ignore: []
-  max_nesting_level: 5
+  max_nesting_level: 8

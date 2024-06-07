@@ -1,5 +1,10 @@
 .collection-hero {
     margin-bottom: calc(var(--spacing-sections) * -1);
+
+    .title-wrapper {
+        position: relative;
+        z-index: -1;
+    }
 }
 
 .collection-hero__inner {
