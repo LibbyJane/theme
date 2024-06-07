@@ -31,7 +31,7 @@
           "settings": {
             "text_style": "display",
             "price_font_scale": 120,
-            "use_price_color_highlight": false
+            "use_price_color_highlight": true
           }
         },
         "quantity_selector": {
