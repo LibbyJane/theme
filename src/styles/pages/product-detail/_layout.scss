@@ -16,8 +16,12 @@
 }
 
 .product__media-wrapper {
-    flex: 1;
+    flex: 1 1 auto;
     order: 0;
+
+    @media screen and (min-width: 750px) {
+        flex: 1;
+    }
 
     .product--gallery-right & {
         @media screen and (min-width: 750px) {
