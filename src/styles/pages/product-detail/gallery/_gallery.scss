@@ -32,7 +32,7 @@
             margin-top: calc(var(--space-sm) * -1);
 
             @media screen and (min-width: 750px) {
-                overflow: initial;
+                overflow: hidden;
             }
         }
     }
@@ -63,8 +63,12 @@
 
     .product--thumbnail &,
     .product--thumbnail_slider & {
+        flex-direction: row;
+
         @media screen and (min-width: 750px) {
             padding-bottom: calc(var(--media-shadow-vertical-offset) * var(--media-shadow-visible));
+            width: 100%;
+
         }
     }
 
@@ -519,14 +523,14 @@
     overflow: clip !important;
 }
 
-.thumbnail[aria-current]:focus-visible {
-    box-shadow: 0 0 0 0.3rem rgba(var(--color-background), 0.1), 0 0 0rem 0.5rem rgba(var(--color-foreground), 0.1);
-}
+// .thumbnail[aria-current]:focus-visible {
+//     box-shadow: 0 0 0 0.3rem rgba(var(--color-background), 0.1), 0 0 0rem 0.5rem rgba(var(--color-foreground), 0.1);
+// }
 
 .thumbnail[aria-current]:focus,
 .thumbnail.focused {
     outline: 0;
-    box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0rem 0.15rem rgba(var(--color-foreground), 0.15);
+    // box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0rem 0.15rem rgba(var(--color-foreground), 0.15);
 }
 
 /* outline styling for Windows High Contrast Mode */
@@ -540,7 +544,7 @@
 
 .thumbnail[aria-current]:focus:not(:focus-visible) {
     outline: 0;
-    box-shadow: 0 0 0 0.1rem rgb(var(--color-foreground));
+    // box-shadow: 0 0 0 0.1rem rgb(var(--color-foreground));
 }
 
 .thumbnail img {

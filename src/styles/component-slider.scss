@@ -18,6 +18,10 @@ slider-component {
     margin: 0 auto;
     padding-inline: var(--content-padding-inline);
     // overflow: clip;
+
+    &.thumbnail-slider {
+        flex-direction: row;
+    }
 }
 
 .slider-component-full-width {
