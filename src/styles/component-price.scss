@@ -6,7 +6,7 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        gap: var(--space);
+        gap: var(--space-xs);
 
     &.price--unavailable {
         visibility: hidden;
@@ -18,10 +18,6 @@
                 margin: 0;
             }
         }
-    }
-
-    s {
-
     }
 }
 
@@ -94,6 +90,13 @@
         text-decoration: line-through;
     }
 }
+
+.volume-pricing-note {
+    @include text-body;
+    font-size: var(--font-size-caption);
+    font-style: italic;
+}
+
 .volume-pricing--sale-badge {
     .price__badge-sale {
         display: inline-block;
@@ -106,6 +109,7 @@
     margin: var(--space-sm) 0 var(--space-med);
     padding: 0;
     opacity: 1;
+    width: 100%;
 
     a {
         @include underline-on-hover;
@@ -115,11 +119,7 @@
 
 .unit-price {
     display: block;
-    // font-size: 1.1rem;
     font-size: var(--font-size-caption);
-    // letter-spacing: 0.04rem;
-    // line-height: calc(1 + 0.2 / var(--font-body-scale));
-    // margin-top: 0.2rem;
     text-transform: uppercase;
     color: rgba(var(--color-foreground), var(--opacity-light));
 }

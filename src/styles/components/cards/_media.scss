@@ -5,12 +5,18 @@
         justify-content: center;
     height: 0;
     overflow: clip;
+    border-radius: calc(var(--card-corner-radius) - var(--card-border-width) - var(--card-padding));
     margin: var(--card-image-offset) var(--card-image-offset) var(--card-padding);
     padding: 0;
     padding-top: var(--ratio-percent);
     position: relative;
     width: calc((var(--card-image-offset) * -2) + 100%);
     min-width: 100%;
+
+    .card--card & {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 
     &::after {
         content: '';

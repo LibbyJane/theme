@@ -219,7 +219,7 @@
 
   .scroll-trigger:not(.scroll-trigger--offscreen).animate--slide-in {
     animation: var(--animation-slide-in);
-    animation-delay: calc(var(--animation-order) * 75ms);
+    animation-delay: calc(var(--animation-order, 1) * var(--duration-extra-long));
   }
 
   .scroll-trigger.scroll-trigger--design-mode.animate--fade-in,

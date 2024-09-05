@@ -1,2 +1,2 @@
-@media screen and (min-width: 750px){.article-card{margin-inline:var(--space)}.blog-articles .article-card{margin-inline:0}}.article-card.card--standard.card--text{padding-top:var(--space)}
+@media screen and (min-width: 750px){.article-card{margin-inline:var(--space)}.blog-articles .article-card{margin-inline:0}}.article-card.card--standard.card--text{padding-top:var(--space)}.article-card.card--standard.card--text .card__content{margin-top:0}.article-card__excerpt{margin-bottom:0}
 /*# sourceMappingURL=component-article-card.css.map */

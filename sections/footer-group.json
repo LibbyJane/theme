@@ -5,21 +5,21 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "text_RDezyQ": {
+        "footer-0": {
           "type": "text",
           "settings": {
             "heading": "Opening Hours",
             "subtext": "<p>Monday 10am–3pm<br\/>Tuesday 10am–6pm<br\/>Wednesday 10am–6pm<br\/>Thursday 10am–7pm<br\/>Friday 10am–7pm<br\/>Saturday 10am–7pm<br\/>Sunday 10am–3pm<\/p>"
           }
         },
-        "footer-0": {
+        "footer-1": {
           "type": "link_list",
           "settings": {
             "heading": "Quick links",
             "menu": "footer"
           }
         },
-        "image_cEyXpd": {
+        "footer-3": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/polaroids.png",
@@ -29,12 +29,12 @@
         }
       },
       "block_order": [
-        "text_RDezyQ",
         "footer-0",
-        "image_cEyXpd"
+        "footer-1",
+        "footer-3"
       ],
       "settings": {
-        "color_scheme": "inverse",
+        "color_scheme": "scheme-inverse",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,
@@ -44,7 +44,7 @@
         "enable_language_selector": false,
         "payment_enable": false,
         "show_policy": false,
-        "margin_top": 48,
+        "margin_top": 44,
         "padding_top": 36,
         "padding_bottom": 36
       }

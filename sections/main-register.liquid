@@ -21,7 +21,7 @@
         </h1>
     </header>
 
-    <section class="customer__page-content default-content-style content-padding">
+    <section class="customer__page-content default-content-style content-padding-med">
         {%- form 'create_customer', novalidate: 'novalidate' -%}
             {%- if form.errors -%}
                 <div
@@ -103,7 +103,7 @@
                 error_message: error_message
             %}
 
-            <button class="button button--secondary w-100">
+            <button class="button button--secondary button--wide button--center">
                 {{ 'customer.register.submit' | t }}
             </button>
         {%- endform -%}

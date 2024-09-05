@@ -122,21 +122,13 @@
 }
 
 .card-badge--top-left {
-    top: calc(var(--card-badge-padding-sm) * -1);
+    top: var(--card-badge-padding-sm);
     left: var(--card-badge-offset);
-
-    @media screen and (min-width: 990px) {
-        top: var(--card-badge-padding-sm);
-    }
 }
 
 .card-badge--top-right {
-    top: calc(var(--card-badge-padding-sm) * -1);
+    top: var(--card-badge-padding-sm);
     right: var(--card-badge-offset);
-
-    @media screen and (min-width: 990px) {
-        top: var(--card-badge-padding-sm);
-    }
 }
 
 .card-badge--bottom-left {

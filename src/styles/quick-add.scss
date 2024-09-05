@@ -10,19 +10,12 @@
 .quick-add {
     position: relative;
     grid-row-start: 4;
-    margin: auto 0 0;
+    // margin: auto 0 0; // missalignment when no product image
+    margin: 0;
     padding: 0;
     width: 100%;
     z-index: 1;
-
-    .card--card & {
-        padding: var(--space) 0;
-    }
   }
-
-.card--card .quick-add {
-    margin: auto 0 var(--space);
-}
 
   .quick-add-modal {
     box-sizing: border-box;

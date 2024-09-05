@@ -15,6 +15,11 @@
           "settings": {
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -26,7 +31,7 @@
           "settings": {
             "text_style": "display",
             "price_font_scale": 120,
-            "use_price_color_highlight": false
+            "use_price_color_highlight": true
           }
         },
         "quantity_selector": {
@@ -41,12 +46,7 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
-        "inventory_3WkEjU": {
+        "inventory": {
           "type": "inventory",
           "settings": {
             "text_style": "body",
@@ -54,8 +54,9 @@
             "show_inventory_quantity": true
           }
         },
-        "complementary_pWhipL": {
+        "complementary": {
           "type": "complementary",
+          "disabled": true,
           "settings": {
             "block_heading": "Pairs well with",
             "make_collapsible_row": false,
@@ -67,103 +68,29 @@
             "enable_quick_add": false
           }
         },
-        "text_xTMNnw": {
-          "type": "text",
-          "settings": {
-            "text": "We only use <strong>carbon neutral <\/strong>shipping providers. A signature may be required on delivery.",
-            "text_style": "body"
-          }
-        },
         "share": {
           "type": "share",
           "settings": {
             "share_label": "Share"
-          }
-        },
-        "sku_dyNLRN": {
-          "type": "sku",
-          "disabled": true,
-          "settings": {
-            "text_style": "body"
-          }
-        },
-        "custom_liquid_rQUM77": {
-          "type": "custom_liquid",
-          "disabled": true,
-          "settings": {
-            "custom_liquid": ""
-          }
-        },
-        "collapsible_tab_KaTk9L": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "content": "",
-            "page": ""
-          }
-        },
-        "icon_with_text_E943Wr": {
-          "type": "icon-with-text",
-          "disabled": true,
-          "settings": {
-            "layout": "horizontal",
-            "icon_1": "heart",
-            "image_1": "shopify:\/\/shop_images\/DALL_E2024-03-0716.44.46-Abottleofwinesetonarusticwoodentable_framedbythebreathtakingAustralianlandscape.Inthebackground_thedistinctivesilhouetteofUluru.webp",
-            "heading_1": "Heading",
-            "icon_2": "return",
-            "heading_2": "Heading",
-            "icon_3": "truck",
-            "heading_3": "Heading"
-          }
-        },
-        "icon_with_text_n98zTj": {
-          "type": "icon-with-text",
-          "disabled": true,
-          "settings": {
-            "layout": "vertical",
-            "icon_1": "heart",
-            "heading_1": "Heading",
-            "icon_2": "return",
-            "image_2": "shopify:\/\/shop_images\/DALL_E2024-03-0716.44.46-Abottleofwinesetonarusticwoodentable_framedbythebreathtakingAustralianlandscape.Inthebackground_thedistinctivesilhouetteofUluru.webp",
-            "heading_2": "Heading",
-            "icon_3": "truck",
-            "heading_3": "Heading"
-          }
-        },
-        "popup_JY7gpX": {
-          "type": "popup",
-          "disabled": true,
-          "settings": {
-            "text": "Pop-up link text",
-            "page": "faq"
           }
         }
       },
       "block_order": [
         "vendor",
         "title",
+        "description",
         "variant_picker",
         "price",
         "quantity_selector",
         "buy_buttons",
-        "description",
-        "inventory_3WkEjU",
-        "complementary_pWhipL",
-        "text_xTMNnw",
-        "share",
-        "sku_dyNLRN",
-        "custom_liquid_rQUM77",
-        "collapsible_tab_KaTk9L",
-        "icon_with_text_E943Wr",
-        "icon_with_text_n98zTj",
-        "popup_JY7gpX"
+        "inventory",
+        "complementary",
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
         "section_color_scheme": "scheme-background-2",
-        "section_background_style": "torn",
+        "section_background_style": "paper",
         "content_color_scheme": "scheme-background",
         "content_background_style": "paper",
         "use_color_highlight": true,

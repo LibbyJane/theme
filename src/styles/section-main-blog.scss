@@ -7,6 +7,10 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    &.texture-lined {
+        padding-left: 5rem;
+    }
+
     .card--text {
         .card__heading {
             padding-top: var(--space-sm);
@@ -17,11 +21,11 @@
         width: 100%;
     }
 
-    .card__inner {
-        &::before {
-            content: none;
-        }
-    }
+    // .card__inner {
+    //     &::before {
+    //         content: none;
+    //     }
+    // }
 
     .article-card__image--small {
         .card__media {

@@ -14,6 +14,7 @@
 {%- endif -%}
 
 {%- if settings.cart_type == "drawer" -%}
+    {{ 'component-drawer.css' | asset_url | stylesheet_tag }}
     {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
     {{ 'component-cart.css' | asset_url | stylesheet_tag }}
     {{ 'component-totals.css' | asset_url | stylesheet_tag }}
@@ -26,6 +27,36 @@
 <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
+
+
+{%- style -%}
+    .header {
+        padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 990px) {
+        .header {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
+
+    .scrolled-past-header [data-sticky-type="reduce-logo-size"] .header {
+        padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    }
+
+    .section-header {
+        margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+        .section-header {
+            margin-bottom: {{ section.settings.margin_bottom }}px;
+        }
+    }
+{%- endstyle -%}
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
@@ -574,7 +605,7 @@
             "step": 4,
             "unit": "px",
             "label": "t:sections.all.padding.padding_top",
-            "default": 20
+            "default": 0
         },
         {
             "type": "range",
@@ -584,7 +615,7 @@
             "step": 4,
             "unit": "px",
             "label": "t:sections.all.padding.padding_bottom",
-            "default": 20
+            "default": 0
         }
     ],
     "blocks": [

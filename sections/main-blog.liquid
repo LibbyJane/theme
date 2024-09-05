@@ -17,7 +17,7 @@
 {%- endstyle -%}
 
 {%- paginate blog.articles by 6 -%}
-    <div class="main-blog section-{{ section.id }}-padding  ">
+    <div class="main-blog section-{{ section.id }}-padding">
         <header class="title-wrapper page-width align-{{ settings.title_alignment }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
             <h2 class="title inline-richtext texture-{{ settings.title_style }} color-{{ settings.title_color_scheme }} {{ section.settings.heading_size }}"
             >
@@ -25,7 +25,7 @@
             </h2>
         </header>
 
-        <div class="page-width blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %} color-{{ section.settings.content_color_scheme }} background-{% if section.settings.background_transparent %}transparent content-padding-inline {% else %}theme texture-{{ section.settings.background_texture }} content-padding{% endif %} isolate">
+        <div class="page-width blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %} color-{{ section.settings.content_color_scheme }} background-{% if section.settings.background_transparent %}transparent content-padding-inline {% else %}theme texture-{{ section.settings.background_texture }} content-padding padding-bottom{% endif %} isolate">
             {%- for article in blog.articles -%}
                 <div class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {% if settings.animations_reveal_on_scroll %}
@@ -83,7 +83,7 @@
             "type": "color_scheme",
             "id": "content_color_scheme",
             "label": "t:settings_schema.colors.settings.content_color_scheme.label",
-            "default": "inverse"
+            "default": "scheme-inverse"
         },
         {
             "type": "checkbox",

@@ -27,7 +27,7 @@
   }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding isolate color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %}">
+<div class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %}">
     {%- paginate collection.products by section.settings.products_per_page -%}
         {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
         {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
@@ -160,17 +160,14 @@
                             "
                         >
                             {%- for product in collection.products -%}
-                                {% assign lazy_load = false %}
-                                {%- if forloop.index > 2 -%}
-                                    {%- assign lazy_load = true -%}
-                                {%- endif -%}
-                                <li
-                                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                                    {% if settings.animations_reveal_on_scroll %}
-                                        data-cascade
-                                        style="--animation-order: {{ forloop.index }};"
-                                    {% endif %}
-                                >
+                                {% liquid
+                                    assign lazy_load = false
+                                    if forloop.index > 2
+                                        assign lazy_load = true
+                                    endif
+                                %}
+
+                                <li class="grid__item">
                                     {% render 'card-product',
                                         card_product: product,
                                         media_aspect_ratio: section.settings.image_ratio,
@@ -227,7 +224,7 @@
             "type": "color_scheme",
             "id": "color_scheme",
             "label": "t:sections.all.colors.label",
-            "default": "inverse"
+            "default": "scheme-inverse"
         },
         {
             "type": "checkbox",
