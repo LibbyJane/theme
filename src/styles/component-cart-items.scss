@@ -208,13 +208,13 @@
 .cart-item__error {
     display: flex;
     align-items: flex-start;
-    margin-top: 0.2rem;
+    margin-top: var(--space-xs);
     width: min-content;
     min-width: 100%;
 }
 
 .cart-item__error-text {
-    font-size: 1.2rem;
+    font-size: var(--font-size-small);
     line-height: 1.2;
     order: 1;
 
@@ -233,10 +233,12 @@
 .cart-remove__button {
     color: rgba(var(--color-foreground), var(--opacity-light));
     display: flex;
+        align-items: center;
+        justify-content: center;
     min-width: calc(4.5rem / var(--font-body-scale));
     min-height: 4.5rem;
     padding: var(--space-sm) var(--space);
-    margin: 0 0.1rem 0.1rem 0;
+    margin: auto;
 
     &:disabled,
     &.disabled {

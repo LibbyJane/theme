@@ -54,15 +54,12 @@
         endif
 
         assign showBadge = false
-        assign badgePosition = "bottom-left"
 
         if card_product.compare_at_price > card_product.price and card_product.available
             assign showBadge = true
-            assign badgePosition = settings.badge_position | replace: " ", "-"
         elsif card_product.available == false
             assign showBadge = true
         endif
-
     -%}
 
     <a
@@ -74,7 +71,7 @@
         {%- if image_shape and image_shape != 'default' %} card--shape{% endif -%}
         {%- if extend_height %} card--extend-height{% endif -%}
         {%- if horizontal_class %} card--horizontal{% endif -%}
-        {%- if showBadge %} card-badge--{{ badgePosition }}{% endif -%}"
+        {%- if showBadge %} card-badge--{{ settings.badge_position }}{% endif -%}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%; --aspect-ratio: {{ aspect-ratio-width }} / {{ aspect-ratio-height }};"
         aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
     >
@@ -87,7 +84,7 @@
             {%- endif -%}
 
             {%- if card_product.featured_media -%}
-                <div class="card__media">
+                <div class="card__media {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }}{%- endif -%}">
                     <div class="media media--transparent media--hover-effect">
                         {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
                         <img
@@ -200,21 +197,15 @@
                 {%- endif -%}
 
                 {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
-
-                {%- if card_product.quantity_price_breaks_configured? -%}
-                    <div class="card__information-volume-pricing-note">
-                        <span class="caption">{{ 'products.product.volume_pricing.note' | t }}</span>
-                    </div>
-                {%- endif -%}
             </div>
         </div>
 
-        {%- if show_quick_add -%}
-            {% render 'quick-add', card_product: card_product, horizontal_quick_add: horizontal_quick_add, section_id: section_id %}
-        {%- endif -%}
-
         {% if showBadge and settings.card_style != 'standard' %}
             {% render 'card-badge', card_product: card_product, section_id: section_id %}
+        {%- endif -%}
+
+        {%- if show_quick_add -%}
+            {% render 'quick-add', card_product: card_product, horizontal_quick_add: horizontal_quick_add, section_id: section_id %}
         {%- endif -%}
     </a>
 {%- else -%}

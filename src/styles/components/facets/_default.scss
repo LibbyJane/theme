@@ -34,7 +34,8 @@
 
     .icon-caret {
         cursor: pointer;
-        height: 0.6rem;
+        height: var(--icon-size-xs);
+        width: var(--icon-size-sm);
         margin-top: auto;
         margin-bottom: auto;
         position: static;
@@ -143,7 +144,8 @@
     filter: none;
     font-size: var(--font-size-smaller);
     height: auto;
-    line-height: calc(1 + 0.5 / var(--font-body-scale));
+    line-height: 1;
+    // line-height: calc(1 + 0.5 / var(--font-body-scale));
     transition: none;
 
     &:hover,
@@ -234,8 +236,9 @@
     color: var(--filter-color, currentColor);
     cursor: pointer;
     font-size: var(--font-size-base);
-    letter-spacing: 0.04rem;
-    line-height: calc(1 + 0.3 / var(--font-body-scale));
+    letter-spacing: var(--letter-spacing-large);
+    line-height: 1;
+    // line-height: calc(1 + 0.3 / var(--font-body-scale));
     margin: 0;
     padding: 0;
 

@@ -14,6 +14,7 @@
 {%- endif -%}
 
 {%- if settings.cart_type == "drawer" -%}
+    {{ 'component-drawer.css' | asset_url | stylesheet_tag }}
     {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
     {{ 'component-cart.css' | asset_url | stylesheet_tag }}
     {{ 'component-totals.css' | asset_url | stylesheet_tag }}
@@ -26,6 +27,36 @@
 <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
+
+
+{%- style -%}
+    .header {
+        padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 990px) {
+        .header {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
+
+    .scrolled-past-header [data-sticky-type="reduce-logo-size"] .header {
+        padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+    }
+
+    .section-header {
+        margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+        .section-header {
+            margin-bottom: {{ section.settings.margin_bottom }}px;
+        }
+    }
+{%- endstyle -%}
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
@@ -228,6 +259,7 @@
 
         connectedCallback() {
             document.documentElement.style.removeProperty('--header-height');
+            this.body = document.querySelector('body');
             this.header = document.querySelector('.section-header');
             this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' || this.getAttribute('data-sticky-type') === 'reduce-logo-size';
             this.headerBounds = {};
@@ -277,11 +309,12 @@
             if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 
             if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-                this.header.classList.add('scrolled-past-header');
+                this.body.classList.add('scrolled-past-header');
                 if (this.preventHide) return;
                 requestAnimationFrame(this.hide.bind(this));
             } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-                this.header.classList.add('scrolled-past-header');
+                this.body.classList.add('scrolled-past-header');
+
                 if (!this.preventReveal) {
                     requestAnimationFrame(this.reveal.bind(this));
                 } else {
@@ -294,7 +327,7 @@
                     requestAnimationFrame(this.hide.bind(this));
                 }
             } else if (scrollTop <= this.headerBounds.top) {
-                this.header.classList.remove('scrolled-past-header');
+                this.body.classList.remove('scrolled-past-header');
                 requestAnimationFrame(this.reset.bind(this));
             }
 
@@ -572,7 +605,7 @@
             "step": 4,
             "unit": "px",
             "label": "t:sections.all.padding.padding_top",
-            "default": 20
+            "default": 0
         },
         {
             "type": "range",
@@ -582,7 +615,7 @@
             "step": 4,
             "unit": "px",
             "label": "t:sections.all.padding.padding_bottom",
-            "default": 20
+            "default": 0
         }
     ],
     "blocks": [

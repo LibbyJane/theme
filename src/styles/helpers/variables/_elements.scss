@@ -14,9 +14,10 @@
     --card-shadow-horizontal-offset: var(--product-card-shadow-horizontal-offset);
     --card-shadow-vertical-offset: var(--product-card-shadow-vertical-offset);
     --card-shadow-blur-radius: var(--product-card-shadow-blur-radius);
+    --shadow-visible: var(--product-card-shadow-visible);
     --card-media-box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
     rgba(var(--color-shadow), var(--media-shadow-opacity));
-    --card-image-offset: calc(var(--collection-card-image-offset) - 1px);
+    --card-image-offset: calc(var(--product-card-image-offset) - 1px);
     --crease-alpha: 0.05;
     --crease-direction: bottom;
     --crease: linear-gradient(to var(--crease-direction), rgba(var(--color-shadow), 0) 0%, rgba(var(--color-shadow), var(--crease-alpha)) 100%);
@@ -32,6 +33,7 @@
     --card-border-width: var(--collection-card-border-width);
     --card-border-opacity: var(--collection-card-border-opacity);
     --card-shadow-opacity:var(--collection-card-shadow-opacity);
+    --shadow-visible: var(--collection-card-shadow-visible);
     --card-shadow-horizontal-offset: var(--collection-card-shadow-horizontal-offset);
     --card-shadow-vertical-offset: var(--collection-card-shadow-vertical-offset);
     --card-shadow-blur-radius: var(--collection-card-shadow-blur-radius);
@@ -50,6 +52,7 @@
     --card-shadow-horizontal-offset: var(--blog-card-shadow-horizontal-offset);
     --card-shadow-vertical-offset: var(--blog-card-shadow-vertical-offset);
     --card-shadow-blur-radius: var(--blog-card-shadow-blur-radius);
+    --shadow-visible: var(--blog-card-shadow-visible);
     --card-image-offset: calc(var(--blog-card-image-offset) - 1px);
     --card-justification: var(--blog-card-justification);
 }

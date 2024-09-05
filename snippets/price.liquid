@@ -7,6 +7,8 @@
     - show_badges: {Boolean} Renders 'Sale' and 'Sold Out' tags if the product matches the condition (optional)
     - price_class: {String} Adds a price class to the price element (optional)
     - show_compare_at_price: {Boolean} Renders the compare at price if the product matches the condition (optional)
+    - id: {String} Section id for use in class names / ids etc (optional)
+    - show_tax_and_shipping: {Boolean} Enables the 'Tax included. Shipping calculated at checkout.' text (as applicable) (optional)
 
     Usage:
     {% render 'price', product: product %}
@@ -127,5 +129,22 @@
                 {{ 'products.product.sold_out' | t }}
             </span>
         </span>
+    {%- endif -%}
+
+    {%- if product.quantity_price_breaks_configured? -%}
+        <div class="volume-pricing-note caption" {%- if section_id != blank %}id="Volume-Note-{{ section_id }}"{%- endif -%}>
+            {{ 'products.product.volume_pricing.note' | t }}
+        </div>
+    {%- endif -%}
+
+    {%- if show_tax_and_shipping -%}
+        <div class="product__tax rte">
+            {%- if cart.taxes_included -%}
+                {{ 'products.product.include_taxes' | t }}
+            {%- endif -%}
+            {%- if shop.shipping_policy.body != blank -%}
+                {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+            {%- endif -%}
+        </div>
     {%- endif -%}
 </div>

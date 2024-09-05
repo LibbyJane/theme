@@ -13,12 +13,16 @@
     margin-bottom: var(--space);
 
     h1 {
-        margin: 0 auto 0 0;
+        flex: 0 0 auto;
+        margin: 0;
+        margin-inline-end: auto;
         padding: 0;
     }
 
     a {
         display: flex;
+        flex: 0 0 auto;
+        margin-inline-start: auto;
     }
 }
 
@@ -91,6 +95,7 @@
         margin-bottom: var(--space-med);
         position: relative;
         table-layout: auto;
+        width: 100%;
     }
 
     tr {

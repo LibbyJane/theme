@@ -132,9 +132,4 @@
 
 .card__inner {
     width: 100%;
-
-    .card--standard & {
-        @include card-container;
-        margin-bottom: var(--space);
-    }
 }

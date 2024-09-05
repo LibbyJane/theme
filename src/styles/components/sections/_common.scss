@@ -5,11 +5,7 @@
 
 .section {
     +.section {
-        margin-top: var(--spacing-sections-mobile);
-
-        @media screen and (min-width: 750px) {
-            margin-top: var(--spacing-sections-desktop);
-        }
+        margin-top: var(--spacing-sections);
     }
 }
 

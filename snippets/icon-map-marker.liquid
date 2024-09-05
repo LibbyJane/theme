@@ -1,0 +1,13 @@
+{% comment %}
+    Renders map marker icon.
+    Accepts:
+        - class: {string} (optional) additional css classes
+
+    Usage:
+    {% render 'icon-map-marker' class: 'color--danger' %}
+{% endcomment %}
+
+<svg aria-hidden="true" focusable="false" class="icon icon-map-marker {{ class }}" viewBox="0 0 16 16">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M12.8 5.2c0-3-2.7-4.4-4.8-4.5C5.3.6 3.1 2.3 3.2 5.2 3.3 8.2 8 15.3 8 15.3s4.8-7.2 4.8-10.1z"/>
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7.9 3.5C6.7 3.4 5.8 4.7 6 5.9c.2 1.2 1.2 1.8 2 1.7.8-.1 1.9-1.3 1.8-2.3-.1-1-.8-1.8-1.9-1.8z" fill="currentColor"/>
+</svg>

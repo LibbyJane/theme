@@ -1,22 +1,5 @@
 @import "helpers/common";
 
-.drawer { // component name 'cart-drawer'
-    background-color: rgba(var(--color-foreground), 0.5);
-    display: flex;
-    justify-content: flex-end;
-    height: 100%;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transition: visibility var(--duration-default) ease;
-    z-index: 1000;
-
-    &.active {
-        visibility: visible;
-    }
-}
-
 .cart-drawer__overlay {
     position: fixed;
         offset: 0;
@@ -28,59 +11,6 @@
 
 .cart-drawer {
     --card-justification: center;
-
-    .drawer__inner {
-        @include scrollbars;
-        background-color: rgb(var(--color-background));
-        border-right: 0;
-        display: flex;
-            flex-direction: column;
-        height: 100%;
-        width: fit-content;
-        max-width: calc(100vw - var(--space-lg));
-        padding: var(--content-padding-inline);
-        transform: translateX(100%);
-        transition: transform var(--duration-default) ease;
-
-        @media screen and (min-width: 750px) {
-            max-width: calc(100vw - var(--space-lg) - var(--space-lg));
-            min-width: 40rem;
-        }
-
-        .drawer.active & {
-            transform: translateX(0);
-        }
-    }
-
-    .drawer__inner-empty {
-        display: flex;
-            flex-direction: column;
-        height: 100%;
-    }
-
-    // drawer header
-    .drawer__header {
-        align-items: center;
-        background-color: rgb(var(--color-background));
-        display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: var(--space-med);
-        margin: 0 0 auto;
-        padding: 0 0 var(--space-med) 0;
-        position: relative;
-    }
-
-    .drawer__close {
-        background-color: transparent;
-        border: none;
-        box-shadow: 0 0 0 0.2rem rgba(var(--color-button), 0);
-        color: rgb(var(--color-foreground));
-        cursor: pointer;
-        display: inline-block;
-        margin-left: auto;
-        padding: 0;
-    }
 }
 
 // drawer main content
@@ -99,12 +29,6 @@ cart-drawer-items {
     flex-grow: 1;
     display: flex;
         flex-wrap: wrap;
-}
-
-.drawer__contents {
-    flex-grow: 1;
-    display: flex;
-        flex-direction: column;
 }
 
 .drawer__cart-items-wrapper {
@@ -283,7 +207,6 @@ cart-drawer-items {
     }
 }
 
-
 .cart-drawer__warnings {
     display: none;
     flex: 1;
@@ -307,9 +230,6 @@ cart-drawer-items {
 
 // drawer footer
 .drawer__footer {
-    background-color: rgb(var(--color-background));
-    border-top: var(--border-light);
-
     cart-drawer.is-empty &  {
         display: none;
     }
@@ -371,43 +291,5 @@ cart-drawer-items {
 .cart-drawer__footer {
     .totals__total {
         font-weight: normal;
-    }
-}
-
-.drawer__footer-details {
-    border-bottom: var(--border-light);
-    margin-bottom: var(--space);
-
-    .icon-caret {
-        transition: transform var(--duration-short) var(--transition-type);
-    }
-
-    &[open] {
-        border-bottom: 0 none;
-
-        > summary .icon-caret {
-            transform: rotate(180deg);
-        }
-
-        .cart__note {
-            max-height: 100vh;
-        }
-    }
-
-    summary {
-
-        &:hover,
-        &:focus {
-            .icon-caret {
-                transform: rotate(270deg);
-            }
-        }
-    }
-
-    .cart__note {
-        display: block;
-        margin: 0;
-        max-height: 0;
-        transition: max-height var(--duration-short) var(--transition-type);
     }
 }

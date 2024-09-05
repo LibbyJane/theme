@@ -3,7 +3,10 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "layout": "collage",
+        "layout": "grid",
+        "content_color_scheme": "scheme-background",
+        "background_transparent": false,
+        "background_texture": "lined",
         "show_image": true,
         "image_height": "small",
         "show_date": true,

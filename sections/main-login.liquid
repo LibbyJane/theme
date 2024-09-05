@@ -22,7 +22,7 @@
             </h1>
         </header>
 
-        <section class="customer__page-content default-content-style content-padding">
+        <section class="customer__page-content default-content-style content-padding-med">
             <p>
                 {{ 'customer.recover_password.subtext' | t }}
             </p>
@@ -63,10 +63,8 @@
                         {{ 'customer.login_page.submit' | t }}
                     </button>
 
-                    <a href="#login" class="underlined-link">
-                        <span class="underlined-link__text">
-                            {{ 'customer.login_page.cancel' | t }}
-                        </span>
+                    <a href="#login" class="button button--plain underline-child-on-hover">
+                        <span>{{ 'customer.login_page.cancel' | t }}</span>
                     </a>
                 </footer>
             {%- endform -%}
@@ -80,21 +78,28 @@
             </h1>
         </header>
 
-        <section class="customer__page-content default-content-style content-padding">
+        <section class="customer__page-content default-content-style content-padding padding-top-med">
             {%- if recover_success == true -%}
-                <h3 class="form__message" tabindex="-1" autofocus>
-                    {%- render 'icon-success' -%}
-                    {{ 'customer.recover_password.success' | t }}
-                </h3>
+                <div class="form__message flex-col" tabindex="-1" autofocus>
+                    <h3 class="form__status-heading">
+                        {%- render 'icon-success' -%}
+                        {{ 'customer.recover_password.success' | t }}
+                    </h3>
+                </div>
             {%- endif -%}
+
             {%- form 'customer_login', novalidate: 'novalidate' -%}
                 {%- if form.errors -%}
-                    <h2 class="form__message color--danger" tabindex="-1" autofocus>
-                        <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
-                        {%- render 'icon-alert' -%}
-                        {{ 'templates.contact.form.error_heading' | t }}
-                    </h2>
-                    {{ form.errors | default_errors }}
+                    <div class="form__message color--danger flex-col" tabindex="-1" autofocus>
+                        <h3 class="form__status-heading">
+                            <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
+                            {%- render 'icon-warning' -%}
+                            {{ 'templates.contact.form.error_heading' | t }}
+                        </h3>
+                        <div class="form__status-list">
+                            {{ form.errors | default_errors }}
+                        </div>
+                    </div>
                 {%- endif -%}
                 <fieldset class="margin-top-lg">
                     <div class="field">
@@ -134,11 +139,11 @@
                             {{ 'customer.login_page.password' | t }}
                             </label>
                         </div>
-                        <p class="margin-bottom-med">
-                            <a href="#recover" class="underline-on-hover">
+                        <small class="margin-bottom-med">
+                            <a href="#recover" class="underlined-link">
                                 {{ 'customer.login_page.forgot_password' | t }}
                             </a>
-                        </p>
+                        </small>
                     {%- endif -%}
                 </fieldset>
                 <footer class="button-bar button-bar--fluid-buttons">
@@ -146,10 +151,8 @@
                         {{ 'customer.login_page.sign_in' | t }}
                     </button>
 
-                    <a href="{{ routes.account_register_url }}" class="underlined-link">
-                        <span class="underlined-link__text">
-                            {{ 'customer.login_page.create_account' | t }}
-                        </span>
+                    <a href="{{ routes.account_register_url }}" class="button button--plain underline-child-on-hover">
+                        <span>{{ 'customer.login_page.create_account' | t }}</span>
                     </a>
                 </footer>
             {%- endform -%}
@@ -157,13 +160,13 @@
     </div>
 
     {%- if shop.checkout.guest_login -%}
-        <div>
+        <div class="content-padding-inline">
             <hr>
             <h2>{{ 'customer.login_page.guest_title' | t }}</h2>
 
             {%- form 'guest_login' -%}
-                <button>
-                {{ 'customer.login_page.guest_continue' | t }}
+                <button class="button button--secondary">
+                    {{ 'customer.login_page.guest_continue' | t }}
                 </button>
             {%- endform -%}
         </div>

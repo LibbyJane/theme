@@ -138,7 +138,7 @@ summary,
 
     .icon {
         --path-length: 30;
-        stroke-width: 1.5px;
+        stroke-width: var(--icon-stroke-size);
     }
 
     .icon-account {
@@ -272,6 +272,14 @@ summary,
     }
 }
 
+.button--wide {
+    min-width: 50%;
+}
+
+.button--center {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* outline and border styling for Windows High Contrast Mode */
 @media (forced-colors: active) {

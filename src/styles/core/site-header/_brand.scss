@@ -4,6 +4,7 @@
         align-items: center;
         justify-content: center;
         align-self: start;
+    margin: auto;
     min-height: 100%;
     max-width: 60vw;
     position: relative;
@@ -13,13 +14,8 @@
     [data-sticky-type="reduce-logo-size"] & {
         .scrolled-past-header & {
             height: var(--header-height-scrolled);
-            margin: auto;
         }
     }
-
-    // .header--middle-left & {
-    //     margin-left: calc(var(--space) * -1);
-    // }
 }
 
 .header__brand-image {
@@ -36,7 +32,6 @@
     [data-sticky-type="reduce-logo-size"] & {
         .scrolled-past-header & {
             max-height: var(--header-height-scrolled);
-            //max-height: none;
             margin: auto;
         }
     }

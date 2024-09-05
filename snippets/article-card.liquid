@@ -22,19 +22,20 @@
         if media_aspect_ratio != null
             assign ratio = media_aspect_ratio
         endif
+
+        assign ratio_percent = 1 | divided_by: ratio | times: 100 | append: '%'
     -%}
     <div class="article-card-wrapper card-wrapper">
-        <a href="{{ article.url }}" class="card article-card card--{{ settings.blog_card_style }}
-            article-card__image--{%- if media_height and media_height != 'adapt' %}{{ media_height }}{% else %}adapt{% endif %}
+        <a href="{{ article.url }}" class="card article-card card--{{ settings.blog_card_style }} article-card__image--{%- if media_height and media_height != 'adapt' %}{{ media_height }}{% else %}adapt{% endif %}
             {%- if article.image and show_image %} card--media{% else %} card--text{% endif %}
             {%- if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} {% endif %}
             {%- if settings.blog_card_style == 'card' and media_height == nil and article.image == empty or show_image == false %} ratio{% endif %}
             "
-            style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+            style="--ratio-percent: {{ ratio_percent }}"
         >
             <div
                 class="card__inner {% if settings.blog_card_style == 'standard' %} color-{{ settings.blog_card_color_scheme }} {% endif %}{% if article.image and show_image or settings.blog_card_style == 'standard' %} ratio{% endif %}"
-                style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+                style="--ratio-percent: {{ ratio_percent }}"
             >
                 {%- if show_image == true and article.image -%}
                     <div class="article-card__image-wrapper card__media">
@@ -47,13 +48,13 @@
                             {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
                             <img
                                 srcset="
-                                {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
-                                {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
-                                {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
-                                {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
-                                {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
-                                {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
-                                {{ article.image.src | image_url }} {{ article.image.src.width }}w
+                                    {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+                                    {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+                                    {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+                                    {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+                                    {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+                                    {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+                                    {{ article.image.src | image_url }} {{ article.image.src.width }}w
                                 "
                                 src="{{ article.image.src | image_url: width: 533 }}"
                                 sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
@@ -79,22 +80,24 @@
 
                     <div class="article-card__info caption-with-letter-spacing h5">
                         {%- if show_date -%}
-                        <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
+                            <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
                         {%- endif -%}
                         {%- if show_author -%}
-                        <span>{{ article.author }}</span>
+                            <span>{{ article.author }}</span>
                         {%- endif -%}
-                </div>
-                {%- if show_excerpt -%}
-                    {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-                    <p class="article-card__excerpt rte-width">
-                        {%- if article.excerpt.size > 0 -%}
-                        {{ article.excerpt | strip_html | truncatewords: 30 }}
-                        {%- else -%}
-                        {{ article.content | strip_html | truncatewords: 30 }}
-                        {%- endif -%}
-                    </p>
+                    </div>
+
+                    {%- if show_excerpt -%}
+                        {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+                        <p class="article-card__excerpt rte-width">
+                            {%- if article.excerpt.size > 0 -%}
+                            {{ article.excerpt | strip_html | truncatewords: 30 }}
+                            {%- else -%}
+                            {{ article.content | strip_html | truncatewords: 30 }}
+                            {%- endif -%}
+                        </p>
                     {%- endif -%}
+
                     <div class="article-card__footer">
                     {%- if article.comments_count > 0 and blog.comments_enabled? -%}
                         <p class="text-small">{{ 'blogs.article.comments' | t: count: article.comments_count }}</p>
@@ -103,7 +106,7 @@
                 {%- endif -%}
                 </div>
                 {%- if show_badge -%}
-                    <div class="card-badge card-badge--article card-badge--{{ settings.badge_position | replace: " ", "-" }} color-{{ settings.color_schemes | first }}">
+                    <div class="card-badge card-badge--article card-badge--{{ settings.badge_position }} color-{{ settings.color_schemes | first }}">
                         <span class="card-badge__inner">{{ 'blogs.article.blog' | t }}</span>
                     </div>
                 {%- endif -%}

@@ -4,8 +4,12 @@
       "type": "main-list-collections",
       "settings": {
         "title": "Collections",
+        "section_color_scheme": "scheme-inverse",
+        "background_transparent": false,
         "sort": "alphabetical",
-        "image_ratio": "square"
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "columns_mobile": "2"
       }
     }
   },

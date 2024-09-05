@@ -5,7 +5,23 @@
 {{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 
+{%- liquid
+    assign footer_desktop_cols = section.blocks.size
+
+    if section.blocks.size == 9
+        assign footer_desktop_cols = 3
+    elsif section.blocks.size > 6
+        assign footer_desktop_cols = 4
+    elsif section.blocks.size > 4
+        assign footer_desktop_cols = 3
+    endif
+-%}
+
 {%- style -%}
+    :root {
+        --footer-grid-cols: {{ footer_desktop_cols }};
+    }
+
     .footer {
         margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
     }
@@ -64,7 +80,6 @@
                         <div
                             class="footer__blocks-wrapper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                             {% if settings.animations_reveal_on_scroll %} data-cascade {% endif %}
-                            style="--footer-grid-cols: {{ footer_desktop_cols }}"
                         >
                             {%- for block in section.blocks -%}
                                 <div
