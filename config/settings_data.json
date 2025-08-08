@@ -198,13 +198,13 @@
       },
       "scheme-accent-light": {
         "settings": {
-          "background": "#bd3247",
-          "background_gradient": "radial-gradient(rgba(189, 50, 71, 1) 29%, rgba(130, 0, 48, 1) 100%)",
+          "background": "#b20d31",
+          "background_gradient": "",
           "text": "#ffffff",
-          "button": "#820030",
-          "button_label": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#333333",
           "secondary_button_label": "#ffffff",
-          "shadow": "#160109"
+          "shadow": "#333333"
         }
       },
       "scheme-sticky-highlight": {
