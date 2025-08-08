@@ -40,6 +40,7 @@
         "text",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/table_tennis_8410b8ec-1998-4c0f-8456-0ce80a02edbf.png",
         "height": "adapt",
@@ -81,6 +82,7 @@
         "slide_2": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/table_tennis_8410b8ec-1998-4c0f-8456-0ce80a02edbf.png",
             "image_overlay_opacity": 30,
             "heading": "Explore our range",
             "heading_size": "h1",
@@ -201,7 +203,7 @@
       "type": "featured-collection",
       "settings": {
         "collection": "frontpage",
-        "title": "Our latest finds…",
+        "title": "",
         "heading_size": "h1",
         "description": "",
         "show_collection_description": false,
