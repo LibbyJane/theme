@@ -33,6 +33,7 @@
         "announcement-0",
         "announcement-1"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-accent",
         "show_social": true,
