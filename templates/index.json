@@ -212,7 +212,7 @@
         "color_scheme": "scheme-accent-light",
         "background_transparent": true,
         "image_ratio": "square",
-        "image_shape": "round",
+        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
