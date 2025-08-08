@@ -168,10 +168,10 @@
         "settings": {
           "background": "#cacbcc",
           "background_gradient": "",
-          "text": "#000000",
+          "text": "#333333",
           "button": "#fc1245",
           "button_label": "#ffffff",
-          "secondary_button_label": "#ffffff",
+          "secondary_button_label": "#000000",
           "shadow": "#000000"
         }
       },
