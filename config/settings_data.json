@@ -86,11 +86,11 @@
     "text_boxes_shadow_horizontal_offset": 0,
     "text_boxes_shadow_vertical_offset": 4,
     "text_boxes_shadow_blur": 5,
-    "media_border_thickness": 0,
+    "media_border_thickness": 14,
     "media_border_opacity": 100,
-    "media_radius": 6,
+    "media_radius": 0,
     "media_border_color_custom": true,
-    "media_border_color": "#000000",
+    "media_border_color": "#242833",
     "media_shadow_opacity": 8,
     "media_shadow_horizontal_offset": 0,
     "media_shadow_vertical_offset": 2,
@@ -166,13 +166,13 @@
       },
       "scheme-background-2": {
         "settings": {
-          "background": "#fcf6ea",
+          "background": "#cacbcc",
           "background_gradient": "",
-          "text": "#3f2b00",
-          "button": "#3f2b00",
-          "button_label": "#fcf6ea",
-          "secondary_button_label": "#3f2b00",
-          "shadow": "#3f2b00"
+          "text": "#000000",
+          "button": "#fc1245",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#ffffff",
+          "shadow": "#000000"
         }
       },
       "scheme-inverse": {

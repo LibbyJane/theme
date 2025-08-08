@@ -23,22 +23,13 @@
           "type": "text",
           "settings": {
             "text": "<p>Welcome to VetraTT. Our mission is to  provide next-level equipment at an affordable price. We have a select range of products, carefully chosen to deliver something special at their price point. All players, from those brand new to the sport to very experienced players will find a bat to support their game and help them level up.</p>",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_label": "More about us",
-            "button_link": "shopify://pages/our-story",
-            "button_style_secondary": "secondary"
+            "text_style": "display"
           }
         }
       },
       "block_order": [
         "heading",
-        "text",
-        "button"
+        "text"
       ],
       "settings": {
         "image": "shopify://shop_images/table_tennis_8410b8ec-1998-4c0f-8456-0ce80a02edbf.png",
@@ -49,7 +40,7 @@
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "color_scheme": "scheme-inverse",
-        "background_texture": "",
+        "background_texture": "paper",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "padding_top": 44,
