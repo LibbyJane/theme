@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_with_text": {
@@ -6,22 +15,22 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Welcome!",
+            "heading": "Let's Go!",
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Here at Road Trip Wines, we’ve embarked on an adventure based on good wine, good company and new destinations. We’re always discovering something new, and we’re enjoying the journey. Please join us!<\/p>",
-            "text_style": "display"
+            "text": "<p>Here at Road Trip Wines, we’ve embarked on an adventure based on good wine, good company and new destinations. We’re always discovering something new, and we’re enjoying the journey. Please join us!</p>",
+            "text_style": "body"
           }
         },
         "button": {
           "type": "button",
           "settings": {
             "button_label": "More about us",
-            "button_link": "shopify:\/\/pages\/our-story",
+            "button_link": "shopify://pages/our-story",
             "button_style_secondary": "secondary"
           }
         }
@@ -32,7 +41,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/road-trip-vinyard_a479fd80-bd49-4d66-9c50-0515dce908b9.jpg",
+        "image": "shopify://shop_images/table_tennis_8410b8ec-1998-4c0f-8456-0ce80a02edbf.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -54,13 +63,12 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/mens-fashion-close-up-patterned-shirt-red-wine.jpg",
             "image_overlay_opacity": 40,
             "heading": "Welcome to Road Trip Wines",
             "heading_size": "h1",
             "subheading": "",
             "button_label": "Find your new favorite drop >",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "button_style_secondary": "secondary",
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -73,13 +81,12 @@
         "slide_2": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/grapes-on-the-vine.jpg",
             "image_overlay_opacity": 30,
             "heading": "Explore our range",
             "heading_size": "h1",
-            "subheading": "“The discovery of a good wine is increasingly better for mankind than the discovery of a new star.” <em>— Leonardo da Vinci<\/em>",
+            "subheading": "“The discovery of a good wine is increasingly better for mankind than the discovery of a new star.” <em>— Leonardo da Vinci</em>",
             "button_label": "Find your new favorite drop >",
-            "link": "shopify:\/\/collections\/all",
+            "link": "shopify://collections/all",
             "button_style_secondary": "secondary",
             "box_align": "bottom-left",
             "text_alignment": "left",
@@ -92,13 +99,12 @@
         "slide_3": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/vecteezy_generative-ai-illustration-of-red-wine-is-being-poured-from_22779778_677_45ab7a89-ca3c-4dad-a11d-e27e6476f285.jpg",
             "image_overlay_opacity": 0,
             "heading": "10% off store-wide",
             "heading_size": "h1",
-            "subheading": "Use discount code <strong>RTW2425<\/strong>",
+            "subheading": "Use discount code <strong>RTW2425</strong>",
             "button_label": "Start shopping >",
-            "link": "shopify:\/\/collections",
+            "link": "shopify://collections",
             "button_style_secondary": "primary",
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -111,13 +117,12 @@
         "slide_4": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/grapevine-reaches-out-to-the-sun.jpg",
             "image_overlay_opacity": 20,
             "heading": "Latest from the blog",
             "heading_size": "h2",
             "subheading": "Read all about our recent adventure: a working holiday at a vineyard in beautiful in Hawkes Bay",
             "button_label": "Read about it",
-            "link": "shopify:\/\/blogs\/news\/working-holiday-at-a-vineyard",
+            "link": "shopify://blogs/news/working-holiday-at-a-vineyard",
             "button_style_secondary": "secondary",
             "box_align": "middle-center",
             "text_alignment": "center",
@@ -161,14 +166,14 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<h5>We’ve embarked on an adventure based on good wine, good company & new destinations. Please join us!<\/h5>"
+            "text": "<h5>We’ve embarked on an adventure based on good wine, good company & new destinations. Please join us!</h5>"
           }
         },
         "button": {
           "type": "button",
           "settings": {
             "button_label": "More about us",
-            "button_link": "shopify:\/\/pages\/our-story",
+            "button_link": "shopify://pages/our-story",
             "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -299,8 +304,7 @@
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -310,8 +314,7 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -364,8 +367,6 @@
         "store_message": "To:",
         "show_store_name": true,
         "show_store_contact_information": true,
-        "stamp_image": "shopify:\/\/shop_images\/a-small-drink-to-cheers-the-field-of-vines-below.jpg",
-        "secondary_image": "shopify:\/\/shop_images\/vineyard-at-sunset.jpg",
         "padding_top": 64,
         "padding_bottom": 32
       }
