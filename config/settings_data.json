@@ -47,7 +47,7 @@
     "card_padding": 10,
     "card_image_full_width": true,
     "card_text_alignment": "center",
-    "card_color_scheme": "scheme-accent",
+    "card_color_scheme": "scheme-accent-light",
     "card_highlight_price": false,
     "card_border_thickness": 0,
     "card_border_opacity": 0,

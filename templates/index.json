@@ -258,6 +258,7 @@
         "collection-1",
         "collection-2"
       ],
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h2",
