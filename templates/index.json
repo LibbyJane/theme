@@ -263,6 +263,7 @@
     },
     "featured_blog": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "title": "Latest from the blog",
         "heading_size": "h1",
