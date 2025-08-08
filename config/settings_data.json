@@ -45,7 +45,7 @@
     "inputs_shadow_blur": 5,
     "card_style": "card",
     "card_padding": 10,
-    "card_image_full_width": true,
+    "card_image_full_width": false,
     "card_text_alignment": "center",
     "card_color_scheme": "scheme-background-2",
     "card_highlight_price": false,
