@@ -37,7 +37,9 @@
 
         {{ content_for_header }}
 
-        <link href="https://fonts.cdnfonts.com/css/trashhand" rel="stylesheet">
+        {% if settings.type_header_font_override_url %}
+            <link href="{{ settings.type_header_font_override_url }}" rel="stylesheet">
+        {% endif %}
 
         {%- render 'theme-setup' settings: settings -%}
 
