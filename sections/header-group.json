@@ -54,7 +54,7 @@
         "sticky_header_type": "always",
         "color_scheme": "scheme-accent-light",
         "menu_color_scheme": "",
-        "enable_country_selector": false,
+        "enable_country_selector": true,
         "enable_language_selector": false,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
