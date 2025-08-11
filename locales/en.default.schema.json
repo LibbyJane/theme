@@ -374,8 +374,7 @@
             "info": "Override the heading font by specifing the font family name here and URL below"
         },
         "type_header_font_override_url": {
-            "label": "Custom Font URL",
-            "info": " eg https://fonts.cdnfonts.com/css/yourfontnamehere"
+            "label": "Custom Font URL"
         },
 
         "heading_scale": {

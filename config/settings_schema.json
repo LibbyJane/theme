@@ -197,7 +197,6 @@
         "type": "text",
         "id": "type_header_font_override_url",
         "label": "t:settings_schema.typography.settings.type_header_font_override_url.label",
-        "info": "t:settings_schema.typography.settings.type_header_font_override_url.info",
         "default": "https://fonts.cdnfonts.com/css/trashhand"
       },
       {
