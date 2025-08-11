@@ -369,6 +369,15 @@
           "label": "Font",
           "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
         },
+        "type_header_font_override": {
+            "label": "Custom Font",
+            "info": "Override the heading font by specifing the font family name here and URL below"
+        },
+        "type_header_font_override_url": {
+            "label": "Custom Font URL",
+            "info": " eg https://fonts.cdnfonts.com/css/yourfontnamehere"
+        },
+
         "heading_scale": {
           "label": "Font size scale"
         },

@@ -190,8 +190,14 @@
       {
         "type": "text",
         "id": "type_header_font_override",
-        "label": "t:settings_schema.typography.settings.type_header_font.label",
-        "info": "t:settings_schema.typography.settings.type_header_font.info"
+        "label": "t:settings_schema.typography.settings.type_header_font_override.label",
+        "info": "t:settings_schema.typography.settings.type_header_font_override.info"
+      },
+      {
+        "type": "url",
+        "id": "type_header_font_override_url",
+        "label": "t:settings_schema.typography.settings.type_header_font_override_url.label",
+        "info": "t:settings_schema.typography.settings.type_header_font_override_url.info"
       },
       {
         "type": "range",
