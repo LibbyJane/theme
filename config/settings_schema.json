@@ -188,9 +188,15 @@
         "info": "t:settings_schema.typography.settings.type_header_font.info"
       },
       {
+        "type": "text",
+        "id": "type_header_font_override",
+        "label": "t:settings_schema.typography.settings.type_header_font.label",
+        "info": "t:settings_schema.typography.settings.type_header_font.info"
+      },
+      {
         "type": "range",
         "id": "heading_scale",
-        "min": 100,
+        "min": 90,
         "max": 150,
         "step": 5,
         "unit": "%",
@@ -211,9 +217,9 @@
       {
         "type": "range",
         "id": "body_scale",
-        "min": 100,
-        "max": 130,
-        "step": 5,
+        "min": 90,
+        "max": 140,
+        "step": 1,
         "unit": "%",
         "label": "t:settings_schema.typography.settings.body_scale.label",
         "default": 100
