@@ -1,38 +1,18 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
     "footer": {
       "type": "footer",
-      "blocks": {
-        "footer-0": {
-          "type": "text",
-          "settings": {
-            "heading": "Opening Hours",
-            "subtext": "<p>Monday 10am–3pm<br\/>Tuesday 10am–6pm<br\/>Wednesday 10am–6pm<br\/>Thursday 10am–7pm<br\/>Friday 10am–7pm<br\/>Saturday 10am–7pm<br\/>Sunday 10am–3pm<\/p>"
-          }
-        },
-        "footer-1": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
-          }
-        },
-        "footer-3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/polaroids.png",
-            "image_width": 310,
-            "alignment": "right"
-          }
-        }
-      },
-      "block_order": [
-        "footer-0",
-        "footer-1",
-        "footer-3"
-      ],
       "settings": {
         "color_scheme": "scheme-inverse",
         "newsletter_enable": true,

@@ -1,24 +1,24 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "description": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -31,18 +31,17 @@
           "settings": {
             "text_style": "display",
             "price_font_scale": 120,
-            "use_price_color_highlight": true
+            "use_price_color_highlight": false
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
         },
@@ -76,7 +75,6 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
         "description",
         "variant_picker",
@@ -89,9 +87,9 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "section_color_scheme": "scheme-background-2",
+        "section_color_scheme": "scheme-inverse",
         "section_background_style": "paper",
-        "content_color_scheme": "scheme-background",
+        "content_color_scheme": "scheme-inverse",
         "content_background_style": "paper",
         "use_color_highlight": true,
         "media_size": "large",
