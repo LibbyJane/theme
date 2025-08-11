@@ -89,9 +89,10 @@
     transition-delay: var(--duration-short);
 
     &[aria-controls="menu-drawer"] {
-        display: block;
+        display: flex;
         margin-inline-start: calc(var(--content-padding-inline) * -1);
         padding-inline: var(--content-padding-inline);
+        justify-content: start;
         // width: auto;
     }
 

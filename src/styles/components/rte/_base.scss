@@ -9,7 +9,13 @@
         color: rgba(var(--color-link), var(--alpha-link));
         display: inline-flex;
         line-height: 1.2;
-        text-decoration: none;
+        // text-decoration: underline;
+        // text-decoration: none;
+
+        &:hover,
+        &:focus-within {
+            text-decoration: none;
+        }
 
         &button {
             background-color: transparent;

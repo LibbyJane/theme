@@ -203,7 +203,7 @@
     word-break: break-word;
 
     &:hover,
-    &:focus {
+    &:focus-visible {
         color: rgb(var(--color-foreground));
     }
 }

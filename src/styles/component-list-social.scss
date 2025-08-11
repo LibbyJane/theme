@@ -25,7 +25,7 @@
     color: rgb(var(--color-foreground));
 
     &:hover,
-    &:focus {
+    &:focus-visible {
         .icon {
             transform: scale(1.07);
         }

@@ -41,7 +41,7 @@ pickup-availability {
     padding: 0;
 
     &:hover,
-    &:focus {
+    &:focus-visible {
         color: rgb(var(--color-foreground));
     }
 }

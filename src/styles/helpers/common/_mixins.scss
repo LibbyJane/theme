@@ -124,7 +124,7 @@
     z-index: $z-index;
 
     &:hover,
-    &:focus {
+    &:focus-visible {
         &::before {
             transition: transform var(--duration-long) var(--transition-type);
             transform: rotate(var( --rotation)) scaleX(1);
@@ -153,7 +153,7 @@
     z-index: 1;
 
     &:hover,
-    &:focus {
+    &:focus-visible {
         --alpha-link: 1;
         --underline-height: 1.5px;
 
@@ -218,7 +218,7 @@
 
 
     &:hover,
-    &:focus {
+    &:focus-visible {
         >:first-child {
             &::after {
                 animation: scaleX100 var(--duration-medium) var(--transition-type) forwards;
@@ -232,7 +232,7 @@
     z-index: 1;
 
     &:hover,
-    &:focus {
+    &:focus-visible {
         &::after {
             animation: scaleX100 var(--duration-medium) var(--transition-type) forwards;
         }

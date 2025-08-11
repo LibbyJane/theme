@@ -31,7 +31,7 @@
         padding-block: var(--space);
 
         &:hover,
-        &:focus {
+        &:focus-visible {
             .icon-caret {
                 transform: rotate(-90deg);
             }

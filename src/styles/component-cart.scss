@@ -149,7 +149,7 @@ cart-items {
     opacity: var(--opacity-light);
 
     &:hover,
-    &:focus {
+    &:focus-visible {
         opacity: 1;
     }
 

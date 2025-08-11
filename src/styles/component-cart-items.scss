@@ -160,7 +160,7 @@
     text-decoration: none;
 
     &:hover,
-    &:focus {
+    &:focus-visible {
         text-decoration: unset;
     }
 }
@@ -246,7 +246,7 @@
     }
 
     &:hover,
-    &:focus {
+    &:focus-visible {
         color: rgba(var(--color-foreground), 1);
     }
 }
