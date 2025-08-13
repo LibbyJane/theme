@@ -1,7 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "logo": "shopify://shop_images/vetraTT-alt.png",
     "logo_width": 160,
+    "logo_margin_bottom": "0",
     "favicon": "shopify://shop_images/vetra-v-sq.png",
     "site_background": "shopify://shop_images/vetra-v-sq-dark.png",
     "site_background_style": "cover",
@@ -118,8 +128,9 @@
     "currency_code_enabled": false,
     "cart_type": "page",
     "show_vendor": true,
-    "show_cart_note": true,
+    "show_cart_note": false,
     "cart_drawer_collection": "australia",
+    "cart_page_sticky_footer": true,
     "checkout_header_image": "shopify://shop_images/background.jpg",
     "checkout_logo_image": "shopify://shop_images/logo.png",
     "checkout_logo_position": "center",
