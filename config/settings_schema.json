@@ -26,6 +26,11 @@
         "label": "t:settings_schema.logo.settings.logo_width.label"
       },
       {
+        "type": "text",
+        "id": "logo_margin_bottom",
+        "label": "t:settings_schema.logo.settings.logo_margin_bottom.label"
+      },
+      {
         "type": "image_picker",
         "id": "favicon",
         "label": "t:settings_schema.logo.settings.favicon.label",

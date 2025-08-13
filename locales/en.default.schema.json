@@ -336,6 +336,9 @@
           "label": "Desktop logo width",
           "info": "Logo width is automatically optimized for mobile."
         },
+        "logo_margin_bottom": {
+          "label": "Desktop logo bottom margin"
+        },
         "favicon": {
           "label": "Favicon image",
           "info": "Will be scaled down to 32 x 32px"

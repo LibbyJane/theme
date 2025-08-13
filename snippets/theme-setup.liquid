@@ -273,6 +273,7 @@
         --header-height: {{ settings.logo_width | divided_by: settings.logo.aspect_ratio }}px;
         --header-height-scrolled: calc({{ settings.logo_width | divided_by: settings.logo.aspect_ratio }}px * 0.66);
         --header-brand-aspect-ratio: {{ settings.logo_width }} / {{ settings.logo_height }};
+        {% if settings.logo_margin_bottom %}--header-brand-margin-bottom: {{settings.logo_margin_bottom }}; {% endif %}
         --icon-stroke-size: 1.5px;
     }
 
