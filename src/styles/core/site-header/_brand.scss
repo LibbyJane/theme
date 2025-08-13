@@ -30,7 +30,7 @@
         // max-width: 100%; // causing issues when header resizes in shopify theme editor ?
         max-height: calc(var(--header-height) + var(--space-sm));
         max-width: 100%;
-    margin-bottom: --header-brand-margin-bottom;
+    margin-bottom: var(--header-brand-margin-bottom);
     transition: max-height var(--duration-long) ease;
 
     [data-sticky-type="reduce-logo-size"] & {
