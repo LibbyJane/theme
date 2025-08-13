@@ -14,7 +14,7 @@
                     {%- if block.settings.link != blank -%}
                         <a class="statements-bar__item" href="{{ block.settings.link }}">
                     {% else %}
-                        <div class="statements-bar__item"
+                        <div class="statements-bar__item">
                     {%- endif -%}
                     {%- if block.settings.icon != 'none' -%}
                         {% render 'icon-accordion', icon: block.settings.icon %}

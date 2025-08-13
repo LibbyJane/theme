@@ -14,7 +14,7 @@
 
 {% endcomment %}
 
-<small {% if id != blank -%}id="{{ id}}-error {%- endif -%}" class="field__error status-error js-error-message{%- if classes != blank -%}" {{ classes}} {%- endif -%} {%- if placeholder %} hidden {%- endif -%}" id="{%- if id != blank -%}" {{ id}} {%- endif -%}" >
+<small {% if id != blank -%}id="{{ id}}-error "{%- endif -%} class="field__error status-error js-error-message{%- if classes != blank -%} {{ classes}} {%- endif -%}" {%- if placeholder %} hidden {%- endif -%} >
     <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
     {%- render 'icon-error' -%}
     {%- if field_name != blank -%} {{ field_name | capitalize }} {%- endif -%}

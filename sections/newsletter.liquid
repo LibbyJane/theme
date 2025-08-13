@@ -16,7 +16,6 @@
 {%- endstyle -%}
 
 {% capture error_id %}Newsletter-error--{{ section.id }}{% endcapture %}
-{% capture form_id %}Newsletter-form--{{ section.id }}{% endcapture %}
 
 <div class="newsletter isolate center color-{{ section.settings.color_scheme }} texture-{{ section.settings.background_texture }} {% if section.settings.full_width == false %}newsletter--narrow page-width page-width--narrow{% endif %} section-{{ section.id }}-padding">
     <div class="newsletter__wrapper content-container {% if section.settings.full_width %} content-container--full-width{% endif %} content-padding ">
