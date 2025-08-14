@@ -377,7 +377,8 @@
             "info": "Override the heading font by specifing the font family name here and URL below"
         },
         "type_header_font_override_url": {
-            "label": "Custom Font URL"
+            "label": "Custom Font CDN URL",
+            "info": "Optional. If using a font file uploaded to Shopify, add the @font-face declaration in the Custom CSS section."
         },
 
         "heading_scale": {
