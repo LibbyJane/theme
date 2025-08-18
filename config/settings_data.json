@@ -15,6 +15,7 @@
     "favicon": "shopify://shop_images/vetra-v-sq.png",
     "site_background": "shopify://shop_images/vetra-v-sq-dark.png",
     "site_background_style": "cover",
+    "color_ecommerce": "#24867e",
     "type_header_font": "kalam_n4",
     "type_header_font_override": "TrashHandExt",
     "type_header_font_override_url": "",
