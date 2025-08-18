@@ -15,9 +15,11 @@
 .shopify-payment-button__button,
 .shopify-payment-button [role='button'],
 .customer button,
-button.shopify-payment-button__button--unbranded,
-.cart__dynamic-checkout-buttons [role='button'],
-.cart__dynamic-checkout-buttons iframe
+button.shopify-payment-button__button--unbranded
+// .cart__checkout-button [role='button'],
+// .cart__checkout-button.button
+// .cart__checkout-button.cart__checkout-button,
+// .cart__dynamic-checkout-buttons iframe
 {
     --alpha-link: 1;
     --button-foreground-color: rgba(var(--color-button-text), var(--alpha-link));
@@ -47,15 +49,15 @@ button.shopify-payment-button__button--unbranded,
         gap: var(--space);
     font-size: var(--font-size-h6);
     margin: 0;
-    // padding: calc(var(--space)*0.75);
+    padding: calc(var(--space)*0.75);
     position: relative;
     text-decoration: none;
     transition: all var(--duration-med) var(--transition-type);
     z-index: 1;
 
-    // @media screen and (min-width: 750px) {
-    //     padding: calc(var(--space)*0.75) var(--space-med);
-    // }
+    @media screen and (min-width: 750px) {
+        padding: calc(var(--space)*0.75) var(--space-med);
+    }
 
     &:hover, &:focus-visible {
         box-shadow: calc(var(--shadow-horizontal-offset) * 0.9) calc(var(--shadow-vertical-offset) * 0.9) calc(var(--shadow-blur-radius) * 0.9) rgba(var(--color-shadow), calc(var(--shadow-opacity) * 0.75));
