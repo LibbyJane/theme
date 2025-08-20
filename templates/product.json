@@ -30,7 +30,7 @@
           "type": "price",
           "settings": {
             "text_style": "display",
-            "price_font_scale": 120,
+            "price_font_scale": 200,
             "use_price_color_highlight": false
           }
         },
