@@ -14,6 +14,8 @@
     {% render 'price', product: product %}
 {% endcomment %}
 
+
+
 {%- liquid
     if use_variant
         assign target = product.selected_or_first_available_variant
@@ -40,13 +42,19 @@
     endif
 -%}
 
+{% style %}
+    .price-item {
+        font-size: calc(var(--font-size-price) * {{ price_font_scale }} / 100);
+    }
+{% endstyle %}
+
 <div class="price
-            {%- if price_class %} {{ price_class }}{% endif -%}
-            {%- if available == false %} price--sold-out{% endif -%}
-            {%- if compare_at_price > price and product.quantity_price_breaks_configured? != true %} price--on-sale{% endif -%}
-            {%- if compare_at_price > price and product.quantity_price_breaks_configured? %} volume-pricing--sale-badge{% endif -%}
-            {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
-            {%- if show_badges %} price--show-badge{% endif -%}
+    {%- if price_class %} {{ price_class }}{% endif -%}
+    {%- if available == false %} price--sold-out{% endif -%}
+    {%- if compare_at_price > price and product.quantity_price_breaks_configured? != true %} price--on-sale{% endif -%}
+    {%- if compare_at_price > price and product.quantity_price_breaks_configured? %} volume-pricing--sale-badge{% endif -%}
+    {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
+    {%- if show_badges %} price--show-badge{% endif -%}
     "
 >
     <div class="price__container">
@@ -62,7 +70,7 @@
                         <span class="visually-hidden visually-hidden--inline">
                             {{- 'products.product.price.regular_price' | t -}}
                         </span>
-                        <s class="price-item price-item--regular variant-item__old-price">
+                        <s class="price-item price-item--regular variant-item__old-price" >
                             {% if settings.currency_code_enabled %}
                                 {{ compare_at_price | money_with_currency }}
                             {% else %}

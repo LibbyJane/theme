@@ -20,6 +20,14 @@
     will-change: transform;
     z-index: 1;
 
+    &[href] {
+        .card__heading {
+            &::after {
+                content: ' >';
+            }
+        }
+    }
+
     @media (prefers-reduced-motion: no-preference) {
         &,
         &:nth-child {
@@ -32,14 +40,15 @@
         }
     }
 
-    .grid__item & {
+    .grid__item.grid__item & {
         // margin-top: var(--space-sm);
+        // &,
+        // &:nth-child {
+            &:hover,
+            &:focus {
+                filter: brightness(1.15);
 
-        &:hover,
-        &:focus {
-            @media (prefers-reduced-motion: no-preference) {
-                &,
-                &:nth-child {
+                @media (prefers-reduced-motion: no-preference) {
                     transform: rotate(0) translateY(-3px) translateX(0);
 
                     .card__media-hover-image {
@@ -52,7 +61,7 @@
                     }
                 }
             }
-        }
+        // }
     }
 
     .shape--blob {
