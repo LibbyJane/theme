@@ -32,15 +32,15 @@
         "text"
       ],
       "settings": {
-        "image": "shopify://shop_images/table_tennis_8410b8ec-1998-4c0f-8456-0ce80a02edbf.png",
+        "image": "shopify://shop_images/table_tennis_ed686757-1173-455d-a4eb-ed63102037b1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
+        "content_layout": "overlap",
         "color_scheme": "scheme-inverse",
-        "background_texture": "paper",
+        "background_texture": "torn",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 44,
