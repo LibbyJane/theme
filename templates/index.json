@@ -42,7 +42,7 @@
         "color_scheme": "scheme-inverse",
         "background_texture": "paper",
         "image_behavior": "none",
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "padding_top": 44,
         "padding_bottom": 0
       }
