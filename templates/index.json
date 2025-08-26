@@ -9,6 +9,56 @@
  */
 {
   "sections": {
+    "image_banner_QRPiaa": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_eJwzwP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Let's Go!",
+            "heading_size": "h2"
+          }
+        },
+        "text_VDKrcz": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_fWJABr": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": "primary",
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eJwzwP",
+        "text_VDKrcz",
+        "buttons_fWJABr"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/table_tennis_ed686757-1173-455d-a4eb-ed63102037b1.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "background_texture": "paper",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "image_behavior": "none"
+      }
+    },
     "image_with_text": {
       "type": "image-with-text",
       "blocks": {
@@ -78,6 +128,7 @@
     }
   },
   "order": [
+    "image_banner_QRPiaa",
     "image_with_text",
     "featured_collection"
   ]
