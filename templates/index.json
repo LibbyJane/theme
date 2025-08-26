@@ -85,7 +85,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/vetra-v-sq.png",
-        "image_overlay_opacity": 70,
+        "image_overlay_opacity": 80,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
