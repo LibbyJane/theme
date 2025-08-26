@@ -67,7 +67,7 @@
         "buttons_QDUDra": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Our Products",
+            "button_label_1": "Choose your weapon",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": "secondary",
             "button_label_2": "",
