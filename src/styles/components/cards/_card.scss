@@ -20,13 +20,13 @@
     will-change: transform;
     z-index: 1;
 
-    &[href] {
-        .card__heading {
-            &::after {
-                content: ' >';
-            }
-        }
-    }
+    // &[href] {
+    //     .card__heading {
+    //         &::after {
+    //             content: ' >';
+    //         }
+    //     }
+    // }
 
     @media (prefers-reduced-motion: no-preference) {
         &,

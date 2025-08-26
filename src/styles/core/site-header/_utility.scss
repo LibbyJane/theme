@@ -5,13 +5,12 @@
     display: flex;
         justify-self: end;
     margin-right: calc(var(--icon-inline-padding) * -1);
-    padding: 0 var(--content-padding-inline);
+    padding: 0;
     position: relative;
     z-index: calc(var(--zi-header) + 1); // needs to be above the logo, otherwise site search is obscured
 
     @media screen and (min-width: 990px) {
         margin-right: 0;
-        padding-right: 0;
     }
 
     .header__icon  {
