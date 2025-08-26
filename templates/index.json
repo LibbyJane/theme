@@ -48,56 +48,6 @@
         "padding_bottom": 0
       }
     },
-    "image_banner_bGanaJ": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_XabUaK": {
-          "type": "heading",
-          "settings": {
-            "heading": "Let's Go!",
-            "heading_size": "h1"
-          }
-        },
-        "text_rFYnFB": {
-          "type": "text",
-          "settings": {
-            "text": "Welcome to VetraTT! Our mission is to  provide next-level equipment at an affordable price. We have a select range of products, carefully chosen to deliver something special at their price point.",
-            "text_style": "body"
-          }
-        },
-        "buttons_QDUDra": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Choose your weapon",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": "secondary",
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": "primary"
-          }
-        }
-      },
-      "block_order": [
-        "heading_XabUaK",
-        "text_rFYnFB",
-        "buttons_QDUDra"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/vetra-v-sq.png",
-        "image_overlay_opacity": 80,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "",
-        "background_texture": "paper",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false,
-        "image_behavior": "none"
-      }
-    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -272,46 +222,6 @@
         "padding_bottom": 0
       }
     },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "australia"
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "new-zealand"
-          }
-        },
-        "collection-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "south-africa"
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "collection-1",
-        "collection-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-accent",
-        "background_transparent": true,
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
     "featured_blog": {
       "type": "featured-blog",
       "disabled": true,
@@ -406,12 +316,10 @@
     }
   },
   "order": [
-    "image_with_text",
-    "image_banner_bGanaJ",
-    "slideshow",
     "rich_text",
+    "image_with_text",
+    "slideshow",
     "featured_collection",
-    "collage",
     "featured_blog",
     "featured_product"
   ]
