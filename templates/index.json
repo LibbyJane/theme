@@ -15,14 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "LET'S GO! -+",
+            "heading": "LET'S GO!",
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Welcome to VetraTT. Our mission is to  provide next-level equipment at an affordable price. We have a select range of products, carefully chosen to deliver something special at their price point. All players, from those brand new to the sport to very experienced players will find a bat to support their game and help them level up.</p>",
+            "text": "<p>Welcome to VetraTT! Our mission is to  provide next-level equipment at an affordable price. We have a select range of products, carefully chosen to deliver something special at their price point.</p>",
             "text_style": "body"
           }
         }
@@ -32,7 +32,7 @@
         "text"
       ],
       "settings": {
-        "image": "shopify://shop_images/table_tennis_8410b8ec-1998-4c0f-8456-0ce80a02edbf.png",
+        "image": "shopify://shop_images/table_tennis_ed686757-1173-455d-a4eb-ed63102037b1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -40,9 +40,9 @@
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "color_scheme": "scheme-inverse",
-        "background_texture": "paper",
+        "background_texture": "",
         "image_behavior": "none",
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "padding_top": 44,
         "padding_bottom": 0
       }
@@ -208,7 +208,7 @@
         "view_all_style": "primary",
         "enable_desktop_slider": true,
         "columns_mobile": "2",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "color_scheme": "scheme-accent-light",
         "background_transparent": true,
         "image_ratio": "square",
