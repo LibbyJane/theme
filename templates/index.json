@@ -253,7 +253,7 @@
         "show_collection_description": false,
         "description_style": "body",
         "products_to_show": 8,
-        "columns_desktop": 4,
+        "columns_desktop": 5,
         "full_width": true,
         "show_view_all": true,
         "view_all_style": "primary",
