@@ -82,7 +82,7 @@
         "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "content_layout": "overlap",
+        "content_layout": "no-overlap",
         "color_scheme": "scheme-inverse",
         "background_texture": "",
         "image_behavior": "none",
