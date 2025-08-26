@@ -43,6 +43,7 @@
         "text_VDKrcz",
         "buttons_fWJABr"
       ],
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/table_tennis_ed686757-1173-455d-a4eb-ed63102037b1.png",
@@ -107,7 +108,7 @@
         "show_collection_description": false,
         "description_style": "body",
         "products_to_show": 8,
-        "columns_desktop": 5,
+        "columns_desktop": 3,
         "full_width": true,
         "show_view_all": true,
         "view_all_style": "primary",
