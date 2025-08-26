@@ -31,6 +31,7 @@
         "heading",
         "text"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/table_tennis_ed686757-1173-455d-a4eb-ed63102037b1.png",
         "height": "adapt",
@@ -72,7 +73,7 @@
             "button_style_secondary_1": "secondary",
             "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": "secondary"
+            "button_style_secondary_2": "primary"
           }
         }
       },
@@ -83,7 +84,6 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/table_tennis_ed686757-1173-455d-a4eb-ed63102037b1.png",
         "image_overlay_opacity": 70,
         "image_height": "adapt",
         "desktop_content_position": "middle-center",
