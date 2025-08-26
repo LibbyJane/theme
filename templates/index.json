@@ -208,7 +208,7 @@
         "view_all_style": "primary",
         "enable_desktop_slider": true,
         "columns_mobile": "2",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "color_scheme": "scheme-accent-light",
         "background_transparent": true,
         "image_ratio": "square",
