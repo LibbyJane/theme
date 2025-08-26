@@ -47,6 +47,56 @@
         "padding_bottom": 0
       }
     },
+    "image_banner_bGanaJ": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_XabUaK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Let's Go!",
+            "heading_size": "h1"
+          }
+        },
+        "text_rFYnFB": {
+          "type": "text",
+          "settings": {
+            "text": "Welcome to VetraTT! Our mission is to  provide next-level equipment at an affordable price. We have a select range of products, carefully chosen to deliver something special at their price point.",
+            "text_style": "body"
+          }
+        },
+        "buttons_QDUDra": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Our Products",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": "secondary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_XabUaK",
+        "text_rFYnFB",
+        "buttons_QDUDra"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/table_tennis_ed686757-1173-455d-a4eb-ed63102037b1.png",
+        "image_overlay_opacity": 70,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "background_texture": "paper",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "image_behavior": "none"
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -356,6 +406,7 @@
   },
   "order": [
     "image_with_text",
+    "image_banner_bGanaJ",
     "slideshow",
     "rich_text",
     "featured_collection",
