@@ -46,8 +46,8 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/table_tennis_ed686757-1173-455d-a4eb-ed63102037b1.png",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_overlay_opacity": 50,
+        "image_height": "small",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": true,
