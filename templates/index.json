@@ -9,6 +9,50 @@
  */
 {
   "sections": {
+    "rich_text_jxmNrF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FcMrUp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Let's Go!",
+            "heading_size": "h1"
+          }
+        },
+        "text_LtrGYd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to VetraTT! Our mission is to  provide next-level equipment at an affordable price. We have a select range of products, carefully chosen to deliver something special at their price point.</p>"
+          }
+        },
+        "button_wGkbjk": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_FcMrUp",
+        "text_LtrGYd",
+        "button_wGkbjk"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_alignment": "center",
+        "desktop_content_position": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "background_texture": "paper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_banner_QRPiaa": {
       "type": "image-banner",
       "blocks": {
@@ -82,6 +126,7 @@
         "heading",
         "text"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/table_tennis_ed686757-1173-455d-a4eb-ed63102037b1.png",
         "height": "adapt",
@@ -123,12 +168,13 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": true,
-        "padding_top": 16,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     }
   },
   "order": [
+    "rich_text_jxmNrF",
     "image_banner_QRPiaa",
     "image_with_text",
     "featured_collection"
