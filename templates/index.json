@@ -9,50 +9,6 @@
  */
 {
   "sections": {
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Welcome to  Road Trip Wines",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<h5>We’ve embarked on an adventure based on good wine, good company & new destinations. Please join us!</h5>"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_label": "More about us",
-            "button_link": "shopify://pages/our-story",
-            "button_style_secondary": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "disabled": true,
-      "settings": {
-        "content_alignment": "center",
-        "desktop_content_position": "center",
-        "color_scheme": "scheme-inverse",
-        "full_width": true,
-        "background_texture": "",
-        "padding_top": 44,
-        "padding_bottom": 44
-      }
-    },
     "image_with_text": {
       "type": "image-with-text",
       "blocks": {
@@ -315,7 +271,6 @@
     }
   },
   "order": [
-    "rich_text",
     "image_with_text",
     "slideshow",
     "featured_collection",
