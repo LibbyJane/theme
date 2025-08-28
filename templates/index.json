@@ -9,6 +9,104 @@
  */
 {
   "sections": {
+    "rich_text_jxmNrF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FcMrUp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Let's Go!",
+            "heading_size": "h1"
+          }
+        },
+        "text_LtrGYd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to VetraTT! Our mission is to  provide next-level equipment at an affordable price. We have a select range of products, carefully chosen to deliver something special at their price point.</p>"
+          }
+        },
+        "button_wGkbjk": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_FcMrUp",
+        "text_LtrGYd",
+        "button_wGkbjk"
+      ],
+      "custom_css": [
+        ".section__container--rich-text {margin-top: 20px; background: red;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_alignment": "center",
+        "desktop_content_position": "center",
+        "color_scheme": "",
+        "full_width": false,
+        "background_texture": "paper",
+        "padding_top": 12,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_QRPiaa": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_eJwzwP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Let's Go!",
+            "heading_size": "h2"
+          }
+        },
+        "text_VDKrcz": {
+          "type": "text",
+          "settings": {
+            "text": "Welcome to VetraTT! Our mission is to  provide next-level equipment at an affordable price. We have a carefully selected range of products, all chosen to deliver something special at their price point.",
+            "text_style": "body"
+          }
+        },
+        "buttons_fWJABr": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eJwzwP",
+        "text_VDKrcz",
+        "buttons_fWJABr"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/table_tennis_ed686757-1173-455d-a4eb-ed63102037b1.png",
+        "image_overlay_opacity": 50,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "background_texture": "paper",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "image_behavior": "none"
+      }
+    },
     "image_with_text": {
       "type": "image-with-text",
       "blocks": {
@@ -31,165 +129,21 @@
         "heading",
         "text"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/table_tennis_ed686757-1173-455d-a4eb-ed63102037b1.png",
         "height": "adapt",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "small",
         "layout": "text_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
+        "content_layout": "overlap",
         "color_scheme": "scheme-inverse",
         "background_texture": "",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 44,
         "padding_bottom": 0
-      }
-    },
-    "slideshow": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_1": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image_overlay_opacity": 40,
-            "heading": "Welcome to Road Trip Wines",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "Find your new favorite drop >",
-            "link": "shopify://collections/all",
-            "button_style_secondary": "secondary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "scheme-background",
-            "background_texture": "paper",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_2": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/table_tennis_8410b8ec-1998-4c0f-8456-0ce80a02edbf.png",
-            "image_overlay_opacity": 30,
-            "heading": "Explore our range",
-            "heading_size": "h1",
-            "subheading": "“The discovery of a good wine is increasingly better for mankind than the discovery of a new star.” <em>— Leonardo da Vinci</em>",
-            "button_label": "Find your new favorite drop >",
-            "link": "shopify://collections/all",
-            "button_style_secondary": "secondary",
-            "box_align": "bottom-left",
-            "text_alignment": "left",
-            "show_text_box": false,
-            "color_scheme": "scheme-inverse",
-            "background_texture": "paper",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_3": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "10% off store-wide",
-            "heading_size": "h1",
-            "subheading": "Use discount code <strong>RTW2425</strong>",
-            "button_label": "Start shopping >",
-            "link": "shopify://collections",
-            "button_style_secondary": "primary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "scheme-background-2",
-            "background_texture": "torn",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_4": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "image_overlay_opacity": 20,
-            "heading": "Latest from the blog",
-            "heading_size": "h2",
-            "subheading": "Read all about our recent adventure: a working holiday at a vineyard in beautiful in Hawkes Bay",
-            "button_label": "Read about it",
-            "link": "shopify://blogs/news/working-holiday-at-a-vineyard",
-            "button_style_secondary": "secondary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "scheme-background",
-            "background_texture": "lined",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_1",
-        "slide_2",
-        "slide_3",
-        "slide_4"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "small",
-        "section_color_scheme": "scheme-inverse",
-        "slider_visual": "numbers",
-        "slider_visual_background_opacity": 80,
-        "overlay_pagination_desktop": true,
-        "auto_rotate": true,
-        "change_slides_speed": 7,
-        "show_text_below": false,
-        "accessibility_info": "Slideshow about our brand",
-        "image_behavior": "none"
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Welcome to  Road Trip Wines",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<h5>We’ve embarked on an adventure based on good wine, good company & new destinations. Please join us!</h5>"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_label": "More about us",
-            "button_link": "shopify://pages/our-story",
-            "button_style_secondary": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "disabled": true,
-      "settings": {
-        "content_alignment": "center",
-        "desktop_content_position": "center",
-        "color_scheme": "scheme-inverse",
-        "full_width": true,
-        "background_texture": "",
-        "padding_top": 44,
-        "padding_bottom": 44
       }
     },
     "featured_collection": {
@@ -202,11 +156,11 @@
         "show_collection_description": false,
         "description_style": "body",
         "products_to_show": 8,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "primary",
-        "enable_desktop_slider": true,
+        "enable_desktop_slider": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "color_scheme": "scheme-accent-light",
@@ -217,110 +171,48 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": true,
-        "padding_top": 16,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "australia"
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "new-zealand"
-          }
-        },
-        "collection-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "south-africa"
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "collection-1",
-        "collection-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-accent",
-        "background_transparent": true,
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "featured_blog": {
-      "type": "featured-blog",
-      "disabled": true,
-      "settings": {
-        "title": "Latest from the blog",
-        "heading_size": "h1",
-        "blog": "news",
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "color_scheme": "scheme-accent-light",
-        "background_transparent": true,
-        "content_color_scheme": "scheme-background",
-        "content_background_width": "page",
-        "background_texture": "lined",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 44,
-        "padding_bottom": 0
-      }
-    },
-    "featured_product": {
+    "featured_product_mejWwm": {
       "type": "featured-product",
       "blocks": {
-        "text": {
+        "text_VY9LEA": {
           "type": "text",
           "settings": {
             "text": "{{ section.settings.product.vendor }}",
             "text_style": "caption"
           }
         },
-        "title": {
+        "title_38mwgM": {
           "type": "title",
           "settings": {
             "heading_size": "h1"
           }
         },
-        "price": {
+        "price_jFLpn3": {
           "type": "price",
           "settings": {}
         },
-        "variant_picker": {
+        "variant_picker_9AXx6M": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button"
           }
         },
-        "quantity_selector": {
+        "quantity_selector_x7h44c": {
           "type": "quantity_selector",
           "settings": {}
         },
-        "buy_buttons": {
+        "buy_buttons_gx3EdN": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
         },
-        "share": {
+        "share_NcwjFW": {
           "type": "share",
           "settings": {
             "share_label": "Share"
@@ -328,17 +220,17 @@
         }
       },
       "block_order": [
-        "text",
-        "title",
-        "price",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
-        "share"
+        "text_VY9LEA",
+        "title_38mwgM",
+        "price_jFLpn3",
+        "variant_picker_9AXx6M",
+        "quantity_selector_x7h44c",
+        "buy_buttons_gx3EdN",
+        "share_NcwjFW"
       ],
-      "disabled": true,
+      "name": "t:sections.featured-product.presets.name",
       "settings": {
-        "product": "",
+        "product": "you-are-the-batman",
         "color_scheme": "",
         "background_texture": "paper",
         "full_width": false,
@@ -355,12 +247,10 @@
     }
   },
   "order": [
+    "rich_text_jxmNrF",
+    "image_banner_QRPiaa",
     "image_with_text",
-    "slideshow",
-    "rich_text",
     "featured_collection",
-    "collage",
-    "featured_blog",
-    "featured_product"
+    "featured_product_mejWwm"
   ]
 }
