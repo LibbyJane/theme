@@ -60,13 +60,6 @@
         elsif card_product.available == false
             assign showBadge = true
         endif
-
-        assign ctaClass = 'button--primary'
-            if cta_style == 'outline'
-                assign ctaClass = 'button--secondary'
-            elsif cta_style == 'plain'
-                assign ctaClass = 'button--tertiary'
-        endif
     -%}
 
     <a
