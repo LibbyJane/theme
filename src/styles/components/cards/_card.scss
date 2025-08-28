@@ -115,7 +115,9 @@
         &.ratio,
         .ratio {
             .slider & {
-                height: 100%; // featured collection
+                @media screen and (min-width: 990px) {
+                    height: 100%; // featured collection
+                }
             }
         }
     }

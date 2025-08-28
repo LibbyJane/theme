@@ -4,7 +4,7 @@
 
     &.product__info-wrapper {
         @media screen and (max-width: 749px) {
-            margin-inline: var(--full-width-offset-margin);
+            // margin-inline: var(--full-width-offset-margin); // breaks mobile layout on featured product section (home page) - TODO: is this needed?
             max-width: none;
         }
     }
