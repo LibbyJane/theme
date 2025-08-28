@@ -80,7 +80,7 @@
         "show_rating": false,
         "enable_quick_add": true,
         "cta_text": "View More >",
-        "cta_style": "solid",
+        "cta_style": "outline",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -133,11 +133,71 @@
         "show_text_below": true,
         "image_behavior": "none"
       }
+    },
+    "slideshow_BE4y8n": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_m6prRA": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_DCN77Y": {
+          "type": "slide",
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": "primary",
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "show_text_box": true,
+            "color_scheme": "",
+            "background_texture": "paper",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_m6prRA",
+        "slide_DCN77Y"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "section_color_scheme": "",
+        "slider_visual": "counter",
+        "slider_visual_background_opacity": 100,
+        "overlay_pagination_desktop": false,
+        "auto_rotate": false,
+        "change_slides_speed": 6,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "image_behavior": "none"
+      }
     }
   },
   "order": [
     "rich_text_UqG4tD",
     "featured_collection_nqrX7t",
-    "image_banner_bhdUHX"
+    "image_banner_bhdUHX",
+    "slideshow_BE4y8n"
   ]
 }
