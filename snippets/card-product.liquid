@@ -204,6 +204,10 @@
             {% render 'card-badge', card_product: card_product, section_id: section_id %}
         {%- endif -%}
 
+        {%- if cta_text -%}
+            CTA text {{ cta_text }}
+        {%- endif -%}
+
         {%- if show_quick_add -%}
             {% render 'quick-add', card_product: card_product, horizontal_quick_add: horizontal_quick_add, section_id: section_id %}
         {%- endif -%}
