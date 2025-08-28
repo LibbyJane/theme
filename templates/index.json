@@ -12,9 +12,54 @@
     "175639326470d5d0f4": {
       "type": "_blocks",
       "settings": {}
+    },
+    "rich_text_UqG4tD": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7wPFaB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Let's Go!",
+            "heading_size": "h1"
+          }
+        },
+        "text_QNynYr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to VetraTT! Our mission is to provide next-level equipment at an affordable price. We have a select range of products, carefully chosen to deliver something special at their price point.</p>"
+          }
+        },
+        "button_nVePNc": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7wPFaB",
+        "text_QNynYr",
+        "button_nVePNc"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_alignment": "center",
+        "desktop_content_position": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "background_texture": "paper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "175639326470d5d0f4"
+    "175639326470d5d0f4",
+    "rich_text_UqG4tD"
   ]
 }
