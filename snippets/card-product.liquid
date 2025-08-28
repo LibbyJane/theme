@@ -204,11 +204,6 @@
             {% render 'card-badge', card_product: card_product, section_id: section_id %}
         {%- endif -%}
 
-        <div class="b utton-bar">
-            <button class="button button--full-width  button--primary">primary</button>
-            <button class="button button--full-width button--secondary">secondary</button>
-            <button class="button button--full-width button--tertiary">tertiary</button>
-
         {%- if cta_text -%}
             <div class="button button--full-width button--{{ cta_style }}">{{ cta_text }} {{ cta_style }}</div>
         {%- endif -%}
@@ -216,8 +211,6 @@
         {%- if show_quick_add -%}
             {% render 'quick-add', card_product: card_product, horizontal_quick_add: horizontal_quick_add, section_id: section_id %}
         {%- endif -%}
-
-    </div>
     </a>
 {%- else -%}
     <div class="card-wrapper product-card-wrapper">
