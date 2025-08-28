@@ -81,6 +81,8 @@
                         style="--animation-order: {{ forloop.index }};"
                     {% endif %}
                 >
+
+                    cta_style {{cta_style }}
                     {%
                         render 'card-product',
                         card_product: product,
