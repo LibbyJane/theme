@@ -9,10 +9,6 @@
  */
 {
   "sections": {
-    "175639326470d5d0f4": {
-      "type": "_blocks",
-      "settings": {}
-    },
     "rich_text_UqG4tD": {
       "type": "rich-text",
       "blocks": {
@@ -59,7 +55,6 @@
     }
   },
   "order": [
-    "175639326470d5d0f4",
     "rich_text_UqG4tD"
   ]
 }
