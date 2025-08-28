@@ -60,6 +60,11 @@
         elsif card_product.available == false
             assign showBadge = true
         endif
+
+        assign ctaClass = ''
+            if cta_style == 'outline' assign ctaClass = 'button--secondary'
+            elsif cta_style = 'plain' assign ctaClass = 'button--plain'
+        endif
     -%}
 
     <a
@@ -205,8 +210,7 @@
         {%- endif -%}
 
         {%- if cta_text -%}
-            {{ cta_text }}
-            {{ cta_style }}
+            <div class="button buttn--full-width {{ ctaClass }}">{{ cta_text }}</div>
         {%- endif -%}
 
         {%- if show_quick_add -%}
