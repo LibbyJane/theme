@@ -62,8 +62,10 @@
         endif
 
         assign ctaClass = ''
-            if cta_style == 'outline' assign ctaClass = 'button--secondary'
-            elsif cta_style = 'plain' assign ctaClass = 'button--plain'
+            if cta_style == 'outline' 
+                assign ctaClass = 'button--secondary'
+            elsif cta_style = 'plain' 
+                assign ctaClass = 'button--plain'
         endif
     -%}
 
