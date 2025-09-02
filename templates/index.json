@@ -15,7 +15,7 @@
         "heading_7wPFaB": {
           "type": "heading",
           "settings": {
-            "heading": "Let's Go!",
+            "heading": "Welcome to Vetra TT!",
             "heading_size": "h1"
           }
         },
@@ -28,9 +28,9 @@
         "button_nVePNc": {
           "type": "button",
           "settings": {
-            "button_label": "",
+            "button_label": "Let's Go!",
             "button_link": "",
-            "button_style_secondary": false,
+            "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -42,7 +42,6 @@
         "text_QNynYr",
         "button_nVePNc"
       ],
-      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "content_alignment": "center",
