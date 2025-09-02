@@ -9,6 +9,15 @@
             padding-bottom: var(--space-sm);
         }
 
+        .price {
+            font-size: var(--font-size-base);
+        }
+
+        .button--tertiary {
+            // text style 'view more' button
+            padding-bottom: 0;
+        }
+
         &.card--text {
             .card__content {
                 margin-bottom: var(--space);
