@@ -5,6 +5,10 @@
             padding: var(--space) 0 0;
         }
 
+        .card__header {
+            padding-bottom: var(--space-sm);
+        }
+
         &.card--text {
             .card__content {
                 margin-bottom: var(--space);
@@ -30,4 +34,6 @@
             }
         }
     }
+
+
 }

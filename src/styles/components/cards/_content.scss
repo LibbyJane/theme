@@ -139,6 +139,7 @@
 
 .card--card {
     .price {
+        --font-size-price: var(--font-size-smaller);
         margin-bottom: 0;
     }
 }
