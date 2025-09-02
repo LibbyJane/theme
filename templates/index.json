@@ -53,38 +53,6 @@
         "padding_bottom": 36
       }
     },
-    "featured_collection_nqrX7t": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "collection": "frontpage",
-        "title": "",
-        "heading_size": "h1",
-        "description": "",
-        "show_collection_description": false,
-        "description_style": "body",
-        "products_to_show": 25,
-        "columns_desktop": 5,
-        "full_width": true,
-        "show_view_all": true,
-        "view_all_style": "plain",
-        "enable_desktop_slider": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "color_scheme": "",
-        "background_transparent": true,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "cta_text": "View More >",
-        "cta_style": "tertiary",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "image_banner_bhdUHX": {
       "type": "image-banner",
       "blocks": {
@@ -140,29 +108,12 @@
         "slide_m6prRA": {
           "type": "slide",
           "settings": {
-            "image_overlay_opacity": 0,
+            "image": "shopify://shop_images/table_tennis_8410b8ec-1998-4c0f-8456-0ce80a02edbf.png",
+            "image_overlay_opacity": 60,
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": "primary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "",
-            "background_texture": "paper",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_DCN77Y": {
-          "type": "slide",
-          "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
+            "button_label": "",
             "link": "",
             "button_style_secondary": "primary",
             "box_align": "middle-center",
@@ -175,8 +126,7 @@
         }
       },
       "block_order": [
-        "slide_m6prRA",
-        "slide_DCN77Y"
+        "slide_m6prRA"
       ],
       "name": "t:sections.slideshow.presets.name",
       "settings": {
@@ -192,12 +142,44 @@
         "accessibility_info": "Slideshow about our brand",
         "image_behavior": "none"
       }
+    },
+    "featured_collection_nqrX7t": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "frontpage",
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_collection_description": false,
+        "description_style": "body",
+        "products_to_show": 25,
+        "columns_desktop": 5,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "plain",
+        "enable_desktop_slider": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "color_scheme": "",
+        "background_transparent": true,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "cta_text": "View More >",
+        "cta_style": "tertiary",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "rich_text_UqG4tD",
-    "featured_collection_nqrX7t",
     "image_banner_bhdUHX",
-    "slideshow_BE4y8n"
+    "slideshow_BE4y8n",
+    "featured_collection_nqrX7t"
   ]
 }
