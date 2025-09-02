@@ -60,14 +60,14 @@
         "heading_yXVjU4": {
           "type": "heading",
           "settings": {
-            "heading": "Let's Go!",
+            "heading": "Welcome to Vetra TT!",
             "heading_size": "h2"
           }
         },
         "text_kHgTXB": {
           "type": "text",
           "settings": {
-            "text": "Welcome to VetraTT! Our mission is to provide next-level equipment at an affordable price. We have a select range of products, carefully chosen to deliver something special at their price point.",
+            "text": "Our mission is to provide next-level equipment at an affordable price. We have a select range of products, carefully chosen to deliver something special at their price point.",
             "text_style": "body"
           }
         },
@@ -91,7 +91,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/table_tennis_8410b8ec-1998-4c0f-8456-0ce80a02edbf.png",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 70,
         "image_height": "small",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
