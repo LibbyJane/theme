@@ -42,6 +42,7 @@
         "text_QNynYr",
         "button_nVePNc"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "content_alignment": "center",
@@ -59,24 +60,24 @@
         "heading_yXVjU4": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
+            "heading": "Let's Go!",
+            "heading_size": "h2"
           }
         },
         "text_kHgTXB": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Welcome to VetraTT! Our mission is to provide next-level equipment at an affordable price. We have a select range of products, carefully chosen to deliver something special at their price point.",
             "text_style": "body"
           }
         },
         "buttons_xWP4F9": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
+            "button_label_1": "",
             "button_link_1": "",
             "button_style_secondary_1": "primary",
-            "button_label_2": "Button label",
+            "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": "secondary"
           }
@@ -89,8 +90,9 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image": "shopify://shop_images/table_tennis_8410b8ec-1998-4c0f-8456-0ce80a02edbf.png",
+        "image_overlay_opacity": 50,
+        "image_height": "small",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": true,
@@ -99,47 +101,6 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true,
-        "image_behavior": "none"
-      }
-    },
-    "slideshow_BE4y8n": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_m6prRA": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/table_tennis_8410b8ec-1998-4c0f-8456-0ce80a02edbf.png",
-            "image_overlay_opacity": 60,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": "primary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "",
-            "background_texture": "paper",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_m6prRA"
-      ],
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "section_color_scheme": "",
-        "slider_visual": "counter",
-        "slider_visual_background_opacity": 100,
-        "overlay_pagination_desktop": false,
-        "auto_rotate": false,
-        "change_slides_speed": 6,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
         "image_behavior": "none"
       }
     },
@@ -179,7 +140,6 @@
   "order": [
     "rich_text_UqG4tD",
     "image_banner_bhdUHX",
-    "slideshow_BE4y8n",
     "featured_collection_nqrX7t"
   ]
 }
