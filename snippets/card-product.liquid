@@ -66,6 +66,13 @@
         elsif card_product.available == false
             assign showBadge = true
         endif
+
+        assign in_cart = false
+        for item in cart.items
+            if item.product.id == card_product.id 
+                assign in_cart = true
+            endif
+        endfor
     -%}
 
     <a
