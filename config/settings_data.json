@@ -52,7 +52,7 @@
     "card_padding": 12,
     "card_image_full_width": true,
     "card_text_alignment": "center",
-    "card_color_scheme": "scheme-sticky-highlight",
+    "card_color_scheme": "scheme-background-2",
     "card_highlight_price": false,
     "card_border_thickness": 0,
     "card_border_opacity": 0,
