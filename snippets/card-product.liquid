@@ -24,6 +24,7 @@
 {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
 
 <h1>Cart {{ cart.items }}</h1>
+<h2>Product id{{ card_product.id }}</h2>
 
 {%- if card_product and card_product != empty -%}
     {%- liquid
