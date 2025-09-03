@@ -23,8 +23,11 @@
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
 
+<div style="background: white">
 <h1>Cart {{ cart.items }}</h1>
 <h2>Product id{{ card_product.id }}</h2>
+</div>
+
 
 {%- if card_product and card_product != empty -%}
     {%- liquid
