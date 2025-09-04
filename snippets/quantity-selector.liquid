@@ -11,10 +11,8 @@
     Usage:
     {% render 'quantity-selector', product: product %}
 {% endcomment %}
-{% comment %} TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter {% endcomment %}
-{% # theme-check-disable %}
-    {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
-{% # theme-check-enable %}
+
+{%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
 
 <label class="quantity__label form__label text-display" for="Quantity-{{ section.id }}">
     <span class="visually-hidden">{{ 'products.product.quantity.label' | t }}</span>
