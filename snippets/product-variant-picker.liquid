@@ -28,6 +28,7 @@ Usage:
           endif
         endif
       -%}
+      <h1 style="background: yellow">picker type {{ picker_type }}</h1>
       {%- endfor -%}
     <script type="application/json" data-selected-variant>
       {{ product.selected_or_first_available_variant | json }}
