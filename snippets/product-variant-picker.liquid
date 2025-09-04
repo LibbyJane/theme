@@ -10,6 +10,16 @@ Usage:
 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
 {%- unless product.has_only_default_variant -%}
+  <variant-selects
+    id="variant-selects-{{ section.id }}"
+    data-section="{{ section.id }}"
+    {{ block.shopify_attributes }}
+  >
+    </variant-selects>
+{%- endunless -%}
+
+
+{%- unless product.has_only_default_variant -%}
     {%- if block.settings.picker_type == 'button' -%}
         <variant-radios
             id="variant-radios-{{ section.id }}"
