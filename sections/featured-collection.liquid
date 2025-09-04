@@ -43,6 +43,8 @@
     endif
 -%}
 
+<h1 style="background: yellow">section.settings.quick_add {{section.settings.quick_add }}</h1>
+
 <div class="color-{{ section.settings.color_scheme }} background-{% if section.settings.background_transparent %}transparent {% else %}theme {% endif %} isolate collection section-{{ section.id }} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}">
     {%- if section.settings.title != blank or section.settings.description != blank or section.settings.show_collection_description and section.settings.collection.description != empty -%}
         <header class="title-wrapper align-{{ settings.title_alignment }} page-width">
