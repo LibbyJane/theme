@@ -29,6 +29,25 @@ Usage:
         endif
       -%}
       <h1 style="background: purple">picker type {{ picker_type }}</h1>
+
+      {%- if picker_type == 'swatch' -%}
+              <h1 style="background: aqua">swatch</h1>
+
+        <fieldset class="js product-form__input product-form__input--swatch">
+          <legend class="form__label">
+            {{ option.name }}:
+            <span data-selected-value>
+              {{- option.selected_value -}}
+            </span>
+          </legend>
+          {% render 'product-variant-options',
+            product: product,
+            option: option,
+            block: block,
+            picker_type: picker_type
+          %}
+        </fieldset>
+        {%- endif -%}
       {%- endfor -%}
     <script type="application/json" data-selected-variant>
       {{ product.selected_or_first_available_variant | json }}
