@@ -13,7 +13,7 @@
 {% endcomment %}
 
 {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
-<h1>??</h1>
+
 <label class="quantity__label form__label text-display" for="Quantity-{{ section.id }}">
     <span class="visually-hidden">{{ 'products.product.quantity.label' | t }}</span>
     <span class="quantity__rules-cart js-quantity__rules-cart no-js-hidden{% if cart_qty == 0 %} hidden{% endif %}">
