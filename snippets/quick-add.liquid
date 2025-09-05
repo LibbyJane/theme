@@ -5,6 +5,7 @@
     - card_product: {Object} Product Liquid object
     - section_id: {String} The ID of the section that contains this card.
     - horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
+    - in_cart: {Integer}: The quantity currently in the cart
 
     Usage:
     {% render 'quick-add', product: card_product, horizontal_quick_add: horizontal_quick_add, section_id: section_id %}{% render 'price', product: product %}
@@ -16,14 +17,25 @@
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 <div class="quick-add no-js-hidden">
+
     {%- liquid
         assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id
         assign qty_rules = false
         if card_product.selected_or_first_available_variant.quantity_rule.min > 1 or card_product.selected_or_first_available_variant.quantity_rule.max != null or card_product.selected_or_first_available_variant.quantity_rule.increment > 1
             assign qty_rules = true
         endif
-    -%}
 
+        if card_product and card_product != empty
+            assign in_cart = 0
+
+            for item in cart.items
+                if item.product.id == card_product.id
+                    assign in_cart = item.quantity
+                endif
+            endfor
+        endif
+    -%}
+    <h1>in cart: {{ in_cart }}</h1>
     {%- if card_product.variants.size > 1 or qty_rules -%}
         <modal-opener data-modal="#QuickAdd-{{ card_product.id }}">
             <button
