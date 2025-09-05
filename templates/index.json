@@ -15,22 +15,22 @@
         "heading_7wPFaB": {
           "type": "heading",
           "settings": {
-            "heading": "Let's Go!",
+            "heading": "Welcome to Vetra TT!",
             "heading_size": "h1"
           }
         },
         "text_QNynYr": {
           "type": "text",
           "settings": {
-            "text": "<p>Welcome to VetraTT! Our mission is to provide next-level equipment at an affordable price. We have a select range of products, carefully chosen to deliver something special at their price point.</p>"
+            "text": "<p>Our mission is to provide next-level equipment at an affordable price. We have a select range of products, carefully chosen to deliver something special at their price point.</p>"
           }
         },
         "button_nVePNc": {
           "type": "button",
           "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
+            "button_label": "Let's Go!",
+            "button_link": "#shopify-section-template--25866008887683__featured_collection_nqrX7t",
+            "button_style_secondary": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -51,6 +51,57 @@
         "background_texture": "paper",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "image_banner_bhdUHX": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_yXVjU4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome to Vetra TT!",
+            "heading_size": "h2"
+          }
+        },
+        "text_kHgTXB": {
+          "type": "text",
+          "settings": {
+            "text": "Our mission is to provide next-level equipment at an affordable price. We have a select range of products, carefully chosen to deliver something special at their price point.",
+            "text_style": "body"
+          }
+        },
+        "buttons_xWP4F9": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": "secondary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_yXVjU4",
+        "text_kHgTXB",
+        "buttons_xWP4F9"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/table_tennis_8410b8ec-1998-4c0f-8456-0ce80a02edbf.png",
+        "image_overlay_opacity": 70,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "background_texture": "paper",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "image_behavior": "none"
       }
     },
     "featured_collection_nqrX7t": {
@@ -81,123 +132,14 @@
         "enable_quick_add": true,
         "cta_text": "View More >",
         "cta_style": "tertiary",
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
-      }
-    },
-    "image_banner_bhdUHX": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_yXVjU4": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
-          }
-        },
-        "text_kHgTXB": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "buttons_xWP4F9": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": "primary",
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": "secondary"
-          }
-        }
-      },
-      "block_order": [
-        "heading_yXVjU4",
-        "text_kHgTXB",
-        "buttons_xWP4F9"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "",
-        "background_texture": "paper",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true,
-        "image_behavior": "none"
-      }
-    },
-    "slideshow_BE4y8n": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_m6prRA": {
-          "type": "slide",
-          "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": "primary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "",
-            "background_texture": "paper",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_DCN77Y": {
-          "type": "slide",
-          "settings": {
-            "image_overlay_opacity": 0,
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": "primary",
-            "box_align": "middle-center",
-            "text_alignment": "center",
-            "show_text_box": true,
-            "color_scheme": "",
-            "background_texture": "paper",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_m6prRA",
-        "slide_DCN77Y"
-      ],
-      "name": "t:sections.slideshow.presets.name",
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "section_color_scheme": "",
-        "slider_visual": "counter",
-        "slider_visual_background_opacity": 100,
-        "overlay_pagination_desktop": false,
-        "auto_rotate": false,
-        "change_slides_speed": 6,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand",
-        "image_behavior": "none"
       }
     }
   },
   "order": [
     "rich_text_UqG4tD",
-    "featured_collection_nqrX7t",
     "image_banner_bhdUHX",
-    "slideshow_BE4y8n"
+    "featured_collection_nqrX7t"
   ]
 }
