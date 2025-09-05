@@ -19,7 +19,7 @@
 {%- liquid
     assign product_form_id = 'product-form-' | append: section.id
   -%}
-  <h1>picker_type {{ picker_type }}</h1>
+
   {%- for value in option.values -%}
     {%- liquid
       assign swatch_focal_point = null
@@ -32,32 +32,32 @@
       else
         assign swatch_value = null
       endif
-  
+
       assign option_disabled = true
       if value.available
         assign option_disabled = false
       endif
     -%}
-  
+
     {%- capture input_id -%}
       {{ section.id }}-{{ option.position }}-{{ forloop.index0 -}}
     {%- endcapture -%}
-  
+
     {%- capture input_name -%}
       {{ option.name }}-{{ option.position }}
     {%- endcapture -%}
-  
+
     {%- capture input_dataset -%}
       data-product-url="{{ value.product_url }}"
       data-option-value-id="{{ value.id }}"
     {%- endcapture -%}
-  
+
     {%- capture label_unavailable -%}
       <span class="visually-hidden label-unavailable">
         {{- 'products.product.variant_sold_out_or_unavailable' | t -}}
       </span>
     {%- endcapture -%}
-  
+
     {%- if picker_type == 'swatch' -%}
       {%- capture help_text -%}
         <span class="visually-hidden">{{ value | escape }}</span>
@@ -122,4 +122,3 @@
       </option>
     {%- endif -%}
   {%- endfor -%}
-  

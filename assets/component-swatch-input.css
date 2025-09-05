@@ -1,4 +1,2 @@
-/* swatch-input lives in its own file for reusability of the swatch in other areas than the product form context */
-.product-form__input input[type=radio]+.swatch-input__label {
-    padding: 0;
-}
+.product-form__input input[type=radio]+.swatch-input__label{align-self:start;padding:0}.swatch-input__input+.swatch-input__label{outline:var(--variant-pills-border-width) solid rgb(var(--color-foreground));transition-property:outline-color,outline-width,box-shadow;transition-duration:var(--duration-short);transition-timing-function:ease;forced-color-adjust:none}.swatch-input__input:active+.swatch-input__label,.swatch-input__input:checked+.swatch-input__label{outline:2px dashed #ff0}
+/*# sourceMappingURL=component-swatch-input.css.map */
