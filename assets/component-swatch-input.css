@@ -1,4 +1,7 @@
 /* swatch-input lives in its own file for reusability of the swatch in other areas than the product form context */
+.product-form__input input[type=radio]:checked+.swatch-input__label {
+  background: pink;
+}
 .swatch-input__input + .swatch-input__label.swatch-input__label {
     background: transparent;
     --swatch-input--border-radius: 50%;
