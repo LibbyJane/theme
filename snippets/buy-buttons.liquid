@@ -80,7 +80,7 @@
                         {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                             {{ 'products.product.sold_out' | t }}
                         {%- else -%}
-                            {{ 'sections.cart.checkout' | t }}
+                            {{ 'products.product.add_to_cart' | t }}
                         {%- endif -%}
                     </span>
                     <div class="loading-overlay__spinner js-loading-overlay__spinner hidden">
