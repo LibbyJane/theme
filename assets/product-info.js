@@ -165,7 +165,7 @@ if (!customElements.get('product-info')) {
         return (html) => {
           const variant = this.getSelectedVariant(html);
 
-          // this.pickupAvailability?.update(variant);
+          this.pickupAvailability?.update(variant);
           this.updateOptionValues(html);
           this.updateURL(productUrl, variant?.id);
           this.updateVariantInputs(variant?.id);
