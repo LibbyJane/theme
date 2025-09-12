@@ -582,9 +582,9 @@
                                 {% endif %}
                               >
                                 <ul class="list-unstyled" role="list">
+                                  {% comment %} offset: continue {% endcomment %}
                                   {%- for product in recommendations.products
                                     limit: block.settings.products_per_page
-                                    offset: continue
                                   -%}
                                     <li>
                                       {%- if block.settings.enable_quick_add -%}
