@@ -48,9 +48,11 @@ variant-selects {
   }
 
   .product-form__input--dropdown .dropdown-swatch {
-    position: absolute;
-    left: 1.6rem;
-    top: calc(50% - var(--swatch-input--size) / 2);
+    grid-area: 1/1;
+    margin: auto var(--space);
+    // position: absolute;
+    // left: 1.6rem;
+    // top: calc(50% - var(--swatch-input--size) / 2);
     width: var(--swatch-input--size);
     height: var(--swatch-input--size);
     z-index: 1;

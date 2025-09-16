@@ -6,6 +6,7 @@
     grid-gap: var(--space);
     grid-template-columns: 1fr var(--icon-size-sm);
     line-height: 1;
+    position: relative;
 
     &:hover {
         .icon {

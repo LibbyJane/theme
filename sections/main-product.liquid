@@ -1,54 +1,58 @@
 <product-info
-  id="MainProduct-{{ section.id }}"
-  class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
-  data-section="{{ section.id }}"
-  data-product-id="{{ product.id }}"
-  data-update-url="true"
-  data-url="{{ product.url }}"
-  {% if section.settings.image_zoom == 'hover' %}
-    data-zoom-on-hover
-  {% endif %}
+    id="MainProduct-{{ section.id }}"
+    class="section-{{ section.id }}-margin page-width content-padding color-{{ section.settings.section_color_scheme }} {% if section.settings.section_background_style == 'transparent' %}background-transparent{% elsif section.settings.section_background_style != blank %}texture-{{ section.settings.section_background_style }}{% endif %}"
+    data-section="{{ section.id }}"
+    data-product-id="{{ product.id }}"
+    data-update-url="true"
+    data-url="{{ product.url }}"
+    {% comment %} {% if section.settings.image_zoom == 'hover' %}
+        data-zoom-on-hover
+    {% endif %} {% endcomment %}
 >
-  {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
-  {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
-  {{ 'component-price.css' | asset_url | stylesheet_tag }}
-  {{ 'component-slider.css' | asset_url | stylesheet_tag }}
-  {{ 'component-rating.css' | asset_url | stylesheet_tag }}
-  {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+    {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+    {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+    {{ 'component-price.css' | asset_url | stylesheet_tag }}
+    {{ 'component-slider.css' | asset_url | stylesheet_tag }}
+    {{ 'component-rating.css' | asset_url | stylesheet_tag }}
+    {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
-  {% unless product.has_only_default_variant %}
-    {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
-    {{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}
-    {{ 'component-swatch.css' | asset_url | stylesheet_tag }}
-  {% endunless %}
-  {%- if product.quantity_price_breaks_configured? -%}
-    {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
-  {%- endif -%}
+    {% unless product.has_only_default_variant %}
+        {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
+        {{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}
+        {{ 'component-swatch.css' | asset_url | stylesheet_tag }}
+    {% endunless %}
+    {%- if product.quantity_price_breaks_configured? -%}
+        {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
 
-  {%- style -%}
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-    }
+    {%- style -%}
+        .quantity {
+            --highlight-opacity: {% if section.settings.use_color_highlight %}0.2{% else %}0{% endif %};
+        }
 
-    @media screen and (min-width: 750px) {
-      .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
-      }
-    }
-  {%- endstyle -%}
+        .section-{{ section.id }}-margin {
+            margin-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+            margin-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+        }
 
-  <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-  {%- if product.quantity_price_breaks_configured? -%}
-    <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
-  {%- endif -%}
+        @media screen and (min-width: 750px) {
+            .section-{{ section.id }}-margin {
+                margin-top: {{ section.settings.padding_top }}px;
+                margin-bottom: {{ section.settings.padding_bottom }}px;
+            }
+        }
+    {%- endstyle -%}
 
-  {% if section.settings.image_zoom == 'hover' %}
-    <script id="EnableZoomOnHover-main" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>
-  {% endif %}
+    <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+    {%- if product.quantity_price_breaks_configured? -%}
+        <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
+        <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+
+    {% if section.settings.image_zoom == 'hover' %}
+        <script id="EnableZoomOnHover-main" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>
+    {% endif %}
   {%- if request.design_mode -%}
     <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
