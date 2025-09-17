@@ -46,6 +46,7 @@ if (!customElements.get('product-form')) {
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {
+            console.log('pf 49 response', response);
             if (response.status) {
               publish(PUB_SUB_EVENTS.cartError, {
                 source: 'product-form',
@@ -69,6 +70,7 @@ if (!customElements.get('product-form')) {
 
             const startMarker = CartPerformance.createStartingMarker('add:wait-for-subscribers');
             if (!this.error)
+              console.log('pf publish');
               publish(PUB_SUB_EVENTS.cartUpdate, {
                 source: 'product-form',
                 productVariantId: formData.get('id'),
