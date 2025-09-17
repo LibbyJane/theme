@@ -70,7 +70,7 @@ if (!customElements.get('product-form')) {
 
             const startMarker = CartPerformance.createStartingMarker('add:wait-for-subscribers');
             if (!this.error)
-              console.log('pf publish');
+              console.log('pf publish', publish);
               publish(PUB_SUB_EVENTS.cartUpdate, {
                 source: 'product-form',
                 productVariantId: formData.get('id'),
