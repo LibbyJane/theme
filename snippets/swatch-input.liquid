@@ -25,7 +25,6 @@
     %}
 {% endcomment %}
 
-
   <label
     for="{{ id }}"
     title="{{ value }}"
@@ -47,7 +46,7 @@
     {% if additional_props %}
       {{ additional_props }}
     {% endif %}
-  >
+>
     {% render 'swatch', swatch: swatch, shape: shape %}
     {{ help_text }}
   </label>
