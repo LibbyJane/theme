@@ -1214,6 +1214,9 @@
               "options__1": {
                 "label": "Circle"
               },
+              "options__4": {
+                "label": "Blob"
+              },
               "options__2": {
                 "label": "Square"
               },
@@ -2394,6 +2397,9 @@
               "info": "Learn more about [swatches](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) on product options",
               "options__1": {
                 "label": "Circle"
+              },
+              "options__4": {
+                "label": "Blob"
               },
               "options__2": {
                 "label": "Square"
