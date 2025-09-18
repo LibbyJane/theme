@@ -25,7 +25,12 @@
     %}
 {% endcomment %}
 
-<input
+  <label
+    for="{{ id }}"
+    title="{{ value }}"
+    class="swatch-input__label{% if shape == 'square' %} swatch-input__label--square{% endif %}"
+  >
+    <input
     type="{{ type | default: 'radio' }}"
     id="{{ id }}"
     name="{{ name }}"
@@ -42,11 +47,6 @@
       {{ additional_props }}
     {% endif %}
 >
-  <label
-    for="{{ id }}"
-    title="{{ value }}"
-    class="swatch-input__label{% if shape == 'square' %} swatch-input__label--square{% endif %}"
-  >
     {% render 'swatch', swatch: swatch, shape: shape %}
     {{ help_text }}
   </label>
