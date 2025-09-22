@@ -130,7 +130,7 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": true,
-        "cta_text": "View More >",
+        "cta_text": "",
         "cta_style": "tertiary",
         "padding_top": 0,
         "padding_bottom": 36
