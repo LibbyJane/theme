@@ -15,6 +15,15 @@
     border-radius: var(--swatch--border-radius);
 }
 
+.swatch--blob {
+    clip-path: shape(from 87.31% 28.41%,curve to 87.32% 71.59% with 99.70% 50.00%,curve to 49.98% 93.21% with 74.93% 93.18%,curve to 12.72% 71.62% with 25.04% 93.24%,curve to 12.77% 28.47% with 0.41% 50.00%,curve to 50.03% 6.88% with 25.14% 6.94%,curve to 87.31% 28.41% with 74.93% 6.83%);
+
+    .swatch-input__label:nth-of-type(2) & {
+        outline: 20px solid red !important;
+        clip-path: shape(from 35.79% 9.30%,curve to 78.20% 17.39% with 59.31% 1.18%,curve to 92.44% 58.11% with 97.09% 33.60%,curve to 64.25% 90.67% with 87.79% 82.62%,curve to 21.87% 82.53% with 40.71% 98.71%,curve to 7.65% 41.89% with 3.04% 66.35%,curve to 35.79% 9.30% with 12.26% 17.43%);
+    }
+}
+
 .swatch--circle {
     --swatch--border-radius: 50%;
 }
@@ -23,7 +32,7 @@
     --swatch--border-radius: var(--swatch-input--border-radius, 0.2rem);
 }
 
-  .swatch--unavailable {
+.swatch--unavailable {
     border-style: dashed;
     border-color: rgba(var(--color-foreground), 0.5);
-  }
+}
