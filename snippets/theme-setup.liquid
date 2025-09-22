@@ -255,6 +255,7 @@
         --inputs-radius-med: {{ inputs_radius_med }}px;
         --inputs-radius-large: {{ inputs_radius_large }}px;
         --inputs-border-width: {{ settings.inputs_border_thickness }}px;
+        --inputs-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
         --inputs-border-opacity: {{ settings.inputs_border_opacity | divided_by: 100.0 }};
         --inputs-shadow-opacity: {{ settings.inputs_shadow_opacity | divided_by: 100.0 }};
         --inputs-shadow-horizontal-offset: {{ settings.inputs_shadow_horizontal_offset }}px;

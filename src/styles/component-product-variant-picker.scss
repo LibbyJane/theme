@@ -134,11 +134,17 @@ variant-selects {
     box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.5rem rgba(var(--color-foreground), 0.55);
   }
 
-  /* Custom styles for Swatch display type */
-  .product-form__input--swatch {
+/* Custom styles for Swatch display type */
+/* swatches wrapper (fieldset) */
+.product-form__input--swatch {
     display: flex;
-    flex-wrap: wrap;
-  }
+        flex-wrap: wrap;
+
+    .swatch-input__label {
+        --swatch-input--size: var(--inputs-height);
+        margin: var(--space-sm) var(--space) var(--space-xs) 0;
+    }
+}
 
   .product-form__input--swatch .swatch-input__input + .swatch-input__label {
     --swatch-input--size: 3.6rem;

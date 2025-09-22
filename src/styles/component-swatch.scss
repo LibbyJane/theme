@@ -13,11 +13,15 @@
     background-origin: border-box;
     border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), 0.15);
     border-radius: var(--swatch--border-radius);
-  }
+}
 
-  .swatch--square {
+.swatch--circle {
+    --swatch--border-radius: 50%;
+}
+
+.swatch--square {
     --swatch--border-radius: var(--swatch-input--border-radius, 0.2rem);
-  }
+}
 
   .swatch--unavailable {
     border-style: dashed;
