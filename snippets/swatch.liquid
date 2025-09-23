@@ -23,10 +23,8 @@
 -%}
 
 <span
+  class="swatch swatch--{{shape}}{% if swatch_value == null %} swatch--unavailable{% endif %}"
   {% if swatch_value %}
-    class="swatch swatch--{{shape}}"
     style="--swatch--background: {{ swatch_value }};{% if swatch_focal_point %} --swatch-focal-point: {{ swatch_focal_point }};{% endif %}"
-  {% else %}
-    class="swatch swatch--unavailable{% if shape == 'square' %} swatch--square{% endif %}"
   {% endif %}
 ></span>
