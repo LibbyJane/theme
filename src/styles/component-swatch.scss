@@ -16,23 +16,23 @@
 }
 
 .swatch--blob {
-    clip-path: shape(from 92.28% 38.81%,curve to 93.70% 62.01% with 95.80% 50.00%,curve to 83.04% 83.20% with 91.61% 74.02%,curve to 62.23% 93.32% with 74.47% 92.38%,curve to 38.47% 92.11% with 50.00% 94.26%,curve to 17.71% 81.96% with 26.93% 89.96%,curve to 4.41% 61.98% with 8.48% 73.97%,curve to 6.04% 38.96% with 0.33% 50.00%,curve to 18.42% 17.40% with 11.74% 27.91%,curve to 37.55% 4.90% with 25.11% 6.89%,curve to 60.87% 7.63% with 50.00% 2.92%,curve to 80.25% 19.98% with 71.75% 12.34%,curve to 92.28% 38.81% with 88.76% 27.62%);
+    clip-path: shape(from 91.33% 39.85%,curve to 92.90% 60.97% with 93.99% 50.00%,curve to 84.67% 80.92% with 91.81% 71.94%,curve to 66.29% 90.70% with 77.54% 89.90%,curve to 44.63% 91.54% with 55.04% 91.50%,curve to 24.50% 86.40% with 34.23% 91.59%,curve to 8.35% 71.53% with 14.78% 81.20%,curve to 5.72% 50.94% with 1.91% 61.85%,curve to 11.17% 28.54% with 9.53% 40.02%,curve to 23.28% 12.10% with 12.81% 17.05%,curve to 44.33% 8.37% with 33.75% 7.15%,curve to 64.52% 12.31% with 54.91% 9.60%,curve to 81.40% 22.37% with 74.14% 15.02%,curve to 91.33% 39.85% with 88.66% 29.71%);
     transition: all var(--duration-long) var(--transition-type);
 
     .swatch-input__label:nth-of-type(2n) & {
-        clip-path: shape(from 6.57% 44.84%,curve to 13.79% 22.74% with 7.42% 33.14%,curve to 31.50% 6.97% with 20.15% 12.34%,curve to 54.57% 5.22% with 42.85% 1.59%,curve to 76.22% 15.10% with 66.29% 8.85%,curve to 91.79% 32.17% with 86.16% 21.34%,curve to 96.80% 55.64% with 97.42% 43.00%,curve to 86.81% 76.45% with 96.18% 68.28%,curve to 67.36% 91.94% with 77.44% 84.62%,curve to 44.97% 96.51% with 57.27% 99.25%,curve to 24.29% 85.39% with 32.67% 93.77%,curve to 10.82% 66.78% with 15.92% 77.01%,curve to 6.57% 44.84% with 5.73% 56.54%);
+        clip-path: shape(from 82.34% 76.44%,curve to 65.40% 91.27% with 75.86% 85.59%,curve to 42.61% 95.62% with 54.94% 96.96%,curve to 23.23% 84.43% with 30.28% 94.29%,curve to 10.97% 64.61% with 16.18% 74.57%,curve to 6.39% 42.76% with 5.76% 54.65%,curve to 13.95% 20.40% with 7.01% 30.86%,curve to 33.27% 9.24% with 20.89% 9.93%,curve to 57.93% 6.58% with 45.64% 8.54%,curve to 78.64% 13.83% with 70.21% 4.61%,curve to 88.78% 34.40% with 87.08% 23.06%,curve to 89.65% 56.52% with 90.48% 45.75%,curve to 82.34% 76.44% with 88.83% 67.29%);
     }
 
     .swatch-input__label:nth-of-type(3n) & {
-        clip-path: shape(from 52.42% 6.34%,curve to 74.93% 12.15% with 64.15% 6.45%,curve to 91.79% 28.84% with 85.71% 17.85%,curve to 94.98% 51.75% with 97.87% 39.83%,curve to 86.48% 73.98% with 92.09% 63.68%,curve to 70.42% 90.59% with 80.87% 84.29%,curve to 47.31% 97.06% with 59.97% 96.89%,curve to 25.91% 88.40% with 34.65% 97.24%,curve to 9.24% 69.96% with 17.17% 79.56%,curve to 3.26% 47.90% with 1.31% 60.35%,curve to 13.06% 26.57% with 5.22% 35.45%,curve to 30.80% 11.95% with 20.90% 17.68%,curve to 52.42% 6.34% with 40.70% 6.23%);
+        clip-path: shape(from 58.51% 92.89%,curve to 35.27% 92.86% with 47.12% 95.71%,curve to 14.79% 80.89% with 23.41% 90.02%,curve to 6.00% 59.49% with 6.17% 71.76%,curve to 8.70% 35.84% with 5.83% 47.22%,curve to 20.13% 15.76% with 11.57% 24.47%,curve to 40.90% 3.75% with 28.68% 7.06%,curve to 63.78% 6.82% with 53.12% 0.43%,curve to 84.52% 20.53% with 74.45% 13.20%,curve to 95.79% 40.41% with 94.59% 27.86%,curve to 91.61% 63.51% with 96.99% 52.96%,curve to 78.06% 82.08% with 86.22% 74.07%,curve to 58.51% 92.89% with 69.90% 90.08%);
     }
 
     .swatch-input__label:nth-of-type(4n) & {
-        transform: rotate(33deg);
+        clip-path: shape(from 18.09% 81.53%,curve to 7.49% 65.51% with 12.09% 74.06%,curve to 2.98% 46.93% with 2.88% 56.96%,curve to 9.97% 29.74% with 3.09% 36.90%,curve to 23.35% 15.99% with 16.84% 22.57%,curve to 38.93% 5.98% with 29.85% 9.42%,curve to 58.13% 3.22% with 48.01% 2.55%,curve to 74.47% 11.92% with 68.26% 3.89%,curve to 88.65% 26.31% with 80.67% 19.96%,curve to 96.49% 42.79% with 96.62% 32.66%,curve to 91.83% 61.21% with 96.36% 52.92%,curve to 82.20% 76.85% with 87.31% 69.50%,curve to 69.10% 88.70% with 77.10% 84.19%,curve to 51.65% 94.66% with 61.10% 93.21%,curve to 33.14% 92.55% with 42.20% 96.11%,curve to 18.09% 81.53% with 24.09% 89.00%);
     }
 
     .swatch-input__label:nth-of-type(5n) & {
-        transform: rotate(70deg);
+        clip-path: shape(from 18.88% 22.19%,curve to 38.11% 7.23% with 25.94% 12.09%,curve to 63.42% 5.77% with 50.27% 2.37%,curve to 82.90% 20.76% with 76.57% 9.18%,curve to 92.03% 44.53% with 89.24% 32.35%,curve to 90.26% 69.01% with 94.81% 56.70%,curve to 74.71% 89.49% with 85.72% 81.31%,curve to 50.69% 94.39% with 63.70% 97.67%,curve to 24.95% 86.74% with 37.67% 91.12%,curve to 8.10% 69.35% with 12.23% 82.35%,curve to 7.89% 44.32% with 3.98% 56.35%,curve to 18.88% 22.19% with 11.81% 32.29%);
     }
 
     // .swatch-input__label.swatch-input__label:hover &,
@@ -53,4 +53,5 @@
 .swatch--unavailable {
     border-style: dashed;
     border-color: rgba(var(--color-foreground), 0.5);
+    filter: grayscale(1) opacity(0.4);
 }

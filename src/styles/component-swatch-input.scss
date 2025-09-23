@@ -1,5 +1,7 @@
 /* swatch-input lives in its own file for reusability of the swatch in other areas than the product form context */
-.product-form__input input[type=radio]+.swatch-input__label {
+.product-form__input input[type=radio]+.swatch-input__label,
+.product-form__input input[type=radio]:checked+.swatch-input__label
+{
     background-color: transparent;
     border: 0 none;
     align-self: start;
@@ -19,11 +21,12 @@
     &:active,
     &:checked {
         +.swatch-input__label {
-            .swatch {
-                clip-path: none;
-                outline: 2px dashed var(--swatch--background);
-                outline-offset: 2px;
-            }
+            transform: scale(1.5);
+            // .swatch {
+            //     clip-path: none;
+            //     outline: 2px dashed var(--swatch--background,);
+            //     outline-offset: 2px;
+            // }
         }
     }
 }
