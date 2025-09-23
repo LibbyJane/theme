@@ -24,10 +24,17 @@
 -%}
 
 <span
+<<<<<<< HEAD
     {% if swatch_value %}
         class="swatch swatch--{{shape}}"
         style="--swatch--background: {{ swatch_value }};{% if swatch_focal_point %} --swatch-focal-point: {{ swatch_focal_point }};{% endif %}"
     {% else %}
         class="swatch swatch--unavailable{% if shape == 'square' %} swatch--square{% endif %}"
     {% endif %}
+=======
+  class="swatch swatch--{{shape}}{% if swatch_value == null %} swatch--unavailable{% endif %}"
+  {% if swatch_value %}
+    style="--swatch--background: {{ swatch_value }};{% if swatch_focal_point %} --swatch-focal-point: {{ swatch_focal_point }};{% endif %}"
+  {% endif %}
+>>>>>>> 77eb69a42475b72a67620ee93ca59cf3c5237304
 ></span>
