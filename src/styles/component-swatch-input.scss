@@ -20,7 +20,7 @@
     &:checked {
         +.swatch-input__label {
             // +.swatch-input__label:has(.swatch--blob) {
-            transform: scale(1.4);
+            transform: scale(1.3);
 
             @media screen and (min-width: 750px) {
                 transform: scale(1.5);
