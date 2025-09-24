@@ -11,12 +11,11 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
-      "disabled": true,
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,
-        "color_scheme": "scheme-background",
-        "background_transparent": true,
+        "color_scheme": "scheme-accent-light",
+        "background_transparent": false,
         "content_color_scheme": "",
         "background_texture": "lined"
       }
