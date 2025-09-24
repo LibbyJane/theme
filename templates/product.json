@@ -24,7 +24,7 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
-            "swatch_shape": "blob"
+            "swatch_shape": "square"
           }
         },
         "price": {
