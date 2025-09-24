@@ -11,13 +11,14 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
+        "show_collection_description": false,
+        "show_collection_image": false,
         "color_scheme": "scheme-accent-light",
         "background_transparent": true,
         "content_color_scheme": "scheme-sticky-ecom",
-        "background_texture": "lined"
+        "background_texture": "torn"
       }
     },
     "product-grid": {
