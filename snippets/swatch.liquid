@@ -21,7 +21,8 @@
     assign swatch_value = 'rgb(' | append: swatch.color.rgb | append: ')'
   endif
 -%}
-<h1>{{ swatch }}</h1>
+<h1>{{ product_option.values }}</h1>
+
 <span
   class="swatch swatch--{{shape}}{% if swatch_value == null %} swatch--unavailable{% endif %}"
   {% if swatch_value %}
