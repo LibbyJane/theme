@@ -7,12 +7,12 @@
     align-self: start;
     outline: none;
     padding: 0;
+    transition: all var(--duration-long) var(--transition-type);
 }
 
 .swatch-input__input {
     +.swatch-input__label {
         outline: var(--variant-pills-border-width) solid rgb(var(--color-foreground));
-        transition: all var(--duration-long) var(--transition-type);
         forced-color-adjust: none;
     }
 
@@ -20,6 +20,10 @@
     &:checked {
         +.swatch-input__label {
             transform: scale(1.5);
+
+            // .swatch--blob {
+            //     clip-path: shape(from 12.39% 35.11%,curve to 52.54% 9.63% with 23.21% 7.78%,curve to 89.18% 39.94% with 81.87% 11.47%,curve to 71.67% 84.15% with 96.49% 68.41%,curve to 24.22% 81.17% with 46.86% 99.90%,curve to 12.39% 35.11% with 1.57% 62.43%);
+            // }
         }
     }
 }
