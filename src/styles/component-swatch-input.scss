@@ -18,7 +18,8 @@
 
     &:active,
     &:checked {
-        +.swatch-input__label:has(.swatch--blob) {
+        +.swatch-input__label {
+            // +.swatch-input__label:has(.swatch--blob) {
             transform: scale(1.4);
 
             @media screen and (min-width: 750px) {
