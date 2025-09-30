@@ -185,9 +185,9 @@
                                     {{ product.description }}
                                 </div>
                             {%- endif -%}
-
-                        {%- when 'custom_liquid' -%}
                             <pre>Custom  liquid</pre>
+                        {%- when 'custom_liquid' -%}
+
                             {{ block.settings.custom_liquid }}
 
                         {%- when 'collapsible_tab' -%}
