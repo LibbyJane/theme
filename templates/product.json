@@ -123,10 +123,22 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "custom_liquid_cjMyQy": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% assign ordered_keys = \"speed,control,stiffness\" | split: \",\" %}\n{% assign attrs = product.metafields.custom %}\n\n<ul class=\"product-attributes rating-pills\">\n  {% for key in ordered_keys %}\n    {% assign field = attrs[key] %}\n    {% if field %}\n      {% assign percent = field.value | times: 10 %}\n      {% assign rating = field.value | round: 1 %}\n      {% assign hue = rating | times: 12 %}\n\n      <li class=\"attribute\">\n        <span class=\"label\">{{ key | capitalize }}</span>\n        <div class=\"progress-pill\">\n          <div class=\"progress-fill\"\n               style=\"width: {{ percent }}%; background-color: hsl({{ hue }}, 70%, 45%);\">\n            <span class=\"pill-value\">{{ rating }}/10</span>\n          </div>\n        </div>\n      </li>\n    {% endif %}\n  {% endfor %}\n</ul>",
+        "color_scheme": "",
+        "width": "page-width",
+        "padding_top": 36,
+        "padding_bottom": 16
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "custom_liquid_cjMyQy"
   ]
 }
