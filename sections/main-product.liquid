@@ -183,13 +183,13 @@
 
                                 <div class="product__description rte quick-add-hidden{{ rte_class }}" {{ block.shopify_attributes }}>
                                     {{ product.description }}
-                                    <h1>?? ? {{ block.settings }}</h1>
-           {{ block.settings.custom_liquid }}
+                                    <h1>??  {{ block.settings.custom_liquid }}</h1>
+
                                 </div>
                             {%- endif -%}
 
-           
-                 
+                        {%- when 'custom_liquid' -%}
+                            {{ block.settings.custom_liquid }}
 
                         {%- when 'collapsible_tab' -%}
                             <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
