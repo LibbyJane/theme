@@ -183,11 +183,11 @@
 
                                 <div class="product__description rte quick-add-hidden{{ rte_class }}" {{ block.shopify_attributes }}>
                                     {{ product.description }}
+                                     {{ block.settings.custom_liquid }}
                                 </div>
                             {%- endif -%}
-                            <pre>Custom  liquid</pre>
-                        {%- when 'custom_liquid' -%}
 
+                        {%- when 'custom_liquid' -%}
                             {{ block.settings.custom_liquid }}
 
                         {%- when 'collapsible_tab' -%}
