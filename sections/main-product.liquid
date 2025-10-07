@@ -183,6 +183,10 @@
 
                                 <div class="product__description rte quick-add-hidden{{ rte_class }}" {{ block.shopify_attributes }}>
                                     {{ product.description }}
+
+                                {%- if product.settings.custom_liquid_description != blank -%}
+                                    {{ product.settings.custom_liquid_description }}
+                                {%- endif -%}
                                 </div>
                             {%- endif -%}
 
