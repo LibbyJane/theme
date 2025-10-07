@@ -19,7 +19,7 @@
         "description": {
           "type": "description",
           "settings": {
-            "custom_liquid_description": "{%- style -%}\n  .rating-pills.rating-pills {\ndisplay: grid;\ngap: var(--space-sm);\ngrid-template-columns: max-content auto;\n      list-style: none;\n      margin: 0;\n      padding: 0;\n      padding: 0;\n  }\n\n.rating-pills .attribute {\n  margin-bottom: 1.2em;\n}\n\n.rating-pills .label {\n  display: block;\n  font-weight: bold;\n  margin-bottom: 0.4em;\n}\n\n.progress-pill {\n  background: #f2f2f2;\n  border-radius: 999px;\n  overflow: hidden;\n  height: 28px;\n  width: 260px; /* adjust width to taste */\n  position: relative;\n}\n\n.progress-fill {\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 999px;\n  transition: width 0.6s ease, background-color 0.6s ease;\n  color: #fff; /* default text colour */\n  font-weight: bold;\n  font-size: 0.85em;\n}\n\n.pill-value {\n  position: relative;\n  z-index: 1;\n  padding: 0 0.5em;\n}\n\n{%- endstyle -%}\n\n{% assign ordered_keys = \"speed,control,stiffness\" | split: \",\" %}\n{% assign attrs = product.metafields.custom %}\n\n<dl class=\"product-attributes rating-pills\">\n  {% for key in ordered_keys %}\n    {% assign field = attrs[key] %}\n    {% if field %}\n      {% assign percent = field.value | times: 10 %}\n      {% assign rating = field.value | round: 1 %}\n      {% assign hue = rating | times: 12 %}\n\n\n        <dt class=\"label\">{{ key | capitalize }}</dt>\n        <dd class=\"progress-pill\">\n          <div class=\"progress-fill\"\n               style=\"width: {{ percent }}%; background-color: hsl({{ hue }}, 70%, 45%);\">\n            <span class=\"pill-value\">{{ rating }}/10</span>\n          </div>\n        </dd>\n\n    {% endif %}\n  {% endfor %}\n</dl>"
+            "custom_liquid_description": "{%- style -%}\n    .rating-pills.rating-pills {\n        display: grid;\n            gap: var(--space-sm);\n            grid-template-columns: max-content auto;\n        margin: 0 0 var(--space);\n        padding: 0;\n    }\n\n    .rating-pills .label {\n        font-family: var(--font-heading-family);\n        font-size: var(--font-size-smaller);\n    }\n\n    .progress-pill {\n        background: rgba(var(--color-foreground), 0.8);\n        border-radius: 99em;\n        height: var(--space-med);\n        width: 100%;\n        overflow: hidden;\n        position: relative;\n    }\n\n    .progress-fill {\n        display: flex;\n            align-items: center;\n            justify-content: start;\n            height: 100%;\n        border-radius: 99em;\n        color: rgb(var(--color-foreground));\n        font-weight: bold;\n        font-size: var(--font-size-small);\n        transition: width var(--duration-long) var(--transition-type), background-color var(--duration-long) var(--transition-type);\n    }\n\n    .pill-value {\n        position: relative;\n        z-index: 1;\n        padding: 0 var(--space-sm);\n    }\n{%- endstyle -%}\n\n{% assign ordered_keys = \"speed,control,stiffness\" | split: \",\" %}\n{% assign attrs = product.metafields.custom %}\n\n<dl class=\"product-attributes rating-pills\">\n  {% for key in ordered_keys %}\n    {% assign field = attrs[key] %}\n    {% if field %}\n      {% assign percent = field.value | times: 10 %}\n      {% assign rating = field.value | round: 1 %}\n      {% assign hue = rating | times: 12 %}\n\n\n        <dt class=\"label\">{{ key | capitalize }}</dt>\n        <dd class=\"progress-pill\">\n          <div class=\"progress-fill\"\n               style=\"width: {{ percent }}%; background-color: hsl({{ hue }}, 70%, 45%);\">\n            <span class=\"pill-value\">{{ rating }}/10</span>\n          </div>\n        </dd>\n\n    {% endif %}\n  {% endfor %}\n</dl>"
           }
         },
         "variant_picker": {
@@ -108,70 +108,6 @@
         "padding_bottom": 12
       }
     },
-    "collapsible_content_7QWVUd": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_CJNmbA": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_GVChCc": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_XiTxEL": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_PnfgGj": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_CJNmbA",
-        "collapsible_row_GVChCc",
-        "collapsible_row_XiTxEL",
-        "collapsible_row_PnfgGj"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
-      "settings": {
-        "heading": "Collapsible content",
-        "heading_size": "h1",
-        "caption": "",
-        "caption_alignment": "center",
-        "open_first_collapsible_row": false,
-        "section_color_scheme": "",
-        "background_transparent": true,
-        "content_color_scheme": "",
-        "background_texture": "paper",
-        "column_height": true,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -225,7 +161,6 @@
   },
   "order": [
     "main",
-    "collapsible_content_7QWVUd",
     "related-products",
     "featured_collection_FrKYqd"
   ]
