@@ -167,7 +167,7 @@
                             </p>
 
                         {%- when 'description' -%}
-                            <h2 style="background: coral">produce.settings {{product.settings }}</h2>
+                            <h2 style="background: coral">product.description.settings {{ product.description.settings }}</h2>
                             {%- if product.description != blank -%}
                                 {%- liquid
                                     assign first_char = product.description | slice: 0
