@@ -109,6 +109,7 @@
                             {% render block %}
 
                         {%- when 'text' -%}
+                            <h1>>ext</h1
                             <h6 class="product__lead-in text-{{ block.settings.text_style }}"
                                 {{ block.shopify_attributes }}
                             >
@@ -124,9 +125,6 @@
                                     </h2>
                                 </a>
                             </div>
-
-                                                    {%- when 'custom_liquid' -%}
-                            {{ block.settings.custom_liquid }}
 
                         {%- when 'price' -%}
                             <div class="product__price no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -189,7 +187,8 @@
                                 </div>
                             {%- endif -%}
 
-
+                        {%- when 'custom_liquid' -%}
+                            {{ block.settings.custom_liquid }}
 
                         {%- when 'collapsible_tab' -%}
                             <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
