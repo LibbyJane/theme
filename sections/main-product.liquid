@@ -104,7 +104,6 @@
                 {%- for block in section.blocks -%}
                    <h1>bt:{{block.type }} </h1>
                     {%- case block.type -%}
-
                         {%- when '@app' -%}
                             {% render block %}
 
@@ -116,6 +115,7 @@
                             </h6>
 
                         {%- when 'title' -%}
+                            <pre>product__title</pre>
                             <div class="product__title" {{ block.shopify_attributes }}>
                                 <h1 class="h2">{{ product.title | escape }}</h1>
                                 <a href="{{ product.url }}" class="product__title">
