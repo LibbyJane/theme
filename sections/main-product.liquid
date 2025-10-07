@@ -125,6 +125,9 @@
                                 </a>
                             </div>
 
+                                                    {%- when 'custom_liquid' -%}
+                            {{ block.settings.custom_liquid }}
+
                         {%- when 'price' -%}
                             <div class="product__price no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                                 {% liquid
@@ -186,8 +189,7 @@
                                 </div>
                             {%- endif -%}
 
-                        {%- when 'custom_liquid' -%}
-                            {{ block.settings.custom_liquid }}
+
 
                         {%- when 'collapsible_tab' -%}
                             <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
