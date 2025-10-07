@@ -102,7 +102,7 @@
             >
                 {%- assign product_form_id = 'product-form-' | append: section.id -%}
                 {%- for block in section.blocks -%}
-                   <h1>block type {{block.type }} </h1>
+                   <h1>bt:{{block.type }} </h1>
                     {%- case block.type -%}
 
                         {%- when '@app' -%}
