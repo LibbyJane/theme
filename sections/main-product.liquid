@@ -109,7 +109,6 @@
                             {% render block %}
 
                         {%- when 'text' -%}
-                            <h1>text</h1>
                             <h6 class="product__lead-in text-{{ block.settings.text_style }}"
                                 {{ block.shopify_attributes }}
                             >
@@ -168,6 +167,7 @@
                             </p>
 
                         {%- when 'description' -%}
+                            <pre>Description</pre>
                             {%- if product.description != blank -%}
                                 {%- liquid
 
@@ -188,6 +188,7 @@
                             {%- endif -%}
 
                         {%- when 'custom_liquid' -%}
+<pre>custom_liquid</pre>
                             {{ block.settings.custom_liquid }}
 
                         {%- when 'collapsible_tab' -%}
