@@ -167,25 +167,26 @@
                             </p>
 
                         {%- when 'description' -%}
-                            {%- if product.description != blank -%}
-                                {%- liquid
-                                    assign first_char = product.description | slice: 0
-                                    if first_char != "<"
-                                        assign rte_class = " p"
-                                    endif
-
-                                    assign first_chars = product.description | slice: 0, 5 | downcase
-                                    if first_chars == "<span"
-                                        assign rte_class = " p"
-                                    endif
-                                -%}
-
+                            {%- if product.description != blank or block.settings.custom_liquid_description != blank -%}
                                 <div class="product__description rte quick-add-hidden{{ rte_class }}" {{ block.shopify_attributes }}>
-                                    {{ product.description }}
+                                    {%- if product.description != blank -%}
+                                        {%- liquid
+                                            assign first_char = product.description | slice: 0
+                                            if first_char != "<"
+                                                assign rte_class = " p"
+                                            endif
 
-                                {%- if block.settings.custom_liquid_description != blank -%}
-                                    {{ block.settings.custom_liquid_description }}
-                                {%- endif -%}
+                                            assign first_chars = product.description | slice: 0, 5 | downcase
+                                            if first_chars == "<span"
+                                                assign rte_class = " p"
+                                            endif
+                                        -%}
+                                        {{ product.description }}
+                                    {%- endif -%}
+
+                                    {%- if block.settings.custom_liquid_description != blank -%}
+                                        {{ block.settings.custom_liquid_description }}
+                                    {%- endif -%}
                                 </div>
                             {%- endif -%}
 
