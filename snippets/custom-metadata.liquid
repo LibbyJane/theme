@@ -1,19 +1,10 @@
-# Running locally
-$ shopify theme dev --store quickstart-d226f5a5.myshopify.com
+{% comment %}
+    Renders the product custom metadata according to type (rating, integer, string etc)
 
-'gulp' for sass compilation
+    Usage:
+    {% render 'custom-metadata', ns: product.metafields.custom %}
+{% endcomment %}
 
-# Notes
-
-## Colors
-    To render as HSL:  eg {{ scheme.settings.background | color_to_hsl }}
-
-
-## Product rubber attribute ratings:
-- add categories to product metafield definitions https://admin.shopify.com/store/zef001-0v/settings/custom_data/product/metafields?tab=constrained
-
-- on the 'Default product' theme page, go to (template) Product Information / Description / Liquid code
-<pre>
 {%- style -%}
 .product-attributes.product-attributes {
   display: grid;
@@ -64,7 +55,6 @@ $ shopify theme dev --store quickstart-d226f5a5.myshopify.com
 }
 {%- endstyle -%}
 
-{% assign ns = product.metafields.custom %}
 {% if ns != blank %}
 
   {%- comment -%}
@@ -187,5 +177,3 @@ $ shopify theme dev --store quickstart-d226f5a5.myshopify.com
   {% endfor %}
   </dl>
 {% endif %}
-
-</pre>

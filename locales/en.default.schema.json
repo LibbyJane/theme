@@ -2427,7 +2427,12 @@
           "name": "Pickup availability"
         },
         "description": {
-          "name": "Description"
+          "name": "Description",
+          "settings": {
+            "custom_medtadata": {
+              "label": "Show custom metadata",
+              "info": "Display ratings, dimensions, etc via custom metadata values"
+          }
         },
         "sku": {
           "name": "SKU",
