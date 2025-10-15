@@ -18,7 +18,9 @@
         },
         "description": {
           "type": "description",
-          "settings": {}
+          "settings": {
+            "custom_liquid_description": "{%- style -%}\n.product-attributes.product-attributes {\n  display: grid;\n      gap: var(--space-sm);\n      grid-template-columns: max-content auto;\n      font-size: var(--font-size-smaller);\n  margin: 0 0 var(--space-med);\n  padding: 0;\n}\n\n.product-attributes .pa-label {\n  font-size: var(--font-size-smaller);\n}\n\n.pa-rating-value {\n  display: flex;\n  position: relative;\n  font-size: var(--font-size-small);\n}\n\n.pa-rating {\n  background: rgba(var(--color-foreground), 0.2);\n  border-radius: 99em;\n  height: var(--space-med);\n  width: 100%;\n  overflow: hidden;\n  position: relative;\n\n}\n\n.pa-progress-fill {\n  background: rgb(var(--color-success));\n  display: flex;\n      align-items: center;\n      justify-content: start;\n      height: 100%;\n  border-radius: 99em;\n  color: rgb(var(--color-foreground));\n  font-weight: bold;\n  font-size: var(--font-size-small);\n  transition: width var(--duration-long) var(--transition-type), background-color var(--duration-long) var(--transition-type);\n}\n\n.pa-value {\n  position: relative;\n  z-index: 1;\n  padding: 0 var(--space-sm);\n}\n{%- endstyle -%}\n\n{% assign ns = product.metafields.custom %}\n{% if ns != blank %}\n\n  {%- comment -%}\n    Order the groups here. You can tweak or add more.\n    'list.' matches any list.* type via \"contains\".\n  {%- endcomment -%}\n  {% assign group_order = 'rating|number_decimal|number_integer|measurement|boolean|list.|json|other' | split: '|' %}\n\n\n  <dl class=\"product-attributes\">\n  {% for bucket in group_order %}\n\n    {%- comment -%} Optional: show a small heading per group (remove if not wanted) {%- endcomment -%}\n    {%- assign show_heading = false -%}\n    {%- capture heading -%}\n      {%- case bucket -%}\n        {%- when 'rating' -%} Ratings\n        {%- when 'number_decimal' -%} Decimals\n        {%- when 'number_integer' -%} Integers\n        {%- when 'measurement' -%} Measurements\n        {%- when 'boolean' -%} Booleans\n        {%- when 'list.' -%} Lists\n        {%- when 'json' -%} JSON (other)\n        {%- else -%} Other\n      {%- endcase -%}\n    {%- endcapture -%}\n\n    {%- assign printed_any = false -%}\n\n    {%- for pair in ns -%}\n      {%- assign key = pair | first -%}\n      {%- assign mf  = ns[key] -%}\n      {%- assign t   = mf.type -%}\n\n      {%- assign in_bucket = false -%}\n\n{%- if bucket == 'list.' and t contains 'list.' -%}\n  {%- assign in_bucket = true -%}\n\n{%- elsif bucket == t -%}\n  {%- assign in_bucket = true -%}\n\n{%- elsif bucket == 'other' -%}\n  {%- unless t == 'rating'\n        or t == 'number_decimal'\n        or t == 'number_integer'\n        or t == 'measurement'\n        or t == 'boolean'\n        or t contains 'list.'\n        or t == 'json' -%}\n    {%- assign in_bucket = true -%}\n  {%- endunless -%}\n{%- endif -%}\n\n      {%- unless in_bucket -%}{% continue %}{%- endunless -%}\n\n      {%- if printed_any == false and show_heading -%}\n        <dt class=\"pa-label group\">{{ heading }}</dt><dd class=\"spacer\"></dd>\n        {%- assign printed_any = true -%}\n      {%- endif -%}\n\n      {%- assign label = key | replace: '_', ' ' | capitalize -%}\n      {%- assign css = 'pa-default' -%}\n      {%- assign is_rating = false -%}\n      {%- assign output = '' -%}\n\n      {%- case t -%}\n        {%- when 'list.single_line_text_field', 'list.number_integer', 'list.number_decimal' -%}\n          {% assign output = mf.value | join: ', ' %}\n\n        {%- when 'boolean' -%}\n          {% assign output = mf.value | default: false %}\n          {% assign output = output | replace: 'true', 'Yes' | replace: 'false', 'No' %}\n\n        {%- when 'number_integer', 'number_decimal' -%}\n          {% assign output = mf.value %}\n\n        {%- when 'measurement' -%}\n          {% assign output = mf.value.value | append: ' ' | append: mf.value.unit %}\n\n        {%- when 'rating' -%}\n          {% assign r = mf.value %}\n          {% assign rating = r.value | default: r.rating | default: r | plus: 0 %}\n          {% assign rating_max = r.scale_max | default: r.max | default: 10 | plus: 0 %}\n          {% assign percent = rating | times: 100 | divided_by: rating_max %}\n          {% assign turn = rating | times: 0.1 | plus: 0.28 %}\n          {% if turn > 1 %}{% assign turn = 1 %}{% endif %}\n          {% assign is_rating = true %}\n          {% assign css = 'pa-rating-value' %}\n\n        {%- when 'json' -%}\n          {%- assign data = mf.value | parse_json -%}\n          {%- if data.size and data.first -%}\n            {% assign output = data | join: ', ' %}\n          {%- elsif data.value and data.unit -%}\n            {% assign output = data.value | append: ' ' | append: data.unit %}\n          {%- else -%}\n            {% assign output = mf.value %}\n          {%- endif -%}\n\n        {%- else -%}\n          {% assign output = mf.value %}\n      {%- endcase -%}\n\n      <dt class=\"pa-label\">{{ label }}</dt>\n      <dd class=\"{{ css }}\">\n        {% if is_rating %}\n          <div class=\"pa-rating\">\n            <div class=\"pa-progress-fill\" style=\"width: {{ percent }}%; filter: hue-rotate({{ turn }}turn);\">\n              <span class=\"pa-value\">{{ rating | round: 1 }}</span>\n            </div>\n          </div><span class=\"pa-rating--max\">&nbsp;/&nbsp;{{ rating_max }}</span>\n          \n        {% else %}\n          {{ output }}\n        {% endif %}\n      </dd>\n\n    {%- endfor -%}\n  {% endfor %}\n  </dl>\n{% endif %}"
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -123,10 +125,43 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "featured_collection_FrKYqd": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "accessories",
+        "title": "You might also like",
+        "heading_size": "h2",
+        "description": "",
+        "show_collection_description": false,
+        "description_style": "body",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "plain",
+        "enable_desktop_slider": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "color_scheme": "",
+        "background_transparent": true,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "cta_text": "",
+        "cta_style": "tertiary",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "featured_collection_FrKYqd"
   ]
 }

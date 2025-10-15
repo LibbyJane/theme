@@ -470,8 +470,6 @@
     }
   },
   "platform_customizations": {
-    "custom_css": [
-      "@font-face {font-family: \"TrashHandExt\"; font-style: normal; font-weight: 400; src: url(\"https://cdn.shopify.com/s/files/1/0944/6454/1059/files/TrashHandExtended.woff2?v=1755186570\") format(\"woff2\");}"
-    ]
+    "custom_css": []
   }
 }
