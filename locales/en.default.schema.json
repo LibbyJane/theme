@@ -1253,7 +1253,13 @@
           }
         },
         "description": {
-          "name": "Description"
+          "name": "Description",
+          "settings": {
+            "custom_metadata": {
+              "label": "Show custom metadata",
+              "info": "Display ratings, dimensions, etc via custom metadata values"
+          }
+          }
         },
         "share": {
           "name": "Share",
@@ -2427,12 +2433,7 @@
           "name": "Pickup availability"
         },
         "description": {
-          "name": "Description",
-          "settings": {
-            "custom_medtadata": {
-              "label": "Show custom metadata",
-              "info": "Display ratings, dimensions, etc via custom metadata values"
-          }
+          "name": "Description"
         },
         "sku": {
           "name": "SKU",
