@@ -1253,13 +1253,16 @@
           }
         },
         "description": {
-          "name": "Description",
-          "settings": {
-            "custom_metadata": {
-              "label": "Show custom metadata",
-              "info": "Display ratings, dimensions, etc via custom metadata values"
-          }
-          }
+            "name": "Description",
+            "settings": {
+                "custom_metadata": {
+                "label": "Show custom metadata",
+                "info": "Display ratings, dimensions, etc via custom metadata values"
+                }
+            }
+        },
+        "custom_metadata": {
+            "name": "Custom Metadata"
         },
         "share": {
           "name": "Share",
