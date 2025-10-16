@@ -18,10 +18,7 @@
         },
         "description": {
           "type": "description",
-          "settings": {
-            "custom_liquid_description": "",
-            "show_custom_metadata": true
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
