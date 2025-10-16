@@ -194,6 +194,9 @@
                                 </div>
                             {%- endif -%}
 
+                        {%- when 'custom_metadata' -%}
+                            {% render 'custom-metadata', ns: product.metafields.custom %}
+
                         {%- when 'custom_liquid' -%}
                             {{ block.settings.custom_liquid }}
 
@@ -654,6 +657,14 @@
                     "label": "t:sections.main-product.blocks.description.settings.custom_metadata.label",
                     "info": "t:sections.main-product.blocks.description.settings.custom_metadata.info"
                 }
+            ]
+        },
+        {
+            "type": "custom_metadata",
+            "name": "t:sections.main-product.blocks.custom_metadata.name",
+            "limit": 1,
+            "settings": [
+
             ]
         },
         {
