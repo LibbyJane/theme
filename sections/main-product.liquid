@@ -103,7 +103,6 @@
                 {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
                 {%- for block in section.blocks -%}
-                    <h1>block.type {{ block.type }}</h1>
                     {%- case block.type -%}
 
                         {%- when '@app' -%}
@@ -183,6 +182,14 @@
                                             endif
                                         -%}
                                         {{ product.description }}
+                                    {%- endif -%}
+
+                                    {%- if block.settings.show_custom_metadata -%}
+                                        {% render 'custom-metadata', ns: product.metafields.custom %}
+                                    {%- endif -%}
+
+                                    {%- if block.settings.custom_liquid_description != blank -%}
+                                        {{ block.settings.custom_liquid_description }}
                                     {%- endif -%}
                                 </div>
                             {%- endif -%}
@@ -637,7 +644,22 @@
         {
             "type": "description",
             "name": "t:sections.main-product.blocks.description.name",
-            "limit": 1
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "liquid",
+                    "id": "custom_liquid_description",
+                    "label": "t:sections.custom-liquid.settings.custom_liquid.label",
+                    "info": "t:sections.custom-liquid.settings.custom_liquid.info"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "show_custom_metadata",
+                    "default": true,
+                    "label": "t:sections.main-product.blocks.description.settings.custom_metadata.label",
+                    "info": "t:sections.main-product.blocks.description.settings.custom_metadata.info"
+                }
+            ]
         },
         {
             "type": "custom_metadata",
@@ -678,7 +700,7 @@
                 "info": "Buckets: rating,number_decimal,number_integer,measurement,boolean,list.,json,other"
               }
             ]
-        },
+          },
         {
             "type": "share",
             "name": "t:sections.main-product.blocks.share.name",
