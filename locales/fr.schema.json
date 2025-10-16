@@ -112,7 +112,7 @@
         "currency_code_enabled": {
           "label": "Afficher les codes de devise"
         },
-        "paragraph": "Le panier et les prix au moment du paiement indiquent toujours les codes de devise. Exemple : 1 EUR."
+        "paragraph": "Le panier et les prix au moment du paiement indiquent toujours les codes de devise. Exemple : 1 EUR."
       }
     },
     "layout": {
@@ -333,7 +333,7 @@
         },
         "favicon": {
           "label": "Image favicon",
-          "info": "Sera réduite à 32 x 32 px"
+          "info": "Sera réduite à 32 x 32 px"
         }
       }
     },
@@ -373,7 +373,7 @@
           "label": "Effet de survol",
           "info": "Concerne les cartes et les boutons.",
           "options__3": {
-            "label": "3D lift"
+            "label": "3D lift"
           }
         }
       }
@@ -627,7 +627,7 @@
           "label": "Activer le balayage sur mobile"
         },
         "show_view_all": {
-          "label": "Activer le bouton « Tout afficher » si la liste comprend plus de collections que celles affichées"
+          "label": "Activer le bouton « Tout afficher » si la liste comprend plus de collections que celles affichées"
         },
         "columns_desktop": {
           "label": "Nombre de colonnes sur ordinateur"
@@ -638,10 +638,10 @@
         "columns_mobile": {
           "label": "Nombre de colonnes sur mobile",
           "options__1": {
-            "label": "1 colonne"
+            "label": "1 colonne"
           },
           "options__2": {
-            "label": "2 colonnes"
+            "label": "2 colonnes"
           }
         }
       },
@@ -690,7 +690,7 @@
           "label": "Nombre d'articles de blog à afficher"
         },
         "show_view_all": {
-          "label": "Activer le bouton « Tout afficher » si le blog comprend plus d'articles que ceux affichés"
+          "label": "Activer le bouton « Tout afficher » si le blog comprend plus d'articles que ceux affichés"
         },
         "show_image": {
           "label": "Afficher les images vedettes",
@@ -723,7 +723,7 @@
           "label": "Quantité maximale de produits à afficher"
         },
         "show_view_all": {
-          "label": "Activer le style « Tout afficher » si la collection comprend plus de produits que ce qui est affiché"
+          "label": "Activer le style « Tout afficher » si la collection comprend plus de produits que ce qui est affiché"
         },
         "header": {
           "content": "Carte de produit"
@@ -785,7 +785,7 @@
           "options__3": {
             "label": "Bouton plein"
           },
-          "label": "Style « Tout afficher »"
+          "label": "Style « Tout afficher »"
         },
         "enable_desktop_slider": {
           "label": "Activer le carrousel sur ordinateur"
@@ -799,10 +799,10 @@
         "columns_mobile": {
           "label": "Nombre de colonnes sur mobile",
           "options__1": {
-            "label": "1 colonne"
+            "label": "1 colonne"
           },
           "options__2": {
-            "label": "2 colonnes"
+            "label": "2 colonnes"
           }
         },
         "swipe_on_mobile": {
@@ -864,7 +864,7 @@
         },
         "header__1": {
           "content": "Inscription à la liste de diffusion",
-          "info": "Abonnés automatiquement ajoutés à votre liste de clients « marketing accepté ». [En savoir plus](https://help.shopify.com/manual/customers/manage-customers)"
+          "info": "Abonnés automatiquement ajoutés à votre liste de clients « marketing accepté ». [En savoir plus](https://help.shopify.com/manual/customers/manage-customers)"
         },
         "header__2": {
           "content": "Icônes de médias sociaux",
@@ -1195,7 +1195,7 @@
             "label": "Deuxième image"
           },
           "label": "Placement de l'image sur ordinateur",
-          "info": "La mise en page par défaut pour les appareils mobiles est « Image en premier »."
+          "info": "La mise en page par défaut pour les appareils mobiles est « Image en premier »."
         },
         "desktop_image_width": {
           "options__1": {
@@ -1468,7 +1468,7 @@
         },
         "enable_filtering": {
           "label": "Activer le filtrage",
-          "info": "Personnalisez les filtres avec l’application Search & Discovery. [En savoir plus](https://help.shopify.com/manual/online-store/search-and-discovery/filters)"
+          "info": "Personnalisez les filtres avec l’application Search & Discovery. [En savoir plus](https://help.shopify.com/manual/online-store/search-and-discovery/filters)"
         },
         "enable_sorting": {
           "label": "Activer le tri"
@@ -1499,7 +1499,7 @@
         },
         "enable_tags": {
           "label": "Activer le filtrage",
-          "info": "Personnalisez les filtres avec l’application Search & Discovery. [En savoir plus](https://help.shopify.com/manual/online-store/search-and-discovery/filters)"
+          "info": "Personnalisez les filtres avec l’application Search & Discovery. [En savoir plus](https://help.shopify.com/manual/online-store/search-and-discovery/filters)"
         },
         "show_rating": {
           "label": "Afficher la note du produit",
@@ -1518,10 +1518,10 @@
         "columns_mobile": {
           "label": "Nombre de colonnes sur mobile",
           "options__1": {
-            "label": "1 colonne"
+            "label": "1 colonne"
           },
           "options__2": {
-            "label": "2 colonnes"
+            "label": "2 colonnes"
           }
         },
         "filter_type": {
@@ -1546,7 +1546,7 @@
           "label": "Titre"
         },
         "sort": {
-          "label": "Trier les collections par :",
+          "label": "Trier les collections par :",
           "options__1": {
             "label": "Alphabétique, de A à Z"
           },
@@ -1588,10 +1588,10 @@
         "columns_mobile": {
           "label": "Nombre de colonnes sur mobile",
           "options__1": {
-            "label": "1 colonne"
+            "label": "1 colonne"
           },
           "options__2": {
-            "label": "2 colonnes"
+            "label": "2 colonnes"
           }
         }
       }
@@ -2014,7 +2014,7 @@
             "label": "Empilé"
           },
           "options__2": {
-            "label": "2 colonnes"
+            "label": "2 colonnes"
           },
           "options__3": {
             "label": "Vignettes"
@@ -2039,7 +2039,7 @@
         "mobile_thumbnails": {
           "label": "Mise en page sur mobile",
           "options__1": {
-            "label": "2 colonnes"
+            "label": "2 colonnes"
           },
           "options__2": {
             "label": "Afficher les vignettes"
@@ -2133,10 +2133,10 @@
         "columns_mobile": {
           "label": "Nombre de colonnes sur mobile",
           "options__1": {
-            "label": "1 colonne"
+            "label": "1 colonne"
           },
           "options__2": {
-            "label": "2 colonnes"
+            "label": "2 colonnes"
           }
         }
       }
@@ -2210,10 +2210,10 @@
         "columns_mobile": {
           "label": "Nombre de colonnes sur mobile",
           "options__1": {
-            "label": "1 colonne"
+            "label": "1 colonne"
           },
           "options__2": {
-            "label": "2 colonnes"
+            "label": "2 colonnes"
           }
         }
       },
@@ -2342,21 +2342,21 @@
           "name": "Boutons",
           "settings": {
             "button_label_1": {
-              "label": "Texte du premier bouton",
+              "label": "Texte du premier bouton",
               "info": "Laissez le texte vide pour masquer le bouton."
             },
             "button_link_1": {
-              "label": "Lien du premier bouton"
+              "label": "Lien du premier bouton"
             },
             "button_style_secondary_1": {
               "label": "Utiliser le style de bouton en relief"
             },
             "button_label_2": {
-              "label": "Texte du deuxième bouton",
+              "label": "Texte du deuxième bouton",
               "info": "Laissez le texte vide pour masquer le bouton."
             },
             "button_link_2": {
-              "label": "Lien du deuxième bouton"
+              "label": "Lien du deuxième bouton"
             },
             "button_style_secondary_2": {
               "label": "Utiliser le style de bouton en relief"
@@ -3158,10 +3158,10 @@
         "columns_mobile": {
           "label": "Nombre de colonnes sur mobile",
           "options__1": {
-            "label": "1 colonne"
+            "label": "1 colonne"
           },
           "options__2": {
-            "label": "2 colonnes"
+            "label": "2 colonnes"
           }
         }
       }
