@@ -18,7 +18,9 @@
         },
         "description": {
           "type": "description",
-          "settings": {}
+          "settings": {
+            "show_custom_metadata": true
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -56,7 +58,6 @@
         },
         "complementary": {
           "type": "complementary",
-          "disabled": true,
           "settings": {
             "block_heading": "Pairs well with",
             "make_collapsible_row": false,
