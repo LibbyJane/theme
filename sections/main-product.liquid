@@ -194,7 +194,7 @@
                         {%- when 'custom_metadata' -%}
                             <div class="product__custom-metadata" {{ block.shopify_attributes }}>
                                 {% render 'custom-metadata', product: product, block: block %}
-                              </div>
+                            </div>
 
                         {%- when 'custom_liquid' -%}
                             {{ block.settings.custom_liquid }}
@@ -683,7 +683,7 @@
                     "label": "Groups open by default (CSV of buckets)",
                     "default": "rating,measurement",
                     "info": "Buckets: rating,number_decimal,number_integer,measurement,boolean,list.,json,other"
-                  }                
+                  }
             ]
         },
         {
