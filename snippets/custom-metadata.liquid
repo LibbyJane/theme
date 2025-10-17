@@ -56,130 +56,120 @@
 {%- endstyle -%}
 
 {%- assign ns_handle = block.settings.metafield_namespace | default: 'custom' -%}
-
-<h1>Custom Metadata ns_handle {{ ns_handle }}</h1>
 {%- assign ns = product.metafields[ns_handle] -%}
 {%- if ns != blank -%}
- 
-<h1>carry on </h1>
+    {%- comment -%}
+        Order the groups here. You can tweak or add more.
+        'list.' matches any list.* type via "contains".
+    {%- endcomment -%}
+    {% assign group_order = 'rating|number_decimal|number_integer|measurement|boolean|list.|json|other' | split: '|' %}
 
-  {%- comment -%}
-    Order the groups here. You can tweak or add more.
-    'list.' matches any list.* type via "contains".
-  {%- endcomment -%}
-  {% assign group_order = 'rating|number_decimal|number_integer|measurement|boolean|list.|json|other' | split: '|' %}
+    <dl class="product-attributes">
+        {% for bucket in group_order %}
+            {%- comment -%} Optional: show a small heading per group (remove if not wanted) {%- endcomment -%}
+            {%- assign show_heading = false -%}
+            {%- capture heading -%}
+                {%- case bucket -%}
+                    {%- when 'rating' -%} Ratings
+                    {%- when 'number_decimal' -%} Decimals
+                    {%- when 'number_integer' -%} Integers
+                    {%- when 'measurement' -%} Measurements
+                    {%- when 'boolean' -%} Booleans
+                    {%- when 'list.' -%} Lists
+                    {%- when 'json' -%} Other
+                    {%- else -%} Other
+                {%- endcase -%}
+            {%- endcapture -%}
 
+        {%- assign printed_any = false -%}
 
-  <dl class="product-attributes">
-  {% for bucket in group_order %}
+        {%- for pair in ns -%}
+            {%- assign key = pair | first -%}
+            {%- assign mf  = ns[key] -%}
+            {%- assign t   = mf.type -%}
+            {%- assign in_bucket = false -%}
 
-    {%- comment -%} Optional: show a small heading per group (remove if not wanted) {%- endcomment -%}
-    {%- assign show_heading = false -%}
-    {%- capture heading -%}
-      {%- case bucket -%}
-        {%- when 'rating' -%} Ratings
-        {%- when 'number_decimal' -%} Decimals
-        {%- when 'number_integer' -%} Integers
-        {%- when 'measurement' -%} Measurements
-        {%- when 'boolean' -%} Booleans
-        {%- when 'list.' -%} Lists
-        {%- when 'json' -%} JSON (other)
-        {%- else -%} Other
-      {%- endcase -%}
-    {%- endcapture -%}
+            {%- if bucket == 'list.' and t contains 'list.' -%}
+                {%- assign in_bucket = true -%}
 
-    {%- assign printed_any = false -%}
+            {%- elsif bucket == t -%}
+                {%- assign in_bucket = true -%}
 
-    {%- for pair in ns -%}
-      {%- assign key = pair | first -%}
-      {%- assign mf  = ns[key] -%}
-      {%- assign t   = mf.type -%}
+            {%- elsif bucket == 'other' -%}
+                {%- unless t == 'rating'
+                        or t == 'number_decimal'
+                        or t == 'number_integer'
+                        or t == 'measurement'
+                        or t == 'boolean'
+                        or t contains 'list.'
+                        or t == 'json' -%}
+                    {%- assign in_bucket = true -%}
+                {%- endunless -%}
+            {%- endif -%}
 
-      {%- assign in_bucket = false -%}
+            {%- unless in_bucket -%}{% continue %}{%- endunless -%}
 
-{%- if bucket == 'list.' and t contains 'list.' -%}
-  {%- assign in_bucket = true -%}
+            {%- if printed_any == false and show_heading -%}
+                <dt class="pa-label group">{{ heading }}</dt><dd class="spacer"></dd>
+                {%- assign printed_any = true -%}
+            {%- endif -%}
 
-{%- elsif bucket == t -%}
-  {%- assign in_bucket = true -%}
+            {%- assign label = key | replace: '_', ' ' | capitalize -%}
+            {%- assign css = 'pa-default' -%}
+            {%- assign is_rating = false -%}
+            {%- assign output = '' -%}
 
-{%- elsif bucket == 'other' -%}
-  {%- unless t == 'rating'
-        or t == 'number_decimal'
-        or t == 'number_integer'
-        or t == 'measurement'
-        or t == 'boolean'
-        or t contains 'list.'
-        or t == 'json' -%}
-    {%- assign in_bucket = true -%}
-  {%- endunless -%}
-{%- endif -%}
+            {%- case t -%}
+                {%- when 'list.single_line_text_field', 'list.number_integer', 'list.number_decimal' -%}
+                    {% assign output = mf.value | join: ', ' %}
 
-      {%- unless in_bucket -%}{% continue %}{%- endunless -%}
+                {%- when 'boolean' -%}
+                    {% assign output = mf.value | default: false %}
+                    {% assign output = output | replace: 'true', 'Yes' | replace: 'false', 'No' %}
 
-      {%- if printed_any == false and show_heading -%}
-        <dt class="pa-label group">{{ heading }}</dt><dd class="spacer"></dd>
-        {%- assign printed_any = true -%}
-      {%- endif -%}
+                {%- when 'number_integer', 'number_decimal' -%}
+                    {% assign output = mf.value %}
 
-      {%- assign label = key | replace: '_', ' ' | capitalize -%}
-      {%- assign css = 'pa-default' -%}
-      {%- assign is_rating = false -%}
-      {%- assign output = '' -%}
+                {%- when 'measurement' -%}
+                    {% assign output = mf.value.value | append: ' ' | append: mf.value.unit %}
 
-      {%- case t -%}
-        {%- when 'list.single_line_text_field', 'list.number_integer', 'list.number_decimal' -%}
-          {% assign output = mf.value | join: ', ' %}
+                {%- when 'rating' -%}
+                    {% assign r = mf.value %}
+                    {% assign rating = r.value | default: r.rating | default: r | plus: 0 %}
+                    {% assign rating_max = r.scale_max | default: r.max | default: 10 | plus: 0 %}
+                    {% assign percent = rating | times: 100 | divided_by: rating_max %}
+                    {% assign turn = rating | times: 0.1 | plus: 0.28 %}
+                    {% if turn > 1 %}{% assign turn = 1 %}{% endif %}
+                    {% assign is_rating = true %}
+                    {% assign css = 'pa-rating-value' %}
 
-        {%- when 'boolean' -%}
-          {% assign output = mf.value | default: false %}
-          {% assign output = output | replace: 'true', 'Yes' | replace: 'false', 'No' %}
+                {%- when 'json' -%}
+                    {%- assign data = mf.value | parse_json -%}
+                    {%- if data.size and data.first -%}
+                        {% assign output = data | join: ', ' %}
+                    {%- elsif data.value and data.unit -%}
+                        {% assign output = data.value | append: ' ' | append: data.unit %}
+                    {%- else -%}
+                        {% assign output = mf.value %}
+                    {%- endif -%}
 
-        {%- when 'number_integer', 'number_decimal' -%}
-          {% assign output = mf.value %}
+                {%- else -%}
+                    {% assign output = mf.value %}
+            {%- endcase -%}
 
-        {%- when 'measurement' -%}
-          {% assign output = mf.value.value | append: ' ' | append: mf.value.unit %}
-
-        {%- when 'rating' -%}
-          {% assign r = mf.value %}
-          {% assign rating = r.value | default: r.rating | default: r | plus: 0 %}
-          {% assign rating_max = r.scale_max | default: r.max | default: 10 | plus: 0 %}
-          {% assign percent = rating | times: 100 | divided_by: rating_max %}
-          {% assign turn = rating | times: 0.1 | plus: 0.28 %}
-          {% if turn > 1 %}{% assign turn = 1 %}{% endif %}
-          {% assign is_rating = true %}
-          {% assign css = 'pa-rating-value' %}
-
-        {%- when 'json' -%}
-          {%- assign data = mf.value | parse_json -%}
-          {%- if data.size and data.first -%}
-            {% assign output = data | join: ', ' %}
-          {%- elsif data.value and data.unit -%}
-            {% assign output = data.value | append: ' ' | append: data.unit %}
-          {%- else -%}
-            {% assign output = mf.value %}
-          {%- endif -%}
-
-        {%- else -%}
-          {% assign output = mf.value %}
-      {%- endcase -%}
-
-      <dt class="pa-label">{{ label }}</dt>
-      <dd class="{{ css }}">
-        {% if is_rating %}
-          <div class="pa-rating">
-            <div class="pa-progress-fill" style="width: {{ percent }}%; filter: hue-rotate({{ turn }}turn);">
-              <span class="pa-value">{{ rating | round: 1 }}</span>
-            </div>
-          </div><span class="pa-rating--max">&nbsp;/&nbsp;{{ rating_max }}</span>
-
-        {% else %}
-          {{ output }}
-        {% endif %}
-      </dd>
-
-    {%- endfor -%}
-  {% endfor %}
-  </dl>
+            <dt class="pa-label">{{ label }}</dt>
+            <dd class="{{ css }}">
+                {% if is_rating %}
+                    <div class="pa-rating">
+                        <div class="pa-progress-fill" style="width: {{ percent }}%; filter: hue-rotate({{ turn }}turn);">
+                            <span class="pa-value">{{ rating | round: 1 }}</span>
+                        </div>
+                    </div><span class="pa-rating--max">&nbsp;/&nbsp;{{ rating_max }}</span>
+                {% else %}
+                    {{ output }}
+                {% endif %}
+            </dd>
+            {%- endfor -%}
+        {% endfor %}
+    </dl>
 {% endif %}
