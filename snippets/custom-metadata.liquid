@@ -71,7 +71,7 @@
 {%- endcomment -%}
 {% assign group_order = 'rating|number_decimal|number_integer|measurement|boolean|list.|json|other' | split: '|' %}
 {% comment %} {%- assign group_titles_map = 'rating:Ratings,number_decimal:Decimals,number_integer:Integers,measurement:Measurements,boolean:Booleans,list.:Lists,json:JSON,other:Other' -%}{% endcomment %}
-{%- assign group_titles_map = 'rating:Ratings,other:Other' -%}
+{%- assign group_titles_map = 'rating:Ratings,number_decimal:Other,number_integer:Other,measurement:Other,boolean:Booleans,list.:Other,json:Other,other:Other' -%}
 
 {%- if ns != blank -%}
     {%- comment -%}
