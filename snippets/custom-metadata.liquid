@@ -2,7 +2,7 @@
     Renders the product custom metadata according to type (rating, integer, string etc)
 
     Usage:
-    {% render render 'custom-metadata', product: product, block: block %}
+    {% render 'custom-metadata', ns: product.metafields.custom %}
 {% endcomment %}
 
 {%- style -%}
@@ -55,12 +55,9 @@
 }
 {%- endstyle -%}
 
-{%- assign ns_handle = block.settings.metafield_namespace | default: 'custom' -%}
-{%- assign ns = product.metafields[ns_handle] -%}
-{%- if ns == blank -%}
-  {%- comment -%} Nothing to show {%- endcomment -%}
-  {% return %}
-{%- endif -%}
+
+<h1>Custom Metadata</h1>
+{% if ns != blank %}
 
   {%- comment -%}
     Order the groups here. You can tweak or add more.
