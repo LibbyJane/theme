@@ -59,7 +59,15 @@
 
 <h1>Custom Metadata ns_handle {{ ns_handle }}</h1>
 {%- assign ns = product.metafields[ns_handle] -%}
+
+{%- assign ns_handle = block.settings.metafield_namespace | default: 'custom' -%}
+{%- assign ns = product.metafields[ns_handle] -%}
 {%- if ns != blank -%}
- 
-<h1>carry on </h1>
+ {%- comment -%}
+    Order the groups here. You can tweak or add more.
+    'list.' matches any list.* type via "contains".
+  {%- endcomment -%}
+  {% assign group_order = 'rating|number_decimal|number_integer|measurement|boolean|list.|json|other' | split: '|' %}
+
+
 {%- endif -%}
