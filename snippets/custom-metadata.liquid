@@ -70,8 +70,8 @@
   Final bucket is 'other' (anything not matched earlier).
 {%- endcomment -%}
 {% assign group_order = 'rating|number_decimal|number_integer|measurement|boolean|list.|json|other' | split: '|' %}
-
-{%- assign group_titles_map = 'rating:Ratings,number_decimal:Decimals,number_integer:Integers,measurement:Measurements,boolean:Booleans,list.:Lists,json:JSON,other:Other' -%}
+{% comment %} {%- assign group_titles_map = 'rating:Ratings,number_decimal:Decimals,number_integer:Integers,measurement:Measurements,boolean:Booleans,list.:Lists,json:JSON,other:Other' -%}{% endcomment %}
+{%- assign group_titles_map = 'rating:Ratings,other:Other' -%}
 
 {%- if ns != blank -%}
     {%- comment -%}
