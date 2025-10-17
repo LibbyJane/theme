@@ -87,13 +87,13 @@
             {%- capture heading -%}
                 {%- case bucket -%}
                     {%- when 'rating' -%} Ratings
-                    {%- when 'number_decimal' -%} Decimals
-                    {%- when 'number_integer' -%} Integers
+                    {% comment %} {%- when 'number_decimal' -%} Decimals {% endcomment %}
+                    {% comment %} {%- when 'number_integer' -%} Integers
                     {%- when 'measurement' -%} Measurements
                     {%- when 'boolean' -%} Booleans
                     {%- when 'list.' -%} Lists
-                    {%- when 'json' -%} Other
-                    {%- else -%} Other
+                    {%- when 'json' -%} Other {% endcomment %}
+                    {%- else -%} Other Attributes
                 {%- endcase -%}
             {%- endcapture -%}
 
@@ -126,7 +126,7 @@
             {%- unless in_bucket -%}{% continue %}{%- endunless -%}
 
             {%- if printed_any == false and show_heading -%}
-                <dt class="pa-label group h5">{{ heading }}</dt><dd class="spacer"></dd>
+                <dt class="h5">{{ heading }}</dt><dd class="spacer"></dd>
                 {%- assign printed_any = true -%}
             {%- endif -%}
 
