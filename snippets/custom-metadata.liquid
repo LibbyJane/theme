@@ -172,7 +172,7 @@
                     {% assign output = mf.value %}
             {%- endcase -%}
 
-            <dt class="pa-label">{{ label }} / hidden_keys {{ hidden_keys }} / {%- if hidden_keys contains key -%}should be hidden{%- endif -%}</dt>
+            <dt class="pa-label">{{ label }}</dt>
             <dd class="{{ css }}">
                 {% if is_rating %}
                     <div class="pa-rating">
