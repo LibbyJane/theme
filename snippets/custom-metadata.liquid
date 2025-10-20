@@ -95,7 +95,7 @@
 
         {%- for pair in ns -%}
             {%- assign key = pair | first -%}
-            {%- if hidden_keys contains key -%}{%- continue -%}{%- endif -%}
+            {%- if hidden_keys contains key -%}{%- assign key = 'hidden' -%}{%- endif -%}
 
             {%- assign mf  = ns[key] -%}
             {%- assign t   = mf.type -%}
