@@ -32,7 +32,9 @@
         "description": {
           "type": "description",
           "settings": {
-            "show_custom_metadata": true
+            "show_custom_metadata": true,
+            "metafield_namespace": "custom",
+            "hidden_keys_csv": ""
           }
         },
         "variant_picker": {
