@@ -34,7 +34,7 @@
           "settings": {
             "show_custom_metadata": true,
             "metafield_namespace": "custom",
-            "hidden_keys_csv": ""
+            "hidden_keys_csv": "internal_note,seo_handle,debug_only"
           }
         },
         "variant_picker": {
