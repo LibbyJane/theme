@@ -61,17 +61,11 @@
 {%- assign hidden_keys_csv = block.settings.hidden_keys_csv | default: 'internal_note,seo_handle,debug_only' -%}
 {%- assign hidden_keys = hidden_keys_csv | split: ',' | map: 'strip' -%}
 
-{%- assign show_group_headings = block.settings.show_group_headings -%}
-{%- assign collapsible_groups   = block.settings.collapsible_groups -%}
-{%- assign groups_open_default  = block.settings.groups_open_default | default: 'rating,measurement' | split: ',' | map: 'strip' -%}
-
 {%- comment -%}
   Render order of groups. 'list.' matches any list.* type.
   Final bucket is 'other' (anything not matched earlier).
 {%- endcomment -%}
 {% assign group_order = 'rating|number_decimal|number_integer|measurement|boolean|list.|json|other' | split: '|' %}
-
-{%- assign group_titles_map = 'rating:Ratings,number_decimal:Decimals,number_integer:Integers,measurement:Measurements,boolean:Booleans,list.:Lists,json:JSON,other:Other' -%}
 
 {%- if ns != blank -%}
     {%- comment -%}
@@ -101,8 +95,11 @@
 
         {%- for pair in ns -%}
             {%- assign key = pair | first -%}
+            {%- if hidden_keys contains key -%}{%- continue -%}{%- endif -%}
+
             {%- assign mf  = ns[key] -%}
             {%- assign t   = mf.type -%}
+            
             {%- assign in_bucket = false -%}
 
             {%- if bucket == 'list.' and t contains 'list.' -%}
