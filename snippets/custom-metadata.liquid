@@ -70,6 +70,7 @@
   Final bucket is 'other' (anything not matched earlier).
 {%- endcomment -%}
 {% assign group_order = 'rating|number_decimal|number_integer|measurement|boolean|list.|json|other' | split: '|' %}
+
 {%- assign group_titles_map = 'rating:Ratings,number_decimal:Decimals,number_integer:Integers,measurement:Measurements,boolean:Booleans,list.:Lists,json:JSON,other:Other' -%}
 
 {%- if ns != blank -%}
@@ -86,13 +87,13 @@
             {%- capture heading -%}
                 {%- case bucket -%}
                     {%- when 'rating' -%} Ratings
-                    {% comment %} {%- when 'number_decimal' -%} Decimals {% endcomment %}
-                    {% comment %} {%- when 'number_integer' -%} Integers
+                    {%- when 'number_decimal' -%} Decimals
+                    {%- when 'number_integer' -%} Integers
                     {%- when 'measurement' -%} Measurements
                     {%- when 'boolean' -%} Booleans
                     {%- when 'list.' -%} Lists
-                    {%- when 'json' -%} Other {% endcomment %}
-                    {%- else -%} Other Attributes
+                    {%- when 'json' -%} Other
+                    {%- else -%} Other
                 {%- endcase -%}
             {%- endcapture -%}
 
