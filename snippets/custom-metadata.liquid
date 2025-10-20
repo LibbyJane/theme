@@ -170,7 +170,7 @@
                     {% assign output = mf.value %}
             {%- endcase -%}
 
-            <dt class="pa-label">{{ label }}</dt>
+            <dt class="pa-label">{{ label }} / key: {{  key }}</dt>
             <dd class="{{ css }}">
                 {% if is_rating %}
                     <div class="pa-rating">
