@@ -74,8 +74,6 @@
     {%- endcomment -%}
     {% assign group_order = 'rating|number_decimal|number_integer|measurement|boolean|list.|json|other' | split: '|' %}
 
-    <h1>hidden keys {{  hidden_keys }}</h1>
-
     <dl class="product-attributes">
         {% for bucket in group_order %}
             {%- comment -%} Optional: show a small heading per group (remove if not wanted) {%- endcomment -%}
