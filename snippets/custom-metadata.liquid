@@ -95,7 +95,7 @@
 
         {%- for pair in ns -%}
             {%- assign key = pair | first -%}
-            {%- unless hidden_keys contains key -%}
+            {%- if hidden_keys contains key -%}{%- continue -%}{%- endif -%}
 
             {%- assign mf  = ns[key] -%}
             {%- assign t   = mf.type -%}
@@ -170,7 +170,7 @@
                     {% assign output = mf.value %}
             {%- endcase -%}
 
-            <dt class="pa-label">{{ label }} / key: {{  key }}</dt>
+            <dt class="pa-label">{{ label }} / {%- if hidden_keys contains key -%}should be hidden{%- endif -%}</dt>
             <dd class="{{ css }}">
                 {% if is_rating %}
                     <div class="pa-rating">
@@ -182,8 +182,6 @@
                     {{ output }}
                 {% endif %}
             </dd>
-            {%- endunless -%}
-
             {%- endfor -%}
         {% endfor %}
     </dl>
