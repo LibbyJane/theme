@@ -58,7 +58,7 @@
 {%- assign ns_handle = block.settings.metafield_namespace | default: 'custom' -%}
 {%- assign ns = product.metafields[ns_handle] -%}
 
-{%- assign hidden_keys_csv = block.settings.hidden_keys_csv | default: 'internal_note,seo_handle,debug_only' -%}
+{%- assign hidden_keys_csv = block.settings.hidden_keys_csv -%}
 {%- assign hidden_keys = hidden_keys_csv | split: ',' -%}
 
 {%- comment -%}
