@@ -59,7 +59,7 @@
 {%- assign ns = product.metafields[ns_handle] -%}
 
 {%- assign hidden_keys_csv = block.settings.hidden_keys_csv | default: 'internal_note,seo_handle,debug_only' -%}
-{%- assign hidden_keys = hidden_keys_csv | split: ',' | map: 'strip' -%}
+{%- assign hidden_keys = hidden_keys_csv | split: ',' -%}
 
 {%- comment -%}
   Render order of groups. 'list.' matches any list.* type.
