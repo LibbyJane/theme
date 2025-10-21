@@ -166,24 +166,22 @@
                                 </p>
 
                             {%- when 'description' -%}
-                                {%- if product.description != blank or block.settings.custom_liquid_description != blank -%}
-                                    {%- if product.description != blank -%}
-                                        {%- liquid
-                                            assign first_char = product.description | slice: 0
-                                            if first_char != "<"
-                                                assign rte_class = " p"
-                                            endif
+                                {%- if product.description != blank -%}
+                                    {%- liquid
 
-                                            assign first_chars = product.description | slice: 0, 5 | downcase
-                                            if first_chars == "<span"
-                                                assign rte_class = " p"
-                                            endif
-                                        -%}
-                                    {%- endif -%}
+                                        assign first_char = product.description | slice: 0
+                                        if first_char != "<"
+                                            assign rte_class = " p"
+                                        endif
+
+                                        assign first_chars = product.description | slice: 0, 5 | downcase
+                                        if first_chars == "<span"
+                                            assign rte_class = " p"
+                                        endif
+                                    -%}
+
                                     <div class="product__description rte quick-add-hidden{{ rte_class }}" {{ block.shopify_attributes }}>
-                                        {%- if block.settings.show_custom_metadata -%}
-                                            {% render 'custom-metadata', product: product, block: block %}
-                                        {%- endif -%}
+                                        {{ product.description }}
                                     </div>
                                 {%- endif -%}
 
@@ -637,31 +635,7 @@
             {
                 "type": "description",
                 "name": "t:sections.main-product.blocks.description.name",
-                "limit": 1,
-                "settings": [
-                    {
-                        "type": "checkbox",
-                        "id": "show_custom_metadata",
-                        "default": true,
-
-                        "label": "Show custom metadata",
-                        "info": "Display ratings, dimensions, etc via custom metadata values"
-                    },
-                    {
-                        "type": "text",
-                        "id": "metafield_namespace",
-                        "label": "Metafield namespace",
-                        "default": "custom",
-                        "info": "Namespace to read (e.g. 'custom')."
-                    },
-                    {
-                        "type": "textarea",
-                        "id": "hidden_keys_csv",
-                        "label": "Hidden keys (CSV)",
-                        "default": "internal_note,seo_handle,debug_only",
-                        "info": "Comma-separated keys to hide."
-                    }
-                ]
+                "limit": 1
             },
             {
                 "type": "share",
