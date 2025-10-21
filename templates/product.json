@@ -16,17 +16,11 @@
           "type": "title",
           "settings": {}
         },
-        "complementary": {
-          "type": "complementary",
+        "variant_picker": {
+          "type": "variant_picker",
           "settings": {
-            "block_heading": "Pairs well with",
-            "make_collapsible_row": false,
-            "icon": "price_tag",
-            "product_list_limit": 10,
-            "products_per_page": 3,
-            "pagination_style": "counter",
-            "image_ratio": "square",
-            "enable_quick_add": false
+            "picker_type": "button",
+            "swatch_shape": "circle"
           }
         },
         "description": {
@@ -37,11 +31,14 @@
             "hidden_keys_csv": "internal_note,seo_handle,debug_only"
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
+        "custom_metadata_rGRgCy": {
+          "type": "custom_metadata",
           "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
+            "metafield_namespace": "custom",
+            "hidden_keys_csv": "internal_note,seo_handle,debug_only",
+            "show_group_headings": true,
+            "collapsible_groups": true,
+            "groups_open_default": "rating,measurement"
           }
         },
         "price": {
@@ -71,6 +68,19 @@
             "show_inventory_quantity": true
           }
         },
+        "complementary": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": false
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -80,13 +90,14 @@
       },
       "block_order": [
         "title",
-        "complementary",
-        "description",
         "variant_picker",
+        "description",
+        "custom_metadata_rGRgCy",
         "price",
         "quantity_selector",
         "buy_buttons",
         "inventory",
+        "complementary",
         "share"
       ],
       "settings": {
