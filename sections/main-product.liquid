@@ -123,15 +123,6 @@
                                     </h2>
                                 </a>
                             </div>
-           {%- when 'test' -%}
-                            <div class="product__title" {{ block.shopify_attributes }}>
-                                <h1 class="h2">{{ product.title | escape }}</h1>
-                                <a href="{{ product.url }}" class="product__title">
-                                    <h2 >
-                                        {{ product.title | escape }}
-                                    </h2>
-                                </a>
-                            </div>
 
                         {%- when 'price' -%}
                             <div class="product__price no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -458,11 +449,6 @@
         {
             "type": "title",
             "name": "t:sections.main-product.blocks.title.name",
-            "limit": 1
-        },
-         {
-            "type": "title2",
-            "name": "test",
             "limit": 1
         },
         {
