@@ -99,7 +99,7 @@
 
             {%- assign mf  = ns[key] -%}
             {%- assign t   = mf.type -%}
-            
+
             {%- assign in_bucket = false -%}
 
             {%- if bucket == 'list.' and t contains 'list.' -%}
@@ -157,7 +157,7 @@
                     {% assign css = 'pa-rating-value' %}
 
                 {%- when 'json' -%}
-                    {%- assign data = mf.value | parse_json -%}
+                    {%- assign data = mf.value -%}
                     {%- if data.size and data.first -%}
                         {% assign output = data | join: ', ' %}
                     {%- elsif data.value and data.unit -%}
