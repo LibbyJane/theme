@@ -99,8 +99,11 @@
         {%- assign rating = r.value | default: r.rating | default: r | plus: 0 -%}
         {%- assign rating_max = r.scale_max | default: r.max | default: 10 | plus: 0 -%}
         {%- assign percent = rating | times: 100 | divided_by: rating_max -%}
-        {%- assign turn = rating | times: 0.1 | plus: 0.2 -%}
-        {%- if turn > 1 -%}{%- assign turn = 1 -%}{%- endif -%}
+
+
+{%- assign base_rating = 0.5 -%}
+{%- assign base_rating_percent = percent | divided_by: 100 | times: base_rating -%}
+        {%- assign turn = base_rating | minus: base_rating_percent  -%}
 
         <dt class="pa-label">{{ label }}</dt>
         <dd class="pa-rating-value">
