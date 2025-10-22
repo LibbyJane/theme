@@ -46,7 +46,7 @@
 
 {%- assign ns_handle = block.settings.metafield_namespace | default: 'custom' -%}
 {%- assign ns = product.metafields[ns_handle] -%}
-{%- assign hidden_keys = (block.settings.hidden_keys_csv | default: '') | split: ',' | map: 'strip' -%}
+{%- assign hidden_keys = (block.settings.hidden_keys_csv | default: '') | split: ',' -%}
 
 {%- assign show_headings = block.settings.show_group_headings -%}
 {%- assign collapsible  = block.settings.collapsible_groups -%}
