@@ -101,7 +101,7 @@
         {%- assign percent = rating | times: 100 | divided_by: rating_max -%}
 
 
-{%- assign base_rating = 0.6 -%}
+{%- assign base_rating = 0.5 -%}
 {%- assign base_rating_percent = percent | divided_by: 100 | times: base_rating -%}
         {%- assign turn = base_rating | plus: base_rating_percent  -%}
 
