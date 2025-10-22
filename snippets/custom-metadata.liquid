@@ -33,142 +33,137 @@
     color: rgb(var(--color-foreground));
     font-weight: bold;
     font-size: var(--font-size-small);
-    transition: width var(--duration-long) var(--transition-type),
-                background-color var(--duration-long) var(--transition-type);
+    transition: width var(--duration-long) var(--transition-type), background-color var(--duration-long) var(--transition-type);
   }
   .pa-value { position: relative; z-index: 1; padding: 0 var(--space-sm); }
   .pa-group { margin-block: var(--space-sm); }
   .pa-group summary { list-style: none; cursor: pointer; }
-  .pa-group summary::-webkit-details-marker { display:none; }
+  .pa-group summary::-webkit-details-marker { display: none; }
   .pa-group-title { margin: 0 0 var(--space-sm); }
-  .pa-heading-spacer { margin: 0; }
 {%- endstyle -%}
 
 {%- assign ns_handle = block.settings.metafield_namespace | default: 'custom' -%}
 {%- assign ns = product.metafields[ns_handle] -%}
-{%- assign hidden_keys = (block.settings.hidden_keys_csv | default: '') | split: ',' | map: 'strip' -%}
+
+{%- comment -%}
+  Normalize CSVs: remove spaces before splitting so "a, b" matches "a" and "b"
+{%- endcomment -%}
+{%- assign hidden_keys_csv = block.settings.hidden_keys_csv | default: '' | replace: ' ', '' -%}
+{%- assign hidden_keys = hidden_keys_csv | split: ',' -%}
 
 {%- assign show_headings = block.settings.show_group_headings -%}
 {%- assign collapsible  = block.settings.collapsible_groups -%}
-{%- assign groups_open  = block.settings.groups_open_default | default: 'rating' | downcase | split: ',' | map: 'strip' -%}
+{%- assign groups_open_csv = block.settings.groups_open_default | default: 'rating,details' | downcase | replace: ' ', '' -%}
+{%- assign groups_open = groups_open_csv | split: ',' -%}
 
 {%- if ns != blank -%}
 
-  {%- comment -%}
-    Helper: renders one bucket.
-    Params:
-      bucket: 'rating' or 'details'
-      title:  heading text
-  {%- endcomment -%}
-  {%- capture render_bucket -%}{% raw %}
-    {%- assign _bucket = include.bucket -%}
-    {%- assign _title  = include.title -%}
-    {%- assign _printed_any = false -%}
+  {%- comment -%} ------- BUCKET: RATINGS ------- {%- endcomment -%}
+  {%- assign printed_any = false -%}
+  {%- capture ratings_body -%}
+    <dl class="product-attributes">
+      {%- for pair in ns -%}
+        {%- assign key = pair | first -%}
+        {%- if hidden_keys contains key -%}{%- continue -%}{%- endif -%}
+        {%- assign mf = ns[key] -%}
+        {%- if mf.type != 'rating' -%}{%- continue -%}{%- endif -%}
+        {%- assign printed_any = true -%}
 
-    {%- capture bucket_body -%}
-      <dl class="product-attributes">
-        {%- for pair in ns -%}
-          {%- assign key = pair | first | strip -%}
-          {%- if hidden_keys contains key -%}{%- continue -%}{%- endif -%}
+        {%- assign label = key | replace: '_', ' ' | capitalize -%}
+        {%- assign r = mf.value -%}
+        {%- assign rating = r.value | default: r.rating | default: r | plus: 0 -%}
+        {%- assign rating_max = r.scale_max | default: r.max | default: 10 | plus: 0 -%}
+        {%- assign percent = rating | times: 100 | divided_by: rating_max -%}
+        {%- assign turn = rating | times: 0.1 | plus: 0.28 -%}
+        {%- if turn > 1 -%}{%- assign turn = 1 -%}{%- endif -%}
 
-          {%- assign mf = ns[key] -%}
-          {%- assign t  = mf.type -%}
+        <dt class="pa-label">{{ label }}</dt>
+        <dd class="pa-rating-value">
+          <div class="pa-rating">
+            <div class="pa-progress-fill" style="width: {{ percent }}%; filter: hue-rotate({{ turn }}turn);">
+              <span class="pa-value">{{ rating | round: 1 }}</span>
+            </div>
+          </div><span class="pa-rating--max">&nbsp;/&nbsp;{{ rating_max }}</span>
+        </dd>
+      {%- endfor -%}
+    </dl>
+  {%- endcapture -%}
 
-          {%- assign in_bucket = false -%}
-          {%- if _bucket == 'rating' and t == 'rating' -%}
-            {%- assign in_bucket = true -%}
-          {%- elsif _bucket == 'details' and t != 'rating' -%}
-            {%- assign in_bucket = true -%}
-          {%- endif -%}
-          {%- unless in_bucket -%}{%- continue -%}{%- endunless -%}
-
-          {%- assign _printed_any = true -%}
-
-          {%- assign label = key | replace: '_', ' ' | capitalize -%}
-          {%- assign css = 'pa-default' -%}
-          {%- assign is_rating = false -%}
-          {%- assign output = '' -%}
-
-          {%- case t -%}
-            {%- when 'list.single_line_text_field', 'list.number_integer', 'list.number_decimal' -%}
-              {%- assign output = mf.value | join: ', ' -%}
-
-            {%- when 'boolean' -%}
-              {%- assign output = mf.value | default: false -%}
-              {%- assign output = output | replace: 'true','Yes' | replace: 'false','No' -%}
-
-            {%- when 'number_integer', 'number_decimal' -%}
-              {%- assign output = mf.value -%}
-
-            {%- when 'measurement' -%}
-              {%- assign output = mf.value.value | append: ' ' | append: mf.value.unit -%}
-
-            {%- when 'rating' -%}
-              {%- assign r = mf.value -%}
-              {%- assign rating = r.value | default: r.rating | default: r | plus: 0 -%}
-              {%- assign rating_max = r.scale_max | default: r.max | default: 10 | plus: 0 -%}
-              {%- assign percent = rating | times: 100 | divided_by: rating_max -%}
-              {%- assign turn = rating | times: 0.1 | plus: 0.28 -%}
-              {%- if turn > 1 -%}{%- assign turn = 1 -%}{%- endif -%}
-              {%- assign is_rating = true -%}
-              {%- assign css = 'pa-rating-value' -%}
-
-            {%- when 'json' -%}
-              {%- assign data = mf.value -%}
-              {%- if data.size and data.first -%}
-                {%- assign output = data | join: ', ' -%}
-              {%- elsif data.value and data.unit -%}
-                {%- assign output = data.value | append: ' ' | append: data.unit -%}
-              {%- else -%}
-                {%- assign output = mf.value -%}
-              {%- endif -%}
-
-            {%- else -%}
-              {%- assign output = mf.value -%}
-          {%- endcase -%}
-
-          <dt class="pa-label">{{ label }}</dt>
-          <dd class="{{ css }}">
-            {%- if is_rating -%}
-              <div class="pa-rating">
-                <div class="pa-progress-fill" style="width: {{ percent }}%; filter: hue-rotate({{ turn }}turn);">
-                  <span class="pa-value">{{ rating | round: 1 }}</span>
-                </div>
-              </div><span class="pa-rating--max">&nbsp;/&nbsp;{{ rating_max }}</span>
-            {%- else -%}
-              {{ output }}
-            {%- endif -%}
-          </dd>
-        {%- endfor -%}
-      </dl>
-    {%- endcapture -%}
-
-    {%- if _printed_any -%}
-      {%- assign group_handle = _bucket -%}
-      {%- assign should_open = groups_open contains group_handle -%}
-
-      {%- if collapsible -%}
-        <details class="pa-group" {% if should_open %}open{% endif %}>
-          <summary>
-            {%- if show_headings -%}
-              <h5 class="pa-group-title">{{ _title }}</h5>
-            {%- endif -%}
-          </summary>
-          {{ bucket_body }}
-        </details>
-      {%- else -%}
-        <div class="pa-group">
-          {%- if show_headings -%}
-            <h5 class="pa-group-title">{{ _title }}</h5>
-          {%- endif -%}
-          {{ bucket_body }}
-        </div>
-      {%- endif -%}
+  {%- if printed_any -%}
+    {%- assign group_handle = 'rating' -%}
+    {%- assign should_open = groups_open contains group_handle -%}
+    {%- if collapsible -%}
+      <details class="pa-group" {% if should_open %}open{% endif %}>
+        <summary>{% if show_headings %}<h5 class="pa-group-title">Ratings</h5>{% endif %}</summary>
+        {{ ratings_body }}
+      </details>
+    {%- else -%}
+      <div class="pa-group">
+        {% if show_headings %}<h5 class="pa-group-title">Ratings</h5>{% endif %}
+        {{ ratings_body }}
+      </div>
     {%- endif -%}
-  {% endraw %}{%- endcapture -%}
+  {%- endif -%}
 
-  {%- comment -%} Render: Ratings first, then Details {%- endcomment -%}
-  {%- render render_bucket, bucket: 'rating',  title: 'Ratings' -%}
-  {%- render render_bucket, bucket: 'details', title: 'Details' -%}
+  {%- comment -%} ------- BUCKET: DETAILS (everything else) ------- {%- endcomment -%}
+  {%- assign printed_any = false -%}
+  {%- capture details_body -%}
+    <dl class="product-attributes">
+      {%- for pair in ns -%}
+        {%- assign key = pair | first -%}
+        {%- if hidden_keys contains key -%}{%- continue -%}{%- endif -%}
+        {%- assign mf = ns[key] -%}
+        {%- if mf.type == 'rating' -%}{%- continue -%}{%- endif -%}
+        {%- assign printed_any = true -%}
+
+        {%- assign label = key | replace: '_', ' ' | capitalize -%}
+        {%- assign css = 'pa-default' -%}
+        {%- assign is_rating = false -%}
+        {%- assign output = '' -%}
+
+        {%- case mf.type -%}
+          {%- when 'list.single_line_text_field', 'list.number_integer', 'list.number_decimal' -%}
+            {%- assign output = mf.value | join: ', ' -%}
+          {%- when 'boolean' -%}
+            {%- assign output = mf.value | default: false -%}
+            {%- assign output = output | replace: 'true', 'Yes' | replace: 'false', 'No' -%}
+          {%- when 'number_integer', 'number_decimal' -%}
+            {%- assign output = mf.value -%}
+          {%- when 'measurement' -%}
+            {%- assign output = mf.value.value | append: ' ' | append: mf.value.unit -%}
+          {%- when 'json' -%}
+            {%- assign data = mf.value -%}
+            {%- if data.size and data.first -%}
+              {%- assign output = data | join: ', ' -%}
+            {%- elsif data.value and data.unit -%}
+              {%- assign output = data.value | append: ' ' | append: data.unit -%}
+            {%- else -%}
+              {%- assign output = mf.value -%}
+            {%- endif -%}
+          {%- else -%}
+            {%- assign output = mf.value -%}
+        {%- endcase -%}
+
+        <dt class="pa-label">{{ label }}</dt>
+        <dd class="{{ css }}">{{ output }}</dd>
+      {%- endfor -%}
+    </dl>
+  {%- endcapture -%}
+
+  {%- if printed_any -%}
+    {%- assign group_handle = 'details' -%}
+    {%- assign should_open = groups_open contains group_handle -%}
+    {%- if collapsible -%}
+      <details class="pa-group" {% if should_open %}open{% endif %}>
+        <summary>{% if show_headings %}<h5 class="pa-group-title">Details</h5>{% endif %}</summary>
+        {{ details_body }}
+      </details>
+    {%- else -%}
+      <div class="pa-group">
+        {% if show_headings %}<h5 class="pa-group-title">Details</h5>{% endif %}
+        {{ details_body }}
+      </div>
+    {%- endif -%}
+  {%- endif -%}
 
 {%- endif -%}
