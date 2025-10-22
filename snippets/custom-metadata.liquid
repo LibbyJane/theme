@@ -103,7 +103,7 @@
 
 {%- assign base_rating = 0.5 -%}
 {%- assign base_rating_percent = percent | divided_by: 100 | times: base_rating -%}
-        {%- assign turn = base_rating | plus: base_rating_percent  -%}
+        {%- assign turn = base_rating | minus: base_rating_percent  -%}
 
         <dt class="pa-label">{{ label }} base_rating {{ base_rating_percent }} turn {{ turn }}</dt>
         <dd class="pa-rating-value">
