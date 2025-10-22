@@ -168,7 +168,7 @@
   {% endraw %}{%- endcapture -%}
 
   {%- comment -%} Render: Ratings first, then Details {%- endcomment -%}
-  {%- include render_bucket, bucket: 'rating',  title: 'Ratings' -%}
-  {%- include render_bucket, bucket: 'details', title: 'Details' -%}
+  {%- render render_bucket, bucket: 'rating',  title: 'Ratings' -%}
+  {%- render render_bucket, bucket: 'details', title: 'Details' -%}
 
 {%- endif -%}
