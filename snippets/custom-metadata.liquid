@@ -15,8 +15,14 @@
     margin: 0 0 var(--space-med);
     padding: 0;
   }
-  .product-attributes .pa-label { font-size: var(--font-size-smaller); }
-  .pa-rating-value { display: flex; position: relative; font-size: var(--font-size-small); }
+  .product-attributes .pa-label {
+    font-size: var(--font-size-smaller);
+  }
+  .pa-rating-value {
+    display: flex;
+    position: relative;
+    font-size: var(--font-size-small);
+  }
   .pa-rating {
     background: rgba(var(--color-foreground), 0.2);
     border-radius: 99em;
@@ -27,19 +33,35 @@
   }
   .pa-progress-fill {
     background: rgb(var(--color-success));
-    display: flex; align-items: center; justify-content: start;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     height: 100%;
     border-radius: 99em;
     color: rgb(var(--color-foreground));
     font-weight: bold;
     font-size: var(--font-size-small);
-    transition: width var(--duration-long) var(--transition-type), background-color var(--duration-long) var(--transition-type);
+    transition: width var(--duration-long) var(--transition-type),
+      background-color var(--duration-long) var(--transition-type);
   }
-  .pa-value { position: relative; z-index: 1; padding: 0 var(--space-sm); }
-  .pa-group { margin-block: var(--space-sm); }
-  .pa-group summary { list-style: none; cursor: pointer; }
-  .pa-group summary::-webkit-details-marker { display: none; }
-  .pa-group-title { margin: 0 0 var(--space-sm); }
+  .pa-value {
+    position: relative;
+    z-index: 1;
+    padding: 0 var(--space-sm);
+  }
+  .pa-group {
+    margin-block: var(--space-sm);
+  }
+  .pa-group summary {
+    list-style: none;
+    cursor: pointer;
+  }
+  .pa-group summary::-webkit-details-marker {
+    display: none;
+  }
+  .pa-group-title {
+    margin: 0 0 var(--space-sm);
+  }
 {%- endstyle -%}
 
 {%- assign ns_handle = block.settings.metafield_namespace | default: 'custom' -%}
@@ -52,12 +74,15 @@
 {%- assign hidden_keys = hidden_keys_csv | split: ',' -%}
 
 {%- assign show_headings = block.settings.show_group_headings -%}
-{%- assign collapsible  = block.settings.collapsible_groups -%}
-{%- assign groups_open_csv = block.settings.groups_open_default | default: 'rating,details' | downcase | replace: ' ', '' -%}
+{%- assign collapsible = block.settings.collapsible_groups -%}
+{%- assign groups_open_csv = block.settings.groups_open_default
+  | default: 'rating,details'
+  | downcase
+  | replace: ' ', ''
+-%}
 {%- assign groups_open = groups_open_csv | split: ',' -%}
 
 {%- if ns != blank -%}
-
   {%- comment -%} ------- BUCKET: RATINGS ------- {%- endcomment -%}
   {%- assign printed_any = false -%}
   {%- capture ratings_body -%}
@@ -91,15 +116,25 @@
 
   {%- if printed_any -%}
     {%- assign group_handle = 'rating' -%}
-    {%- assign should_open = groups_open contains group_handle -%}
     {%- if collapsible -%}
-      <details class="pa-group" {% if should_open %}open{% endif %}>
-        <summary>{% if show_headings %}<h5 class="pa-group-title">Ratings</h5>{% endif %}</summary>
+      <details
+        class="pa-group"
+        {% if groups_open contains group_handle %}
+          open
+        {% endif %}
+      >
+        <summary>
+          {% if show_headings %}
+            <h5 class="pa-group-title">Ratings</h5>
+          {% endif %}
+        </summary>
         {{ ratings_body }}
       </details>
     {%- else -%}
       <div class="pa-group">
-        {% if show_headings %}<h5 class="pa-group-title">Ratings</h5>{% endif %}
+        {% if show_headings %}
+          <h5 class="pa-group-title">Ratings</h5>
+        {% endif %}
         {{ ratings_body }}
       </div>
     {%- endif -%}
@@ -118,7 +153,6 @@
 
         {%- assign label = key | replace: '_', ' ' | capitalize -%}
         {%- assign css = 'pa-default' -%}
-        {%- assign is_rating = false -%}
         {%- assign output = '' -%}
 
         {%- case mf.type -%}
@@ -152,18 +186,27 @@
 
   {%- if printed_any -%}
     {%- assign group_handle = 'details' -%}
-    {%- assign should_open = groups_open contains group_handle -%}
     {%- if collapsible -%}
-      <details class="pa-group" {% if should_open %}open{% endif %}>
-        <summary>{% if show_headings %}<h5 class="pa-group-title">Details</h5>{% endif %}</summary>
+      <details
+        class="pa-group"
+        {% if groups_open contains group_handle %}
+          open
+        {% endif %}
+      >
+        <summary>
+          {% if show_headings %}
+            <h5 class="pa-group-title">Details</h5>
+          {% endif %}
+        </summary>
         {{ details_body }}
       </details>
     {%- else -%}
       <div class="pa-group">
-        {% if show_headings %}<h5 class="pa-group-title">Details</h5>{% endif %}
+        {% if show_headings %}
+          <h5 class="pa-group-title">Details</h5>
+        {% endif %}
         {{ details_body }}
       </div>
     {%- endif -%}
   {%- endif -%}
-
 {%- endif -%}
