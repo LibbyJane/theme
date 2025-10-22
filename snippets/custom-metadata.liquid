@@ -101,7 +101,7 @@
         {%- assign percent = rating | times: 100 | divided_by: rating_max -%}
         {%- assign factor = rating | times: 0.1  -%}
 
-        {%- assign turn = factor | times: factor | plus: 0.2 -%}
+        {%- assign turn = factor | times: factor | times: factor -%}
         {%- if turn > 1 -%}{%- assign turn = 1 -%}{%- endif -%}
 
         <dt class="pa-label">{{ label }}</dt>
