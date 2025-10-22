@@ -105,7 +105,7 @@
 {%- assign base_rating_percent = percent | divided_by: 100 | times: base_rating -%}
         {%- assign turn = base_rating | minus: base_rating_percent  -%}
 
-        <dt class="pa-label">{{ label }}</dt>
+        <dt class="pa-label">{{ label }} base_rating {{ base_rating_percent }}</dt>
         <dd class="pa-rating-value">
           <div class="pa-rating">
             <div class="pa-progress-fill" style="width: {{ percent }}%; filter: hue-rotate({{ turn }}turn);">
