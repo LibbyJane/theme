@@ -82,6 +82,10 @@
 -%}
 {%- assign groups_open = groups_open_csv | split: ',' -%}
 
+<h1>groups_open_csv {{ groups_open_csv }}</h1>
+<h1>groups_open {{ groups_open }}</h1>
+
+
 {%- if ns != blank -%}
   {%- comment -%} ------- BUCKET: RATINGS ------- {%- endcomment -%}
   {%- assign printed_any = false -%}
