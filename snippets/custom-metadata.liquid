@@ -211,9 +211,8 @@
         {% endif %}
       >
         <summary>
-          {% if show_headings %}
-            <h5 class="pa-group-title">{{ group_handle | capitalize }}</h5>
-          {% endif %}
+          {{ heading_html }}
+          {% render 'icon-caret' %}
         </summary>
         {{ details_body }}
       </details>
