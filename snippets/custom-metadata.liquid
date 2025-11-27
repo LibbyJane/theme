@@ -52,7 +52,10 @@
   .pa-group {
     margin-block: var(--space-sm);
     background: yellow;
-      &.is(open) {
+      &.pa-group {
+        background: orange;
+      }
+      &.is(:open) {
         background: red;
         svg {
           transform: rotate(90deg);
