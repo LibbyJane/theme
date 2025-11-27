@@ -126,6 +126,11 @@
 
   {%- if printed_any -%}
     {%- assign group_handle = 'rating' -%}
+    {%- capture heading_html -%}
+      {% if show_headings %}
+          <h5 class="pa-group-title">Ratings</h5>
+        {% endif %}
+    {%- endcapture -%}
     {%- if collapsible -%}
       <details
         class="pa-group"
@@ -134,17 +139,13 @@
         {% endif %}
       >
         <summary>
-          {% if show_headings %}
-            <h5 class="pa-group-title">Ratings</h5>
-          {% endif %}
+          {{ heading_html }}
         </summary>
         {{ ratings_body }}
       </details>
     {%- else -%}
       <div class="pa-group">
-        {% if show_headings %}
-          <h5 class="pa-group-title">Ratings</h5>
-        {% endif %}
+        {{ heading_html }}
         {{ ratings_body }}
       </div>
     {%- endif -%}
