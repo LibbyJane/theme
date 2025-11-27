@@ -27,7 +27,7 @@
             "hidden_keys_csv": "internal_note,seo_handle,debug_only",
             "show_group_headings": true,
             "collapsible_groups": true,
-            "groups_open_default": "ratings, details"
+            "groups_open_default": "ratings"
           }
         },
         "variant_picker": {
