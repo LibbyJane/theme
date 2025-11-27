@@ -51,14 +51,13 @@
   }
   .pa-group {
     margin-block: var(--space-sm);
-      &:open {
-        background: pink;
 
-        summary svg {
-          transform: rotate(0);
-
-        }
+    &:open {
+      summary svg {
+        transform: rotate(0);
       }
+    }
+
     summary {
       list-style: none;
       cursor: pointer;
@@ -71,8 +70,6 @@
 
       }
     }
-
-     
   }
 
   .pa-group summary::-webkit-details-marker {
