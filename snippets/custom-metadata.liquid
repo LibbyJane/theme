@@ -93,6 +93,7 @@
     <dl class="product-attributes">
       {%- for pair in ns -%}
         {%- assign key = pair | first -%}
+        <h1>Key: {{ key }}</h1>
         {%- if hidden_keys contains key -%}{%- continue -%}{%- endif -%}
         {%- assign mf = ns[key] -%}
         {%- if mf.type != 'rating' -%}{%- continue -%}{%- endif -%}
