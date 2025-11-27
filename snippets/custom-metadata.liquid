@@ -92,6 +92,8 @@
  <h1>a groups_open {{ groups_open }}</h1>
 {%- comment -%} Reusable macro for rendering a group wrapper {%- endcomment -%}
 {%- capture render_group -%}
+   <h1>b capture render_group</h1>
+
   {%- comment -%}
     Expects: group_handle, group_title, group_body, printed_any
   {%- endcomment -%}
