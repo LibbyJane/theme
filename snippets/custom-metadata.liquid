@@ -51,6 +51,13 @@
   }
   .pa-group {
     margin-block: var(--space-sm);
+    background: yellow;
+      & open {
+        background: red;
+        svg {
+          transform: rotate(90deg);
+        }
+      }
 
     summary {
       list-style: none;
@@ -63,11 +70,7 @@
       }
     }
 
-       & open {
-        svg {
-          transform: rotate(90deg);
-        }
-      }
+     
   }
 
   .pa-group summary::-webkit-details-marker {
