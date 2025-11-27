@@ -89,7 +89,7 @@
   | replace: ' ', ''
 -%}
 {%- assign groups_open = groups_open_csv | split: ',' -%}
-
+ <h1>a groups_open {{ groups_open }}</h1>
 {%- comment -%} Reusable macro for rendering a group wrapper {%- endcomment -%}
 {%- capture render_group -%}
   {%- comment -%}
