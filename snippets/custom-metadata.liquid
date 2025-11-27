@@ -90,33 +90,11 @@
 -%}
 {%- assign groups_open = groups_open_csv | split: ',' -%}
 
-{%- comment -%} Reusable macro for rendering a group wrapper {%- endcomment -%}
-{%- capture render_group -%}
-  {%- comment -%}
-    Expects: group_handle, group_title, group_body, printed_any
-  {%- endcomment -%}
-  {%- if printed_any -%}
-    {%- if collapsible -%}
-      <details class="pa-group" {% if groups_open contains group_handle %}open{% endif %}>
-        <summary>
-          {% if show_headings %}<h5 class="pa-group-title">{{ group_title }}</h5>{% endif %}
-          {% render 'icon-caret' %}
-        </summary>
-        {{ group_body }}
-      </details>
-    {%- else -%}
-      <div class="pa-group">
-        {% if show_headings %}<h5 class="pa-group-title">{{ group_title }}</h5>{% endif %}
-        {{ group_body }}
-      </div>
-    {%- endif -%}
-  {%- endif -%}
-{%- endcapture -%}
-
 {%- if ns != blank -%}
   {%- comment -%} ------- BUCKET: RATINGS ------- {%- endcomment -%}
+
   {%- assign printed_any = false -%}
-  {%- capture group_body -%}
+  {%- capture ratings_body -%}
     <dl class="product-attributes">
       {%- for pair in ns -%}
         {%- assign key = pair | first -%}
@@ -146,13 +124,37 @@
     </dl>
   {%- endcapture -%}
 
-  {%- assign group_handle = 'rating' -%}
-  {%- assign group_title = 'Ratings' -%}
-  {{ render_group }}
+  {%- if printed_any -%}
+    {%- assign group_handle = 'rating' -%}
+    {%- capture heading_html -%}
+      {% if show_headings %}
+          <h5 class="pa-group-title">{{ group_handle | capitalize }}s</h5>
+        {% endif %}
+    {%- endcapture -%}
+    {%- if collapsible -%}
+      <details
+        class="pa-group"
+        {% if groups_open_csv contains group_handle %}
+          open
+        {% endif %}
+      >
+        <summary>
+          {{ heading_html }}
+          {% render 'icon-caret' %}
+        </summary>
+        {{ ratings_body }}
+      </details>
+    {%- else -%}
+      <div class="pa-group">
+        {{ heading_html }}
+        {{ ratings_body }}
+      </div>
+    {%- endif -%}
+  {%- endif -%}
 
   {%- comment -%} ------- BUCKET: DETAILS (everything else) ------- {%- endcomment -%}
   {%- assign printed_any = false -%}
-  {%- capture group_body -%}
+  {%- capture details_body -%}
     <dl class="product-attributes">
       {%- for pair in ns -%}
         {%- assign key = pair | first -%}
@@ -194,7 +196,31 @@
     </dl>
   {%- endcapture -%}
 
-  {%- assign group_handle = 'details' -%}
-  {%- assign group_title = 'Details' -%}
-  {{ render_group }}
+  {%- if printed_any -%}
+    {%- assign group_handle = 'details' -%}
+    {%- capture heading_html -%}
+      {% if show_headings %}
+          <h5 class="pa-group-title">{{ group_handle | capitalize }}</h5>
+        {% endif %}
+    {%- endcapture -%}
+    {%- if collapsible -%}
+      <details
+        class="pa-group"
+        {% if groups_open contains group_handle %}
+          open
+        {% endif %}
+      >
+        <summary>
+          {{ heading_html }}
+          {% render 'icon-caret' %}
+        </summary>
+        {{ details_body }}
+      </details>
+    {%- else -%}
+      <div class="pa-group">
+        {{ heading_html }}
+        {{ details_body }}
+      </div>
+    {%- endif -%}
+  {%- endif -%}
 {%- endif -%}
