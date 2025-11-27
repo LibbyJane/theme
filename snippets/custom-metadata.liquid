@@ -198,6 +198,11 @@
 
   {%- if printed_any -%}
     {%- assign group_handle = 'details' -%}
+    {%- capture heading_html -%}
+      {% if show_headings %}
+          <h5 class="pa-group-title">{{ group_handle | capitalize }}</h5>
+        {% endif %}
+    {%- endcapture -%}
     {%- if collapsible -%}
       <details
         class="pa-group"
@@ -214,9 +219,7 @@
       </details>
     {%- else -%}
       <div class="pa-group">
-        {% if show_headings %}
-          <h5 class="pa-group-title">{{ group_handle | capitalize }}s</h5>
-        {% endif %}
+        {{ heading_html }}
         {{ details_body }}
       </div>
     {%- endif -%}
