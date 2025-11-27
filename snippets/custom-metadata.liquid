@@ -92,7 +92,7 @@
 
 {%- if ns != blank -%}
   {%- comment -%} ------- BUCKET: RATINGS ------- {%- endcomment -%}
-   <h1>ns {{ ns }}</h1>
+
   {%- assign printed_any = false -%}
   {%- capture ratings_body -%}
     <dl class="product-attributes">
@@ -128,7 +128,7 @@
     {%- assign group_handle = 'rating' -%}
     {%- capture heading_html -%}
       {% if show_headings %}
-          <h5 class="pa-group-title">Ratings</h5>
+          <h5 class="pa-group-title">{{ group_handle | capitalize }}s</h5>
         {% endif %}
     {%- endcapture -%}
     {%- if collapsible -%}
