@@ -96,6 +96,7 @@
     Expects: group_handle, group_title, group_body, printed_any
   {%- endcomment -%}
   {%- if printed_any -%}
+    <h1>a printed_any</h1>
     {%- if collapsible -%}
       <details class="pa-group" {% if groups_open contains group_handle %}open{% endif %}>
         <summary>
