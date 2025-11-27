@@ -50,6 +50,8 @@
     padding: 0 var(--space-sm);
   }
   .pa-group {
+    background: yellow;
+    display: flex;
     margin-block: var(--space-sm);
   }
   .pa-group summary {
@@ -199,7 +201,6 @@
         <summary>
           {% if show_headings %}
             <h5 class="pa-group-title">Details</h5>
-            {% render 'icon-caret' %}
           {% endif %}
         </summary>
         {{ details_body }}
