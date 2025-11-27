@@ -207,7 +207,7 @@
       >
         <summary>
           {% if show_headings %}
-            <h5 class="pa-group-title">Details</h5>
+            <h5 class="pa-group-title">{{ group_handle | capitalize }}</h5>
           {% endif %}
         </summary>
         {{ details_body }}
@@ -215,7 +215,7 @@
     {%- else -%}
       <div class="pa-group">
         {% if show_headings %}
-          <h5 class="pa-group-title">Details</h5>
+          <h5 class="pa-group-title">{{ group_handle | capitalize }}s</h5>
         {% endif %}
         {{ details_body }}
       </div>
