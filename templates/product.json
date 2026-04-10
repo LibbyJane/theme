@@ -65,6 +65,24 @@
             "page": ""
           }
         },
+        "collapsible_tab_xLq6bw": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "About the blade",
+            "icon": "clipboard",
+            "content": "<ul><li>Established league players and <br/>top-division competitors</li><li>Players who value control in the short game and confidence on first attack</li><li>Loopers and counter-loopers <br/>who play at pace</li><li>Those wanting to upgrade to a premium composite blade, without going ultra-stiff<br/></li></ul><p><strong>This is equipment for players who want their bat to stay calm, even when the rally doesn’t.</strong></p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_AzWELV": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Why Vetra Hurricane works",
+            "icon": "check_mark",
+            "content": "<ul><li>Inner composite blade design protects control in the short game</li><li>High consistency ratings reduce unforced errors</li><li>GoldArc 8’s direct response adds finishing power</li><li>Premium materials deliver long-term performance stability<br/></li></ul><p><strong>This is a setup that rewards disciplined technique and intelligent shot selection.</strong></p>",
+            "page": ""
+          }
+        },
         "inventory": {
           "type": "inventory",
           "settings": {
@@ -102,6 +120,8 @@
         "quantity_selector",
         "buy_buttons",
         "collapsible_tab_jXFVBP",
+        "collapsible_tab_xLq6bw",
+        "collapsible_tab_AzWELV",
         "inventory",
         "complementary",
         "share"
