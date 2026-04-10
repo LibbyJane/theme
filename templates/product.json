@@ -56,6 +56,15 @@
             "show_gift_card_recipient": true
           }
         },
+        "collapsible_tab_jXFVBP": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Who is it for?",
+            "icon": "question_mark",
+            "content": "<ul><li>Established league players and <br/>top-division competitors</li><li>Players who value control in the short game and confidence on first attack</li><li>Loopers and counter-loopers <br/>who play at pace</li><li>Those wanting to upgrade to a premium composite blade, without going ultra-stiff<br/></li></ul><p><strong>This is equipment for players who want their bat to stay calm, even when the rally doesn’t.</strong></p>",
+            "page": ""
+          }
+        },
         "inventory": {
           "type": "inventory",
           "settings": {
@@ -92,6 +101,7 @@
         "price",
         "quantity_selector",
         "buy_buttons",
+        "collapsible_tab_jXFVBP",
         "inventory",
         "complementary",
         "share"
