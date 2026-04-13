@@ -70,7 +70,7 @@
           "settings": {
             "heading": "About the blade",
             "icon": "clipboard",
-            "content": "",
+            "content": "<h4>DHS Hurricane 301</h4>",
             "page": "dhs-hurricane-301-blade"
           }
         },
@@ -79,7 +79,7 @@
           "settings": {
             "heading": "About the rubber",
             "icon": "clipboard",
-            "content": "<p>GoldArc8 provides the offensive edge that completes the Hurricane setup. Paired with the H301 blade, GoldArc8 adds bite and penetration while the blade keeps the overall setup stable and predictable.</p>",
+            "content": "<p><strong>GoldArc8 </strong>provides the offensive edge that completes the Hurricane setup. Paired with the H301 blade, GoldArc8 adds bite and penetration while the blade keeps the overall setup stable and predictable.</p>",
             "page": "goldarc8-rubber"
           }
         },
