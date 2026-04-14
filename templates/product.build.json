@@ -73,6 +73,15 @@
             "page": ""
           }
         },
+        "collapsible_tab_KjiyLg": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Key features",
+            "icon": "question_mark",
+            "content": "<ul><li>7-ply blade with excellent control keeps rallies stable while learning stronger strokes</li><li>Medium-hard sponge rubbers reward acceleration and clean contact</li><li>Above-average gears allow soft touch play and committed attacks</li><li>Medium tackiness supports spin generation without feeling sluggish</li><li>High durability means fewer replacements as training volume increases</li></ul><p><strong>This is the kind of setup coaches recommend when players start taking improvement seriously.</strong></p>",
+            "page": ""
+          }
+        },
         "complementary": {
           "type": "complementary",
           "settings": {
@@ -103,6 +112,7 @@
         "buy_buttons",
         "inventory",
         "collapsible_tab_pXGPxk",
+        "collapsible_tab_KjiyLg",
         "complementary",
         "share"
       ],
