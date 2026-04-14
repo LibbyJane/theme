@@ -12,15 +12,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "collapsible_tab_KDaTi6": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Who is it for?",
-            "icon": "question_mark",
-            "content": "<ul><li>League players who prioritise consistency and match control</li><li>Strong blockers, counter-loopers, and placement-based attackers</li><li>Players who want attacking capability without volatility</li><li>Those who prefer a calmer, more predictable feel in competition</li></ul><p>This is a bat for players who dislike surprises and force opponents to make the mistakes.</p>",
-            "page": ""
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -73,6 +64,24 @@
             "show_inventory_quantity": true
           }
         },
+        "collapsible_tab_KDaTi6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Who is it for?",
+            "icon": "question_mark",
+            "content": "<ul><li>League players who prioritise consistency and match control</li><li>Strong blockers, counter-loopers, and placement-based attackers</li><li>Players who want attacking capability without volatility</li><li>Those who prefer a calmer, more predictable feel in competition</li></ul><p>This is a bat for players who dislike surprises and force opponents to make the mistakes.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_4zNGCD": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Blade Options (Choose Your Feel)",
+            "icon": "check_mark",
+            "content": "",
+            "page": "sanwei-v5-pro-and-hc-5s"
+          }
+        },
         "complementary": {
           "type": "complementary",
           "settings": {
@@ -94,7 +103,6 @@
         }
       },
       "block_order": [
-        "collapsible_tab_KDaTi6",
         "title",
         "description",
         "custom_metadata_rGRgCy",
@@ -103,6 +111,8 @@
         "quantity_selector",
         "buy_buttons",
         "inventory",
+        "collapsible_tab_KDaTi6",
+        "collapsible_tab_4zNGCD",
         "complementary",
         "share"
       ],
