@@ -12,6 +12,15 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "collapsible_tab_KDaTi6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Who is it for?",
+            "icon": "question_mark",
+            "content": "<ul><li>League players who prioritise consistency and match control</li><li>Strong blockers, counter-loopers, and placement-based attackers</li><li>Players who want attacking capability without volatility</li><li>Those who prefer a calmer, more predictable feel in competition</li></ul><p>This is a bat for players who dislike surprises and force opponents to make the mistakes.</p>",
+            "page": ""
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -85,6 +94,7 @@
         }
       },
       "block_order": [
+        "collapsible_tab_KDaTi6",
         "title",
         "description",
         "custom_metadata_rGRgCy",
