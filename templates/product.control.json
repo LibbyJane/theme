@@ -77,9 +77,27 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Blade Options (Choose Your Feel)",
-            "icon": "check_mark",
+            "icon": "clipboard",
             "content": "",
             "page": "sanwei-v5-pro-and-hc-5s"
+          }
+        },
+        "collapsible_tab_pMWTkH": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "About the rubber",
+            "icon": "clipboard",
+            "content": "",
+            "page": "goldarc9-rubber"
+          }
+        },
+        "collapsible_tab_fCirWd": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Why Vetra Control works so well",
+            "icon": "clipboard",
+            "content": "<ul><li>Completely non-tacky topsheet avoids over-sensitivity to incoming spin</li><li>Medium-hard sponge supports strong strokes without sudden kick</li><li>Exceptional consistency rating builds trust in rallies</li><li>Durable rubber suited to frequent league play and training</li></ul><p>This setup rewards intelligent shot selection and disciplined technique.</p>",
+            "page": ""
           }
         },
         "complementary": {
@@ -113,6 +131,8 @@
         "inventory",
         "collapsible_tab_KDaTi6",
         "collapsible_tab_4zNGCD",
+        "collapsible_tab_pMWTkH",
+        "collapsible_tab_fCirWd",
         "complementary",
         "share"
       ],
