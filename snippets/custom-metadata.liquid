@@ -119,8 +119,8 @@
         {%- if turn > 1 -%}{%- assign turn = 1 -%}{%- endif -%}
         {%- if turn < 0.825 -%}{%- assign turn = 0.825 -%}{%- endif -%}
 
-        <dt class="pa-label">{{ label }}</dt>
-        <dd class="pa-rating-value">
+        <dt class="pa-label pa-label--{{ key }}">{{ label }}</dt>
+        <dd class="pa-rating-value pa-rating-value--{{ key }}">
           <div class="pa-rating">
             <div class="pa-progress-fill" style="width: {{ percent }}%; filter: hue-rotate({{ turn }}turn);">
               <span class="pa-value">{{ rating | round: 1 }}</span>
