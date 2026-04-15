@@ -64,6 +64,24 @@
             "show_inventory_quantity": true
           }
         },
+        "collapsible_tab_pXGPxk": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Who is it for?",
+            "icon": "question_mark",
+            "content": "<ul><li>Beginners training seriously and improving week to week</li><li>Players developing topspin on both wings</li><li>Juniors or adults moving beyond entry-level equipment</li><li>Those who want performance growth without “skipping a level”</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_KjiyLg": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Key features",
+            "icon": "clipboard",
+            "content": "<ul><li>7-ply blade with excellent control keeps rallies stable while learning stronger strokes</li><li>Medium-hard sponge rubbers reward acceleration and clean contact</li><li>Above-average gears allow soft touch play and committed attacks</li><li>Medium tackiness supports spin generation without feeling sluggish</li><li>High durability means fewer replacements as training volume increases</li></ul><p><strong>This is the kind of setup coaches recommend when players start taking improvement seriously.</strong></p>",
+            "page": ""
+          }
+        },
         "complementary": {
           "type": "complementary",
           "settings": {
@@ -93,6 +111,8 @@
         "quantity_selector",
         "buy_buttons",
         "inventory",
+        "collapsible_tab_pXGPxk",
+        "collapsible_tab_KjiyLg",
         "complementary",
         "share"
       ],

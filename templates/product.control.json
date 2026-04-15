@@ -64,6 +64,42 @@
             "show_inventory_quantity": true
           }
         },
+        "collapsible_tab_KDaTi6": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Who is it for?",
+            "icon": "question_mark",
+            "content": "<ul><li>League players who prioritise consistency and match control</li><li>Strong blockers, counter-loopers, and placement-based attackers</li><li>Players who want attacking capability without volatility</li><li>Those who prefer a calmer, more predictable feel in competition</li></ul><p>This is a bat for players who dislike surprises and force opponents to make the mistakes.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_4zNGCD": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Blade Options (Choose Your Feel)",
+            "icon": "clipboard",
+            "content": "",
+            "page": "sanwei-v5-pro-and-hc-5s"
+          }
+        },
+        "collapsible_tab_pMWTkH": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "About the rubber",
+            "icon": "clipboard",
+            "content": "",
+            "page": "goldarc9-rubber"
+          }
+        },
+        "collapsible_tab_fCirWd": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Why Vetra Control works so well",
+            "icon": "check_mark",
+            "content": "<ul><li>Completely non-tacky topsheet avoids over-sensitivity to incoming spin</li><li>Medium-hard sponge supports strong strokes without sudden kick</li><li>Exceptional consistency rating builds trust in rallies</li><li>Durable rubber suited to frequent league play and training</li></ul><p>This setup rewards intelligent shot selection and disciplined technique.</p>",
+            "page": ""
+          }
+        },
         "complementary": {
           "type": "complementary",
           "settings": {
@@ -93,6 +129,10 @@
         "quantity_selector",
         "buy_buttons",
         "inventory",
+        "collapsible_tab_KDaTi6",
+        "collapsible_tab_4zNGCD",
+        "collapsible_tab_pMWTkH",
+        "collapsible_tab_fCirWd",
         "complementary",
         "share"
       ],
