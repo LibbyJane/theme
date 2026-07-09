@@ -18,11 +18,55 @@
   .product-attributes .pa-label {
     font-size: var(--font-size-smaller);
   }
+
+  .pa-label {
+    order: 1;
+  }
+
   .pa-rating-value {
     display: flex;
     position: relative;
     font-size: var(--font-size-small);
+    order: 10;
   }
+
+  .pa-label--control,
+  .pa-rating-value--control {
+    order: 1;
+  }
+
+  .pa-label--spin,
+  .pa-rating-value--spin {
+    order: 2;
+  }
+
+  .pa-label--speed,
+  .pa-rating-value--speed {
+    order: 3;
+  }
+
+  .pa-label--consistency,
+  .pa-rating-value--consistency {
+    order: 4;
+  }
+
+  .pa-label--headroom,
+  .pa-rating-value--headroom {
+    order: 20;
+  }
+
+  .pa-label--overall,
+  .pa-rating-value--overall {
+    font-weight: var(--font-body-weight-bold);
+    order: 30;
+  }
+
+  .pa-label--performance_ceiling,
+  .pa-rating-value--performance_ceiling {
+    font-weight: var(--font-body-weight-bold);
+    order: 40;
+  }
+
   .pa-rating {
     background: rgba(var(--color-foreground), 0.2);
     border-radius: 99em;
@@ -119,8 +163,8 @@
         {%- if turn > 1 -%}{%- assign turn = 1 -%}{%- endif -%}
         {%- if turn < 0.825 -%}{%- assign turn = 0.825 -%}{%- endif -%}
 
-        <dt class="pa-label">{{ label }}</dt>
-        <dd class="pa-rating-value">
+        <dt class="pa-label pa-label--{{ key }}">{{ label }}</dt>
+        <dd class="pa-rating-value pa-rating-value--{{ key }}">
           <div class="pa-rating">
             <div class="pa-progress-fill" style="width: {{ percent }}%; filter: hue-rotate({{ turn }}turn);">
               <span class="pa-value">{{ rating | round: 1 }}</span>
