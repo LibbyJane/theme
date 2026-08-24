@@ -103,7 +103,7 @@
                             </button>
                             </div>
                             {%- if form.errors -%}
-                                {%- render 'form-field-error', classes='newsletter-form__message', id: error_id, field_name: form.errors.translated_fields.email, message: form.errors.messages.email -%}
+                                {%- render 'form-field-error', id: error_id, field_name: form.errors.translated_fields.email, message: form.errors.messages.email -%}
                             {%- endif -%}
                         </div>
                         {%- if form.posted_successfully? -%}
@@ -302,3 +302,16 @@
     ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'form-field-error', classes='newsletter-form__message', id: error_id,
+    field_name: form.errors.translated_fields.email, message: form.errors.messages.email
+    -%}"
+  to: "{%- render 'form-field-error', id: error_id, field_name: form.errors.translated_fields.email,
+    message: form.errors.messages.email -%}"
+  position: 5467..5600
+{% endcomment %}
